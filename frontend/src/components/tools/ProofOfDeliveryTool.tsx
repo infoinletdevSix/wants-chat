@@ -19,7 +19,7 @@ import {
   Phone,
   FileText,
   Image,
-  Signature,
+  PenLine,
   ThumbsUp,
   ThumbsDown,
   MessageSquare,
@@ -889,8 +889,8 @@ const ProofOfDeliveryTool: React.FC = () => {
                     )}
                     {pod.signatureUrl && (
                       <div className="flex items-center gap-1 text-sm text-blue-600">
-                        <Signature className="w-4 h-4" />
-                        <span>{t('tools.proofOfDelivery.signatureCaptured', 'Signature captured')}</span>
+                        <PenLine className="w-4 h-4" />
+                        <span>{t('tools.proofOfDelivery.signatureCaptured', 'PenLine captured')}</span>
                       </div>
                     )}
                     {pod.photos.length > 0 && (
@@ -1466,15 +1466,15 @@ const PODDetailsModal: React.FC<{
             </div>
           </div>
 
-          {/* Signature & Photos */}
+          {/* PenLine & Photos */}
           {(pod.signatureUrl || pod.photos.length > 0) && (
             <div className="grid grid-cols-2 gap-6">
               {pod.signatureUrl && (
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-3">{t('tools.proofOfDelivery.signature', 'Signature')}</h3>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-3">{t('tools.proofOfDelivery.signature', 'PenLine')}</h3>
                   <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
                     <div className="text-center text-gray-400">
-                      <Signature className="w-8 h-8 mx-auto mb-2" />
+                      <PenLine className="w-8 h-8 mx-auto mb-2" />
                       <p className="text-sm">Signed by: {pod.receivedBy}</p>
                       {pod.receiverTitle && <p className="text-xs">{pod.receiverTitle}</p>}
                     </div>

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dr.pogodin/react-helmet": "^3.1.1",
+    "@dr.pogodin/react-helmet": "^2.0.4",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@hookform/resolvers": "^5.2.2",
@@ -58,7 +58,7 @@
     "i18next-browser-languagedetector": "^8.2.1",
     "input-otp": "^1.4.2",
     "jspdf": "^4.2.0",
-    "lucide-react": "^0.344.0",
+    "lucide-react": "^0.460.0",
     "react": "^18.3.1",
     "react-color": "^2.19.3",
     "react-confetti": "^6.4.0",
@@ -84,6 +84,8 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
