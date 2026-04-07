@@ -14,7 +14,7 @@
 
   ---
 
-  **1000+ Contextual Tools** | **30+ AI Models** | **No-Code App Builder** | **Self-Hostable**
+  **1,100+ Contextual Tools** | **30+ AI Models** | **No-Code App Builder** | **Self-Hostable**
 
   *One platform that replaces 100+ apps you use daily*
 
@@ -69,7 +69,7 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 
 ### ✅ wants.chat
 - **Intent Detection** → Shows relevant UI
-- **1000+ Contextual Tools** → Ready to use
+- **1,100+ Contextual Tools** → Ready to use
 - **No-Code App Builder** → Full-stack apps
 - **Workflow Automation** → n8n-style flows
 - **Multi-Model AI** → 30+ LLM providers
@@ -112,7 +112,7 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 
 ## 🌟 Core Features
 
-### 1️⃣ **1000+ Contextual Tools** (Growing Daily)
+### 1️⃣ **1,100+ Contextual Tools** (Growing Daily)
 
 <details>
 <summary><b>📊 Calculators & Converters (80+)</b></summary>
@@ -365,7 +365,7 @@ Every tool supports comprehensive export:
 | Multi-Model AI | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ **30+ models** |
 | AI Image Generation | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ **FLUX + SDXL** |
 | AI Video Generation | ✅ Sora | ❌ | ✅ | ✅ | ❌ | ✅ **3 engines** |
-| Contextual UI Tools | ❌ | Artifacts | ❌ | ❌ | ❌ | ✅ **1000+ tools** |
+| Contextual UI Tools | ❌ | Artifacts | ❌ | ❌ | ❌ | ✅ **1,100+ tools** |
 | No-Code App Builder | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ **Full-stack** |
 | Workflow Automation | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ **500+ connectors** |
 | Browser Extension | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ **Chrome/Firefox** |
@@ -377,7 +377,7 @@ Every tool supports comprehensive export:
 
 ### ✅ Implemented
 
-- [x] 1000+ Contextual UI Tools
+- [x] 1,100+ Contextual UI Tools
 - [x] Multi-model AI chat (30+ models)
 - [x] AI Image Generation (FLUX, SDXL)
 - [x] AI Video Generation (Vidu, KlingAI)
@@ -414,10 +414,12 @@ Every tool supports comprehensive export:
 
 | Plan | Price | Features |
 |------|-------|----------|
-| **Free** | $0/month | 50 AI messages, 10 tools/day, Community support |
-| **Starter** | $16/month | Unlimited messages, All tools, Priority support |
-| **Pro** | $40/month | + Workflow automation, Team features, API access |
-| **Enterprise** | $100/month | + Custom integrations, SSO, Dedicated support |
+| **Free** | $0/month | 3 AI messages/day (Gemini 2.0 Flash), 100+ tools, 3 image gens/month, community support |
+| **Pro** | $19.99/month | 2,500 AI messages, all 30+ models, unlimited tools, 100 images, 10 videos/month |
+| **Team** | $49.99/month | Unlimited AI messages, unlimited images, 100 videos, no-code app builder, 5 team members, API access |
+| **Enterprise** | $149.99/month | Everything unlimited, custom AI training, SSO/SAML, dedicated support, 99.9% SLA |
+
+Pricing is defined in [`frontend/src/config/pricing.ts`](frontend/src/config/pricing.ts) — that file is the source of truth.
 
 **Add-on Credits**: Purchase additional AI/image/video credits as needed.
 

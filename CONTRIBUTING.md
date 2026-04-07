@@ -38,7 +38,6 @@ We welcome contributions of all kinds: bug fixes, new tools, documentation impro
 | PostgreSQL     | 15+             | Or use the Docker setup below  |
 | Redis          | 7+              | Or use the Docker setup below  |
 | Docker         | 24+             | Optional, but recommended      |
-| Flutter        | 3.x             | Only needed for mobile work    |
 
 ### Clone and Install
 
@@ -98,9 +97,7 @@ wants-chat/
 │           ├── tools/      # Tool registry and execution
 │           ├── database/   # Database service (raw pg)
 │           └── ...         # 40+ other modules
-├── mobile/                 # Flutter/Dart mobile app
 ├── extension/              # Browser extension (Chrome/Firefox)
-├── apps/                   # Standalone micro-apps (130+)
 ├── scripts/                # Build and utility scripts
 ├── docker-compose.yml      # Local development services
 └── package.json            # Workspace root (npm workspaces)
@@ -117,8 +114,8 @@ wants-chat/
 npm run dev
 
 # Or start services individually
-npm run dev:backend     # NestJS on http://localhost:3000
-npm run dev:frontend    # Vite on http://localhost:5173
+npm run dev:backend     # NestJS on http://localhost:3001
+npm run dev:frontend    # Vite on http://localhost:3000 (5173 when run via docker-compose)
 ```
 
 Both the frontend and backend support hot reload out of the box. Vite provides instant HMR for the frontend, and NestJS watches for file changes on the backend.
@@ -132,14 +129,6 @@ docker-compose up
 ```
 
 This starts PostgreSQL, Redis, the backend, and the frontend. See `docker-compose.yml` for service definitions and port mappings.
-
-### Mobile Development
-
-```bash
-cd mobile
-flutter pub get
-flutter run
-```
 
 ### Running Tests
 
@@ -193,22 +182,18 @@ export function ToolCard({ tool }: { tool: Tool }) {
 ### TypeScript / NestJS (Backend)
 
 - Follow NestJS conventions: **Modules**, **Services**, **Controllers**.
-- Use the raw `pg` database service (`db.query`) rather than an ORM.
-- Use `.get()` for SELECT queries returning multiple rows, `.first()` for a single row, and `.execute()` for INSERT/UPDATE/DELETE.
+- Inject `DatabaseService` (raw `pg`) rather than reaching for an ORM.
+- Use `db.findOne` / `db.findMany` / `db.insert` / `db.update` for simple cases, and `db.query(sql, params)` for joins, aggregates, or anything non-trivial.
 - Always transform database fields from `snake_case` to `camelCase` before returning to the frontend.
-- Validate request bodies with DTOs or Zod schemas.
+- Validate request bodies with DTOs (class-validator) or Zod schemas.
 
 ```typescript
 // Database query examples
-const items = await db.query.from('tools').select('*').where('status', 'active').get();
-const item = await db.query.from('tools').where('id', toolId).first();
+const items = await this.db.findMany('tools', { status: 'active' });
+const item  = await this.db.findOne('tools', { id: toolId });
 ```
 
-### Flutter / Dart (Mobile)
-
-- Follow official Dart style guidelines and `flutter analyze` recommendations.
-- Use the provider pattern for state management.
-- Keep widgets small and composable.
+See `CLAUDE.md` for the full database/route/auth patterns.
 
 ---
 
