@@ -73,30 +73,6 @@ temp/
 # yarn.lock
 # pnpm-lock.yaml
 
-# Flutter/Dart (mobile)
-mobile/.dart_tool/
-mobile/.packages
-mobile/build/
-mobile/.flutter-plugins
-mobile/.flutter-plugins-dependencies
-mobile/ios/Pods/
-mobile/ios/.symlinks/
-mobile/ios/Flutter/Flutter.framework
-mobile/ios/Flutter/Flutter.podspec
-mobile/android/.gradle/
-mobile/android/local.properties
-mobile/android/key.properties
-mobile/android/app/release/
-mobile/android/app/debug/
-*.jks
-*.keystore
-
-# Generated files
-*.generated.dart
-*.g.dart
-*.freezed.dart
-mobile/lib/generated_plugin_registrant.dart
-
 # Miscellaneous
 .claude/
 *.bak

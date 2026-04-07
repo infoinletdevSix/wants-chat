@@ -17,11 +17,13 @@ Include as much of the following information as possible:
 
 ## Response Timeline
 
+We are a small team and respond on a best-effort basis. Typical timelines:
+
 | Step | Timeframe |
 |------|-----------|
-| Acknowledgment of your report | Within 48 hours |
-| Initial assessment and severity evaluation | Within 7 days |
-| Fix development and testing | Depends on severity |
+| Acknowledgment of your report | Best-effort, typically within a few business days |
+| Initial assessment and severity evaluation | Within 14 days of acknowledgment |
+| Fix development and testing | Depends on severity and complexity |
 | Public disclosure (coordinated with reporter) | After fix is deployed |
 
 ## Supported Versions

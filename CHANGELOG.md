@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [1.0.0] - 2026-04-01
 
 ### Added
-- 1100+ contextual tool components
+- 1,100+ contextual tool components
 - Multi-model AI chat (30+ models via OpenRouter)
 - AI image generation (FLUX, SDXL via Runware)
 - AI video generation
