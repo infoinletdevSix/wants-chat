@@ -23,7 +23,7 @@ RUN addgroup -g 1001 -S nodejs && \
 FROM base AS deps
 
 # Copy package files
-COPY package*.json ./
+COPY package*.json .npmrc* ./
 
 # Install dependencies
 RUN npm ci --only=production && \
@@ -35,7 +35,7 @@ RUN npm ci --only=production && \
 FROM base AS development
 
 # Install all dependencies (including dev)
-COPY package*.json ./
+COPY package*.json .npmrc* ./
 RUN npm ci
 
 # Copy source code
@@ -61,7 +61,7 @@ CMD ["dumb-init", "npm", "run", "dev", "--", "--host", "0.0.0.0"]
 FROM base AS build
 
 # Copy package files and install all dependencies
-COPY package*.json ./
+COPY package*.json .npmrc* ./
 RUN npm ci
 
 # Copy source code

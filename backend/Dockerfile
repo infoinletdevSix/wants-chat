@@ -1,26 +1,37 @@
-# Life OS Backend Dockerfile
+# wants.chat Backend Dockerfile
 # Multi-stage build for different environments
+#
+# We use Debian (bookworm-slim) instead of Alpine because many of our native
+# dependencies (sharp, puppeteer) ship prebuilt binaries for glibc but not for
+# musl, and Alpine's package mirrors have been unreliable in CI.
 
 # =============================================
 # Base stage - Common dependencies
 # =============================================
-FROM node:20-alpine AS base
+FROM node:20-bookworm-slim AS base
 
 # Install system dependencies
-RUN apk add --no-cache \
+# - dumb-init, curl: runtime
+# - python3, make, g++: node-gyp fallback for any package without prebuilts
+# - ca-certificates: TLS for HTTPS calls from the app
+RUN apt-get update && apt-get install -y --no-install-recommends \
     dumb-init \
     curl \
-    && rm -rf /var/cache/apk/*
+    ca-certificates \
+    python3 \
+    make \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
 
 # Create app directory
 WORKDIR /app
 
 # Create non-root user
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nestjs -u 1001
+RUN groupadd --system --gid 1001 nodejs && \
+    useradd --system --uid 1001 --gid nodejs --shell /bin/false nestjs
 
 # Copy package files
-COPY package*.json ./
+COPY package*.json .npmrc* ./
 
 # =============================================
 # Dependencies stage - Install all dependencies
@@ -28,7 +39,7 @@ COPY package*.json ./
 FROM base AS deps
 
 # Install all dependencies (including dev dependencies)
-RUN npm ci --only=production && npm cache clean --force
+RUN npm install --omit=dev --no-audit --no-fund --loglevel=error && npm cache clean --force
 
 # =============================================
 # Build stage - Build the application
@@ -36,8 +47,8 @@ RUN npm ci --only=production && npm cache clean --force
 FROM base AS build
 
 # Copy all dependencies
-COPY package*.json ./
-RUN npm ci
+COPY package*.json .npmrc* ./
+RUN npm install --no-audit --no-fund --loglevel=error
 
 # Copy source code
 COPY . .
@@ -51,7 +62,7 @@ RUN npm run build
 FROM base AS development
 
 # Install all dependencies (including dev dependencies)
-RUN npm ci
+RUN npm install --no-audit --no-fund --loglevel=error
 
 # Copy source code
 COPY . .

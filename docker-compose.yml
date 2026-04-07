@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   # ─── PostgreSQL ────────────────────────────────────────────
   postgres:
@@ -7,13 +5,19 @@ services:
     container_name: wants-postgres
     restart: unless-stopped
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-wants}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-wants_secret}
       POSTGRES_DB: ${POSTGRES_DB:-wants}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      # Postgres runs every .sql/.sh file in /docker-entrypoint-initdb.d
+      # alphabetically the first time the data directory is empty.
+      # Our migration files are timestamp-prefixed so they run in the
+      # correct order on a fresh boot. To re-run from scratch, do:
+      #   docker-compose down -v && docker-compose up
+      - ./backend/scripts/migrations:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-wants}"]
       interval: 10s
@@ -61,6 +65,11 @@ services:
     volumes:
       - ./backend/src:/app/src
       - ./backend/test:/app/test
+      # Bind-mount config files so edits on the host take effect
+      # without rebuilding the image.
+      - ./backend/tsconfig.json:/app/tsconfig.json
+      - ./backend/tsconfig.build.json:/app/tsconfig.build.json
+      - ./backend/nest-cli.json:/app/nest-cli.json
       - backend_node_modules:/app/node_modules
     depends_on:
       postgres:
@@ -77,13 +86,23 @@ services:
     container_name: wants-frontend
     restart: unless-stopped
     ports:
-      - "5173:5173"
+      # Vite is configured to listen on port 3000 inside the container.
+      # We expose it on host port 5173 to keep the standard URL.
+      - "5173:3000"
     environment:
       VITE_API_URL: http://localhost:3001
       VITE_WS_URL: ws://localhost:3001
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
+      # Bind-mount config files so edits on the host take effect
+      # without rebuilding the image.
+      - ./frontend/package.json:/app/package.json
+      - ./frontend/vite.config.ts:/app/vite.config.ts
+      - ./frontend/tailwind.config.ts:/app/tailwind.config.ts
+      - ./frontend/postcss.config.js:/app/postcss.config.js
+      - ./frontend/tsconfig.json:/app/tsconfig.json
+      - ./frontend/index.html:/app/index.html
       - frontend_node_modules:/app/node_modules
     depends_on:
       - backend
