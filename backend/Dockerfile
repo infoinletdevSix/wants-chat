@@ -38,17 +38,17 @@ COPY package*.json .npmrc* ./
 # =============================================
 FROM base AS deps
 
-# Install all dependencies (including dev dependencies)
-RUN npm install --omit=dev --no-audit --no-fund --loglevel=error && npm cache clean --force
+# Install only production dependencies (deterministic via lockfile)
+RUN npm ci --omit=dev --no-audit --no-fund && npm cache clean --force
 
 # =============================================
 # Build stage - Build the application
 # =============================================
 FROM base AS build
 
-# Copy all dependencies
+# Copy all dependencies (including dev) for the build
 COPY package*.json .npmrc* ./
-RUN npm install --no-audit --no-fund --loglevel=error
+RUN npm ci --no-audit --no-fund
 
 # Copy source code
 COPY . .
@@ -61,8 +61,8 @@ RUN npm run build
 # =============================================
 FROM base AS development
 
-# Install all dependencies (including dev dependencies)
-RUN npm install --no-audit --no-fund --loglevel=error
+# Install all dependencies (including dev) for the watch-mode dev server
+RUN npm ci --no-audit --no-fund
 
 # Copy source code
 COPY . .
