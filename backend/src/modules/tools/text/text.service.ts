@@ -3,11 +3,12 @@ import Ajv from 'ajv';
 import * as Papa from 'papaparse';
 import * as yaml from 'js-yaml';
 import { marked } from 'marked';
+// `change-case` v4 exports kebab-case as `paramCase`.
 import {
   camelCase,
   snakeCase,
   pascalCase,
-  kebabCase,
+  paramCase as kebabCase,
   constantCase,
 } from 'change-case';
 import {

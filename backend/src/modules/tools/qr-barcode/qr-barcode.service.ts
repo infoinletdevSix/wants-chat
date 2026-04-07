@@ -1,7 +1,8 @@
 import { Injectable, Logger, BadRequestException } from '@nestjs/common';
 import * as QRCode from 'qrcode';
-import * as JsBarcode from 'jsbarcode';
-import { createCanvas } from 'canvas';
+// `jsbarcode` and `canvas` were removed from the open-source build because
+// `canvas` requires native compilation that is fragile on Alpine. Server-side
+// barcode generation is stubbed below; QR code generation still works.
 import { R2Service } from '../../storage/r2.service';
 import { generateToolOutputPath } from '../common/utils/file-helper.util';
 import {
@@ -104,24 +105,18 @@ export class QrBarcodeService {
     const width = dto.width || 200;
     const height = dto.height || 100;
 
+    // Server-side barcode rendering is disabled in the open-source build
+    // because the `canvas` native module is hard to install on Alpine.
+    // QR code generation (above) still works through the `qrcode` package.
+    throw new BadRequestException(
+      'Server-side barcode generation is not available in the open-source build. ' +
+      'Generate the barcode on the client instead, or re-add `canvas` and `jsbarcode` to the backend.',
+    );
+
+    // Unreachable, kept so the legacy callers below still type-check.
+    // eslint-disable-next-line @typescript-eslint/no-unreachable
     try {
-      // Create canvas
-      const canvas = createCanvas(width, height);
-
-      // Generate barcode
-      JsBarcode(canvas, dto.data, {
-        format: dto.format,
-        width: 2,
-        height: height - 30,
-        displayValue: dto.displayValue !== false,
-        fontSize: dto.fontSize || 20,
-        background: dto.background || '#FFFFFF',
-        lineColor: dto.lineColor || '#000000',
-        margin: 10,
-      });
-
-      // Convert to PNG buffer
-      const buffer = canvas.toBuffer('image/png');
+      const buffer = Buffer.alloc(0);
 
       // Upload to storage
       const path = generateToolOutputPath(userId, 'qr-barcode', 'barcode', 'png');

@@ -81,12 +81,6 @@ export {
   generateLabStats,
   generateLabResults,
   generateTestOrderForm,
-  // Types
-  type ChiropractorStatsOptions,
-  type DermatologyStatsOptions,
-  type PediatricsStatsOptions,
-  type MentalHealthStatsOptions,
-  type RadiologyStatsOptions,
-  type HomeCareStatsOptions,
-  type LabStatsOptions,
+  // All specialty generators share the same options interface.
+  type HealthcareSpecialtyOptions,
 } from './healthcare-specialties.generator';

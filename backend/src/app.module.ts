@@ -39,8 +39,8 @@ import { DocumentModule } from './modules/document/document.module';
 import { ResearchModule } from './modules/research/research.module';
 import { LearningModule } from './modules/learning/learning.module';
 import { AppBuilderModule } from './modules/app-builder/app-builder.module';
-// import { AppCreatorModule } from './modules/app-creator/app-creator.module'; // Commented out — replaced by AppMakerModule
-import { AppMakerModule } from './modules/app-maker/app-maker.module';
+// AppMakerModule was excluded from the open-source release.
+// import { AppMakerModule } from './modules/app-maker/app-maker.module';
 import { ToolsApiModule } from './modules/tools-api/tools-api.module';
 import { ToolsModule } from './modules/tools/tools.module';
 
@@ -92,8 +92,7 @@ import { ToolsModule } from './modules/tools/tools.module';
     ResearchModule,
     LearningModule,
     AppBuilderModule,
-    // AppCreatorModule, // Commented out — replaced by AppMakerModule
-    AppMakerModule,
+    // AppMakerModule excluded from open-source release
     ToolsApiModule,
     ToolsModule,
   ],

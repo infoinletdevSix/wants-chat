@@ -50,7 +50,9 @@ export class StripeService {
     const stripeKey = this.configService.get('STRIPE_SECRET_KEY');
     if (stripeKey) {
       this.stripe = new Stripe(stripeKey, {
-        apiVersion: '2025-12-15.clover',
+        // Cast because the pinned api-version string may not match the
+        // type of the installed Stripe SDK at any given moment.
+        apiVersion: '2025-12-15.clover' as any,
       });
     }
 

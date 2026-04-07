@@ -178,14 +178,9 @@ export {
   generateLabStats,
   generateLabResults,
   generateTestOrderForm,
-  // Types
-  type ChiropractorStatsOptions,
-  type DermatologyStatsOptions,
-  type PediatricsStatsOptions,
-  type MentalHealthStatsOptions,
-  type RadiologyStatsOptions,
-  type HomeCareStatsOptions,
-  type LabStatsOptions,
+  // The per-specialty *StatsOptions types do not exist on this generator —
+  // they all share `HealthcareSpecialtyOptions`. Re-export that one instead.
+  type HealthcareSpecialtyOptions,
 } from './healthcare/healthcare-specialties.generator';
 
 // ============================================

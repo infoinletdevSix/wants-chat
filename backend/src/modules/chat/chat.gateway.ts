@@ -29,8 +29,9 @@ import { CompactionService } from '../context/compaction.service';
 import { BranchingService } from '../context/branching.service';
 import { ToolIntentExtractionService } from '../context/tool-intent-extraction.service';
 import { MemoryService } from '../memory/memory.service';
-// import { AppCreatorService } from '../app-creator/app-creator.service'; // Commented out — replaced by AppMakerService
-import { AppMakerService } from '../app-maker/app-maker.service';
+// AppMakerService was excluded from the open-source release.
+// The app-builder branch below returns a "feature unavailable" message instead.
+// import { AppMakerService } from '../app-maker/app-maker.service';
 import { DeploymentService } from '../app-builder/services/deployment.service';
 import { AppFilesService } from '../app-files/app-files.service';
 
@@ -130,8 +131,7 @@ export class ChatGateway implements OnGatewayInit, OnGatewayConnection, OnGatewa
     private readonly branchingService: BranchingService,
     private readonly toolIntentExtractionService: ToolIntentExtractionService,
     private readonly memoryService: MemoryService,
-    // private readonly appCreatorService: AppCreatorService, // Commented out — replaced by AppMakerService
-    private readonly appMakerService: AppMakerService,
+    // private readonly appMakerService: AppMakerService, // Excluded from OSS release
     private readonly deploymentService: DeploymentService,
     private readonly appFilesService: AppFilesService,
     private readonly learningService: LearningService,
@@ -699,178 +699,29 @@ export class ChatGateway implements OnGatewayInit, OnGatewayConnection, OnGatewa
           intentResult.intent.fallbackToAI = true;
         }
 
-        // For app-builder intents, generate the page using AppMakerService and return preview info
+        // App-builder intent: AppMakerService is excluded from the open-source
+        // release. We acknowledge the request but tell the user the feature is
+        // unavailable. To restore: re-add the AppMakerModule and the original
+        // logic from the private repo.
         if (pattern?.uiType === 'app-builder') {
-          this.logger.log(`App-builder intent detected (using AppMaker): ${pattern.metadata?.appDescription || 'unknown'}`);
+          this.logger.log(
+            `App-builder intent detected but AppMakerService is unavailable in the OSS build: ${pattern.metadata?.appDescription || 'unknown'}`,
+          );
 
-          // Cache session info at start (in case session is modified during long operation)
-          const sessionId = session.id;
-          const userId = session.userId;
-
-          // Helper to emit to session room only (for progress events)
-          const emitToSession = (event: string, data: any) => {
-            this.server.to(`session:${sessionId}`).emit(event, data);
-          };
-
-          // Helper to emit to BOTH session AND user rooms (for critical events like completion)
-          const emitToSessionAndUser = (event: string, data: any) => {
-            this.server.to(`session:${sessionId}`).emit(event, data);
-            this.server.to(`user:${userId}`).emit(event, data);
-          };
-
-          // Emit status update
-          emitToSession('app-builder:started', {
+          this.server.to(`session:${session.id}`).emit('message:typing', {
             sessionId: session.id,
-            appDescription: pattern.metadata?.appDescription,
-            appType: pattern.metadata?.appType,
+            sender: 'assistant',
+            isTyping: false,
             timestamp: new Date().toISOString(),
           });
 
-          try {
-            // Progress callback to keep socket alive
-            const emitProgress = (step: string, status: string, progressMessage?: string) => {
-              this.logger.log(`[AppMaker Progress] ${step}: ${status} - ${progressMessage || ''}`);
-              emitToSession('app-builder:progress', {
-                sessionId: session.id,
-                step,
-                status,
-                message: progressMessage,
-                timestamp: new Date().toISOString(),
-              });
-            };
+          assistantResponse =
+            'The app-builder feature is not available in this open-source build. ' +
+            'It depends on a separate `AppMakerService` module that ships only with the hosted version of wants.chat.';
 
-            const generationStartTime = Date.now();
-
-            emitProgress('generation', 'started', 'Analyzing page requirements...');
-            emitProgress('generation', 'in_progress', 'Generating page design with AI...');
-
-            // Generate page using AppMakerService (JSON component tree approach)
-            const pageTree = await this.appMakerService.generatePage(userId, {
-              prompt: pattern.metadata?.appDescription || message,
-            });
-
-            emitProgress('generation', 'completed', 'Page design generated');
-            emitProgress('rendering', 'started', 'Rendering HTML preview...');
-
-            // Auto-render to get preview URL
-            const renderResult = await this.appMakerService.renderPage(userId, pageTree.id);
-
-            emitProgress('rendering', 'completed', 'Preview ready');
-
-            const generationTime = Date.now() - generationStartTime;
-            this.logger.log(`AppMaker page generation completed in ${generationTime}ms`);
-
-            // Stop typing indicator
-            this.server.to(`session:${session.id}`).emit('message:typing', {
-              sessionId: session.id,
-              sender: 'assistant',
-              isTyping: false,
-              timestamp: new Date().toISOString(),
-            });
-
-            // Build preview URL using the app-maker preview endpoint
-            const port = this.configService.get('PORT') || 3001;
-            const apiPrefix = this.configService.get('API_PREFIX') || 'api/v1';
-            const apiBaseUrl = this.configService.get<string>('API_BASE_URL') ||
-              `http://localhost:${port}`;
-            const previewUrl = `${apiBaseUrl}/${apiPrefix}/app-maker/preview/${pageTree.id}`;
-
-            // Map to the same completion event format the frontend expects
-            const completionData = {
-              sessionId: session.id,
-              success: true,
-              appId: pageTree.id,
-              appName: pageTree.name,
-              appType: pageTree.pageType,
-              backendUrl: null,
-              frontendUrl: previewUrl,
-              mobileUrl: null,
-              apiDocsUrl: null,
-              hasBackendCode: false,
-              hasFrontendCode: true,
-              hasMobileCode: false,
-              outputPath: renderResult.outputPath,
-              features: [],
-              stats: {
-                files: 3, // index.html, Page.tsx, tree.json
-                tables: 0,
-                generationTime,
-              },
-              timestamp: new Date().toISOString(),
-            };
-
-            // Cache completion for recovery
-            this.pendingBuildCompletions.set(session.userId, {
-              data: completionData,
-              timestamp: Date.now(),
-            });
-
-            // Emit completion to both session and user rooms
-            emitToSessionAndUser('app-builder:completed', completionData);
-
-            // Generate response message
-            assistantResponse = `# ${pageTree.name}
-
-**Type**: ${pageTree.pageType} page
-**Theme**: ${pageTree.theme.mode} mode, ${pageTree.theme.primaryColor} primary color
-
-## Preview
-🌐 **Preview**: [Open Preview](${previewUrl})
-
-Your page has been generated! You can preview it using the panel on the right.
-
-**Generation Time**: ${(generationTime / 1000).toFixed(1)}s
-
-Would you like me to modify the design? You can ask things like:
-- "Change the hero button color to red"
-- "Add a testimonials section"
-- "Make it dark mode"`;
-
-            responseMetadata.appBuilder = {
-              appId: pageTree.id,
-              appName: pageTree.name,
-              appType: pageTree.pageType,
-              backendUrl: null,
-              frontendUrl: previewUrl,
-              outputPath: renderResult.outputPath,
-              features: [],
-              stats: completionData.stats,
-            };
-          } catch (error) {
-            this.logger.error(`AppMaker failed: ${error.message}`);
-
-            emitToSessionAndUser('app-builder:error', {
-              sessionId: session.id,
-              error: error.message || 'Page generation service unavailable',
-              timestamp: new Date().toISOString(),
-            });
-
-            this.server.to(`session:${session.id}`).emit('message:typing', {
-              sessionId: session.id,
-              sender: 'assistant',
-              isTyping: false,
-              timestamp: new Date().toISOString(),
-            });
-
-            assistantResponse = `I'm sorry, but I couldn't generate the page right now. ${error.message || 'The page generation service might be temporarily unavailable.'}
-
-Would you like to try again with a different description?`;
-          }
-
-          // Continue to persist and emit the response
           responseMetadata.patternId = pattern.id;
           responseMetadata.serviceBackend = pattern.serviceBackend;
-
-          // Note: Don't return early - we need to persist the assistant message below
-
-          /* ========== ORIGINAL APP-CREATOR CODE (commented out) ==========
-          // The original code used AppCreatorService to generate full-stack apps
-          // (React + Hono backend + database + mobile). Replaced by AppMakerService
-          // which generates lightweight JSON component trees rendered to HTML.
-          //
-          // To restore: uncomment AppCreatorModule in chat.module.ts,
-          // uncomment AppCreatorService import above, and replace this block.
-          ================================================================ */
+          responseMetadata.appBuilder = { disabled: true };
         } else if (pattern?.category === 'learning_productivity' || intentResult.uiConfig?.metadata?.category === 'learning_productivity') {
           // Handle learning & productivity requests
           const learningSubType = pattern?.metadata?.learningSubType || intentResult.uiConfig?.metadata?.learningSubType || 'tutoring';

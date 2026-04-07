@@ -261,7 +261,7 @@ npm-debug.log*
     // Generate OpenAPI paths for entities
     const entityPaths = analysis.entities.map((e) => {
       const path = pluralize.plural(this.toKebabCase(e.name));
-      const name = this.toPascalCase(e.name);
+      const name = pascalCase(e.name);
       return `
       '/api/${path}': {
         get: { summary: 'List all ${path}', tags: ['${name}'] },

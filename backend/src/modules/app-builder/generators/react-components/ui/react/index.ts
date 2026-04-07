@@ -243,7 +243,8 @@ export const componentGenerators: Record<string, (resolved: ResolvedComponent) =
 
 // Helper to normalize component type (camelCase, snake_case → kebab-case)
 function normalizeComponentType(type: string): string {
-  return changeCase.kebabCase(type);
+  // change-case v4 calls this `paramCase`.
+  return changeCase.paramCase(type);
 }
 
 // Helper to get generator for a component

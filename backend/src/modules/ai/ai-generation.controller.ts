@@ -15,7 +15,7 @@ import {
 } from '@nestjs/common';
 import { Response } from 'express';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
-import * as sharp from 'sharp';
+import sharp from 'sharp';
 import { ApiTags, ApiOperation, ApiBody, ApiResponse, ApiBearerAuth, ApiProperty } from '@nestjs/swagger';
 import { IsString, IsOptional, IsNumber, IsIn } from 'class-validator';
 import { AuthGuard } from '../../common/guards/auth.guard';

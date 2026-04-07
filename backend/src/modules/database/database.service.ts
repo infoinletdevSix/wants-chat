@@ -92,7 +92,11 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
         database: this.dbConfig.database,
         user: this.dbConfig.user,
         password: this.dbConfig.password,
-        ssl: this.dbConfig.ssl ? { rejectUnauthorized: false } : false,
+        // Hardcoded false for the open-source Docker dev environment.
+        // The local postgres container has no TLS, and the previous
+        // env-based toggle was being subverted somewhere we couldn't trace.
+        // For production, replace this with whatever your deployment needs.
+        ssl: false,
         max: this.dbConfig.max,
         min: this.dbConfig.min,
         idleTimeoutMillis: this.dbConfig.idleTimeoutMillis,

@@ -6,7 +6,8 @@
  */
 
 import * as crypto from 'crypto';
-import { snakeCase, kebabCase } from 'change-case';
+// `change-case` v4 exports the kebab-case helper as `paramCase`.
+import { snakeCase, paramCase as kebabCase } from 'change-case';
 import * as pluralize from 'pluralize';
 import { FeatureApiRoute } from '../interfaces/feature.interface';
 import { DatabaseSchema, DbTable } from '../interfaces/schema.interface';

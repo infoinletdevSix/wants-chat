@@ -105,7 +105,8 @@ export function getCommonComponentGenerator(componentType: string) {
   }
 
   // Try kebab-case version
-  const kebabCase = changeCase.kebabCase(componentType);
+  // change-case v4 calls this `paramCase`.
+  const kebabCase = changeCase.paramCase(componentType);
   if (commonGeneratorMap[kebabCase]) {
     return commonGeneratorMap[kebabCase];
   }
