@@ -14,7 +14,7 @@
 
   ---
 
-  **1,100+ Contextual Tools** | **30+ AI Models** | **No-Code App Builder** | **Self-Hostable**
+  **1,000+ Contextual Tools** | **30+ AI Models** | **No-Code App Builder** | **Self-Hostable**
 
   *One platform that replaces 100+ apps you use daily*
 
@@ -69,10 +69,10 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 
 ### ✅ wants.chat
 - **Intent Detection** → Shows relevant UI
-- **1,100+ Contextual Tools** → Ready to use
+- **1,000+ Contextual Tools** → Ready to use
 - **No-Code App Builder** → Full-stack apps
 - **Workflow Automation** → n8n-style flows
-- **Multi-Model AI** → 30+ LLM providers
+- **Multi-Model AI** → 30+ models across 8 providers
 
 </td>
 </tr>
@@ -95,13 +95,13 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 │   User: "Calculate my BMI"                                      │
 │                                                                 │
 │   ┌─────────────────────────────────────┐                       │
-│   │  🏃 BMI Calculator                  │                       │
+│   │  BMI Calculator                     │                       │
 │   │  ─────────────────────────          │                       │
 │   │  Height: [175] cm                   │                       │
 │   │  Weight: [70] kg                    │                       │
 │   │                                     │                       │
-│   │  Your BMI: 22.9 (Normal)           │                       │
-│   │  ▓▓▓▓▓▓▓▓▓░░░░░░░░░░░              │                       │
+│   │  Your BMI: 22.9 (Normal)            │                       │
+│   │  ▓▓▓▓▓▓▓▓▓░░░░░░░░░░░               │                       │
 │   │                                     │                       │
 │   │  [Export PDF] [Track History]       │                       │
 │   └─────────────────────────────────────┘                       │
@@ -112,7 +112,7 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 
 ## 🌟 Core Features
 
-### 1️⃣ **1,100+ Contextual Tools** (Growing Daily)
+### 1️⃣ **1,000+ Contextual Tools** (Growing Daily)
 
 <details>
 <summary><b>📊 Calculators & Converters (80+)</b></summary>
@@ -318,13 +318,13 @@ Your data, pre-filled automatically:
 │                 3 PILLARS OF CONTEXT                        │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  1️⃣ ONBOARDING DATA                                        │
+│  1. ONBOARDING DATA                                         │
 │     Currency, timezone, language, industry preferences      │
 │                                                             │
-│  2️⃣ CONTEXTUAL UI HISTORY                                  │
+│  2. CONTEXTUAL UI HISTORY                                   │
 │     Remembers your last inputs for each tool                │
 │                                                             │
-│  3️⃣ CHAT INTELLIGENCE                                      │
+│  3. CHAT INTELLIGENCE                                       │
 │     Extracts entities from conversation                     │
 │     "Budget $5000" → Pre-fills budget calculators           │
 │                                                             │
@@ -347,15 +347,17 @@ Every tool supports comprehensive export:
 
 ### What wants.chat Replaces
 
+_Typical standard-tier pricing as of December 2025; actual figures vary by plan and seat count._
+
 <table>
 <tr><th>Category</th><th>Apps Replaced</th><th>Annual Savings</th></tr>
 <tr><td>AI Assistants</td><td>ChatGPT Plus, Claude Pro, Gemini Advanced</td><td>$720/year</td></tr>
-<tr><td>Design Tools</td><td>Canva Pro, Adobe Express, Figma</td><td>$480/year</td></tr>
-<tr><td>Writing Tools</td><td>Jasper, Copy.ai, Writesonic</td><td>$600/year</td></tr>
+<tr><td>Design Tools</td><td>Canva Pro, Adobe Express, Figma</td><td>$360/year</td></tr>
+<tr><td>Writing Tools</td><td>Jasper, Copy.ai, Writesonic</td><td>$1,000/year</td></tr>
 <tr><td>Project Management</td><td>Monday, Asana, Notion</td><td>$360/year</td></tr>
 <tr><td>Automation</td><td>Zapier, Make, n8n Cloud</td><td>$480/year</td></tr>
-<tr><td>App Building</td><td>Bubble, Webflow, Retool</td><td>$1,200/year</td></tr>
-<tr><td><b>TOTAL</b></td><td></td><td><b>$3,840/year saved</b></td></tr>
+<tr><td>App Building</td><td>Bubble, Webflow, Retool</td><td>$750/year</td></tr>
+<tr><td><b>TOTAL</b></td><td>18 apps</td><td><b>$3,670/year saved</b></td></tr>
 </table>
 
 ### Feature Comparison (December 2025)
@@ -365,7 +367,7 @@ Every tool supports comprehensive export:
 | Multi-Model AI | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ **30+ models** |
 | AI Image Generation | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ **FLUX + SDXL** |
 | AI Video Generation | ✅ Sora | ❌ | ✅ | ✅ | ❌ | ✅ **3 engines** |
-| Contextual UI Tools | ❌ | Artifacts | ❌ | ❌ | ❌ | ✅ **1,100+ tools** |
+| Contextual UI Tools | ❌ | Artifacts | ❌ | ❌ | ❌ | ✅ **1,000+ tools** |
 | No-Code App Builder | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ **Full-stack** |
 | Workflow Automation | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ **500+ connectors** |
 | Browser Extension | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ **Chrome/Firefox** |
@@ -377,7 +379,7 @@ Every tool supports comprehensive export:
 
 ### ✅ Implemented
 
-- [x] 1,100+ Contextual UI Tools
+- [x] 1,000+ Contextual UI Tools
 - [x] Multi-model AI chat (30+ models)
 - [x] AI Image Generation (FLUX, SDXL)
 - [x] AI Video Generation (Vidu, KlingAI)
@@ -428,7 +430,7 @@ Pricing is defined in [`frontend/src/config/pricing.ts`](frontend/src/config/pri
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React 19** + TypeScript
+- **React 18** + TypeScript
 - **Vite** build tooling
 - **Tailwind CSS** + shadcn/ui
 - **Framer Motion** for animations
@@ -437,16 +439,16 @@ Pricing is defined in [`frontend/src/config/pricing.ts`](frontend/src/config/pri
 
 ### Backend
 - **NestJS** (Node.js framework)
-- **PostgreSQL** database
+- **PostgreSQL** database (raw `pg` driver)
 - **Qdrant** vector database (optional)
-- **Redis** for caching
+- **Redis** (via BullMQ queues)
 - **Socket.io** for real-time communication
 - **Swagger/OpenAPI** for API documentation
 
 ### Browser Extension
 - **Vite** + **TypeScript**
 - **Manifest V3** (Chrome, Edge, Firefox)
-- Shares the same React component library as the web app
+- Shares React components with the web app via source-level imports
 
 ### AI/ML
 - **OpenRouter** unified LLM gateway (30+ models)
