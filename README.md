@@ -347,15 +347,17 @@ Every tool supports comprehensive export:
 
 ### What wants.chat Replaces
 
+_Typical standard-tier pricing as of December 2025; actual figures vary by plan and seat count._
+
 <table>
 <tr><th>Category</th><th>Apps Replaced</th><th>Annual Savings</th></tr>
 <tr><td>AI Assistants</td><td>ChatGPT Plus, Claude Pro, Gemini Advanced</td><td>$720/year</td></tr>
-<tr><td>Design Tools</td><td>Canva Pro, Adobe Express, Figma</td><td>$480/year</td></tr>
-<tr><td>Writing Tools</td><td>Jasper, Copy.ai, Writesonic</td><td>$600/year</td></tr>
+<tr><td>Design Tools</td><td>Canva Pro, Adobe Express, Figma</td><td>$360/year</td></tr>
+<tr><td>Writing Tools</td><td>Jasper, Copy.ai, Writesonic</td><td>$1,000/year</td></tr>
 <tr><td>Project Management</td><td>Monday, Asana, Notion</td><td>$360/year</td></tr>
 <tr><td>Automation</td><td>Zapier, Make, n8n Cloud</td><td>$480/year</td></tr>
-<tr><td>App Building</td><td>Bubble, Webflow, Retool</td><td>$1,200/year</td></tr>
-<tr><td><b>TOTAL</b></td><td></td><td><b>$3,840/year saved</b></td></tr>
+<tr><td>App Building</td><td>Bubble, Webflow, Retool</td><td>$750/year</td></tr>
+<tr><td><b>TOTAL</b></td><td>18 apps</td><td><b>$3,670/year saved</b></td></tr>
 </table>
 
 ### Feature Comparison (December 2025)
