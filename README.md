@@ -95,13 +95,13 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 │   User: "Calculate my BMI"                                      │
 │                                                                 │
 │   ┌─────────────────────────────────────┐                       │
-│   │  🏃 BMI Calculator                  │                       │
+│   │  BMI Calculator                     │                       │
 │   │  ─────────────────────────          │                       │
 │   │  Height: [175] cm                   │                       │
 │   │  Weight: [70] kg                    │                       │
 │   │                                     │                       │
-│   │  Your BMI: 22.9 (Normal)           │                       │
-│   │  ▓▓▓▓▓▓▓▓▓░░░░░░░░░░░              │                       │
+│   │  Your BMI: 22.9 (Normal)            │                       │
+│   │  ▓▓▓▓▓▓▓▓▓░░░░░░░░░░░               │                       │
 │   │                                     │                       │
 │   │  [Export PDF] [Track History]       │                       │
 │   └─────────────────────────────────────┘                       │
