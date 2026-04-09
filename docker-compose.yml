@@ -19,10 +19,14 @@ services:
       #   docker-compose down -v && docker-compose up
       - ./backend/scripts/migrations:/docker-entrypoint-initdb.d:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-wants}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-wants} -d ${POSTGRES_DB:-wants}"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 10
+      # First boot runs ~21 migration files from /docker-entrypoint-initdb.d
+      # before Postgres accepts external connections. Give it room so the
+      # healthcheck doesn't fail dependent containers on a fresh `up`.
+      start_period: 90s
 
   # ─── Redis ─────────────────────────────────────────────────
   redis:
