@@ -500,6 +500,14 @@ We welcome contributions! Start with the [Contributing Guide](CONTRIBUTING.md) a
 
 ---
 
+## Contributors
+
+<a href="https://github.com/wants-chat/wants-chat/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wants-chat/wants-chat&anon=1&max=100&columns=10" />
+</a>
+
+---
+
 ## 📄 License
 
 This project is licensed under the **AGPL-3.0 License** - see the [LICENSE](LICENSE) file for details.
