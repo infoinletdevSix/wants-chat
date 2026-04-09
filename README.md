@@ -10,6 +10,18 @@
 
   *One platform that replaces 100+ apps you use daily*
 
+  <p>
+    <a href="./README.md">English</a> |
+    <a href="./README_JA.md">日本語</a> |
+    <a href="./README_ZH.md">中文</a> |
+    <a href="./README_KO.md">한국어</a> |
+    <a href="./README_ES.md">Español</a> |
+    <a href="./README_FR.md">Français</a> |
+    <a href="./README_DE.md">Deutsch</a> |
+    <a href="./README_PT-BR.md">Português</a> |
+    <a href="./README_RU.md">Русский</a>
+  </p>
+
 </div>
 
 ---
