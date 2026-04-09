@@ -5,6 +5,8 @@ import { AiModule } from '../ai/ai.module';
 import { DatabaseModule } from '../database/database.module';
 import { BuildValidatorService } from './services/build-validator.service';
 import { AutoRepairService } from './services/auto-repair.service';
+import { PlatformService } from '../app-builder/services/platform.service';
+import { DataSeederService } from '../app-builder/services/data-seeder.service';
 
 @Module({
   imports: [AiModule, DatabaseModule],
@@ -13,6 +15,8 @@ import { AutoRepairService } from './services/auto-repair.service';
     AppCreatorService,
     BuildValidatorService,
     AutoRepairService,
+    PlatformService,
+    DataSeederService,
   ],
   exports: [AppCreatorService, BuildValidatorService, AutoRepairService],
 })

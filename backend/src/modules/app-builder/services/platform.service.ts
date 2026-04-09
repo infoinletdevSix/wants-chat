@@ -5,6 +5,7 @@
  * database creation, and auth schema initialization.
  */
 
+import { Injectable, ServiceUnavailableException } from '@nestjs/common';
 import { Pool, Client } from 'pg';
 import * as crypto from 'crypto';
 
@@ -39,34 +40,62 @@ export interface CreateAppInput {
 const DEFAULT_ORGANIZATION_ID = 'f4117a91-9873-4848-b793-6d651ca4724a';
 const DEFAULT_PROJECT_ID = '01f587df-4b36-42e7-8a48-8c4320cee558';
 
+@Injectable()
 export class PlatformService {
-  private dbConfig: DbConfig;
-  private organizationId: string;
-  private projectId: string;
+  private readonly dbConfig: DbConfig | null;
+  private readonly organizationId: string;
+  private readonly projectId: string;
+  private readonly enabled: boolean;
 
-  constructor(dbConfig?: Partial<DbConfig>) {
-    const host = dbConfig?.host || process.env.TENANT_DB_HOST;
-    const user = dbConfig?.user || process.env.TENANT_DB_USER;
-    const password = dbConfig?.password || process.env.TENANT_DB_PASSWORD;
-    const database = dbConfig?.database || process.env.TENANT_DB_NAME;
+  constructor() {
+    const host = process.env.TENANT_DB_HOST;
+    const user = process.env.TENANT_DB_USER;
+    const password = process.env.TENANT_DB_PASSWORD;
+    const database = process.env.TENANT_DB_NAME;
 
     if (!host || !user || !password || !database) {
-      throw new Error(
-        'PlatformService requires TENANT_DB_HOST, TENANT_DB_USER, ' +
-          'TENANT_DB_PASSWORD, and TENANT_DB_NAME to be set in the ' +
-          'environment (or passed explicitly via the dbConfig argument).',
-      );
+      // Tenant DB is an optional feature dependency. If creds are missing,
+      // construct in a disabled state instead of throwing — that lets the
+      // rest of the app (auth, etc.) boot. Methods that actually need the
+      // tenant DB will throw ServiceUnavailableException at call time.
+      this.enabled = false;
+      this.dbConfig = null;
+    } else {
+      this.enabled = true;
+      this.dbConfig = {
+        host,
+        port: parseInt(process.env.TENANT_DB_PORT || '5432'),
+        user,
+        password,
+        database,
+      };
     }
 
-    this.dbConfig = {
-      host,
-      port: dbConfig?.port || parseInt(process.env.TENANT_DB_PORT || '5432'),
-      user,
-      password,
-      database,
-    };
     this.organizationId = process.env.ORGANIZATION_ID || DEFAULT_ORGANIZATION_ID;
     this.projectId = process.env.PROJECT_ID || DEFAULT_PROJECT_ID;
+  }
+
+  /**
+   * Whether the tenant DB credentials were provided at boot.
+   * Callers can use this to skip platform-dependent steps proactively.
+   */
+  isEnabled(): boolean {
+    return this.enabled;
+  }
+
+  /**
+   * Returns the dbConfig or throws a 503 if the service is disabled.
+   * Used by every method that needs to talk to the tenant DB.
+   */
+  private requireConfig(): DbConfig {
+    if (!this.enabled || !this.dbConfig) {
+      throw new ServiceUnavailableException(
+        'App generation is unavailable: tenant database is not configured. ' +
+          'Set TENANT_DB_HOST, TENANT_DB_USER, TENANT_DB_PASSWORD, and ' +
+          'TENANT_DB_NAME in the backend environment to enable this feature.',
+      );
+    }
+    return this.dbConfig;
   }
 
   /**
@@ -96,7 +125,8 @@ export class PlatformService {
    * Register app in platform database and create app database
    */
   async createApp(input: CreateAppInput): Promise<AppRegistration> {
-    const pool = new Pool(this.dbConfig);
+    const dbConfig = this.requireConfig();
+    const pool = new Pool(dbConfig);
     const client = await pool.connect();
 
     // Use input IDs if provided, otherwise fall back to instance/defaults
@@ -226,7 +256,8 @@ export class PlatformService {
    * Check if database exists
    */
   async databaseExists(dbName: string): Promise<boolean> {
-    const pool = new Pool(this.dbConfig);
+    const dbConfig = this.requireConfig();
+    const pool = new Pool(dbConfig);
     try {
       const result = await pool.query(
         `SELECT 1 FROM pg_database WHERE datname = $1`,
@@ -250,8 +281,9 @@ export class PlatformService {
     }
 
     // Connect to postgres database to create new database
+    const dbConfig = this.requireConfig();
     const adminClient = new Client({
-      ...this.dbConfig,
+      ...dbConfig,
       database: 'postgres',
     });
 
@@ -268,8 +300,9 @@ export class PlatformService {
    * Initialize tenant tables (auth schema)
    */
   async initializeTenantTables(dbName: string): Promise<void> {
+    const dbConfig = this.requireConfig();
     const appPool = new Pool({
-      ...this.dbConfig,
+      ...dbConfig,
       database: dbName,
     });
 
@@ -708,8 +741,9 @@ export class PlatformService {
    * Execute SQL on app database
    */
   async executeOnAppDatabase(dbName: string, sql: string, values?: any[]): Promise<any> {
+    const dbConfig = this.requireConfig();
     const appPool = new Pool({
-      ...this.dbConfig,
+      ...dbConfig,
       database: dbName,
     });
 

@@ -6,6 +6,8 @@ import { BatchTestController } from './batch-test.controller';
 import { GenerationService } from './generation.service';
 import { DeploymentService } from '../services/deployment.service';
 import { QdrantAppTypeDetectorService } from '../services/qdrant-app-type-detector.service';
+import { PlatformService } from '../services/platform.service';
+import { DataSeederService } from '../services/data-seeder.service';
 import { AuthModule } from '../../auth/auth.module';
 import { AiModule } from '../../ai/ai.module';
 import { QdrantModule } from '../../qdrant/qdrant.module';
@@ -21,7 +23,13 @@ import { AppsModule } from '../../apps/apps.module';
     AppsModule,
   ],
   controllers: [GenerationController, BatchTestController],
-  providers: [GenerationService, DeploymentService, QdrantAppTypeDetectorService],
-  exports: [GenerationService, DeploymentService],
+  providers: [
+    GenerationService,
+    DeploymentService,
+    QdrantAppTypeDetectorService,
+    PlatformService,
+    DataSeederService,
+  ],
+  exports: [GenerationService, DeploymentService, PlatformService, DataSeederService],
 })
 export class GenerationModule {}

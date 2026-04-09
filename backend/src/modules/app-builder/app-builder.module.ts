@@ -6,6 +6,8 @@ import { RegistryModule } from './registry/registry.module';
 import { GenerationService } from './generation/generation.service';
 import { DeploymentService } from './services/deployment.service';
 import { QdrantAppTypeDetectorService } from './services/qdrant-app-type-detector.service';
+import { PlatformService } from './services/platform.service';
+import { DataSeederService } from './services/data-seeder.service';
 import { AiModule } from '../ai/ai.module';
 import { AppsModule } from '../apps/apps.module';
 import { QdrantModule } from '../qdrant/qdrant.module';
@@ -17,6 +19,8 @@ import { QdrantModule } from '../qdrant/qdrant.module';
     GenerationService,
     DeploymentService,
     QdrantAppTypeDetectorService,
+    PlatformService,
+    DataSeederService,
   ],
   exports: [
     AppBuilderService,
