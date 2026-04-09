@@ -26,10 +26,10 @@ export class GenerationService {
   private reactRenderer: ReactRendererService;
   private reactNativeRenderer: ReactNativeRendererService;
   private honoRenderer: HonoRendererService;
-  private platformService: PlatformService;
-  private dataSeeder: DataSeederService;
 
   constructor(
+    private readonly platformService: PlatformService,
+    private readonly dataSeeder: DataSeederService,
     @Optional() private qdrantDetector?: QdrantAppTypeDetectorService,
     @Optional() private appsService?: AppsService,
   ) {
@@ -48,8 +48,13 @@ export class GenerationService {
     this.reactRenderer = new ReactRendererService();
     this.reactNativeRenderer = new ReactNativeRendererService();
     this.honoRenderer = new HonoRendererService();
-    this.platformService = new PlatformService();
-    this.dataSeeder = new DataSeederService(this.platformService);
+
+    if (!this.platformService.isEnabled()) {
+      this.logger.warn(
+        'PlatformService disabled (TENANT_DB_* env vars not set). ' +
+          'App generation will fail at runtime, but the rest of the backend will boot.',
+      );
+    }
 
     if (this.qdrantDetector) {
       this.logger.log('✅ Qdrant App Type Detector enabled - semantic matching for any language');

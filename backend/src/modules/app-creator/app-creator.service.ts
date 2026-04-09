@@ -100,8 +100,6 @@ export class MissingEntityConfigError extends BadRequestException {
 export class AppCreatorService {
   private readonly logger = new Logger(AppCreatorService.name);
   private readonly outputBaseDir: string;
-  private readonly platformService: PlatformService;
-  private readonly dataSeederService: DataSeederService;
 
   constructor(
     private readonly configService: ConfigService,
@@ -109,14 +107,20 @@ export class AppCreatorService {
     private readonly db: DatabaseService,
     private readonly buildValidator: BuildValidatorService,
     private readonly autoRepair: AutoRepairService,
+    private readonly platformService: PlatformService,
+    private readonly dataSeederService: DataSeederService,
   ) {
     this.outputBaseDir = this.configService.get<string>(
       'APP_CREATOR_OUTPUT_DIR',
       path.join(process.cwd(), 'generated', 'app-creator'),
     );
 
-    this.platformService = new PlatformService();
-    this.dataSeederService = new DataSeederService(this.platformService);
+    if (!this.platformService.isEnabled()) {
+      this.logger.warn(
+        'PlatformService disabled (TENANT_DB_* env vars not set). ' +
+          'App creation will fail at runtime, but the rest of the backend will boot.',
+      );
+    }
   }
 
   /**
