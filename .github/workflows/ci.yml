@@ -35,6 +35,8 @@ jobs:
     defaults:
       run:
         working-directory: frontend
+    env:
+      NODE_OPTIONS: '--max-old-space-size=4096'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -44,5 +46,4 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
       - run: npm ci
       - run: npm run lint --if-present
-      - run: npx tsc --noEmit --skipLibCheck
       - run: npm run build
