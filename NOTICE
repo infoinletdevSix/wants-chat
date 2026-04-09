@@ -1,0 +1,30 @@
+wants.chat
+Copyright 2025 wants.chat Contributors
+
+This product includes software developed by the wants.chat open-source community.
+
+Licensed under the GNU Affero General Public License v3.0.
+
+This project uses the following open-source components:
+
+Backend:
+  - NestJS (MIT License) - https://nestjs.com
+  - TypeScript (Apache-2.0 License) - https://typescriptlang.org
+  - PostgreSQL driver (pg) (MIT License) - https://node-postgres.com
+  - Socket.IO (MIT License) - https://socket.io
+  - BullMQ (MIT License) - https://docs.bullmq.io
+  - ioredis (MIT License) - https://github.com/redis/ioredis
+  - OpenAI Node.js (Apache-2.0 License) - https://github.com/openai/openai-node
+  - Stripe Node.js (MIT License) - https://stripe.com
+
+Frontend:
+  - React (MIT License) - https://reactjs.org
+  - Vite (MIT License) - https://vitejs.dev
+  - Tailwind CSS (MIT License) - https://tailwindcss.com
+  - Radix UI (MIT License) - https://radix-ui.com
+  - Zustand (MIT License) - https://zustand-demo.pmnd.rs
+  - React Query (MIT License) - https://tanstack.com/query
+  - Lucide Icons (ISC License) - https://lucide.dev
+
+For the full list of dependencies, see package.json files in
+the backend/ and frontend/ directories.
