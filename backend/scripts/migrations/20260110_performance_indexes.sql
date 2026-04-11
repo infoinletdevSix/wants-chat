@@ -1,45 +1,11 @@
 -- Performance Indexes Migration
 -- Adds composite indexes for frequently queried columns to improve query performance
 
--- ============================================
--- User Credits Table Indexes
--- ============================================
--- The user_credits table is queried frequently with FOR UPDATE lock
--- Ensure user_id lookup is fast
-CREATE INDEX IF NOT EXISTS idx_user_credits_user_id ON user_credits(user_id);
-
--- ============================================
--- User Subscriptions Table Indexes
--- ============================================
--- Composite index for user's active subscription lookup
-CREATE INDEX IF NOT EXISTS idx_user_subscriptions_user_status
-    ON user_subscriptions(user_id, status);
-
--- Index for Stripe subscription lookups
-CREATE INDEX IF NOT EXISTS idx_user_subscriptions_stripe_customer
-    ON user_subscriptions(stripe_customer_id) WHERE stripe_customer_id IS NOT NULL;
-
--- ============================================
--- LLM Usage Logs Table Indexes
--- ============================================
--- Composite index for user's daily usage aggregation
-CREATE INDEX IF NOT EXISTS idx_llm_usage_user_date_status
-    ON llm_usage_logs(user_id, created_at, status);
-
--- Index for conversation history lookups
-CREATE INDEX IF NOT EXISTS idx_llm_usage_conversation_created
-    ON llm_usage_logs(conversation_id, created_at) WHERE conversation_id IS NOT NULL;
-
--- Partial index for successful requests (most common filter)
-CREATE INDEX IF NOT EXISTS idx_llm_usage_success
-    ON llm_usage_logs(user_id, created_at) WHERE status = 'success';
-
--- ============================================
--- Credit Transactions Table Indexes
--- ============================================
--- Composite index for user's transaction history
-CREATE INDEX IF NOT EXISTS idx_credit_transactions_user_created
-    ON credit_transactions(user_id, created_at DESC);
+-- NOTE: CREATE INDEX is intentionally NOT CONCURRENTLY here.
+-- Migrations run inside a transaction, and several index creations
+-- are wrapped in DO $$ ... $$ blocks; both contexts disallow CONCURRENTLY.
+-- If you need a non-blocking index on a hot table in production,
+-- run it manually outside the migration runner.
 
 -- ============================================
 -- Research Sessions Table Indexes (if exists)
@@ -94,12 +60,3 @@ BEGIN
     END IF;
 END
 $$;
-
--- ============================================
--- Table Statistics Update
--- ============================================
--- Update statistics for better query planning
-ANALYZE user_credits;
-ANALYZE user_subscriptions;
-ANALYZE llm_usage_logs;
-ANALYZE credit_transactions;
