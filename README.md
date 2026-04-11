@@ -1,22 +1,28 @@
 <div align="center">
-  <img src="frontend/public/assets/logo.png" alt="wants.chat Logo" width="120" height="120" />
+  <a href="https://wants.chat">
+    <img src="frontend/public/assets/logo.png" alt="wants.chat" width="80">
+  </a>
 
   # wants.chat
-
-  ### **The World's First Intent-Driven AI Platform**
-
-  *Where "I want..." becomes reality in seconds*
 
   [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-wants.chat-00D4AA?style=for-the-badge)](https://wants.chat)
   [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue?style=for-the-badge)](LICENSE)
   [![GitHub Stars](https://img.shields.io/github/stars/wants-chat/wants-chat?style=for-the-badge)](https://github.com/wants-chat/wants-chat/stargazers)
   [![Contributors](https://img.shields.io/github/contributors/wants-chat/wants-chat?style=for-the-badge)](https://github.com/wants-chat/wants-chat/graphs/contributors)
 
-  ---
-
-  **1,000+ Contextual Tools** | **30+ AI Models** | **No-Code App Builder** | **Self-Hostable**
-
   *One platform that replaces 100+ apps you use daily*
+
+  <p>
+    <a href="./README.md">English</a> |
+    <a href="./README_JA.md">日本語</a> |
+    <a href="./README_ZH.md">中文</a> |
+    <a href="./README_KO.md">한국어</a> |
+    <a href="./README_ES.md">Español</a> |
+    <a href="./README_FR.md">Français</a> |
+    <a href="./README_DE.md">Deutsch</a> |
+    <a href="./README_PT-BR.md">Português</a> |
+    <a href="./README_RU.md">Русский</a>
+  </p>
 
 </div>
 
@@ -48,6 +54,12 @@ In 2025, the average knowledge worker uses **50+ different apps** daily:
 - And dozens more...
 
 **wants.chat combines them ALL into one intelligent platform.**
+
+---
+
+## 🚀 Why this project matters
+
+We believe AI should not just talk — it should **DO**.
 
 ---
 
@@ -487,6 +499,18 @@ We welcome contributions! Start with the [Contributing Guide](CONTRIBUTING.md) a
 - **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** — community standards
 - **[SECURITY.md](SECURITY.md)** — how to report a vulnerability
 - **[CHANGELOG.md](CHANGELOG.md)** — release notes and version history
+
+---
+
+## Contributors
+
+Thank you to all the amazing people who have contributed to wants.chat! 🎉
+
+<a href="https://github.com/wants-chat/wants-chat/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wants-chat/wants-chat&anon=1&max=100&columns=10" />
+</a>
+
+Want to see your face here? Check out our [Contributing Guide](CONTRIBUTING.md) and start contributing today!
 
 ---
 
