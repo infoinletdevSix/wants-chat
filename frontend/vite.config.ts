@@ -21,24 +21,24 @@ export default defineConfig({
         icons: [
           {
             src: '/assets/logo.png',
-            sizes: '192x192',
+            sizes: '64x64',
             type: 'image/png',
           },
           {
             src: '/assets/wants.png',
-            sizes: '512x512',
+            sizes: '500x500',
             type: 'image/png',
           },
           {
             src: '/assets/wants.png',
-            sizes: '512x512',
+            sizes: '500x500',
             type: 'image/png',
-            purpose: 'any maskable',
+            purpose: 'maskable',
           },
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{css,html,ico,png,svg,woff,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
         runtimeCaching: [
           {
@@ -51,7 +51,7 @@ export default defineConfig({
                 maxAgeSeconds: 60 * 5, // 5 minutes
               },
               cacheableResponse: {
-                statuses: [0, 200],
+                statuses: [200],
               },
             },
           },
