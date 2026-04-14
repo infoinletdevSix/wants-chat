@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS user_onboarding (
   primary_use_case VARCHAR(100), -- content_creation, development, data_analysis, business, personal, education
   industry VARCHAR(100), -- technology, finance, healthcare, education, ecommerce, marketing, legal, real_estate, other
   company_name VARCHAR(255),
-  company_size VARCHAR(50), -- solo, 2-10, 11-50, 51-200, 201-1000, 1000+
+  company_size VARCHAR(50), -- solo, 2-10, 11-50, 51-200, 201-1100, 1100+
 
   -- Regional Preferences
   preferred_language VARCHAR(10) DEFAULT 'en',

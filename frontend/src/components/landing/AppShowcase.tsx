@@ -80,9 +80,9 @@ const showcaseSlides = [
   },
   {
     id: 'tools',
-    title: '1000+ Smart Tools',
+    title: '1100+ Smart Tools',
     subtitle: 'Contextual UI That Adapts',
-    description: 'Access over 1000 tools that appear exactly when you need them, with smart contextual UI.',
+    description: 'Access over 1100 tools that appear exactly when you need them, with smart contextual UI.',
     icon: Wrench,
     features: ['Context-Aware', 'Auto-Suggestions', 'Every Industry', 'Always Expanding'],
     gradient: 'from-orange-500 via-red-500 to-pink-500',

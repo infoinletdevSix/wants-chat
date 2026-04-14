@@ -77,7 +77,7 @@ const changelogEntries = [
     tagColor: 'bg-purple-500',
     changes: [
       { type: 'feature', icon: Rocket, text: 'Complete platform redesign with new UI/UX' },
-      { type: 'feature', icon: Sparkles, text: '1000+ tools available through intent-driven interface' },
+      { type: 'feature', icon: Sparkles, text: '1100+ tools available through intent-driven interface' },
       { type: 'feature', icon: Globe, text: 'Multi-language support for 50+ languages' },
       { type: 'improvement', icon: Zap, text: 'New architecture for 10x better performance' },
       { type: 'security', icon: Shield, text: 'SOC 2 Type II compliance achieved' },

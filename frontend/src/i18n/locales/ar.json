@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "ما أنواع الأدوات المتضمنة؟",
-        "a1": "تتضمن أدواتنا الـ 1000+: حاسبات (الرهن العقاري، مؤشر كتلة الجسم، الفائدة المركبة، الضرائب)، محوّلات (العملات، الوحدات، صيغ الملفات)، مولّدات (الفواتير، العقود، السير الذاتية، رموز QR)، متتبعات (المصروفات، العادات، اللياقة، الوقت)، مخططات (الميزانيات، الرحلات، الوجبات، المشاريع)، ومحللات (البيانات، تحسين محركات البحث، الأداء). كل أداة لها واجهة مستخدم مصممة خصيصاً.",
+        "a1": "تتضمن أدواتنا الـ 1100+: حاسبات (الرهن العقاري، مؤشر كتلة الجسم، الفائدة المركبة، الضرائب)، محوّلات (العملات، الوحدات، صيغ الملفات)، مولّدات (الفواتير، العقود، السير الذاتية، رموز QR)، متتبعات (المصروفات، العادات، اللياقة، الوقت)، مخططات (الميزانيات، الرحلات، الوجبات، المشاريع)، ومحللات (البيانات، تحسين محركات البحث، الأداء). كل أداة لها واجهة مستخدم مصممة خصيصاً.",
         "q2": "ما هي بعض الأدوات الشائعة؟",
         "a2": "تشمل الأدوات الأكثر شيوعاً: محوّل العملات، حاسبة مؤشر كتلة الجسم، مولّد الفواتير، مولّد العقود، حاسبة الرهن العقاري، متتبع المصروفات، محوّل الوحدات، مولّد رموز QR، أدوات PDF، عداد السعرات، مولّد كلمات المرور، ومنتقي الألوان. تصفح جميع الأدوات في قسم الأدوات.",
         "q3": "هل يمكنني استخدام نماذج ذكاء اصطناعي متعددة؟",
@@ -442,7 +442,7 @@
     "stillNeedTool": "لا تزال بحاجة للبحث عن أداة منفصلة واستخدامها بنفسك",
     "intentDetectedLabel": "تم اكتشاف النية",
     "smartContextPillars": "الركائز الثلاث للسياق الذكي",
-    "smartContextDesc": "بياناتك، مملوءة مسبقاً تلقائياً عبر جميع الأدوات الـ 1000+",
+    "smartContextDesc": "بياناتك، مملوءة مسبقاً تلقائياً عبر جميع الأدوات الـ 1100+",
     "onboardingData": "بيانات الإعداد",
     "onboardingDataDesc": "العملة، المنطقة الزمنية، اللغة، الصناعة — اضبطها مرة واحدة، تُستخدم في كل مكان",
     "toolHistory": "سجل الأدوات",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "كل أداة تحتاجها،",
     "instantly": "فوراً",
     "tools": "أدوات",
-    "exploreAllTools": "استكشف جميع الأدوات الـ 1000+",
+    "exploreAllTools": "استكشف جميع الأدوات الـ 1100+",
     "savePerYear": "وفّر 3,840$ سنوياً",
     "replace100Apps": "استبدل",
     "appsYouUseDaily": "أكثر من 100 تطبيق",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "ذكاء اصطناعي + إجراءات",
-          "uniqueValue": "ذكاء اصطناعي + 1000+ أداة"
+          "uniqueValue": "ذكاء اصطناعي + 1100+ أداة"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {

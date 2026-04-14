@@ -103,7 +103,7 @@ const COMMON_ENTITY_MAPPINGS = {
 
 // ============================================
 // UI REGISTRY - Contextual UI definitions
-// Total: 1000+ UI entries across all categories
+// Total: 1100+ UI entries across all categories
 // ============================================
 
 export const UI_REGISTRY: Record<string, UIRegistryEntry> = {

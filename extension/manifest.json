@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Wants - 1000+ AI-Powered Tools",
+  "name": "Wants - 1100+ AI-Powered Tools",
   "version": "1.0.0",
-  "description": "1000+ AI-powered tools for everyone. JSON formatter, calculators, converters, generators & more.",
+  "description": "1100+ AI-powered tools for everyone. JSON formatter, calculators, converters, generators & more.",
   "permissions": [
     "storage",
     "cookies",

@@ -396,7 +396,7 @@ const LanguageLearnerLanding: React.FC = () => {
           </Card>
           <Card className="p-6 text-center hover:shadow-lg transition-all duration-200">
             <BookOpen className="h-6 w-6 text-primary mx-auto mb-3" />
-            <p className="text-3xl font-bold text-foreground mb-1">1000+</p>
+            <p className="text-3xl font-bold text-foreground mb-1">1100+</p>
             <p className="text-sm text-muted-foreground">Lessons</p>
           </Card>
         </div> */}

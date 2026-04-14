@@ -32,7 +32,7 @@ export interface ToolTaxonomyEntry {
 
 // ============================================
 // TOOL_TO_CATEGORY - Quick lookup for any tool
-// Complete mapping of ALL 1000+ tools
+// Complete mapping of ALL 1100+ tools
 // ============================================
 
 export const TOOL_TO_CATEGORY: Record<string, FunctionalCategory> = {

@@ -55,8 +55,8 @@ export enum CompanySize {
   SMALL = '2-10',
   MEDIUM = '11-50',
   LARGE = '51-200',
-  ENTERPRISE = '201-1000',
-  CORPORATION = '1000+',
+  ENTERPRISE = '201-1100',
+  CORPORATION = '1100+',
 }
 
 export enum MeasurementSystem {
