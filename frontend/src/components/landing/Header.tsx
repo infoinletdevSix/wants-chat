@@ -102,6 +102,14 @@ const Header: React.FC = () => {
               <LanguageSwitcher variant="header" showLabel={false} />
             </div>
 
+            {/* Always-visible "Get Started" CTA — routes to /chat for authed, /signup otherwise */}
+            <Button
+              className="hidden md:inline-flex bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-xl px-6"
+              onClick={() => navigate(isAuthenticated ? '/chat' : '/signup')}
+            >
+              {t('header.getStarted')}
+            </Button>
+
             {/* Auth Section - Desktop only */}
             <div className="hidden md:flex items-center space-x-2">
               {isAuthenticated && user ? (
@@ -185,10 +193,7 @@ const Header: React.FC = () => {
                   )}
                 </div>
               ) : (
-                <>
-                  <Button variant="ghost" className="text-white hover:bg-white/10" onClick={() => navigate('/login')}>{t('header.signIn')}</Button>
-                  <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-xl px-6" onClick={() => navigate('/signup')}>{t('header.getStarted')}</Button>
-                </>
+                <Button variant="ghost" className="text-white hover:bg-white/10" onClick={() => navigate('/login')}>{t('header.signIn')}</Button>
               )}
             </div>
 
