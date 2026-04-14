@@ -92,9 +92,6 @@ const Header: React.FC = () => {
                 <Link to="/features" className="text-white/70 hover:text-white transition-colors">
                   {t('header.features')}
                 </Link>
-                <Link to="/about" className="text-white/70 hover:text-white transition-colors">
-                  {t('header.about')}
-                </Link>
               </>
             )}
           </div>
@@ -104,6 +101,14 @@ const Header: React.FC = () => {
             <div className="hidden md:block">
               <LanguageSwitcher variant="header" showLabel={false} />
             </div>
+
+            {/* Always-visible "Get Started" CTA — routes to /chat for authed, /signup otherwise */}
+            <Button
+              className="hidden md:inline-flex bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-xl px-6"
+              onClick={() => navigate(isAuthenticated ? '/chat' : '/signup')}
+            >
+              {t('header.getStarted')}
+            </Button>
 
             {/* Auth Section - Desktop only */}
             <div className="hidden md:flex items-center space-x-2">
@@ -188,10 +193,7 @@ const Header: React.FC = () => {
                   )}
                 </div>
               ) : (
-                <>
-                  <Button variant="ghost" className="text-white hover:bg-white/10" onClick={() => navigate('/login')}>{t('header.signIn')}</Button>
-                  <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-xl px-6" onClick={() => navigate('/signup')}>{t('header.getStarted')}</Button>
-                </>
+                <Button variant="ghost" className="text-white hover:bg-white/10" onClick={() => navigate('/login')}>{t('header.signIn')}</Button>
               )}
             </div>
 
@@ -214,9 +216,6 @@ const Header: React.FC = () => {
               <>
                 <Link to="/features" className="block py-2 text-white/70 hover:text-white">
                   {t('header.features')}
-                </Link>
-                <Link to="/about" className="block py-2 text-white/70 hover:text-white">
-                  {t('header.about')}
                 </Link>
               </>
             )}

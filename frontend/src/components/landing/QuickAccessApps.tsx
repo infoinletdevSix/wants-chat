@@ -188,7 +188,7 @@ const QuickAccessApps: React.FC = () => {
       status: 'Available',
       icon: ArticleIcon,
       color: 'from-cyan-500 to-teal-500',
-      route: '/blog'
+      route: '/changelog'
     }
   ];
 

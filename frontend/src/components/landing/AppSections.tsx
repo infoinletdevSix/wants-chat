@@ -158,7 +158,7 @@ export const AllModulesSection: React.FC = () => {
         'Post Analytics'
       ],
       bgGradient: 'from-cyan-500/10 to-teal-500/10',
-      route: '/blog'
+      route: '/changelog'
     }
   ];
 

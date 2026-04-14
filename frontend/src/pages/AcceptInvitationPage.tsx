@@ -362,7 +362,7 @@ export const AcceptInvitationPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             {isExpired && (
               <button
-                onClick={() => navigate('/contact')}
+                onClick={() => window.open('https://github.com/wants-chat/wants-chat/issues', '_blank')}
                 className={cn(
                   'px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors',
                   theme === 'dark'

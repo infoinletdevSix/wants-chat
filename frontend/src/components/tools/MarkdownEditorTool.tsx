@@ -45,7 +45,7 @@ console.log(greeting);
 
 ---
 
-[Visit wants.chat](https://wants.chat) for more tools!
+[Open source on GitHub](https://github.com/wants-chat/wants-chat) — 1100+ tools.
 `);
   const [copied, setCopied] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'split' | 'edit' | 'preview'>('split');

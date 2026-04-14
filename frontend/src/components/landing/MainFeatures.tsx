@@ -290,7 +290,7 @@ const MainFeatures: React.FC = () => {
       description: 'Content creation and publishing platform with community features and analytics.',
       icon: ArticleIcon,
       color: 'from-slate-500 to-gray-600',
-      route: '/blog',
+      route: '/changelog',
       status: 'Available',
       routes: 5,
       realFeatures: [

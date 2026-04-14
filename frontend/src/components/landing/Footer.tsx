@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowUp, Github, Linkedin, Facebook } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import XIcon from '@mui/icons-material/X';
-import { toast } from 'sonner';
-import { api } from '@/lib/api';
 import { LanguageSwitcher } from '../shared/LanguageSwitcher';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const [email, setEmail] = useState('');
-  const [isSubscribing, setIsSubscribing] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -32,50 +28,6 @@ const Footer: React.FC = () => {
       const yOffset = -80; // Offset for fixed header
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
-  const validateEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const handleSubscribe = async () => {
-    if (!email.trim()) {
-      toast.error(t('footer.toast.emailRequired'));
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      toast.error(t('footer.toast.invalidEmail'));
-      return;
-    }
-
-    try {
-      setIsSubscribing(true);
-
-      const response = await api.post<{ success: boolean; message: string }>(
-        '/notifications/newsletter/subscribe',
-        { email, source: 'website' }
-      );
-
-      if (response.success) {
-        toast.success(response.message || t('footer.toast.subscribeSuccess'));
-        setEmail('');
-      } else {
-        toast.error(response.message || t('footer.toast.subscribeFailed'));
-      }
-    } catch (error: any) {
-      console.error('Newsletter subscription error:', error);
-      toast.error(error?.message || t('footer.toast.subscribeError'));
-    } finally {
-      setIsSubscribing(false);
-    }
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      handleSubscribe();
     }
   };
 
@@ -182,130 +134,21 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Solutions Links */}
-            <div>
-              <h4 className="font-semibold text-base mb-6 text-white">{t('footer.solutions')}</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link to="/solutions/business" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('solutions.business')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/healthcare" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('solutions.healthcare')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/legal" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('solutions.legal')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/education" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('solutions.education')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/enterprise" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('solutions.enterprise')}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
             {/* Company Links */}
             <div>
               <h4 className="font-semibold text-base mb-6 text-white">{t('footer.company')}</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/about" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('common.about')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('common.blog')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/careers" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('footer.careers')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('common.contact')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/support" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('common.support')}
-                  </Link>
+                  <a
+                    href="https://infoinlet.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium"
+                  >
+                    InfoInlet
+                  </a>
                 </li>
               </ul>
-            </div>
-
-            {/* Legal Links */}
-            <div>
-              <h4 className="font-semibold text-base mb-6 text-white">{t('footer.legal')}</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link to="/privacy" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('footer.privacy')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('footer.terms')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/cookies" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('footer.cookies')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/data-deletion" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('footer.dataDeletion')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/security" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
-                    {t('footer.security')}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="py-10 border-t border-gray-800">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="text-center lg:text-left max-w-md">
-              <h4 className="font-semibold text-lg mb-3 text-white">{t('footer.newsletter')}</h4>
-              <p className="text-white/70">
-                {t('footer.newsletterSubtitle')}
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder={t('footer.emailPlaceholder')}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onKeyPress={handleKeyPress}
-                disabled={isSubscribing}
-                className="px-5 py-3 rounded-xl border border-gray-700 bg-gray-800/50 text-white placeholder:text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 w-full sm:w-72 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
-              />
-              <button
-                onClick={handleSubscribe}
-                disabled={isSubscribing}
-                className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-xl font-medium text-sm hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 whitespace-nowrap hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg shadow-emerald-500/25"
-              >
-                {isSubscribing ? t('footer.subscribing') : t('footer.subscribe')}
-              </button>
             </div>
           </div>
         </div>

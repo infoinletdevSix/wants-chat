@@ -382,7 +382,7 @@ const IntegrationsPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => window.open('https://github.com/wants-chat/wants-chat/issues', '_blank')}
                   className="px-8 py-4 bg-white/10 border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-all"
                 >
                   {t('integrations.cta.contactSales')}

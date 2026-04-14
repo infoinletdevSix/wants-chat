@@ -61,7 +61,6 @@ const Signup: React.FC = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [socialLoading, setSocialLoading] = useState('');
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [invitationInfo, setInvitationInfo] = useState<InvitationInfo | null>(null);
 
   // Check for invitation token on mount
@@ -153,11 +152,6 @@ const Signup: React.FC = () => {
 
     if (!passwordRequirements.every(req => req.met)) {
       setError('Password does not meet all requirements');
-      return;
-    }
-
-    if (!agreedToTerms) {
-      setError('Please agree to the terms and conditions');
       return;
     }
 
@@ -555,25 +549,11 @@ const Signup: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="flex items-start gap-3 pt-2">
-                    <input
-                      type="checkbox"
-                      id="terms"
-                      className="mt-1 rounded border-gray-700 bg-gray-800/50 text-emerald-500 focus:ring-emerald-500/20"
-                      checked={agreedToTerms}
-                      onChange={(e) => setAgreedToTerms(e.target.checked)}
-                      disabled={isLoading}
-                    />
-                    <label htmlFor="terms" className="text-sm text-gray-400">
-                      {t('auth.signup.agreeToTerms')}
-                    </label>
-                  </div>
-
                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} className="pt-2">
                     <Button
                       type="submit"
                       className="w-full h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
-                      disabled={isLoading || !agreedToTerms}
+                      disabled={isLoading}
                     >
                       {isLoading ? (
                         <>
