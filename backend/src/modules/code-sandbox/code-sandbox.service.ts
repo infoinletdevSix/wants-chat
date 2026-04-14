@@ -1,3 +1,23 @@
+/**
+ * ⚠️ SECURITY — SINGLE-TENANT USE ONLY
+ *
+ * This module is NOT a real sandbox. It is designed for self-hosted,
+ * single-tenant open-source deployments where the operator and the
+ * executing user are the same person.
+ *
+ * In its current form:
+ *   - Python runs as a plain child_process on the host. Any authed
+ *     user can read host env vars, filesystem, and internal network.
+ *   - JavaScript uses node:vm, which Node's own docs warn is not a
+ *     security boundary. Host-realm constructors leak.
+ *
+ * DO NOT expose this feature to untrusted users or deploy it in a
+ * multi-tenant / SaaS context without first completing:
+ *   - #69 (containerize Python executor)
+ *   - #70 (replace node:vm with isolated-vm)
+ *   - #71 (cap concurrent executions)
+ *   - #72 (move rate limiter to Redis)
+ */
 import {
   Injectable,
   Logger,
