@@ -1,0 +1,29 @@
+import React from 'react';
+import { OSS } from '../../config/oss';
+
+const Contributors: React.FC = () => {
+  return (
+    <section className="bg-gray-950 py-20 border-t border-gray-900">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <p className="text-sm font-semibold tracking-wider text-emerald-400 uppercase">Built by the community</p>
+        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">Thanks to our contributors</h2>
+        <p className="mt-3 text-gray-400">Every commit, every translation, every bug report — you make Wants.</p>
+
+        <a
+          href={OSS.repo + '/graphs/contributors'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-block"
+        >
+          <img
+            src="https://contrib.rocks/image?repo=wants-chat/wants-chat"
+            alt="Contributors"
+            className="rounded-xl"
+          />
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Contributors;

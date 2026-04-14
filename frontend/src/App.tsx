@@ -19,7 +19,7 @@ import ResetPassword from './pages/auth/ResetPassword';
 import VerifyEmail from './pages/auth/VerifyEmail';
 
 // Public pages
-import LandingPage from './pages/LandingPage';
+import OSSLandingPage from './pages/OSSLandingPage';
 import SupportPage from './pages/SupportPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -100,7 +100,7 @@ const App: React.FC = () => {
                 <Routes>
                   {/* Public Routes with Layout */}
                   <Route element={<MainLayout />}>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/" element={<OSSLandingPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/features" element={<FeaturesPage />} />
