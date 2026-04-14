@@ -55345,7 +55345,8 @@
         "stars": "Stelle GitHub",
         "forks": "Fork GitHub",
         "license": "Licenza AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Inizia"
     },
     "capability": {
       "title": "Tutto ciò di cui hai bisogno intorno all'AI, in un unico posto",

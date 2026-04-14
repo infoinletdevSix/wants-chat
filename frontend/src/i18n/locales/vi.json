@@ -55345,7 +55345,8 @@
         "stars": "Sao GitHub",
         "forks": "Fork GitHub",
         "license": "Giấy phép AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Bắt đầu"
     },
     "capability": {
       "title": "Mọi thứ bạn cần quanh AI, ở một nơi",

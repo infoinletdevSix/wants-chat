@@ -1,15 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, ArrowDown } from 'lucide-react';
+import { Github, ExternalLink, ArrowDown, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../contexts/AuthContext';
 import { OSS } from '../../config/oss';
 import HeroDemo from './HeroDemo';
 
 const OSSHero: React.FC = () => {
   const { t } = useTranslation();
+  const { isAuthenticated } = useAuth();
+  const getStartedHref = isAuthenticated ? '/chat' : '/signup';
   return (
     <section className="relative overflow-hidden bg-gray-950 pt-24 pb-20">
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
+      <Link
+        to={getStartedHref}
+        className="absolute top-4 right-4 md:top-6 md:right-6 z-10 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-5 py-2.5 text-sm font-semibold shadow-lg shadow-emerald-500/20 hover:opacity-90 transition"
+      >
+        {t('oss.hero.ctaGetStarted')}
+        <ArrowRight className="h-4 w-4" />
+      </Link>
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

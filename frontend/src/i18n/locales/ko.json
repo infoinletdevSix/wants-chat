@@ -55345,7 +55345,8 @@
         "stars": "GitHub 스타",
         "forks": "GitHub 포크",
         "license": "라이선스 AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "시작하기"
     },
     "capability": {
       "title": "AI에 필요한 모든 것, 한 곳에서",

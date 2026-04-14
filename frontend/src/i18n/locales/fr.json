@@ -55345,7 +55345,8 @@
         "stars": "Étoiles GitHub",
         "forks": "Forks GitHub",
         "license": "Licence AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Commencer"
     },
     "capability": {
       "title": "Tout ce dont vous avez besoin autour de l'IA, en un seul endroit",

@@ -55345,7 +55345,8 @@
         "stars": "GitHub星标",
         "forks": "GitHub分支",
         "license": "AGPL-3.0许可"
-      }
+      },
+      "ctaGetStarted": "开始使用"
     },
     "capability": {
       "title": "AI所需的一切，汇聚一处",

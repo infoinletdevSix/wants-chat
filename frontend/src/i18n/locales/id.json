@@ -55345,7 +55345,8 @@
         "stars": "Bintang GitHub",
         "forks": "Fork GitHub",
         "license": "Lisensi AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Mulai"
     },
     "capability": {
       "title": "Semua yang Anda butuhkan seputar AI, di satu tempat",

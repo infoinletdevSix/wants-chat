@@ -55088,7 +55088,8 @@
         "stars": "GitHubスター",
         "forks": "GitHubフォーク",
         "license": "ライセンス AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "始める"
     },
     "capability": {
       "title": "AIに必要なすべてを、一つの場所に",

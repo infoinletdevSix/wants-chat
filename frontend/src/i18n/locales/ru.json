@@ -55345,7 +55345,8 @@
         "stars": "Звёзды GitHub",
         "forks": "Форки GitHub",
         "license": "Лицензия AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Начать"
     },
     "capability": {
       "title": "Всё вокруг ИИ, в одном месте",

@@ -55345,7 +55345,8 @@
         "stars": "GitHub-Sterne",
         "forks": "GitHub-Forks",
         "license": "Lizenz AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Loslegen"
     },
     "capability": {
       "title": "Alles rund um KI, an einem Ort",

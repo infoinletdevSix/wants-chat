@@ -55345,7 +55345,8 @@
         "stars": "نجوم GitHub",
         "forks": "تفرعات GitHub",
         "license": "رخصة AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "ابدأ"
     },
     "capability": {
       "title": "كل ما تحتاجه حول الذكاء الاصطناعي، في مكان واحد",

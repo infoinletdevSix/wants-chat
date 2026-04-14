@@ -55345,7 +55345,8 @@
         "stars": "GitHub स्टार्स",
         "forks": "GitHub फ़ोर्क्स",
         "license": "लाइसेंस AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "शुरू करें"
     },
     "capability": {
       "title": "AI के आसपास आपको जो चाहिए, एक ही जगह",

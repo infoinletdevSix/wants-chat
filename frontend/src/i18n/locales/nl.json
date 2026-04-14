@@ -55345,7 +55345,8 @@
         "stars": "GitHub-sterren",
         "forks": "GitHub-forks",
         "license": "Licentie AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Aan de slag"
     },
     "capability": {
       "title": "Alles rondom AI, op één plek",

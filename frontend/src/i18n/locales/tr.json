@@ -55345,7 +55345,8 @@
         "stars": "GitHub yıldızları",
         "forks": "GitHub fork'ları",
         "license": "AGPL-3.0 lisansı"
-      }
+      },
+      "ctaGetStarted": "Başla"
     },
     "capability": {
       "title": "AI çevresinde ihtiyacın olan her şey, tek yerde",

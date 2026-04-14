@@ -55345,7 +55345,8 @@
         "stars": "Зірки GitHub",
         "forks": "Форки GitHub",
         "license": "Ліцензія AGPL-3.0"
-      }
+      },
+      "ctaGetStarted": "Почати"
     },
     "capability": {
       "title": "Усе навколо ШІ, в одному місці",
