@@ -5,9 +5,10 @@ import { AuthModule } from '../auth/auth.module';
 import { DatabaseModule } from '../database/database.module';
 import { AiModule } from '../ai/ai.module';
 import { WebSocketModule } from '../../common/gateways/websocket.module';
+import { McpModule } from '../mcp/mcp.module';
 
 @Module({
-  imports: [AuthModule, DatabaseModule, forwardRef(() => AiModule), WebSocketModule],
+  imports: [AuthModule, DatabaseModule, forwardRef(() => AiModule), WebSocketModule, McpModule],
   controllers: [AutonomousAgentController],
   providers: [AutonomousAgentService],
   exports: [AutonomousAgentService],
