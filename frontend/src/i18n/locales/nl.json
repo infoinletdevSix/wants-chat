@@ -55325,5 +55325,203 @@
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
     }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Open-source AI-werkruimte",
+      "description": "Chat met 30+ modellen, genereer code, gebruik 1100+ contextuele tools, bouw apps zonder code. Zelf-hostbaar en AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "De open-source AI-werkruimte · AGPL-3.0",
+      "headlineStart": "Je AI-",
+      "headlineHighlight": "commandocentrum",
+      "headlineEnd": ".",
+      "subtitle": "Chat met 30+ modellen. Genereer code. Gebruik 1100+ contextuele tools. Bouw apps zonder code. Zelf-host, eigen keys, eigen data.",
+      "ctaStar": "Ster op GitHub",
+      "ctaDemo": "Probeer live demo",
+      "ctaSelfHost": "Zelf-host in 60s",
+      "demoCaption": "Live preview — intentie wordt interface",
+      "alt": {
+        "stars": "GitHub-sterren",
+        "forks": "GitHub-forks",
+        "license": "Licentie AGPL-3.0"
+      }
+    },
+    "capability": {
+      "title": "Alles rondom AI, op één plek",
+      "subtitle": "Stop met jongleren met tien tabs en tien abonnementen. Wants is de werkruimte.",
+      "chat": {
+        "title": "Multi-model chat",
+        "benefit": "Praat met GPT, Claude, Gemini, Llama — in één thread"
+      },
+      "code": {
+        "title": "Codegeneratie",
+        "benefit": "Ingebouwde AI-pair programmer"
+      },
+      "tools": {
+        "title": "1100+ contextuele tools",
+        "benefit": "Rekenmachines, generators, trackers — on demand"
+      },
+      "builder": {
+        "title": "No-code app builder",
+        "benefit": "Beschrijf een app, deploy hem"
+      }
+    },
+    "quickStart": {
+      "badge": "Draait in 60 seconden",
+      "title": "Zelf-host in drie commando's",
+      "subtitle": "Postgres, Redis, backend, frontend — alles via Docker Compose.",
+      "copy": "Kopiëren",
+      "copied": "Gekopieerd",
+      "viewDocs": "Bekijk volledige setup-docs →"
+    },
+    "heroDemo": {
+      "window": "wants — chat",
+      "step1": {
+        "prompt": "Wat is mijn BMI bij 175cm en 70kg?",
+        "tool": "BMI-calculator",
+        "row1Label": "Lengte",
+        "row1Value": "175 cm",
+        "row2Label": "Gewicht",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22,86 — Normaal"
+      },
+      "step2": {
+        "prompt": "Zet 250 USD om naar EUR",
+        "tool": "Valuta-omzetter",
+        "row1Label": "Van",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Koers",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Naar",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "Genereer een QR-code voor wants.chat",
+        "tool": "QR-codegenerator",
+        "row1Label": "Inhoud",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Formaat",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Status",
+        "row3Value": "Klaar om te downloaden"
+      },
+      "step4": {
+        "prompt": "Verdeel een rekening van $184,50 over 4 personen met 18% fooi",
+        "tool": "Fooi-verdeler",
+        "row1Label": "Subtotaal",
+        "row1Value": "$184,50",
+        "row2Label": "Fooi (18%)",
+        "row2Value": "$33,21",
+        "row3Label": "Per persoon",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "Het verschil",
+      "titleStart": "We chatten niet alleen.",
+      "titleEnd": "We renderen interfaces.",
+      "subtitle": "Elke AI-chatbot antwoordt met tekst. Wants begrijpt je intentie en toont precies de tool die je nodig hebt.",
+      "traditional": "Traditionele AI",
+      "wants": "Wants",
+      "youLabel": "Jij:",
+      "aiLabel": "AI:",
+      "prompt": "Wat is mijn BMI bij 175cm, 70kg?",
+      "aiResponse": "BMI = gewicht(kg) / lengte(m)². Dus 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", wat binnen het normale bereik valt...",
+      "traditionalCaption": "Een muur van tekst. Je herleest om het getal te vinden.",
+      "wantsCaption": "Een live, interactieve tool. Bewerken, delen, exporteren."
+    },
+    "whyTry": {
+      "eyebrow": "Waarom Wants proberen",
+      "title": "Vier redenen voor vijf minuten",
+      "r1": {
+        "title": "Eén werkruimte voor elke AI-workflow",
+        "body": "Chat, code, tools, app builder. Stop met tien abonnementen."
+      },
+      "r2": {
+        "title": "Eigen keys — geen opslag",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, lokale Ollama. Betaal direct."
+      },
+      "r3": {
+        "title": "Zelf-host, bezit je data",
+        "body": "Jouw prompts, geschiedenis, secrets — op je server."
+      },
+      "r4": {
+        "title": "1100+ tools klaar op dag één",
+        "body": "Geen configuratie. Vraag en de juiste tool verschijnt."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Waarom bijdragen",
+      "title": "Bouw de werkruimte die je wilt gebruiken",
+      "r1": {
+        "title": "Vorm het post-chat AI-platform",
+        "body": "We definiëren hoe één-AI-doet-alles eruitziet."
+      },
+      "r2": {
+        "title": "Voeg een tool toe in minder dan een uur",
+        "body": "Elke tool is één React-component."
+      },
+      "r3": {
+        "title": "17 talen, groeiende community",
+        "body": "Devs, designers, vertalers — elke skill heeft een plek."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Contributor-gids",
+        "discussions": "Discussies"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Onder de motorkap",
+      "title": "Schone, componeerbare architectuur",
+      "subtitle": "Geen black boxes. Standaard stack die je al kent.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Data",
+        "cache": "Cache + queue",
+        "models": "30+ AI-modellen"
+      }
+    },
+    "techStack": {
+      "label": "Gebouwd op tools die je al kent"
+    },
+    "contributors": {
+      "eyebrow": "Gebouwd door de community",
+      "title": "Dank aan onze contributors",
+      "subtitle": "Elke commit, vertaling, bugrapport — jullie maken Wants."
+    },
+    "comparison": {
+      "eyebrow": "Een eigen categorie",
+      "title": "Waarom Wants, naast elkaar",
+      "feature": "Kenmerk",
+      "rows": {
+        "chat": "Multi-model chat",
+        "code": "Codegeneratie",
+        "tools": "Contextuele UI-tools",
+        "builder": "No-code app builder",
+        "opensource": "Open source",
+        "selfhost": "Zelf-hostbaar",
+        "byok": "Eigen API-keys"
+      },
+      "values": {
+        "oneFamily": "1 familie",
+        "limited": "Beperkt",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Gehost",
+      "hostedTitle": "Gebruik het nu, geen setup",
+      "hostedBody": "Probeer Wants in seconden op wants.chat.",
+      "hostedCta": "Probeer demo",
+      "selfBadge": "Zelf-host",
+      "selfTitle": "Draai op je eigen server",
+      "selfBody": "Jouw data, jouw keys, pas aan wat je wilt.",
+      "selfCta": "Download van GitHub"
+    }
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import OSSHero from '../components/oss/OSSHero';
 import CapabilityGrid from '../components/oss/CapabilityGrid';
 import QuickStart from '../components/oss/QuickStart';
@@ -14,12 +15,13 @@ import DualCTA from '../components/oss/DualCTA';
 import { SEO } from '../components/SEO';
 
 const OSSLandingPage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <SEO
-        title="Wants — Open-source AI workspace"
-        description="Chat with 30+ models, generate code, use 1100+ contextual tools, build apps without code. Self-hostable and AGPL-3.0."
-        url="/oss"
+        title={t('oss.seo.title')}
+        description={t('oss.seo.description')}
+        url="/"
       />
       <div className="bg-gray-950 min-h-screen">
         <OSSHero />

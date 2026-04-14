@@ -55325,5 +55325,203 @@
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
     }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Không gian làm việc AI mã nguồn mở",
+      "description": "Trò chuyện với 30+ mô hình, tạo mã, dùng 1100+ công cụ theo ngữ cảnh, xây ứng dụng không mã. Có thể tự host và AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "Không gian làm việc AI mã nguồn mở · AGPL-3.0",
+      "headlineStart": "Trung tâm",
+      "headlineHighlight": "điều khiển AI của bạn",
+      "headlineEnd": ".",
+      "subtitle": "Trò chuyện với 30+ mô hình. Tạo mã. Dùng 1100+ công cụ theo ngữ cảnh. Xây ứng dụng không mã. Tự host, khóa riêng, dữ liệu riêng.",
+      "ctaStar": "Gắn sao trên GitHub",
+      "ctaDemo": "Thử demo trực tiếp",
+      "ctaSelfHost": "Tự host trong 60 giây",
+      "demoCaption": "Xem trước trực tiếp — ý định trở thành giao diện",
+      "alt": {
+        "stars": "Sao GitHub",
+        "forks": "Fork GitHub",
+        "license": "Giấy phép AGPL-3.0"
+      }
+    },
+    "capability": {
+      "title": "Mọi thứ bạn cần quanh AI, ở một nơi",
+      "subtitle": "Ngừng tung hứng mười tab và mười đăng ký. Wants là không gian làm việc.",
+      "chat": {
+        "title": "Trò chuyện đa mô hình",
+        "benefit": "Nói chuyện với GPT, Claude, Gemini, Llama — trong một luồng"
+      },
+      "code": {
+        "title": "Tạo mã",
+        "benefit": "Lập trình viên AI cặp đôi tích hợp"
+      },
+      "tools": {
+        "title": "1100+ công cụ theo ngữ cảnh",
+        "benefit": "Máy tính, bộ tạo, trình theo dõi — theo yêu cầu"
+      },
+      "builder": {
+        "title": "Trình xây ứng dụng không mã",
+        "benefit": "Mô tả một ứng dụng, triển khai"
+      }
+    },
+    "quickStart": {
+      "badge": "Chạy trong 60 giây",
+      "title": "Tự host trong ba lệnh",
+      "subtitle": "Postgres, Redis, backend, frontend — tất cả với Docker Compose.",
+      "copy": "Sao chép",
+      "copied": "Đã sao chép",
+      "viewDocs": "Xem tài liệu cài đặt đầy đủ →"
+    },
+    "heroDemo": {
+      "window": "wants — trò chuyện",
+      "step1": {
+        "prompt": "BMI của tôi là bao nhiêu nếu tôi cao 175cm và nặng 70kg?",
+        "tool": "Máy tính BMI",
+        "row1Label": "Chiều cao",
+        "row1Value": "175 cm",
+        "row2Label": "Cân nặng",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22,86 — Bình thường"
+      },
+      "step2": {
+        "prompt": "Chuyển 250 USD sang EUR",
+        "tool": "Chuyển đổi tiền tệ",
+        "row1Label": "Từ",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Tỷ giá",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Sang",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "Tạo mã QR cho wants.chat",
+        "tool": "Trình tạo mã QR",
+        "row1Label": "Nội dung",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Định dạng",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Trạng thái",
+        "row3Value": "Sẵn sàng tải xuống"
+      },
+      "step4": {
+        "prompt": "Chia hóa đơn $184,50 cho 4 người với tiền tip 18%",
+        "tool": "Chia tiền tip",
+        "row1Label": "Tạm tính",
+        "row1Value": "$184,50",
+        "row2Label": "Tip (18%)",
+        "row2Value": "$33,21",
+        "row3Label": "Mỗi người",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "Sự khác biệt",
+      "titleStart": "Chúng tôi không chỉ trò chuyện.",
+      "titleEnd": "Chúng tôi hiển thị giao diện.",
+      "subtitle": "Mọi chatbot AI trả lời bằng văn bản. Wants hiểu ý định và hiển thị đúng công cụ bạn cần.",
+      "traditional": "AI truyền thống",
+      "wants": "Wants",
+      "youLabel": "Bạn:",
+      "aiLabel": "AI:",
+      "prompt": "BMI của tôi ở 175cm, 70kg là bao nhiêu?",
+      "aiResponse": "BMI = cân nặng(kg) / chiều cao(m)². Vậy 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", nằm trong phạm vi bình thường...",
+      "traditionalCaption": "Một bức tường chữ. Bạn đọc lại để trích xuất số.",
+      "wantsCaption": "Một công cụ tương tác trực tiếp. Chỉnh sửa, chia sẻ, xuất."
+    },
+    "whyTry": {
+      "eyebrow": "Tại sao thử Wants",
+      "title": "Bốn lý do đáng giá năm phút",
+      "r1": {
+        "title": "Một không gian cho mọi quy trình AI",
+        "body": "Chat, mã, công cụ, trình xây app. Ngừng tung hứng mười đăng ký."
+      },
+      "r2": {
+        "title": "Khóa của riêng bạn — không phụ phí",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, Ollama cục bộ. Trả trực tiếp cho nhà cung cấp."
+      },
+      "r3": {
+        "title": "Tự host, sở hữu dữ liệu",
+        "body": "Prompt, lịch sử, bí mật của bạn — trên máy chủ của bạn. Không theo dõi."
+      },
+      "r4": {
+        "title": "1100+ công cụ sẵn sàng ngày đầu",
+        "body": "Không cấu hình. Hỏi và công cụ đúng xuất hiện."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Tại sao đóng góp",
+      "title": "Xây không gian bạn muốn dùng",
+      "r1": {
+        "title": "Định hình nền tảng AI hậu-chat",
+        "body": "Chúng tôi định nghĩa AI làm mọi thứ trông như thế nào."
+      },
+      "r2": {
+        "title": "Thêm công cụ trong chưa tới một giờ",
+        "body": "Mỗi công cụ là một component React."
+      },
+      "r3": {
+        "title": "17 ngôn ngữ, cộng đồng đang phát triển",
+        "body": "Dev, designer, dịch giả — mọi kỹ năng đều có chỗ."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Hướng dẫn đóng góp",
+        "discussions": "Thảo luận"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Bên trong",
+      "title": "Kiến trúc sạch, có thể ghép",
+      "subtitle": "Không hộp đen. Stack tiêu chuẩn bạn đã biết.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Dữ liệu",
+        "cache": "Cache + hàng đợi",
+        "models": "30+ mô hình AI"
+      }
+    },
+    "techStack": {
+      "label": "Xây dựng trên các công cụ bạn đã biết"
+    },
+    "contributors": {
+      "eyebrow": "Xây bởi cộng đồng",
+      "title": "Cảm ơn các cộng tác viên",
+      "subtitle": "Mỗi commit, bản dịch, báo cáo bug — bạn làm nên Wants."
+    },
+    "comparison": {
+      "eyebrow": "Một danh mục riêng",
+      "title": "Tại sao Wants, so sánh",
+      "feature": "Tính năng",
+      "rows": {
+        "chat": "Trò chuyện đa mô hình",
+        "code": "Tạo mã",
+        "tools": "Công cụ UI theo ngữ cảnh",
+        "builder": "Trình xây app không mã",
+        "opensource": "Mã nguồn mở",
+        "selfhost": "Có thể tự host",
+        "byok": "Khóa API của bạn"
+      },
+      "values": {
+        "oneFamily": "1 họ",
+        "limited": "Hạn chế",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Đã host",
+      "hostedTitle": "Dùng ngay, không cần cài đặt",
+      "hostedBody": "Thử Wants trong vài giây tại wants.chat.",
+      "hostedCta": "Thử demo",
+      "selfBadge": "Tự host",
+      "selfTitle": "Chạy trên máy chủ của bạn",
+      "selfBody": "Dữ liệu, khóa, sửa tự do.",
+      "selfCta": "Lấy trên GitHub"
+    }
   }
 }

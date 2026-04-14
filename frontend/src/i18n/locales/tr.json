@@ -55325,5 +55325,203 @@
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
     }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Açık kaynaklı AI çalışma alanı",
+      "description": "30+ modelle sohbet edin, kod üretin, 1100+ bağlamsal araç kullanın, kodsuz uygulama oluşturun. Kendi kendinize barındırılabilir ve AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "Açık kaynaklı AI çalışma alanı · AGPL-3.0",
+      "headlineStart": "Senin AI",
+      "headlineHighlight": "komuta merkezin",
+      "headlineEnd": ".",
+      "subtitle": "30+ modelle sohbet edin. Kod üretin. 1100+ bağlamsal araç kullanın. Kodsuz uygulama oluşturun. Kendi kendinize barındırın, anahtarlar sizin, veriler sizin.",
+      "ctaStar": "GitHub'da yıldızla",
+      "ctaDemo": "Canlı demo dene",
+      "ctaSelfHost": "60 saniyede barındır",
+      "demoCaption": "Canlı önizleme — niyet arayüze dönüşür",
+      "alt": {
+        "stars": "GitHub yıldızları",
+        "forks": "GitHub fork'ları",
+        "license": "AGPL-3.0 lisansı"
+      }
+    },
+    "capability": {
+      "title": "AI çevresinde ihtiyacın olan her şey, tek yerde",
+      "subtitle": "On sekme ve on abonelikle uğraşmayı bırakın. Wants çalışma alanıdır.",
+      "chat": {
+        "title": "Çoklu model sohbet",
+        "benefit": "GPT, Claude, Gemini, Llama ile tek bir iş parçacığında konuşun"
+      },
+      "code": {
+        "title": "Kod üretimi",
+        "benefit": "Yerleşik AI çift programcı"
+      },
+      "tools": {
+        "title": "1100+ bağlamsal araç",
+        "benefit": "Hesaplayıcılar, üreticiler, izleyiciler — talep üzerine"
+      },
+      "builder": {
+        "title": "Kodsuz uygulama oluşturucu",
+        "benefit": "Bir uygulama tanımla, yayınla"
+      }
+    },
+    "quickStart": {
+      "badge": "60 saniyede çalışıyor",
+      "title": "Üç komutla kendi kendinize barındırın",
+      "subtitle": "Postgres, Redis, backend, frontend — hepsi Docker Compose ile.",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı",
+      "viewDocs": "Tam kurulum belgelerini görüntüle →"
+    },
+    "heroDemo": {
+      "window": "wants — sohbet",
+      "step1": {
+        "prompt": "175cm ve 70kg olan BMI'm kaç?",
+        "tool": "BMI Hesaplayıcı",
+        "row1Label": "Boy",
+        "row1Value": "175 cm",
+        "row2Label": "Kilo",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22,86 — Normal"
+      },
+      "step2": {
+        "prompt": "250 USD'yi EUR'ya çevir",
+        "tool": "Döviz Çevirici",
+        "row1Label": "Kaynak",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Kur",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Hedef",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "wants.chat için QR kod üret",
+        "tool": "QR Kod Üretici",
+        "row1Label": "İçerik",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Format",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Durum",
+        "row3Value": "İndirmeye hazır"
+      },
+      "step4": {
+        "prompt": "184,50 $ faturayı 4 kişiye %18 bahşişle böl",
+        "tool": "Bahşiş Bölücü",
+        "row1Label": "Ara toplam",
+        "row1Value": "$184,50",
+        "row2Label": "Bahşiş (%18)",
+        "row2Value": "$33,21",
+        "row3Label": "Kişi başı",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "Fark",
+      "titleStart": "Sadece sohbet etmiyoruz.",
+      "titleEnd": "Arayüzler çiziyoruz.",
+      "subtitle": "Her AI sohbet botu metinle yanıtlar. Wants niyetinizi anlar ve ihtiyacınız olan aracı gösterir.",
+      "traditional": "Geleneksel AI",
+      "wants": "Wants",
+      "youLabel": "Sen:",
+      "aiLabel": "AI:",
+      "prompt": "175cm, 70kg'da BMI'm kaç?",
+      "aiResponse": "BMI = kilo(kg) / boy(m)². Yani 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", bu normal aralıkta...",
+      "traditionalCaption": "Metin duvarı. Rakamı çıkarmak için tekrar okuyorsun.",
+      "wantsCaption": "Canlı, etkileşimli bir araç. Düzenleyin, paylaşın, dışa aktarın."
+    },
+    "whyTry": {
+      "eyebrow": "Neden Wants'ı dene",
+      "title": "Beş dakikaya değer dört neden",
+      "r1": {
+        "title": "Her AI iş akışı için tek çalışma alanı",
+        "body": "Sohbet, kod, araçlar, uygulama oluşturucu. On abonelikle uğraşmayı bırakın."
+      },
+      "r2": {
+        "title": "Kendi anahtarlarınız — sıfır kâr marjı",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, yerel Ollama. Sağlayıcılara doğrudan ödeyin."
+      },
+      "r3": {
+        "title": "Kendi kendinize barındırın, verilerinize sahip olun",
+        "body": "Promptlarınız, geçmişiniz, sırlarınız — kendi sunucunuzda. Takip yok."
+      },
+      "r4": {
+        "title": "İlk günden 1100+ araç hazır",
+        "body": "Yapılandırma yok. Sor ve doğru araç belirir."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Neden katkıda bulun",
+      "title": "Kullanmak istediğiniz çalışma alanını oluşturun",
+      "r1": {
+        "title": "Sohbet sonrası AI platformunu şekillendirin",
+        "body": "Her şeyi yapan AI nasıl görünür tanımlıyoruz."
+      },
+      "r2": {
+        "title": "Bir saatten kısa sürede araç ekleyin",
+        "body": "Her araç tek bir React bileşeni. Form yapabiliyorsanız araç çıkarabilirsiniz."
+      },
+      "r3": {
+        "title": "17 dil, büyüyen topluluk",
+        "body": "Geliştiriciler, tasarımcılar, çevirmenler — her yeteneğe yer var."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Katkı rehberi",
+        "discussions": "Tartışmalar"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Perde arkası",
+      "title": "Temiz, birleştirilebilir mimari",
+      "subtitle": "Siyah kutu yok. Zaten bildiğiniz standart yığın.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Veri",
+        "cache": "Önbellek + kuyruk",
+        "models": "30+ AI modeli"
+      }
+    },
+    "techStack": {
+      "label": "Zaten bildiğiniz araçlarla inşa edildi"
+    },
+    "contributors": {
+      "eyebrow": "Topluluk tarafından inşa edildi",
+      "title": "Katkıda bulunanlara teşekkürler",
+      "subtitle": "Her commit, çeviri, hata raporu — Wants'ı siz oluşturuyorsunuz."
+    },
+    "comparison": {
+      "eyebrow": "Kendi kategorisinde",
+      "title": "Neden Wants, yan yana",
+      "feature": "Özellik",
+      "rows": {
+        "chat": "Çoklu model sohbet",
+        "code": "Kod üretimi",
+        "tools": "Bağlamsal UI araçları",
+        "builder": "Kodsuz uygulama oluşturucu",
+        "opensource": "Açık kaynak",
+        "selfhost": "Kendi kendinize barındırılabilir",
+        "byok": "Kendi API anahtarlarınız"
+      },
+      "values": {
+        "oneFamily": "1 aile",
+        "limited": "Sınırlı",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Barındırılan",
+      "hostedTitle": "Şimdi kullan, kurulum yok",
+      "hostedBody": "wants.chat'te saniyeler içinde Wants'ı deneyin.",
+      "hostedCta": "Canlı demo dene",
+      "selfBadge": "Kendi kendinize",
+      "selfTitle": "Kendi sunucunuzda çalıştırın",
+      "selfBody": "Verileriniz, anahtarlarınız, istediğiniz gibi değiştirin.",
+      "selfCta": "GitHub'dan al"
+    }
   }
 }

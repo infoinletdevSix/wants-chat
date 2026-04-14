@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { OSS } from '../../config/oss';
 
 const Contributors: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="bg-gray-950 py-20 border-t border-gray-900">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <p className="text-sm font-semibold tracking-wider text-emerald-400 uppercase">Built by the community</p>
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">Thanks to our contributors</h2>
-        <p className="mt-3 text-gray-400">Every commit, every translation, every bug report — you make Wants.</p>
+        <p className="text-sm font-semibold tracking-wider text-emerald-400 uppercase">{t('oss.contributors.eyebrow')}</p>
+        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">{t('oss.contributors.title')}</h2>
+        <p className="mt-3 text-gray-400">{t('oss.contributors.subtitle')}</p>
 
         <a
           href={OSS.repo + '/graphs/contributors'}

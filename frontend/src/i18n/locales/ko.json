@@ -55325,5 +55325,203 @@
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
     }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — 오픈소스 AI 워크스페이스",
+      "description": "30+ 모델과 채팅, 코드 생성, 1100+ 컨텍스트 도구, 노코드 앱 빌드. 셀프 호스팅 가능 및 AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "오픈소스 AI 워크스페이스 · AGPL-3.0",
+      "headlineStart": "당신의 AI",
+      "headlineHighlight": "커맨드 센터",
+      "headlineEnd": ".",
+      "subtitle": "30+ 모델과 채팅. 코드 생성. 1100+ 컨텍스트 도구. 노코드 앱 빌드. 셀프 호스팅, 본인의 키, 본인의 데이터.",
+      "ctaStar": "GitHub에서 스타",
+      "ctaDemo": "라이브 데모 보기",
+      "ctaSelfHost": "60초 만에 셀프 호스팅",
+      "demoCaption": "실시간 미리보기 — 의도가 인터페이스가 됩니다",
+      "alt": {
+        "stars": "GitHub 스타",
+        "forks": "GitHub 포크",
+        "license": "라이선스 AGPL-3.0"
+      }
+    },
+    "capability": {
+      "title": "AI에 필요한 모든 것, 한 곳에서",
+      "subtitle": "10개의 탭과 10개의 구독을 저글링하지 마세요. Wants가 워크스페이스입니다.",
+      "chat": {
+        "title": "멀티 모델 채팅",
+        "benefit": "하나의 스레드에서 GPT, Claude, Gemini, Llama와 대화"
+      },
+      "code": {
+        "title": "코드 생성",
+        "benefit": "내장된 AI 페어 프로그래머"
+      },
+      "tools": {
+        "title": "1100+ 컨텍스트 도구",
+        "benefit": "계산기, 생성기, 트래커 — 온디맨드"
+      },
+      "builder": {
+        "title": "노코드 앱 빌더",
+        "benefit": "앱을 설명하고 배포하세요"
+      }
+    },
+    "quickStart": {
+      "badge": "60초 안에 실행",
+      "title": "세 개의 명령어로 셀프 호스팅",
+      "subtitle": "Postgres, Redis, 백엔드, 프론트엔드 — 모두 Docker Compose로.",
+      "copy": "복사",
+      "copied": "복사됨",
+      "viewDocs": "전체 설치 문서 보기 →"
+    },
+    "heroDemo": {
+      "window": "wants — 채팅",
+      "step1": {
+        "prompt": "키 175cm, 몸무게 70kg인 내 BMI는?",
+        "tool": "BMI 계산기",
+        "row1Label": "키",
+        "row1Value": "175 cm",
+        "row2Label": "몸무게",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22.86 — 정상"
+      },
+      "step2": {
+        "prompt": "250 USD를 EUR로 변환",
+        "tool": "통화 변환기",
+        "row1Label": "부터",
+        "row1Value": "$250.00 USD",
+        "row2Label": "환율",
+        "row2Value": "1 USD = 0.92 EUR",
+        "row3Label": "까지",
+        "row3Value": "€230.00 EUR"
+      },
+      "step3": {
+        "prompt": "wants.chat의 QR 코드 생성",
+        "tool": "QR 코드 생성기",
+        "row1Label": "내용",
+        "row1Value": "https://wants.chat",
+        "row2Label": "포맷",
+        "row2Value": "PNG 512×512",
+        "row3Label": "상태",
+        "row3Value": "다운로드 준비 완료"
+      },
+      "step4": {
+        "prompt": "$184.50 청구서를 4명에게 18% 팁과 함께 나누기",
+        "tool": "팁 분할기",
+        "row1Label": "소계",
+        "row1Value": "$184.50",
+        "row2Label": "팁 (18%)",
+        "row2Value": "$33.21",
+        "row3Label": "인당",
+        "row3Value": "$54.43"
+      }
+    },
+    "moat": {
+      "eyebrow": "차이점",
+      "titleStart": "단순히 채팅하지 않습니다.",
+      "titleEnd": "인터페이스를 렌더링합니다.",
+      "subtitle": "모든 AI 챗봇은 텍스트로 답변합니다. Wants는 의도를 이해하고 필요한 도구를 표시합니다.",
+      "traditional": "기존 AI",
+      "wants": "Wants",
+      "youLabel": "당신:",
+      "aiLabel": "AI:",
+      "prompt": "키 175cm, 70kg인 내 BMI는?",
+      "aiResponse": "BMI = 몸무게(kg) / 키(m)². 따라서 70 / (1.75 × 1.75) ≈",
+      "aiResponseEnd": ", 정상 범위에 해당...",
+      "traditionalCaption": "텍스트 벽. 숫자를 추출하려 다시 읽어야 합니다.",
+      "wantsCaption": "라이브 인터랙티브 도구. 편집, 공유, 내보내기 가능."
+    },
+    "whyTry": {
+      "eyebrow": "Wants를 시도해야 하는 이유",
+      "title": "5분의 가치가 있는 네 가지 이유",
+      "r1": {
+        "title": "모든 AI 워크플로우를 위한 하나의 워크스페이스",
+        "body": "채팅, 코드, 도구, 앱 빌더. 10개의 구독과 탭을 저글링하지 마세요."
+      },
+      "r2": {
+        "title": "본인의 키 사용 — 마크업 없음",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, 로컬 Ollama. 공급자에게 직접 지불."
+      },
+      "r3": {
+        "title": "셀프 호스팅, 데이터 소유",
+        "body": "프롬프트, 기록, 시크릿 — 본인 서버에. 추적 없음."
+      },
+      "r4": {
+        "title": "첫날부터 1100+ 도구 사용 가능",
+        "body": "구성 불필요. 물어보면 올바른 도구가 나타납니다."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "기여하는 이유",
+      "title": "사용하고 싶은 워크스페이스를 만드세요",
+      "r1": {
+        "title": "포스트 챗 AI 플랫폼 설계",
+        "body": "AI가 모든 것을 하는 모습을 정의하고 있습니다. 당신의 코드가 수천 명에게."
+      },
+      "r2": {
+        "title": "한 시간 내에 도구 추가",
+        "body": "모든 도구는 하나의 React 컴포넌트. 폼을 만들 수 있다면 도구를 배포할 수 있습니다."
+      },
+      "r3": {
+        "title": "17개 로케일, 성장하는 커뮤니티",
+        "body": "개발자, 디자이너, 번역가 — 모든 기술에 자리가 있습니다."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "기여자 가이드",
+        "discussions": "토론"
+      }
+    },
+    "architecture": {
+      "eyebrow": "내부 구조",
+      "title": "깨끗하고 구성 가능한 아키텍처",
+      "subtitle": "블랙박스 없음. 이미 알고 있는 표준 스택.",
+      "nodes": {
+        "frontend": "프론트엔드",
+        "backend": "백엔드",
+        "data": "데이터",
+        "cache": "캐시 + 큐",
+        "models": "30+ AI 모델"
+      }
+    },
+    "techStack": {
+      "label": "이미 알고 있는 도구로 구축"
+    },
+    "contributors": {
+      "eyebrow": "커뮤니티가 만듭니다",
+      "title": "기여자분들께 감사드립니다",
+      "subtitle": "모든 커밋, 번역, 버그 리포트 — 여러분이 Wants를 만듭니다."
+    },
+    "comparison": {
+      "eyebrow": "유일한 카테고리",
+      "title": "왜 Wants인지, 나란히 비교",
+      "feature": "기능",
+      "rows": {
+        "chat": "멀티 모델 채팅",
+        "code": "코드 생성",
+        "tools": "컨텍스트 UI 도구",
+        "builder": "노코드 앱 빌더",
+        "opensource": "오픈소스",
+        "selfhost": "셀프 호스팅 가능",
+        "byok": "본인 API 키"
+      },
+      "values": {
+        "oneFamily": "1 패밀리",
+        "limited": "제한적",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "호스팅",
+      "hostedTitle": "설치 없이 지금 사용",
+      "hostedBody": "wants.chat에서 몇 초 만에 Wants를 시도.",
+      "hostedCta": "라이브 데모 보기",
+      "selfBadge": "셀프 호스팅",
+      "selfTitle": "본인 서버에서 실행",
+      "selfBody": "데이터 소유, 키 소유, 자유롭게 수정. docker compose 한 번이면 충분.",
+      "selfCta": "GitHub에서 받기"
+    }
   }
 }

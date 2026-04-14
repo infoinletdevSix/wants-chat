@@ -338,7 +338,7 @@
         "q1": "Was ist Wants?",
         "a1": "Wants ist eine absichtsgesteuerte KI-Plattform mit über 1100 kontextbezogenen UI-Tools. Anders als herkömmliche KI-Chatbots, die nur Textantworten liefern, versteht Wants, was Sie erreichen möchten, und zeigt automatisch das richtige Tool an — ob Rechner, Generator, Tracker, Konverter oder ein anderes spezialisiertes Werkzeug. Drücken Sie einfach Ihre Absicht aus, und Wants zeigt Ihnen das perfekte Tool.",
         "q2": "Wie funktioniert die Absichtserkennung?",
-        "a2": "Wants verwendet fortschrittliche KI, um die Absicht hinter Ihren Anfragen zu verstehen. Wenn Sie etwas wie \u201Emeine Hypothek berechnen\u201C oder \u201EWährung umrechnen\u201C erwähnen, erkennt Wants sofort Ihr Ziel und zeigt das relevante kontextbezogene UI-Tool an. Kein Durchsuchen von Menüs oder App-Stores — das richtige Tool erscheint genau dann, wenn Sie es brauchen.",
+        "a2": "Wants verwendet fortschrittliche KI, um die Absicht hinter Ihren Anfragen zu verstehen. Wenn Sie etwas wie „meine Hypothek berechnen“ oder „Währung umrechnen“ erwähnen, erkennt Wants sofort Ihr Ziel und zeigt das relevante kontextbezogene UI-Tool an. Kein Durchsuchen von Menüs oder App-Stores — das richtige Tool erscheint genau dann, wenn Sie es brauchen.",
         "q3": "Was unterscheidet Wants von anderen KI-Plattformen?",
         "a3": "Drei Dinge heben Wants hervor: (1) Kontextbezogene Benutzeroberfläche — Tools erscheinen basierend auf dem, was Sie tun möchten, nicht was Sie suchen. (2) Über 1100 spezialisierte Tools aus allen Branchen, von Gesundheit über Finanzen bis Recht. (3) Absichtserkennung, die versteht, was Sie wollen, und Ihnen handlungsfähige Tools zeigt, nicht nur Textantworten.",
         "q4": "Kann ich neue Tools anfordern?",
@@ -55324,6 +55324,204 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Open-Source KI-Arbeitsplatz",
+      "description": "Chatte mit 30+ Modellen, generiere Code, nutze 1100+ kontextbezogene Tools, baue Apps ohne Code. Selbst hostbar und AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "Der Open-Source KI-Arbeitsplatz · AGPL-3.0",
+      "headlineStart": "Ihre KI-",
+      "headlineHighlight": "Kommandozentrale",
+      "headlineEnd": ".",
+      "subtitle": "Chatte mit 30+ Modellen. Generiere Code. Nutze 1100+ kontextbezogene Tools. Baue Apps ohne Code. Selbst hosten, eigene Keys, eigene Daten.",
+      "ctaStar": "Auf GitHub bewerten",
+      "ctaDemo": "Live-Demo testen",
+      "ctaSelfHost": "In 60s selbst hosten",
+      "demoCaption": "Live-Vorschau — Absicht wird Oberfläche",
+      "alt": {
+        "stars": "GitHub-Sterne",
+        "forks": "GitHub-Forks",
+        "license": "Lizenz AGPL-3.0"
+      }
+    },
+    "capability": {
+      "title": "Alles rund um KI, an einem Ort",
+      "subtitle": "Hör auf, zehn Tabs und zehn Abos zu jonglieren. Wants ist der Arbeitsplatz.",
+      "chat": {
+        "title": "Multi-Modell-Chat",
+        "benefit": "Sprich mit GPT, Claude, Gemini, Llama — in einem Thread"
+      },
+      "code": {
+        "title": "Code-Generierung",
+        "benefit": "Integrierter KI-Pair-Programmer"
+      },
+      "tools": {
+        "title": "1100+ kontextbezogene Tools",
+        "benefit": "Rechner, Generatoren, Tracker — auf Abruf"
+      },
+      "builder": {
+        "title": "No-Code App-Builder",
+        "benefit": "App beschreiben, bereitstellen"
+      }
+    },
+    "quickStart": {
+      "badge": "In 60 Sekunden lauffähig",
+      "title": "In drei Befehlen selbst hosten",
+      "subtitle": "Postgres, Redis, Backend, Frontend — alles via Docker Compose.",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "viewDocs": "Vollständige Setup-Docs ansehen →"
+    },
+    "heroDemo": {
+      "window": "wants — chat",
+      "step1": {
+        "prompt": "Wie ist mein BMI bei 175cm und 70kg?",
+        "tool": "BMI-Rechner",
+        "row1Label": "Größe",
+        "row1Value": "175 cm",
+        "row2Label": "Gewicht",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22,86 — Normal"
+      },
+      "step2": {
+        "prompt": "250 USD in EUR umrechnen",
+        "tool": "Währungsrechner",
+        "row1Label": "Von",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Kurs",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Nach",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "QR-Code für wants.chat erzeugen",
+        "tool": "QR-Code-Generator",
+        "row1Label": "Inhalt",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Format",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Status",
+        "row3Value": "Download bereit"
+      },
+      "step4": {
+        "prompt": "Eine Rechnung von 184,50 $ auf 4 Personen mit 18% Trinkgeld aufteilen",
+        "tool": "Trinkgeld-Rechner",
+        "row1Label": "Zwischensumme",
+        "row1Value": "$184,50",
+        "row2Label": "Trinkgeld (18%)",
+        "row2Value": "$33,21",
+        "row3Label": "Pro Person",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "Der Unterschied",
+      "titleStart": "Wir chatten nicht nur.",
+      "titleEnd": "Wir rendern Oberflächen.",
+      "subtitle": "Jeder KI-Chatbot antwortet mit Text. Wants versteht Ihre Absicht und zeigt das genau passende Tool.",
+      "traditional": "Traditionelle KI",
+      "wants": "Wants",
+      "youLabel": "Du:",
+      "aiLabel": "KI:",
+      "prompt": "Wie ist mein BMI bei 175cm, 70kg?",
+      "aiResponse": "BMI berechnet sich als Gewicht (kg) / Größe (m)². Also 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", was im Normalbereich liegt...",
+      "traditionalCaption": "Eine Textwand. Du liest nochmal, um die Zahl herauszuziehen.",
+      "wantsCaption": "Ein lebendes, interaktives Tool. Werte anpassen, teilen, exportieren oder speichern."
+    },
+    "whyTry": {
+      "eyebrow": "Warum Wants ausprobieren",
+      "title": "Vier Gründe, die fünf Minuten wert sind",
+      "r1": {
+        "title": "Ein Arbeitsplatz für jeden KI-Workflow",
+        "body": "Chat, Code, Tools, App-Builder. Schluss mit zehn Abos und zehn Tabs."
+      },
+      "r2": {
+        "title": "Eigene Keys — kein Aufschlag",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, lokales Ollama. Bezahle Anbieter direkt."
+      },
+      "r3": {
+        "title": "Selbst hosten, Daten besitzen",
+        "body": "Deine Prompts, dein Verlauf, deine Secrets — auf deinem Server. Kein Tracking."
+      },
+      "r4": {
+        "title": "1100+ Tools ab Tag eins",
+        "body": "Keine Konfiguration. Frag und das passende Tool erscheint — Rechner, Konverter, Generatoren."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Warum beitragen",
+      "title": "Baue den Arbeitsplatz, den du nutzen willst",
+      "r1": {
+        "title": "Gestalte die Post-Chat-KI-Plattform",
+        "body": "Wir definieren die KI, die alles kann. Dein Code erreicht Tausende."
+      },
+      "r2": {
+        "title": "Füge ein Tool in unter einer Stunde hinzu",
+        "body": "Jedes Tool ist eine React-Komponente. Wer ein Formular baut, kann ein Tool liefern."
+      },
+      "r3": {
+        "title": "17 Sprachen, wachsende Community",
+        "body": "Devs, Designer, Übersetzer, Prompt Engineers — für jede Fähigkeit ein Platz."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Contributor-Guide",
+        "discussions": "Diskussionen"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Unter der Haube",
+      "title": "Saubere, komponierbare Architektur",
+      "subtitle": "Keine Blackboxen. Standard-Stack, den du kennst — einfach zu deployen.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Daten",
+        "cache": "Cache + Queue",
+        "models": "30+ KI-Modelle"
+      }
+    },
+    "techStack": {
+      "label": "Gebaut mit Tools, die du schon kennst"
+    },
+    "contributors": {
+      "eyebrow": "Von der Community gebaut",
+      "title": "Danke an unsere Contributors",
+      "subtitle": "Jeder Commit, jede Übersetzung, jeder Bug-Report — ihr macht Wants."
+    },
+    "comparison": {
+      "eyebrow": "Eine eigene Kategorie",
+      "title": "Warum Wants, im Vergleich",
+      "feature": "Merkmal",
+      "rows": {
+        "chat": "Multi-Modell-Chat",
+        "code": "Code-Generierung",
+        "tools": "Kontextbezogene UI-Tools",
+        "builder": "No-Code App-Builder",
+        "opensource": "Open Source",
+        "selfhost": "Selbst hostbar",
+        "byok": "Eigene API-Keys"
+      },
+      "values": {
+        "oneFamily": "1 Familie",
+        "limited": "Begrenzt",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Gehostet",
+      "hostedTitle": "Sofort nutzen, kein Setup",
+      "hostedBody": "Wants in Sekunden auf wants.chat testen. Ideal zum Ausprobieren.",
+      "hostedCta": "Live-Demo testen",
+      "selfBadge": "Selbst gehostet",
+      "selfTitle": "Auf eigenem Server laufen lassen",
+      "selfBody": "Eigene Daten, eigene Keys, anpassbar. Ein docker compose reicht.",
+      "selfCta": "Auf GitHub holen"
     }
   }
 }

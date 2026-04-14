@@ -55325,5 +55325,203 @@
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
     }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Espacio de trabajo de IA de código abierto",
+      "description": "Chatea con más de 30 modelos, genera código, usa 1100+ herramientas contextuales, crea apps sin código. Auto-hospedable y AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "El espacio de trabajo de IA de código abierto · AGPL-3.0",
+      "headlineStart": "Tu centro de",
+      "headlineHighlight": "comando de IA",
+      "headlineEnd": ".",
+      "subtitle": "Chatea con más de 30 modelos. Genera código. Usa 1100+ herramientas contextuales. Crea apps sin código. Auto-hospeda, trae tus propias claves, sé dueño de tus datos.",
+      "ctaStar": "Dar estrella en GitHub",
+      "ctaDemo": "Probar demo",
+      "ctaSelfHost": "Auto-hospedar en 60s",
+      "demoCaption": "Vista previa en vivo — la intención se convierte en interfaz",
+      "alt": {
+        "stars": "Estrellas de GitHub",
+        "forks": "Forks de GitHub",
+        "license": "Licencia AGPL-3.0"
+      }
+    },
+    "capability": {
+      "title": "Todo lo que necesitas alrededor de la IA, en un solo lugar",
+      "subtitle": "Deja de malabarear diez pestañas y diez suscripciones. Wants es el espacio de trabajo.",
+      "chat": {
+        "title": "Chat multi-modelo",
+        "benefit": "Habla con GPT, Claude, Gemini, Llama — en un solo hilo"
+      },
+      "code": {
+        "title": "Generación de código",
+        "benefit": "Programador par de IA, integrado"
+      },
+      "tools": {
+        "title": "1100+ herramientas contextuales",
+        "benefit": "Calculadoras, generadores, rastreadores — bajo demanda"
+      },
+      "builder": {
+        "title": "Creador de apps sin código",
+        "benefit": "Describe una app, despliégala"
+      }
+    },
+    "quickStart": {
+      "badge": "Funcionando en 60 segundos",
+      "title": "Auto-hospeda en tres comandos",
+      "subtitle": "Postgres, Redis, backend, frontend — todos arriba con Docker Compose.",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "viewDocs": "Ver documentación completa →"
+    },
+    "heroDemo": {
+      "window": "wants — chat",
+      "step1": {
+        "prompt": "¿Cuál es mi IMC si mido 175cm y peso 70kg?",
+        "tool": "Calculadora de IMC",
+        "row1Label": "Altura",
+        "row1Value": "175 cm",
+        "row2Label": "Peso",
+        "row2Value": "70 kg",
+        "row3Label": "IMC",
+        "row3Value": "22.86 — Normal"
+      },
+      "step2": {
+        "prompt": "Convertir 250 USD a EUR",
+        "tool": "Conversor de divisas",
+        "row1Label": "Desde",
+        "row1Value": "$250.00 USD",
+        "row2Label": "Tasa",
+        "row2Value": "1 USD = 0.92 EUR",
+        "row3Label": "A",
+        "row3Value": "€230.00 EUR"
+      },
+      "step3": {
+        "prompt": "Generar un código QR para wants.chat",
+        "tool": "Generador de códigos QR",
+        "row1Label": "Contenido",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Formato",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Estado",
+        "row3Value": "Listo para descargar"
+      },
+      "step4": {
+        "prompt": "Dividir una cuenta de $184.50 entre 4 personas con 18% de propina",
+        "tool": "Divisor de propina",
+        "row1Label": "Subtotal",
+        "row1Value": "$184.50",
+        "row2Label": "Propina (18%)",
+        "row2Value": "$33.21",
+        "row3Label": "Por persona",
+        "row3Value": "$54.43"
+      }
+    },
+    "moat": {
+      "eyebrow": "La diferencia",
+      "titleStart": "No solo chateamos.",
+      "titleEnd": "Renderizamos interfaces.",
+      "subtitle": "Cada chatbot de IA responde con texto. Wants entiende tu intención y muestra la herramienta o interfaz exacta que necesitas.",
+      "traditional": "IA tradicional",
+      "wants": "Wants",
+      "youLabel": "Tú:",
+      "aiLabel": "IA:",
+      "prompt": "¿Cuál es mi IMC si mido 175cm, 70kg?",
+      "aiResponse": "Tu IMC se calcula como peso (kg) / altura (m)². Entonces 70 / (1.75 × 1.75) ≈",
+      "aiResponseEnd": ", que está en el rango normal...",
+      "traditionalCaption": "Un muro de texto. Releyes para extraer el número.",
+      "wantsCaption": "Una herramienta en vivo e interactiva. Edita, comparte, exporta o guarda en memoria."
+    },
+    "whyTry": {
+      "eyebrow": "Por qué probar Wants",
+      "title": "Cuatro razones que valen cinco minutos",
+      "r1": {
+        "title": "Un espacio para cada flujo de IA",
+        "body": "Chat, código, herramientas, creador de apps. Deja de malabarear diez suscripciones y diez pestañas."
+      },
+      "r2": {
+        "title": "Trae tus propias claves — sin sobreprecio",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, Ollama local. Paga directo a los proveedores. Sin intermediarios."
+      },
+      "r3": {
+        "title": "Auto-hospeda, sé dueño de tus datos",
+        "body": "Tus prompts, tu historial, tus secretos — en tu servidor. Sin entrenamiento externo, sin rastreo."
+      },
+      "r4": {
+        "title": "1100+ herramientas listas el día uno",
+        "body": "Sin configuración, sin buscar plugins. Pregunta y aparece la herramienta correcta — calculadoras, conversores, generadores, rastreadores."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Por qué contribuir",
+      "title": "Construye el espacio que quieres usar",
+      "r1": {
+        "title": "Da forma a la plataforma post-chat",
+        "body": "Estamos definiendo cómo se ve una IA que lo hace todo. Tu código llega a miles."
+      },
+      "r2": {
+        "title": "Añade una herramienta en menos de una hora",
+        "body": "Cada herramienta es un solo componente React. Si puedes hacer un formulario, puedes lanzar una herramienta."
+      },
+      "r3": {
+        "title": "17 idiomas, comunidad creciente",
+        "body": "Devs, diseñadores, traductores, prompt engineers — hay lugar para cada habilidad."
+      },
+      "links": {
+        "goodFirst": "Issues para empezar",
+        "guide": "Guía del contribuidor",
+        "discussions": "Discusiones"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Bajo el capó",
+      "title": "Arquitectura limpia y componible",
+      "subtitle": "Sin cajas negras. Stack estándar que ya conoces — fácil de desplegar, fácil de extender.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Datos",
+        "cache": "Caché + cola",
+        "models": "30+ modelos de IA"
+      }
+    },
+    "techStack": {
+      "label": "Construido con las herramientas que ya conoces"
+    },
+    "contributors": {
+      "eyebrow": "Construido por la comunidad",
+      "title": "Gracias a nuestros contribuidores",
+      "subtitle": "Cada commit, cada traducción, cada reporte de bug — tú haces Wants."
+    },
+    "comparison": {
+      "eyebrow": "Una categoría única",
+      "title": "Por qué Wants, lado a lado",
+      "feature": "Característica",
+      "rows": {
+        "chat": "Chat multi-modelo",
+        "code": "Generación de código",
+        "tools": "Herramientas UI contextuales",
+        "builder": "Creador de apps sin código",
+        "opensource": "Código abierto",
+        "selfhost": "Auto-hospedable",
+        "byok": "Tus propias claves API"
+      },
+      "values": {
+        "oneFamily": "1 familia",
+        "limited": "Limitado",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Hospedado",
+      "hostedTitle": "Úsalo ya, sin configurar",
+      "hostedBody": "Prueba Wants en segundos en wants.chat. Ideal para probar, uso diario o compartir con personas no técnicas.",
+      "hostedCta": "Probar demo",
+      "selfBadge": "Auto-hospeda",
+      "selfTitle": "Ejecútalo en tu servidor",
+      "selfBody": "Sé dueño de tus datos, trae tus claves, modifica lo que quieras. A un docker compose de distancia.",
+      "selfCta": "Obtener en GitHub"
+    }
   }
 }

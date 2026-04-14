@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const stack = [
   'React',
@@ -14,10 +15,11 @@ const stack = [
 ];
 
 const TechStack: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="bg-gray-950 py-14 border-t border-gray-900">
       <div className="max-w-6xl mx-auto px-6">
-        <p className="text-center text-sm text-gray-500 mb-6">Built on the tools you already know</p>
+        <p className="text-center text-sm text-gray-500 mb-6">{t('oss.techStack.label')}</p>
         <div className="flex flex-wrap justify-center gap-2">
           {stack.map((s) => (
             <span
