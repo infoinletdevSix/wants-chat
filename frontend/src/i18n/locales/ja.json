@@ -1400,7 +1400,7 @@
     "pageDescription": "計算機、ジェネレーター、コンバーター、ビジネス、ヘルスケア、法律など、1000以上のコンテキスチュアルAIツールを探索。1つのプラットフォームですべてのツールにアクセス。",
     "exploreAllTools": "すべてのツールを探索",
     "contextualTools": "コンテキスチュアルツール",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "コンテキスチュアルツール",
     "heroDescription": "必要なすべてのツールに即座にアクセス。計算機からフルスタックアプリビルダーまで——やりたいことを言うだけで、ツールが手に入ります。",
     "statsContextualTools": "コンテキスチュアルツール",
@@ -55067,6 +55067,205 @@
     "zodiacCompatibility": {
       "title": "星座相性",
       "description": "星座相性のツールです。"
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — オープンソースのAIワークスペース",
+      "description": "30以上のモデルとチャット、コード生成、1100以上のコンテキストツール、ノーコードでアプリ構築。セルフホスト可能、AGPL-3.0。"
+    },
+    "hero": {
+      "eyebrow": "オープンソースのAIワークスペース · AGPL-3.0",
+      "headlineStart": "あなたのAI",
+      "headlineHighlight": "コマンドセンター",
+      "headlineEnd": "。",
+      "subtitle": "30以上のモデルとチャット。コード生成。1100以上のコンテキストツールを活用。ノーコードでアプリ構築。セルフホスト、自分のキー、自分のデータ。",
+      "ctaStar": "GitHubでスター",
+      "ctaDemo": "ライブデモを試す",
+      "ctaSelfHost": "60秒でセルフホスト",
+      "demoCaption": "ライブプレビュー — 意図がインターフェースになる",
+      "alt": {
+        "stars": "GitHubスター",
+        "forks": "GitHubフォーク",
+        "license": "ライセンス AGPL-3.0"
+      },
+      "ctaGetStarted": "始める"
+    },
+    "capability": {
+      "title": "AIに必要なすべてを、一つの場所に",
+      "subtitle": "10個のタブと10個のサブスクリプションをやりくりするのをやめましょう。Wantsがワークスペースです。",
+      "chat": {
+        "title": "マルチモデルチャット",
+        "benefit": "GPT、Claude、Gemini、Llamaと1つのスレッドで対話"
+      },
+      "code": {
+        "title": "コード生成",
+        "benefit": "AIペアプログラマーを内蔵"
+      },
+      "tools": {
+        "title": "1100以上のコンテキストツール",
+        "benefit": "電卓、ジェネレーター、トラッカー — オンデマンドで"
+      },
+      "builder": {
+        "title": "ノーコードアプリビルダー",
+        "benefit": "アプリを説明して、デプロイ"
+      }
+    },
+    "quickStart": {
+      "badge": "60秒で起動",
+      "title": "3つのコマンドでセルフホスト",
+      "subtitle": "Postgres、Redis、バックエンド、フロントエンド — すべてDocker Composeで起動。",
+      "copy": "コピー",
+      "copied": "コピー済み",
+      "viewDocs": "完全なセットアップドキュメントを見る →"
+    },
+    "heroDemo": {
+      "window": "wants — チャット",
+      "step1": {
+        "prompt": "身長175cm、体重70kgの私のBMIは？",
+        "tool": "BMI計算機",
+        "row1Label": "身長",
+        "row1Value": "175 cm",
+        "row2Label": "体重",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22.86 — 標準"
+      },
+      "step2": {
+        "prompt": "250米ドルをユーロに換算",
+        "tool": "通貨コンバーター",
+        "row1Label": "元",
+        "row1Value": "$250.00 USD",
+        "row2Label": "レート",
+        "row2Value": "1 USD = 0.92 EUR",
+        "row3Label": "先",
+        "row3Value": "€230.00 EUR"
+      },
+      "step3": {
+        "prompt": "wants.chat用のQRコードを生成",
+        "tool": "QRコードジェネレーター",
+        "row1Label": "内容",
+        "row1Value": "https://wants.chat",
+        "row2Label": "形式",
+        "row2Value": "PNG 512×512",
+        "row3Label": "ステータス",
+        "row3Value": "ダウンロード準備完了"
+      },
+      "step4": {
+        "prompt": "184.50ドルの請求を4人で18%のチップ付きで分割",
+        "tool": "チップ分割機",
+        "row1Label": "小計",
+        "row1Value": "$184.50",
+        "row2Label": "チップ (18%)",
+        "row2Value": "$33.21",
+        "row3Label": "一人あたり",
+        "row3Value": "$54.43"
+      }
+    },
+    "moat": {
+      "eyebrow": "違い",
+      "titleStart": "ただのチャットではありません。",
+      "titleEnd": "インターフェースを生成します。",
+      "subtitle": "他のAIチャットボットはテキストで返答するだけ。Wantsはあなたの意図を理解し、必要なツールやインターフェースを表示します。",
+      "traditional": "従来のAI",
+      "wants": "Wants",
+      "youLabel": "あなた:",
+      "aiLabel": "AI:",
+      "prompt": "身長175cm、体重70kgの私のBMIは？",
+      "aiResponse": "BMIは体重(kg) / 身長(m)²で計算されます。70 / (1.75 × 1.75) ≈",
+      "aiResponseEnd": "、これは標準範囲に該当します...",
+      "traditionalCaption": "テキストの壁。数字を抽出するために読み直す必要があります。",
+      "wantsCaption": "ライブの対話型ツール。入力を編集、共有、エクスポート、メモリに保存。"
+    },
+    "whyTry": {
+      "eyebrow": "Wantsを試す理由",
+      "title": "5分の価値がある4つの理由",
+      "r1": {
+        "title": "すべてのAIワークフローのための単一のワークスペース",
+        "body": "チャット、コード、ツール、アプリビルダー。10個のAIサブスクリプションと10個のブラウザタブを管理するのをやめましょう。"
+      },
+      "r2": {
+        "title": "自分のキーを使用 — マークアップゼロ",
+        "body": "OpenRouter、OpenAI、Anthropic、Google、ローカルOllama。プロバイダーに直接支払う。仲介価格なし。"
+      },
+      "r3": {
+        "title": "セルフホストで、自分のデータを所有",
+        "body": "あなたのプロンプト、履歴、シークレット — あなたのサーバー上に。サードパーティのトレーニングなし、トラッキングなし。"
+      },
+      "r4": {
+        "title": "初日から1100以上のツールが使用可能",
+        "body": "設定不要、プラグイン探しも不要。尋ねれば適切なツールが表示されます — 電卓、コンバーター、ジェネレーター、トラッカー。"
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "貢献する理由",
+      "title": "あなたが使いたいワークスペースを構築",
+      "r1": {
+        "title": "ポストチャットAIプラットフォームを形作る",
+        "body": "1つのAIですべてを行うものを定義しています。あなたのコードが数千人に届きます。"
+      },
+      "r2": {
+        "title": "1時間以内にツールを追加",
+        "body": "すべてのツールは単一のReactコンポーネント。フォームを作れるなら、ツールを出荷できます。"
+      },
+      "r3": {
+        "title": "17のロケール、成長するコミュニティ",
+        "body": "開発者、デザイナー、翻訳者、プロンプトエンジニア — すべてのスキルに居場所があります。"
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "貢献者ガイド",
+        "discussions": "ディスカッション"
+      }
+    },
+    "architecture": {
+      "eyebrow": "仕組み",
+      "title": "クリーンで構成可能なアーキテクチャ",
+      "subtitle": "ブラックボックスなし。すでに知っている標準スタック — デプロイも拡張も簡単。",
+      "nodes": {
+        "frontend": "フロントエンド",
+        "backend": "バックエンド",
+        "data": "データ",
+        "cache": "キャッシュ + キュー",
+        "models": "30以上のAIモデル"
+      }
+    },
+    "techStack": {
+      "label": "すでに知っているツールで構築"
+    },
+    "contributors": {
+      "eyebrow": "コミュニティによって構築",
+      "title": "貢献者に感謝",
+      "subtitle": "すべてのコミット、翻訳、バグレポート — あなたがWantsを作ります。"
+    },
+    "comparison": {
+      "eyebrow": "唯一無二のカテゴリ",
+      "title": "なぜWantsか、並べて比較",
+      "feature": "機能",
+      "rows": {
+        "chat": "マルチモデルチャット",
+        "code": "コード生成",
+        "tools": "コンテキストUIツール",
+        "builder": "ノーコードアプリビルダー",
+        "opensource": "オープンソース",
+        "selfhost": "セルフホスト可能",
+        "byok": "自分のAPIキー"
+      },
+      "values": {
+        "oneFamily": "1ファミリー",
+        "limited": "制限あり",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "ホスト版",
+      "hostedTitle": "今すぐ使用、セットアップ不要",
+      "hostedBody": "wants.chatで数秒でWantsを試せます。テスト、日常使用、非技術者との共有に最適。",
+      "hostedCta": "ライブデモを試す",
+      "selfBadge": "セルフホスト",
+      "selfTitle": "自分のサーバーで実行",
+      "selfBody": "自分のデータを所有、自分のキーを使用、自由に変更。docker compose 一発で。",
+      "selfCta": "GitHubで入手"
     }
   }
 }

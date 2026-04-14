@@ -312,7 +312,7 @@
     "trustedBy": "Trusted by teams at",
     "featuresTitle": "Powerful Features",
     "featuresSubtitle": "Everything you need to boost productivity",
-    "toolsTitle": "1000+ Tools at Your Fingertips",
+    "toolsTitle": "1100+ Tools at Your Fingertips",
     "toolsSubtitle": "From calculators to AI-powered generators",
     "testimonialsTitle": "What Our Users Say",
     "testimonialsSubtitle": "Join thousands of satisfied users",
@@ -336,11 +336,11 @@
       },
       "general": {
         "q1": "What is Wants?",
-        "a1": "Wants is an intent-driven AI platform with 1000+ contextual UI tools. Unlike traditional AI chatbots that only provide text responses, Wants understands what you want to accomplish and automatically surfaces the right tool — whether that is a calculator, generator, tracker, converter, or any specialized utility. Just express your intent, and Wants shows you the perfect tool.",
+        "a1": "Wants is an intent-driven AI platform with 1100+ contextual UI tools. Unlike traditional AI chatbots that only provide text responses, Wants understands what you want to accomplish and automatically surfaces the right tool — whether that is a calculator, generator, tracker, converter, or any specialized utility. Just express your intent, and Wants shows you the perfect tool.",
         "q2": "How does intent detection work?",
         "a2": "Wants uses advanced AI to understand the intent behind your requests. When you mention something like \"calculate my mortgage\" or \"convert currency,\" Wants instantly recognizes your goal and displays the relevant contextual UI tool. No searching through menus or app stores — the right tool appears exactly when you need it.",
         "q3": "What makes Wants different from other AI platforms?",
-        "a3": "Three things set Wants apart: (1) Contextual UI — tools appear based on what you are trying to do, not what you search for. (2) 1000+ specialized tools across every industry, from health to finance to legal. (3) Intent detection that understands what you want and shows you actionable tools, not just text responses.",
+        "a3": "Three things set Wants apart: (1) Contextual UI — tools appear based on what you are trying to do, not what you search for. (2) 1100+ specialized tools across every industry, from health to finance to legal. (3) Intent detection that understands what you want and shows you actionable tools, not just text responses.",
         "q4": "Can I request new tools?",
         "a4": "Absolutely! We actively build new tools based on user requests. If you need a tool that does not exist yet, let us know through the feedback option or support page. Our team evaluates requests and adds the most requested tools regularly.",
         "q5": "Is my data secure?",
@@ -350,7 +350,7 @@
         "q1": "What are contextual UI tools?",
         "a1": "Contextual UI tools are interactive interfaces that appear automatically based on your intent. Instead of searching for an app or navigating menus, just express what you want to do. The relevant tool — complete with inputs, calculations, and outputs — appears instantly in your workspace.",
         "q2": "How many tools are available?",
-        "a2": "Wants offers over 1000 tools and growing. These include calculators, converters, generators, trackers, planners, analyzers, and specialized utilities. New tools are added weekly based on user needs and requests.",
+        "a2": "Wants offers over 1100 tools and growing. These include calculators, converters, generators, trackers, planners, analyzers, and specialized utilities. New tools are added weekly based on user needs and requests.",
         "q3": "What industries do the tools cover?",
         "a3": "Our tools span virtually every industry: Health (BMI calculators, calorie trackers, symptom checkers), Finance (loan calculators, budget planners, invoice generators), Legal (contract generators, NDA templates), Real Estate (mortgage calculators, ROI analyzers), Manufacturing (unit converters, production calculators), Education, Marketing, HR, and many more.",
         "q4": "Can tools sync data to the cloud?",
@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "What types of tools are included?",
-        "a1": "Our 1000+ tools include: Calculators (mortgage, BMI, compound interest, tax), Converters (currency, units, file formats), Generators (invoices, contracts, resumes, QR codes), Trackers (expenses, habits, fitness, time), Planners (budgets, trips, meals, projects), and Analyzers (data, SEO, performance). Each tool has a purpose-built UI.",
+        "a1": "Our 1100+ tools include: Calculators (mortgage, BMI, compound interest, tax), Converters (currency, units, file formats), Generators (invoices, contracts, resumes, QR codes), Trackers (expenses, habits, fitness, time), Planners (budgets, trips, meals, projects), and Analyzers (data, SEO, performance). Each tool has a purpose-built UI.",
         "q2": "What are some popular tools?",
         "a2": "Top tools include: Currency Converter, BMI Calculator, Invoice Generator, Contract Generator, Mortgage Calculator, Expense Tracker, Unit Converter, QR Code Generator, PDF Tools, Calorie Counter, Password Generator, and Color Picker. Browse all tools in the Tools section.",
         "q3": "Can I use multiple AI models?",
@@ -442,7 +442,7 @@
     "stillNeedTool": "You still need to find and use a separate tool yourself",
     "intentDetectedLabel": "Intent Detected",
     "smartContextPillars": "The 3 Pillars of Smart Context",
-    "smartContextDesc": "Your data, pre-filled automatically across all 1000+ tools",
+    "smartContextDesc": "Your data, pre-filled automatically across all 1100+ tools",
     "onboardingData": "Onboarding Data",
     "onboardingDataDesc": "Currency, timezone, language, industry — set once, used everywhere",
     "toolHistory": "Tool History",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "Every Tool You Need,",
     "instantly": "Instantly",
     "tools": "tools",
-    "exploreAllTools": "Explore All 1000+ Tools",
+    "exploreAllTools": "Explore All 1100+ Tools",
     "savePerYear": "SAVE $3,840/YEAR",
     "replace100Apps": "Replace",
     "appsYouUseDaily": "100+ Apps",
@@ -478,7 +478,7 @@
         "dataAnalysis": "Data Analysis & Visualization",
         "deepResearch": "Deep Research with Citations",
         "interactiveLearning": "Interactive Learning & Tutoring",
-        "contextualTools": "1000+ Contextual UI Tools",
+        "contextualTools": "1100+ Contextual UI Tools",
         "fileProcessing": "File Processing & Conversion",
         "workflowAutomation": "Workflow Automation",
         "webScreenshot": "Web Screenshot & Extraction",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "AI + Actions",
-          "uniqueValue": "AI + 1000+ Tools"
+          "uniqueValue": "AI + 1100+ Tools"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1104,12 +1104,12 @@
       "back": "Back",
       "joinWants": "Join",
       "wants": "Wants",
-      "tagline": "Your all-in-one AI platform with 1000+ tools, 30+ AI models, and no-code app builder.",
+      "tagline": "Your all-in-one AI platform with 1100+ tools, 30+ AI models, and no-code app builder.",
       "aiTools": "AI Tools",
       "aiModels": "AI Models",
       "rating": "Rating",
       "feature1": "Access 30+ AI models (GPT-4o, Claude, Gemini)",
-      "feature2": "1000+ contextual tools that appear when needed",
+      "feature2": "1100+ contextual tools that appear when needed",
       "feature3": "No-code full-stack app builder",
       "feature4": "Save $3,840/year replacing 100+ apps",
       "testimonial": "Wants has completely transformed how I work. The AI understands what I need and shows me the perfect tool instantly!",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {
@@ -55324,6 +55324,205 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Open-source AI workspace",
+      "description": "Chat with 30+ models, generate code, use 1100+ contextual tools, build apps without code. Self-hostable and AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "The open-source AI workspace · AGPL-3.0",
+      "headlineStart": "Your AI",
+      "headlineHighlight": "command center",
+      "headlineEnd": ".",
+      "subtitle": "Chat with 30+ models. Generate code. Use 1100+ contextual tools. Build apps without code. Self-host, bring your own keys, own your data.",
+      "ctaStar": "Star on GitHub",
+      "ctaDemo": "Try live demo",
+      "ctaSelfHost": "Self-host in 60s",
+      "demoCaption": "Live preview — intent becomes interface",
+      "alt": {
+        "stars": "GitHub stars",
+        "forks": "GitHub forks",
+        "license": "License AGPL-3.0"
+      },
+      "ctaGetStarted": "Get started"
+    },
+    "capability": {
+      "title": "Everything you need around AI, in one place",
+      "subtitle": "Stop juggling ten tabs and ten subscriptions. Wants is the workspace.",
+      "chat": {
+        "title": "Multi-model chat",
+        "benefit": "Talk to GPT, Claude, Gemini, Llama — in one thread"
+      },
+      "code": {
+        "title": "Code generation",
+        "benefit": "AI pair programmer, built in"
+      },
+      "tools": {
+        "title": "1100+ contextual tools",
+        "benefit": "Calculators, generators, trackers — on demand"
+      },
+      "builder": {
+        "title": "No-code app builder",
+        "benefit": "Describe an app, deploy it"
+      }
+    },
+    "quickStart": {
+      "badge": "Running in 60 seconds",
+      "title": "Self-host in three commands",
+      "subtitle": "Postgres, Redis, backend, frontend — all up with Docker Compose.",
+      "copy": "Copy",
+      "copied": "Copied",
+      "viewDocs": "View full setup docs →"
+    },
+    "heroDemo": {
+      "window": "wants — chat",
+      "step1": {
+        "prompt": "What's my BMI if I'm 175cm and 70kg?",
+        "tool": "BMI Calculator",
+        "row1Label": "Height",
+        "row1Value": "175 cm",
+        "row2Label": "Weight",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22.86 — Normal"
+      },
+      "step2": {
+        "prompt": "Convert 250 USD to EUR",
+        "tool": "Currency Converter",
+        "row1Label": "From",
+        "row1Value": "$250.00 USD",
+        "row2Label": "Rate",
+        "row2Value": "1 USD = 0.92 EUR",
+        "row3Label": "To",
+        "row3Value": "€230.00 EUR"
+      },
+      "step3": {
+        "prompt": "Generate a QR code for wants.chat",
+        "tool": "QR Code Generator",
+        "row1Label": "Content",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Format",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Status",
+        "row3Value": "Ready to download"
+      },
+      "step4": {
+        "prompt": "Split a $184.50 bill across 4 people with 18% tip",
+        "tool": "Tip Splitter",
+        "row1Label": "Subtotal",
+        "row1Value": "$184.50",
+        "row2Label": "Tip (18%)",
+        "row2Value": "$33.21",
+        "row3Label": "Each person pays",
+        "row3Value": "$54.43"
+      }
+    },
+    "moat": {
+      "eyebrow": "The difference",
+      "titleStart": "We don't just chat.",
+      "titleEnd": "We render interfaces.",
+      "subtitle": "Every AI chatbot replies with text. Wants understands your intent and surfaces the exact tool or interface you need.",
+      "traditional": "Traditional AI",
+      "wants": "Wants",
+      "youLabel": "You:",
+      "aiLabel": "AI:",
+      "prompt": "What's my BMI if I'm 175cm, 70kg?",
+      "aiResponse": "Your BMI is calculated as weight (kg) / height (m)². So 70 / (1.75 × 1.75) ≈",
+      "aiResponseEnd": ", which falls in the normal range...",
+      "traditionalCaption": "A wall of text. You re-read to extract the number.",
+      "wantsCaption": "A live, interactive tool. Edit inputs, share, export, or save to memory."
+    },
+    "whyTry": {
+      "eyebrow": "Why try Wants",
+      "title": "Four reasons it's worth five minutes",
+      "r1": {
+        "title": "One workspace for every AI workflow",
+        "body": "Chat, code, tools, app builder. Stop juggling ten AI subscriptions and ten browser tabs."
+      },
+      "r2": {
+        "title": "Bring your own keys — zero markup",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, local Ollama. Pay the providers directly. No middleman pricing."
+      },
+      "r3": {
+        "title": "Self-host, own your data",
+        "body": "Your prompts, your history, your secrets — on your server. No third-party training, no tracking."
+      },
+      "r4": {
+        "title": "1100+ tools ready on day one",
+        "body": "No configuration, no plugin hunt. Ask and the right tool appears — calculators, converters, generators, trackers."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Why contribute",
+      "title": "Build the workspace you want to use",
+      "r1": {
+        "title": "Shape the post-chat AI platform",
+        "body": "We're defining what one-AI-does-everything looks like. Your code ships to thousands."
+      },
+      "r2": {
+        "title": "Add a tool in under an hour",
+        "body": "Every tool is a single React component. If you can build a form, you can ship a tool."
+      },
+      "r3": {
+        "title": "17 locales, growing community",
+        "body": "Devs, designers, translators, prompt engineers — every skill has a place."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Contributor guide",
+        "discussions": "Discussions"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Under the hood",
+      "title": "Clean, composable architecture",
+      "subtitle": "No black boxes. Standard stack you already know — easy to deploy, easy to extend.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Data",
+        "cache": "Cache + queue",
+        "models": "30+ AI models"
+      }
+    },
+    "techStack": {
+      "label": "Built on the tools you already know"
+    },
+    "contributors": {
+      "eyebrow": "Built by the community",
+      "title": "Thanks to our contributors",
+      "subtitle": "Every commit, every translation, every bug report — you make Wants."
+    },
+    "comparison": {
+      "eyebrow": "A category of one",
+      "title": "Why Wants, side-by-side",
+      "feature": "Feature",
+      "rows": {
+        "chat": "Multi-model chat",
+        "code": "Code generation",
+        "tools": "Contextual UI tools",
+        "builder": "No-code app builder",
+        "opensource": "Open source",
+        "selfhost": "Self-hostable",
+        "byok": "BYO API keys"
+      },
+      "values": {
+        "oneFamily": "1 family",
+        "limited": "Limited",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Hosted",
+      "hostedTitle": "Use it now, zero setup",
+      "hostedBody": "Try Wants in seconds at wants.chat. Good for testing, daily use, or sharing with non-technical folks.",
+      "hostedCta": "Try the live demo",
+      "selfBadge": "Self-host",
+      "selfTitle": "Run it on your own server",
+      "selfBody": "Own your data, bring your own keys, modify whatever you want. One docker compose away.",
+      "selfCta": "Get it on GitHub"
     }
   }
 }

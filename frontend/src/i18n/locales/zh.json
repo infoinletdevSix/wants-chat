@@ -312,7 +312,7 @@
     "trustedBy": "以下团队信赖我们",
     "featuresTitle": "强大功能",
     "featuresSubtitle": "提升效率所需的一切",
-    "toolsTitle": "1000+ 工具触手可及",
+    "toolsTitle": "1100+ 工具触手可及",
     "toolsSubtitle": "从计算器到 AI 生成器",
     "testimonialsTitle": "用户评价",
     "testimonialsSubtitle": "加入数千名满意用户的行列",
@@ -336,11 +336,11 @@
       },
       "general": {
         "q1": "什么是 Wants？",
-        "a1": "Wants 是一个意图驱动的AI平台，拥有1000+上下文界面工具。与只提供文本回复的传统AI聊天机器人不同，Wants 能理解您想完成什么任务，并自动呈现合适的工具——无论是计算器、生成器、追踪器、转换器还是任何专用工具。只需表达您的意图，Wants 就会为您展示最合适的工具。",
+        "a1": "Wants 是一个意图驱动的AI平台，拥有1100+上下文界面工具。与只提供文本回复的传统AI聊天机器人不同，Wants 能理解您想完成什么任务，并自动呈现合适的工具——无论是计算器、生成器、追踪器、转换器还是任何专用工具。只需表达您的意图，Wants 就会为您展示最合适的工具。",
         "q2": "意图检测如何工作？",
         "a2": "Wants 使用先进的AI来理解您请求背后的意图。当您提到“计算我的房贷”或“转换货币”时，Wants 会立即识别您的目标并显示相关的上下文界面工具。无需搜索菜单或应用商店——您需要的工具会在恰当的时候出现。",
         "q3": "Wants 与其他AI平台有何不同？",
-        "a3": "三点让 Wants 与众不同：（1）上下文界面——工具根据您要做的事情出现，而不是您搜索的内容。（2）覆盖各行各业的1000+专用工具，从健康到金融再到法律。（3）意图检测能理解您想要什么，并展示可操作的工具，而不仅仅是文字回复。",
+        "a3": "三点让 Wants 与众不同：（1）上下文界面——工具根据您要做的事情出现，而不是您搜索的内容。（2）覆盖各行各业的1100+专用工具，从健康到金融再到法律。（3）意图检测能理解您想要什么，并展示可操作的工具，而不仅仅是文字回复。",
         "q4": "我可以请求新工具吗？",
         "a4": "当然可以！我们根据用户请求积极开发新工具。如果您需要一个还不存在的工具，请通过反馈选项或支持页面告诉我们。我们的团队会评估请求，并定期添加最受欢迎的工具。",
         "q5": "我的数据安全吗？",
@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "包含哪些类型的工具？",
-        "a1": "我们的1000+工具包括：计算器（房贷、BMI、复利、税务），转换器（货币、单位、文件格式），生成器（发票、合同、简历、二维码），追踪器（支出、习惯、健身、时间），规划器（预算、旅行、饮食、项目），分析器（数据、SEO、性能）。每个工具都有专门构建的界面。",
+        "a1": "我们的1100+工具包括：计算器（房贷、BMI、复利、税务），转换器（货币、单位、文件格式），生成器（发票、合同、简历、二维码），追踪器（支出、习惯、健身、时间），规划器（预算、旅行、饮食、项目），分析器（数据、SEO、性能）。每个工具都有专门构建的界面。",
         "q2": "有哪些热门工具？",
         "a2": "热门工具包括：货币转换器、BMI计算器、发票生成器、合同生成器、房贷计算器、支出追踪器、单位转换器、二维码生成器、PDF工具、卡路里计算器、密码生成器和颜色选择器。在工具部分浏览所有工具。",
         "q3": "可以使用多个AI模型吗？",
@@ -442,7 +442,7 @@
     "stillNeedTool": "您仍然需要自己找到并使用独立的工具",
     "intentDetectedLabel": "意图已检测",
     "smartContextPillars": "智能上下文三大支柱",
-    "smartContextDesc": "您的数据，在所有1000+工具中自动填充",
+    "smartContextDesc": "您的数据，在所有1100+工具中自动填充",
     "onboardingData": "入门数据",
     "onboardingDataDesc": "货币、时区、语言、行业——设置一次，处处可用",
     "toolHistory": "工具历史",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "您需要的每一个工具，",
     "instantly": "即时获取",
     "tools": "工具",
-    "exploreAllTools": "探索所有 1000+ 工具",
+    "exploreAllTools": "探索所有 1100+ 工具",
     "savePerYear": "每年节省 $3,840",
     "replace100Apps": "替代",
     "appsYouUseDaily": "100+ 应用",
@@ -478,7 +478,7 @@
         "dataAnalysis": "数据分析与可视化",
         "deepResearch": "带引用的深度研究",
         "interactiveLearning": "交互式学习与辅导",
-        "contextualTools": "1000+ 上下文界面工具",
+        "contextualTools": "1100+ 上下文界面工具",
         "fileProcessing": "文件处理与转换",
         "workflowAutomation": "工作流自动化",
         "webScreenshot": "网页截图与提取",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "AI + 行动",
-          "uniqueValue": "AI + 1000+ 工具"
+          "uniqueValue": "AI + 1100+ 工具"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1104,12 +1104,12 @@
       "back": "回来",
       "joinWants": "加入",
       "wants": "Wants",
-      "tagline": "您的一站式AI平台，拥有1000+工具、30+AI模型和无代码应用构建器。",
+      "tagline": "您的一站式AI平台，拥有1100+工具、30+AI模型和无代码应用构建器。",
       "aiTools": "AI 工具",
       "aiModels": "AI 模型",
       "rating": "评分",
       "feature1": "访问30+ AI模型（GPT-4o、Claude、Gemini）",
-      "feature2": "1000+上下文工具，需要时自动出现",
+      "feature2": "1100+上下文工具，需要时自动出现",
       "feature3": "无代码全栈应用构建器",
       "feature4": "替代100+应用，每年节省$3,840",
       "testimonial": "Wants 完全改变了我的工作方式。AI理解我的需求，并立即展示最合适的工具！",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {
@@ -55324,6 +55324,205 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — 开源AI工作空间",
+      "description": "与30+模型对话，生成代码，使用1100+上下文工具，无代码构建应用。可自托管，AGPL-3.0。"
+    },
+    "hero": {
+      "eyebrow": "开源AI工作空间 · AGPL-3.0",
+      "headlineStart": "你的AI",
+      "headlineHighlight": "指挥中心",
+      "headlineEnd": "。",
+      "subtitle": "与30+模型对话。生成代码。使用1100+上下文工具。无代码构建应用。自托管、自带密钥、拥有数据。",
+      "ctaStar": "在GitHub上Star",
+      "ctaDemo": "试用在线演示",
+      "ctaSelfHost": "60秒自托管",
+      "demoCaption": "实时预览 — 意图即界面",
+      "alt": {
+        "stars": "GitHub星标",
+        "forks": "GitHub分支",
+        "license": "AGPL-3.0许可"
+      },
+      "ctaGetStarted": "开始使用"
+    },
+    "capability": {
+      "title": "AI所需的一切，汇聚一处",
+      "subtitle": "不再在十个标签页和十个订阅之间切换。Wants就是你的工作空间。",
+      "chat": {
+        "title": "多模型聊天",
+        "benefit": "在一个线程中与GPT、Claude、Gemini、Llama对话"
+      },
+      "code": {
+        "title": "代码生成",
+        "benefit": "内置AI结对编程助手"
+      },
+      "tools": {
+        "title": "1100+上下文工具",
+        "benefit": "计算器、生成器、追踪器 — 按需提供"
+      },
+      "builder": {
+        "title": "无代码应用构建器",
+        "benefit": "描述应用，即刻部署"
+      }
+    },
+    "quickStart": {
+      "badge": "60秒内运行",
+      "title": "三条命令自托管",
+      "subtitle": "Postgres、Redis、后端、前端 — 通过Docker Compose全部启动。",
+      "copy": "复制",
+      "copied": "已复制",
+      "viewDocs": "查看完整设置文档 →"
+    },
+    "heroDemo": {
+      "window": "wants — 聊天",
+      "step1": {
+        "prompt": "我身高175cm，体重70kg，BMI是多少？",
+        "tool": "BMI计算器",
+        "row1Label": "身高",
+        "row1Value": "175 cm",
+        "row2Label": "体重",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22.86 — 正常"
+      },
+      "step2": {
+        "prompt": "将250美元换算为欧元",
+        "tool": "货币转换器",
+        "row1Label": "从",
+        "row1Value": "$250.00 美元",
+        "row2Label": "汇率",
+        "row2Value": "1 美元 = 0.92 欧元",
+        "row3Label": "到",
+        "row3Value": "€230.00 欧元"
+      },
+      "step3": {
+        "prompt": "为 wants.chat 生成二维码",
+        "tool": "二维码生成器",
+        "row1Label": "内容",
+        "row1Value": "https://wants.chat",
+        "row2Label": "格式",
+        "row2Value": "PNG 512×512",
+        "row3Label": "状态",
+        "row3Value": "可下载"
+      },
+      "step4": {
+        "prompt": "将184.50美元的账单分给4人，18%小费",
+        "tool": "小费分摊器",
+        "row1Label": "小计",
+        "row1Value": "$184.50",
+        "row2Label": "小费（18%）",
+        "row2Value": "$33.21",
+        "row3Label": "每人支付",
+        "row3Value": "$54.43"
+      }
+    },
+    "moat": {
+      "eyebrow": "区别",
+      "titleStart": "不只是聊天。",
+      "titleEnd": "我们渲染界面。",
+      "subtitle": "每个AI聊天机器人都用文字回复。Wants理解你的意图，直接显示你需要的工具或界面。",
+      "traditional": "传统AI",
+      "wants": "Wants",
+      "youLabel": "你:",
+      "aiLabel": "AI:",
+      "prompt": "我身高175cm、体重70kg，BMI是多少？",
+      "aiResponse": "BMI = 体重(kg) / 身高(m)²。因此 70 / (1.75 × 1.75) ≈",
+      "aiResponseEnd": "，处于正常范围...",
+      "traditionalCaption": "大段文字。你要重读才能找到数字。",
+      "wantsCaption": "实时交互工具。编辑、分享、导出或保存到记忆。"
+    },
+    "whyTry": {
+      "eyebrow": "为什么试用Wants",
+      "title": "值得五分钟的四个理由",
+      "r1": {
+        "title": "所有AI工作流程的统一空间",
+        "body": "聊天、代码、工具、应用构建器。告别十个订阅和十个标签页。"
+      },
+      "r2": {
+        "title": "自带密钥 — 零加价",
+        "body": "OpenRouter、OpenAI、Anthropic、Google、本地Ollama。直接付费给提供商。"
+      },
+      "r3": {
+        "title": "自托管，拥有数据",
+        "body": "你的提示、历史、密钥 — 在你的服务器上。无第三方训练，无追踪。"
+      },
+      "r4": {
+        "title": "第一天就有1100+工具可用",
+        "body": "无需配置。询问，对应的工具就会出现。"
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "为什么贡献",
+      "title": "构建你想使用的工作空间",
+      "r1": {
+        "title": "塑造后聊天AI平台",
+        "body": "我们正在定义一个AI做所有事情的样子。你的代码触达数千人。"
+      },
+      "r2": {
+        "title": "一小时内添加一个工具",
+        "body": "每个工具都是一个React组件。能做表单，就能交付工具。"
+      },
+      "r3": {
+        "title": "17种语言，成长中的社区",
+        "body": "开发者、设计师、翻译者、提示工程师 — 每种技能都有一席之地。"
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "贡献者指南",
+        "discussions": "讨论"
+      }
+    },
+    "architecture": {
+      "eyebrow": "底层架构",
+      "title": "干净、可组合的架构",
+      "subtitle": "没有黑盒。你已经熟悉的标准技术栈 — 易于部署、易于扩展。",
+      "nodes": {
+        "frontend": "前端",
+        "backend": "后端",
+        "data": "数据",
+        "cache": "缓存 + 队列",
+        "models": "30+ AI模型"
+      }
+    },
+    "techStack": {
+      "label": "使用你已熟悉的工具构建"
+    },
+    "contributors": {
+      "eyebrow": "由社区构建",
+      "title": "感谢我们的贡献者",
+      "subtitle": "每一次提交、翻译、bug报告 — 都由你们塑造Wants。"
+    },
+    "comparison": {
+      "eyebrow": "独一无二的类别",
+      "title": "为什么选Wants，对比一目了然",
+      "feature": "功能",
+      "rows": {
+        "chat": "多模型聊天",
+        "code": "代码生成",
+        "tools": "上下文UI工具",
+        "builder": "无代码应用构建器",
+        "opensource": "开源",
+        "selfhost": "可自托管",
+        "byok": "自带API密钥"
+      },
+      "values": {
+        "oneFamily": "1个系列",
+        "limited": "有限",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "托管版",
+      "hostedTitle": "立即使用，零配置",
+      "hostedBody": "在wants.chat上几秒内试用Wants。",
+      "hostedCta": "试用在线演示",
+      "selfBadge": "自托管",
+      "selfTitle": "在自己的服务器上运行",
+      "selfBody": "拥有数据、自带密钥、随意修改。一个docker compose即可。",
+      "selfCta": "在GitHub上获取"
     }
   }
 }

@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "ما أنواع الأدوات المتضمنة؟",
-        "a1": "تتضمن أدواتنا الـ 1000+: حاسبات (الرهن العقاري، مؤشر كتلة الجسم، الفائدة المركبة، الضرائب)، محوّلات (العملات، الوحدات، صيغ الملفات)، مولّدات (الفواتير، العقود، السير الذاتية، رموز QR)، متتبعات (المصروفات، العادات، اللياقة، الوقت)، مخططات (الميزانيات، الرحلات، الوجبات، المشاريع)، ومحللات (البيانات، تحسين محركات البحث، الأداء). كل أداة لها واجهة مستخدم مصممة خصيصاً.",
+        "a1": "تتضمن أدواتنا الـ 1100+: حاسبات (الرهن العقاري، مؤشر كتلة الجسم، الفائدة المركبة، الضرائب)، محوّلات (العملات، الوحدات، صيغ الملفات)، مولّدات (الفواتير، العقود، السير الذاتية، رموز QR)، متتبعات (المصروفات، العادات، اللياقة، الوقت)، مخططات (الميزانيات، الرحلات، الوجبات، المشاريع)، ومحللات (البيانات، تحسين محركات البحث، الأداء). كل أداة لها واجهة مستخدم مصممة خصيصاً.",
         "q2": "ما هي بعض الأدوات الشائعة؟",
         "a2": "تشمل الأدوات الأكثر شيوعاً: محوّل العملات، حاسبة مؤشر كتلة الجسم، مولّد الفواتير، مولّد العقود، حاسبة الرهن العقاري، متتبع المصروفات، محوّل الوحدات، مولّد رموز QR، أدوات PDF، عداد السعرات، مولّد كلمات المرور، ومنتقي الألوان. تصفح جميع الأدوات في قسم الأدوات.",
         "q3": "هل يمكنني استخدام نماذج ذكاء اصطناعي متعددة؟",
@@ -442,7 +442,7 @@
     "stillNeedTool": "لا تزال بحاجة للبحث عن أداة منفصلة واستخدامها بنفسك",
     "intentDetectedLabel": "تم اكتشاف النية",
     "smartContextPillars": "الركائز الثلاث للسياق الذكي",
-    "smartContextDesc": "بياناتك، مملوءة مسبقاً تلقائياً عبر جميع الأدوات الـ 1000+",
+    "smartContextDesc": "بياناتك، مملوءة مسبقاً تلقائياً عبر جميع الأدوات الـ 1100+",
     "onboardingData": "بيانات الإعداد",
     "onboardingDataDesc": "العملة، المنطقة الزمنية، اللغة، الصناعة — اضبطها مرة واحدة، تُستخدم في كل مكان",
     "toolHistory": "سجل الأدوات",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "كل أداة تحتاجها،",
     "instantly": "فوراً",
     "tools": "أدوات",
-    "exploreAllTools": "استكشف جميع الأدوات الـ 1000+",
+    "exploreAllTools": "استكشف جميع الأدوات الـ 1100+",
     "savePerYear": "وفّر 3,840$ سنوياً",
     "replace100Apps": "استبدل",
     "appsYouUseDaily": "أكثر من 100 تطبيق",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "ذكاء اصطناعي + إجراءات",
-          "uniqueValue": "ذكاء اصطناعي + 1000+ أداة"
+          "uniqueValue": "ذكاء اصطناعي + 1100+ أداة"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {
@@ -55324,6 +55324,205 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — مساحة عمل الذكاء الاصطناعي مفتوحة المصدر",
+      "description": "تحدث مع 30+ نموذج، ولّد الكود، استخدم 1100+ أداة سياقية، أنشئ تطبيقات بدون كود. قابل للاستضافة الذاتية و AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "مساحة عمل الذكاء الاصطناعي مفتوحة المصدر · AGPL-3.0",
+      "headlineStart": "مركز",
+      "headlineHighlight": "قيادة الذكاء الاصطناعي",
+      "headlineEnd": ".",
+      "subtitle": "تحدث مع 30+ نموذج. ولّد الكود. استخدم 1100+ أداة سياقية. أنشئ تطبيقات بدون كود. استضف بنفسك، مفاتيحك، بياناتك.",
+      "ctaStar": "نجمة على GitHub",
+      "ctaDemo": "جرب العرض المباشر",
+      "ctaSelfHost": "استضف في 60 ثانية",
+      "demoCaption": "معاينة مباشرة — النية تصبح واجهة",
+      "alt": {
+        "stars": "نجوم GitHub",
+        "forks": "تفرعات GitHub",
+        "license": "رخصة AGPL-3.0"
+      },
+      "ctaGetStarted": "ابدأ"
+    },
+    "capability": {
+      "title": "كل ما تحتاجه حول الذكاء الاصطناعي، في مكان واحد",
+      "subtitle": "توقف عن التلاعب بعشرة علامات تبويب وعشرة اشتراكات. Wants هي مساحة العمل.",
+      "chat": {
+        "title": "دردشة متعددة النماذج",
+        "benefit": "تحدث مع GPT و Claude و Gemini و Llama في محادثة واحدة"
+      },
+      "code": {
+        "title": "توليد الكود",
+        "benefit": "مبرمج ذكاء اصطناعي مدمج"
+      },
+      "tools": {
+        "title": "1100+ أداة سياقية",
+        "benefit": "آلات حاسبة، مولدات، متتبعات — عند الطلب"
+      },
+      "builder": {
+        "title": "منشئ تطبيقات بدون كود",
+        "benefit": "صف التطبيق، انشره"
+      }
+    },
+    "quickStart": {
+      "badge": "يعمل في 60 ثانية",
+      "title": "استضف ذاتياً بثلاثة أوامر",
+      "subtitle": "Postgres و Redis والواجهة الخلفية والأمامية — كلها عبر Docker Compose.",
+      "copy": "نسخ",
+      "copied": "تم النسخ",
+      "viewDocs": "عرض وثائق الإعداد الكاملة →"
+    },
+    "heroDemo": {
+      "window": "wants — دردشة",
+      "step1": {
+        "prompt": "ما مؤشر كتلة الجسم إذا كنت 175سم و 70كغ؟",
+        "tool": "حاسبة BMI",
+        "row1Label": "الطول",
+        "row1Value": "175 سم",
+        "row2Label": "الوزن",
+        "row2Value": "70 كغ",
+        "row3Label": "BMI",
+        "row3Value": "22.86 — طبيعي"
+      },
+      "step2": {
+        "prompt": "تحويل 250 دولار إلى يورو",
+        "tool": "محول العملات",
+        "row1Label": "من",
+        "row1Value": "$250.00 دولار",
+        "row2Label": "السعر",
+        "row2Value": "1 دولار = 0.92 يورو",
+        "row3Label": "إلى",
+        "row3Value": "€230.00 يورو"
+      },
+      "step3": {
+        "prompt": "توليد رمز QR لـ wants.chat",
+        "tool": "مولد رمز QR",
+        "row1Label": "المحتوى",
+        "row1Value": "https://wants.chat",
+        "row2Label": "التنسيق",
+        "row2Value": "PNG 512×512",
+        "row3Label": "الحالة",
+        "row3Value": "جاهز للتنزيل"
+      },
+      "step4": {
+        "prompt": "تقسيم فاتورة بقيمة 184.50 دولار على 4 أشخاص مع إكرامية 18٪",
+        "tool": "مقسم الإكرامية",
+        "row1Label": "الفرعي",
+        "row1Value": "$184.50",
+        "row2Label": "إكرامية (18٪)",
+        "row2Value": "$33.21",
+        "row3Label": "للفرد",
+        "row3Value": "$54.43"
+      }
+    },
+    "moat": {
+      "eyebrow": "الفرق",
+      "titleStart": "لا نحن فقط ندردش.",
+      "titleEnd": "نحن نرسم الواجهات.",
+      "subtitle": "كل روبوت محادثة يرد بنص. Wants يفهم نيتك ويعرض الأداة التي تحتاجها.",
+      "traditional": "الذكاء الاصطناعي التقليدي",
+      "wants": "Wants",
+      "youLabel": "أنت:",
+      "aiLabel": "الذكاء:",
+      "prompt": "ما BMI إذا كنت 175سم، 70كغ؟",
+      "aiResponse": "BMI = الوزن(كغ) / الطول(م)². إذاً 70 / (1.75 × 1.75) ≈",
+      "aiResponseEnd": "، وهو في النطاق الطبيعي...",
+      "traditionalCaption": "جدار من النص. تعيد القراءة لاستخراج الرقم.",
+      "wantsCaption": "أداة تفاعلية حية. عدّل، شارك، صدّر، احفظ."
+    },
+    "whyTry": {
+      "eyebrow": "لماذا تجرب Wants",
+      "title": "أربعة أسباب تستحق خمس دقائق",
+      "r1": {
+        "title": "مساحة واحدة لكل سير عمل الذكاء",
+        "body": "دردشة، كود، أدوات، منشئ تطبيقات. توقف عن التلاعب بعشرة اشتراكات."
+      },
+      "r2": {
+        "title": "مفاتيحك الخاصة — بدون رسوم إضافية",
+        "body": "OpenRouter و OpenAI و Anthropic و Google و Ollama المحلي. ادفع للموردين مباشرة."
+      },
+      "r3": {
+        "title": "استضف ذاتياً، امتلك بياناتك",
+        "body": "مطالباتك، تاريخك، أسرارك — على خادمك. بدون تتبع."
+      },
+      "r4": {
+        "title": "1100+ أداة جاهزة من اليوم الأول",
+        "body": "بدون إعداد. اسأل وتظهر الأداة المناسبة."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "لماذا تساهم",
+      "title": "ابن مساحة العمل التي تريد استخدامها",
+      "r1": {
+        "title": "شكّل منصة ما بعد الدردشة",
+        "body": "نحدد كيف يبدو الذكاء الذي يفعل كل شيء. كودك يصل للآلاف."
+      },
+      "r2": {
+        "title": "أضف أداة في أقل من ساعة",
+        "body": "كل أداة هي مكون React واحد. إذا كنت تبني نموذجاً، يمكنك شحن أداة."
+      },
+      "r3": {
+        "title": "17 لغة، مجتمع متنام",
+        "body": "مطورون، مصممون، مترجمون — كل مهارة لها مكان."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "دليل المساهم",
+        "discussions": "المناقشات"
+      }
+    },
+    "architecture": {
+      "eyebrow": "تحت الغطاء",
+      "title": "بنية نظيفة قابلة للتركيب",
+      "subtitle": "بدون صناديق سوداء. مكدس قياسي تعرفه بالفعل.",
+      "nodes": {
+        "frontend": "الواجهة الأمامية",
+        "backend": "الواجهة الخلفية",
+        "data": "البيانات",
+        "cache": "ذاكرة مؤقتة + طابور",
+        "models": "30+ نموذج ذكاء"
+      }
+    },
+    "techStack": {
+      "label": "مبني بالأدوات التي تعرفها"
+    },
+    "contributors": {
+      "eyebrow": "بناه المجتمع",
+      "title": "شكراً للمساهمين",
+      "subtitle": "كل التزام، ترجمة، تقرير خطأ — أنتم تصنعون Wants."
+    },
+    "comparison": {
+      "eyebrow": "فئة فريدة",
+      "title": "لماذا Wants، جنباً إلى جنب",
+      "feature": "الميزة",
+      "rows": {
+        "chat": "دردشة متعددة النماذج",
+        "code": "توليد الكود",
+        "tools": "أدوات واجهة سياقية",
+        "builder": "منشئ تطبيقات بدون كود",
+        "opensource": "مفتوح المصدر",
+        "selfhost": "قابل للاستضافة الذاتية",
+        "byok": "مفاتيح API الخاصة بك"
+      },
+      "values": {
+        "oneFamily": "عائلة واحدة",
+        "limited": "محدود",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "مستضاف",
+      "hostedTitle": "استخدمه الآن، بدون إعداد",
+      "hostedBody": "جرب Wants في ثوانٍ على wants.chat.",
+      "hostedCta": "جرب العرض المباشر",
+      "selfBadge": "استضافة ذاتية",
+      "selfTitle": "شغّله على خادمك",
+      "selfBody": "بياناتك، مفاتيحك، عدّل ما تشاء. بأمر docker compose واحد.",
+      "selfCta": "احصل عليه من GitHub"
     }
   }
 }

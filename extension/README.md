@@ -1,6 +1,6 @@
 # Wants Chrome Extension
 
-Chrome extension with 1000+ tools, sharing code with the Wants.chat frontend.
+Chrome extension with 1100+ tools, sharing code with the Wants.chat frontend.
 
 ## Architecture
 
@@ -132,7 +132,7 @@ After login, extension syncs user status via:
 - 5 AI credits
 
 **Pro ($9.99/mo):**
-- All 1000+ tools
+- All 1100+ tools
 - Unlimited AI features
 - Priority support
 

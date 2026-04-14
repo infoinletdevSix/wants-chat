@@ -445,7 +445,7 @@ export default function AboutPageContent({ ${dataName}: propData, className }: A
       date: '2019',
       title: 'First Product Launch',
       icon: 'Sparkles',
-      description: 'Released our flagship product to the market. Gained 1,000+ users in the first month and received overwhelming positive feedback.',
+      description: 'Released our flagship product to the market. Gained 1,100+ users in the first month and received overwhelming positive feedback.',
       stats: '1K+ Users'
     },
     {

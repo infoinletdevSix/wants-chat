@@ -297,7 +297,7 @@ const Login: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
             >
               {[
-                { value: '1000+', label: t('auth.branding.aiTools'), icon: Zap },
+                { value: '1100+', label: t('auth.branding.aiTools'), icon: Zap },
                 { value: '30+', label: t('auth.branding.aiModels'), icon: Globe },
                 { value: '4.9', label: t('auth.branding.rating'), icon: Star },
               ].map((stat, index) => (

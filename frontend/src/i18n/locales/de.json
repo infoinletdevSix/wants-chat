@@ -312,7 +312,7 @@
     "trustedBy": "Vertraut von Teams bei",
     "featuresTitle": "Leistungsstarke Funktionen",
     "featuresSubtitle": "Alles, was Sie zur Steigerung der Produktivität brauchen",
-    "toolsTitle": "1000+ Tools auf einen Klick",
+    "toolsTitle": "1100+ Tools auf einen Klick",
     "toolsSubtitle": "Von Rechnern bis zu KI-gestützten Generatoren",
     "testimonialsTitle": "Was unsere Nutzer sagen",
     "testimonialsSubtitle": "Schließen Sie sich Tausenden zufriedener Nutzer an",
@@ -336,11 +336,11 @@
       },
       "general": {
         "q1": "Was ist Wants?",
-        "a1": "Wants ist eine absichtsgesteuerte KI-Plattform mit über 1000 kontextbezogenen UI-Tools. Anders als herkömmliche KI-Chatbots, die nur Textantworten liefern, versteht Wants, was Sie erreichen möchten, und zeigt automatisch das richtige Tool an — ob Rechner, Generator, Tracker, Konverter oder ein anderes spezialisiertes Werkzeug. Drücken Sie einfach Ihre Absicht aus, und Wants zeigt Ihnen das perfekte Tool.",
+        "a1": "Wants ist eine absichtsgesteuerte KI-Plattform mit über 1100 kontextbezogenen UI-Tools. Anders als herkömmliche KI-Chatbots, die nur Textantworten liefern, versteht Wants, was Sie erreichen möchten, und zeigt automatisch das richtige Tool an — ob Rechner, Generator, Tracker, Konverter oder ein anderes spezialisiertes Werkzeug. Drücken Sie einfach Ihre Absicht aus, und Wants zeigt Ihnen das perfekte Tool.",
         "q2": "Wie funktioniert die Absichtserkennung?",
-        "a2": "Wants verwendet fortschrittliche KI, um die Absicht hinter Ihren Anfragen zu verstehen. Wenn Sie etwas wie \u201Emeine Hypothek berechnen\u201C oder \u201EWährung umrechnen\u201C erwähnen, erkennt Wants sofort Ihr Ziel und zeigt das relevante kontextbezogene UI-Tool an. Kein Durchsuchen von Menüs oder App-Stores — das richtige Tool erscheint genau dann, wenn Sie es brauchen.",
+        "a2": "Wants verwendet fortschrittliche KI, um die Absicht hinter Ihren Anfragen zu verstehen. Wenn Sie etwas wie „meine Hypothek berechnen“ oder „Währung umrechnen“ erwähnen, erkennt Wants sofort Ihr Ziel und zeigt das relevante kontextbezogene UI-Tool an. Kein Durchsuchen von Menüs oder App-Stores — das richtige Tool erscheint genau dann, wenn Sie es brauchen.",
         "q3": "Was unterscheidet Wants von anderen KI-Plattformen?",
-        "a3": "Drei Dinge heben Wants hervor: (1) Kontextbezogene Benutzeroberfläche — Tools erscheinen basierend auf dem, was Sie tun möchten, nicht was Sie suchen. (2) Über 1000 spezialisierte Tools aus allen Branchen, von Gesundheit über Finanzen bis Recht. (3) Absichtserkennung, die versteht, was Sie wollen, und Ihnen handlungsfähige Tools zeigt, nicht nur Textantworten.",
+        "a3": "Drei Dinge heben Wants hervor: (1) Kontextbezogene Benutzeroberfläche — Tools erscheinen basierend auf dem, was Sie tun möchten, nicht was Sie suchen. (2) Über 1100 spezialisierte Tools aus allen Branchen, von Gesundheit über Finanzen bis Recht. (3) Absichtserkennung, die versteht, was Sie wollen, und Ihnen handlungsfähige Tools zeigt, nicht nur Textantworten.",
         "q4": "Kann ich neue Tools anfordern?",
         "a4": "Absolut! Wir entwickeln aktiv neue Tools basierend auf Nutzeranfragen. Wenn Sie ein Tool benötigen, das es noch nicht gibt, lassen Sie es uns über die Feedback-Option oder die Support-Seite wissen. Unser Team bewertet Anfragen und fügt die am häufigsten gewünschten Tools regelmäßig hinzu.",
         "q5": "Sind meine Daten sicher?",
@@ -350,7 +350,7 @@
         "q1": "Was sind kontextbezogene UI-Tools?",
         "a1": "Kontextbezogene UI-Tools sind interaktive Oberflächen, die automatisch basierend auf Ihrer Absicht erscheinen. Anstatt nach einer App zu suchen oder durch Menüs zu navigieren, drücken Sie einfach aus, was Sie tun möchten. Das relevante Tool — komplett mit Eingaben, Berechnungen und Ausgaben — erscheint sofort in Ihrem Arbeitsbereich.",
         "q2": "Wie viele Tools sind verfügbar?",
-        "a2": "Wants bietet über 1000 Tools und es werden ständig mehr. Dazu gehören Rechner, Konverter, Generatoren, Tracker, Planer, Analysatoren und spezialisierte Werkzeuge. Neue Tools werden wöchentlich basierend auf Nutzerbedürfnissen und -anfragen hinzugefügt.",
+        "a2": "Wants bietet über 1100 Tools und es werden ständig mehr. Dazu gehören Rechner, Konverter, Generatoren, Tracker, Planer, Analysatoren und spezialisierte Werkzeuge. Neue Tools werden wöchentlich basierend auf Nutzerbedürfnissen und -anfragen hinzugefügt.",
         "q3": "Welche Branchen decken die Tools ab?",
         "a3": "Unsere Tools umfassen praktisch jede Branche: Gesundheit (BMI-Rechner, Kalorien-Tracker, Symptomprüfer), Finanzen (Kreditrechner, Budgetplaner, Rechnungsgeneratoren), Recht (Vertragsgeneratoren, NDA-Vorlagen), Immobilien (Hypothekenrechner, ROI-Analysen), Fertigung (Einheitenkonverter, Produktionsrechner), Bildung, Marketing, HR und viele mehr.",
         "q4": "Können Tools Daten mit der Cloud synchronisieren?",
@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "Welche Arten von Tools sind enthalten?",
-        "a1": "Unsere über 1000 Tools umfassen: Rechner (Hypothek, BMI, Zinseszins, Steuern), Konverter (Währung, Einheiten, Dateiformate), Generatoren (Rechnungen, Verträge, Lebensläufe, QR-Codes), Tracker (Ausgaben, Gewohnheiten, Fitness, Zeit), Planer (Budgets, Reisen, Mahlzeiten, Projekte) und Analysatoren (Daten, SEO, Leistung). Jedes Tool hat eine zweckgebundene Benutzeroberfläche.",
+        "a1": "Unsere über 1100 Tools umfassen: Rechner (Hypothek, BMI, Zinseszins, Steuern), Konverter (Währung, Einheiten, Dateiformate), Generatoren (Rechnungen, Verträge, Lebensläufe, QR-Codes), Tracker (Ausgaben, Gewohnheiten, Fitness, Zeit), Planer (Budgets, Reisen, Mahlzeiten, Projekte) und Analysatoren (Daten, SEO, Leistung). Jedes Tool hat eine zweckgebundene Benutzeroberfläche.",
         "q2": "Welche Tools sind besonders beliebt?",
         "a2": "Beliebte Tools sind: Währungsrechner, BMI-Rechner, Rechnungsgenerator, Vertragsgenerator, Hypothekenrechner, Ausgabentracker, Einheitenkonverter, QR-Code-Generator, PDF-Tools, Kalorienzähler, Passwortgenerator und Farbwähler. Durchsuchen Sie alle Tools im Tools-Bereich.",
         "q3": "Kann ich mehrere KI-Modelle verwenden?",
@@ -442,7 +442,7 @@
     "stillNeedTool": "Sie müssen immer noch selbst ein separates Tool finden und verwenden",
     "intentDetectedLabel": "Absicht erkannt",
     "smartContextPillars": "Die 3 Säulen des intelligenten Kontexts",
-    "smartContextDesc": "Ihre Daten, automatisch vorausgefüllt in allen 1000+ Tools",
+    "smartContextDesc": "Ihre Daten, automatisch vorausgefüllt in allen 1100+ Tools",
     "onboardingData": "Onboarding-Daten",
     "onboardingDataDesc": "Währung, Zeitzone, Sprache, Branche — einmal festlegen, überall nutzen",
     "toolHistory": "Tool-Verlauf",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "Jedes Tool, das Sie brauchen,",
     "instantly": "sofort",
     "tools": "Tools",
-    "exploreAllTools": "Alle 1000+ Tools entdecken",
+    "exploreAllTools": "Alle 1100+ Tools entdecken",
     "savePerYear": "SPAREN SIE 3.840 $/JAHR",
     "replace100Apps": "Ersetzen Sie",
     "appsYouUseDaily": "100+ Apps",
@@ -478,7 +478,7 @@
         "dataAnalysis": "Datenanalyse & Visualisierung",
         "deepResearch": "Tiefgehende Recherche mit Quellenangaben",
         "interactiveLearning": "Interaktives Lernen & Nachhilfe",
-        "contextualTools": "1000+ kontextbezogene UI-Tools",
+        "contextualTools": "1100+ kontextbezogene UI-Tools",
         "fileProcessing": "Dateiverarbeitung & Konvertierung",
         "workflowAutomation": "Workflow-Automatisierung",
         "webScreenshot": "Web-Screenshot & Extraktion",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "KI + Aktionen",
-          "uniqueValue": "KI + 1000+ Tools"
+          "uniqueValue": "KI + 1100+ Tools"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1104,12 +1104,12 @@
       "back": "zurück",
       "joinWants": "Treten Sie",
       "wants": "Wants bei",
-      "tagline": "Ihre All-in-One-KI-Plattform mit 1000+ Tools, 30+ KI-Modellen und No-Code App-Builder.",
+      "tagline": "Ihre All-in-One-KI-Plattform mit 1100+ Tools, 30+ KI-Modellen und No-Code App-Builder.",
       "aiTools": "KI-Tools",
       "aiModels": "KI-Modelle",
       "rating": "Bewertung",
       "feature1": "Zugang zu 30+ KI-Modellen (GPT-4o, Claude, Gemini)",
-      "feature2": "1000+ kontextbezogene Tools, die bei Bedarf erscheinen",
+      "feature2": "1100+ kontextbezogene Tools, die bei Bedarf erscheinen",
       "feature3": "No-Code Full-Stack App-Builder",
       "feature4": "Sparen Sie 3.840 $/Jahr durch Ersetzung von 100+ Apps",
       "testimonial": "Wants hat meine Arbeitsweise komplett verändert. Die KI versteht, was ich brauche, und zeigt mir sofort das perfekte Tool!",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {
@@ -55324,6 +55324,205 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Open-Source KI-Arbeitsplatz",
+      "description": "Chatte mit 30+ Modellen, generiere Code, nutze 1100+ kontextbezogene Tools, baue Apps ohne Code. Selbst hostbar und AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "Der Open-Source KI-Arbeitsplatz · AGPL-3.0",
+      "headlineStart": "Ihre KI-",
+      "headlineHighlight": "Kommandozentrale",
+      "headlineEnd": ".",
+      "subtitle": "Chatte mit 30+ Modellen. Generiere Code. Nutze 1100+ kontextbezogene Tools. Baue Apps ohne Code. Selbst hosten, eigene Keys, eigene Daten.",
+      "ctaStar": "Auf GitHub bewerten",
+      "ctaDemo": "Live-Demo testen",
+      "ctaSelfHost": "In 60s selbst hosten",
+      "demoCaption": "Live-Vorschau — Absicht wird Oberfläche",
+      "alt": {
+        "stars": "GitHub-Sterne",
+        "forks": "GitHub-Forks",
+        "license": "Lizenz AGPL-3.0"
+      },
+      "ctaGetStarted": "Loslegen"
+    },
+    "capability": {
+      "title": "Alles rund um KI, an einem Ort",
+      "subtitle": "Hör auf, zehn Tabs und zehn Abos zu jonglieren. Wants ist der Arbeitsplatz.",
+      "chat": {
+        "title": "Multi-Modell-Chat",
+        "benefit": "Sprich mit GPT, Claude, Gemini, Llama — in einem Thread"
+      },
+      "code": {
+        "title": "Code-Generierung",
+        "benefit": "Integrierter KI-Pair-Programmer"
+      },
+      "tools": {
+        "title": "1100+ kontextbezogene Tools",
+        "benefit": "Rechner, Generatoren, Tracker — auf Abruf"
+      },
+      "builder": {
+        "title": "No-Code App-Builder",
+        "benefit": "App beschreiben, bereitstellen"
+      }
+    },
+    "quickStart": {
+      "badge": "In 60 Sekunden lauffähig",
+      "title": "In drei Befehlen selbst hosten",
+      "subtitle": "Postgres, Redis, Backend, Frontend — alles via Docker Compose.",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "viewDocs": "Vollständige Setup-Docs ansehen →"
+    },
+    "heroDemo": {
+      "window": "wants — chat",
+      "step1": {
+        "prompt": "Wie ist mein BMI bei 175cm und 70kg?",
+        "tool": "BMI-Rechner",
+        "row1Label": "Größe",
+        "row1Value": "175 cm",
+        "row2Label": "Gewicht",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22,86 — Normal"
+      },
+      "step2": {
+        "prompt": "250 USD in EUR umrechnen",
+        "tool": "Währungsrechner",
+        "row1Label": "Von",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Kurs",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Nach",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "QR-Code für wants.chat erzeugen",
+        "tool": "QR-Code-Generator",
+        "row1Label": "Inhalt",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Format",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Status",
+        "row3Value": "Download bereit"
+      },
+      "step4": {
+        "prompt": "Eine Rechnung von 184,50 $ auf 4 Personen mit 18% Trinkgeld aufteilen",
+        "tool": "Trinkgeld-Rechner",
+        "row1Label": "Zwischensumme",
+        "row1Value": "$184,50",
+        "row2Label": "Trinkgeld (18%)",
+        "row2Value": "$33,21",
+        "row3Label": "Pro Person",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "Der Unterschied",
+      "titleStart": "Wir chatten nicht nur.",
+      "titleEnd": "Wir rendern Oberflächen.",
+      "subtitle": "Jeder KI-Chatbot antwortet mit Text. Wants versteht Ihre Absicht und zeigt das genau passende Tool.",
+      "traditional": "Traditionelle KI",
+      "wants": "Wants",
+      "youLabel": "Du:",
+      "aiLabel": "KI:",
+      "prompt": "Wie ist mein BMI bei 175cm, 70kg?",
+      "aiResponse": "BMI berechnet sich als Gewicht (kg) / Größe (m)². Also 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", was im Normalbereich liegt...",
+      "traditionalCaption": "Eine Textwand. Du liest nochmal, um die Zahl herauszuziehen.",
+      "wantsCaption": "Ein lebendes, interaktives Tool. Werte anpassen, teilen, exportieren oder speichern."
+    },
+    "whyTry": {
+      "eyebrow": "Warum Wants ausprobieren",
+      "title": "Vier Gründe, die fünf Minuten wert sind",
+      "r1": {
+        "title": "Ein Arbeitsplatz für jeden KI-Workflow",
+        "body": "Chat, Code, Tools, App-Builder. Schluss mit zehn Abos und zehn Tabs."
+      },
+      "r2": {
+        "title": "Eigene Keys — kein Aufschlag",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, lokales Ollama. Bezahle Anbieter direkt."
+      },
+      "r3": {
+        "title": "Selbst hosten, Daten besitzen",
+        "body": "Deine Prompts, dein Verlauf, deine Secrets — auf deinem Server. Kein Tracking."
+      },
+      "r4": {
+        "title": "1100+ Tools ab Tag eins",
+        "body": "Keine Konfiguration. Frag und das passende Tool erscheint — Rechner, Konverter, Generatoren."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Warum beitragen",
+      "title": "Baue den Arbeitsplatz, den du nutzen willst",
+      "r1": {
+        "title": "Gestalte die Post-Chat-KI-Plattform",
+        "body": "Wir definieren die KI, die alles kann. Dein Code erreicht Tausende."
+      },
+      "r2": {
+        "title": "Füge ein Tool in unter einer Stunde hinzu",
+        "body": "Jedes Tool ist eine React-Komponente. Wer ein Formular baut, kann ein Tool liefern."
+      },
+      "r3": {
+        "title": "17 Sprachen, wachsende Community",
+        "body": "Devs, Designer, Übersetzer, Prompt Engineers — für jede Fähigkeit ein Platz."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Contributor-Guide",
+        "discussions": "Diskussionen"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Unter der Haube",
+      "title": "Saubere, komponierbare Architektur",
+      "subtitle": "Keine Blackboxen. Standard-Stack, den du kennst — einfach zu deployen.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Daten",
+        "cache": "Cache + Queue",
+        "models": "30+ KI-Modelle"
+      }
+    },
+    "techStack": {
+      "label": "Gebaut mit Tools, die du schon kennst"
+    },
+    "contributors": {
+      "eyebrow": "Von der Community gebaut",
+      "title": "Danke an unsere Contributors",
+      "subtitle": "Jeder Commit, jede Übersetzung, jeder Bug-Report — ihr macht Wants."
+    },
+    "comparison": {
+      "eyebrow": "Eine eigene Kategorie",
+      "title": "Warum Wants, im Vergleich",
+      "feature": "Merkmal",
+      "rows": {
+        "chat": "Multi-Modell-Chat",
+        "code": "Code-Generierung",
+        "tools": "Kontextbezogene UI-Tools",
+        "builder": "No-Code App-Builder",
+        "opensource": "Open Source",
+        "selfhost": "Selbst hostbar",
+        "byok": "Eigene API-Keys"
+      },
+      "values": {
+        "oneFamily": "1 Familie",
+        "limited": "Begrenzt",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Gehostet",
+      "hostedTitle": "Sofort nutzen, kein Setup",
+      "hostedBody": "Wants in Sekunden auf wants.chat testen. Ideal zum Ausprobieren.",
+      "hostedCta": "Live-Demo testen",
+      "selfBadge": "Selbst gehostet",
+      "selfTitle": "Auf eigenem Server laufen lassen",
+      "selfBody": "Eigene Daten, eigene Keys, anpassbar. Ein docker compose reicht.",
+      "selfCta": "Auf GitHub holen"
     }
   }
 }

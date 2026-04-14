@@ -312,7 +312,7 @@
     "trustedBy": "Dipercaya oleh tim di",
     "featuresTitle": "Fitur Canggih",
     "featuresSubtitle": "Semua yang Anda butuhkan untuk meningkatkan produktivitas",
-    "toolsTitle": "1000+ Alat di Ujung Jari Anda",
+    "toolsTitle": "1100+ Alat di Ujung Jari Anda",
     "toolsSubtitle": "Dari kalkulator hingga generator bertenaga AI",
     "testimonialsTitle": "Apa Kata Pengguna Kami",
     "testimonialsSubtitle": "Bergabunglah dengan ribuan pengguna yang puas",
@@ -336,11 +336,11 @@
       },
       "general": {
         "q1": "Apa itu Wants?",
-        "a1": "Wants adalah platform AI berbasis intensi dengan 1000+ alat UI kontekstual. Tidak seperti chatbot AI tradisional yang hanya memberikan respons teks, Wants memahami apa yang ingin Anda capai dan secara otomatis menampilkan alat yang tepat — baik itu kalkulator, generator, pelacak, konverter, atau utilitas khusus lainnya. Cukup sampaikan maksud Anda, dan Wants menunjukkan alat yang sempurna.",
+        "a1": "Wants adalah platform AI berbasis intensi dengan 1100+ alat UI kontekstual. Tidak seperti chatbot AI tradisional yang hanya memberikan respons teks, Wants memahami apa yang ingin Anda capai dan secara otomatis menampilkan alat yang tepat — baik itu kalkulator, generator, pelacak, konverter, atau utilitas khusus lainnya. Cukup sampaikan maksud Anda, dan Wants menunjukkan alat yang sempurna.",
         "q2": "Bagaimana cara kerja deteksi intensi?",
         "a2": "Wants menggunakan AI canggih untuk memahami maksud di balik permintaan Anda. Ketika Anda menyebutkan sesuatu seperti \"hitung hipotek saya\" atau \"konversi mata uang,\" Wants langsung mengenali tujuan Anda dan menampilkan alat UI kontekstual yang relevan. Tidak perlu mencari di menu atau toko aplikasi — alat yang tepat muncul tepat saat Anda membutuhkannya.",
         "q3": "Apa yang membuat Wants berbeda dari platform AI lainnya?",
-        "a3": "Tiga hal yang membedakan Wants: (1) UI Kontekstual — alat muncul berdasarkan apa yang Anda coba lakukan, bukan apa yang Anda cari. (2) 1000+ alat khusus di setiap industri, dari kesehatan hingga keuangan hingga hukum. (3) Deteksi intensi yang memahami apa yang Anda inginkan dan menunjukkan alat yang dapat ditindaklanjuti, bukan hanya respons teks.",
+        "a3": "Tiga hal yang membedakan Wants: (1) UI Kontekstual — alat muncul berdasarkan apa yang Anda coba lakukan, bukan apa yang Anda cari. (2) 1100+ alat khusus di setiap industri, dari kesehatan hingga keuangan hingga hukum. (3) Deteksi intensi yang memahami apa yang Anda inginkan dan menunjukkan alat yang dapat ditindaklanjuti, bukan hanya respons teks.",
         "q4": "Bisakah saya meminta alat baru?",
         "a4": "Tentu saja! Kami secara aktif membangun alat baru berdasarkan permintaan pengguna. Jika Anda membutuhkan alat yang belum ada, beri tahu kami melalui opsi umpan balik atau halaman dukungan. Tim kami mengevaluasi permintaan dan menambahkan alat yang paling diminta secara berkala.",
         "q5": "Apakah data saya aman?",
@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "Jenis alat apa saja yang termasuk?",
-        "a1": "1000+ alat kami meliputi: Kalkulator (hipotek, BMI, bunga majemuk, pajak), Konverter (mata uang, unit, format berkas), Generator (faktur, kontrak, resume, kode QR), Pelacak (pengeluaran, kebiasaan, kebugaran, waktu), Perencana (anggaran, perjalanan, makanan, proyek), dan Penganalisis (data, SEO, kinerja). Setiap alat memiliki UI yang dibuat khusus.",
+        "a1": "1100+ alat kami meliputi: Kalkulator (hipotek, BMI, bunga majemuk, pajak), Konverter (mata uang, unit, format berkas), Generator (faktur, kontrak, resume, kode QR), Pelacak (pengeluaran, kebiasaan, kebugaran, waktu), Perencana (anggaran, perjalanan, makanan, proyek), dan Penganalisis (data, SEO, kinerja). Setiap alat memiliki UI yang dibuat khusus.",
         "q2": "Apa saja alat populer?",
         "a2": "Alat populer meliputi: Konverter Mata Uang, Kalkulator BMI, Pembuat Faktur, Pembuat Kontrak, Kalkulator Hipotek, Pelacak Pengeluaran, Konverter Unit, Pembuat Kode QR, Alat PDF, Penghitung Kalori, Pembuat Kata Sandi, dan Pemilih Warna. Jelajahi semua alat di bagian Alat.",
         "q3": "Bisakah saya menggunakan beberapa model AI?",
@@ -442,7 +442,7 @@
     "stillNeedTool": "Anda masih perlu mencari dan menggunakan alat terpisah sendiri",
     "intentDetectedLabel": "Intensi Terdeteksi",
     "smartContextPillars": "3 Pilar Konteks Cerdas",
-    "smartContextDesc": "Data Anda, diisi otomatis di semua 1000+ alat",
+    "smartContextDesc": "Data Anda, diisi otomatis di semua 1100+ alat",
     "onboardingData": "Data Orientasi",
     "onboardingDataDesc": "Mata uang, zona waktu, bahasa, industri — atur sekali, digunakan di mana saja",
     "toolHistory": "Riwayat Alat",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "Setiap Alat yang Anda Butuhkan,",
     "instantly": "Secara Instan",
     "tools": "alat",
-    "exploreAllTools": "Jelajahi Semua 1000+ Alat",
+    "exploreAllTools": "Jelajahi Semua 1100+ Alat",
     "savePerYear": "HEMAT $3.840/TAHUN",
     "replace100Apps": "Gantikan",
     "appsYouUseDaily": "100+ Aplikasi",
@@ -478,7 +478,7 @@
         "dataAnalysis": "Analisis Data & Visualisasi",
         "deepResearch": "Riset Mendalam dengan Sitasi",
         "interactiveLearning": "Pembelajaran & Bimbingan Interaktif",
-        "contextualTools": "1000+ Alat UI Kontekstual",
+        "contextualTools": "1100+ Alat UI Kontekstual",
         "fileProcessing": "Pemrosesan & Konversi Berkas",
         "workflowAutomation": "Otomatisasi Alur Kerja",
         "webScreenshot": "Tangkapan Layar & Ekstraksi Web",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "AI + Aksi",
-          "uniqueValue": "AI + 1000+ Alat"
+          "uniqueValue": "AI + 1100+ Alat"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1104,12 +1104,12 @@
       "back": "Datang Kembali",
       "joinWants": "Bergabung dengan",
       "wants": "Wants",
-      "tagline": "Platform AI lengkap Anda dengan 1000+ alat, 30+ model AI, dan pembangun aplikasi tanpa kode.",
+      "tagline": "Platform AI lengkap Anda dengan 1100+ alat, 30+ model AI, dan pembangun aplikasi tanpa kode.",
       "aiTools": "Alat AI",
       "aiModels": "Model AI",
       "rating": "Rating",
       "feature1": "Akses 30+ model AI (GPT-4o, Claude, Gemini)",
-      "feature2": "1000+ alat kontekstual yang muncul saat dibutuhkan",
+      "feature2": "1100+ alat kontekstual yang muncul saat dibutuhkan",
       "feature3": "Pembangun aplikasi full-stack tanpa kode",
       "feature4": "Hemat $3.840/tahun menggantikan 100+ aplikasi",
       "testimonial": "Wants telah sepenuhnya mengubah cara saya bekerja. AI-nya memahami apa yang saya butuhkan dan menunjukkan alat yang sempurna secara instan!",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {
@@ -55324,6 +55324,205 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Ruang kerja AI open-source",
+      "description": "Ngobrol dengan 30+ model, hasilkan kode, gunakan 1100+ alat kontekstual, bangun aplikasi tanpa kode. Dapat di-self-host dan AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "Ruang kerja AI open-source · AGPL-3.0",
+      "headlineStart": "Pusat komando",
+      "headlineHighlight": "AI Anda",
+      "headlineEnd": ".",
+      "subtitle": "Ngobrol dengan 30+ model. Hasilkan kode. Gunakan 1100+ alat kontekstual. Bangun aplikasi tanpa kode. Self-host, kunci Anda, data Anda.",
+      "ctaStar": "Beri bintang di GitHub",
+      "ctaDemo": "Coba demo langsung",
+      "ctaSelfHost": "Self-host dalam 60d",
+      "demoCaption": "Pratinjau langsung — niat menjadi antarmuka",
+      "alt": {
+        "stars": "Bintang GitHub",
+        "forks": "Fork GitHub",
+        "license": "Lisensi AGPL-3.0"
+      },
+      "ctaGetStarted": "Mulai"
+    },
+    "capability": {
+      "title": "Semua yang Anda butuhkan seputar AI, di satu tempat",
+      "subtitle": "Berhenti mengelola sepuluh tab dan sepuluh langganan. Wants adalah ruang kerjanya.",
+      "chat": {
+        "title": "Obrolan multi-model",
+        "benefit": "Bicara dengan GPT, Claude, Gemini, Llama — dalam satu thread"
+      },
+      "code": {
+        "title": "Pembuatan kode",
+        "benefit": "Pair programmer AI bawaan"
+      },
+      "tools": {
+        "title": "1100+ alat kontekstual",
+        "benefit": "Kalkulator, generator, pelacak — sesuai permintaan"
+      },
+      "builder": {
+        "title": "Pembuat aplikasi tanpa kode",
+        "benefit": "Jelaskan aplikasi, deploy"
+      }
+    },
+    "quickStart": {
+      "badge": "Berjalan dalam 60 detik",
+      "title": "Self-host dalam tiga perintah",
+      "subtitle": "Postgres, Redis, backend, frontend — semuanya via Docker Compose.",
+      "copy": "Salin",
+      "copied": "Tersalin",
+      "viewDocs": "Lihat dokumen setup lengkap →"
+    },
+    "heroDemo": {
+      "window": "wants — obrolan",
+      "step1": {
+        "prompt": "Berapa BMI saya jika saya 175cm dan 70kg?",
+        "tool": "Kalkulator BMI",
+        "row1Label": "Tinggi",
+        "row1Value": "175 cm",
+        "row2Label": "Berat",
+        "row2Value": "70 kg",
+        "row3Label": "BMI",
+        "row3Value": "22,86 — Normal"
+      },
+      "step2": {
+        "prompt": "Konversi 250 USD ke EUR",
+        "tool": "Konverter Mata Uang",
+        "row1Label": "Dari",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Kurs",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Ke",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "Hasilkan kode QR untuk wants.chat",
+        "tool": "Generator Kode QR",
+        "row1Label": "Konten",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Format",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Status",
+        "row3Value": "Siap diunduh"
+      },
+      "step4": {
+        "prompt": "Bagi tagihan $184,50 ke 4 orang dengan tip 18%",
+        "tool": "Pembagi Tip",
+        "row1Label": "Subtotal",
+        "row1Value": "$184,50",
+        "row2Label": "Tip (18%)",
+        "row2Value": "$33,21",
+        "row3Label": "Per orang",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "Perbedaan",
+      "titleStart": "Kami tidak hanya mengobrol.",
+      "titleEnd": "Kami merender antarmuka.",
+      "subtitle": "Setiap chatbot AI membalas dengan teks. Wants memahami niat Anda dan menampilkan alat yang tepat.",
+      "traditional": "AI tradisional",
+      "wants": "Wants",
+      "youLabel": "Anda:",
+      "aiLabel": "AI:",
+      "prompt": "Berapa BMI saya di 175cm, 70kg?",
+      "aiResponse": "BMI = berat(kg) / tinggi(m)². Jadi 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", yang masuk rentang normal...",
+      "traditionalCaption": "Dinding teks. Anda baca ulang untuk mendapatkan angkanya.",
+      "wantsCaption": "Alat interaktif langsung. Edit, bagikan, ekspor."
+    },
+    "whyTry": {
+      "eyebrow": "Kenapa coba Wants",
+      "title": "Empat alasan yang sepadan dengan lima menit",
+      "r1": {
+        "title": "Satu ruang kerja untuk setiap alur AI",
+        "body": "Chat, kode, alat, app builder. Berhenti mengelola sepuluh langganan."
+      },
+      "r2": {
+        "title": "Kunci Anda sendiri — tanpa markup",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, Ollama lokal. Bayar penyedia langsung."
+      },
+      "r3": {
+        "title": "Self-host, miliki data Anda",
+        "body": "Prompt, riwayat, rahasia Anda — di server Anda. Tanpa tracking."
+      },
+      "r4": {
+        "title": "1100+ alat siap hari pertama",
+        "body": "Tanpa konfigurasi. Tanya, alat yang tepat muncul."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Kenapa berkontribusi",
+      "title": "Bangun ruang kerja yang ingin Anda gunakan",
+      "r1": {
+        "title": "Bentuk platform AI pasca-chat",
+        "body": "Kami mendefinisikan seperti apa AI yang melakukan semuanya."
+      },
+      "r2": {
+        "title": "Tambahkan alat dalam kurang dari sejam",
+        "body": "Setiap alat adalah satu komponen React."
+      },
+      "r3": {
+        "title": "17 bahasa, komunitas berkembang",
+        "body": "Dev, desainer, penerjemah — setiap keahlian punya tempat."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Panduan kontributor",
+        "discussions": "Diskusi"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Di balik layar",
+      "title": "Arsitektur bersih, komposabel",
+      "subtitle": "Tanpa kotak hitam. Stack standar yang sudah Anda kenal.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Data",
+        "cache": "Cache + antrian",
+        "models": "30+ model AI"
+      }
+    },
+    "techStack": {
+      "label": "Dibangun dengan alat yang sudah Anda kenal"
+    },
+    "contributors": {
+      "eyebrow": "Dibangun oleh komunitas",
+      "title": "Terima kasih kontributor kami",
+      "subtitle": "Setiap commit, terjemahan, laporan bug — Anda yang membuat Wants."
+    },
+    "comparison": {
+      "eyebrow": "Kategori sendiri",
+      "title": "Kenapa Wants, berdampingan",
+      "feature": "Fitur",
+      "rows": {
+        "chat": "Chat multi-model",
+        "code": "Pembuatan kode",
+        "tools": "Alat UI kontekstual",
+        "builder": "App builder tanpa kode",
+        "opensource": "Open source",
+        "selfhost": "Dapat di-self-host",
+        "byok": "Kunci API Anda"
+      },
+      "values": {
+        "oneFamily": "1 keluarga",
+        "limited": "Terbatas",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Di-host",
+      "hostedTitle": "Pakai sekarang, tanpa setup",
+      "hostedBody": "Coba Wants dalam detik di wants.chat.",
+      "hostedCta": "Coba demo",
+      "selfBadge": "Self-host",
+      "selfTitle": "Jalankan di server Anda",
+      "selfBody": "Data, kunci, modifikasi sesuka Anda.",
+      "selfCta": "Dapatkan di GitHub"
     }
   }
 }

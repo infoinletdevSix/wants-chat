@@ -312,7 +312,7 @@
     "trustedBy": "Confiado por equipes em",
     "featuresTitle": "Recursos Poderosos",
     "featuresSubtitle": "Tudo que você precisa para aumentar a produtividade",
-    "toolsTitle": "1000+ Ferramentas ao Seu Alcance",
+    "toolsTitle": "1100+ Ferramentas ao Seu Alcance",
     "toolsSubtitle": "De calculadoras a geradores com IA",
     "testimonialsTitle": "O Que Nossos Usuários Dizem",
     "testimonialsSubtitle": "Junte-se a milhares de usuários satisfeitos",
@@ -336,11 +336,11 @@
       },
       "general": {
         "q1": "O que é o Wants?",
-        "a1": "Wants é uma plataforma de IA baseada em intenção com mais de 1000 ferramentas de interface contextual. Diferente dos chatbots de IA tradicionais que só fornecem respostas em texto, o Wants entende o que você quer realizar e automaticamente apresenta a ferramenta certa — seja uma calculadora, gerador, rastreador, conversor ou qualquer utilitário especializado. Basta expressar sua intenção, e o Wants mostra a ferramenta perfeita.",
+        "a1": "Wants é uma plataforma de IA baseada em intenção com mais de 1100 ferramentas de interface contextual. Diferente dos chatbots de IA tradicionais que só fornecem respostas em texto, o Wants entende o que você quer realizar e automaticamente apresenta a ferramenta certa — seja uma calculadora, gerador, rastreador, conversor ou qualquer utilitário especializado. Basta expressar sua intenção, e o Wants mostra a ferramenta perfeita.",
         "q2": "Como funciona a detecção de intenção?",
         "a2": "O Wants usa IA avançada para entender a intenção por trás de suas solicitações. Quando você menciona algo como \"calcular minha hipoteca\" ou \"converter moeda\", o Wants reconhece instantaneamente seu objetivo e exibe a ferramenta de interface contextual relevante. Sem precisar buscar em menus ou lojas de apps — a ferramenta certa aparece exatamente quando você precisa.",
         "q3": "O que torna o Wants diferente de outras plataformas de IA?",
-        "a3": "Três coisas diferenciam o Wants: (1) Interface Contextual — ferramentas aparecem com base no que você está tentando fazer, não no que você busca. (2) Mais de 1000 ferramentas especializadas em todos os setores, de saúde a finanças e jurídico. (3) Detecção de intenção que entende o que você quer e mostra ferramentas acionáveis, não apenas respostas em texto.",
+        "a3": "Três coisas diferenciam o Wants: (1) Interface Contextual — ferramentas aparecem com base no que você está tentando fazer, não no que você busca. (2) Mais de 1100 ferramentas especializadas em todos os setores, de saúde a finanças e jurídico. (3) Detecção de intenção que entende o que você quer e mostra ferramentas acionáveis, não apenas respostas em texto.",
         "q4": "Posso solicitar novas ferramentas?",
         "a4": "Com certeza! Nós construímos ativamente novas ferramentas com base em solicitações dos usuários. Se você precisa de uma ferramenta que ainda não existe, nos avise pela opção de feedback ou página de suporte. Nossa equipe avalia as solicitações e adiciona as ferramentas mais pedidas regularmente.",
         "q5": "Meus dados estão seguros?",
@@ -350,7 +350,7 @@
         "q1": "O que são ferramentas de interface contextual?",
         "a1": "Ferramentas de interface contextual são interfaces interativas que aparecem automaticamente com base na sua intenção. Em vez de buscar um app ou navegar por menus, basta expressar o que você quer fazer. A ferramenta relevante — completa com entradas, cálculos e saídas — aparece instantaneamente no seu espaço de trabalho.",
         "q2": "Quantas ferramentas estão disponíveis?",
-        "a2": "O Wants oferece mais de 1000 ferramentas e continua crescendo. Estas incluem calculadoras, conversores, geradores, rastreadores, planejadores, analisadores e utilitários especializados. Novas ferramentas são adicionadas semanalmente com base nas necessidades e solicitações dos usuários.",
+        "a2": "O Wants oferece mais de 1100 ferramentas e continua crescendo. Estas incluem calculadoras, conversores, geradores, rastreadores, planejadores, analisadores e utilitários especializados. Novas ferramentas são adicionadas semanalmente com base nas necessidades e solicitações dos usuários.",
         "q3": "Quais setores as ferramentas cobrem?",
         "a3": "Nossas ferramentas abrangem praticamente todos os setores: Saúde (calculadoras de IMC, rastreadores de calorias, verificadores de sintomas), Finanças (calculadoras de empréstimos, planejadores de orçamento, geradores de faturas), Jurídico (geradores de contratos, modelos de NDA), Imobiliário (calculadoras de hipoteca, analisadores de ROI), Manufatura (conversores de unidades, calculadoras de produção), Educação, Marketing, RH e muito mais.",
         "q4": "As ferramentas podem sincronizar dados com a nuvem?",
@@ -370,7 +370,7 @@
       },
       "tools": {
         "q1": "Quais tipos de ferramentas estão incluídos?",
-        "a1": "Nossas mais de 1000 ferramentas incluem: Calculadoras (hipoteca, IMC, juros compostos, impostos), Conversores (moeda, unidades, formatos de arquivo), Geradores (faturas, contratos, currículos, QR codes), Rastreadores (despesas, hábitos, fitness, tempo), Planejadores (orçamentos, viagens, refeições, projetos) e Analisadores (dados, SEO, desempenho). Cada ferramenta tem uma interface específica.",
+        "a1": "Nossas mais de 1100 ferramentas incluem: Calculadoras (hipoteca, IMC, juros compostos, impostos), Conversores (moeda, unidades, formatos de arquivo), Geradores (faturas, contratos, currículos, QR codes), Rastreadores (despesas, hábitos, fitness, tempo), Planejadores (orçamentos, viagens, refeições, projetos) e Analisadores (dados, SEO, desempenho). Cada ferramenta tem uma interface específica.",
         "q2": "Quais são algumas ferramentas populares?",
         "a2": "As ferramentas mais populares incluem: Conversor de Moedas, Calculadora de IMC, Gerador de Faturas, Gerador de Contratos, Calculadora de Hipoteca, Rastreador de Despesas, Conversor de Unidades, Gerador de QR Code, Ferramentas PDF, Contador de Calorias, Gerador de Senhas e Seletor de Cores. Navegue por todas as ferramentas na seção Ferramentas.",
         "q3": "Posso usar múltiplos modelos de IA?",
@@ -442,7 +442,7 @@
     "stillNeedTool": "Você ainda precisa encontrar e usar uma ferramenta separada por conta própria",
     "intentDetectedLabel": "Intenção Detectada",
     "smartContextPillars": "Os 3 Pilares do Contexto Inteligente",
-    "smartContextDesc": "Seus dados, preenchidos automaticamente em todas as 1000+ ferramentas",
+    "smartContextDesc": "Seus dados, preenchidos automaticamente em todas as 1100+ ferramentas",
     "onboardingData": "Dados de Integração",
     "onboardingDataDesc": "Moeda, fuso horário, idioma, setor — configure uma vez, use em todo lugar",
     "toolHistory": "Histórico de Ferramentas",
@@ -452,7 +452,7 @@
     "everyToolYouNeed": "Toda Ferramenta que Você Precisa,",
     "instantly": "Instantaneamente",
     "tools": "ferramentas",
-    "exploreAllTools": "Explore Todas as 1000+ Ferramentas",
+    "exploreAllTools": "Explore Todas as 1100+ Ferramentas",
     "savePerYear": "ECONOMIZE $3.840/ANO",
     "replace100Apps": "Substitua",
     "appsYouUseDaily": "100+ Apps",
@@ -478,7 +478,7 @@
         "dataAnalysis": "Análise e Visualização de Dados",
         "deepResearch": "Pesquisa Aprofundada com Citações",
         "interactiveLearning": "Aprendizado Interativo e Tutoria",
-        "contextualTools": "1000+ Ferramentas de Interface Contextual",
+        "contextualTools": "1100+ Ferramentas de Interface Contextual",
         "fileProcessing": "Processamento e Conversão de Arquivos",
         "workflowAutomation": "Automação de Fluxo de Trabalho",
         "webScreenshot": "Captura e Extração Web",
@@ -495,7 +495,7 @@
         "wants": {
           "name": "Wants",
           "subtitle": "IA + Ações",
-          "uniqueValue": "IA + 1000+ Ferramentas"
+          "uniqueValue": "IA + 1100+ Ferramentas"
         },
         "chatGPT": {
           "name": "ChatGPT",
@@ -1104,12 +1104,12 @@
       "back": "de Volta",
       "joinWants": "Junte-se ao",
       "wants": "Wants",
-      "tagline": "Sua plataforma de IA completa com 1000+ ferramentas, 30+ modelos de IA e criador de apps sem código.",
+      "tagline": "Sua plataforma de IA completa com 1100+ ferramentas, 30+ modelos de IA e criador de apps sem código.",
       "aiTools": "Ferramentas de IA",
       "aiModels": "Modelos de IA",
       "rating": "Avaliação",
       "feature1": "Acesse 30+ modelos de IA (GPT-4o, Claude, Gemini)",
-      "feature2": "1000+ ferramentas contextuais que aparecem quando necessário",
+      "feature2": "1100+ ferramentas contextuais que aparecem quando necessário",
       "feature3": "Criador de apps full-stack sem código",
       "feature4": "Economize $3.840/ano substituindo 100+ apps",
       "testimonial": "O Wants transformou completamente como eu trabalho. A IA entende o que eu preciso e me mostra a ferramenta perfeita instantaneamente!",
@@ -1831,11 +1831,11 @@
     }
   },
   "tools": {
-    "pageTitle": "1000+ AI Tools | Wants",
-    "pageDescription": "Explore 1000+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
+    "pageTitle": "1100+ AI Tools | Wants",
+    "pageDescription": "Explore 1100+ contextual AI tools for calculators, generators, converters, business, healthcare, legal, and more. One platform, all tools.",
     "exploreAllTools": "EXPLORE ALL TOOLS",
     "contextualTools": "Contextual Tools",
-    "heroTitle": "1000+",
+    "heroTitle": "1100+",
     "heroSubtitle": "Contextual Tools",
     "heroDescription": "Every tool you need, instantly accessible. From calculators to full app builders — say what you want, get the tool.",
     "statsContextualTools": "Contextual Tools",
@@ -1851,7 +1851,7 @@
     "onePrompt": "One Prompt →",
     "fullStackApps": "Full-Stack Apps",
     "onePromptDescription": "Generate complete backend APIs, frontend applications, and mobile apps from a single natural language prompt. No other platform offers this.",
-    "searchPlaceholder": "Search 1000+ tools...",
+    "searchPlaceholder": "Search 1100+ tools...",
     "tools": "tools",
     "clearFilter": "Clear filter",
     "categories": "Categories",
@@ -1862,7 +1862,7 @@
     "noToolsDescription": "Try a different search term or clear filters",
     "clearAllFilters": "Clear all filters",
     "ctaTitle": "Ready to Use These Tools?",
-    "ctaDescription": "Start chatting with Wants and get instant access to all 1000+ tools.",
+    "ctaDescription": "Start chatting with Wants and get instant access to all 1100+ tools.",
     "startFreeNow": "Start Free Now",
     "tryDemo": "Try Demo",
     "aCUnitSizer": {
@@ -55324,6 +55324,205 @@
     "zodiacCompatibility": {
       "title": "Zodiac Compatibility",
       "description": "A helpful tool for zodiac compatibility."
+    }
+  },
+  "oss": {
+    "seo": {
+      "title": "Wants — Espaço de trabalho de IA open-source",
+      "description": "Converse com 30+ modelos, gere código, use 1100+ ferramentas contextuais, crie apps sem código. Self-hosteável e AGPL-3.0."
+    },
+    "hero": {
+      "eyebrow": "O espaço de trabalho de IA open-source · AGPL-3.0",
+      "headlineStart": "Seu centro de",
+      "headlineHighlight": "comando de IA",
+      "headlineEnd": ".",
+      "subtitle": "Converse com 30+ modelos. Gere código. Use 1100+ ferramentas contextuais. Crie apps sem código. Self-host, suas chaves, seus dados.",
+      "ctaStar": "Estrela no GitHub",
+      "ctaDemo": "Experimentar demo",
+      "ctaSelfHost": "Self-host em 60s",
+      "demoCaption": "Pré-visualização ao vivo — intenção vira interface",
+      "alt": {
+        "stars": "Estrelas GitHub",
+        "forks": "Forks GitHub",
+        "license": "Licença AGPL-3.0"
+      },
+      "ctaGetStarted": "Começar"
+    },
+    "capability": {
+      "title": "Tudo ao redor da IA, em um só lugar",
+      "subtitle": "Pare de malabarismos com dez abas e dez assinaturas. Wants é o espaço de trabalho.",
+      "chat": {
+        "title": "Chat multi-modelo",
+        "benefit": "Converse com GPT, Claude, Gemini, Llama — em um thread"
+      },
+      "code": {
+        "title": "Geração de código",
+        "benefit": "Programador IA integrado"
+      },
+      "tools": {
+        "title": "1100+ ferramentas contextuais",
+        "benefit": "Calculadoras, geradores, rastreadores — sob demanda"
+      },
+      "builder": {
+        "title": "Criador de apps sem código",
+        "benefit": "Descreva um app, faça o deploy"
+      }
+    },
+    "quickStart": {
+      "badge": "Rodando em 60 segundos",
+      "title": "Self-host em três comandos",
+      "subtitle": "Postgres, Redis, backend, frontend — tudo via Docker Compose.",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "viewDocs": "Ver documentação completa →"
+    },
+    "heroDemo": {
+      "window": "wants — chat",
+      "step1": {
+        "prompt": "Qual é meu IMC com 175cm e 70kg?",
+        "tool": "Calculadora de IMC",
+        "row1Label": "Altura",
+        "row1Value": "175 cm",
+        "row2Label": "Peso",
+        "row2Value": "70 kg",
+        "row3Label": "IMC",
+        "row3Value": "22,86 — Normal"
+      },
+      "step2": {
+        "prompt": "Converter 250 USD para EUR",
+        "tool": "Conversor de moedas",
+        "row1Label": "De",
+        "row1Value": "$250,00 USD",
+        "row2Label": "Taxa",
+        "row2Value": "1 USD = 0,92 EUR",
+        "row3Label": "Para",
+        "row3Value": "€230,00 EUR"
+      },
+      "step3": {
+        "prompt": "Gerar um QR code para wants.chat",
+        "tool": "Gerador de QR Code",
+        "row1Label": "Conteúdo",
+        "row1Value": "https://wants.chat",
+        "row2Label": "Formato",
+        "row2Value": "PNG 512×512",
+        "row3Label": "Status",
+        "row3Value": "Pronto para baixar"
+      },
+      "step4": {
+        "prompt": "Dividir uma conta de $184,50 entre 4 pessoas com 18% de gorjeta",
+        "tool": "Divisor de gorjeta",
+        "row1Label": "Subtotal",
+        "row1Value": "$184,50",
+        "row2Label": "Gorjeta (18%)",
+        "row2Value": "$33,21",
+        "row3Label": "Por pessoa",
+        "row3Value": "$54,43"
+      }
+    },
+    "moat": {
+      "eyebrow": "A diferença",
+      "titleStart": "Não apenas conversamos.",
+      "titleEnd": "Renderizamos interfaces.",
+      "subtitle": "Todo chatbot responde com texto. Wants entende sua intenção e mostra a ferramenta exata que você precisa.",
+      "traditional": "IA tradicional",
+      "wants": "Wants",
+      "youLabel": "Você:",
+      "aiLabel": "IA:",
+      "prompt": "Qual é meu IMC com 175cm, 70kg?",
+      "aiResponse": "IMC = peso (kg) / altura (m)². Então 70 / (1,75 × 1,75) ≈",
+      "aiResponseEnd": ", o que está na faixa normal...",
+      "traditionalCaption": "Uma parede de texto. Você relê para extrair o número.",
+      "wantsCaption": "Uma ferramenta interativa ao vivo. Edite, compartilhe, exporte."
+    },
+    "whyTry": {
+      "eyebrow": "Por que experimentar Wants",
+      "title": "Quatro razões que valem cinco minutos",
+      "r1": {
+        "title": "Um espaço para cada fluxo de IA",
+        "body": "Chat, código, ferramentas, criador de apps. Pare com dez assinaturas."
+      },
+      "r2": {
+        "title": "Suas próprias chaves — sem markup",
+        "body": "OpenRouter, OpenAI, Anthropic, Google, Ollama local. Pague os provedores diretamente."
+      },
+      "r3": {
+        "title": "Self-host, seus dados",
+        "body": "Seus prompts, histórico, segredos — no seu servidor. Sem tracking."
+      },
+      "r4": {
+        "title": "1100+ ferramentas no dia um",
+        "body": "Sem configuração. Pergunte e a ferramenta certa aparece."
+      }
+    },
+    "whyContribute": {
+      "eyebrow": "Por que contribuir",
+      "title": "Construa o espaço que você quer usar",
+      "r1": {
+        "title": "Molde a plataforma pós-chat",
+        "body": "Definindo como é uma IA que faz tudo. Seu código chega a milhares."
+      },
+      "r2": {
+        "title": "Adicione uma ferramenta em menos de uma hora",
+        "body": "Cada ferramenta é um componente React. Se você faz um formulário, faz uma ferramenta."
+      },
+      "r3": {
+        "title": "17 idiomas, comunidade crescente",
+        "body": "Devs, designers, tradutores — há lugar para cada habilidade."
+      },
+      "links": {
+        "goodFirst": "Good first issues",
+        "guide": "Guia do contribuidor",
+        "discussions": "Discussões"
+      }
+    },
+    "architecture": {
+      "eyebrow": "Por baixo dos panos",
+      "title": "Arquitetura limpa e combinável",
+      "subtitle": "Sem caixas-pretas. Stack padrão que você já conhece.",
+      "nodes": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Dados",
+        "cache": "Cache + fila",
+        "models": "30+ modelos de IA"
+      }
+    },
+    "techStack": {
+      "label": "Construído com ferramentas que você já conhece"
+    },
+    "contributors": {
+      "eyebrow": "Construído pela comunidade",
+      "title": "Obrigado aos nossos contribuidores",
+      "subtitle": "Cada commit, tradução, bug report — você faz o Wants."
+    },
+    "comparison": {
+      "eyebrow": "Uma categoria única",
+      "title": "Por que Wants, lado a lado",
+      "feature": "Recurso",
+      "rows": {
+        "chat": "Chat multi-modelo",
+        "code": "Geração de código",
+        "tools": "Ferramentas UI contextuais",
+        "builder": "Criador de apps sem código",
+        "opensource": "Open source",
+        "selfhost": "Self-hosteável",
+        "byok": "Suas chaves API"
+      },
+      "values": {
+        "oneFamily": "1 família",
+        "limited": "Limitado",
+        "artifacts": "Artifacts"
+      }
+    },
+    "dualCta": {
+      "hostedBadge": "Hospedado",
+      "hostedTitle": "Use agora, sem setup",
+      "hostedBody": "Experimente Wants em segundos em wants.chat.",
+      "hostedCta": "Experimentar demo",
+      "selfBadge": "Self-host",
+      "selfTitle": "Rode no seu servidor",
+      "selfBody": "Seus dados, suas chaves, modifique à vontade.",
+      "selfCta": "Obter no GitHub"
     }
   }
 }

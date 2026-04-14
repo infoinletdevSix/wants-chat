@@ -443,7 +443,7 @@ function calculateAchievements(monthStats: any) {
   }
   
   if (monthStats.points >= 1000) {
-    achievements.push({ id: 'point_master', name: 'Point Master', description: '1000+ points this month' });
+    achievements.push({ id: 'point_master', name: 'Point Master', description: '1100+ points this month' });
   }
   
   if (monthStats.timeMinutes >= 600) {

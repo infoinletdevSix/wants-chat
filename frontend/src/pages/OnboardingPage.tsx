@@ -99,8 +99,8 @@ const COMPANY_SIZES: { value: CompanySize; label: string }[] = [
   { value: '2-10', label: '2-10' },
   { value: '11-50', label: '11-50' },
   { value: '51-200', label: '51-200' },
-  { value: '201-1000', label: '201-1000' },
-  { value: '1000+', label: '1000+' },
+  { value: '201-1100', label: '201-1100' },
+  { value: '1100+', label: '1100+' },
 ];
 
 const LANGUAGES = [

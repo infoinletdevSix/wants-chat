@@ -368,7 +368,7 @@ const ToolsPage: React.FC = () => {
                 className="flex flex-wrap justify-center gap-8 mb-8"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-400">1000+</div>
+                  <div className="text-3xl font-bold text-emerald-400">1100+</div>
                   <div className="text-sm text-gray-500">{t('tools.statsContextualTools')}</div>
                 </div>
                 <div className="text-center">
