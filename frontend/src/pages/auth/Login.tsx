@@ -611,13 +611,6 @@ const Login: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Footer */}
-            <p className="text-center text-gray-500 text-sm mt-4">
-              By signing in, you agree to our{' '}
-              <Link to="/terms" className="text-gray-400 hover:text-gray-300 underline">Terms</Link>
-              {' '}and{' '}
-              <Link to="/privacy" className="text-gray-400 hover:text-gray-300 underline">Privacy Policy</Link>
-            </p>
           </motion.div>
         </div>
       </div>

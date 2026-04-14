@@ -186,9 +186,7 @@ const AppStoreBadges: React.FC = () => {
 
               {/* Launch Web App Button */}
               <a
-                href="https://wants.chat"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/"
                 className="block"
               >
                 <motion.div

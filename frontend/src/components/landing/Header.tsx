@@ -92,9 +92,6 @@ const Header: React.FC = () => {
                 <Link to="/features" className="text-white/70 hover:text-white transition-colors">
                   {t('header.features')}
                 </Link>
-                <Link to="/about" className="text-white/70 hover:text-white transition-colors">
-                  {t('header.about')}
-                </Link>
               </>
             )}
           </div>
@@ -214,9 +211,6 @@ const Header: React.FC = () => {
               <>
                 <Link to="/features" className="block py-2 text-white/70 hover:text-white">
                   {t('header.features')}
-                </Link>
-                <Link to="/about" className="block py-2 text-white/70 hover:text-white">
-                  {t('header.about')}
                 </Link>
               </>
             )}

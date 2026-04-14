@@ -298,7 +298,7 @@ const FAQSection: React.FC = () => {
             <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20">
               <span className="text-white">{t('landing.faq.stillHaveQuestions')}</span>
               <a
-                href="/support"
+                href="https://github.com/wants-chat/wants-chat/issues" target="_blank" rel="noopener noreferrer"
                 className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors underline"
               >
                 {t('landing.faq.contactSupport')}
