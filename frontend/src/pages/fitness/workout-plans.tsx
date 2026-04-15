@@ -166,13 +166,13 @@ const WorkoutPlans: React.FC = () => {
                       className="group relative bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-6 hover:shadow-xl transition-all hover:scale-105 cursor-pointer"
                       onClick={() => navigate(createUrlWithMode(`/fitness/custom-plan/${plan.id}`))}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="relative">
                         <div className="flex items-center justify-between mb-4">
                           <div className="p-3 rounded-lg bg-primary-500/20">
                             <Icon path={mdiTrophy} size={1} className="text-primary-400" />
                           </div>
-                          <span className="text-xs bg-gradient-to-r from-primary-500 to-cyan-500 text-white px-3 py-1 rounded-full font-medium">
+                          <span className="text-xs bg-gradient-to-r from-primary-500 to-primary-600 text-white px-3 py-1 rounded-full font-medium">
                             {selectedDuration} Days
                           </span>
                         </div>
@@ -200,7 +200,7 @@ const WorkoutPlans: React.FC = () => {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="text-white/60 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-cyan-500 group-hover:text-white"
+                            className="text-white/60 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-primary-500 group-hover:text-white"
                           >
                             <Edit className="h-4 w-4 mr-1" />
                             View Plan

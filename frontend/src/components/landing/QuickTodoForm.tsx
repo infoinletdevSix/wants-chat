@@ -218,7 +218,7 @@ const QuickTodoForm: React.FC = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting || !title.trim()}
-                className="w-full h-12 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 font-semibold text-sm text-white rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-300 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full h-12 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 font-semibold text-sm text-white rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-300 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <AnimatePresence mode="wait">
                   {isSubmitting ? (

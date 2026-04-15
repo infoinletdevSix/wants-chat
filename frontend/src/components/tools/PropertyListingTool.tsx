@@ -247,7 +247,7 @@ export const PropertyListingTool: React.FC = () => {
     isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'
   }`;
   const labelClass = `block text-sm font-medium mb-1.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-primary-500 to-emerald-500 hover:from-primary-600 hover:to-emerald-600 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-primary-500/20';
+  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-primary-500/20';
   const buttonSecondary = `px-4 py-2.5 rounded-lg font-medium transition-colors ${isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`;
 
   return (
@@ -258,7 +258,7 @@ export const PropertyListingTool: React.FC = () => {
           <div className="p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-primary-500 to-emerald-500 rounded-xl shadow-lg">
+                <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-lg">
                   <Home className="w-7 h-7 text-white" />
                 </div>
                 <div>

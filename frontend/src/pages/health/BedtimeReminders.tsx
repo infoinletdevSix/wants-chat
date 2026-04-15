@@ -284,7 +284,7 @@ const BedtimeReminders: React.FC = () => {
               setEditingReminder(null);
               setShowDialog(true);
             }}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500"
+            className="bg-gradient-to-r from-primary-500 to-primary-600"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add Reminder
@@ -356,7 +356,7 @@ const BedtimeReminders: React.FC = () => {
               </p>
               <Button
                 onClick={() => setShowDialog(true)}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-primary-600"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create Your First Reminder
@@ -459,7 +459,7 @@ const BedtimeReminders: React.FC = () => {
                       className={cn(
                         'w-9 h-9 rounded-full',
                         formData.daysActive?.includes(day.value)
-                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-transparent text-white'
                           : 'border-white/20 text-white/60 hover:border-white/40',
                         index >= 5 && !formData.daysActive?.includes(day.value) && 'border-purple-500/30'
                       )}
@@ -514,7 +514,7 @@ const BedtimeReminders: React.FC = () => {
                 </Button>
                 <Button
                   type="button"
-                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600"
                   onClick={handleSave}
                   disabled={createMutation.loading || updateMutation.loading}
                 >
@@ -578,7 +578,7 @@ const BedtimeReminders: React.FC = () => {
 
               {/* Dismiss button */}
               <Button
-                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600"
                 onClick={dismissReminder}
               >
                 <Check className="w-4 h-4 mr-2" />

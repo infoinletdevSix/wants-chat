@@ -87,7 +87,7 @@ const STATUS_OPTIONS: { value: EntryStatus; label: string; color: string }[] = [
   { value: 'submitted', label: 'Submitted', color: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200' },
   { value: 'approved', label: 'Approved', color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' },
   { value: 'billed', label: 'Billed', color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' },
-  { value: 'paid', label: 'Paid', color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200' },
+  { value: 'paid', label: 'Paid', color: 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200' },
 ];
 
 const ACTIVITY_TYPE_OPTIONS: { value: ActivityType; label: string }[] = [

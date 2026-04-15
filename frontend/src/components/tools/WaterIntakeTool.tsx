@@ -155,8 +155,8 @@ export const WaterIntakeTool: React.FC<WaterIntakeToolProps> = ({ uiConfig }) =>
   const quickAddAmounts = [250, 500, 750];
 
   const getProgressColor = () => {
-    if (progress >= 100) return 'from-green-400 to-emerald-500';
-    if (progress >= 75) return 'from-blue-400 to-cyan-500';
+    if (progress >= 100) return 'from-green-400 to-primary-500';
+    if (progress >= 75) return 'from-blue-400 to-primary-500';
     if (progress >= 50) return 'from-yellow-400 to-amber-500';
     return 'from-red-400 to-orange-500';
   };
@@ -164,11 +164,11 @@ export const WaterIntakeTool: React.FC<WaterIntakeToolProps> = ({ uiConfig }) =>
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <Droplet className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Droplet className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.waterIntake.waterIntakeCalculator', 'Water Intake Calculator')}</h3>
@@ -272,7 +272,7 @@ export const WaterIntakeTool: React.FC<WaterIntakeToolProps> = ({ uiConfig }) =>
                   onClick={() => setClimate(c.value as any)}
                   className={`px-4 py-2 text-sm rounded-lg transition-colors ${
                     climate === c.value
-                      ? 'bg-cyan-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -286,8 +286,8 @@ export const WaterIntakeTool: React.FC<WaterIntakeToolProps> = ({ uiConfig }) =>
         </div>
 
         {/* Daily Recommendation */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-100'} border`}>
-          <div className={`text-sm font-medium mb-2 ${isDark ? 'text-cyan-300' : 'text-cyan-700'}`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
+          <div className={`text-sm font-medium mb-2 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
             {t('tools.waterIntake.dailyWaterIntakeRecommendation', 'Daily Water Intake Recommendation')}
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -345,8 +345,8 @@ export const WaterIntakeTool: React.FC<WaterIntakeToolProps> = ({ uiConfig }) =>
                       ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                       : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                     : isDark
-                    ? 'bg-cyan-600 hover:bg-cyan-700 text-white'
-                    : 'bg-cyan-500 hover:bg-cyan-600 text-white'
+                    ? 'bg-primary-600 hover:bg-primary-700 text-white'
+                    : 'bg-primary-500 hover:bg-primary-600 text-white'
                 }`}
               >
                 {t('tools.waterIntake.saveEntry', 'Save Entry')}

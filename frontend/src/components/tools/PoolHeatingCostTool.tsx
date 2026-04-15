@@ -233,7 +233,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
           <div className="p-2 bg-[#6096B4]/10 rounded-lg">
             <Waves className="w-5 h-5 text-[#6096B4]" />

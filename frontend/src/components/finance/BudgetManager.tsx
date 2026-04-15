@@ -232,7 +232,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
         
         <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
           <DialogTrigger>
-            <Button className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
+            <Button className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
               <Plus className="h-4 w-4 mr-2" />
               Create Budget
             </Button>
@@ -405,7 +405,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
                 </Button>
                 <Button
                   type="submit"
-                  className="flex-1 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                  className="flex-1 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                   disabled={!formData.name || !formData.totalBudget || formData.categories.length === 0}
                 >
                   {editingBudget ? 'Update Budget' : 'Create Budget'}
@@ -426,7 +426,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
           </p>
           <Button
             onClick={() => setIsCreateOpen(true)}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 rounded-xl"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 rounded-xl"
           >
             <Plus className="h-4 w-4 mr-2" />
             Create Your First Budget

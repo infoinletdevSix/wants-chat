@@ -235,7 +235,7 @@ const FastingHistoryPage: React.FC = () => {
         </Card>
 
         <Card className="p-4 text-center bg-white/5 border border-white/10">
-          <Icon path={mdiCheckCircle} size={1.2} className="text-emerald-400 mx-auto mb-2" />
+          <Icon path={mdiCheckCircle} size={1.2} className="text-primary-400 mx-auto mb-2" />
           <p className="text-2xl font-bold text-white">{stats.completedFasts}</p>
           <p className="text-xs text-white/60">Completed</p>
         </Card>
@@ -270,7 +270,7 @@ const FastingHistoryPage: React.FC = () => {
                     <div className="flex items-center gap-2 mb-1">
                       <p className="font-medium text-white">{getPlanName(session)}</p>
                       {session.completed ? (
-                        <Badge className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                        <Badge className="bg-primary-500/20 text-primary-400 border border-primary-500/30">
                           <Icon path={mdiCheckCircle} size={0.5} className="mr-1" />
                           Completed
                         </Badge>
@@ -302,7 +302,7 @@ const FastingHistoryPage: React.FC = () => {
             <Icon path={mdiClockOutline} size={3} className="mx-auto mb-4 opacity-50" />
             <p className="text-lg font-medium text-white">No fasting history yet</p>
             <p className="text-sm mb-4">Start your first fast to track your progress</p>
-            <Button onClick={() => navigate('/calories-tracker/fasting')} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+            <Button onClick={() => navigate('/calories-tracker/fasting')} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
               Start Fasting
             </Button>
           </div>

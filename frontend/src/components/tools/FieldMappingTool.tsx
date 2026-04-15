@@ -506,8 +506,8 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isDark ? 'bg-cyan-500/20' : 'bg-cyan-100'}`}>
-              <Droplets className="w-5 h-5 text-cyan-500" />
+            <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+              <Droplets className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.fieldMapping.avgDrainage', 'Avg Drainage')}</p>

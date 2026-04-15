@@ -124,7 +124,7 @@ const AppSettingsSecuritySection = () => (
 
       <Link
         to="/security/2fa"
-        className="bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/30 rounded-lg p-4 hover:scale-105 transition-transform"
+        className="bg-gradient-to-br from-primary-500/10 to-primary-500/10 border border-primary-500/30 rounded-lg p-4 hover:scale-105 transition-transform"
       >
         <Key className="w-8 h-8 text-primary-400 mb-2" />
         <h3 className="font-bold text-white">2FA</h3>

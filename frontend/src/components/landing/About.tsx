@@ -66,7 +66,7 @@ const About: React.FC = () => {
         }}
       />
       <div
-        className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px] animate-pulse"
+        className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px] animate-pulse"
         style={{
           animation: 'pulse 11s ease-in-out infinite',
           animationDelay: '3s',
@@ -86,7 +86,7 @@ const About: React.FC = () => {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-white">
             Your Complete Life Management
-            <span className="block mt-2 bg-gradient-to-r from-primary-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">
               Ecosystem
             </span>
           </h2>
@@ -106,7 +106,7 @@ const About: React.FC = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 mb-4 group-hover:scale-110 transition-transform">
                   <Icon className="h-8 w-8 text-primary-400" />
                 </div>
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
                   {stat.value}
                 </h3>
                 <p className="text-sm text-white/60 mt-1">{stat.label}</p>
@@ -141,7 +141,7 @@ const About: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/login">
-                <Button className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+                <Button className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
                   Get Started Free
                   <Sparkles className="ml-2 h-4 w-4 group-hover:animate-pulse" />
                 </Button>
@@ -185,8 +185,8 @@ const About: React.FC = () => {
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-full opacity-20 blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-emerald-500 to-primary-500 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full opacity-20 blur-xl"></div>
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ const About: React.FC = () => {
                 key={index}
                 className="group p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon className="h-6 w-6 text-primary-400" />
                 </div>
                 <h4 className="font-semibold mb-2 text-white">{benefit.title}</h4>
@@ -219,7 +219,7 @@ const About: React.FC = () => {
             Join thousands of users who have already revolutionized their daily routines with Wants AI.
             Start your journey today with our free trial.
           </p>
-          <Button size="lg" className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+          <Button size="lg" className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
             Start Your Free Trial
             <Sparkles className="ml-2 h-5 w-5 group-hover:animate-pulse" />
           </Button>

@@ -185,7 +185,7 @@ const BMICalculatorUI: React.FC = () => (
     className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
   >
     <div className="px-4 py-3 border-b border-gray-700 flex items-center gap-2">
-      <Calculator className="w-4 h-4 text-emerald-400" />
+      <Calculator className="w-4 h-4 text-primary-400" />
       <span className="text-white text-sm font-medium">BMI Calculator</span>
     </div>
     <div className="p-4 space-y-3">
@@ -205,17 +205,17 @@ const BMICalculatorUI: React.FC = () => (
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between pt-2 bg-emerald-500/10 rounded-lg px-3 py-2 border border-emerald-500/30">
+      <div className="flex items-center justify-between pt-2 bg-primary-500/10 rounded-lg px-3 py-2 border border-primary-500/30">
         <span className="text-gray-400 text-xs">Your BMI</span>
         <div className="flex items-center gap-2">
-          <span className="text-emerald-400 text-lg font-bold">22.9</span>
-          <span className="text-emerald-400 text-xs px-2 py-0.5 rounded bg-emerald-500/20">Normal</span>
+          <span className="text-primary-400 text-lg font-bold">22.9</span>
+          <span className="text-primary-400 text-xs px-2 py-0.5 rounded bg-primary-500/20">Normal</span>
         </div>
       </div>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
+        className="w-full mt-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
       >
         <Activity className="w-4 h-4" />
         Calculate BMI
@@ -233,7 +233,7 @@ const InvoiceGeneratorUI: React.FC = () => (
     className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
   >
     <div className="px-4 py-3 border-b border-gray-700 flex items-center gap-2">
-      <Receipt className="w-4 h-4 text-emerald-400" />
+      <Receipt className="w-4 h-4 text-primary-400" />
       <span className="text-white text-sm font-medium">Invoice Generator</span>
     </div>
     <div className="p-4 space-y-3">
@@ -262,14 +262,14 @@ const InvoiceGeneratorUI: React.FC = () => (
       </div>
       <div className="flex items-center justify-between pt-2">
         <span className="text-gray-400 text-xs">Invoice #</span>
-        <span className="text-cyan-400 text-xs font-medium px-2 py-1 rounded bg-cyan-500/10 border border-cyan-500/30">
+        <span className="text-primary-400 text-xs font-medium px-2 py-1 rounded bg-primary-500/10 border border-primary-500/30">
           INV-2024-0042
         </span>
       </div>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
+        className="w-full mt-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
       >
         <Receipt className="w-4 h-4" />
         Generate Invoice
@@ -287,7 +287,7 @@ const NDAGeneratorUI: React.FC = () => (
     className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
   >
     <div className="px-4 py-3 border-b border-gray-700 flex items-center gap-2">
-      <FileText className="w-4 h-4 text-emerald-400" />
+      <FileText className="w-4 h-4 text-primary-400" />
       <span className="text-white text-sm font-medium">NDA Generator</span>
     </div>
     <div className="p-4 space-y-3">
@@ -307,14 +307,14 @@ const NDAGeneratorUI: React.FC = () => (
       </div>
       <div className="flex items-center justify-between pt-2">
         <span className="text-gray-400 text-xs">Agreement Type</span>
-        <span className="text-cyan-400 text-xs font-medium px-2 py-1 rounded bg-cyan-500/10 border border-cyan-500/30">
+        <span className="text-primary-400 text-xs font-medium px-2 py-1 rounded bg-primary-500/10 border border-primary-500/30">
           Mutual Agreement
         </span>
       </div>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
+        className="w-full mt-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
       >
         <FileText className="w-4 h-4" />
         Generate NDA
@@ -332,7 +332,7 @@ const CurrencyConverterUI: React.FC = () => (
     className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
   >
     <div className="px-4 py-3 border-b border-gray-700 flex items-center gap-2">
-      <RefreshCw className="w-4 h-4 text-emerald-400" />
+      <RefreshCw className="w-4 h-4 text-primary-400" />
       <span className="text-white text-sm font-medium">Currency Converter</span>
     </div>
     <div className="p-4 space-y-3">
@@ -359,17 +359,17 @@ const CurrencyConverterUI: React.FC = () => (
           <span className="text-white text-sm">1,000.00</span>
         </div>
       </div>
-      <div className="flex items-center justify-between pt-2 bg-emerald-500/10 rounded-lg px-3 py-2 border border-emerald-500/30">
+      <div className="flex items-center justify-between pt-2 bg-primary-500/10 rounded-lg px-3 py-2 border border-primary-500/30">
         <span className="text-gray-400 text-xs">Converted</span>
         <div className="flex items-center gap-2">
-          <span className="text-emerald-400 text-lg font-bold">920.50</span>
-          <span className="text-emerald-400 text-xs">EUR</span>
+          <span className="text-primary-400 text-lg font-bold">920.50</span>
+          <span className="text-primary-400 text-xs">EUR</span>
         </div>
       </div>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
+        className="w-full mt-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
       >
         <RefreshCw className="w-4 h-4" />
         Convert
@@ -387,7 +387,7 @@ const HealthTrackerUI: React.FC = () => (
     className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
   >
     <div className="px-4 py-3 border-b border-gray-700 flex items-center gap-2">
-      <Heart className="w-4 h-4 text-emerald-400" />
+      <Heart className="w-4 h-4 text-primary-400" />
       <span className="text-white text-sm font-medium">Health Tracker</span>
     </div>
     <div className="p-4 space-y-3">
@@ -407,17 +407,17 @@ const HealthTrackerUI: React.FC = () => (
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between pt-2 bg-emerald-500/10 rounded-lg px-3 py-2 border border-emerald-500/30">
+      <div className="flex items-center justify-between pt-2 bg-primary-500/10 rounded-lg px-3 py-2 border border-primary-500/30">
         <span className="text-gray-400 text-xs">Status</span>
         <div className="flex items-center gap-2">
-          <Heart className="w-4 h-4 text-emerald-400" />
-          <span className="text-emerald-400 text-sm font-medium">Normal</span>
+          <Heart className="w-4 h-4 text-primary-400" />
+          <span className="text-primary-400 text-sm font-medium">Normal</span>
         </div>
       </div>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
+        className="w-full mt-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
       >
         <Heart className="w-4 h-4" />
         Log Reading
@@ -436,20 +436,20 @@ const GenericToolUI: React.FC<{ toolName: string; icon: React.ElementType }> = (
     className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
   >
     <div className="px-4 py-3 border-b border-gray-700 flex items-center gap-2">
-      <Icon className="w-4 h-4 text-emerald-400" />
+      <Icon className="w-4 h-4 text-primary-400" />
       <span className="text-white text-sm font-medium">{toolName}</span>
     </div>
     <div className="p-4 space-y-3">
       <div className="h-24 flex items-center justify-center bg-gray-900/50 rounded-lg border border-gray-700 border-dashed">
         <div className="text-center">
-          <Icon className="w-8 h-8 text-emerald-400/50 mx-auto mb-2" />
+          <Icon className="w-8 h-8 text-primary-400/50 mx-auto mb-2" />
           <span className="text-gray-500 text-sm">Tool UI Ready</span>
         </div>
       </div>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
+        className="w-full mt-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
       >
         <Icon className="w-4 h-4" />
         Launch {toolName}
@@ -489,12 +489,12 @@ const IntentDetection: React.FC = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       <motion.div
-        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 12, repeat: Infinity }}
       />
@@ -507,13 +507,13 @@ const IntentDetection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-6">
             <Brain className="w-4 h-4" />
             {t('landing.intentDetection.badge')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('landing.intentDetection.title')}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> {t('landing.intentDetection.titleHighlight')}</span>
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent"> {t('landing.intentDetection.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             {t('landing.intentDetection.subtitle')}
@@ -538,8 +538,8 @@ const IntentDetection: React.FC = () => {
               onClick={() => setSelectedIndustry(data.industry)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
                 selectedIndustry === data.industry
-                  ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/25'
-                  : 'bg-gray-900/50 border border-gray-800 text-gray-300 hover:border-emerald-500/50 hover:text-emerald-400'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/25'
+                  : 'bg-gray-900/50 border border-gray-800 text-gray-300 hover:border-primary-500/50 hover:text-primary-400'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -641,12 +641,12 @@ const IntentDetection: React.FC = () => {
             className="relative"
           >
             {/* Glow Effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-lg" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary-500/20 to-primary-500/20 rounded-2xl blur-lg" />
 
-            <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-2xl border border-emerald-500/30 overflow-hidden">
+            <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-2xl border border-primary-500/30 overflow-hidden">
               {/* Header */}
               <div className="px-6 py-4 border-b border-gray-800 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
                   <Check className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -654,7 +654,7 @@ const IntentDetection: React.FC = () => {
                     <h3 className="text-white font-semibold">Wants</h3>
                     <Sparkles className="w-4 h-4 text-amber-400" />
                   </div>
-                  <p className="text-emerald-400 text-sm">{t('landing.intentDetection.intentContextualUI')}</p>
+                  <p className="text-primary-400 text-sm">{t('landing.intentDetection.intentContextualUI')}</p>
                 </div>
               </div>
 
@@ -670,7 +670,7 @@ const IntentDetection: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="flex justify-end"
                   >
-                    <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 rounded-2xl rounded-tr-md px-4 py-3 max-w-[80%]">
+                    <div className="bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-500/30 rounded-2xl rounded-tr-md px-4 py-3 max-w-[80%]">
                       <p className="text-white text-sm">{currentIndustryData.example.userMessage}</p>
                     </div>
                   </motion.div>
@@ -686,11 +686,11 @@ const IntentDetection: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="flex justify-start"
                   >
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30">
-                      <Brain className="w-4 h-4 text-emerald-400" />
-                      <span className="text-emerald-400 text-xs font-medium">{t('landing.intentDetection.intentDetected')}</span>
-                      <ArrowRight className="w-3 h-3 text-emerald-400" />
-                      <span className="text-cyan-400 text-xs font-medium">{currentIndustryData.example.intentLabel}</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/30">
+                      <Brain className="w-4 h-4 text-primary-400" />
+                      <span className="text-primary-400 text-xs font-medium">{t('landing.intentDetection.intentDetected')}</span>
+                      <ArrowRight className="w-3 h-3 text-primary-400" />
+                      <span className="text-primary-400 text-xs font-medium">{currentIndustryData.example.intentLabel}</span>
                     </div>
                   </motion.div>
                 </AnimatePresence>

@@ -32,7 +32,7 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner':
-        return 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        return 'bg-primary-500/20 text-primary-400 border border-primary-500/30';
       case 'Intermediate':
         return 'bg-orange-500/20 text-orange-400 border border-orange-500/30';
       case 'Advanced':
@@ -55,7 +55,7 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
                 className={`
                   p-4 rounded-lg border-2 cursor-pointer transition-all
                   ${selectedPlan === plan.id
-                    ? 'border-primary-400 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 shadow-lg shadow-primary-500/20'
+                    ? 'border-primary-400 bg-gradient-to-br from-primary-500/20 to-primary-500/20 shadow-lg shadow-primary-500/20'
                     : 'border-white/10 bg-white/5 hover:border-primary-400/50 hover:bg-white/10'
                   }
                 `}
@@ -96,7 +96,7 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
           </div>
 
           <Button
-            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+            className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             size="lg"
             onClick={onStartFast}
           >

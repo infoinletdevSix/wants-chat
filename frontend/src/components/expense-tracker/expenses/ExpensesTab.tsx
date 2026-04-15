@@ -192,7 +192,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
           </p>
           <Button
             onClick={onAddExpense}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
           >
             <Add className="h-4 w-4 mr-2" />
             Add Your First Expense
@@ -221,7 +221,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
           {filteredAndSortedExpenses.map((expense) => (
             <GlassCard key={expense.id}>
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center">
                   {expense.icon}
                 </div>
                 <div className="flex gap-2">

@@ -293,7 +293,7 @@ const TravelPlannerPage: React.FC = () => {
 
               <Button
                 onClick={() => setShowCreateForm(true)}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white text-lg px-8 py-3"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-lg px-8 py-3"
               >
                 <Plus className="h-5 w-5 mr-2" />
                 New Travel Plan
@@ -376,7 +376,7 @@ const TravelPlannerPage: React.FC = () => {
                     {travelPlans.length === 0 && (
                       <Button
                         onClick={() => setShowCreateForm(true)}
-                        className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                        className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                       >
                         <Plus className="h-4 w-4 mr-2" />
                         Create Travel Plan

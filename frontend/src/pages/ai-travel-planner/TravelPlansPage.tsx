@@ -187,7 +187,7 @@ const TravelPlansPage: React.FC = () => {
           <p className="text-red-300">{error}</p>
           <button
             onClick={refreshPlans}
-            className="mt-4 px-4 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-lg hover:from-primary-600 hover:to-cyan-600"
+            className="mt-4 px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg hover:from-primary-600 hover:to-primary-700"
           >
             Try Again
           </button>
@@ -266,7 +266,7 @@ const TravelPlansPage: React.FC = () => {
                 setSelectedPlan(null);
                 refreshPlans();
               }}
-              className="mt-4 px-4 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-lg hover:from-primary-600 hover:to-cyan-600"
+              className="mt-4 px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg hover:from-primary-600 hover:to-primary-700"
             >
               Back to Plans
             </button>

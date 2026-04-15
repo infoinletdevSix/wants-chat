@@ -34,10 +34,10 @@ const DayItinerary: React.FC<DayItineraryProps> = ({
 }) => {
   return (
     <Card className="rounded-2xl mb-4 sm:mb-6 bg-white/10 backdrop-blur-xl border border-white/20">
-      <CardHeader className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10 p-3 sm:p-6 rounded-t-2xl">
+      <CardHeader className="bg-gradient-to-r from-primary-500/10 to-primary-500/10 p-3 sm:p-6 rounded-t-2xl">
         <CardTitle className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0">
           <span className="flex items-center gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm sm:text-base">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center text-white font-bold text-sm sm:text-base">
               {day.day}
             </div>
             <div>

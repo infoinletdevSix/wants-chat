@@ -120,8 +120,8 @@ const CATEGORY_CONFIG: Record<AuditCategory, {
   windows: {
     label: 'Windows & Doors',
     icon: Sun,
-    color: 'text-cyan-500',
-    bgColor: 'bg-cyan-500/10',
+    color: 'text-primary-500',
+    bgColor: 'bg-primary-500/10',
     description: 'Windows, doors, and sealing',
   },
   water: {

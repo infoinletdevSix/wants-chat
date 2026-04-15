@@ -44,8 +44,8 @@ const CaloriesTrackerLanding: React.FC = () => {
       icon: mdiFoodApple,
       title: 'Food Diary',
       description: 'Track your daily meals with our comprehensive food database',
-      color: 'from-emerald-500/10 to-green-500/10 border-emerald-200',
-      iconColor: 'text-emerald-600'
+      color: 'from-primary-500/10 to-green-500/10 border-primary-200',
+      iconColor: 'text-primary-600'
     },
     {
       icon: mdiTarget,
@@ -72,15 +72,15 @@ const CaloriesTrackerLanding: React.FC = () => {
       icon: mdiScaleBalance,
       title: 'Weight Tracking',
       description: 'Monitor your weight changes with goal projections',
-      color: 'from-blue-500/10 to-cyan-500/10 border-blue-200',
+      color: 'from-blue-500/10 to-primary-500/10 border-blue-200',
       iconColor: 'text-blue-600'
     },
     {
       icon: mdiWater,
       title: 'Hydration',
       description: 'Track daily water intake with visual progress indicators',
-      color: 'from-cyan-500/10 to-primary-500/10 border-cyan-200',
-      iconColor: 'text-cyan-600'
+      color: 'from-primary-500/10 to-primary-500/10 border-primary-200',
+      iconColor: 'text-primary-600'
     }
   ];
 
@@ -89,7 +89,7 @@ const CaloriesTrackerLanding: React.FC = () => {
       name: 'Balanced Diet',
       description: 'Well-rounded nutrition for overall health',
       macros: '50% Carbs, 20% Protein, 30% Fat',
-      color: 'bg-gradient-to-br from-emerald-50 to-green-50 border-emerald-200'
+      color: 'bg-gradient-to-br from-primary-50 to-green-50 border-primary-200'
     },
     {
       name: 'Keto Diet',
@@ -101,7 +101,7 @@ const CaloriesTrackerLanding: React.FC = () => {
       name: 'Mediterranean',
       description: 'Heart-healthy with emphasis on whole foods',
       macros: '45% Carbs, 20% Protein, 35% Fat',
-      color: 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200'
+      color: 'bg-gradient-to-br from-blue-50 to-primary-50 border-blue-200'
     },
     {
       name: 'DASH Diet',
@@ -276,7 +276,7 @@ const CaloriesTrackerLanding: React.FC = () => {
               <Button
                 size="lg"
                 onClick={handleGetStarted}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               >
                 <Icon path={mdiFire} size={0.8} className="mr-2" />
                 Start Your Journey

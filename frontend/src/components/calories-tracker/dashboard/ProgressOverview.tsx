@@ -48,7 +48,7 @@ const ProgressOverview: React.FC<ProgressOverviewProps> = ({
   const getStreakLevel = (days: number) => {
     if (days >= 30) return { level: 'Champion', color: 'text-purple-600', bg: 'bg-purple-50 border-purple-200' };
     if (days >= 21) return { level: 'Expert', color: 'text-blue-600', bg: 'bg-blue-50 border-blue-200' };
-    if (days >= 14) return { level: 'Advanced', color: 'text-emerald-600', bg: 'bg-emerald-50 border-emerald-200' };
+    if (days >= 14) return { level: 'Advanced', color: 'text-primary-600', bg: 'bg-primary-50 border-primary-200' };
     if (days >= 7) return { level: 'Intermediate', color: 'text-orange-600', bg: 'bg-orange-50 border-orange-200' };
     if (days >= 3) return { level: 'Beginner', color: 'text-yellow-600', bg: 'bg-yellow-50 border-yellow-200' };
     return { level: 'Getting Started', color: 'text-gray-600', bg: 'bg-gray-50 border-gray-200' };
@@ -128,7 +128,7 @@ const ProgressOverview: React.FC<ProgressOverviewProps> = ({
                   className={`h-full transition-all duration-700 ${
                     streak >= 21 ? 'bg-purple-500' :
                     streak >= 14 ? 'bg-blue-500' :
-                    streak >= 7 ? 'bg-emerald-500' :
+                    streak >= 7 ? 'bg-primary-500' :
                     streak >= 3 ? 'bg-orange-500' :
                     'bg-yellow-500'
                   }`}
@@ -170,7 +170,7 @@ const ProgressOverview: React.FC<ProgressOverviewProps> = ({
             <Badge 
               variant={stats.consistency >= 85 ? "default" : "secondary"}
               className={`gap-1 ${
-                stats.consistency >= 85 ? 'bg-emerald-100 text-emerald-800' : 
+                stats.consistency >= 85 ? 'bg-primary-100 text-primary-800' : 
                 stats.consistency >= 70 ? 'bg-orange-100 text-orange-800' :
                 'bg-red-100 text-red-800'
               }`}
@@ -197,7 +197,7 @@ const ProgressOverview: React.FC<ProgressOverviewProps> = ({
                 <div key={index} className="flex-1 flex flex-col items-center gap-2">
                   <div 
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
-                      isTracked ? 'bg-emerald-500 text-white' : 
+                      isTracked ? 'bg-primary-500 text-white' : 
                       isToday ? 'bg-primary text-primary-foreground' :
                       'bg-secondary text-muted-foreground'
                     }`}

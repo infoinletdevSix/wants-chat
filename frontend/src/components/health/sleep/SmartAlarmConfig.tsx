@@ -232,7 +232,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
                   className={cn(
                     'w-9 h-9 rounded-full',
                     formData.daysActive?.includes(day.value)
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-transparent text-white'
                       : 'border-white/20 text-white/60',
                     index >= 5 && 'border-purple-500/30'
                   )}
@@ -419,7 +419,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
             )}
             <Button
               type="button"
-              className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500"
+              className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600"
               disabled={isLoading}
               onClick={handleSaveClick}
             >

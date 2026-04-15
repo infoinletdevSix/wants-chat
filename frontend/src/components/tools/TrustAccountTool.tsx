@@ -367,8 +367,8 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-emerald-100 rounded-xl">
-                <Wallet className="w-8 h-8 text-emerald-600" />
+              <div className="p-3 bg-primary-100 rounded-xl">
+                <Wallet className="w-8 h-8 text-primary-600" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">{t('tools.trustAccount.trustAccount', 'Trust Account')}</h1>
@@ -443,7 +443,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
               onClick={() => setActiveTab('transactions')}
               className={`flex-1 py-3 px-4 text-center font-medium transition-colors ${
                 activeTab === 'transactions'
-                  ? 'text-emerald-600 border-b-2 border-emerald-600 bg-emerald-50'
+                  ? 'text-primary-600 border-b-2 border-primary-600 bg-primary-50'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}
             >
@@ -454,7 +454,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
               onClick={() => setActiveTab('ledgers')}
               className={`flex-1 py-3 px-4 text-center font-medium transition-colors ${
                 activeTab === 'ledgers'
-                  ? 'text-emerald-600 border-b-2 border-emerald-600 bg-emerald-50'
+                  ? 'text-primary-600 border-b-2 border-primary-600 bg-primary-50'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}
             >
@@ -465,7 +465,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
               onClick={() => setActiveTab('new')}
               className={`flex-1 py-3 px-4 text-center font-medium transition-colors ${
                 activeTab === 'new'
-                  ? 'text-emerald-600 border-b-2 border-emerald-600 bg-emerald-50'
+                  ? 'text-primary-600 border-b-2 border-primary-600 bg-primary-50'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}
             >
@@ -488,13 +488,13 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                     placeholder={t('tools.trustAccount.searchByClientMatterOr', 'Search by client, matter, or check #...')}
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
                 <select
                   value={filterType}
                   onChange={(e) => setFilterType(e.target.value as TransactionType | 'all')}
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 >
                   <option value="all">{t('tools.trustAccount.allTypes', 'All Types')}</option>
                   {TRANSACTION_TYPES.map((type) => (
@@ -506,7 +506,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value as TransactionStatus | 'all')}
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 >
                   <option value="all">{t('tools.trustAccount.allStatuses', 'All Statuses')}</option>
                   {STATUS_OPTIONS.map((status) => (
@@ -645,7 +645,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                 <select
                   value={newTransaction.transactionType || 'deposit'}
                   onChange={(e) => setNewTransaction({ ...newTransaction, transactionType: e.target.value as TransactionType })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 >
                   {TRANSACTION_TYPES.map((type) => (
                     <option key={type.value} value={type.value}>
@@ -664,7 +664,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   step="0.01"
                   value={newTransaction.amount || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, amount: parseFloat(e.target.value) || 0 })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   placeholder="0.00"
                 />
               </div>
@@ -674,7 +674,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   type="date"
                   value={newTransaction.date || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, date: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div>
@@ -685,7 +685,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   type="text"
                   value={newTransaction.clientName || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, clientName: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div>
@@ -694,7 +694,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   type="text"
                   value={newTransaction.matterNumber || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, matterNumber: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div>
@@ -703,7 +703,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   type="text"
                   value={newTransaction.matterName || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, matterName: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               {newTransaction.transactionType === 'disbursement' && (
@@ -714,7 +714,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newTransaction.checkNumber || ''}
                       onChange={(e) => setNewTransaction({ ...newTransaction, checkNumber: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -723,7 +723,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newTransaction.payee || ''}
                       onChange={(e) => setNewTransaction({ ...newTransaction, payee: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </>
@@ -735,7 +735,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                     type="text"
                     value={newTransaction.payor || ''}
                     onChange={(e) => setNewTransaction({ ...newTransaction, payor: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
               )}
@@ -745,7 +745,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   type="text"
                   value={newTransaction.referenceNumber || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, referenceNumber: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div className="md:col-span-3">
@@ -756,7 +756,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
                   value={newTransaction.description || ''}
                   onChange={(e) => setNewTransaction({ ...newTransaction, description: e.target.value })}
                   rows={2}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   placeholder={t('tools.trustAccount.describeTheTransaction', 'Describe the transaction...')}
                 />
               </div>
@@ -792,7 +792,7 @@ export const TrustAccountTool: React.FC<TrustAccountToolProps> = ({ uiConfig }) 
               </button>
               <button
                 onClick={handleCreateTransaction}
-                className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 flex items-center gap-2"
+                className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.trustAccount.recordTransaction', 'Record Transaction')}

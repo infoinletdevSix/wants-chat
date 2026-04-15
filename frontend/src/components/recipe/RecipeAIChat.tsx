@@ -67,7 +67,7 @@ export const RecipeAIChat: React.FC<RecipeAIChatProps> = ({
                 <div
                   className={`max-w-[80%] p-4 rounded-2xl ${
                     message.role === 'user'
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                       : 'bg-white/10 backdrop-blur-xl border border-white/20 text-white'
                   }`}
                 >
@@ -130,7 +130,7 @@ export const RecipeAIChat: React.FC<RecipeAIChatProps> = ({
             <Button
               type="submit"
               disabled={!inputMessage.trim()}
-              className="h-12 px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl disabled:opacity-50"
+              className="h-12 px-6 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl disabled:opacity-50"
             >
               <Send className="h-4 w-4" />
             </Button>

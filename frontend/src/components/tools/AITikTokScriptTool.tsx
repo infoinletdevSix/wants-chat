@@ -378,7 +378,7 @@ export const AITikTokScriptTool: React.FC<AITikTokScriptToolProps> = ({ uiConfig
       {/* Header */}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-pink-900/20' : 'bg-gradient-to-r from-white to-pink-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-lg">
+          <div className="p-2 bg-gradient-to-br from-pink-500/20 to-primary-500/20 rounded-lg">
             <Video className="w-5 h-5 text-pink-500" />
           </div>
           <div>
@@ -405,7 +405,7 @@ export const AITikTokScriptTool: React.FC<AITikTokScriptToolProps> = ({ uiConfig
                 onClick={() => setVideoStyle(style.value)}
                 className={`p-3 rounded-xl text-left transition-all ${
                   videoStyle === style.value
-                    ? 'bg-gradient-to-r from-pink-500 to-cyan-500 text-white'
+                    ? 'bg-gradient-to-r from-pink-500 to-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -483,7 +483,7 @@ export const AITikTokScriptTool: React.FC<AITikTokScriptToolProps> = ({ uiConfig
         {/* Generate Button */}
         <button
           onClick={generateScript}
-          className="w-full py-3 bg-gradient-to-r from-pink-500 to-cyan-500 hover:from-pink-600 hover:to-cyan-600 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg"
+          className="w-full py-3 bg-gradient-to-r from-pink-500 to-primary-500 hover:from-pink-600 hover:to-primary-600 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg"
         >
           <Sparkles className="w-5 h-5" />
           {t('tools.aITikTokScript.generateScript', 'Generate Script')}
@@ -522,7 +522,7 @@ export const AITikTokScriptTool: React.FC<AITikTokScriptToolProps> = ({ uiConfig
                       index === 0
                         ? 'bg-pink-500/20 text-pink-500'
                         : index === generatedScript.length - 1
-                        ? 'bg-cyan-500/20 text-cyan-500'
+                        ? 'bg-primary-500/20 text-primary-500'
                         : isDark
                         ? 'bg-gray-600 text-gray-300'
                         : 'bg-gray-200 text-gray-600'
@@ -548,7 +548,7 @@ export const AITikTokScriptTool: React.FC<AITikTokScriptToolProps> = ({ uiConfig
                     {section.textOverlay && (
                       <div>
                         <span className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aITikTokScript.textOverlay', 'TEXT OVERLAY:')}</span>
-                        <p className={`text-sm italic ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>{section.textOverlay}</p>
+                        <p className={`text-sm italic ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{section.textOverlay}</p>
                       </div>
                     )}
                   </div>

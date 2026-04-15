@@ -133,10 +133,10 @@ Format each question clearly with:
 
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-emerald-900/20' : 'from-white to-emerald-50'} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : 'from-white to-primary-50'} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <ClipboardList className="w-5 h-5 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <ClipboardList className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.surveyQuestions.surveyQuestionsGenerator', 'Survey Questions Generator')}</h3>
@@ -235,7 +235,7 @@ Format each question clearly with:
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !purpose.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"
+          className="w-full py-3 px-6 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {isGenerating ? <Loader2 className="w-5 h-5 animate-spin" /> : <ClipboardList className="w-5 h-5" />}
           {isGenerating ? t('tools.surveyQuestions.generatingSurvey', 'Generating Survey...') : t('tools.surveyQuestions.generateSurveyQuestions', 'Generate Survey Questions')}

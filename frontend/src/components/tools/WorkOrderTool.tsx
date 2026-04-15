@@ -748,7 +748,7 @@ export const WorkOrderTool: React.FC<WorkOrderToolProps> = ({ uiConfig }) => {
       gray: 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300',
       blue: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
       yellow: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
-      green: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
+      green: 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400',
       red: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
     };
     return colorMap[statusObj?.color || 'gray'] || colorMap.gray;
@@ -939,8 +939,8 @@ export const WorkOrderTool: React.FC<WorkOrderToolProps> = ({ uiConfig }) => {
           </div>
           <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <p className="text-2xl font-bold text-emerald-500">{stats.completed}</p>
+              <CheckCircle2 className="w-4 h-4 text-primary-500" />
+              <p className="text-2xl font-bold text-primary-500">{stats.completed}</p>
             </div>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.workOrder.completed', 'Completed')}</p>
           </div>
@@ -1093,7 +1093,7 @@ export const WorkOrderTool: React.FC<WorkOrderToolProps> = ({ uiConfig }) => {
                             </span>
                           )}
                           {order.actual_cost !== undefined && order.actual_cost > 0 && (
-                            <span className="flex items-center gap-1 text-emerald-500">
+                            <span className="flex items-center gap-1 text-primary-500">
                               <DollarSign className="w-3 h-3" /> Actual: {formatCurrency(order.actual_cost)}
                             </span>
                           )}
@@ -1367,7 +1367,7 @@ export const WorkOrderTool: React.FC<WorkOrderToolProps> = ({ uiConfig }) => {
                   </div>
                   <div className="flex justify-between">
                     <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.workOrder.actualTotal', 'Actual Total:')}</span>
-                    <span className="text-sm font-medium text-emerald-500">{formatCurrency(stats.totalActualCost)}</span>
+                    <span className="text-sm font-medium text-primary-500">{formatCurrency(stats.totalActualCost)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.workOrder.materialsCost', 'Materials Cost:')}</span>
@@ -1382,7 +1382,7 @@ export const WorkOrderTool: React.FC<WorkOrderToolProps> = ({ uiConfig }) => {
                   <div className={`pt-2 mt-2 border-t ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
                     <div className="flex justify-between">
                       <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.workOrder.variance', 'Variance:')}</span>
-                      <span className={`text-sm font-medium ${stats.totalEstimatedCost - stats.totalActualCost >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+                      <span className={`text-sm font-medium ${stats.totalEstimatedCost - stats.totalActualCost >= 0 ? 'text-primary-500' : 'text-red-500'}`}>
                         {formatCurrency(stats.totalEstimatedCost - stats.totalActualCost)}
                       </span>
                     </div>
@@ -1408,7 +1408,7 @@ export const WorkOrderTool: React.FC<WorkOrderToolProps> = ({ uiConfig }) => {
                               status.color === 'gray' ? 'bg-gray-500' :
                               status.color === 'blue' ? 'bg-blue-500' :
                               status.color === 'yellow' ? 'bg-yellow-500' :
-                              status.color === 'green' ? 'bg-emerald-500' :
+                              status.color === 'green' ? 'bg-primary-500' :
                               'bg-red-500'
                             }`}
                             style={{ width: `${percentage}%` }}

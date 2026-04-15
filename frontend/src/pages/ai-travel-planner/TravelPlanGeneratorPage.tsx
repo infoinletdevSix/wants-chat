@@ -125,7 +125,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
             <p className="text-white/60">Let AI create your perfect itinerary</p>
           </div>
         </div>
-        <div className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+        <div className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-500/30">
           <Sparkles className="h-5 w-5 text-primary-400" />
           <span className="text-sm text-primary-300">Powered by AI</span>
         </div>
@@ -135,7 +135,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
       <div className="mb-8 bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white flex items-center justify-center font-semibold">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white flex items-center justify-center font-semibold">
               1
             </div>
             <div className="ml-3">
@@ -145,7 +145,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
           </div>
           <div className="h-0.5 w-24 bg-white/20"></div>
           <div className="flex items-center">
-            <div className={`h-10 w-10 rounded-xl ${budget ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
+            <div className={`h-10 w-10 rounded-xl ${budget ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
               2
             </div>
             <div className="ml-3">
@@ -155,7 +155,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
           </div>
           <div className="h-0.5 w-24 bg-white/20"></div>
           <div className="flex items-center">
-            <div className={`h-10 w-10 rounded-xl ${duration ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
+            <div className={`h-10 w-10 rounded-xl ${duration ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
               3
             </div>
             <div className="ml-3">
@@ -255,7 +255,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   onClick={() => setBudget(amount)}
                   className={`px-4 py-2 rounded-xl ${
                     budget === amount
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                       : 'bg-white/10 text-white/70 hover:bg-white/20'
                   } transition-colors`}
                 >
@@ -319,7 +319,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   onClick={() => setDuration(option.days)}
                   className={`px-4 py-2 rounded-xl ${
                     duration === option.days
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                       : 'bg-white/10 text-white/70 hover:bg-white/20'
                   } transition-colors`}
                 >
@@ -377,7 +377,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
           <button
             onClick={handleGeneratePlan}
             disabled={!destination || !budget || !duration || !startDate || isGenerating}
-            className="px-8 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center space-x-3 shadow-lg shadow-primary-500/25"
+            className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center space-x-3 shadow-lg shadow-primary-500/25"
           >
             {isGenerating ? (
               <>

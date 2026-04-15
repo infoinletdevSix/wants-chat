@@ -145,20 +145,20 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
               title="Monthly Budget"
               value={hasBudget ? `$${totalBudgetAmount.toFixed(2)}` : 'No budget set'}
               icon={<AccountBalance className="h-6 w-6" />}
-              color="from-primary-500 to-cyan-500"
+              color="from-primary-500 to-primary-600"
             />
             <StatCard
               title={remaining >= 0 ? 'Remaining' : 'Over Budget'}
               value={`$${Math.abs(remaining).toFixed(2)}`}
               icon={remaining >= 0 ? <TrendingDown className="h-6 w-6" /> : <TrendingUp className="h-6 w-6" />}
-              color={remaining >= 0 ? "from-green-500 to-emerald-500" : "from-red-500 to-rose-500"}
+              color={remaining >= 0 ? "from-green-500 to-primary-500" : "from-red-500 to-rose-500"}
               subtitle={hasBudget ? (remaining >= 0 ? 'Keep it up!' : 'Reduce expenses') : 'Set budget first'}
             />
             <StatCard
               title="Transactions (This Month)"
               value={currentMonthExpenses.length}
               icon={<Receipt className="h-6 w-6" />}
-              color="from-primary-500 to-cyan-500"
+              color="from-primary-500 to-primary-600"
             />
           </>
         )}
@@ -183,7 +183,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
             {recentExpenses.map((expense) => (
               <div key={expense.id} className="flex items-center justify-between p-3 bg-white/5 rounded-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center">
                     {expense.icon}
                   </div>
                   <div>
@@ -215,7 +215,7 @@ export const DashboardTab: React.FC<DashboardTabProps> = ({
             {topCategories.map(([category, data]) => (
               <div key={category} className="flex items-center justify-between p-3 bg-white/5 rounded-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center">
                     {data.icon}
                   </div>
                   <div>

@@ -9,17 +9,17 @@ import { categories as allCategories, getAllApps, type App, type Category } from
 
 // Map category IDs to display names and colors for filter buttons
 const categoryDisplayConfig: Record<string, { name: string; color: string }> = {
-  'life-management': { name: 'Life', color: 'from-primary-500 to-cyan-500' },
+  'life-management': { name: 'Life', color: 'from-primary-500 to-primary-600' },
   'ai-tools': { name: 'AI Tools', color: 'from-purple-500 to-indigo-500' },
   'productivity': { name: 'Productivity', color: 'from-amber-500 to-orange-500' },
-  'developer-tools': { name: 'Dev Tools', color: 'from-blue-500 to-cyan-500' },
-  'utilities': { name: 'Utilities', color: 'from-green-500 to-emerald-500' },
+  'developer-tools': { name: 'Dev Tools', color: 'from-blue-500 to-primary-500' },
+  'utilities': { name: 'Utilities', color: 'from-green-500 to-primary-500' },
   'media-entertainment': { name: 'Media', color: 'from-pink-500 to-rose-500' },
   'security-privacy': { name: 'Security', color: 'from-red-500 to-orange-500' },
   'sensors-detection': { name: 'Sensors', color: 'from-indigo-500 to-purple-500' },
   'calculators-tools': { name: 'Calculators', color: 'from-yellow-500 to-amber-500' },
   'camera-utilities': { name: 'Camera', color: 'from-gray-500 to-slate-500' },
-  'home-life': { name: 'Home & Life', color: 'from-emerald-500 to-primary-500' },
+  'home-life': { name: 'Home & Life', color: 'from-primary-500 to-primary-600' },
 };
 
 // Helper to get gradient color from hex color
@@ -30,12 +30,12 @@ const getGradientFromColor = (color?: string): string => {
     '#E91E63': 'from-pink-500 to-rose-500',
     '#9C27B0': 'from-purple-500 to-violet-500',
     '#FF5722': 'from-orange-500 to-red-500',
-    '#4CAF50': 'from-green-500 to-emerald-500',
-    '#2196F3': 'from-blue-500 to-cyan-500',
-    '#4ECDC4': 'from-primary-500 to-cyan-500',
-    '#00BCD4': 'from-cyan-500 to-blue-500',
+    '#4CAF50': 'from-green-500 to-primary-500',
+    '#2196F3': 'from-blue-500 to-primary-500',
+    '#4ECDC4': 'from-primary-500 to-primary-600',
+    '#00BCD4': 'from-primary-500 to-blue-500',
     '#009688': 'from-primary-500 to-green-500',
-    '#00ACC1': 'from-cyan-500 to-primary-500',
+    '#00ACC1': 'from-primary-500 to-primary-600',
     '#7C4DFF': 'from-violet-500 to-purple-500',
     '#FF5252': 'from-red-500 to-pink-500',
     '#3F51B5': 'from-indigo-500 to-blue-500',
@@ -51,17 +51,17 @@ const getGradientFromColor = (color?: string): string => {
     '#5C6BC0': 'from-indigo-500 to-blue-500',
     '#8D6E63': 'from-amber-600 to-yellow-700',
     '#AB47BC': 'from-purple-500 to-pink-500',
-    '#1976D2': 'from-blue-600 to-cyan-600',
-    '#388E3C': 'from-green-600 to-emerald-600',
+    '#1976D2': 'from-blue-600 to-primary-600',
+    '#388E3C': 'from-green-600 to-primary-600',
     '#FF6F00': 'from-orange-500 to-amber-500',
     '#7B1FA2': 'from-purple-600 to-pink-600',
-    '#0288D1': 'from-blue-500 to-cyan-500',
+    '#0288D1': 'from-blue-500 to-primary-500',
     '#D32F2F': 'from-red-600 to-rose-600',
     '#00796B': 'from-primary-600 to-green-600',
-    '#42A5F5': 'from-blue-400 to-cyan-400',
+    '#42A5F5': 'from-blue-400 to-primary-400',
     '#EF5350': 'from-red-500 to-rose-500',
     '#FFA726': 'from-orange-400 to-amber-400',
-    '#43A047': 'from-green-500 to-emerald-500',
+    '#43A047': 'from-green-500 to-primary-500',
     '#8E24AA': 'from-purple-600 to-pink-600',
     '#26A69A': 'from-primary-500 to-green-500',
     '#FF7043': 'from-orange-500 to-red-500',
@@ -69,7 +69,7 @@ const getGradientFromColor = (color?: string): string => {
     '#FFC107': 'from-yellow-500 to-amber-500',
     '#FFD700': 'from-yellow-400 to-amber-400',
     '#4A5568': 'from-gray-600 to-slate-600',
-    '#00FF00': 'from-green-400 to-emerald-400',
+    '#00FF00': 'from-green-400 to-primary-400',
     '#212121': 'from-gray-800 to-slate-800',
     '#FF8A65': 'from-orange-400 to-red-400',
   };
@@ -176,7 +176,7 @@ const QuickAccessApps: React.FC = () => {
               onClick={() => setActiveCategory('All')}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === 'All'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-md shadow-primary-500/25'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md shadow-primary-500/25'
                   : 'bg-white/10 text-white/70 border border-white/20 hover:bg-white/20 hover:text-white'
               }`}
             >
@@ -191,7 +191,7 @@ const QuickAccessApps: React.FC = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                     activeCategory === category.id
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-md shadow-primary-500/25'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md shadow-primary-500/25'
                       : 'bg-white/10 text-white/70 border border-white/20 hover:bg-white/20 hover:text-white'
                   }`}
                 >

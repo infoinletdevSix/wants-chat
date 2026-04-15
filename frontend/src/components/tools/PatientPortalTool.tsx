@@ -486,7 +486,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
       case 'deactivated': return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
       case 'approved': return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'denied': return 'bg-red-500/20 text-red-400 border-red-500/30';
-      case 'unread': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+      case 'unread': return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'read': return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
       case 'replied': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       case 'archived': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
@@ -522,15 +522,15 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -540,7 +540,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
 
   const tabClass = (active: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     active
-      ? 'bg-gradient-to-r from-cyan-600 to-primary-600 text-white'
+      ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white'
       : theme === 'dark'
         ? 'text-gray-400 hover:text-white hover:bg-gray-700'
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -551,8 +551,8 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <LayoutDashboard className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <LayoutDashboard className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -600,12 +600,12 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <Users className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Users className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.patientPortal.total', 'Total')}</p>
-              <p className="text-xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -694,7 +694,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
           <MessageSquare className="w-4 h-4 inline mr-2" />
           Messages
           {stats.unreadMessages > 0 && (
-            <span className="ml-2 px-2 py-0.5 text-xs bg-cyan-500 text-white rounded-full">{stats.unreadMessages}</span>
+            <span className="ml-2 px-2 py-0.5 text-xs bg-primary-500 text-white rounded-full">{stats.unreadMessages}</span>
           )}
         </button>
       </div>
@@ -767,7 +767,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
             <div className="max-h-[600px] overflow-y-auto">
               {isLoading ? (
                 <div className="p-8 text-center">
-                  <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                  <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
                 </div>
               ) : filteredAccounts.length === 0 ? (
                 <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -782,14 +782,14 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                       onClick={() => setSelectedAccount(account)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedAccount?.id === account.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <User className="w-4 h-4 text-cyan-500" />
+                            <User className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{account.patientName}</p>
@@ -801,7 +801,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                                 {account.status}
                               </span>
                               {account.messages.filter(m => m.status === 'unread').length > 0 && (
-                                <span className="px-2 py-0.5 text-xs bg-cyan-500/20 text-cyan-400 rounded">
+                                <span className="px-2 py-0.5 text-xs bg-primary-500/20 text-primary-400 rounded">
                                   {account.messages.filter(m => m.status === 'unread').length} unread
                                 </span>
                               )}
@@ -906,12 +906,12 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Settings className="w-4 h-4 text-cyan-500" />
+                        <Settings className="w-4 h-4 text-primary-500" />
                         {t('tools.patientPortal.portalPreferences', 'Portal Preferences')}
                       </h3>
                       <button
                         onClick={() => setShowPreferencesModal(true)}
-                        className={`text-sm ${theme === 'dark' ? 'text-cyan-400 hover:text-cyan-300' : 'text-cyan-600 hover:text-cyan-500'}`}
+                        className={`text-sm ${theme === 'dark' ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-500'}`}
                       >
                         {t('tools.patientPortal.edit', 'Edit')}
                       </button>
@@ -968,7 +968,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Shield className="w-4 h-4 text-cyan-500" />
+                        <Shield className="w-4 h-4 text-primary-500" />
                         Proxy Access ({selectedAccount.proxyAccess.length})
                       </h3>
                       <button
@@ -1022,7 +1022,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                   {/* Messages Section */}
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <MessageSquare className="w-4 h-4 text-cyan-500" />
+                      <MessageSquare className="w-4 h-4 text-primary-500" />
                       Messages ({selectedAccount.messages.length})
                     </h3>
                     {selectedAccount.messages.length === 0 ? (
@@ -1052,7 +1052,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                                 }}
                               >
                                 <div className="flex items-start gap-2">
-                                  <TypeIcon className={`w-4 h-4 mt-0.5 ${msg.status === 'unread' ? 'text-cyan-500' : 'text-gray-400'}`} />
+                                  <TypeIcon className={`w-4 h-4 mt-0.5 ${msg.status === 'unread' ? 'text-primary-500' : 'text-gray-400'}`} />
                                   <div>
                                     <p className={`font-medium ${msg.status === 'unread' ? '' : 'text-gray-400'}`}>
                                       {msg.subject}
@@ -1076,7 +1076,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                                     {msg.status === 'unread' && (
                                       <button
                                         onClick={() => markMessageAsRead(selectedAccount.id, msg.id)}
-                                        className="text-xs text-cyan-400 hover:text-cyan-300"
+                                        className="text-xs text-primary-400 hover:text-primary-300"
                                       >
                                         {t('tools.patientPortal.markAsRead', 'Mark as Read')}
                                       </button>
@@ -1206,7 +1206,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                     >
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                          <TypeIcon className={`w-4 h-4 ${msg.status === 'unread' ? 'text-cyan-500' : 'text-gray-400'}`} />
+                          <TypeIcon className={`w-4 h-4 ${msg.status === 'unread' ? 'text-primary-500' : 'text-gray-400'}`} />
                         </div>
                         <div>
                           <p className={`font-medium ${msg.status === 'unread' ? '' : theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -1237,7 +1237,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
                           {msg.status === 'unread' && (
                             <button
                               onClick={() => markMessageAsRead(msg.accountId, msg.id)}
-                              className="text-xs text-cyan-400 hover:text-cyan-300"
+                              className="text-xs text-primary-400 hover:text-primary-300"
                             >
                               {t('tools.patientPortal.markAsRead2', 'Mark as Read')}
                             </button>

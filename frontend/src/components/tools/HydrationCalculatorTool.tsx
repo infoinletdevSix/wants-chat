@@ -638,7 +638,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                   </button>
                   <button
                     onClick={() => addWater('bottle')}
-                    className="flex-1 min-w-[100px] bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 min-w-[100px] bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <Droplets className="w-4 h-4" />
                     <Plus className="w-3 h-3" />

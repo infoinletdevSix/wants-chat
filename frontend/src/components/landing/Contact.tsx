@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
         }}
       />
       <div
-        className="absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px] animate-pulse"
+        className="absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px] animate-pulse"
         style={{
           animation: 'pulse 12s ease-in-out infinite',
           animationDelay: '4s',
@@ -195,7 +195,7 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+              <Button type="submit" className="w-full group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
                 Send Message
                 <SendIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>

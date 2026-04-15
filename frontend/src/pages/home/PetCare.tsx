@@ -45,8 +45,8 @@ interface Medication {
 const PET_TYPES = [
   { id: 'dog', name: 'Dog', icon: Dog, color: 'from-amber-500 to-orange-500' },
   { id: 'cat', name: 'Cat', icon: Cat, color: 'from-purple-500 to-pink-500' },
-  { id: 'bird', name: 'Bird', icon: Bird, color: 'from-blue-500 to-cyan-500' },
-  { id: 'fish', name: 'Fish', icon: Fish, color: 'from-cyan-500 to-primary-500' },
+  { id: 'bird', name: 'Bird', icon: Bird, color: 'from-blue-500 to-primary-500' },
+  { id: 'fish', name: 'Fish', icon: Fish, color: 'from-primary-500 to-primary-600' },
 ];
 
 const PetCare: React.FC = () => {
@@ -217,7 +217,7 @@ const PetCare: React.FC = () => {
 
   const getPetColor = (type: string) => {
     const petType = PET_TYPES.find(t => t.id === type);
-    return petType?.color || 'from-primary-500 to-cyan-500';
+    return petType?.color || 'from-primary-500 to-primary-600';
   };
 
   const selectedPetVets = selectedPet ? vetVisits.filter(v => v.petId === selectedPet.id) : [];
@@ -257,7 +257,7 @@ const PetCare: React.FC = () => {
               disabled={!selectedPet}
               className={`flex-1 px-6 py-3 rounded-xl font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
                 activeTab === 'vet'
-                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-blue-500 to-primary-500 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -269,7 +269,7 @@ const PetCare: React.FC = () => {
               disabled={!selectedPet}
               className={`flex-1 px-6 py-3 rounded-xl font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
                 activeTab === 'meds'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -382,7 +382,7 @@ const PetCare: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setShowAddVetModal(true)}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-gradient-to-r from-blue-500 to-primary-500 hover:from-blue-600 hover:to-primary-600 text-white rounded-xl font-medium transition-all flex items-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   Add Visit
@@ -431,7 +431,7 @@ const PetCare: React.FC = () => {
                       {visit.nextVisit && (
                         <div className="mb-4">
                           <p className="text-sm font-medium text-gray-400 mb-1">Next Visit</p>
-                          <p className="text-cyan-400">{visit.nextVisit}</p>
+                          <p className="text-primary-400">{visit.nextVisit}</p>
                         </div>
                       )}
 
@@ -464,7 +464,7 @@ const PetCare: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setShowAddMedModal(true)}
-                  className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all flex items-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   Add Medication
@@ -741,7 +741,7 @@ const PetCare: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-primary-500 hover:from-blue-600 hover:to-primary-600 text-white rounded-xl font-medium transition-all"
                   >
                     Add Visit
                   </button>
@@ -839,7 +839,7 @@ const PetCare: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all"
                   >
                     Add Medication
                   </button>

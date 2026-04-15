@@ -156,7 +156,7 @@ const SleepDashboard: React.FC = () => {
             </Button>
             <Button
               onClick={() => navigate('/health/add-sleep-log')}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 text-white"
             >
               <Plus className="w-4 h-4 mr-2" />
               Log Sleep
@@ -167,12 +167,12 @@ const SleepDashboard: React.FC = () => {
         {/* Quick Actions - Highlighted at Top */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <Card
-            className="bg-gradient-to-br from-emerald-500/20 to-green-500/20 border-emerald-500/30 hover:border-emerald-400/50 transition-all cursor-pointer group"
+            className="bg-gradient-to-br from-primary-500/20 to-green-500/20 border-primary-500/30 hover:border-primary-400/50 transition-all cursor-pointer group"
             onClick={() => navigate('/health/sleep-goals')}
           >
             <CardContent className="p-5 flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 shadow-lg shadow-emerald-500/30">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-primary-500 to-green-500 shadow-lg shadow-primary-500/30">
                   <Target className="w-6 h-6" />
                 </div>
                 <div>
@@ -391,7 +391,7 @@ const SleepDashboard: React.FC = () => {
                   </p>
                   <Button
                     onClick={() => navigate('/health/add-sleep-log')}
-                    className="bg-gradient-to-r from-primary-500 to-cyan-500"
+                    className="bg-gradient-to-r from-primary-500 to-primary-600"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Log Your First Sleep

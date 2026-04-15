@@ -218,7 +218,7 @@ export const MedicalBillingTool: React.FC<MedicalBillingToolProps> = ({ uiConfig
       pending: 'bg-yellow-500/20 text-yellow-400',
       approved: 'bg-green-500/20 text-green-400',
       denied: 'bg-red-500/20 text-red-400',
-      paid: 'bg-emerald-500/20 text-emerald-400',
+      paid: 'bg-primary-500/20 text-primary-400',
       partial: 'bg-orange-500/20 text-orange-400',
       collections: 'bg-red-500/20 text-red-400',
     };
@@ -229,11 +229,11 @@ export const MedicalBillingTool: React.FC<MedicalBillingToolProps> = ({ uiConfig
 
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark' ? 'bg-gray-800 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500`;
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium`;
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'}`;
 
   return (
@@ -241,7 +241,7 @@ export const MedicalBillingTool: React.FC<MedicalBillingToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl">
+          <div className="p-3 bg-gradient-to-br from-green-500/20 to-primary-500/20 rounded-xl">
             <Receipt className="w-8 h-8 text-green-500" />
           </div>
           <div>
@@ -261,7 +261,7 @@ export const MedicalBillingTool: React.FC<MedicalBillingToolProps> = ({ uiConfig
       {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-6">
         {[
-          { label: 'Total Billed', value: formatCurrency(stats.totalBilled), color: 'text-cyan-500' },
+          { label: 'Total Billed', value: formatCurrency(stats.totalBilled), color: 'text-primary-500' },
           { label: 'Collected', value: formatCurrency(stats.totalPaid), color: 'text-green-500' },
           { label: 'Outstanding', value: formatCurrency(stats.totalOutstanding), color: 'text-orange-500' },
           { label: 'Pending Claims', value: stats.pendingCount.toString(), color: 'text-yellow-500' },
@@ -302,13 +302,13 @@ export const MedicalBillingTool: React.FC<MedicalBillingToolProps> = ({ uiConfig
           <div className="p-4 border-b border-gray-700"><h2 className="text-lg font-semibold">{t('tools.medicalBilling.bills', 'Bills')}</h2></div>
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
-              <div className="p-8 text-center"><div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div></div>
+              <div className="p-8 text-center"><div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div></div>
             ) : filteredBills.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}><Receipt className="w-12 h-12 mx-auto mb-3 opacity-50" /><p>{t('tools.medicalBilling.noBillsFound', 'No bills found')}</p></div>
             ) : (
               <div className="divide-y divide-gray-700">
                 {filteredBills.map(bill => (
-                  <div key={bill.id} onClick={() => setSelectedBill(bill)} className={`p-4 cursor-pointer transition-colors ${selectedBill?.id === bill.id ? 'bg-cyan-500/10 border-l-4 border-cyan-500' : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'}`}>
+                  <div key={bill.id} onClick={() => setSelectedBill(bill)} className={`p-4 cursor-pointer transition-colors ${selectedBill?.id === bill.id ? 'bg-primary-500/10 border-l-4 border-primary-500' : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'}`}>
                     <div className="flex items-start justify-between">
                       <div>
                         <p className="font-medium">{bill.patientName}</p>

@@ -41,16 +41,16 @@ const StatsCards: React.FC<StatsCardsProps> = ({ stats, loading }) => {
       title: 'BMI Index',
       value: stats?.bmi?.toString() ?? '0',
       icon: mdiScaleBalance,
-      iconBg: 'bg-emerald-500/20',
-      iconColor: 'text-emerald-400',
+      iconBg: 'bg-primary-500/20',
+      iconColor: 'text-primary-400',
       badge: 'Normal'
     },
     {
       title: 'Total Workouts',
       value: stats?.totalWorkouts?.toString() ?? '0',
       icon: mdiDumbbell,
-      iconBg: 'bg-cyan-500/20',
-      iconColor: 'text-cyan-400'
+      iconBg: 'bg-primary-500/20',
+      iconColor: 'text-primary-400'
     },
     {
       title: 'Day Streak',
@@ -83,7 +83,7 @@ const StatsCards: React.FC<StatsCardsProps> = ({ stats, loading }) => {
               </div>
 
               {card.badge && (
-                <span className="text-xs px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400">
+                <span className="text-xs px-2 py-1 rounded-full bg-primary-500/20 text-primary-400">
                   {card.badge}
                 </span>
               )}

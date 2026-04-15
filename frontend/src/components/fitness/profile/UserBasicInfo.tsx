@@ -103,7 +103,7 @@ const UserBasicInfo: React.FC<UserBasicInfoProps> = ({
           </Button>
         ) : (
           <div className="flex items-center gap-2">
-            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
               <Icon path={mdiCheck} size={0.7} className="mr-1" />
               Save
             </Button>

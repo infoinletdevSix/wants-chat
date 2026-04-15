@@ -548,7 +548,7 @@ const AddSeriousCondition: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createSeriousConditionMutation.loading || updateSeriousConditionMutation.loading || (isEditMode && conditionLoading)}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 h-12 px-8 rounded-xl font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 h-12 px-8 rounded-xl font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
           >
             {(createSeriousConditionMutation.loading || updateSeriousConditionMutation.loading) ? (
               <>

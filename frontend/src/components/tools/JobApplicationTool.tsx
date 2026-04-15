@@ -33,7 +33,7 @@ const statusColors: Record<ApplicationStatus, { bg: string; text: string; label:
   interview: { bg: 'bg-purple-500/10', text: 'text-purple-600', label: 'Interview Scheduled' },
   offered: { bg: 'bg-green-500/10', text: 'text-green-600', label: 'Offer Received' },
   rejected: { bg: 'bg-red-500/10', text: 'text-red-600', label: 'Rejected' },
-  accepted: { bg: 'bg-emerald-500/10', text: 'text-emerald-600', label: 'Accepted' },
+  accepted: { bg: 'bg-primary-500/10', text: 'text-primary-600', label: 'Accepted' },
 };
 
 const statusOptions: ApplicationStatus[] = ['applied', 'interview', 'offered', 'rejected', 'accepted'];

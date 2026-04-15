@@ -15,7 +15,7 @@ const showcaseSlides = [
     description: 'Not just answers — Wants executes tasks, builds apps, analyzes data, and helps you get real work done.',
     icon: MessageSquare,
     features: ['Natural Conversations', 'Task Execution', 'Context Awareness', 'Multi-turn Memory'],
-    gradient: 'from-primary-500 via-cyan-500 to-blue-500',
+    gradient: 'from-primary-500 via-primary-500 to-blue-500',
     bgGradient: 'from-slate-900 via-primary-900/50 to-slate-900',
   },
   {
@@ -35,8 +35,8 @@ const showcaseSlides = [
     description: 'Upload any data and get instant visualizations, SQL queries, and actionable insights.',
     icon: BarChart3,
     features: ['Auto Visualizations', 'SQL Generation', 'Pattern Detection', 'Export Reports'],
-    gradient: 'from-emerald-500 via-green-500 to-primary-500',
-    bgGradient: 'from-slate-900 via-emerald-900/30 to-slate-900',
+    gradient: 'from-primary-500 via-green-500 to-primary-500',
+    bgGradient: 'from-slate-900 via-primary-900/30 to-slate-900',
   },
   {
     id: 'research',
@@ -75,8 +75,8 @@ const showcaseSlides = [
     description: 'Plan your day, set goals, manage projects, and stay organized with AI assistance.',
     icon: CalendarDays,
     features: ['Smart Scheduling', 'Goal Tracking', 'Project Management', 'Reminders'],
-    gradient: 'from-cyan-500 via-sky-500 to-blue-500',
-    bgGradient: 'from-slate-900 via-cyan-900/30 to-slate-900',
+    gradient: 'from-primary-500 via-sky-500 to-blue-500',
+    bgGradient: 'from-slate-900 via-primary-900/30 to-slate-900',
   },
   {
     id: 'tools',
@@ -105,7 +105,7 @@ const showcaseSlides = [
     description: 'Automate complex workflows by chaining multiple actions together with natural language.',
     icon: Workflow,
     features: ['Multi-Step Chains', 'Conditional Logic', 'Scheduled Tasks', 'Integrations'],
-    gradient: 'from-primary-500 via-emerald-500 to-cyan-500',
+    gradient: 'from-primary-500 via-primary-500 to-primary-500',
     bgGradient: 'from-slate-900 via-primary-900/30 to-slate-900',
   },
   {
@@ -115,7 +115,7 @@ const showcaseSlides = [
     description: 'Take screenshots, summarize web pages, extract data from URLs, and browse intelligently.',
     icon: Globe,
     features: ['Page Screenshots', 'Content Summarization', 'Data Extraction', 'Link Analysis'],
-    gradient: 'from-blue-500 via-cyan-500 to-primary-500',
+    gradient: 'from-blue-500 via-primary-500 to-primary-500',
     bgGradient: 'from-slate-900 via-blue-900/30 to-slate-900',
   },
 ];
@@ -156,12 +156,12 @@ const AppShowcase: React.FC = () => {
       {/* Background - matching login page */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       <motion.div
-        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{ x: [0, -50, 0], y: [0, 30, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.15, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -173,12 +173,12 @@ const AppShowcase: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-4">
             Explore AI Capabilities
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             11 Ways Wants{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
               Gets Things Done
             </span>
           </h2>

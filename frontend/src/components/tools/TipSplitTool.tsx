@@ -82,10 +82,10 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <Receipt className="w-5 h-5 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Receipt className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tipSplit.tipSplitCalculator', 'Tip & Split Calculator')}</h3>
@@ -126,7 +126,7 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
             <label className={`text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.tipSplit.tipPercentage', 'Tip Percentage')}
             </label>
-            <span className={`text-2xl font-bold ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+            <span className={`text-2xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
               {tipPercent}%
             </span>
           </div>
@@ -136,7 +136,7 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
             max="50"
             value={tipPercent}
             onChange={(e) => setTipPercent(parseInt(e.target.value))}
-            className="w-full accent-emerald-500"
+            className="w-full accent-primary-500"
           />
           <div className="flex gap-2">
             {tipPresets.map((preset) => (
@@ -145,7 +145,7 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
                 onClick={() => setTipPercent(preset)}
                 className={`flex-1 py-2 text-sm rounded-lg transition-colors ${
                   tipPercent === preset
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -195,7 +195,7 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
             type="checkbox"
             checked={roundUp}
             onChange={(e) => setRoundUp(e.target.checked)}
-            className="w-5 h-5 rounded accent-emerald-500"
+            className="w-5 h-5 rounded accent-primary-500"
           />
           <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>
             {t('tools.tipSplit.roundUpToNearestDollar', 'Round up to nearest dollar')}
@@ -203,9 +203,9 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
         </label>
 
         {/* Results */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-100'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-between mb-4">
-            <h4 className={`font-medium ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>
+            <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
               {t('tools.tipSplit.summary', 'Summary')}
             </h4>
             <button
@@ -232,7 +232,7 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
                 ${calculations.tipAmount.toFixed(2)}
               </span>
             </div>
-            <div className={`border-t pt-3 ${isDark ? 'border-emerald-800' : 'border-emerald-200'}`}>
+            <div className={`border-t pt-3 ${isDark ? 'border-primary-800' : 'border-primary-200'}`}>
               <div className="flex justify-between items-center">
                 <span className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.tipSplit.total', 'Total')}</span>
                 <span className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -242,9 +242,9 @@ Split ${numPeople} ways: $${calculations.perPerson.toFixed(2)} per person`;
             </div>
           </div>
 
-          <div className={`mt-4 pt-4 border-t ${isDark ? 'border-emerald-800' : 'border-emerald-200'}`}>
+          <div className={`mt-4 pt-4 border-t ${isDark ? 'border-primary-800' : 'border-primary-200'}`}>
             <div className="text-center">
-              <div className={`text-sm ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>
+              <div className={`text-sm ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.tipSplit.eachPersonPays', 'Each Person Pays')}
               </div>
               <div className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>

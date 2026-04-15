@@ -676,7 +676,7 @@ const MedicalRecordsPage: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Greeting Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-gradient-to-br from-primary-500/10 to-primary-500/10 border border-primary-500/20">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl font-bold text-white mb-2">
@@ -717,13 +717,13 @@ const MedicalRecordsPage: React.FC = () => {
 
           {/* Browse Records Card */}
           <Card
-            className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-400/50 hover:bg-white/10"
+            className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary-400/50 hover:bg-white/10"
             onClick={() => navigate('/health/upload-results')}
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-emerald-500/20">
-                  <ClipboardListIcon className="h-7 w-7 text-emerald-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/20">
+                  <ClipboardListIcon className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Upload Results</h3>
                 <p className="text-white/60 text-sm">Add test reports</p>
@@ -783,7 +783,7 @@ const MedicalRecordsPage: React.FC = () => {
                   onClick={() => handleTabChange(tab.id)}
                   className={`flex items-center justify-center gap-2 px-6 py-2 rounded-lg font-medium text-sm transition-all duration-200 flex-1 ${
                     isActive
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-sm'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-sm'
                       : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -806,7 +806,7 @@ const MedicalRecordsPage: React.FC = () => {
               </div>
               <Button
                 onClick={() => navigate('/health/add-vital-record')}
-                className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               >
                 <ActivityIcon className="h-4 w-4 mr-2" />
                 Add Vital Record
@@ -939,7 +939,7 @@ const MedicalRecordsPage: React.FC = () => {
                     className="rounded-xl hover:shadow-xl transition-all duration-300 bg-white/5 border border-white/10 hover:border-primary-400/30 overflow-hidden group relative"
                   >
                     {/* Card Header with Gradient Background */}
-                    <div className="p-6 pb-4 bg-gradient-to-br from-primary-500/10 to-cyan-500/10">
+                    <div className="p-6 pb-4 bg-gradient-to-br from-primary-500/10 to-primary-500/10">
                       <div className="flex items-start gap-4">
                         <div className="p-3 rounded-xl bg-primary-500/20">
                           <IconComponent className="h-6 w-6 text-primary-400" />
@@ -983,7 +983,7 @@ const MedicalRecordsPage: React.FC = () => {
                             </p>
                           </div>
                           <div className="flex flex-col items-end gap-2">
-                            <Badge className="rounded-full px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                            <Badge className="rounded-full px-3 py-1 bg-primary-500/20 text-primary-400 border border-primary-500/30">
                               Normal
                             </Badge>
                             {category.records[0] && (
@@ -1667,9 +1667,9 @@ const MedicalRecordsPage: React.FC = () => {
                         <div className="pt-3 border-t border-white/10">
                           <div className="grid grid-cols-2 gap-2">
                             {(insurance.copay_primary || insurance.copayPrimary) && (
-                              <div className="p-2 rounded-lg bg-emerald-500/10">
-                                <p className="text-xs text-emerald-400">Copay</p>
-                                <p className="text-sm font-bold text-emerald-300">
+                              <div className="p-2 rounded-lg bg-primary-500/10">
+                                <p className="text-xs text-primary-400">Copay</p>
+                                <p className="text-sm font-bold text-primary-300">
                                   {insurance.copay_primary || insurance.copayPrimary}
                                 </p>
                               </div>

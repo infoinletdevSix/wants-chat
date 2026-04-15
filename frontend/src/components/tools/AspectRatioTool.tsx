@@ -120,10 +120,10 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg">
-            <Maximize2 className="w-5 h-5 text-cyan-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Maximize2 className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aspectRatio.aspectRatioCalculator', 'Aspect Ratio Calculator')}</h3>
@@ -135,8 +135,8 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="p-3 bg-cyan-500/10 border border-cyan-500/20 rounded-lg flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
+          <div className="p-3 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-primary-500" />
             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {t('tools.aspectRatio.dimensionsHaveBeenPrefilledFrom', 'Dimensions have been prefilled from AI suggestions')}
             </span>
@@ -161,7 +161,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
               <button
                 onClick={() => setLock(lock === 'width' ? 'none' : 'width')}
                 className={`absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded ${
-                  lock === 'width' ? 'text-cyan-500' : isDark ? 'text-gray-500' : 'text-gray-400'
+                  lock === 'width' ? 'text-primary-500' : isDark ? 'text-gray-500' : 'text-gray-400'
                 }`}
               >
                 {lock === 'width' ? <Lock className="w-4 h-4" /> : <Unlock className="w-4 h-4" />}
@@ -189,7 +189,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
               <button
                 onClick={() => setLock(lock === 'height' ? 'none' : 'height')}
                 className={`absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded ${
-                  lock === 'height' ? 'text-cyan-500' : isDark ? 'text-gray-500' : 'text-gray-400'
+                  lock === 'height' ? 'text-primary-500' : isDark ? 'text-gray-500' : 'text-gray-400'
                 }`}
               >
                 {lock === 'height' ? <Lock className="w-4 h-4" /> : <Unlock className="w-4 h-4" />}
@@ -206,7 +206,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
               onClick={() => handleResolutionClick(res)}
               className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                 parseInt(width) === res.width && parseInt(height) === res.height
-                  ? 'bg-cyan-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -219,7 +219,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
 
         {/* Result */}
         {result && (
-          <div className={`p-6 rounded-xl ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-100'} border`}>
+          <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.aspectRatio.aspectRatio', 'Aspect Ratio')}</div>
@@ -228,7 +228,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
                 </div>
                 <button
                   onClick={() => handleCopy(result.ratio)}
-                  className={`text-xs ${copied === result.ratio ? 'text-green-500' : 'text-cyan-500'}`}
+                  className={`text-xs ${copied === result.ratio ? 'text-green-500' : 'text-primary-500'}`}
                 >
                   {copied === result.ratio ? t('tools.aspectRatio.copied', 'Copied!') : t('tools.aspectRatio.copy', 'Copy')}
                 </button>
@@ -256,7 +256,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
             {/* Visual Preview */}
             <div className="mt-4 flex justify-center">
               <div
-                className={`border-2 ${isDark ? 'border-cyan-500' : 'border-cyan-400'} rounded-lg`}
+                className={`border-2 ${isDark ? 'border-primary-500' : 'border-primary-400'} rounded-lg`}
                 style={{
                   width: '200px',
                   height: `${200 / (parseInt(width) / parseInt(height))}px`,
@@ -279,7 +279,7 @@ export const AspectRatioTool: React.FC<AspectRatioToolProps> = ({ uiConfig }) =>
                 onClick={() => handleRatioClick(ratio)}
                 className={`p-3 rounded-lg text-center transition-colors ${
                   targetRatio === ratio.name && result?.isExact
-                    ? 'bg-cyan-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'

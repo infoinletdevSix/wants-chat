@@ -35,7 +35,7 @@ export const MeditationControls: React.FC<MeditationControlsProps> = ({
         </div>
         <div className="text-lg text-white/60">of {formatTime(duration)}</div>
         <div className="mt-4">
-          <Badge className={isPlaying ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white px-4 py-1' : 'bg-white/10 text-white/60 px-4 py-1'}>
+          <Badge className={isPlaying ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 py-1' : 'bg-white/10 text-white/60 px-4 py-1'}>
             {isPlaying ? 'Playing' : 'Paused'}
           </Badge>
         </div>
@@ -48,7 +48,7 @@ export const MeditationControls: React.FC<MeditationControlsProps> = ({
           onClick={onProgressClick}
         >
           <div
-            className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 transition-all duration-300 rounded-full"
+            className="h-full bg-gradient-to-r from-primary-500 to-primary-600 transition-all duration-300 rounded-full"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -71,7 +71,7 @@ export const MeditationControls: React.FC<MeditationControlsProps> = ({
         <Button
           size="icon"
           onClick={onPlayPause}
-          className="w-20 h-20 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+          className="w-20 h-20 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
         >
           {isPlaying ? (
             <Pause className="h-10 w-10" />

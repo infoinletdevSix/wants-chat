@@ -52,7 +52,7 @@ const BrandsReplaced: React.FC = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity }}
       />
@@ -66,14 +66,14 @@ const BrandsReplaced: React.FC = () => {
           className="text-center mb-12"
         >
           {/* Badge */}
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
             {t('landing.brandsReplaced.badge')}
           </span>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('landing.brandsReplaced.title')}{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
               {t('landing.brandsReplaced.titleHighlight')}
             </span>
           </h2>
@@ -164,10 +164,10 @@ const BrandsReplaced: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="bg-gray-900/50 backdrop-blur-xl rounded-2xl p-5 border border-gray-800 hover:border-emerald-500/50 transition-all duration-300 group"
+              className="bg-gray-900/50 backdrop-blur-xl rounded-2xl p-5 border border-gray-800 hover:border-primary-500/50 transition-all duration-300 group"
             >
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
                   <Check className="w-4 h-4 text-white" />
                 </div>
                 <h3 className="text-white font-semibold">{category.category}</h3>
@@ -193,8 +193,8 @@ const BrandsReplaced: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/30">
-            <span className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-primary-500/10 to-primary-500/10 border border-primary-500/30">
+            <span className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
               20+
             </span>
             <div className="text-left">

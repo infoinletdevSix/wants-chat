@@ -242,7 +242,7 @@ const statusColors = {
   queued: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200',
   'in-progress': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
   'waiting-parts': 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200',
-  'waiting-customer': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200',
+  'waiting-customer': 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200',
   completed: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
   cancelled: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
 };
@@ -670,7 +670,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
         </div>
         <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow`}>
           <div className="flex items-center gap-2 mb-2">
-            <Timer className="w-5 h-5 text-cyan-500" />
+            <Timer className="w-5 h-5 text-primary-500" />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>Avg Resolution</span>
           </div>
           <div className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>

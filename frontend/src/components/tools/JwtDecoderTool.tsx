@@ -117,10 +117,10 @@ export const JwtDecoderTool: React.FC<JwtDecoderToolProps> = ({ uiConfig }) => {
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <Key className="w-5 h-5 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Key className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.jwtDecoder.jwtDecoder', 'JWT Decoder')}</h3>
@@ -152,7 +152,7 @@ export const JwtDecoderTool: React.FC<JwtDecoderToolProps> = ({ uiConfig }) => {
               isDark
                 ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:ring-2 focus:ring-emerald-500 focus:border-transparent`}
+            } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
         </div>
 
@@ -213,7 +213,7 @@ export const JwtDecoderTool: React.FC<JwtDecoderToolProps> = ({ uiConfig }) => {
                 </button>
               </div>
               <pre className={`p-4 rounded-lg text-sm font-mono overflow-x-auto ${
-                isDark ? 'bg-gray-800 text-emerald-300' : 'bg-gray-50 text-emerald-700'
+                isDark ? 'bg-gray-800 text-primary-300' : 'bg-gray-50 text-primary-700'
               }`}>
                 {formatJson(decoded.header)}
               </pre>

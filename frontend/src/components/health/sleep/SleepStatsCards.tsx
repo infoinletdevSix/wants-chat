@@ -35,7 +35,7 @@ export const SleepStatsCards: React.FC<SleepStatsCardsProps> = ({
       label: 'Efficiency',
       value: summary?.averageEfficiency ? `${Math.round(summary.averageEfficiency)}%` : '0%',
       icon: Activity,
-      color: 'from-cyan-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       change: progress?.efficiencyProgress ? `${Math.round(progress.efficiencyProgress)}% of goal` : undefined,
     },
     {
@@ -49,7 +49,7 @@ export const SleepStatsCards: React.FC<SleepStatsCardsProps> = ({
       label: 'Best Duration',
       value: summary?.bestSleepDuration ? formatSleepDuration(summary.bestSleepDuration) : '0h',
       icon: TrendingUp,
-      color: 'from-emerald-500 to-green-500',
+      color: 'from-primary-500 to-green-500',
     },
     {
       label: 'Avg. Wake-ups',

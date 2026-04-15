@@ -340,13 +340,13 @@ const FitnessProgress: React.FC = () => {
         {/* Main Content Tabs */}
         <Tabs defaultValue="overview" className="space-y-6">
           <TabsList className="grid w-full grid-cols-3 bg-white/10 backdrop-blur-xl border border-white/20">
-            <TabsTrigger value="overview" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="overview" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">
               Overview
             </TabsTrigger>
-            <TabsTrigger value="weight" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="weight" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">
               Weight & Body
             </TabsTrigger>
-            <TabsTrigger value="goals" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="goals" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">
               Goals
             </TabsTrigger>
           </TabsList>

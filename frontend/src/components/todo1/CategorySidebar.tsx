@@ -241,7 +241,7 @@ const CategorySidebar: React.FC<CategorySidebarProps> = ({
       <div className="p-3 border-t border-white/20">
         <Button
           onClick={onAddCategory}
-          className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+          className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
         >
           <Plus className="h-4 w-4 mr-2" />
           New Category

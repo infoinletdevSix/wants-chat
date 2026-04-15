@@ -175,9 +175,9 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg"><Layers className="w-5 h-5 text-emerald-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Layers className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.flooringCalculator.flooringCalculator', 'Flooring Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.flooringCalculator.calculateMaterialsForAnyRoom', 'Calculate materials for any room')}</p>
@@ -192,7 +192,7 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
             <button
               key={type}
               onClick={() => setFlooringType(type)}
-              className={`py-2 px-3 rounded-lg text-sm ${flooringType === type ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-2 px-3 rounded-lg text-sm ${flooringType === type ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {flooringTypes[type].name}
             </button>
@@ -200,10 +200,10 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
         </div>
 
         {/* Flooring Info */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-2">
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{config.name}</h4>
-            <span className="text-emerald-500 font-bold">${pricePerSqFt.toFixed(2)}/sq ft</span>
+            <span className="text-primary-500 font-bold">${pricePerSqFt.toFixed(2)}/sq ft</span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>
@@ -226,14 +226,14 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
           <div className="flex gap-2">
             <button
               onClick={() => setRoomShape('rectangle')}
-              className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${roomShape === 'rectangle' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${roomShape === 'rectangle' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <Square className="w-4 h-4" />
               {t('tools.flooringCalculator.rectangle', 'Rectangle')}
             </button>
             <button
               onClick={() => setRoomShape('l-shape')}
-              className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${roomShape === 'l-shape' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${roomShape === 'l-shape' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M3 3v18h18v-8h-10v-10z" />
@@ -247,13 +247,13 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('feet')}
-            className={`flex-1 py-2 rounded-lg ${unit === 'feet' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unit === 'feet' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.flooringCalculator.feet', 'Feet')}
           </button>
           <button
             onClick={() => setUnit('meters')}
-            className={`flex-1 py-2 rounded-lg ${unit === 'meters' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unit === 'meters' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.flooringCalculator.meters', 'Meters')}
           </button>
@@ -356,7 +356,7 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
               <button
                 key={n}
                 onClick={() => setWasteFactor(n.toString())}
-                className={`flex-1 py-2 rounded-lg ${parseInt(wasteFactor) === n ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg ${parseInt(wasteFactor) === n ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {n}%
               </button>
@@ -393,10 +393,10 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Calculator className="w-4 h-4 text-emerald-500" />
+              <Calculator className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.flooringCalculator.roomArea', 'Room Area')}</span>
             </div>
-            <div className="text-3xl font-bold text-emerald-500">{calculations.rawSquareFootage} sq ft</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.rawSquareFootage} sq ft</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {calculations.rawSquareMeters} sq m
             </div>
@@ -442,7 +442,7 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             <DollarSign className="w-4 h-4 inline mr-2" />
             {t('tools.flooringCalculator.costEstimate', 'Cost Estimate')}
@@ -462,7 +462,7 @@ export const FlooringCalculatorTool: React.FC<FlooringCalculatorToolProps> = ({ 
             )}
             <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.flooringCalculator.totalEstimate', 'Total Estimate')}</span>
-              <span className="text-xl font-bold text-emerald-500">${calculations.totalCost}</span>
+              <span className="text-xl font-bold text-primary-500">${calculations.totalCost}</span>
             </div>
           </div>
         </div>

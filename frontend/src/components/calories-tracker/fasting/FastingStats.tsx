@@ -25,7 +25,7 @@ const FastingStats: React.FC<FastingStatsProps> = ({
       </Card>
 
       <Card className="p-4 text-center bg-white/5 border border-white/10">
-        <Icon path={mdiCheckCircle} size={1.5} className="text-emerald-400 mx-auto mb-2" />
+        <Icon path={mdiCheckCircle} size={1.5} className="text-primary-400 mx-auto mb-2" />
         <p className="text-2xl font-bold text-white">{safeCompletedFasts}</p>
         <p className="text-xs text-white/60">Completed Fasts</p>
       </Card>

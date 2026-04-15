@@ -199,7 +199,7 @@ const repairStatuses: { value: RepairJob['status']; label: string; color: string
   { value: 'in_repair', label: 'In Repair', color: 'bg-orange-500' },
   { value: 'testing', label: 'Testing', color: 'bg-purple-500' },
   { value: 'ready', label: 'Ready for Pickup', color: 'bg-green-500' },
-  { value: 'completed', label: 'Completed', color: 'bg-emerald-600' },
+  { value: 'completed', label: 'Completed', color: 'bg-primary-600' },
   { value: 'cancelled', label: 'Cancelled', color: 'bg-red-500' },
 ];
 

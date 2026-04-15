@@ -235,7 +235,7 @@ const CreateShoppingList: React.FC = () => {
                       placeholder="Add tag and press Enter"
                       className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/40"
                     />
-                    <Button type="button" size="sm" onClick={handleAddTag} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+                    <Button type="button" size="sm" onClick={handleAddTag} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
                       Add
                     </Button>
                   </div>
@@ -317,7 +317,7 @@ const CreateShoppingList: React.FC = () => {
                   />
                 </div>
                 <div className="flex items-end">
-                  <Button onClick={handleAddItem} className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+                  <Button onClick={handleAddItem} className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
                     <Plus className="h-4 w-4 mr-2" />
                     Add
                   </Button>
@@ -410,7 +410,7 @@ const CreateShoppingList: React.FC = () => {
                 <Button
                   onClick={handleSubmit}
                   disabled={loading || !name.trim()}
-                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 disabled:opacity-50"
                 >
                   {loading ? 'Creating...' : 'Create Shopping List'}
                 </Button>

@@ -351,7 +351,7 @@ const MacronutrientCustomization: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="p-4 bg-secondary/20 rounded-lg">
                         <h4 className="font-medium text-foreground mb-2">Fiber</h4>
-                        <p className="text-2xl font-bold text-emerald-600">25-35g</p>
+                        <p className="text-2xl font-bold text-primary-600">25-35g</p>
                         <p className="text-xs text-muted-foreground">Daily recommendation</p>
                       </div>
                       
@@ -405,7 +405,7 @@ const MacronutrientCustomization: React.FC = () => {
                 
                 <div className="space-y-2">
                   <Button 
-                    className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
+                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-primary-foreground"
                     onClick={handleContinue}
                     disabled={!isValidBalance}
                   >
@@ -431,7 +431,7 @@ const MacronutrientCustomization: React.FC = () => {
             </Card>
 
             {/* Help */}
-            <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200">
+            <Card className="p-6 bg-gradient-to-br from-blue-50 to-primary-50 border-blue-200">
               <div className="space-y-3">
                 <h3 className="font-semibold text-foreground">Need Help?</h3>
                 <div className="text-sm text-muted-foreground space-y-2">
@@ -457,7 +457,7 @@ const MacronutrientCustomization: React.FC = () => {
           <Button
             onClick={handleContinue}
             disabled={!isValidBalance}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-primary-foreground"
           >
             Start Tracking
             <Icon path={mdiArrowRight} size={0.8} className="ml-2" />

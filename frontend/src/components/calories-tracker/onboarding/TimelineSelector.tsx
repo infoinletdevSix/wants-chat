@@ -33,9 +33,9 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
           deficit: '385 calories/day',
           duration: 'Longer timeline, easier to maintain',
           icon: mdiTortoise,
-          iconColor: 'text-emerald-400',
+          iconColor: 'text-primary-400',
           badge: 'Recommended',
-          badgeColor: 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+          badgeColor: 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
         },
         {
           value: 1 as const,
@@ -84,9 +84,9 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
           deficit: '385 calories/day surplus',
           duration: 'Optimal for muscle building',
           icon: mdiTortoise,
-          iconColor: 'text-emerald-400',
+          iconColor: 'text-primary-400',
           badge: 'Recommended',
-          badgeColor: 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+          badgeColor: 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
         },
         {
           value: 1 as const,
@@ -155,7 +155,7 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
             className={`
               p-6 cursor-pointer transition-all duration-300 border-2
               ${selectedTimeline === option.value
-                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-cyan-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
+                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-primary-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
                 : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
               }
             `}

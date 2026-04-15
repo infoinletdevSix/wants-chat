@@ -216,7 +216,7 @@ const AudioRecorder: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-primary-900">
       <BackgroundEffects />
       <Header />
 
@@ -224,12 +224,12 @@ const AudioRecorder: React.FC = () => {
         {/* Header Section */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">Audio Recorder</h1>
-          <p className="text-cyan-300">Record, playback, and manage your audio recordings</p>
+          <p className="text-primary-300">Record, playback, and manage your audio recordings</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Recorder Section */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-primary-500/30">
             <div className="flex flex-col items-center">
               {/* Timer */}
               <div className="mb-8">
@@ -239,7 +239,7 @@ const AudioRecorder: React.FC = () => {
                 {isRecording && (
                   <div className="flex items-center justify-center gap-2 mt-2">
                     <div className={`w-3 h-3 rounded-full ${isPaused ? 'bg-yellow-400' : 'bg-red-500 animate-pulse'}`} />
-                    <span className="text-cyan-300">
+                    <span className="text-primary-300">
                       {isPaused ? 'Paused' : 'Recording'}
                     </span>
                   </div>
@@ -251,7 +251,7 @@ const AudioRecorder: React.FC = () => {
                 {visualizerData.map((height, index) => (
                   <div
                     key={index}
-                    className="flex-1 bg-gradient-to-t from-cyan-500 to-primary-400 rounded-full transition-all duration-75"
+                    className="flex-1 bg-gradient-to-t from-primary-500 to-primary-400 rounded-full transition-all duration-75"
                     style={{ height: `${isRecording && !isPaused ? height : 0}%` }}
                   />
                 ))}
@@ -261,12 +261,12 @@ const AudioRecorder: React.FC = () => {
               {isRecording && (
                 <div className="w-full mb-8">
                   <div className="flex items-center gap-3 mb-2">
-                    <Volume2 size={20} className="text-cyan-400" />
+                    <Volume2 size={20} className="text-primary-400" />
                     <span className="text-white text-sm">Input Level</span>
                   </div>
                   <div className="w-full h-3 bg-black/20 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-cyan-500 to-primary-400 transition-all duration-100"
+                      className="h-full bg-gradient-to-r from-primary-500 to-primary-400 transition-all duration-100"
                       style={{ width: `${audioLevel}%` }}
                     />
                   </div>
@@ -301,7 +301,7 @@ const AudioRecorder: React.FC = () => {
               </div>
 
               {!isRecording && (
-                <p className="text-cyan-300 mt-6 text-center">
+                <p className="text-primary-300 mt-6 text-center">
                   Click the microphone to start recording
                 </p>
               )}
@@ -309,10 +309,10 @@ const AudioRecorder: React.FC = () => {
           </div>
 
           {/* Recordings List */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-primary-500/30">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-white">Recordings</h2>
-              <span className="text-cyan-300">{recordings.length} total</span>
+              <span className="text-primary-300">{recordings.length} total</span>
             </div>
 
             <div className="space-y-3 max-h-[600px] overflow-y-auto">
@@ -327,7 +327,7 @@ const AudioRecorder: React.FC = () => {
                   <div
                     key={recording.id}
                     className={`bg-white/5 hover:bg-white/10 rounded-2xl p-4 transition ${
-                      currentPlayingId === recording.id ? 'ring-2 ring-cyan-400' : ''
+                      currentPlayingId === recording.id ? 'ring-2 ring-primary-400' : ''
                     }`}
                   >
                     <div className="flex items-center gap-4">
@@ -335,7 +335,7 @@ const AudioRecorder: React.FC = () => {
                         onClick={() => playRecording(recording)}
                         className={`p-4 rounded-full transition ${
                           currentPlayingId === recording.id
-                            ? 'bg-gradient-to-r from-cyan-500 to-primary-500 text-white'
+                            ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                             : 'bg-white/10 text-white hover:bg-white/20'
                         }`}
                       >
@@ -344,7 +344,7 @@ const AudioRecorder: React.FC = () => {
 
                       <div className="flex-1 min-w-0">
                         <h3 className="text-white font-semibold truncate">{recording.name}</h3>
-                        <div className="flex items-center gap-3 text-sm text-cyan-300 mt-1">
+                        <div className="flex items-center gap-3 text-sm text-primary-300 mt-1">
                           <span className="flex items-center gap-1">
                             <Clock size={14} />
                             {recording.duration}
@@ -374,7 +374,7 @@ const AudioRecorder: React.FC = () => {
 
                     {currentPlayingId === recording.id && (
                       <div className="mt-3 h-1 bg-white/20 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-cyan-400 to-primary-400 w-1/3 animate-pulse" />
+                        <div className="h-full bg-gradient-to-r from-primary-400 to-primary-500 w-1/3 animate-pulse" />
                       </div>
                     )}
                   </div>
@@ -392,34 +392,34 @@ const AudioRecorder: React.FC = () => {
 
         {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-cyan-500/30">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-primary-500/30">
             <div className="flex items-center gap-3 mb-2">
-              <div className="p-3 bg-cyan-500/20 rounded-xl">
-                <Mic className="text-cyan-400" size={24} />
+              <div className="p-3 bg-primary-500/20 rounded-xl">
+                <Mic className="text-primary-400" size={24} />
               </div>
               <h3 className="text-white font-semibold">High Quality</h3>
             </div>
-            <p className="text-cyan-300 text-sm">Crystal clear audio recording with real-time visualization</p>
+            <p className="text-primary-300 text-sm">Crystal clear audio recording with real-time visualization</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-cyan-500/30">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-primary-500/30">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-3 bg-primary-500/20 rounded-xl">
                 <Download className="text-primary-400" size={24} />
               </div>
               <h3 className="text-white font-semibold">Easy Export</h3>
             </div>
-            <p className="text-cyan-300 text-sm">Download your recordings in WebM format instantly</p>
+            <p className="text-primary-300 text-sm">Download your recordings in WebM format instantly</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-cyan-500/30">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-primary-500/30">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-3 bg-purple-500/20 rounded-xl">
                 <Save className="text-purple-400" size={24} />
               </div>
               <h3 className="text-white font-semibold">Auto Save</h3>
             </div>
-            <p className="text-cyan-300 text-sm">Recordings are automatically saved to your library</p>
+            <p className="text-primary-300 text-sm">Recordings are automatically saved to your library</p>
           </div>
         </div>
       </div>

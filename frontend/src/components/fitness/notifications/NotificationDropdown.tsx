@@ -159,7 +159,7 @@ const NotificationDropdown: React.FC<NotificationDropdownProps> = ({
                           <Button
                             size="sm"
                             onClick={() => onMarkAsRead(notification.id)}
-                            className="h-5 px-2 text-xs bg-emerald-500 hover:bg-emerald-600 text-white"
+                            className="h-5 px-2 text-xs bg-primary-500 hover:bg-primary-600 text-white"
                           >
                             <Icon path={mdiCheckCircle} size={0.4} className="mr-1" />
                             Read

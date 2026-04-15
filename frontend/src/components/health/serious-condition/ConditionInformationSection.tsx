@@ -108,7 +108,7 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                       onClick={() => handleInputChange('condition', condition)}
                       className={`text-xs px-2.5 py-1.5 rounded-lg border transition-all duration-200 ${
                         formData.condition === condition
-                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent'
+                          ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white border-transparent'
                           : 'bg-white/5 border-white/20 text-white/60 hover:border-primary-500 hover:text-primary-400'
                       }`}
                     >

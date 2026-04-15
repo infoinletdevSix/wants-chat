@@ -465,7 +465,7 @@ export const WritingPromptGeneratorTool: React.FC<WritingPromptGeneratorToolProp
       romance: 'bg-pink-500',
       mystery: 'bg-amber-500',
       horror: 'bg-red-500',
-      literary: 'bg-emerald-500',
+      literary: 'bg-primary-500',
       adventure: 'bg-orange-500',
       historical: 'bg-stone-500',
     };
@@ -479,7 +479,7 @@ export const WritingPromptGeneratorTool: React.FC<WritingPromptGeneratorToolProp
       romance: 'text-pink-500',
       mystery: 'text-amber-500',
       horror: 'text-red-500',
-      literary: 'text-emerald-500',
+      literary: 'text-primary-500',
       adventure: 'text-orange-500',
       historical: 'text-stone-500',
     };

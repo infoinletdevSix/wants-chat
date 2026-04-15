@@ -59,7 +59,7 @@ const MainFeatures: React.FC = () => {
       category: 'Health & Nutrition',
       description: 'Nutrition & meal tracking with food database, meal planning, macro management, and intermittent fasting support.',
       icon: RestaurantIcon,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-primary-500',
       route: '/calories-tracker',
       status: 'Available',
       routes: 9, // calories-tracker, onboarding, plan-selection, customization, dashboard, diary, fasting, progress, profile, food-search, log-food
@@ -105,7 +105,7 @@ const MainFeatures: React.FC = () => {
       category: 'Medical & Wellness',
       description: 'Medical records & vitals with comprehensive health management, appointments, and specialized care tracking.',
       icon: LocalHospitalIcon,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-primary-500',
       route: '/health',
       status: 'Available',
       routes: 3, // health, medical-records
@@ -128,7 +128,7 @@ const MainFeatures: React.FC = () => {
       category: 'Finance & Management',
       description: 'Budget & financial management with expense tracking, analytics, CSV export, and comprehensive reporting.',
       icon: AccountBalanceWalletIcon,
-      color: 'from-emerald-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/expense-tracker',
       status: 'Available',
       routes: 2, // expense-tracker, add-expense
@@ -197,7 +197,7 @@ const MainFeatures: React.FC = () => {
       category: 'Finance & Money',
       description: 'Real-time currency exchange rates with multi-currency support and conversion history.',
       icon: CurrencyExchangeIcon,
-      color: 'from-cyan-500 to-blue-500',
+      color: 'from-primary-500 to-blue-500',
       route: '/currency-exchange',
       status: 'Available',
       routes: 1,
@@ -243,7 +243,7 @@ const MainFeatures: React.FC = () => {
       category: 'Productivity Tools',
       description: 'Task and project management with priorities, due dates, and completion tracking.',
       icon: CheckBoxIcon,
-      color: 'from-cyan-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/todo',
       status: 'Available',
       routes: 1,
@@ -374,7 +374,7 @@ const MainFeatures: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, -80, 0],
           y: [0, -60, 0],

@@ -517,7 +517,7 @@ const AddVitalRecord: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createVitalRecordMutation.loading}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
           >
             {createVitalRecordMutation.loading ? (
               <>

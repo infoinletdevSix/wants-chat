@@ -329,7 +329,7 @@ export const RecipeDashboardEnhanced: React.FC<RecipeDashboardEnhancedProps> = (
           <div className="flex flex-wrap gap-3">
             <Button
               onClick={() => onNavigate('/recipe-builder/add')}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
             >
               <Plus className="h-4 w-4 mr-2" />
               New Recipe

@@ -109,7 +109,7 @@ const CLASS_CATEGORIES: { category: ClassCategory; label: string; icon: React.Re
   { category: 'yoga', label: 'Yoga', icon: <Target className="w-4 h-4" />, color: 'bg-purple-500' },
   { category: 'pilates', label: 'Pilates', icon: <Zap className="w-4 h-4" />, color: 'bg-pink-500' },
   { category: 'cycling', label: 'Cycling', icon: <Bike className="w-4 h-4" />, color: 'bg-blue-500' },
-  { category: 'swimming', label: 'Swimming', icon: <Waves className="w-4 h-4" />, color: 'bg-cyan-500' },
+  { category: 'swimming', label: 'Swimming', icon: <Waves className="w-4 h-4" />, color: 'bg-primary-500' },
   { category: 'dance', label: 'Dance', icon: <Music className="w-4 h-4" />, color: 'bg-yellow-500' },
   { category: 'hiit', label: 'HIIT', icon: <Zap className="w-4 h-4" />, color: 'bg-green-500' },
   { category: 'martial_arts', label: 'Martial Arts', icon: <Target className="w-4 h-4" />, color: 'bg-slate-500' },

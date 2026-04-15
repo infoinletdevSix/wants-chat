@@ -34,7 +34,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
   const getFoodCategoryColor = (category: string) => {
     switch (category) {
       case 'vegetables':
-        return 'bg-emerald-500/10 text-emerald-600 border-emerald-200';
+        return 'bg-primary-500/10 text-primary-600 border-primary-200';
       case 'fruits':
         return 'bg-orange-500/10 text-orange-600 border-orange-200';
       case 'protein':
@@ -180,7 +180,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
             <Button
               size="sm"
               onClick={() => onAdd(food)}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-primary-foreground"
             >
               <Icon path={mdiPlus} size={0.6} className="mr-1" />
               Add

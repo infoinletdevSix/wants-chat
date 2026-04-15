@@ -14,7 +14,7 @@ interface StoryCardProps {
 const getLevelColor = (level: string) => {
   switch (level) {
     case 'beginner':
-      return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+      return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
     case 'intermediate':
       return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
     case 'advanced':
@@ -45,18 +45,18 @@ export const StoryCard: React.FC<StoryCardProps> = ({
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
-                  target.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center text-2xl">📖</div>';
+                  target.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-primary-500/10 to-primary-500/20 flex items-center justify-center text-2xl">📖</div>';
                 }}
               />
             </div>
           ) : (
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center text-2xl">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500/10 to-primary-500/20 flex items-center justify-center text-2xl">
               {story.thumbnail || '📖'}
             </div>
           )}
           <div className="flex flex-col gap-2">
             {story.isCompleted && (
-              <CheckCircle2 className="h-5 w-5 text-emerald-500" />
+              <CheckCircle2 className="h-5 w-5 text-primary-500" />
             )}
           </div>
         </div>
@@ -115,7 +115,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
         <div className="border-t border-white/20 pt-4">
           <Button
             size="sm"
-            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0 font-medium"
+            className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0 font-medium"
           >
             {story.completionRate > 0 ? (
               <>

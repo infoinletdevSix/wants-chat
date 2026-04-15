@@ -297,7 +297,7 @@ export const DashboardSkeleton = () => (
     </div>
     
     {/* Motivational Footer */}
-    <div className="bg-gradient-to-r from-primary/5 to-emerald-500/5 p-4 rounded-lg border">
+    <div className="bg-gradient-to-r from-primary/5 to-primary-500/5 p-4 rounded-lg border">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Skeleton className="h-10 w-10 rounded-lg" />

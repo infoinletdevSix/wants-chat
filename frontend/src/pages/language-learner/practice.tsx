@@ -246,7 +246,7 @@ const PracticePage: React.FC = () => {
             {/* Summary Cards */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
               <GlassCard className="text-center" hover={false}>
-                <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 w-fit mx-auto mb-2">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-primary-500 w-fit mx-auto mb-2">
                   <BookOpen className="h-6 w-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white">
@@ -258,7 +258,7 @@ const PracticePage: React.FC = () => {
               </GlassCard>
 
               <GlassCard className="text-center" hover={false}>
-                <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 w-fit mx-auto mb-2">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-primary-500 w-fit mx-auto mb-2">
                   <CheckCircle2 className="h-6 w-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white">
@@ -297,7 +297,7 @@ const PracticePage: React.FC = () => {
             {/* Filters */}
             <GlassCard hover={false}>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600">
                   <Filter className="h-5 w-5 text-white" />
                 </div>
                 <span className="text-lg font-semibold text-white">Filter Exercises</span>
@@ -346,7 +346,7 @@ const PracticePage: React.FC = () => {
                 <p className="text-sm text-white/60">
                   Showing {exercises.length} exercises
                 </p>
-                <Button onClick={startPracticeSession} disabled={exercises.length === 0} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
+                <Button onClick={startPracticeSession} disabled={exercises.length === 0} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
                   <Zap className="h-4 w-4 mr-2" />
                   Start Practice Session
                 </Button>
@@ -391,7 +391,7 @@ const PracticePage: React.FC = () => {
                             {exercise.user_progress?.status === 'completed' && (
                               <>
                                 <span>•</span>
-                                <span className="text-emerald-400">
+                                <span className="text-primary-400">
                                   {exercise.user_progress.points_earned} points earned
                                 </span>
                               </>
@@ -401,7 +401,7 @@ const PracticePage: React.FC = () => {
 
                         <div className="flex items-center space-x-2">
                           {exercise.user_progress?.status === 'completed' ? (
-                            <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+                            <CheckCircle2 className="h-5 w-5 text-primary-400" />
                           ) : (
                             <Button
                               variant="outline"
@@ -451,13 +451,13 @@ const PracticePage: React.FC = () => {
                   </div>
                   <div className="w-32 h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
+                      className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300"
                       style={{ width: `${((currentExerciseIndex + 1) / exercises.length) * 100}%` }}
                     />
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 text-sm">
-                  <div className="text-emerald-400">
+                  <div className="text-primary-400">
                     ✓ {sessionStats.correct}
                   </div>
                   <div className="text-white/60">
@@ -496,22 +496,22 @@ const PracticePage: React.FC = () => {
                 {showFeedback && (
                   <div className={`mt-6 p-4 rounded-lg ${
                     isCorrect
-                      ? 'bg-emerald-500/20 border border-emerald-500/30'
+                      ? 'bg-primary-500/20 border border-primary-500/30'
                       : 'bg-red-500/20 border border-red-500/30'
                   }`}>
                     <div className="flex items-start space-x-3">
                       <div className={`p-1 rounded-full ${
-                        isCorrect ? 'bg-emerald-500/30' : 'bg-red-500/30'
+                        isCorrect ? 'bg-primary-500/30' : 'bg-red-500/30'
                       }`}>
                         {isCorrect ? (
-                          <CheckCircle2 className="h-5 w-5 text-emerald-400" />
+                          <CheckCircle2 className="h-5 w-5 text-primary-400" />
                         ) : (
                           <X className="h-5 w-5 text-red-400" />
                         )}
                       </div>
                       <div>
                         <h3 className={`font-semibold ${
-                          isCorrect ? 'text-emerald-400' : 'text-red-400'
+                          isCorrect ? 'text-primary-400' : 'text-red-400'
                         }`}>
                           {isCorrect ? 'Correct!' : 'Incorrect'}
                         </h3>
@@ -532,7 +532,7 @@ const PracticePage: React.FC = () => {
                       size="lg"
                       onClick={handleAnswerSubmit}
                       disabled={!selectedAnswer || submitExerciseMutation.isPending}
-                      className="min-w-32 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                      className="min-w-32 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                     >
                       {submitExerciseMutation.isPending ? 'Checking...' : 'Check Answer'}
                     </Button>
@@ -540,7 +540,7 @@ const PracticePage: React.FC = () => {
                     <Button
                       size="lg"
                       onClick={handleContinue}
-                      className={isCorrect ? 'bg-gradient-to-r from-emerald-500 to-primary-500 hover:from-emerald-600 hover:to-primary-600' : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'}
+                      className={isCorrect ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700' : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700'}
                     >
                       {currentExerciseIndex === exercises.length - 1 ? 'Finish Session' : 'Continue'}
                     </Button>

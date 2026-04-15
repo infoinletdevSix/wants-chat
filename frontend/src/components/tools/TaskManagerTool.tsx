@@ -402,9 +402,9 @@ export const TaskManagerTool: React.FC<TaskManagerToolProps> = ({ uiConfig }) =>
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
-          <Sparkles className="w-4 h-4 text-emerald-500" />
-          <span className="text-sm text-emerald-500 font-medium">{t('tools.taskManager.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-500 font-medium">{t('tools.taskManager.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -451,7 +451,7 @@ export const TaskManagerTool: React.FC<TaskManagerToolProps> = ({ uiConfig }) =>
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-lg transition-colors capitalize ${
                 activeTab === tab
-                  ? 'bg-emerald-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : `${textSecondary} ${hoverBg}`
               }`}
             >
@@ -502,7 +502,7 @@ export const TaskManagerTool: React.FC<TaskManagerToolProps> = ({ uiConfig }) =>
 
             <button
               onClick={() => setShowTaskForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.taskManager.addTask', 'Add Task')}
@@ -615,7 +615,7 @@ export const TaskManagerTool: React.FC<TaskManagerToolProps> = ({ uiConfig }) =>
               <div className="flex gap-2 pt-4">
                 <button
                   onClick={handleSaveTask}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
                 >
                   <Save className="w-4 h-4" />
                   {editingTask ? t('tools.taskManager.updateTask', 'Update Task') : t('tools.taskManager.addTask2', 'Add Task')}

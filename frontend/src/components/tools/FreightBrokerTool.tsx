@@ -423,8 +423,8 @@ export default function FreightBrokerTool() {
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-100 rounded-lg">
-              <DollarSign className="w-5 h-5 text-emerald-600" />
+            <div className="p-2 bg-primary-100 rounded-lg">
+              <DollarSign className="w-5 h-5 text-primary-600" />
             </div>
             <div>
               <p className="text-sm text-gray-500">{t('tools.freightBroker.totalRevenue', 'Total Revenue')}</p>

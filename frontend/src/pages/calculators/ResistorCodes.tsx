@@ -121,7 +121,7 @@ const ResistorCodes: React.FC = () => {
       <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary-500 to-cyan-500 p-6">
+          <div className="bg-gradient-to-r from-primary-500 to-primary-600 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                 <Zap className="h-8 w-8 text-white" />
@@ -143,7 +143,7 @@ const ResistorCodes: React.FC = () => {
                   onClick={() => setBandCount(count)}
                   className={`px-4 py-3 rounded-lg font-medium transition-all ${
                     bandCount === count
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
                       : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
                   }`}
                 >
@@ -310,10 +310,10 @@ const ResistorCodes: React.FC = () => {
           </div>
 
           {/* Results */}
-          <div className="p-6 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border-t border-white/10">
+          <div className="p-6 bg-gradient-to-br from-primary-500/10 to-primary-500/10 border-t border-white/10">
             <div className="space-y-4">
               {/* Resistance Value */}
-              <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-6 border border-primary-400/30">
+              <div className="bg-gradient-to-r from-primary-500/20 to-primary-500/20 backdrop-blur-sm rounded-lg p-6 border border-primary-400/30">
                 <p className="text-sm text-white/60 mb-2">Resistance Value</p>
                 <p className="text-4xl font-bold text-white">{formatResistance(resistance)}</p>
               </div>

@@ -100,7 +100,7 @@ const QUEUE_STATUSES: { status: QueueStatus; label: string; color: string }[] = 
   { status: 'setup', label: 'Setup', color: 'bg-yellow-500' },
   { status: 'printing', label: 'Printing', color: 'bg-blue-500' },
   { status: 'finishing', label: 'Finishing', color: 'bg-purple-500' },
-  { status: 'quality_check', label: 'Quality Check', color: 'bg-cyan-500' },
+  { status: 'quality_check', label: 'Quality Check', color: 'bg-primary-500' },
   { status: 'completed', label: 'Completed', color: 'bg-green-500' },
   { status: 'on_hold', label: 'On Hold', color: 'bg-orange-500' },
   { status: 'cancelled', label: 'Cancelled', color: 'bg-red-500' },

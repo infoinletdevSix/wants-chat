@@ -91,9 +91,9 @@ const TwoFactorAuth: React.FC = () => {
     const colors = [
       'from-blue-500 to-indigo-500',
       'from-purple-500 to-pink-500',
-      'from-primary-500 to-cyan-500',
+      'from-primary-500 to-primary-600',
       'from-orange-500 to-red-500',
-      'from-green-500 to-emerald-500',
+      'from-green-500 to-primary-500',
     ];
 
     const newAcct: Account = {
@@ -135,11 +135,11 @@ const TwoFactorAuth: React.FC = () => {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-3 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl">
+            <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl">
               <Shield className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
                 Two-Factor Authenticator
               </h1>
               <p className="text-slate-400 text-sm">Secure your accounts with TOTP codes</p>
@@ -170,7 +170,7 @@ const TwoFactorAuth: React.FC = () => {
                 className={`h-full transition-all duration-1000 ${
                   timeLeft <= 5
                     ? 'bg-gradient-to-r from-red-500 to-rose-500'
-                    : 'bg-gradient-to-r from-primary-500 to-cyan-500'
+                    : 'bg-gradient-to-r from-primary-500 to-primary-600'
                 }`}
               />
             </div>
@@ -186,7 +186,7 @@ const TwoFactorAuth: React.FC = () => {
         >
           <button
             onClick={() => setShowAddForm(!showAddForm)}
-            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/50"
+            className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/50"
           >
             <Plus className="w-5 h-5" />
             Add New Account
@@ -236,7 +236,7 @@ const TwoFactorAuth: React.FC = () => {
               <div className="flex gap-3">
                 <button
                   onClick={handleAddAccount}
-                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-bold py-3 rounded-lg transition-all"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 rounded-lg transition-all"
                 >
                   Add Account
                 </button>
@@ -284,7 +284,7 @@ const TwoFactorAuth: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div className="font-mono text-4xl font-bold text-primary-400 tracking-wider">
                     {currentCodes[account.id]?.slice(0, 3) || '000'}{' '}
-                    <span className="text-cyan-400">{currentCodes[account.id]?.slice(3) || '000'}</span>
+                    <span className="text-primary-400">{currentCodes[account.id]?.slice(3) || '000'}</span>
                   </div>
                   <motion.button
                     whileTap={{ scale: 0.9 }}
@@ -292,7 +292,7 @@ const TwoFactorAuth: React.FC = () => {
                     className="p-3 bg-primary-500/20 hover:bg-primary-500/30 rounded-lg transition-all"
                   >
                     {copiedId === account.id ? (
-                      <Check className="w-5 h-5 text-emerald-400" />
+                      <Check className="w-5 h-5 text-primary-400" />
                     ) : (
                       <Copy className="w-5 h-5 text-primary-400" />
                     )}

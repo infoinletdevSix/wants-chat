@@ -286,15 +286,15 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -304,7 +304,7 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500 text-white'
+      ? 'bg-primary-500 text-white'
       : theme === 'dark'
       ? 'text-gray-400 hover:text-white hover:bg-gray-700'
       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -315,8 +315,8 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <History className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <History className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -361,12 +361,12 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Users className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Users className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.medicalHistory.totalPatients', 'Total Patients')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.totalPatients}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.totalPatients}</p>
             </div>
           </div>
         </div>
@@ -426,7 +426,7 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
           <div className="max-h-[500px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto mb-2"></div>
               </div>
             ) : filteredHistories.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -441,7 +441,7 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
                     onClick={() => setSelectedHistory(history)}
                     className={`p-4 cursor-pointer transition-colors ${
                       selectedHistory?.id === history.id
-                        ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                        ? 'bg-primary-500/10 border-l-4 border-primary-500'
                         : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                     }`}
                   >
@@ -526,7 +526,7 @@ export const MedicalHistoryTool: React.FC<MedicalHistoryToolProps> = ({ uiConfig
                 <div>
                   <div className="flex items-center justify-between mb-3 cursor-pointer" onClick={() => setExpandedSections({ ...expandedSections, surgeries: !expandedSections.surgeries })}>
                     <h3 className="font-semibold flex items-center gap-2">
-                      <Stethoscope className="w-4 h-4 text-cyan-500" />
+                      <Stethoscope className="w-4 h-4 text-primary-500" />
                       Surgical History ({selectedHistory.surgeries.length})
                     </h3>
                     {expandedSections.surgeries ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}

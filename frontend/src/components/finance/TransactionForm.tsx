@@ -471,7 +471,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({
               </Button>
               <Button
                 type="submit"
-                className="flex-1 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                className="flex-1 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                 disabled={isLoading}
               >
                 {isLoading ? 'Saving...' : `Add ${type === 'expense' ? 'Expense' : 'Income'}`}

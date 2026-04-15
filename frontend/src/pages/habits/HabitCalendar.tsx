@@ -696,7 +696,7 @@ const HabitCalendar: React.FC = () => {
                                 variant="ghost"
                                 size="icon"
                                 onClick={() => toggleHabitCompletionForDate(habit.id, selectedDate)}
-                                className={isCompleted ? 'text-emerald-400' : 'text-white/40 hover:text-white'}
+                                className={isCompleted ? 'text-primary-400' : 'text-white/40 hover:text-white'}
                               >
                                 {isCompleted ? (
                                   <CheckCircle className="h-6 w-6" />

@@ -47,7 +47,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy':
-        return 'bg-emerald-100 text-emerald-800';
+        return 'bg-primary-100 text-primary-800';
       case 'Medium':
         return 'bg-orange-100 text-orange-800';
       case 'Hard':
@@ -134,7 +134,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
             <p className="text-xs text-muted-foreground">protein</p>
           </div>
           <div className="text-center">
-            <p className="text-sm font-medium text-emerald-600">{recipe.carbs}g</p>
+            <p className="text-sm font-medium text-primary-600">{recipe.carbs}g</p>
             <p className="text-xs text-muted-foreground">carbs</p>
           </div>
           <div className="text-center">

@@ -63,7 +63,7 @@ const FunctionalBMICalculator: React.FC<BMICalculatorProps> = ({
   const getCategoryColor = () => {
     switch (category) {
       case 'Underweight': return 'text-primary border-primary bg-primary/10';
-      case 'Normal': return 'text-emerald-600 border-emerald-600 bg-emerald-50 dark:bg-emerald-950/20';
+      case 'Normal': return 'text-primary-600 border-primary-600 bg-primary-50 dark:bg-primary-950/20';
       case 'Overweight': return 'text-muted-foreground border-muted bg-muted/20';
       case 'Obese': return 'text-destructive border-destructive bg-destructive/10';
       default: return 'text-muted-foreground border-muted bg-muted/20';
@@ -192,7 +192,7 @@ const FunctionalBMICalculator: React.FC<BMICalculatorProps> = ({
           <span>Overweight</span>
           <span>Obese</span>
         </div>
-        <div className="h-3 bg-gradient-to-r from-primary via-emerald-500 via-muted to-destructive rounded-full relative">
+        <div className="h-3 bg-gradient-to-r from-primary via-primary-500 via-muted to-destructive rounded-full relative">
           <div 
             className="absolute w-4 h-4 bg-foreground rounded-full -top-0.5 shadow-lg transition-all duration-300"
             style={{ left: `${Math.min(Math.max((bmi - 15) / 25 * 100, 0), 100)}%`, transform: 'translateX(-50%)' }}
@@ -209,9 +209,9 @@ const FunctionalBMICalculator: React.FC<BMICalculatorProps> = ({
 
       {/* Ideal Weight Range */}
       <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="p-3 bg-emerald-50 dark:bg-emerald-950/20 rounded-lg">
+        <div className="p-3 bg-primary-50 dark:bg-primary-950/20 rounded-lg">
           <p className="text-xs text-muted-foreground mb-1">Ideal Weight Range</p>
-          <p className="text-lg font-semibold text-emerald-600 dark:text-emerald-400">
+          <p className="text-lg font-semibold text-primary-600 dark:text-primary-400">
             {idealWeight.min} - {idealWeight.max} {unit === 'metric' ? 'kg' : 'lbs'}
           </p>
         </div>
@@ -251,7 +251,7 @@ const FunctionalBMICalculator: React.FC<BMICalculatorProps> = ({
           />
           <Button 
             onClick={() => onSave?.(weight, height, bmi)}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
           >
             Save Goals
           </Button>

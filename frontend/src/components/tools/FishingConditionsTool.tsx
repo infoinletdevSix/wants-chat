@@ -304,9 +304,9 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Fish className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Fish className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.fishingConditions.fishingConditionsEvaluator', 'Fishing Conditions Evaluator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.fishingConditions.analyzeConditionsForOptimalFishing', 'Analyze conditions for optimal fishing')}</p>
@@ -319,13 +319,13 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
         <div className="grid grid-cols-2 gap-2">
           <button
             onClick={() => setWaterType('freshwater')}
-            className={`py-2 px-3 rounded-lg text-sm ${waterType === 'freshwater' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`py-2 px-3 rounded-lg text-sm ${waterType === 'freshwater' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.fishingConditions.freshwater', 'Freshwater')}
           </button>
           <button
             onClick={() => setWaterType('saltwater')}
-            className={`py-2 px-3 rounded-lg text-sm ${waterType === 'saltwater' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`py-2 px-3 rounded-lg text-sm ${waterType === 'saltwater' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.fishingConditions.saltwater', 'Saltwater')}
           </button>
@@ -351,7 +351,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
               <button
                 key={trend}
                 onClick={() => setPressureTrend(trend)}
-                className={`flex-1 py-2 rounded-lg text-sm capitalize ${pressureTrend === trend ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm capitalize ${pressureTrend === trend ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {trend === 'rising' ? 'Rising' : trend === 'falling' ? t('tools.fishingConditions.falling', 'Falling') : t('tools.fishingConditions.stable', 'Stable')}
               </button>
@@ -370,7 +370,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
               <button
                 key={phase}
                 onClick={() => setMoonPhase(phase)}
-                className={`py-2 px-2 rounded-lg text-xs flex flex-col items-center gap-1 ${moonPhase === phase ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-2 rounded-lg text-xs flex flex-col items-center gap-1 ${moonPhase === phase ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 <span className="text-lg">{moonPhaseEmojis[phase]}</span>
                 <span className="truncate w-full text-center">{moonPhaseLabels[phase].split(' ')[0]}</span>
@@ -396,7 +396,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
               <button
                 key={temp}
                 onClick={() => setWaterTemp(temp.toString())}
-                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(waterTemp) === temp ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(waterTemp) === temp ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {temp}F
               </button>
@@ -405,7 +405,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
         </div>
 
         {/* Overall Conditions Score */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-3">
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.fishingConditions.overallFishingConditions', 'Overall Fishing Conditions')}</h4>
             <span className={`text-2xl font-bold ${getOverallRating(calculations.overallScore).color}`}>
@@ -441,7 +441,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
         {/* Best Fishing Times */}
         <div className="space-y-3">
           <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'} flex items-center gap-2`}>
-            <Clock className="w-4 h-4 text-cyan-500" />
+            <Clock className="w-4 h-4 text-primary-500" />
             {t('tools.fishingConditions.bestFishingTimes', 'Best Fishing Times')}
           </h4>
           <div className="grid grid-cols-2 gap-2">
@@ -451,7 +451,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
                 className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}
               >
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-cyan-500">{time.icon}</span>
+                  <span className="text-primary-500">{time.icon}</span>
                   <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{time.period}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -475,7 +475,7 @@ export const FishingConditionsTool: React.FC<FishingConditionsToolProps> = ({ ui
         {/* Species Activity Predictor */}
         <div className="space-y-3">
           <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'} flex items-center gap-2`}>
-            <Fish className="w-4 h-4 text-cyan-500" />
+            <Fish className="w-4 h-4 text-primary-500" />
             {t('tools.fishingConditions.speciesActivityLureRecommendations', 'Species Activity & Lure Recommendations')}
           </h4>
           <div className="space-y-3">

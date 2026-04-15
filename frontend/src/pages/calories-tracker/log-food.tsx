@@ -63,9 +63,9 @@ const LogFoodPage: React.FC = () => {
 
   const meals = [
     { id: 'breakfast', name: 'Breakfast', emoji: '🌅', color: 'from-orange-500/20 to-yellow-500/20' },
-    { id: 'lunch', name: 'Lunch', emoji: '☀️', color: 'from-blue-500/20 to-cyan-500/20' },
+    { id: 'lunch', name: 'Lunch', emoji: '☀️', color: 'from-blue-500/20 to-primary-500/20' },
     { id: 'dinner', name: 'Dinner', emoji: '🌙', color: 'from-purple-500/20 to-pink-500/20' },
-    { id: 'snacks', name: 'Snacks', emoji: '🍎', color: 'from-green-500/20 to-emerald-500/20' }
+    { id: 'snacks', name: 'Snacks', emoji: '🍎', color: 'from-green-500/20 to-primary-500/20' }
   ];
 
   const commonUnits = [
@@ -324,8 +324,8 @@ const LogFoodPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
-                  <div className="p-2 bg-cyan-500/20 rounded-lg">
-                    <Beef className="h-5 w-5 text-cyan-400" />
+                  <div className="p-2 bg-primary-500/20 rounded-lg">
+                    <Beef className="h-5 w-5 text-primary-400" />
                   </div>
                 </div>
                 <p className="text-xs text-white/60">Protein</p>
@@ -333,8 +333,8 @@ const LogFoodPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
-                  <div className="p-2 bg-emerald-500/20 rounded-lg">
-                    <Wheat className="h-5 w-5 text-emerald-400" />
+                  <div className="p-2 bg-primary-500/20 rounded-lg">
+                    <Wheat className="h-5 w-5 text-primary-400" />
                   </div>
                 </div>
                 <p className="text-xs text-white/60">Carbs</p>
@@ -427,7 +427,7 @@ const LogFoodPage: React.FC = () => {
                   onClick={() => setQuantity(amount)}
                   className={`h-8 px-3 rounded-lg transition-all ${
                     quantity === amount
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white border-transparent'
                       : 'bg-white/10 border border-white/20 text-white hover:bg-primary-500/20 hover:border-primary-400'
                   }`}
                 >
@@ -461,11 +461,11 @@ const LogFoodPage: React.FC = () => {
                   <p className="text-xs text-white/60">Calories</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-cyan-400">{nutrition.protein}g</p>
+                  <p className="text-2xl font-bold text-primary-400">{nutrition.protein}g</p>
                   <p className="text-xs text-white/60">Protein</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-emerald-400">{nutrition.carbs}g</p>
+                  <p className="text-2xl font-bold text-primary-400">{nutrition.carbs}g</p>
                   <p className="text-xs text-white/60">Carbs</p>
                 </div>
                 <div className="text-center">
@@ -575,7 +575,7 @@ const LogFoodPage: React.FC = () => {
           <Button
             onClick={handleLogFood}
             disabled={isSubmitting}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 disabled:opacity-50"
           >
             {isSubmitting ? (
               <>

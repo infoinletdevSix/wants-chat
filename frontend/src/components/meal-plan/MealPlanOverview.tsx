@@ -164,7 +164,7 @@ export const MealPlanOverview: React.FC<MealPlanOverviewProps> = ({
                   <Button
                     size="sm"
                     onClick={onNavigateToPlanner}
-                    className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+                    className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white"
                   >
                     View Plan
                   </Button>
@@ -190,7 +190,7 @@ export const MealPlanOverview: React.FC<MealPlanOverviewProps> = ({
                 <Button
                   size="sm"
                   onClick={onCreatePlan}
-                  className="gap-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+                  className="gap-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white"
                 >
                   <Plus className="h-4 w-4" />
                   Create Plan
@@ -289,7 +289,7 @@ export const MealPlanOverview: React.FC<MealPlanOverviewProps> = ({
             <div className="flex gap-2">
               <Button
                 onClick={onCreatePlan}
-                className="gap-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+                className="gap-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white"
               >
                 <Plus className="h-4 w-4" />
                 Create Plan

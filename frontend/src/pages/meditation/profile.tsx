@@ -556,7 +556,7 @@ const MeditationProfile: React.FC = () => {
     if (duration) {
       if (duration >= 20) return 'bg-red-500/20 border-red-500/30';
       if (duration >= 10) return 'bg-primary/20 border-primary/30';
-      return 'bg-emerald-500/20 border-emerald-500/30';
+      return 'bg-primary-500/20 border-primary-500/30';
     }
 
     switch (intensity) {
@@ -566,7 +566,7 @@ const MeditationProfile: React.FC = () => {
         return 'bg-primary/20 border-primary/30';
       case 'beginner':
       default:
-        return 'bg-emerald-500/20 border-emerald-500/30';
+        return 'bg-primary-500/20 border-primary-500/30';
     }
   };
 
@@ -635,7 +635,7 @@ const MeditationProfile: React.FC = () => {
           </div>
           <Card className="p-6 text-center bg-white/10 backdrop-blur-xl border border-white/20">
             <p className="text-red-400 mb-4">{error}</p>
-            <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Try Again</Button>
+            <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">Try Again</Button>
           </Card>
         </div>
       </div>
@@ -809,7 +809,7 @@ const MeditationProfile: React.FC = () => {
             </div>
             <Button
               size="sm"
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               onClick={() => navigate('/meditation')}
             >
               Start Session

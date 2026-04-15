@@ -18,11 +18,11 @@ interface RepairGuide {
 }
 
 const CATEGORIES = [
-  { id: 'plumbing', name: 'Plumbing', icon: Droplet, color: 'from-blue-500 to-cyan-500' },
+  { id: 'plumbing', name: 'Plumbing', icon: Droplet, color: 'from-blue-500 to-primary-500' },
   { id: 'electrical', name: 'Electrical', icon: Zap, color: 'from-yellow-500 to-orange-500' },
   { id: 'carpentry', name: 'Carpentry', icon: Home, color: 'from-amber-500 to-orange-500' },
-  { id: 'hvac', name: 'HVAC', icon: Wind, color: 'from-cyan-500 to-blue-500' },
-  { id: 'general', name: 'General', icon: Wrench, color: 'from-primary-500 to-cyan-500' },
+  { id: 'hvac', name: 'HVAC', icon: Wind, color: 'from-primary-500 to-blue-500' },
+  { id: 'general', name: 'General', icon: Wrench, color: 'from-primary-500 to-primary-600' },
 ];
 
 const HomeRepair: React.FC = () => {
@@ -154,7 +154,7 @@ const HomeRepair: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-4">
             <Wrench className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">DIY Home Repair</h1>
@@ -176,7 +176,7 @@ const HomeRepair: React.FC = () => {
             </div>
             <button
               onClick={() => setShowAddModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-5 h-5" />
               Add Guide
@@ -189,7 +189,7 @@ const HomeRepair: React.FC = () => {
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-xl font-medium transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -223,7 +223,7 @@ const HomeRepair: React.FC = () => {
               <p className="text-gray-500">No repair guides found</p>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all"
               >
                 Create Your First Guide
               </button>
@@ -241,7 +241,7 @@ const HomeRepair: React.FC = () => {
                   }`}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-primary-500 to-cyan-500'}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-primary-500 to-primary-600'}`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex gap-2">
@@ -276,7 +276,7 @@ const HomeRepair: React.FC = () => {
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium text-cyan-400 bg-cyan-500/20">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium text-primary-400 bg-primary-500/20">
                       {guide.estimatedTime}
                     </span>
                   </div>
@@ -433,7 +433,7 @@ const HomeRepair: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all"
                   >
                     {editingGuide ? 'Update Guide' : 'Add Guide'}
                   </button>

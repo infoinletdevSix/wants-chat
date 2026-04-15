@@ -77,9 +77,9 @@ const RoomTemperature: React.FC = () => {
   };
 
   const getTemperatureColor = (temp: number) => {
-    if (temp < 0) return 'from-blue-600 to-cyan-600';
-    if (temp < 10) return 'from-cyan-500 to-blue-500';
-    if (temp < 15) return 'from-primary-500 to-cyan-500';
+    if (temp < 0) return 'from-blue-600 to-primary-600';
+    if (temp < 10) return 'from-primary-500 to-blue-500';
+    if (temp < 15) return 'from-primary-500 to-primary-600';
     if (temp < 20) return 'from-green-500 to-primary-500';
     if (temp < 25) return 'from-yellow-500 to-green-500';
     if (temp < 30) return 'from-orange-500 to-yellow-500';
@@ -111,7 +111,7 @@ const RoomTemperature: React.FC = () => {
           className="mb-8"
         >
           <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <Thermometer className="w-10 h-10 text-cyan-400" />
+            <Thermometer className="w-10 h-10 text-primary-400" />
             Room Temperature
           </h1>
           <p className="text-primary-200">Monitor ambient temperature in your environment</p>
@@ -121,7 +121,7 @@ const RoomTemperature: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+          className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
         >
           <div className="flex flex-col items-center mb-8">
             {/* Thermometer Display */}
@@ -187,7 +187,7 @@ const RoomTemperature: React.FC = () => {
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
-                <Thermometer className="w-8 h-8 text-cyan-400" />
+                <Thermometer className="w-8 h-8 text-primary-400" />
               </motion.div>
             </div>
 
@@ -195,7 +195,7 @@ const RoomTemperature: React.FC = () => {
             <button
               onClick={fetchWeatherData}
               disabled={isLoading}
-              className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <span className="flex items-center gap-2">
@@ -216,11 +216,11 @@ const RoomTemperature: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Temperature Scale</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600"></div>
+                <div className="w-12 h-3 rounded-full bg-gradient-to-r from-blue-600 to-primary-600"></div>
                 <span className="text-primary-200 text-sm">Below 0°C - Freezing</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-3 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500"></div>
+                <div className="w-12 h-3 rounded-full bg-gradient-to-r from-primary-500 to-primary-600"></div>
                 <span className="text-primary-200 text-sm">0°C - 15°C - Cold</span>
               </div>
               <div className="flex items-center gap-3">
@@ -240,10 +240,10 @@ const RoomTemperature: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+            className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
           >
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <MapPin className="w-6 h-6 text-cyan-400" />
+              <MapPin className="w-6 h-6 text-primary-400" />
               Weather Information
             </h2>
 
@@ -266,7 +266,7 @@ const RoomTemperature: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center gap-3 mb-2">
-                  <Wind className="w-5 h-5 text-cyan-400" />
+                  <Wind className="w-5 h-5 text-primary-400" />
                   <span className="text-primary-200 text-sm">Wind Speed</span>
                 </div>
                 <div className="text-3xl font-bold text-white">{weatherData.windSpeed}</div>

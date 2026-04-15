@@ -31,7 +31,7 @@ const PERSON_COLORS = [
   'bg-purple-500',
   'bg-orange-500',
   'bg-pink-500',
-  'bg-cyan-500',
+  'bg-primary-500',
   'bg-yellow-500',
   'bg-red-500',
 ];
@@ -482,7 +482,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
           <button
             onClick={assignChores}
             disabled={people.length === 0 || chores.length === 0 || isSpinning}
-            className={`flex-1 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-primary-500/30 flex items-center justify-center gap-2 ${
+            className={`flex-1 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-primary-500/30 flex items-center justify-center gap-2 ${
               people.length === 0 || chores.length === 0 || isSpinning ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >

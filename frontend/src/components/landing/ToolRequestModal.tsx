@@ -130,11 +130,11 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
               <div className="flex items-center justify-between gap-4">
                 {/* Left: Title and count */}
                 <div className="flex items-center gap-3 flex-shrink-0">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center">
                     <Grid3X3 className="w-4 h-4 text-white" />
                   </div>
                   <h2 className="text-xl font-semibold text-white">All Tools</h2>
-                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-medium">
+                  <span className="px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium">
                     {totalToolsCount} tools available
                   </span>
                 </div>
@@ -143,13 +143,13 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                 <div className="hidden lg:flex items-center gap-4 flex-1 justify-end mr-4">
                   <p className="text-sm text-gray-400">
                     <span className="text-white font-medium">Can't find what you need?</span>{' '}
-                    <span className="text-emerald-400">Request a contextual UI and we'll deliver it within a short period to your email.</span>
+                    <span className="text-primary-400">Request a contextual UI and we'll deliver it within a short period to your email.</span>
                   </p>
                   <motion.button
                     onClick={() => setShowRequestForm(true)}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-medium text-sm hover:from-emerald-600 hover:to-cyan-600 transition-all shadow-md shadow-emerald-500/20 whitespace-nowrap"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium text-sm hover:from-primary-600 hover:to-primary-700 transition-all shadow-md shadow-primary-500/20 whitespace-nowrap"
                   >
                     <Sparkles className="w-4 h-4" />
                     Request a Tool
@@ -169,13 +169,13 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
               <div className="lg:hidden mt-3 pt-3 border-t border-gray-800/50 flex items-center justify-between gap-3">
                 <p className="text-xs text-gray-400">
                   <span className="text-white font-medium">Can't find what you need?</span>{' '}
-                  <span className="text-emerald-400">Request a tool</span>
+                  <span className="text-primary-400">Request a tool</span>
                 </p>
                 <motion.button
                   onClick={() => setShowRequestForm(true)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-medium text-xs hover:from-emerald-600 hover:to-cyan-600 transition-all whitespace-nowrap"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium text-xs hover:from-primary-600 hover:to-primary-700 transition-all whitespace-nowrap"
                 >
                   <Sparkles className="w-3 h-3" />
                   Request
@@ -220,8 +220,8 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                         animate={{ opacity: 1, scale: 1 }}
                         className="flex flex-col items-center py-6"
                       >
-                        <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center mb-3">
-                          <Check className="w-7 h-7 text-emerald-400" />
+                        <div className="w-14 h-14 rounded-full bg-primary-500/20 flex items-center justify-center mb-3">
+                          <Check className="w-7 h-7 text-primary-400" />
                         </div>
                         <h4 className="text-lg font-medium text-white mb-1">Request Submitted!</h4>
                         <p className="text-gray-400 text-sm text-center">
@@ -240,7 +240,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@example.com"
                             required
-                            className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-colors"
+                            className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-colors"
                           />
                         </div>
                         <div>
@@ -253,7 +253,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                             placeholder="e.g., Crypto Portfolio Tracker that shows real-time prices..."
                             required
                             rows={3}
-                            className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-colors resize-none"
+                            className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-colors resize-none"
                           />
                         </div>
                         <motion.button
@@ -261,7 +261,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                           disabled={isSubmitting || !email.trim() || !toolDescription.trim()}
                           whileHover={{ scale: 1.01 }}
                           whileTap={{ scale: 0.99 }}
-                          className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-xl font-bold hover:from-emerald-600 hover:to-cyan-600 transition-all shadow-lg shadow-emerald-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-bold hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {isSubmitting ? (
                             <>
@@ -291,7 +291,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                   placeholder="Search tools..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-colors"
+                  className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-colors"
                 />
               </div>
             </div>
@@ -306,7 +306,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                     onClick={() => setSelectedCategory(null)}
                     className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
                       selectedCategory === null
-                        ? 'bg-emerald-500/10 text-emerald-400'
+                        ? 'bg-primary-500/10 text-primary-400'
                         : 'text-gray-400 hover:bg-gray-800/50 hover:text-white'
                     }`}
                   >
@@ -327,7 +327,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                         onClick={() => setSelectedCategory(category.id)}
                         className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
                           selectedCategory === category.id
-                            ? 'bg-emerald-500/10 text-emerald-400'
+                            ? 'bg-primary-500/10 text-primary-400'
                             : 'text-gray-400 hover:bg-gray-800/50 hover:text-white'
                         }`}
                       >
@@ -346,7 +346,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                   <select
                     value={selectedCategory || ''}
                     onChange={(e) => setSelectedCategory(e.target.value || null)}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white focus:outline-none focus:border-emerald-500/50"
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white focus:outline-none focus:border-primary-500/50"
                   >
                     <option value="">All Tools ({totalToolsCount})</option>
                     {toolCategories.map((cat) => (
@@ -376,8 +376,8 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                         animate={{ opacity: 1, y: 0 }}
                         className="flex items-center gap-3 p-3 rounded-xl bg-gray-900/50 border border-gray-800"
                       >
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center text-xl flex-shrink-0 bg-emerald-500/10">
-                          <span className="text-emerald-400">⚡</span>
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center text-xl flex-shrink-0 bg-primary-500/10">
+                          <span className="text-primary-400">⚡</span>
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
@@ -406,7 +406,7 @@ const ToolRequestModal: React.FC<ToolRequestModalProps> = ({ isOpen, onClose }) 
                     </p>
                     <button
                       onClick={() => setShowRequestForm(true)}
-                      className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg font-medium hover:from-emerald-600 hover:to-cyan-600 transition-colors"
+                      className="px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-colors"
                     >
                       Request This Tool
                     </button>

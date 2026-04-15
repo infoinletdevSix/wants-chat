@@ -121,7 +121,7 @@ const STAFF_ROLES: { role: StaffRole; label: string; color: string }[] = [
   { role: 'busser', label: 'Busser', color: 'bg-green-100 text-green-700' },
   { role: 'manager', label: 'Event Manager', color: 'bg-indigo-100 text-indigo-700' },
   { role: 'dishwasher', label: 'Dishwasher', color: 'bg-gray-100 text-gray-700' },
-  { role: 'driver', label: 'Driver', color: 'bg-cyan-100 text-cyan-700' },
+  { role: 'driver', label: 'Driver', color: 'bg-primary-100 text-primary-700' },
 ];
 
 const SHIFT_TYPES: { type: ShiftType; label: string; defaultStart: string; defaultEnd: string }[] = [

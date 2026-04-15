@@ -21,7 +21,7 @@ const TodayGoals: React.FC<TodayGoalsProps> = ({
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <span className="text-sm text-muted-foreground">Track meals</span>
-          <Badge className="bg-emerald-100 text-emerald-800">
+          <Badge className="bg-primary-100 text-primary-800">
             <Icon path={mdiTarget} size={0.5} className="mr-1" />
             Complete
           </Badge>

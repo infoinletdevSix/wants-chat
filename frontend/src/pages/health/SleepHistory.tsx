@@ -161,7 +161,7 @@ const SleepHistory: React.FC = () => {
           </div>
           <Button
             onClick={() => navigate('/health/add-sleep-log')}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500"
+            className="bg-gradient-to-r from-primary-500 to-primary-600"
           >
             <Plus className="w-4 h-4 mr-2" />
             Log Sleep
@@ -260,7 +260,7 @@ const SleepHistory: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/health/add-sleep-log')}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-primary-600"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Log Your First Sleep

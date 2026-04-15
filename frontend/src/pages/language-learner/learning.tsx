@@ -206,7 +206,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
         'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-500/30 shadow-md';
     } else if (isUnitCurrent(unit)) {
       baseStyle +=
-        'bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border-primary-500/50 shadow-md ring-2 ring-primary-500/30';
+        'bg-gradient-to-r from-primary-500/20 to-primary-500/20 border-primary-500/50 shadow-md ring-2 ring-primary-500/30';
     } else if (isUnitUnlocked(unit)) {
       baseStyle += 'border-white/20 hover:border-primary-400/50';
     } else {
@@ -367,7 +367,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
           </div>
           <div className="h-3 bg-white/10 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
+              className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300"
               style={{ width: `${(lessonStats as any).overallProgress}%` }}
             />
           </div>
@@ -456,7 +456,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
                             return completedExercises > 0 && completedExercises < totalExercises && (
                               <div className="h-1 mt-1 bg-white/10 rounded-full overflow-hidden">
                                 <div
-                                  className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full"
+                                  className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"
                                   style={{ width: `${progressPercentage}%` }}
                                 />
                               </div>
@@ -499,7 +499,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
                   </div>
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
+                      className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300"
                       style={{ width: `${unitProgress?.progress_percentage || selectedUnit.user_progress.progress_percentage}%` }}
                     />
                   </div>
@@ -546,7 +546,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
 
                 {/* Action Button */}
                 <Button
-                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                   disabled={selectedUnit.is_locked}
                   size="lg"
                   onClick={() => {
@@ -574,7 +574,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
             ) : error ? (
               <div className="text-center py-8">
                 <div className="text-red-400 mb-4">{error}</div>
-                <Button onClick={() => refetchUnits()} size="sm" className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
+                <Button onClick={() => refetchUnits()} size="sm" className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
                   Try Again
                 </Button>
               </div>

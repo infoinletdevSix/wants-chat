@@ -579,15 +579,15 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
   // Style classes
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     isDark
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     isDark
@@ -613,8 +613,8 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <Dumbbell className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <Dumbbell className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -653,9 +653,9 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-          <Sparkles className="w-4 h-4 text-cyan-500" />
-          <span className="text-sm text-cyan-500 font-medium">{t('tools.membershipManager.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-500 font-medium">{t('tools.membershipManager.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -670,7 +670,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                 onClick={() => { setActiveTab(tab.id as TabType); resetForms(); }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-cyan-600 to-primary-600 text-white shadow-sm'
+                    ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-sm'
                     : isDark
                     ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -691,8 +691,8 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className={`${cardClass} p-4`}>
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-cyan-500/10 rounded-lg">
-                  <Users className="w-5 h-5 text-cyan-500" />
+                <div className="p-2 bg-primary-500/10 rounded-lg">
+                  <Users className="w-5 h-5 text-primary-500" />
                 </div>
                 <div>
                   <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.membershipManager.totalMembers', 'Total Members')}</p>
@@ -763,7 +763,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
           <div className={cardClass}>
             <div className="p-4 border-b border-gray-700">
               <h3 className="font-semibold flex items-center gap-2">
-                <Clock className="w-5 h-5 text-cyan-500" />
+                <Clock className="w-5 h-5 text-primary-500" />
                 {t('tools.membershipManager.recentCheckIns', 'Recent Check-ins')}
               </h3>
             </div>
@@ -783,7 +783,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                       {!checkIn.checkOutTime && (
                         <button
                           onClick={() => checkOutMember(checkIn.id)}
-                          className="px-3 py-1 bg-cyan-500/10 text-cyan-500 rounded-lg text-sm hover:bg-cyan-500/20"
+                          className="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-lg text-sm hover:bg-primary-500/20"
                         >
                           {t('tools.membershipManager.checkOut', 'Check Out')}
                         </button>
@@ -1016,7 +1016,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                           )}
                         </div>
                         <div className={`text-sm mt-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-                          <span className="text-cyan-500 font-medium">{member.membershipType}</span>
+                          <span className="text-primary-500 font-medium">{member.membershipType}</span>
                           {' - '}
                           Expires: {new Date(member.expiryDate).toLocaleDateString()}
                         </div>
@@ -1150,7 +1150,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                     {plan.isActive ? t('tools.membershipManager.active5', 'Active') : t('tools.membershipManager.inactive', 'Inactive')}
                   </span>
                 </div>
-                <p className="text-3xl font-bold text-cyan-500 mb-3">${plan.price.toFixed(2)}</p>
+                <p className="text-3xl font-bold text-primary-500 mb-3">${plan.price.toFixed(2)}</p>
                 <p className={`text-sm mb-3 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{plan.description}</p>
                 {plan.features.length > 0 && (
                   <ul className="space-y-1 mb-4">
@@ -1256,7 +1256,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                     {!checkIn.checkOutTime && (
                       <button
                         onClick={() => checkOutMember(checkIn.id)}
-                        className="px-3 py-1.5 bg-cyan-500/10 text-cyan-500 rounded-lg text-sm hover:bg-cyan-500/20"
+                        className="px-3 py-1.5 bg-primary-500/10 text-primary-500 rounded-lg text-sm hover:bg-primary-500/20"
                       >
                         {t('tools.membershipManager.checkOut2', 'Check Out')}
                       </button>
@@ -1559,7 +1559,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                         </p>
                       </div>
                       {cls.price > 0 && (
-                        <span className="text-cyan-500 font-bold">${cls.price}</span>
+                        <span className="text-primary-500 font-bold">${cls.price}</span>
                       )}
                     </div>
                   </div>

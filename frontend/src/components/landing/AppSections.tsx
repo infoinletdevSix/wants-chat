@@ -47,7 +47,7 @@ export const AllModulesSection: React.FC = () => {
         'Meal Planning',
         'Category Management'
       ],
-      bgGradient: 'from-green-500/10 to-emerald-500/10',
+      bgGradient: 'from-green-500/10 to-primary-500/10',
       route: '/recipe-builder'
     },
     {
@@ -69,7 +69,7 @@ export const AllModulesSection: React.FC = () => {
         'Interactive Charts',
         'Rate Alert System'
       ],
-      bgGradient: 'from-cyan-500/10 to-blue-500/10',
+      bgGradient: 'from-primary-500/10 to-blue-500/10',
       route: '/currency-exchange'
     },
     {
@@ -157,7 +157,7 @@ export const AllModulesSection: React.FC = () => {
         'Community Features',
         'Post Analytics'
       ],
-      bgGradient: 'from-cyan-500/10 to-primary-500/10',
+      bgGradient: 'from-primary-500/10 to-primary-500/10',
       route: '/changelog'
     }
   ];
@@ -176,7 +176,7 @@ export const AllModulesSection: React.FC = () => {
     <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, -80, 0],
           y: [0, 60, 0],
@@ -280,7 +280,7 @@ export const AllModulesSection: React.FC = () => {
                     </div>
 
                     <Button
-                      className="w-fit group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                      className="w-fit group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                       onClick={() => window.location.href = `/products#${currentModule.id}`}
                     >
                       Explore {currentModule.title.split(' ')[0]}
@@ -423,7 +423,7 @@ export const TravelPlannerSection: React.FC = () => {
     <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, -60, 0],
           y: [0, 80, 0],
@@ -671,7 +671,7 @@ export const TravelPlannerSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               onClick={() => window.location.href = '/travel-planner'}
             >
               Explore 3D Travel Globe

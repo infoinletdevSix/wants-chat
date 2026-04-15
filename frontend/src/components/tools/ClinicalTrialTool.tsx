@@ -676,7 +676,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
   const getPhaseColor = (phase: string) => {
     switch (phase) {
       case 'I': return 'bg-blue-500/20 text-blue-400';
-      case 'II': return 'bg-cyan-500/20 text-cyan-400';
+      case 'II': return 'bg-primary-500/20 text-primary-400';
       case 'III': return 'bg-purple-500/20 text-purple-400';
       case 'IV': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
@@ -686,15 +686,15 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -704,7 +704,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+      ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
       : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-800'
   }`;
 
@@ -713,8 +713,8 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <FlaskConical className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <FlaskConical className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -759,8 +759,8 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 text-center">
-            <FlaskConical className="w-6 h-6 mx-auto mb-2 text-cyan-500" />
-            <p className="text-2xl font-bold text-cyan-500">{stats.totalTrials}</p>
+            <FlaskConical className="w-6 h-6 mx-auto mb-2 text-primary-500" />
+            <p className="text-2xl font-bold text-primary-500">{stats.totalTrials}</p>
             <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.clinicalTrial.totalTrials', 'Total Trials')}</p>
           </div>
         </div>
@@ -866,13 +866,13 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
             <div className="max-h-[600px] overflow-y-auto">
               {isLoading ? (
                 <div className="p-8 text-center">
-                  <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                  <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
                 </div>
               ) : filteredTrials.length === 0 ? (
                 <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                   <FlaskConical className="w-12 h-12 mx-auto mb-3 opacity-50" />
                   <p>{t('tools.clinicalTrial.noTrialsFound', 'No trials found')}</p>
-                  <button onClick={() => { setTrialFormData(createNewTrial()); setShowTrialModal(true); }} className="mt-3 text-cyan-500 hover:text-cyan-400">
+                  <button onClick={() => { setTrialFormData(createNewTrial()); setShowTrialModal(true); }} className="mt-3 text-primary-500 hover:text-primary-400">
                     {t('tools.clinicalTrial.createYourFirstTrial', '+ Create your first trial')}
                   </button>
                 </div>
@@ -884,7 +884,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                       onClick={() => { setSelectedTrial(trial); setSelectedParticipant(null); }}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedTrial?.id === trial.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
@@ -980,11 +980,11 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                     <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-medium">{t('tools.clinicalTrial.enrollmentProgress', 'Enrollment Progress')}</span>
-                        <span className="text-sm text-cyan-500">{trialStats.enrolled} / {selectedTrial.targetEnrollment}</span>
+                        <span className="text-sm text-primary-500">{trialStats.enrolled} / {selectedTrial.targetEnrollment}</span>
                       </div>
                       <div className="w-full bg-gray-600/30 rounded-full h-3">
                         <div
-                          className="bg-gradient-to-r from-cyan-500 to-primary-500 h-3 rounded-full transition-all"
+                          className="bg-gradient-to-r from-primary-500 to-primary-600 h-3 rounded-full transition-all"
                           style={{ width: `${Math.min(trialStats.enrollmentRate, 100)}%` }}
                         ></div>
                       </div>
@@ -1000,7 +1000,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                         {trialStats.armBreakdown.map((arm, idx) => (
                           <div key={idx} className={`p-3 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                             <p className="font-medium">{arm.name}</p>
-                            <p className="text-2xl font-bold text-cyan-500">{arm.count}</p>
+                            <p className="text-2xl font-bold text-primary-500">{arm.count}</p>
                           </div>
                         ))}
                       </div>
@@ -1010,7 +1010,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                   {/* Participants List */}
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <Users className="w-4 h-4 text-cyan-500" />
+                      <Users className="w-4 h-4 text-primary-500" />
                       Participants ({selectedTrial.participants.length})
                     </h3>
                     {selectedTrial.participants.length === 0 ? (
@@ -1025,14 +1025,14 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                             onClick={() => setSelectedParticipant(participant)}
                             className={`p-3 rounded-lg cursor-pointer transition-colors ${
                               selectedParticipant?.id === participant.id
-                                ? 'bg-cyan-500/20 border border-cyan-500/30'
+                                ? 'bg-primary-500/20 border border-primary-500/30'
                                 : theme === 'dark' ? 'bg-gray-700/50 hover:bg-gray-700' : 'bg-gray-50 hover:bg-gray-100'
                             }`}
                           >
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-3">
                                 <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-200'}`}>
-                                  <User className="w-4 h-4 text-cyan-500" />
+                                  <User className="w-4 h-4 text-primary-500" />
                                 </div>
                                 <div>
                                   <p className="font-medium text-sm">{participant.patientName || participant.participantId}</p>
@@ -1090,7 +1090,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
             <div className="p-4 space-y-4">
               <div className="text-center">
                 <div className={`w-16 h-16 rounded-full mx-auto mb-3 flex items-center justify-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                  <User className="w-8 h-8 text-cyan-500" />
+                  <User className="w-8 h-8 text-primary-500" />
                 </div>
                 <p className="font-bold text-lg">{selectedParticipant.patientName || 'Unnamed'}</p>
                 <p className="text-sm text-gray-400">{selectedParticipant.participantId}</p>
@@ -1141,13 +1141,13 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                   onClick={() => toggleSection('visits')}
                 >
                   <h3 className="font-semibold flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-cyan-500" />
+                    <Calendar className="w-4 h-4 text-primary-500" />
                     Visits ({selectedParticipant.visits.length})
                   </h3>
                   <div className="flex items-center gap-2">
                     <button
                       onClick={(e) => { e.stopPropagation(); setShowVisitModal(true); }}
-                      className="p-1 hover:bg-cyan-500/20 rounded text-cyan-500"
+                      className="p-1 hover:bg-primary-500/20 rounded text-primary-500"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -1482,7 +1482,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {trialFormData.arms.map((arm, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {arm}
                       <button onClick={() => setTrialFormData({ ...trialFormData, arms: trialFormData.arms.filter((_, idx) => idx !== i) })}>
                         <X className="w-3 h-3" />
@@ -1654,7 +1654,7 @@ export const ClinicalTrialTool: React.FC<ClinicalTrialToolProps> = ({ uiConfig }
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {visitFormData.procedures.map((p, i) => (
-                    <span key={i} className="px-2 py-1 text-sm rounded bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-2 py-1 text-sm rounded bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {p} <button onClick={() => setVisitFormData({ ...visitFormData, procedures: visitFormData.procedures.filter((_, idx) => idx !== i) })}><X className="w-3 h-3" /></button>
                     </span>
                   ))}

@@ -25,7 +25,7 @@ export const QualityScoreBadge: React.FC<QualityScoreBadgeProps> = ({
   };
 
   const colorClasses = {
-    green: 'from-green-500 to-emerald-500 text-white',
+    green: 'from-green-500 to-primary-500 text-white',
     yellow: 'from-yellow-500 to-amber-500 text-white',
     red: 'from-red-500 to-rose-500 text-white',
   };

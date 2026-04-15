@@ -20,7 +20,7 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
   
   const getStatusColor = () => {
     if (percentage < 50) return 'text-orange-400';
-    if (percentage >= 100) return 'text-emerald-400';
+    if (percentage >= 100) return 'text-primary-400';
     return 'text-primary-400';
   };
 
@@ -36,8 +36,8 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/20 rounded-lg">
-              <Droplets className="h-6 w-6 text-cyan-400" />
+            <div className="p-2 bg-primary-500/20 rounded-lg">
+              <Droplets className="h-6 w-6 text-primary-400" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white">Water Intake</h3>
@@ -53,7 +53,7 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
               key={index}
               className={`h-16 rounded-lg border-2 transition-all ${
                 index < current
-                  ? 'bg-gradient-to-b from-cyan-500 to-primary-500 border-cyan-400'
+                  ? 'bg-gradient-to-b from-primary-500 to-primary-600 border-primary-400'
                   : 'bg-white/10 backdrop-blur-xl border-white/20'
               }`}
             />
@@ -94,7 +94,7 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
           </Button>
           <Button
             size="sm"
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-primary-500 hover:from-cyan-600 hover:to-primary-600 text-white"
+            className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             onClick={() => onUpdate(Math.min(target, current + 1))}
             disabled={current >= target}
           >

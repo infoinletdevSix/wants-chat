@@ -1235,7 +1235,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
             theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 border border-gray-700' : 'bg-white hover:bg-gray-50 border border-gray-200 shadow-sm'
           }`}
         >
-          <Printer className="w-6 h-6 text-cyan-500" />
+          <Printer className="w-6 h-6 text-primary-500" />
           <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
             Copy/Print
           </span>
@@ -1477,7 +1477,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
                 rental: 'bg-primary-500',
                 shipping: 'bg-blue-500',
                 notary: 'bg-purple-500',
-                copyPrint: 'bg-cyan-500',
+                copyPrint: 'bg-primary-500',
                 fax: 'bg-indigo-500',
                 key: 'bg-amber-500',
                 other: 'bg-gray-500',

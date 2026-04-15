@@ -135,7 +135,7 @@ const StreakCounter: React.FC<StreakCounterProps> = ({
               <div className="text-center">
                 <Badge 
                   variant="secondary" 
-                  className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400"
+                  className="bg-primary-100 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400"
                 >
                   Goal Reached! 🎉
                 </Badge>

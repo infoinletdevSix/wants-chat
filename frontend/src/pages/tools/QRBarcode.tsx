@@ -76,7 +76,7 @@ export default function QRBarcode() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-2">
               QR & Barcode Generator
             </h1>
             <p className="text-gray-400">Generate QR codes and barcodes instantly</p>
@@ -84,11 +84,11 @@ export default function QRBarcode() {
 
           <Tabs defaultValue="qr" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="qr" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="qr" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <QrCode className="w-4 h-4 mr-2" />
                 QR Code
               </TabsTrigger>
-              <TabsTrigger value="barcode" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="barcode" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Barcode className="w-4 h-4 mr-2" />
                 Barcode
               </TabsTrigger>
@@ -170,7 +170,7 @@ export default function QRBarcode() {
                       </div>
                       <button
                         onClick={downloadQRCode}
-                        className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                        className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                       >
                         <Download className="w-4 h-4" />
                         Download QR Code
@@ -226,7 +226,7 @@ export default function QRBarcode() {
                       </div>
                       <button
                         onClick={downloadBarcode}
-                        className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                        className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                       >
                         <Download className="w-4 h-4" />
                         Download Barcode

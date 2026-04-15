@@ -852,7 +852,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
             { label: 'Customers', value: customers.length, color: 'text-blue-500' },
             { label: 'Properties', value: properties.length, color: 'text-green-500' },
             { label: 'Scheduled', value: jobs.filter(j => j.status === 'scheduled').length, color: 'text-yellow-500' },
-            { label: 'Completed', value: jobs.filter(j => j.status === 'completed').length, color: 'text-emerald-500' },
+            { label: 'Completed', value: jobs.filter(j => j.status === 'completed').length, color: 'text-primary-500' },
             { label: 'Crew', value: crewMembers.filter(c => c.available).length, color: 'text-purple-500' },
             { label: 'Pending $', value: `$${invoices.filter(i => i.status === 'pending').reduce((sum, i) => sum + i.total, 0).toFixed(0)}`, color: 'text-orange-500' },
           ].map((stat, idx) => (

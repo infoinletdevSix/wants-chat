@@ -421,7 +421,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
       case 'declined':
         return 'bg-red-500/20 text-red-400 border-red-500/30';
       case 'converted':
-        return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
@@ -506,7 +506,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-cyan-600 hover:from-primary-700 hover:to-cyan-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -519,7 +519,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl">
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
             <Scale className="w-8 h-8 text-primary-500" />
           </div>
           <div>
@@ -930,7 +930,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
                 {/* Consultation Section */}
                 <div>
                   <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-cyan-500" />
+                    <Calendar className="w-4 h-4 text-primary-500" />
                     {t('tools.caseIntake.consultation', 'Consultation')}
                   </h3>
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
@@ -1439,7 +1439,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
               } flex items-center justify-between`}
             >
               <h2 className="text-xl font-bold flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-cyan-500" />
+                <Calendar className="w-5 h-5 text-primary-500" />
                 {t('tools.caseIntake.consultation2', 'Consultation')}
               </h2>
               <button

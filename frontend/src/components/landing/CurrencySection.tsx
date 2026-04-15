@@ -110,7 +110,7 @@ const CurrencySection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />

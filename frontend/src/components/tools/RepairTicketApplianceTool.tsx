@@ -384,7 +384,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
       blue: isDark ? 'bg-blue-900/30 text-blue-400 border-blue-700' : 'bg-blue-100 text-blue-800 border-blue-200',
       purple: isDark ? 'bg-purple-900/30 text-purple-400 border-purple-700' : 'bg-purple-100 text-purple-800 border-purple-200',
       orange: isDark ? 'bg-orange-900/30 text-orange-400 border-orange-700' : 'bg-orange-100 text-orange-800 border-orange-200',
-      cyan: isDark ? 'bg-cyan-900/30 text-cyan-400 border-cyan-700' : 'bg-cyan-100 text-cyan-800 border-cyan-200',
+      cyan: isDark ? 'bg-primary-900/30 text-primary-400 border-primary-700' : 'bg-primary-100 text-primary-800 border-primary-200',
       green: isDark ? 'bg-green-900/30 text-green-400 border-green-700' : 'bg-green-100 text-green-800 border-green-200',
       red: isDark ? 'bg-red-900/30 text-red-400 border-red-700' : 'bg-red-100 text-red-800 border-red-200',
     };

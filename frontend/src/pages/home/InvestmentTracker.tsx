@@ -18,12 +18,12 @@ interface Investment {
 }
 
 const INVESTMENT_TYPES = [
-  { id: 'stocks', name: 'Stocks', color: 'from-blue-500 to-cyan-500' },
+  { id: 'stocks', name: 'Stocks', color: 'from-blue-500 to-primary-500' },
   { id: 'crypto', name: 'Cryptocurrency', color: 'from-orange-500 to-amber-500' },
-  { id: 'bonds', name: 'Bonds', color: 'from-emerald-500 to-primary-500' },
+  { id: 'bonds', name: 'Bonds', color: 'from-primary-500 to-primary-600' },
   { id: 'mutual-funds', name: 'Mutual Funds', color: 'from-purple-500 to-pink-500' },
   { id: 'etf', name: 'ETF', color: 'from-indigo-500 to-blue-500' },
-  { id: 'real-estate', name: 'Real Estate', color: 'from-green-500 to-emerald-500' },
+  { id: 'real-estate', name: 'Real Estate', color: 'from-green-500 to-primary-500' },
   { id: 'other', name: 'Other', color: 'from-slate-500 to-gray-500' },
 ];
 
@@ -185,7 +185,7 @@ const InvestmentTracker: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-primary-500 rounded-2xl mb-4">
             <TrendingUp className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Investment Tracker</h1>
@@ -288,7 +288,7 @@ const InvestmentTracker: React.FC = () => {
             </div>
             <button
               onClick={() => setShowAddModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-green-500 to-primary-500 hover:from-green-600 hover:to-primary-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-5 h-5" />
               Add Investment
@@ -301,7 +301,7 @@ const InvestmentTracker: React.FC = () => {
               onClick={() => setSelectedType('all')}
               className={`px-4 py-2 rounded-xl font-medium transition-all ${
                 selectedType === 'all'
-                  ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white'
+                  ? 'bg-gradient-to-r from-green-500 to-primary-500 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -331,7 +331,7 @@ const InvestmentTracker: React.FC = () => {
               <p className="text-gray-500">No investments found</p>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="mt-4 px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-xl font-medium transition-all"
+                className="mt-4 px-6 py-2 bg-gradient-to-r from-green-500 to-primary-500 hover:from-green-600 hover:to-primary-600 text-white rounded-xl font-medium transition-all"
               >
                 Add Your First Investment
               </button>
@@ -347,7 +347,7 @@ const InvestmentTracker: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6 hover:border-primary-500/50 transition-all"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${type?.color || 'from-primary-500 to-cyan-500'}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${type?.color || 'from-primary-500 to-primary-600'}`}>
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex gap-2">
@@ -559,7 +559,7 @@ const InvestmentTracker: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-green-500 to-primary-500 hover:from-green-600 hover:to-primary-600 text-white rounded-xl font-medium transition-all"
                   >
                     {editingInvestment ? 'Update Investment' : 'Add Investment'}
                   </button>

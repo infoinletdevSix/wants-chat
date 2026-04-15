@@ -220,7 +220,7 @@ const MusicPlayer: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-primary-900">
       <BackgroundEffects />
       <Header />
 
@@ -228,13 +228,13 @@ const MusicPlayer: React.FC = () => {
         {/* Header Section */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">Music Player</h1>
-          <p className="text-cyan-300">Enjoy your favorite music</p>
+          <p className="text-primary-300">Enjoy your favorite music</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Player */}
           <div className="lg:col-span-2">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-primary-500/30">
               {/* Album Art & Info */}
               <div className="flex flex-col md:flex-row gap-8 mb-8">
                 <div className="relative group">
@@ -246,7 +246,7 @@ const MusicPlayer: React.FC = () => {
                   <div className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <button
                       onClick={togglePlay}
-                      className="p-6 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white shadow-2xl transform scale-110"
+                      className="p-6 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-2xl transform scale-110"
                     >
                       {isPlaying ? <Pause size={48} /> : <Play size={48} />}
                     </button>
@@ -255,7 +255,7 @@ const MusicPlayer: React.FC = () => {
 
                 <div className="flex-1 flex flex-col justify-center">
                   <h2 className="text-4xl font-bold text-white mb-2">{currentSong.title}</h2>
-                  <p className="text-2xl text-cyan-300 mb-4">{currentSong.artist}</p>
+                  <p className="text-2xl text-primary-300 mb-4">{currentSong.artist}</p>
                   <p className="text-lg text-gray-400 mb-6">{currentSong.album}</p>
 
                   <button
@@ -277,7 +277,7 @@ const MusicPlayer: React.FC = () => {
                 {visualizerData.map((height, index) => (
                   <div
                     key={index}
-                    className="w-full bg-gradient-to-t from-cyan-500 to-primary-400 rounded-full transition-all duration-100"
+                    className="w-full bg-gradient-to-t from-primary-500 to-primary-400 rounded-full transition-all duration-100"
                     style={{ height: `${height}%` }}
                   />
                 ))}
@@ -291,9 +291,9 @@ const MusicPlayer: React.FC = () => {
                   max={duration || 0}
                   value={currentTime}
                   onChange={handleSeek}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-cyan-400"
+                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-400"
                 />
-                <div className="flex justify-between text-sm text-cyan-300 mt-2">
+                <div className="flex justify-between text-sm text-primary-300 mt-2">
                   <span>{formatTime(currentTime)}</span>
                   <span>{formatTime(duration)}</span>
                 </div>
@@ -306,7 +306,7 @@ const MusicPlayer: React.FC = () => {
                     onClick={() => setIsShuffled(!isShuffled)}
                     className={`p-3 rounded-full transition ${
                       isShuffled
-                        ? 'bg-cyan-500/30 text-cyan-400'
+                        ? 'bg-primary-500/30 text-primary-400'
                         : 'bg-white/10 text-white hover:bg-white/20'
                     }`}
                   >
@@ -320,7 +320,7 @@ const MusicPlayer: React.FC = () => {
                   </button>
                   <button
                     onClick={togglePlay}
-                    className="p-5 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white hover:from-cyan-600 hover:to-primary-600 transition shadow-lg"
+                    className="p-5 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 transition shadow-lg"
                   >
                     {isPlaying ? <Pause size={36} /> : <Play size={36} />}
                   </button>
@@ -334,13 +334,13 @@ const MusicPlayer: React.FC = () => {
                     onClick={toggleRepeat}
                     className={`p-3 rounded-full transition relative ${
                       repeatMode !== 'off'
-                        ? 'bg-cyan-500/30 text-cyan-400'
+                        ? 'bg-primary-500/30 text-primary-400'
                         : 'bg-white/10 text-white hover:bg-white/20'
                     }`}
                   >
                     <Repeat size={20} />
                     {repeatMode === 'one' && (
-                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-cyan-400 text-gray-900 rounded-full text-xs flex items-center justify-center font-bold">
+                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-primary-400 text-gray-900 rounded-full text-xs flex items-center justify-center font-bold">
                         1
                       </span>
                     )}
@@ -348,7 +348,7 @@ const MusicPlayer: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <button onClick={toggleMute} className="text-white hover:text-cyan-400 transition">
+                  <button onClick={toggleMute} className="text-white hover:text-primary-400 transition">
                     {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
                   </button>
                   <input
@@ -358,7 +358,7 @@ const MusicPlayer: React.FC = () => {
                     step="0.01"
                     value={isMuted ? 0 : volume}
                     onChange={handleVolumeChange}
-                    className="w-24 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-cyan-400"
+                    className="w-24 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-400"
                   />
                 </div>
               </div>
@@ -369,23 +369,23 @@ const MusicPlayer: React.FC = () => {
 
           {/* Playlist */}
           <div className="lg:col-span-1">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-cyan-500/30">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-primary-500/30">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center gap-2">
                   <List size={24} />
                   Playlist
                 </h3>
-                <span className="text-cyan-300">{songs.length} songs</span>
+                <span className="text-primary-300">{songs.length} songs</span>
               </div>
 
               <div className="mb-4 relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-cyan-400" size={18} />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-primary-400" size={18} />
                 <input
                   type="text"
                   placeholder="Search..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-white/10 border border-cyan-500/30 rounded-xl py-2 pl-10 pr-3 text-white placeholder-cyan-300/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-sm"
+                  className="w-full bg-white/10 border border-primary-500/30 rounded-xl py-2 pl-10 pr-3 text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm"
                 />
               </div>
 
@@ -396,7 +396,7 @@ const MusicPlayer: React.FC = () => {
                     onClick={() => playSong(song)}
                     className={`p-3 rounded-xl cursor-pointer transition ${
                       currentSong.id === song.id
-                        ? 'bg-gradient-to-r from-cyan-500/30 to-primary-500/30 border border-cyan-400'
+                        ? 'bg-gradient-to-r from-primary-500/30 to-primary-500/30 border border-primary-400'
                         : 'bg-white/5 hover:bg-white/10 border border-transparent'
                     }`}
                   >
@@ -408,7 +408,7 @@ const MusicPlayer: React.FC = () => {
                       />
                       <div className="flex-1 min-w-0">
                         <h4 className="text-white font-semibold truncate text-sm">{song.title}</h4>
-                        <p className="text-cyan-300 text-xs truncate">{song.artist}</p>
+                        <p className="text-primary-300 text-xs truncate">{song.artist}</p>
                         <div className="flex items-center justify-between mt-1">
                           <span className="text-xs text-gray-400">{song.duration}</span>
                           <button
@@ -416,7 +416,7 @@ const MusicPlayer: React.FC = () => {
                               e.stopPropagation();
                               toggleFavorite(song.id);
                             }}
-                            className="text-cyan-400 hover:text-red-400 transition"
+                            className="text-primary-400 hover:text-red-400 transition"
                           >
                             <Heart size={14} fill={favorites.includes(song.id) ? 'currentColor' : 'none'} />
                           </button>

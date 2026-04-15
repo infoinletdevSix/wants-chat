@@ -56,7 +56,7 @@ export const UploadMethodSelector: React.FC<UploadMethodSelectorProps> = ({
             onClick={() => onUploadMethodChange(method.id)}
             className={`rounded-xl text-sm h-16 flex flex-col items-center justify-center gap-2 p-4 transition-all duration-200 ${
               uploadMethod === method.id
-                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
                 : 'bg-white/5 border border-white/20 text-white/70 hover:bg-white/10 hover:text-white'
             }`}
           >

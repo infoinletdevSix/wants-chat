@@ -40,7 +40,7 @@ const getCuisineColor = (cuisine: string) => {
     'Chinese': 'from-red-500 to-yellow-500',
     'Japanese': 'from-pink-500 to-purple-500',
     'Thai': 'from-green-500 to-orange-500',
-    'Mediterranean': 'from-blue-500 to-cyan-500',
+    'Mediterranean': 'from-blue-500 to-primary-500',
     'Dessert': 'from-pink-500 to-purple-500',
     'Other': 'from-gray-500 to-gray-600'
   };
@@ -194,7 +194,7 @@ export const RecipeCategories: React.FC<RecipeCategoriesProps> = ({ recipes: pro
                   {(category.difficulties.easy > 0 || category.difficulties.medium > 0 || category.difficulties.hard > 0) && (
                     <div className="flex gap-2 flex-wrap">
                       {category.difficulties.easy > 0 && (
-                        <Badge className="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                        <Badge className="text-xs bg-primary-500/20 text-primary-400 border border-primary-500/30">
                           Easy: {category.difficulties.easy}
                         </Badge>
                       )}

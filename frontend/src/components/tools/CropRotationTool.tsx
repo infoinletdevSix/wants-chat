@@ -65,7 +65,7 @@ const formatDate = (dateString: string) => {
 
 const cropFamilyLabels: Record<CropFamily, { name: string; color: string }> = {
   brassicas: { name: 'Brassicas (Cabbage family)', color: 'bg-green-500' },
-  legumes: { name: 'Legumes (Beans/Peas)', color: 'bg-emerald-500' },
+  legumes: { name: 'Legumes (Beans/Peas)', color: 'bg-primary-500' },
   solanaceae: { name: 'Solanaceae (Nightshades)', color: 'bg-red-500' },
   cucurbits: { name: 'Cucurbits (Squash family)', color: 'bg-yellow-500' },
   alliums: { name: 'Alliums (Onion family)', color: 'bg-purple-500' },
@@ -422,8 +422,8 @@ export function CropRotationTool({
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isDark ? 'bg-emerald-500/20' : 'bg-emerald-100'}`}>
-              <CheckCircle className="w-5 h-5 text-emerald-500" />
+            <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+              <CheckCircle className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cropRotation.goodRotations', 'Good Rotations')}</p>
@@ -436,8 +436,8 @@ export function CropRotationTool({
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isDark ? 'bg-cyan-500/20' : 'bg-cyan-100'}`}>
-              <Leaf className="w-5 h-5 text-cyan-500" />
+            <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+              <Leaf className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cropRotation.avgNBalance', 'Avg N Balance')}</p>

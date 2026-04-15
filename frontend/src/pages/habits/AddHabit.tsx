@@ -312,7 +312,7 @@ const AddHabit: React.FC = () => {
             <AlertCircle className="h-12 w-12 text-red-400 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-white mb-2">Failed to load habit</h2>
             <p className="text-white/60 mb-4">{habitError || 'Unable to fetch habit details'}</p>
-            <Button onClick={() => navigate('/habit-planner')} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+            <Button onClick={() => navigate('/habit-planner')} className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
               Back to Habits
             </Button>
           </div>
@@ -361,7 +361,7 @@ const AddHabit: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/login')}
-                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               >
                 Go to Login
               </Button>
@@ -590,7 +590,7 @@ const AddHabit: React.FC = () => {
                     onClick={() => toggleWeekDay(day)}
                     className={`px-4 py-2 rounded-xl border-2 transition-all ${
                       formData.frequency.includes(day)
-                        ? 'border-primary-400 bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                        ? 'border-primary-400 bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                         : 'border-white/20 text-white/60 hover:border-primary-400 hover:text-white'
                     }`}
                   >
@@ -708,7 +708,7 @@ const AddHabit: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={creating || updating}
-            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 border-0"
+            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 border-0"
           >
             {(creating || updating) ? (
               <>

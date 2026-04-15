@@ -187,10 +187,10 @@ export const SqlFormatterTool: React.FC<SqlFormatterToolProps> = ({
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg">
-            <Database className="w-5 h-5 text-cyan-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Database className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.sqlFormatter.sqlFormatter', 'SQL Formatter')}</h3>
@@ -269,7 +269,7 @@ export const SqlFormatterTool: React.FC<SqlFormatterToolProps> = ({
                 type="checkbox"
                 checked={options.uppercase}
                 onChange={(e) => setOptions({ ...options, uppercase: e.target.checked })}
-                className="w-4 h-4 rounded text-cyan-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <span className="text-sm">{t('tools.sqlFormatter.uppercaseKeywords', 'Uppercase Keywords')}</span>
             </label>
@@ -279,7 +279,7 @@ export const SqlFormatterTool: React.FC<SqlFormatterToolProps> = ({
                 type="checkbox"
                 checked={options.lineBreakBeforeAnd}
                 onChange={(e) => setOptions({ ...options, lineBreakBeforeAnd: e.target.checked })}
-                className="w-4 h-4 rounded text-cyan-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <span className="text-sm">{t('tools.sqlFormatter.lineBreakBeforeAndOr', 'Line Break Before AND/OR')}</span>
             </label>
@@ -316,7 +316,7 @@ export const SqlFormatterTool: React.FC<SqlFormatterToolProps> = ({
               isDark
                 ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+            } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
         </div>
 
@@ -324,7 +324,7 @@ export const SqlFormatterTool: React.FC<SqlFormatterToolProps> = ({
         <div className="flex gap-3">
           <button
             onClick={formatSql}
-            className="flex-1 py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
+            className="flex-1 py-3 px-6 bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600 text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary-500/20"
           >
             <Wand2 className="w-5 h-5" />
             {t('tools.sqlFormatter.formatSql', 'Format SQL')}
@@ -363,7 +363,7 @@ export const SqlFormatterTool: React.FC<SqlFormatterToolProps> = ({
               </button>
             </div>
             <pre className={`p-4 rounded-lg overflow-x-auto font-mono text-sm ${
-              isDark ? 'bg-gray-800 text-cyan-300' : 'bg-gray-50 text-cyan-700'
+              isDark ? 'bg-gray-800 text-primary-300' : 'bg-gray-50 text-primary-700'
             }`}>
               {formatted}
             </pre>

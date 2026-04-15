@@ -160,7 +160,7 @@ export const DisturbanceLogger: React.FC<DisturbanceLoggerProps> = ({
                     size="sm"
                     className={cn(
                       newDisturbance.type === type.value
-                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-transparent'
                         : 'border-white/20'
                     )}
                     onClick={() =>
@@ -189,7 +189,7 @@ export const DisturbanceLogger: React.FC<DisturbanceLoggerProps> = ({
             <Button
               onClick={handleAddDisturbance}
               disabled={!newDisturbance.time}
-              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500"
+              className="w-full bg-gradient-to-r from-primary-500 to-primary-600"
             >
               Add Disturbance
             </Button>

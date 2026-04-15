@@ -166,7 +166,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
     const colors: { [key: string]: string } = {
       Activities: 'bg-sky-400',
       Accommodation: 'bg-blue-400',
-      Dining: 'bg-cyan-400',
+      Dining: 'bg-primary-400',
       Transportation: 'bg-primary-400',
       Shopping: 'bg-indigo-400',
       Other: 'bg-slate-400'
@@ -234,7 +234,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
     <div className="space-y-6">
       {/* Map Section */}
       <Card className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20">
-        <CardHeader className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10">
+        <CardHeader className="bg-gradient-to-r from-primary-500/10 to-primary-500/10">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2 text-white">
               <MapIcon className="h-6 w-6 text-primary-400" />
@@ -245,7 +245,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                 variant={mapView === 'route' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setMapView('route')}
-                className={`rounded-xl ${mapView === 'route' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
+                className={`rounded-xl ${mapView === 'route' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
               >
                 <Route className="h-4 w-4 mr-1" />
                 Full Route
@@ -254,7 +254,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                 variant={mapView === 'activities' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setMapView('activities')}
-                className={`rounded-xl ${mapView === 'activities' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
+                className={`rounded-xl ${mapView === 'activities' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
               >
                 <Layers className="h-4 w-4 mr-1" />
                 Daily Activities

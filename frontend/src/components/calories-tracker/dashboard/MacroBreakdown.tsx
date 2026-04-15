@@ -56,7 +56,7 @@ const MacroBreakdown: React.FC<MacroBreakdownProps> = ({
   const getProgressColor = (color: string) => {
     switch (color) {
       case 'emerald':
-        return 'bg-emerald-500';
+        return 'bg-primary-500';
       case 'blue':
         return 'bg-blue-500';
       case 'orange':
@@ -70,7 +70,7 @@ const MacroBreakdown: React.FC<MacroBreakdownProps> = ({
     const percentage = (consumed / goal) * 100;
     if (percentage < 80) return 'text-orange-400';
     if (percentage > 120) return 'text-red-400';
-    return 'text-emerald-400';
+    return 'text-primary-400';
   };
 
   const totalCalories = macronutrients.reduce((sum, m) => sum + m.calories, 0);
@@ -98,7 +98,7 @@ const MacroBreakdown: React.FC<MacroBreakdownProps> = ({
             
             const getIconBgColor = (color: string) => {
               switch (color) {
-                case 'emerald': return 'bg-emerald-500/20';
+                case 'emerald': return 'bg-primary-500/20';
                 case 'blue': return 'bg-blue-500/20';
                 case 'orange': return 'bg-orange-500/20';
                 default: return 'bg-white/10';
@@ -107,7 +107,7 @@ const MacroBreakdown: React.FC<MacroBreakdownProps> = ({
 
             const getIconTextColor = (color: string) => {
               switch (color) {
-                case 'emerald': return 'text-emerald-400';
+                case 'emerald': return 'text-primary-400';
                 case 'blue': return 'text-blue-400';
                 case 'orange': return 'text-orange-400';
                 default: return 'text-white/60';
@@ -174,7 +174,7 @@ const MacroBreakdown: React.FC<MacroBreakdownProps> = ({
             {macronutrients.map((macro, index) => {
               const getTextColor = (color: string) => {
                 switch (color) {
-                  case 'emerald': return 'text-emerald-400';
+                  case 'emerald': return 'text-primary-400';
                   case 'blue': return 'text-blue-400';
                   case 'orange': return 'text-orange-400';
                   default: return 'text-white';

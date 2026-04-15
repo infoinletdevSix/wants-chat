@@ -111,7 +111,7 @@ const AIFavoritesPage: React.FC = () => {
 
       {favorites.length === 0 ? (
         <Card className="rounded-2xl p-12 text-center bg-white/10 backdrop-blur-xl border border-white/20">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30 flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500/20 to-primary-500/20 border border-primary-500/30 flex items-center justify-center mx-auto mb-6">
             <Star className="h-10 w-10 text-primary-400" />
           </div>
           <h2 className="text-xl font-semibold text-white mb-2">
@@ -122,7 +122,7 @@ const AIFavoritesPage: React.FC = () => {
           </p>
           <Button
             onClick={() => navigate('/travel-planner')}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
           >
             View All Plans
           </Button>
@@ -140,7 +140,7 @@ const AIFavoritesPage: React.FC = () => {
                   {plan.image ? (
                     <img src={plan.image} alt={plan.destination} className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20"></div>
+                    <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-primary-500/20"></div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute top-2 sm:top-4 right-2 sm:right-4">

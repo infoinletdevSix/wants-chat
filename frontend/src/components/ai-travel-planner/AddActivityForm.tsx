@@ -116,7 +116,7 @@ const AddActivityForm: React.FC<AddActivityFormProps> = ({ dayIndex, onSave, onC
           <Button
             size="sm"
             onClick={handleSubmit}
-            className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white text-xs sm:text-sm"
+            className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-xs sm:text-sm"
           >
             <Check className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
             Add Activity

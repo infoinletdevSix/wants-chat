@@ -230,7 +230,7 @@ const MeditationSeries: React.FC = () => {
             lastSessionDate: progressData.last_session_date || enrollment?.last_session_date,
             progressPercentage: progressData.progress_percentage || 0,
             // UI fields
-            accentColor: index % 2 === 0 ? 'primary' : 'emerald-600',
+            accentColor: index % 2 === 0 ? 'primary' : 'primary-600',
             isPremium: program.isPremium || program.is_premium || false,
             instructor: program.instructor || '',
           };
@@ -312,7 +312,7 @@ const MeditationSeries: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner':
-        return 'bg-white/10 backdrop-blur-xl border border-white/20 text-emerald-400';
+        return 'bg-white/10 backdrop-blur-xl border border-white/20 text-primary-400';
       case 'Intermediate':
         return 'bg-white/10 backdrop-blur-xl border border-white/20 text-yellow-400';
       case 'Advanced':
@@ -370,7 +370,7 @@ const MeditationSeries: React.FC = () => {
         <Card className="p-6 text-center bg-white/10 backdrop-blur-xl border border-white/20">
           <Icon path={mdiMeditation} size={2} className="text-white/40 mx-auto mb-4" />
           <p className="text-red-400 mb-4">{error}</p>
-          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Try Again</Button>
+          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">Try Again</Button>
         </Card>
       </div>
     );
@@ -458,7 +458,7 @@ const MeditationSeries: React.FC = () => {
                     </h3>
                     <p className="text-white/60">Pick up where you left off</p>
                   </div>
-                  <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+                  <Badge className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
                     <Play className="h-3 w-3 mr-1" />
                     In Progress
                   </Badge>
@@ -498,13 +498,13 @@ const MeditationSeries: React.FC = () => {
                       </span>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: `${progressPercentage}%` }} />
+                      <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full" style={{ width: `${progressPercentage}%` }} />
                     </div>
                   </div>
 
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                     onClick={() => handleContinueSeries(currentSeries)}
                   >
                     <Play className="h-5 w-5 mr-2" />
@@ -526,7 +526,7 @@ const MeditationSeries: React.FC = () => {
                       Choose a program to begin your mindfulness practice
                     </p>
                   </div>
-                  <Badge className="bg-cyan-500 text-white">
+                  <Badge className="bg-primary-500 text-white">
                     <Zap className="h-3 w-3 mr-1" />
                     Ready to Start
                   </Badge>
@@ -587,7 +587,7 @@ const MeditationSeries: React.FC = () => {
                 )}
               </div>
               <div className="w-full bg-white/10 rounded-full h-2">
-                <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: `${Math.min(((stats?.todayProgress || 0) / (stats?.todayGoal || 20)) * 100, 100)}%` }} />
+                <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full" style={{ width: `${Math.min(((stats?.todayProgress || 0) / (stats?.todayGoal || 20)) * 100, 100)}%` }} />
               </div>
               {!loading && (
                 <p className="text-xs text-white/60">
@@ -687,19 +687,19 @@ const MeditationSeries: React.FC = () => {
                         </Badge>
                       )}
                       {isCompleted && (
-                        <Badge className="bg-emerald-500 text-white text-xs">
+                        <Badge className="bg-primary-500 text-white text-xs">
                           <CheckCircle className="h-3 w-3 mr-1" />
                           Completed
                         </Badge>
                       )}
                       {isStarted && !isCompleted && (
-                        <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white text-xs">
+                        <Badge className="bg-gradient-to-r from-primary-500 to-primary-600 text-white text-xs">
                           <Play className="h-3 w-3 mr-1" />
                           In Progress
                         </Badge>
                       )}
                       {isEnrolled && !isStarted && (
-                        <Badge className="bg-cyan-500 text-white text-xs">
+                        <Badge className="bg-primary-500 text-white text-xs">
                           <BookOpen className="h-3 w-3 mr-1" />
                           Enrolled
                         </Badge>
@@ -719,7 +719,7 @@ const MeditationSeries: React.FC = () => {
                         </span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-1.5">
-                        <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-1.5 rounded-full" style={{ width: `${progressPercentage}%` }} />
+                        <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-1.5 rounded-full" style={{ width: `${progressPercentage}%` }} />
                       </div>
                       {series.lastSessionDate && (
                         <p className="text-xs text-white/60">
@@ -777,7 +777,7 @@ const MeditationSeries: React.FC = () => {
                   <div className="pt-2">
                     {isCompleted ? (
                       <Button
-                        className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+                        className="w-full bg-primary-600 hover:bg-primary-700 text-white"
                         onClick={() => handleStartSeries(series)}
                       >
                         <Award className="h-4 w-4 mr-2" />
@@ -785,7 +785,7 @@ const MeditationSeries: React.FC = () => {
                       </Button>
                     ) : canContinue ? (
                       <Button
-                        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                        className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                         onClick={() => handleContinueSeries(series)}
                       >
                         <Play className="h-4 w-4 mr-2" />
@@ -793,7 +793,7 @@ const MeditationSeries: React.FC = () => {
                       </Button>
                     ) : isEnrolled && !isStarted ? (
                       <Button
-                        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                        className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                         onClick={() => handleStartSeries(series)}
                       >
                         <Play className="h-4 w-4 mr-2" />

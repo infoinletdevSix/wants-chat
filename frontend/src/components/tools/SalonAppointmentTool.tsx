@@ -444,8 +444,8 @@ export const SalonAppointmentTool: React.FC<SalonAppointmentToolProps> = ({
           <Card>
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg">
-                  <DollarSign className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
+                  <DollarSign className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{t('tools.salonAppointment.todaySRevenue', 'Today\'s Revenue')}</p>

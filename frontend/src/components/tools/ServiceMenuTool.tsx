@@ -128,7 +128,7 @@ const getCategoryColorClasses = (category: ServiceCategory) => {
     pink: 'bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-400',
     green: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
     rose: 'bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400',
-    cyan: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400',
+    cyan: 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400',
     amber: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400',
     gray: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300',
   };
@@ -645,8 +645,8 @@ export const ServiceMenuTool: React.FC<ServiceMenuToolProps> = ({
           <Card>
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg">
-                  <DollarSign className="w-5 h-5 text-emerald-600" />
+                <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
+                  <DollarSign className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{t('tools.serviceMenu.avgPrice', 'Avg Price')}</p>

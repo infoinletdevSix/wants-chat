@@ -155,7 +155,7 @@ const MeditationSection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -30, 0], y: [0, -20, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -190,7 +190,7 @@ const MeditationSection: React.FC = () => {
               <div className="p-4 border-b border-white/20 bg-white/10 backdrop-blur-xl">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg shadow-md">
+                    <div className="p-1.5 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg shadow-md">
                       <SelfImprovementIcon className="h-4 w-4 text-white" />
                     </div>
                     <h3 className="text-base font-bold text-white">Meditation Series</h3>
@@ -274,7 +274,7 @@ const MeditationSection: React.FC = () => {
                                   </div>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xl p-2 rounded-lg border border-white/20">
-                                  <TimerIcon className="h-4 w-4 text-cyan-400" />
+                                  <TimerIcon className="h-4 w-4 text-primary-400" />
                                   <div>
                                     <p className="text-xs text-white/60">Duration</p>
                                     <p className="font-bold text-sm text-white">{program.totalDurationMinutes} min</p>
@@ -285,7 +285,7 @@ const MeditationSection: React.FC = () => {
                               {/* Enroll Button */}
                               <Button
                                 onClick={() => navigate(isAuthenticated ? '/meditation/series' : '/login')}
-                                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white py-6 text-base font-semibold rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all"
+                                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white py-6 text-base font-semibold rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all"
                               >
                                 <span className="mr-2 text-xl">🧘‍♀️</span>
                                 {isAuthenticated ? 'View Details' : 'Start Meditation'}
@@ -335,7 +335,7 @@ const MeditationSection: React.FC = () => {
                 <Card className="p-3 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 transform hover:scale-105">
                   <span className="text-2xl mb-1 block">⏱️</span>
                   <p className="text-xs font-semibold text-white/60 mb-0.5">Total Duration</p>
-                  <p className="text-2xl font-bold text-cyan-400">
+                  <p className="text-2xl font-bold text-primary-400">
                     {Math.round((stats.totalDurationMinutes || 0) / 60)}h
                   </p>
                 </Card>

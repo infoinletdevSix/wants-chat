@@ -294,7 +294,7 @@ const getCategoryColor = (category: Service['category']) => {
     case 'nails': return 'bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-400'
     case 'spa': return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
     case 'makeup': return 'bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400'
-    case 'skincare': return 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400'
+    case 'skincare': return 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400'
     default: return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
   }
 }

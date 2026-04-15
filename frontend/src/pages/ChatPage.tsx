@@ -3698,7 +3698,7 @@ Please respond helpfully to continue this branch conversation.`;
                       ? "bg-gradient-to-br from-purple-500 to-blue-500 animate-pulse"
                       : appBuilderProgress.status === 'error'
                       ? "bg-gradient-to-br from-red-500 to-red-600"
-                      : "bg-gradient-to-br from-green-500 to-emerald-500"
+                      : "bg-gradient-to-br from-green-500 to-primary-500"
                   )}>
                     <Code className="w-4 h-4 text-white" />
                   </div>

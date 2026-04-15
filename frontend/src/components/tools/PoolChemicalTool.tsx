@@ -215,7 +215,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
       task: 'Skim surface & empty baskets',
       frequency: 'Daily',
       nextDue: 'Today',
-      icon: <Waves className="w-4 h-4 text-cyan-500" />,
+      icon: <Waves className="w-4 h-4 text-primary-500" />,
     },
     {
       task: 'Brush walls & floor',
@@ -280,10 +280,10 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg">
-            <Droplets className="w-5 h-5 text-cyan-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Droplets className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.poolChemical.poolChemicalCalculator', 'Pool Chemical Calculator')}</h3>
@@ -304,7 +304,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium transition-colors ${
               activeTab === tab.id
-                ? `text-cyan-500 border-b-2 border-cyan-500 ${isDark ? 'bg-gray-800/50' : 'bg-cyan-50/50'}`
+                ? `text-primary-500 border-b-2 border-primary-500 ${isDark ? 'bg-gray-800/50' : 'bg-primary-50/50'}`
                 : `${isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
             }`}
           >
@@ -330,7 +330,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
                     onClick={() => setPoolShape(shape.value)}
                     className={`py-2 px-3 rounded-lg text-sm ${
                       poolShape === shape.value
-                        ? 'bg-cyan-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-800 text-gray-300'
                         : 'bg-gray-100 text-gray-700'
@@ -403,14 +403,14 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
             </div>
 
             {/* Volume Result */}
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className="flex items-center justify-between mb-3">
                 <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.poolChemical.poolVolume', 'Pool Volume')}</h4>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setVolumeUnit('gallons')}
                     className={`px-3 py-1 rounded text-sm ${
-                      volumeUnit === 'gallons' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
+                      volumeUnit === 'gallons' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                     }`}
                   >
                     {t('tools.poolChemical.gallons', 'Gallons')}
@@ -418,7 +418,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
                   <button
                     onClick={() => setVolumeUnit('liters')}
                     className={`px-3 py-1 rounded text-sm ${
-                      volumeUnit === 'liters' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
+                      volumeUnit === 'liters' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                     }`}
                   >
                     {t('tools.poolChemical.liters', 'Liters')}
@@ -426,7 +426,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-500">
+                <div className="text-4xl font-bold text-primary-500">
                   {volumeUnit === 'gallons'
                     ? poolVolume.gallons.toLocaleString()
                     : poolVolume.liters.toLocaleString()}
@@ -541,7 +541,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
                   onClick={() => setSelectedChemical(chem.id as ChemicalType)}
                   className={`py-2 px-3 rounded-lg text-sm ${
                     selectedChemical === chem.id
-                      ? 'bg-cyan-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300'
                       : 'bg-gray-100 text-gray-700'
@@ -702,7 +702,7 @@ export const PoolChemicalTool: React.FC<PoolChemicalToolProps> = ({ uiConfig }) 
         {/* Maintenance Schedule Tab */}
         {activeTab === 'schedule' && (
           <>
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <h4 className={`font-medium mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.poolChemical.recommendedMaintenanceSchedule', 'Recommended Maintenance Schedule')}</h4>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                 {t('tools.poolChemical.keepYourPoolSparklingClean', 'Keep your pool sparkling clean with regular maintenance. Adjust frequency based on usage and weather.')}

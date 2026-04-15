@@ -299,8 +299,8 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-100 rounded-lg">
-              <CreditCard className="w-6 h-6 text-emerald-600" />
+            <div className="p-2 bg-primary-100 rounded-lg">
+              <CreditCard className="w-6 h-6 text-primary-600" />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">{t('tools.creditApplication.creditApplicationTracker', 'Credit Application Tracker')}</h1>
@@ -334,7 +334,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
               key={tab.id}
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`flex items-center gap-2 px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-                activeTab === tab.id ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700'
+                activeTab === tab.id ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
               {tab.icon}
@@ -355,7 +355,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
                   placeholder={t('tools.creditApplication.searchApplications', 'Search applications...')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
             </div>
@@ -378,7 +378,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
               <div className="text-center py-12 bg-white rounded-lg shadow-sm">
                 <CreditCard className="w-12 h-12 mx-auto text-gray-300 mb-4" />
                 <h3 className="text-lg font-medium text-gray-900 mb-2">{t('tools.creditApplication.noApplicationsFound', 'No applications found')}</h3>
-                <button onClick={() => setActiveTab('new')} className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600">
+                <button onClick={() => setActiveTab('new')} className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
                   <Plus className="w-4 h-4" />
                   {t('tools.creditApplication.newApplication', 'New Application')}
                 </button>
@@ -389,7 +389,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
                   <div className="p-4 cursor-pointer hover:bg-gray-50" onClick={() => setExpandedId(expandedId === app.id ? null : app.id)}>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="p-2 bg-emerald-50 rounded-lg">
+                        <div className="p-2 bg-primary-50 rounded-lg">
                           {CREDIT_PRODUCTS.find(p => p.value === app.productType)?.icon}
                         </div>
                         <div>
@@ -465,7 +465,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
                           </select>
                         </div>
                         <div className="flex items-center gap-2">
-                          <button onClick={() => handleEdit(app)} className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-lg">
+                          <button onClick={() => handleEdit(app)} className="p-2 text-primary-600 hover:bg-primary-50 rounded-lg">
                             <Edit2 className="w-4 h-4" />
                           </button>
                           <button onClick={() => handleDelete(app.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg">
@@ -496,10 +496,10 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
                     type="button"
                     onClick={() => setFormData({ ...formData, productType: product.value })}
                     className={`flex items-center gap-3 p-4 rounded-lg border-2 transition-colors ${
-                      formData.productType === product.value ? 'border-emerald-500 bg-emerald-50' : 'border-gray-200 hover:border-gray-300'
+                      formData.productType === product.value ? 'border-primary-500 bg-primary-50' : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
-                    <div className={`p-2 rounded-lg ${formData.productType === product.value ? 'bg-emerald-100' : 'bg-gray-100'}`}>
+                    <div className={`p-2 rounded-lg ${formData.productType === product.value ? 'bg-primary-100' : 'bg-gray-100'}`}>
                       {product.icon}
                     </div>
                     <span className="font-medium text-gray-900">{product.label}</span>
@@ -511,60 +511,60 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.firstName', 'First Name')}</label>
-                <input type="text" value={formData.firstName || ''} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="text" value={formData.firstName || ''} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.lastName', 'Last Name')}</label>
-                <input type="text" value={formData.lastName || ''} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="text" value={formData.lastName || ''} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.email', 'Email')}</label>
-                <input type="email" value={formData.email || ''} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="email" value={formData.email || ''} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.phone', 'Phone')}</label>
-                <input type="tel" value={formData.phone || ''} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="tel" value={formData.phone || ''} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.requestedCreditLimit', 'Requested Credit Limit')}</label>
-                <input type="number" value={formData.requestedLimit || ''} onChange={(e) => setFormData({ ...formData, requestedLimit: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="number" value={formData.requestedLimit || ''} onChange={(e) => setFormData({ ...formData, requestedLimit: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.annualIncome', 'Annual Income')}</label>
-                <input type="number" value={formData.annualIncome || ''} onChange={(e) => setFormData({ ...formData, annualIncome: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="number" value={formData.annualIncome || ''} onChange={(e) => setFormData({ ...formData, annualIncome: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.creditScore', 'Credit Score')}</label>
-                <input type="number" value={formData.creditScore || ''} onChange={(e) => setFormData({ ...formData, creditScore: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="number" value={formData.creditScore || ''} onChange={(e) => setFormData({ ...formData, creditScore: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.employer', 'Employer')}</label>
-                <input type="text" value={formData.employer || ''} onChange={(e) => setFormData({ ...formData, employer: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="text" value={formData.employer || ''} onChange={(e) => setFormData({ ...formData, employer: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.yearsEmployed', 'Years Employed')}</label>
-                <input type="number" value={formData.yearsEmployed || ''} onChange={(e) => setFormData({ ...formData, yearsEmployed: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="number" value={formData.yearsEmployed || ''} onChange={(e) => setFormData({ ...formData, yearsEmployed: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.existingDebt', 'Existing Debt')}</label>
-                <input type="number" value={formData.existingDebt || ''} onChange={(e) => setFormData({ ...formData, existingDebt: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+                <input type="number" value={formData.existingDebt || ''} onChange={(e) => setFormData({ ...formData, existingDebt: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.creditApplication.notes', 'Notes')}</label>
-              <textarea value={formData.notes || ''} onChange={(e) => setFormData({ ...formData, notes: e.target.value })} rows={3} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" />
+              <textarea value={formData.notes || ''} onChange={(e) => setFormData({ ...formData, notes: e.target.value })} rows={3} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
             </div>
 
             <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
               <button onClick={() => { setFormData(getInitialFormState()); setEditingId(null); }} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.creditApplication.cancel', 'Cancel')}</button>
-              <button onClick={handleSubmit} className="flex items-center gap-2 px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600">
+              <button onClick={handleSubmit} className="flex items-center gap-2 px-6 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
                 <Save className="w-4 h-4" />
                 {editingId ? t('tools.creditApplication.update', 'Update') : t('tools.creditApplication.submit', 'Submit')}
               </button>
@@ -586,7 +586,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="text-sm text-gray-500">{t('tools.creditApplication.totalCreditApproved', 'Total Credit Approved')}</div>
-              <div className="text-2xl font-bold text-emerald-600">{formatCurrency(analytics.totalApproved)}</div>
+              <div className="text-2xl font-bold text-primary-600">{formatCurrency(analytics.totalApproved)}</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="text-sm text-gray-500">{t('tools.creditApplication.approvalRate', 'Approval Rate')}</div>
@@ -605,7 +605,7 @@ export const CreditApplicationTool: React.FC<CreditApplicationToolProps> = ({
                     <div key={key} className="flex items-center gap-3">
                       <div className={`w-28 px-2 py-0.5 rounded-full text-xs font-medium ${config.color}`}>{config.label}</div>
                       <div className="flex-1 bg-gray-200 rounded-full h-3">
-                        <div className="bg-emerald-500 h-3 rounded-full" style={{ width: `${pct}%` }} />
+                        <div className="bg-primary-500 h-3 rounded-full" style={{ width: `${pct}%` }} />
                       </div>
                       <div className="w-10 text-right text-sm font-medium">{count}</div>
                     </div>

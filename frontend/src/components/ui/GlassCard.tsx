@@ -54,7 +54,7 @@ export const StatCard: React.FC<StatCardProps> = ({
   value,
   change,
   icon,
-  color = "from-primary-500 to-cyan-500",
+  color = "from-primary-500 to-primary-600",
   subtitle
 }) => {
   const isPositive = change && change > 0;
@@ -69,7 +69,7 @@ export const StatCard: React.FC<StatCardProps> = ({
             <div className="flex items-center space-x-1">
               <span className={cn(
                 "text-sm font-medium",
-                isPositive ? "text-emerald-400" : "text-red-400"
+                isPositive ? "text-primary-400" : "text-red-400"
               )}>
                 {isPositive ? "+" : ""}{change}%
               </span>
@@ -145,7 +145,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({
   title,
   description,
   icon,
-  color = "from-primary-500 to-cyan-500",
+  color = "from-primary-500 to-primary-600",
   children,
   onClick
 }) => {

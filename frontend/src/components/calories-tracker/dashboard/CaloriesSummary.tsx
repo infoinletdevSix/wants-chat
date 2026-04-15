@@ -23,7 +23,7 @@ const CaloriesSummary: React.FC<CaloriesSummaryProps> = ({
   const getStatusColor = () => {
     if (progress < 80) return 'text-orange-400';
     if (progress > 110) return 'text-red-400';
-    return 'text-emerald-400';
+    return 'text-primary-400';
   };
 
   const getStatusMessage = () => {
@@ -34,7 +34,7 @@ const CaloriesSummary: React.FC<CaloriesSummaryProps> = ({
   };
 
   return (
-    <Card className="p-6 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
+    <Card className="p-6 bg-gradient-to-br from-primary-500/10 to-primary-500/10 border border-primary-500/20">
       <div className="space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -64,7 +64,7 @@ const CaloriesSummary: React.FC<CaloriesSummaryProps> = ({
           </div>
           <div>
             <p className="text-sm text-white/60">Burned</p>
-            <p className="text-xl font-bold text-emerald-400">-{burned}</p>
+            <p className="text-xl font-bold text-primary-400">-{burned}</p>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ const CaloriesSummary: React.FC<CaloriesSummaryProps> = ({
           </div>
 
           <div className="text-right">
-            <p className={`text-lg font-bold ${isOverGoal ? 'text-red-400' : 'text-emerald-400'}`}>
+            <p className={`text-lg font-bold ${isOverGoal ? 'text-red-400' : 'text-primary-400'}`}>
               {isOverGoal ? `+${Math.abs(remaining)}` : remaining}
             </p>
             <p className="text-xs text-white/60">

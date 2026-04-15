@@ -101,7 +101,7 @@ const WEATHER_CONDITIONS = ['Clear', 'Partly Cloudy', 'Cloudy', 'Overcast', 'Rai
 
 const MAINTENANCE_TYPES = {
   inspection: { label: 'Inspection', color: 'text-blue-500' },
-  cleaning: { label: 'Cleaning', color: 'text-cyan-500' },
+  cleaning: { label: 'Cleaning', color: 'text-primary-500' },
   repair: { label: 'Repair', color: 'text-orange-500' },
   replacement: { label: 'Replacement', color: 'text-red-500' },
   other: { label: 'Other', color: 'text-gray-500' },

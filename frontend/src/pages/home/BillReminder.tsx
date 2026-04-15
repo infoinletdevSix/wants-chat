@@ -19,9 +19,9 @@ interface Bill {
 }
 
 const CATEGORIES = [
-  { id: 'utilities', name: 'Utilities', color: 'from-blue-500 to-cyan-500' },
+  { id: 'utilities', name: 'Utilities', color: 'from-blue-500 to-primary-500' },
   { id: 'rent', name: 'Rent/Mortgage', color: 'from-purple-500 to-pink-500' },
-  { id: 'insurance', name: 'Insurance', color: 'from-emerald-500 to-primary-500' },
+  { id: 'insurance', name: 'Insurance', color: 'from-primary-500 to-primary-600' },
   { id: 'subscription', name: 'Subscriptions', color: 'from-orange-500 to-red-500' },
   { id: 'loan', name: 'Loans', color: 'from-amber-500 to-yellow-500' },
   { id: 'other', name: 'Other', color: 'from-slate-500 to-gray-500' },
@@ -196,7 +196,7 @@ const BillReminder: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-4">
             <Receipt className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Bill Reminder</h1>
@@ -251,7 +251,7 @@ const BillReminder: React.FC = () => {
             </div>
             <button
               onClick={() => setShowAddModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-5 h-5" />
               Add Bill
@@ -265,7 +265,7 @@ const BillReminder: React.FC = () => {
                 onClick={() => setSelectedStatus('all')}
                 className={`px-4 py-2 rounded-xl font-medium transition-all ${
                   selectedStatus === 'all'
-                    ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                     : 'bg-slate-800/50 text-gray-400 hover:text-white'
                 }`}
               >
@@ -309,7 +309,7 @@ const BillReminder: React.FC = () => {
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-xl font-medium transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -339,7 +339,7 @@ const BillReminder: React.FC = () => {
               <p className="text-gray-500">No bills found</p>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all"
               >
                 Add Your First Bill
               </button>
@@ -359,7 +359,7 @@ const BillReminder: React.FC = () => {
                   }`}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-primary-500 to-cyan-500'}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-primary-500 to-primary-600'}`}>
                       <Receipt className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex gap-2">
@@ -393,7 +393,7 @@ const BillReminder: React.FC = () => {
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(bill.status)}`}>
                       {bill.status.charAt(0).toUpperCase() + bill.status.slice(1)}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium text-cyan-400 bg-cyan-500/20">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium text-primary-400 bg-primary-500/20">
                       {bill.frequency}
                     </span>
                     {bill.autoPayEnabled && (
@@ -576,7 +576,7 @@ const BillReminder: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-medium transition-all"
                   >
                     {editingBill ? 'Update Bill' : 'Add Bill'}
                   </button>

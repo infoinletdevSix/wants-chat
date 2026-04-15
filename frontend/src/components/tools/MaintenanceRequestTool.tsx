@@ -71,7 +71,7 @@ const columns: ColumnConfig[] = [
 const CATEGORIES = [
   { value: 'plumbing', label: 'Plumbing', color: 'text-blue-500 bg-blue-500/10' },
   { value: 'electrical', label: 'Electrical', color: 'text-amber-500 bg-amber-500/10' },
-  { value: 'hvac', label: 'HVAC', color: 'text-cyan-500 bg-cyan-500/10' },
+  { value: 'hvac', label: 'HVAC', color: 'text-primary-500 bg-primary-500/10' },
   { value: 'appliance', label: 'Appliance', color: 'text-purple-500 bg-purple-500/10' },
   { value: 'structural', label: 'Structural', color: 'text-red-500 bg-red-500/10' },
   { value: 'pest', label: 'Pest Control', color: 'text-orange-500 bg-orange-500/10' },

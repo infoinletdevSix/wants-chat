@@ -189,7 +189,7 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
       case 'universal':
         return 'text-purple-500';
       case 'glide':
-        return 'text-cyan-500';
+        return 'text-primary-500';
       case 'grip':
         return 'text-orange-500';
       default:
@@ -199,9 +199,9 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Snowflake className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Snowflake className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.skiWax.skiWaxAdvisor', 'Ski Wax Advisor')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.skiWax.getTheRightWaxFor', 'Get the right wax for your conditions')}</p>
@@ -218,14 +218,14 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
           <div className="grid grid-cols-2 gap-2">
             <button
               onClick={() => setSkiType('alpine')}
-              className={`py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${skiType === 'alpine' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${skiType === 'alpine' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <Mountain className="w-4 h-4" />
               {t('tools.skiWax.alpineDownhill', 'Alpine/Downhill')}
             </button>
             <button
               onClick={() => setSkiType('crosscountry')}
-              className={`py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${skiType === 'crosscountry' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-3 px-4 rounded-lg flex items-center justify-center gap-2 ${skiType === 'crosscountry' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <Gauge className="w-4 h-4" />
               {t('tools.skiWax.crossCountry', 'Cross-Country')}
@@ -249,13 +249,13 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
             />
             <button
               onClick={() => setTempUnit('celsius')}
-              className={`px-4 py-2 rounded-lg ${tempUnit === 'celsius' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`px-4 py-2 rounded-lg ${tempUnit === 'celsius' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               °C
             </button>
             <button
               onClick={() => setTempUnit('fahrenheit')}
-              className={`px-4 py-2 rounded-lg ${tempUnit === 'fahrenheit' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`px-4 py-2 rounded-lg ${tempUnit === 'fahrenheit' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               °F
             </button>
@@ -264,7 +264,7 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
 
         {/* Recommendation Result - Alpine */}
         {recommendedWax && skiType === 'alpine' && (
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <div className="flex items-center justify-between mb-3">
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.skiWax.recommendedWax', 'Recommended Wax')}</h4>
               <span className={`font-bold ${getWaxColorClass(recommendedWax.type)}`}>{recommendedWax.name}</span>
@@ -287,7 +287,7 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
         {getXCRecommendations && skiType === 'crosscountry' && (
           <div className="space-y-4">
             {/* Glide Wax */}
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className="flex items-center justify-between mb-3">
                 <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.skiWax.glideWaxTipsTails', 'Glide Wax (Tips & Tails)')}</h4>
                 <span className={`font-bold ${getWaxColorClass(getXCRecommendations.glide.type)}`}>
@@ -319,7 +319,7 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
             <ul className={`space-y-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {recommendedWax.applicationTips.map((tip, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <span className="text-cyan-500 mt-1">•</span>
+                  <span className="text-primary-500 mt-1">•</span>
                   {tip}
                 </li>
               ))}
@@ -350,7 +350,7 @@ export const SkiWaxTool: React.FC<SkiWaxToolProps> = ({
         {/* Frequency Guide */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <Timer className="w-4 h-4 text-cyan-500" />
+            <Timer className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.skiWax.waxingFrequencyGuide', 'Waxing Frequency Guide')}</h4>
           </div>
           <div className="space-y-2">

@@ -22,7 +22,7 @@ const VitalSectionSelector: React.FC<VitalSectionSelectorProps> = ({
             key={section.id}
             className={`cursor-pointer transition-all duration-200 hover:shadow-lg ${
               activeSection === section.id
-                ? 'border-2 border-primary-500 bg-gradient-to-br from-primary-500/20 to-cyan-500/20'
+                ? 'border-2 border-primary-500 bg-gradient-to-br from-primary-500/20 to-primary-500/20'
                 : 'border-2 border-white/10 bg-white/5 hover:border-primary-500/50 hover:bg-white/10'
             }`}
             onClick={() => onSectionChange(section.id)}

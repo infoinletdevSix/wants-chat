@@ -258,7 +258,7 @@ const TravelPlannerSection: React.FC = () => {
     'bg-primary-500/20 text-primary-700 dark:text-primary-300 border-primary-500/30',
     'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border-indigo-500/30',
     'bg-rose-500/20 text-rose-700 dark:text-rose-300 border-rose-500/30',
-    'bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 border-cyan-500/30',
+    'bg-primary-500/20 text-primary-700 dark:text-primary-300 border-primary-500/30',
   ];
 
   const currentDestination = allDestinations[currentDestinationSlide];
@@ -316,7 +316,7 @@ const TravelPlannerSection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -30, 0], y: [0, -20, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -360,7 +360,7 @@ const TravelPlannerSection: React.FC = () => {
               </Button>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl group w-full sm:w-auto text-sm sm:text-base transition-all"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl group w-full sm:w-auto text-sm sm:text-base transition-all"
                 onClick={() => {
                   if (!isAuthenticated) {
                     navigate('/login');
@@ -386,7 +386,7 @@ const TravelPlannerSection: React.FC = () => {
             >
               {/* Budget Label */}
               <div className="flex flex-wrap items-center gap-2">
-                <div className="px-4 py-2 rounded-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+                <div className="px-4 py-2 rounded-full bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-500/30">
                   <span className="text-sm font-bold text-primary-400">{currentDestination.budgetLabel}</span>
                 </div>
                 <span className="text-sm text-white/60">{currentDestination.budgetRange}</span>

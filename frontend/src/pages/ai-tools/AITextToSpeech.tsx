@@ -162,7 +162,7 @@ const AITextToSpeech: React.FC = () => {
             <Button
               onClick={handleGenerate}
               disabled={loading || !text.trim()}
-              className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600"
+              className="w-full bg-gradient-to-r from-green-500 to-primary-500 hover:from-green-600 hover:to-primary-600"
             >
               {loading ? (
                 <>

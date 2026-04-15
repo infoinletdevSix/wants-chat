@@ -247,18 +247,18 @@ export const NetWorthCalculatorTool: React.FC<NetWorthCalculatorToolProps> = ({ 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-emerald-500" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
       </div>
     );
   }
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-500/10 rounded-lg">
-              <PiggyBank className="w-5 h-5 text-emerald-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <PiggyBank className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.netWorthCalculator.netWorthCalculator', 'Net Worth Calculator')}</h3>
@@ -302,9 +302,9 @@ export const NetWorthCalculatorTool: React.FC<NetWorthCalculatorToolProps> = ({ 
         )}
 
         {/* Net Worth Display */}
-        <div className={`p-6 rounded-xl text-center ${calculations.netWorth >= 0 ? (isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-100') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-100')} border`}>
+        <div className={`p-6 rounded-xl text-center ${calculations.netWorth >= 0 ? (isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-100')} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.netWorthCalculator.netWorth', 'Net Worth')}</div>
-          <div className={`text-4xl font-bold my-2 ${calculations.netWorth >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+          <div className={`text-4xl font-bold my-2 ${calculations.netWorth >= 0 ? 'text-primary-500' : 'text-red-500'}`}>
             {calculations.netWorth >= 0 ? <TrendingUp className="w-8 h-8 inline mr-2" /> : <TrendingDown className="w-8 h-8 inline mr-2" />}
             {formatCurrency(calculations.netWorth)}
           </div>

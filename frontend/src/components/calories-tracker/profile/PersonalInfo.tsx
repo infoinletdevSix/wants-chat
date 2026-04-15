@@ -186,7 +186,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({
         </div>
 
         <div className="flex gap-2 pt-4">
-          <Button onClick={handleSave} className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+          <Button onClick={handleSave} className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
             Save Changes
           </Button>
           <Button onClick={onCancel} className="flex-1 bg-white/10 border border-white/20 text-white hover:bg-white/20">

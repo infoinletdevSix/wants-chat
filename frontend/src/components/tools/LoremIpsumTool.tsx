@@ -150,10 +150,10 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <FileText className="w-5 h-5 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <FileText className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.loremIpsum.loremIpsumGenerator', 'Lorem Ipsum Generator')}</h3>
@@ -184,7 +184,7 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
                     onClick={() => setOutputType(type)}
                     className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium capitalize transition-colors ${
                       outputType === type
-                        ? 'bg-emerald-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-white hover:bg-gray-100 text-gray-700 border border-gray-200'
@@ -206,7 +206,7 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
                 max={outputType === 'words' ? 100 : outputType === 'sentences' ? 20 : 10}
                 value={count}
                 onChange={(e) => setCount(parseInt(e.target.value))}
-                className="w-full accent-emerald-500"
+                className="w-full accent-primary-500"
               />
             </div>
 
@@ -216,7 +216,7 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
                   type="checkbox"
                   checked={startWithLorem}
                   onChange={(e) => setStartWithLorem(e.target.checked)}
-                  className="w-4 h-4 rounded text-emerald-500"
+                  className="w-4 h-4 rounded text-primary-500"
                 />
                 <span className="text-sm">{t('tools.loremIpsum.startWithLoremIpsum', 'Start with "Lorem ipsum"')}</span>
               </label>
@@ -248,7 +248,7 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
             className={`flex-1 py-3 rounded-xl font-medium flex items-center justify-center gap-2 transition-all ${
               copied
                 ? 'bg-green-500 text-white'
-                : 'bg-gradient-to-r from-emerald-500 to-primary-500 hover:from-emerald-600 hover:to-primary-600 text-white shadow-lg shadow-emerald-500/20'
+                : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg shadow-primary-500/20'
             }`}
           >
             {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}

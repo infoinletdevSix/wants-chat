@@ -239,7 +239,7 @@ export const AllRecipesList: React.FC = () => {
                       key={restriction}
                       className={`cursor-pointer transition-colors ${
                         dietaryRestrictions.includes(restriction)
-                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                           : 'bg-white/10 text-white/60 border border-white/20 hover:bg-white/20'
                       }`}
                       onClick={() => toggleDietaryRestriction(restriction)}
@@ -321,7 +321,7 @@ export const AllRecipesList: React.FC = () => {
                       onClick={() => setPage(pageNum)}
                       className={`rounded-xl min-w-[40px] ${
                         page === pageNum
-                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                           : 'bg-transparent border border-white/20 text-white hover:bg-white/10'
                       }`}
                     >

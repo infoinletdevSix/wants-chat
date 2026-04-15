@@ -205,7 +205,7 @@ export function ExportDropdown({
               onClick={() => { onExportExcel(); setIsOpen(false); }}
               className={menuItemClass}
             >
-              <FileSpreadsheet className="w-4 h-4 text-emerald-600" />
+              <FileSpreadsheet className="w-4 h-4 text-primary-600" />
               <span>Excel File</span>
               <span className={`ml-auto text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>.xls</span>
             </button>

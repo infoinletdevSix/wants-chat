@@ -23,8 +23,8 @@ const StreakCounter: React.FC<StreakCounterProps> = ({
   const getStreakColor = (streakCount: number) => {
     if (streakCount >= 30) return 'from-orange-500 to-red-500';
     if (streakCount >= 14) return 'from-yellow-500 to-orange-500';
-    if (streakCount >= 7) return 'from-green-500 to-emerald-500';
-    if (streakCount >= 3) return 'from-blue-500 to-cyan-500';
+    if (streakCount >= 7) return 'from-green-500 to-primary-500';
+    if (streakCount >= 3) return 'from-blue-500 to-primary-500';
     return 'from-gray-400 to-gray-500';
   };
 

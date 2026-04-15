@@ -749,7 +749,7 @@ const AddExpense: React.FC = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting || loadingExpenseData}
-                    className="flex-1 h-12 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                    className="flex-1 h-12 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
                   >
                     {isSubmitting ? (
                       <>

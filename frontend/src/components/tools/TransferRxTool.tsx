@@ -280,7 +280,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold flex items-center gap-2">
-            <ArrowLeftRight className="w-7 h-7 text-cyan-500" />
+            <ArrowLeftRight className="w-7 h-7 text-primary-500" />
             {t('tools.transferRx.prescriptionTransfers', 'Prescription Transfers')}
           </h1>
           <p className={`text-sm mt-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -294,7 +294,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
           <ExportDropdown data={filteredTransfers} columns={TRANSFER_COLUMNS} filename="rx-transfers" />
           <button
             onClick={() => { resetForm(); setShowForm(true); setActiveTab('new'); }}
-            className="px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 flex items-center gap-2"
+            className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('tools.transferRx.newTransfer', 'New Transfer')}
@@ -306,7 +306,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-1">
-            <ArrowLeftRight className="w-5 h-5 text-cyan-500" />
+            <ArrowLeftRight className="w-5 h-5 text-primary-500" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.transferRx.today', 'Today')}</span>
           </div>
           <p className="text-2xl font-bold">{stats.todayTransfers}</p>
@@ -357,7 +357,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
             }}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors ${
               activeTab === tab.id
-                ? 'bg-cyan-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
             }`}
           >
@@ -464,7 +464,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
                         <div className="flex justify-end gap-1">
                           <button
                             onClick={() => setSelectedTransfer(transfer)}
-                            className="p-1.5 text-gray-500 hover:text-cyan-500 hover:bg-cyan-50 rounded"
+                            className="p-1.5 text-gray-500 hover:text-primary-500 hover:bg-primary-50 rounded"
                             title={t('tools.transferRx.viewDetails', 'View Details')}
                           >
                             <FileText className="w-4 h-4" />
@@ -557,7 +557,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
           {/* Patient Info */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <User className="w-5 h-5 text-cyan-500" />
+              <User className="w-5 h-5 text-primary-500" />
               {t('tools.transferRx.patientInformation', 'Patient Information')}
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -605,7 +605,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
           {/* Prescription Info */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Pill className="w-5 h-5 text-cyan-500" />
+              <Pill className="w-5 h-5 text-primary-500" />
               {t('tools.transferRx.prescriptionInformation', 'Prescription Information')}
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -634,7 +634,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
                     type="checkbox"
                     checked={formData.isControlled}
                     onChange={(e) => setFormData({ ...formData, isControlled: e.target.checked })}
-                    className="w-4 h-4 rounded border-gray-300 text-cyan-600"
+                    className="w-4 h-4 rounded border-gray-300 text-primary-600"
                   />
                   <span className="text-sm">{t('tools.transferRx.controlledSubstance', 'Controlled Substance')}</span>
                 </label>
@@ -754,7 +754,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
           {/* Prescriber Info */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <User className="w-5 h-5 text-cyan-500" />
+              <User className="w-5 h-5 text-primary-500" />
               {t('tools.transferRx.prescriberInformation', 'Prescriber Information')}
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -812,7 +812,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
           {/* Other Pharmacy Info */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Building className="w-5 h-5 text-cyan-500" />
+              <Building className="w-5 h-5 text-primary-500" />
               {formData.type === 'incoming' ? t('tools.transferRx.transferringFrom', 'Transferring From') : t('tools.transferRx.transferringTo', 'Transferring To')} Pharmacy
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -870,7 +870,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
           {/* Transfer Details */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <FileText className="w-5 h-5 text-cyan-500" />
+              <FileText className="w-5 h-5 text-primary-500" />
               {t('tools.transferRx.transferDetails2', 'Transfer Details')}
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -917,7 +917,7 @@ const TransferRxTool: React.FC<TransferRxToolProps> = ({ uiConfig }) => {
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 flex items-center justify-center gap-2"
+              className="flex-1 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center justify-center gap-2"
             >
               <Save className="w-4 h-4" />
               {editingTransfer ? t('tools.transferRx.updateTransfer', 'Update Transfer') : t('tools.transferRx.createTransfer', 'Create Transfer')}

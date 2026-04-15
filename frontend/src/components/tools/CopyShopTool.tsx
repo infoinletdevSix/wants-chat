@@ -652,9 +652,9 @@ export function CopyShopTool({
           </div>
           <p className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{todayStats.rushCount}</p>
         </div>
-        <div className={`p-4 rounded-xl ${theme === 'dark' ? 'bg-gray-700' : 'bg-emerald-50'}`}>
+        <div className={`p-4 rounded-xl ${theme === 'dark' ? 'bg-gray-700' : 'bg-primary-50'}`}>
           <div className="flex items-center gap-2 mb-1">
-            <DollarSign className="w-4 h-4 text-emerald-500" />
+            <DollarSign className="w-4 h-4 text-primary-500" />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.copyShop.revenue', 'Revenue')}</span>
           </div>
           <p className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{formatCurrency(todayStats.revenue)}</p>

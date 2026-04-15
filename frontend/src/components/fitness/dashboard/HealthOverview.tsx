@@ -49,7 +49,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
   const getBMIColor = (category: string) => {
     switch (category) {
       case 'Underweight': return 'text-amber-400 bg-amber-500/20';
-      case 'Normal': return 'text-emerald-400 bg-emerald-500/20';
+      case 'Normal': return 'text-primary-400 bg-primary-500/20';
       case 'Overweight': return 'text-orange-400 bg-orange-500/20';
       case 'Obese': return 'text-red-400 bg-red-500/20';
       default: return 'text-white/60 bg-white/10';
@@ -100,7 +100,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'good': return 'text-emerald-400 bg-emerald-500/20';
+      case 'good': return 'text-primary-400 bg-primary-500/20';
       case 'warning': return 'text-amber-400 bg-amber-500/20';
       case 'critical': return 'text-red-400 bg-red-500/20';
       default: return 'text-white/60 bg-white/10';
@@ -161,7 +161,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
             size="sm"
             onClick={() => setUnit('metric')}
             className={unit === 'metric'
-              ? "h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+              ? "h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white"
               : "h-8 bg-white/10 border border-white/20 text-white hover:scale-105 transition-all duration-200"
             }
           >
@@ -171,7 +171,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
             size="sm"
             onClick={() => setUnit('imperial')}
             className={unit === 'imperial'
-              ? "h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+              ? "h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white"
               : "h-8 bg-white/10 border border-white/20 text-white hover:scale-105 transition-all duration-200"
             }
           >
@@ -214,7 +214,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
 
         <Button
           onClick={handleCalculate}
-          className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+          className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
         >
           <Calculator className="h-4 w-4 mr-2" />
           Calculate BMI
@@ -223,7 +223,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
         {/* BMI Result */}
         {bmi > 0 && (
           <>
-            <div className="text-center p-6 bg-gradient-to-br from-primary-500/20 to-cyan-500/10 rounded-lg">
+            <div className="text-center p-6 bg-gradient-to-br from-primary-500/20 to-primary-500/10 rounded-lg">
               <p className="text-sm text-white/60 mb-2">Your BMI</p>
               <div className="text-4xl font-bold text-white mb-2">{bmi}</div>
               <Badge className={`${getBMIColor(bmiCategory)} mb-2`}>
@@ -242,7 +242,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
                 <span>Overweight</span>
                 <span>Obese</span>
               </div>
-              <div className="h-2 bg-gradient-to-r from-amber-500 via-emerald-500 via-orange-500 to-red-500 rounded-full relative">
+              <div className="h-2 bg-gradient-to-r from-amber-500 via-primary-500 via-orange-500 to-red-500 rounded-full relative">
                 <div
                   className="absolute w-3 h-3 bg-white rounded-full -top-0.5 shadow-lg transition-all duration-300"
                   style={{ left: `${Math.min(Math.max((bmi - 15) / 25 * 100, 0), 100)}%`, transform: 'translateX(-50%)' }}

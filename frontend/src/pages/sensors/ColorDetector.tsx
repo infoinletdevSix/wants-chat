@@ -175,7 +175,7 @@ const ColorDetector: React.FC = () => {
           className="mb-8"
         >
           <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <Pipette className="w-10 h-10 text-cyan-400" />
+            <Pipette className="w-10 h-10 text-primary-400" />
             Color Detector
           </h1>
           <p className="text-primary-200">Pick colors from your camera or uploaded images</p>
@@ -186,10 +186,10 @@ const ColorDetector: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
+            className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <Camera className="w-6 h-6 text-cyan-400" />
+              <Camera className="w-6 h-6 text-primary-400" />
               Color Source
             </h2>
 
@@ -204,7 +204,7 @@ const ColorDetector: React.FC = () => {
                   className="w-full h-full object-cover cursor-crosshair"
                 />
               ) : (
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-900/30 to-cyan-900/30">
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-900/30 to-primary-900/30">
                   <div className="text-center">
                     <Pipette className="w-24 h-24 text-primary-400/50 mx-auto mb-4" />
                     <p className="text-primary-200 text-lg">Start camera or upload image</p>
@@ -229,7 +229,7 @@ const ColorDetector: React.FC = () => {
                 className={`w-full px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 ${
                   isStreaming
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
+                    : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700'
                 } shadow-lg hover:shadow-xl transform hover:scale-105`}
               >
                 {isStreaming ? 'Stop Camera' : 'Start Camera'}
@@ -258,7 +258,7 @@ const ColorDetector: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
+            className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
           >
             <h2 className="text-2xl font-bold text-white mb-4">Selected Color</h2>
 

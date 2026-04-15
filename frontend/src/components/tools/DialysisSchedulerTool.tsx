@@ -398,15 +398,15 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -423,8 +423,8 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl">
-            <Droplets className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-blue-500/20 to-primary-500/20 rounded-xl">
+            <Droplets className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -469,12 +469,12 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <User className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <User className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dialysisScheduler.total', 'Total')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -572,7 +572,7 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredPatients.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -589,14 +589,14 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
                       onClick={() => setSelectedPatient(patient)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedPatient?.id === patient.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <TypeIcon className="w-4 h-4 text-cyan-500" />
+                            <TypeIcon className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{patient.patientName}</p>
@@ -678,7 +678,7 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <Droplets className="w-4 h-4 text-cyan-500" />
+                      <Droplets className="w-4 h-4 text-primary-500" />
                       {t('tools.dialysisScheduler.dialysateFormula2', 'Dialysate Formula')}
                     </h3>
                     <p className="text-sm">{selectedPatient.dialysateFormula || 'Not specified'}</p>
@@ -695,7 +695,7 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
                 {/* Schedule */}
                 <div>
                   <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-cyan-500" />
+                    <Calendar className="w-4 h-4 text-primary-500" />
                     Weekly Schedule ({selectedPatient.schedule.length} sessions)
                   </h3>
                   {selectedPatient.schedule.length === 0 ? (
@@ -752,7 +752,7 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
                 {selectedPatient.lastLabWork.results.length > 0 && (
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-cyan-500" />
+                      <FileText className="w-4 h-4 text-primary-500" />
                       Last Lab Work
                       {selectedPatient.lastLabWork.date && (
                         <span className="text-sm font-normal text-gray-400">({selectedPatient.lastLabWork.date})</span>
@@ -793,7 +793,7 @@ export const DialysisSchedulerTool: React.FC<DialysisSchedulerToolProps> = ({ ui
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-cyan-500" />
+                      <Phone className="w-4 h-4 text-primary-500" />
                       {t('tools.dialysisScheduler.contactPhone2', 'Contact Phone')}
                     </h3>
                     <p className="text-sm">{selectedPatient.contactPhone || 'Not specified'}</p>

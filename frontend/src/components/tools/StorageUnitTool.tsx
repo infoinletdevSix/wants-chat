@@ -664,7 +664,7 @@ export const StorageUnitTool: React.FC<StorageUnitToolProps> = ({ uiConfig }) =>
         </Card>
         <Card>
           <CardContent className="p-3 text-center">
-            <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{formatCurrency(stats.monthlyRevenue)}</p>
+            <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">{formatCurrency(stats.monthlyRevenue)}</p>
             <p className="text-xs text-gray-500 dark:text-gray-400">{t('tools.storageUnit.monthlyRev', 'Monthly Rev')}</p>
           </CardContent>
         </Card>

@@ -870,12 +870,12 @@ export const LegalResearchTool: React.FC<LegalResearchToolProps> = ({ uiConfig }
         </div>
         <div className={cardClass}>
           <div className="p-3 sm:p-4 flex items-center gap-3">
-            <div className="p-2 sm:p-3 bg-cyan-500/10 rounded-lg">
-              <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-500" />
+            <div className="p-2 sm:p-3 bg-primary-500/10 rounded-lg">
+              <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.legalResearch.statutes', 'Statutes')}</p>
-              <p className="text-xl sm:text-2xl font-bold text-cyan-500">{stats.totalStatutes}</p>
+              <p className="text-xl sm:text-2xl font-bold text-primary-500">{stats.totalStatutes}</p>
             </div>
           </div>
         </div>
@@ -1192,8 +1192,8 @@ export const LegalResearchTool: React.FC<LegalResearchToolProps> = ({ uiConfig }
                         <p className="text-2xl font-bold text-purple-500">{selectedProject.citations.length}</p>
                         <p className="text-xs text-gray-400">{t('tools.legalResearch.caseCitations', 'Case Citations')}</p>
                       </div>
-                      <div className={`p-3 rounded-lg text-center ${theme === 'dark' ? 'bg-cyan-500/10' : 'bg-cyan-50'}`}>
-                        <p className="text-2xl font-bold text-cyan-500">{selectedProject.statutes.length}</p>
+                      <div className={`p-3 rounded-lg text-center ${theme === 'dark' ? 'bg-primary-500/10' : 'bg-primary-50'}`}>
+                        <p className="text-2xl font-bold text-primary-500">{selectedProject.statutes.length}</p>
                         <p className="text-xs text-gray-400">{t('tools.legalResearch.statutes2', 'Statutes')}</p>
                       </div>
                       <div className={`p-3 rounded-lg text-center ${theme === 'dark' ? 'bg-green-500/10' : 'bg-green-50'}`}>

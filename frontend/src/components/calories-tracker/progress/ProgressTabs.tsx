@@ -33,7 +33,7 @@ const ProgressTabs: React.FC<ProgressTabsProps> = ({
             onClick={() => onTabChange(tab.id)}
             className={`flex-1 ${
               activeTab === tab.id
-                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                 : 'bg-transparent text-white/70 hover:bg-white/10 hover:text-white'
             }`}
           >

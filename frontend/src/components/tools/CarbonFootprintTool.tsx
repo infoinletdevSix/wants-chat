@@ -222,7 +222,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
   // Get comparison status
   const getComparisonStatus = (total: number) => {
     if (total <= GLOBAL_AVERAGE) return { label: 'Excellent', color: 'text-green-500' };
-    if (total <= GLOBAL_AVERAGE * 2) return { label: 'Good', color: 'text-emerald-500' };
+    if (total <= GLOBAL_AVERAGE * 2) return { label: 'Good', color: 'text-primary-500' };
     if (total <= US_AVERAGE) return { label: 'Average', color: 'text-yellow-500' };
     return { label: 'High', color: 'text-red-500' };
   };
@@ -351,7 +351,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
         <label className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
           {label}
         </label>
-        <span className={`text-sm font-semibold ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+        <span className={`text-sm font-semibold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
           {value} {unit}
         </span>
       </div>
@@ -362,7 +362,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+        className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary-500"
         style={{
           background: isDark
             ? `linear-gradient(to right, #10b981 0%, #10b981 ${((value - min) / (max - min)) * 100}%, #374151 ${((value - min) / (max - min)) * 100}%, #374151 100%)`
@@ -389,7 +389,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
           isDark
             ? 'bg-gray-700 border-gray-600 text-white'
             : 'bg-white border-gray-300 text-gray-900'
-        } focus:ring-2 focus:ring-emerald-500 focus:border-transparent`}
+        } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
       >
         {options.map(opt => (
           <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -440,8 +440,8 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className={`p-3 rounded-full ${isDark ? 'bg-emerald-900/50' : 'bg-emerald-100'}`}>
-              <Leaf className={`w-8 h-8 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`} />
+            <div className={`p-3 rounded-full ${isDark ? 'bg-primary-900/50' : 'bg-primary-100'}`}>
+              <Leaf className={`w-8 h-8 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
             </div>
             <h1 className={`text-3xl md:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {t('tools.carbonFootprint.carbonFootprintCalculator', 'Carbon Footprint Calculator')}
@@ -501,7 +501,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                   </div>
                   <div className={`h-4 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400"
+                      className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-400"
                       style={{ width: `${Math.min(100, (adjustedTotal / 20) * 100)}%` }}
                     />
                   </div>
@@ -549,8 +549,8 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                 activeTab === tab.id
                   ? isDark
-                    ? 'bg-emerald-600 text-white'
-                    : 'bg-emerald-500 text-white'
+                    ? 'bg-primary-600 text-white'
+                    : 'bg-primary-500 text-white'
                   : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-white text-gray-600 hover:bg-gray-100'
@@ -741,7 +741,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                 <ul className="space-y-3">
                   {category.tips.map((tip, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <TrendingDown className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDark ? 'text-emerald-400' : 'text-emerald-500'}`} />
+                      <TrendingDown className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDark ? 'text-primary-400' : 'text-primary-500'}`} />
                       <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                         {tip}
                       </span>
@@ -765,12 +765,12 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
               </p>
 
               {appliedSavings > 0 && (
-                <div className={`p-4 rounded-lg mb-4 ${isDark ? 'bg-emerald-900/30' : 'bg-emerald-50'}`}>
-                  <p className={`font-medium ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                <div className={`p-4 rounded-lg mb-4 ${isDark ? 'bg-primary-900/30' : 'bg-primary-50'}`}>
+                  <p className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     With selected changes, you could save{' '}
                     <span className="text-xl font-bold">{appliedSavings.toFixed(1)} tons</span> CO2/year!
                   </p>
-                  <p className={`text-sm mt-1 ${isDark ? 'text-emerald-400/70' : 'text-emerald-600/70'}`}>
+                  <p className={`text-sm mt-1 ${isDark ? 'text-primary-400/70' : 'text-primary-600/70'}`}>
                     That's a {((appliedSavings / emissions.total) * 100).toFixed(0)}% reduction
                   </p>
                 </div>
@@ -783,8 +783,8 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                     className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                       scenario.applied
                         ? isDark
-                          ? 'border-emerald-500 bg-emerald-900/20'
-                          : 'border-emerald-500 bg-emerald-50'
+                          ? 'border-primary-500 bg-primary-900/20'
+                          : 'border-primary-500 bg-primary-50'
                         : isDark
                           ? 'border-gray-700 bg-gray-700/50 hover:border-gray-600'
                           : 'border-gray-200 bg-gray-50 hover:border-gray-300'
@@ -799,7 +799,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                       <div className="flex items-center gap-3">
                         <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                           scenario.applied
-                            ? 'border-emerald-500 bg-emerald-500'
+                            ? 'border-primary-500 bg-primary-500'
                             : isDark ? 'border-gray-500' : 'border-gray-300'
                         }`}>
                           {scenario.applied && (
@@ -818,7 +818,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                         </div>
                       </div>
                       <div className="text-right">
-                        <span className={`text-lg font-bold ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                        <span className={`text-lg font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                           -{scenario.savings.toFixed(1)}t
                         </span>
                         <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -848,7 +848,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                       style={{ width: `${Math.min(100, (emissions.total / 20) * 100)}%` }}
                     />
                     <div
-                      className="absolute top-0 left-0 h-full rounded-full bg-emerald-500 transition-all duration-500"
+                      className="absolute top-0 left-0 h-full rounded-full bg-primary-500 transition-all duration-500"
                       style={{ width: `${Math.min(100, (adjustedTotal / 20) * 100)}%` }}
                     />
                   </div>
@@ -856,7 +856,7 @@ export const CarbonFootprintTool: React.FC<CarbonFootprintToolProps> = ({ uiConf
                     <span className={`font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {emissions.total.toFixed(1)}t
                     </span>
-                    <span className={`font-bold ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                    <span className={`font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                       {adjustedTotal.toFixed(1)}t
                     </span>
                   </div>

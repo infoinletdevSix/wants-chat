@@ -20,7 +20,7 @@ export const VolumeControl: React.FC<VolumeControlProps> = ({ volume, onVolumeCh
           <div className="relative flex-1">
             <div className="h-2 bg-secondary rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 transition-all duration-200 rounded-full"
+                className="h-full bg-gradient-to-r from-primary-500 to-primary-600 transition-all duration-200 rounded-full"
                 style={{ width: `${volume * 100}%` }}
               />
             </div>

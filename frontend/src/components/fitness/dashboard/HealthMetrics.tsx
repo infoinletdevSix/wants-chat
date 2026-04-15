@@ -72,7 +72,7 @@ const HealthMetrics: React.FC<HealthMetricsProps> = ({
 }) => {
   const getStatusColor = (status: HealthMetric['status']) => {
     switch (status) {
-      case 'good': return 'text-emerald-600 bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200';
+      case 'good': return 'text-primary-600 bg-primary-50 dark:bg-primary-950/20 border-primary-200';
       case 'warning': return 'text-primary bg-primary/10 border-primary/20';
       case 'critical': return 'text-destructive bg-destructive/10 border-destructive/20';
       default: return 'text-muted-foreground bg-muted/10 border-muted/20';
@@ -81,7 +81,7 @@ const HealthMetrics: React.FC<HealthMetricsProps> = ({
 
   const getProgressColor = (status: HealthMetric['status']) => {
     switch (status) {
-      case 'good': return 'bg-emerald-500';
+      case 'good': return 'bg-primary-500';
       case 'warning': return 'bg-primary';
       case 'critical': return 'bg-destructive';
       default: return 'bg-muted';
@@ -141,7 +141,7 @@ const HealthMetrics: React.FC<HealthMetricsProps> = ({
                   />
                   {/* Optimal range indicator */}
                   <div 
-                    className="absolute top-0 h-2 bg-emerald-500/30 dark:bg-emerald-500/20"
+                    className="absolute top-0 h-2 bg-primary-500/30 dark:bg-primary-500/20"
                     style={{
                       left: `${((metric.optimal.min - metric.min) / (metric.max - metric.min)) * 100}%`,
                       width: `${((metric.optimal.max - metric.optimal.min) / (metric.max - metric.min)) * 100}%`
@@ -150,7 +150,7 @@ const HealthMetrics: React.FC<HealthMetricsProps> = ({
                 </div>
                 <div className="flex justify-between text-xs text-muted-foreground">
                   <span>{metric.min}</span>
-                  <span className={isOptimal ? 'text-emerald-600 dark:text-emerald-400 font-medium' : ''}>
+                  <span className={isOptimal ? 'text-primary-600 dark:text-primary-400 font-medium' : ''}>
                     Optimal: {metric.optimal.min}-{metric.optimal.max}
                   </span>
                   <span>{metric.max}</span>

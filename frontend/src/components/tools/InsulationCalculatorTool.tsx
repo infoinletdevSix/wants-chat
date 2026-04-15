@@ -148,9 +148,9 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg"><Home className="w-5 h-5 text-emerald-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Home className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.insulationCalculator.insulationCalculator', 'Insulation Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.insulationCalculator.calculateMaterialsNeededForYour', 'Calculate materials needed for your project')}</p>
@@ -169,7 +169,7 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
               <button
                 key={type}
                 onClick={() => setAreaType(type)}
-                className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${areaType === type ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${areaType === type ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 <span className="text-lg">{areaTypes[type].icon}</span>
                 <span>{areaTypes[type].name}</span>
@@ -222,10 +222,10 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
               <button
                 key={type}
                 onClick={() => setInsulationType(type)}
-                className={`py-3 px-4 rounded-lg text-left ${insulationType === type ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-3 px-4 rounded-lg text-left ${insulationType === type ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 <div className="font-medium">{insulationTypes[type].name}</div>
-                <div className={`text-xs ${insulationType === type ? 'text-emerald-100' : isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                <div className={`text-xs ${insulationType === type ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                   {insulationTypes[type].description}
                 </div>
               </button>
@@ -234,10 +234,10 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
         </div>
 
         {/* Insulation Info */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-2">
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{config.name}</h4>
-            <span className="text-emerald-500 font-bold">R-{config.rValuePerInch}/inch</span>
+            <span className="text-primary-500 font-bold">R-{config.rValuePerInch}/inch</span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>
@@ -262,11 +262,11 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
                 <button
                   key={opt.value}
                   onClick={() => setTargetRValue(opt.value)}
-                  className={`py-2 px-3 rounded-lg text-sm relative ${targetRValue === opt.value ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'} ${isRecommended && targetRValue !== opt.value ? 'ring-2 ring-emerald-500/50' : ''}`}
+                  className={`py-2 px-3 rounded-lg text-sm relative ${targetRValue === opt.value ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'} ${isRecommended && targetRValue !== opt.value ? 'ring-2 ring-primary-500/50' : ''}`}
                 >
                   {opt.label}
                   {isRecommended && targetRValue !== opt.value && (
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary-500 rounded-full"></span>
                   )}
                 </button>
               );
@@ -281,10 +281,10 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Ruler className="w-4 h-4 text-emerald-500" />
+              <Ruler className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.insulationCalculator.area', 'Area')}</span>
             </div>
-            <div className="text-3xl font-bold text-emerald-500">{calculations.squareFootage}</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.squareFootage}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {t('tools.insulationCalculator.squareFeet', 'square feet')}
             </div>
@@ -313,7 +313,7 @@ export const InsulationCalculatorTool: React.FC<InsulationCalculatorToolProps> =
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} mt-1`}>
             (~{calculations.coveragePerUnit} sq ft coverage per {config.unitName.slice(0, -1)} at R-{targetRValue})
           </div>
-          <div className={`text-lg font-semibold text-emerald-500 mt-2`}>
+          <div className={`text-lg font-semibold text-primary-500 mt-2`}>
             Estimated Cost: ${calculations.estimatedCost}
           </div>
           <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>

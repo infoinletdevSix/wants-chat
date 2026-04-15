@@ -190,9 +190,9 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg"><Layers className="w-5 h-5 text-emerald-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Layers className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.plywoodCalculator.plywoodCalculator', 'Plywood Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.plywoodCalculator.calculateSheetsNeededWithCut', 'Calculate sheets needed with cut optimization')}</p>
@@ -205,13 +205,13 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
         <div className="flex gap-2">
           <button
             onClick={() => setUnitSystem('imperial')}
-            className={`flex-1 py-2 rounded-lg ${unitSystem === 'imperial' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unitSystem === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.plywoodCalculator.imperialIn', 'Imperial (in)')}
           </button>
           <button
             onClick={() => setUnitSystem('metric')}
-            className={`flex-1 py-2 rounded-lg ${unitSystem === 'metric' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unitSystem === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.plywoodCalculator.metricMm', 'Metric (mm)')}
           </button>
@@ -228,7 +228,7 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
               <button
                 key={size}
                 onClick={() => setSheetSize(size)}
-                className={`py-3 px-4 rounded-lg text-sm ${sheetSize === size ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-3 px-4 rounded-lg text-sm ${sheetSize === size ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {sheetSizes[size].label}
               </button>
@@ -247,7 +247,7 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
               <button
                 key={t}
                 onClick={() => setThickness(t)}
-                className={`py-2 px-3 rounded-lg text-sm ${thickness === t ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${thickness === t ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {thicknessOptions[t].label}
               </button>
@@ -259,7 +259,7 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
         </div>
 
         {/* Project Dimensions */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             <Ruler className="w-4 h-4 inline mr-1" />
             {t('tools.plywoodCalculator.projectDimensions', 'Project Dimensions')}
@@ -311,19 +311,19 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => setOrientation('auto')}
-              className={`py-2 px-3 rounded-lg text-sm ${orientation === 'auto' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-2 px-3 rounded-lg text-sm ${orientation === 'auto' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {t('tools.plywoodCalculator.autoBest', 'Auto (Best)')}
             </button>
             <button
               onClick={() => setOrientation('horizontal')}
-              className={`py-2 px-3 rounded-lg text-sm ${orientation === 'horizontal' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-2 px-3 rounded-lg text-sm ${orientation === 'horizontal' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {t('tools.plywoodCalculator.horizontal', 'Horizontal')}
             </button>
             <button
               onClick={() => setOrientation('vertical')}
-              className={`py-2 px-3 rounded-lg text-sm ${orientation === 'vertical' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-2 px-3 rounded-lg text-sm ${orientation === 'vertical' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {t('tools.plywoodCalculator.vertical', 'Vertical')}
             </button>
@@ -341,7 +341,7 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
               <button
                 key={w}
                 onClick={() => setWasteFactor(w.toString())}
-                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(wasteFactor) === w ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(wasteFactor) === w ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {w}%
               </button>
@@ -362,10 +362,10 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Layers className="w-4 h-4 text-emerald-500" />
+              <Layers className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.plywoodCalculator.sheetsNeeded', 'Sheets Needed')}</span>
             </div>
-            <div className="text-3xl font-bold text-emerald-500">{calculations.sheetsNeeded}</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.sheetsNeeded}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {sheetSize} sheets at {thickness}"
             </div>
@@ -409,7 +409,7 @@ export const PlywoodCalculatorTool: React.FC<PlywoodCalculatorToolProps> = ({ ui
                   <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                     {formatDimension(cut.width)} x {formatDimension(cut.height)}
                   </span>
-                  <span className={`font-medium ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                  <span className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     x{cut.quantity}
                   </span>
                 </div>

@@ -189,7 +189,7 @@ const PasswordManager: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-primary-900">
       <BackgroundEffects />
       <Header />
 
@@ -221,7 +221,7 @@ const PasswordManager: React.FC = () => {
             {/* Add button */}
             <button
               onClick={() => setShowModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               <Plus className="w-5 h-5" />
               Add Password
@@ -339,7 +339,7 @@ const PasswordManager: React.FC = () => {
                         href={password.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cyan-300 hover:text-cyan-200 text-sm truncate block"
+                        className="text-primary-300 hover:text-primary-200 text-sm truncate block"
                       >
                         {password.url}
                       </a>
@@ -490,7 +490,7 @@ const PasswordManager: React.FC = () => {
                         <button
                           type="button"
                           onClick={useGeneratedPassword}
-                          className="flex-1 px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-all font-medium"
+                          className="flex-1 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all font-medium"
                         >
                           Use This Password
                         </button>
@@ -544,7 +544,7 @@ const PasswordManager: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all shadow-lg"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg"
                   >
                     {editingPassword ? 'Update' : 'Add'} Password
                   </button>

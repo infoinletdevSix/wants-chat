@@ -437,7 +437,7 @@ const AddEmergencyContact: React.FC = () => {
             </Button>
             <Button
               type="submit"
-              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               disabled={createContactMutation.loading || updateContactMutation.loading || contactLoading}
             >
               <Save className="h-4 w-4 mr-2" />

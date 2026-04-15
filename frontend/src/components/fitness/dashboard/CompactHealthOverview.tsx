@@ -41,7 +41,7 @@ const CompactHealthOverview: React.FC<CompactHealthOverviewProps> = ({
   const getBMIColor = (category: string) => {
     switch (category) {
       case 'Underweight': return 'text-primary bg-primary/10';
-      case 'Normal': return 'text-emerald-600 bg-emerald-50 dark:bg-emerald-950/20';
+      case 'Normal': return 'text-primary-600 bg-primary-50 dark:bg-primary-950/20';
       case 'Overweight': return 'text-muted-foreground bg-muted/20';
       case 'Obese': return 'text-destructive bg-destructive/10';
       default: return 'text-muted-foreground bg-muted/20';
@@ -92,7 +92,7 @@ const CompactHealthOverview: React.FC<CompactHealthOverviewProps> = ({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'good': return 'text-emerald-600 bg-emerald-50 dark:bg-emerald-950/20';
+      case 'good': return 'text-primary-600 bg-primary-50 dark:bg-primary-950/20';
       case 'warning': return 'text-primary bg-primary/10';
       case 'critical': return 'text-destructive bg-destructive/10';
       default: return 'text-muted-foreground bg-muted/10';
@@ -166,7 +166,7 @@ const CompactHealthOverview: React.FC<CompactHealthOverviewProps> = ({
               />
             </div>
             <div className="col-span-2 flex gap-2">
-              <Button onClick={handleSave} size="sm" className="flex-1 h-7 text-xs bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
+              <Button onClick={handleSave} size="sm" className="flex-1 h-7 text-xs bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
                 Save
               </Button>
               <Button onClick={handleCancel} variant="outline" size="sm" className="flex-1 h-7 text-xs">

@@ -34,7 +34,7 @@ const NutritionTracker: React.FC<NutritionTrackerProps> = ({
   const [nutrients] = useState<NutrientData[]>([
     { name: 'Protein', current: 85, target: 120, unit: 'g', color: 'text-destructive', icon: Beef },
     { name: 'Carbs', current: 210, target: 250, unit: 'g', color: 'text-primary', icon: Wheat },
-    { name: 'Fat', current: 45, target: 65, unit: 'g', color: 'text-emerald-600', icon: Apple },
+    { name: 'Fat', current: 45, target: 65, unit: 'g', color: 'text-primary-600', icon: Apple },
     { name: 'Water', current: 1.8, target: 2.5, unit: 'L', color: 'text-primary', icon: Droplets }
   ]);
 
@@ -51,7 +51,7 @@ const NutritionTracker: React.FC<NutritionTrackerProps> = ({
   const getMealTypeColor = (type: MealEntry['type']) => {
     switch (type) {
       case 'breakfast': return 'bg-primary/10 text-primary';
-      case 'lunch': return 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400';
+      case 'lunch': return 'bg-primary-50 text-primary-600 dark:bg-primary-950/20 dark:text-primary-400';
       case 'dinner': return 'bg-destructive/10 text-destructive';
       case 'snack': return 'bg-muted/20 text-muted-foreground';
       default: return 'bg-muted/10 text-muted-foreground';
@@ -69,7 +69,7 @@ const NutritionTracker: React.FC<NutritionTrackerProps> = ({
           <h3 className="text-lg font-semibold text-foreground mb-1">Nutrition Tracker</h3>
           <p className="text-sm text-muted-foreground">Monitor your daily nutrition intake</p>
         </div>
-        <Button size="sm" onClick={onAddMeal} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
+        <Button size="sm" onClick={onAddMeal} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
           <Plus className="h-4 w-4 mr-1" />
           Add Meal
         </Button>
@@ -86,7 +86,7 @@ const NutritionTracker: React.FC<NutritionTrackerProps> = ({
           </div>
           <div className="text-right">
             <p className="text-sm font-medium text-muted-foreground">Remaining</p>
-            <p className={`text-xl font-bold ${remainingCalories > 0 ? 'text-emerald-600' : 'text-destructive'}`}>
+            <p className={`text-xl font-bold ${remainingCalories > 0 ? 'text-primary-600' : 'text-destructive'}`}>
               {Math.abs(remainingCalories)}
             </p>
           </div>

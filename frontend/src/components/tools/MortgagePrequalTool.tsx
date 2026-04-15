@@ -213,7 +213,7 @@ const createNewPrequal = (): MortgagePrequal => {
 
 const creditScoreRanges = [
   { min: 800, max: 850, label: 'Exceptional', color: 'text-green-500' },
-  { min: 740, max: 799, label: 'Very Good', color: 'text-emerald-500' },
+  { min: 740, max: 799, label: 'Very Good', color: 'text-primary-500' },
   { min: 670, max: 739, label: 'Good', color: 'text-yellow-500' },
   { min: 580, max: 669, label: 'Fair', color: 'text-orange-500' },
   { min: 300, max: 579, label: 'Poor', color: 'text-red-500' },
@@ -368,15 +368,15 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -389,8 +389,8 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <Home className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <Home className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -435,12 +435,12 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Calculator className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Calculator className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.mortgagePrequal.total', 'Total')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -523,7 +523,7 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredPrequals.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -539,14 +539,14 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
                     onClick={() => setSelectedPrequal(prequal)}
                     className={`p-4 cursor-pointer transition-colors ${
                       selectedPrequal?.id === prequal.id
-                        ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                        ? 'bg-primary-500/10 border-l-4 border-primary-500'
                         : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                     }`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                          <Home className="w-4 h-4 text-cyan-500" />
+                          <Home className="w-4 h-4 text-primary-500" />
                         </div>
                         <div>
                           <p className="font-medium">{prequal.name || 'Unnamed'}</p>
@@ -600,11 +600,11 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
               <div className="p-6 space-y-6">
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30' : 'bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200'}`}>
+                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-green-500/20 to-primary-500/20 border border-green-500/30' : 'bg-gradient-to-br from-green-50 to-primary-50 border border-green-200'}`}>
                     <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.mortgagePrequal.maxHomePrice', 'Max Home Price')}</p>
                     <p className="text-2xl font-bold text-green-500">{formatCurrency(selectedPrequal.maxHomePrice)}</p>
                   </div>
-                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30' : 'bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200'}`}>
+                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-blue-500/20 to-primary-500/20 border border-blue-500/30' : 'bg-gradient-to-br from-blue-50 to-primary-50 border border-blue-200'}`}>
                     <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.mortgagePrequal.monthlyPayment', 'Monthly Payment')}</p>
                     <p className="text-2xl font-bold text-blue-500">{formatCurrency(selectedPrequal.estimatedMonthlyPayment)}</p>
                   </div>
@@ -644,7 +644,7 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
                 {/* DTI Ratios */}
                 <div>
                   <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <BarChart3 className="w-4 h-4 text-cyan-500" />
+                    <BarChart3 className="w-4 h-4 text-primary-500" />
                     {t('tools.mortgagePrequal.debtToIncomeRatios', 'Debt-to-Income Ratios')}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -709,7 +709,7 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
                 {selectedPrequal.notes && (
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <Info className="w-4 h-4 text-cyan-500" />
+                      <Info className="w-4 h-4 text-primary-500" />
                       {t('tools.mortgagePrequal.notes2', 'Notes')}
                     </h3>
                     <p className="text-sm">{selectedPrequal.notes}</p>
@@ -917,8 +917,8 @@ export const MortgagePrequalTool: React.FC<MortgagePrequalToolProps> = ({ uiConf
               </div>
 
               {/* Live Calculation Preview */}
-              <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-cyan-500/10 border border-cyan-500/30' : 'bg-cyan-50 border border-cyan-200'}`}>
-                <h3 className="font-semibold mb-3 flex items-center gap-2 text-cyan-500">
+              <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-primary-500/10 border border-primary-500/30' : 'bg-primary-50 border border-primary-200'}`}>
+                <h3 className="font-semibold mb-3 flex items-center gap-2 text-primary-500">
                   <Calculator className="w-4 h-4" />
                   {t('tools.mortgagePrequal.calculatedResults', 'Calculated Results')}
                 </h3>

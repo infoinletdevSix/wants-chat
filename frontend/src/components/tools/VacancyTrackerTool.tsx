@@ -71,7 +71,7 @@ const VACANCY_STATUSES = [
   { value: 'turn_in_progress', label: 'Turn In Progress', color: 'text-amber-500 bg-amber-500/10' },
   { value: 'ready_to_list', label: 'Ready to List', color: 'text-blue-500 bg-blue-500/10' },
   { value: 'listed', label: 'Listed', color: 'text-purple-500 bg-purple-500/10' },
-  { value: 'application_pending', label: 'Application Pending', color: 'text-cyan-500 bg-cyan-500/10' },
+  { value: 'application_pending', label: 'Application Pending', color: 'text-primary-500 bg-primary-500/10' },
   { value: 'leased', label: 'Leased', color: 'text-green-500 bg-green-500/10' },
 ];
 

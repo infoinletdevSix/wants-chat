@@ -30,7 +30,7 @@ export const RecipeDetailHero: React.FC<RecipeDetailHeroProps> = ({
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Easy': return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/20 dark:text-emerald-400';
+      case 'Easy': return 'bg-primary-100 text-primary-800 dark:bg-primary-900/20 dark:text-primary-400';
       case 'Medium': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400';
       case 'Hard': return 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
@@ -140,7 +140,7 @@ export const RecipeDetailHero: React.FC<RecipeDetailHeroProps> = ({
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
         <Button
           onClick={onStartCooking}
-          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 flex-1"
+          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl h-12 flex-1"
         >
           <Play className="h-4 w-4 mr-2" />
           Start Cooking

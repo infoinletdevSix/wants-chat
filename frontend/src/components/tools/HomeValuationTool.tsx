@@ -257,11 +257,11 @@ export const HomeValuationTool: React.FC = () => {
   };
 
   const cardClass = `rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`;
-  const inputClass = `w-full px-4 py-2.5 border rounded-lg outline-none transition-all focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 ${
+  const inputClass = `w-full px-4 py-2.5 border rounded-lg outline-none transition-all focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 ${
     isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'
   }`;
   const labelClass = `block text-sm font-medium mb-1.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20';
+  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-primary-500/20';
   const buttonSecondary = `px-4 py-2.5 rounded-lg font-medium transition-colors ${isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`;
 
   return (
@@ -272,7 +272,7 @@ export const HomeValuationTool: React.FC = () => {
           <div className="p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl shadow-lg">
+                <div className="p-3 bg-gradient-to-br from-primary-500 to-blue-500 rounded-xl shadow-lg">
                   <TrendingUp className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -299,7 +299,7 @@ export const HomeValuationTool: React.FC = () => {
           </div>
           <div className={`${cardClass} p-4`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.homeValuation.totalValue', 'Total Value')}</p>
-            <p className="text-2xl font-bold text-cyan-500">${(stats.totalValue / 1000000).toFixed(2)}M</p>
+            <p className="text-2xl font-bold text-primary-500">${(stats.totalValue / 1000000).toFixed(2)}M</p>
           </div>
           <div className={`${cardClass} p-4`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.homeValuation.avgValue', 'Avg Value')}</p>
@@ -360,7 +360,7 @@ export const HomeValuationTool: React.FC = () => {
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
                     <div className={`p-2.5 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                      <Home className="w-5 h-5 text-cyan-500" />
+                      <Home className="w-5 h-5 text-primary-500" />
                     </div>
                     <div>
                       <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{valuation.propertyAddress}</h3>
@@ -374,7 +374,7 @@ export const HomeValuationTool: React.FC = () => {
 
                 <div className="text-center py-4 mb-3 border-y ${isDark ? 'border-gray-700' : 'border-gray-100'}">
                   <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.homeValuation.estimatedValue', 'Estimated Value')}</p>
-                  <p className="text-3xl font-bold text-cyan-500">${valuation.estimatedValue.toLocaleString()}</p>
+                  <p className="text-3xl font-bold text-primary-500">${valuation.estimatedValue.toLocaleString()}</p>
                   <div className={`flex items-center justify-center gap-1 mt-1 ${trendColor}`}>
                     {trendIcon && React.createElement(trendIcon, { className: 'w-4 h-4' })}
                     <span className="text-sm capitalize">{valuation.marketTrend}</span>
@@ -565,7 +565,7 @@ export const HomeValuationTool: React.FC = () => {
                     {RENOVATIONS.map(renovation => (
                       <label key={renovation} className={`flex items-center gap-2 px-3 py-2 rounded-lg border cursor-pointer ${
                         form.recentRenovations?.includes(renovation)
-                          ? 'border-cyan-500 bg-cyan-500/10 text-cyan-500'
+                          ? 'border-primary-500 bg-primary-500/10 text-primary-500'
                           : isDark ? 'border-gray-600 text-gray-400' : 'border-gray-200 text-gray-600'
                       }`}>
                         <input

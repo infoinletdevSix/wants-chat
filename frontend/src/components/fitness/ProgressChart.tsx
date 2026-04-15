@@ -345,8 +345,8 @@ const ProgressChart: React.FC = () => {
             {/* Duration Chart */}
             <Card className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-emerald-500/10 rounded-lg">
-                  <Calendar className="h-5 w-5 text-emerald-500" />
+                <div className="p-2 bg-primary-500/10 rounded-lg">
+                  <Calendar className="h-5 w-5 text-primary-500" />
                 </div>
                 <h3 className="text-lg font-semibold">Workout Duration</h3>
               </div>

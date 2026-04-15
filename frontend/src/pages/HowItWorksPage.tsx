@@ -22,7 +22,7 @@ const HowItWorksPage: React.FC = () => {
       title: t('howItWorks.steps.step1.title'),
       description: t('howItWorks.steps.step1.description'),
       icon: PersonAddIcon,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-primary-500",
       features: [
         t('howItWorks.steps.step1.features.quickSetup'),
         t('howItWorks.steps.step1.features.freeTrial'),
@@ -48,7 +48,7 @@ const HowItWorksPage: React.FC = () => {
       title: t('howItWorks.steps.step3.title'),
       description: t('howItWorks.steps.step3.description'),
       icon: TrendingUpIcon,
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-primary-500",
       features: [
         t('howItWorks.steps.step3.features.logActivities'),
         t('howItWorks.steps.step3.features.trackProgress'),

@@ -575,7 +575,7 @@ export const InventoryListTool: React.FC<InventoryListToolProps> = ({ uiConfig }
       case 'delivered':
         return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
       case 'complete':
-        return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300';
+        return 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300';
       default:
         return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300';
     }
@@ -827,7 +827,7 @@ export const InventoryListTool: React.FC<InventoryListToolProps> = ({ uiConfig }
             </Card>
             <Card>
               <CardContent className="p-3 text-center">
-                <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{activeList.deliveredCount}</p>
+                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">{activeList.deliveredCount}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">{t('tools.inventoryList.delivered', 'Delivered')}</p>
               </CardContent>
             </Card>

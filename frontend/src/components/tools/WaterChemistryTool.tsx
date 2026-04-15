@@ -571,7 +571,7 @@ export const WaterChemistryTool: React.FC<WaterChemistryToolProps> = ({ uiConfig
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
           {[
             { label: "Today's Readings", value: stats.todaysReadings, icon: <Calendar className="w-5 h-5" />, color: 'bg-blue-500' },
-            { label: 'Total Pools', value: stats.totalPools, icon: <Droplets className="w-5 h-5" />, color: 'bg-cyan-500' },
+            { label: 'Total Pools', value: stats.totalPools, icon: <Droplets className="w-5 h-5" />, color: 'bg-primary-500' },
             { label: 'Out of Range', value: stats.outOfRange, icon: <AlertTriangle className="w-5 h-5" />, color: stats.outOfRange > 0 ? 'bg-red-500' : 'bg-green-500' },
             { label: 'This Week', value: stats.weeklyReadings, icon: <Activity className="w-5 h-5" />, color: 'bg-purple-500' },
             { label: 'Chemical Adds', value: stats.totalAdditions, icon: <Beaker className="w-5 h-5" />, color: 'bg-orange-500' },

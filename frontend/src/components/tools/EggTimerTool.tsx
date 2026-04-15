@@ -493,10 +493,10 @@ export const EggTimerTool = ({ uiConfig }: EggTimerToolProps) => {
 
         {/* Ice Bath Reminder */}
         {showIceBathReminder && (
-          <Card className="bg-cyan-500/20 border-cyan-400/50">
+          <Card className="bg-primary-500/20 border-primary-400/50">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <Snowflake className="w-8 h-8 text-cyan-400 animate-pulse" />
+                <Snowflake className="w-8 h-8 text-primary-400 animate-pulse" />
                 <div>
                   <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.eggTimer.iceBathTime', 'Ice Bath Time!')}
@@ -507,7 +507,7 @@ export const EggTimerTool = ({ uiConfig }: EggTimerToolProps) => {
                 </div>
                 <button
                   onClick={() => setShowIceBathReminder(false)}
-                  className="ml-auto px-3 py-1 text-sm bg-cyan-500 hover:bg-cyan-600 text-white rounded transition-colors"
+                  className="ml-auto px-3 py-1 text-sm bg-primary-500 hover:bg-primary-600 text-white rounded transition-colors"
                 >
                   {t('tools.eggTimer.gotIt', 'Got it')}
                 </button>

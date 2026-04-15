@@ -173,8 +173,8 @@ export const BabyNameGeneratorTool: React.FC<BabyNameGeneratorToolProps> = ({ ui
         ? 'bg-amber-900/50 text-amber-300 border-amber-700'
         : 'bg-amber-100 text-amber-700 border-amber-300',
       unique: isDark
-        ? 'bg-cyan-900/50 text-cyan-300 border-cyan-700'
-        : 'bg-cyan-100 text-cyan-700 border-cyan-300',
+        ? 'bg-primary-900/50 text-primary-300 border-primary-700'
+        : 'bg-primary-100 text-primary-700 border-primary-300',
     };
 
     return (

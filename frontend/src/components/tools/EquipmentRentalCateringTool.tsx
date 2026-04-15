@@ -672,7 +672,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                             order.status === 'completed' ? 'bg-green-100 text-green-700' :
                             order.status === 'active' ? 'bg-blue-100 text-blue-700' :
                             order.status === 'delivered' ? 'bg-purple-100 text-purple-700' :
-                            order.status === 'confirmed' ? 'bg-cyan-100 text-cyan-700' :
+                            order.status === 'confirmed' ? 'bg-primary-100 text-primary-700' :
                             order.status === 'cancelled' ? 'bg-red-100 text-red-700' :
                             'bg-yellow-100 text-yellow-700'
                           }`}>

@@ -133,9 +133,9 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg"><Grid3X3 className="w-5 h-5 text-emerald-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Grid3X3 className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.deckBoardCalculator.deckBoardCalculator', 'Deck Board Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.deckBoardCalculator.calculateDeckingMaterialsAndCosts', 'Calculate decking materials and costs')}</p>
@@ -147,7 +147,7 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
         {/* Deck Dimensions */}
         <div className="space-y-4">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Ruler className="w-4 h-4 text-emerald-500" />
+            <Ruler className="w-4 h-4 text-primary-500" />
             {t('tools.deckBoardCalculator.deckDimensions', 'Deck Dimensions')}
           </h4>
           <div className="grid grid-cols-2 gap-4">
@@ -185,7 +185,7 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
         {/* Board Settings */}
         <div className="space-y-4">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Package className="w-4 h-4 text-emerald-500" />
+            <Package className="w-4 h-4 text-primary-500" />
             {t('tools.deckBoardCalculator.boardSettings', 'Board Settings')}
           </h4>
 
@@ -199,7 +199,7 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
                 <button
                   key={w}
                   onClick={() => setBoardWidth(w)}
-                  className={`flex-1 py-2 px-4 rounded-lg ${boardWidth === w ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`flex-1 py-2 px-4 rounded-lg ${boardWidth === w ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {w}"
                 </button>
@@ -217,7 +217,7 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
                 <button
                   key={opt.feet}
                   onClick={() => setBoardLength(opt.feet.toString())}
-                  className={`py-2 px-4 rounded-lg ${parseInt(boardLength) === opt.feet ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`py-2 px-4 rounded-lg ${parseInt(boardLength) === opt.feet ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {opt.label}
                 </button>
@@ -235,7 +235,7 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
                 <button
                   key={s}
                   onClick={() => setJoistSpacing(s)}
-                  className={`flex-1 py-2 px-4 rounded-lg ${joistSpacing === s ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`flex-1 py-2 px-4 rounded-lg ${joistSpacing === s ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {s}" OC
                 </button>
@@ -247,7 +247,7 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
         {/* Additional Settings */}
         <div className="space-y-4">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Settings2 className="w-4 h-4 text-emerald-500" />
+            <Settings2 className="w-4 h-4 text-primary-500" />
             {t('tools.deckBoardCalculator.additionalSettings', 'Additional Settings')}
           </h4>
           <div className="grid grid-cols-2 gap-4">
@@ -282,10 +282,10 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Package className="w-4 h-4 text-emerald-500" />
+              <Package className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.deckBoardCalculator.boardsNeeded', 'Boards Needed')}</span>
             </div>
-            <div className="text-3xl font-bold text-emerald-500">{calculations.boardsNeeded}</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.boardsNeeded}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {calculations.boardsPerRow} per row + {calculations.wasteBoards} waste
             </div>
@@ -326,9 +326,9 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center gap-2 mb-3">
-            <DollarSign className="w-5 h-5 text-emerald-500" />
+            <DollarSign className="w-5 h-5 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.deckBoardCalculator.costEstimate', 'Cost Estimate')}</h4>
           </div>
           <div className="space-y-2">
@@ -340,10 +340,10 @@ export const DeckBoardCalculatorTool: React.FC<DeckBoardCalculatorToolProps> = (
               <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.deckBoardCalculator.fastenersEstimated', 'Fasteners (estimated)')}</span>
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>${calculations.fastenerCost}</span>
             </div>
-            <div className={`pt-2 mt-2 border-t ${isDark ? 'border-emerald-800' : 'border-emerald-200'}`}>
+            <div className={`pt-2 mt-2 border-t ${isDark ? 'border-primary-800' : 'border-primary-200'}`}>
               <div className="flex justify-between">
                 <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.deckBoardCalculator.totalEstimate', 'Total Estimate')}</span>
-                <span className="text-xl font-bold text-emerald-500">${calculations.totalCost}</span>
+                <span className="text-xl font-bold text-primary-500">${calculations.totalCost}</span>
               </div>
             </div>
           </div>

@@ -289,7 +289,7 @@ const ScheduleCheckup: React.FC = () => {
           </Select>
 
           <Button
-            className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+            className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             onClick={() => navigate('/health/add-checkup-appointment')}
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -310,7 +310,7 @@ const ScheduleCheckup: React.FC = () => {
             <p className="text-red-400 mb-4">{String(appointmentsError) || 'Failed to load appointments'}</p>
             <Button
               onClick={() => refetchAppointments()}
-              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             >
               Try Again
             </Button>
@@ -486,7 +486,7 @@ const ScheduleCheckup: React.FC = () => {
             </p>
             <Button
               onClick={() => navigate('/health/add-checkup-appointment')}
-              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             >
               <Plus className="h-5 w-5 mr-2" />
               Schedule Appointment

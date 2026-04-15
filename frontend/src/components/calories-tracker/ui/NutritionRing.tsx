@@ -42,7 +42,7 @@ const NutritionRing: React.FC<NutritionRingProps> = ({
     
     switch (color) {
       case 'emerald':
-        return 'text-emerald-600';
+        return 'text-primary-600';
       case 'blue':
         return 'text-blue-600';
       case 'orange':

@@ -50,13 +50,13 @@ const DailySummary: React.FC<DailySummaryProps> = ({ dailyTotals, dailyGoals }) 
             />
           </div>
 
-          <div className="text-center p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30">
-            <Icon path={mdiBarley} size={1.5} className="text-emerald-400 mx-auto mb-2" />
-            <p className="text-xl font-bold text-emerald-400">{dailyTotals.carbs}g</p>
+          <div className="text-center p-4 bg-primary-500/10 rounded-lg border border-primary-500/30">
+            <Icon path={mdiBarley} size={1.5} className="text-primary-400 mx-auto mb-2" />
+            <p className="text-xl font-bold text-primary-400">{dailyTotals.carbs}g</p>
             <p className="text-xs text-white/60">of {dailyGoals.carbs}g carbs</p>
             <Progress
               value={Math.min((dailyTotals.carbs / dailyGoals.carbs) * 100, 100)}
-              className="h-1 mt-2 bg-white/10 [&>div]:bg-emerald-400"
+              className="h-1 mt-2 bg-white/10 [&>div]:bg-primary-400"
             />
           </div>
 

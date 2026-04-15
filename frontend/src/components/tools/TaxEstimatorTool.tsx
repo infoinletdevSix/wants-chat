@@ -465,7 +465,7 @@ export const TaxEstimatorTool: React.FC<TaxEstimatorToolProps> = ({ uiConfig }) 
           {/* Results Section */}
           <div className="space-y-6">
             {/* Take Home Pay */}
-            <div className={`rounded-xl p-6 ${isDark ? 'bg-gradient-to-br from-green-900/50 to-emerald-900/50 border border-green-800' : 'bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200'} shadow-lg`}>
+            <div className={`rounded-xl p-6 ${isDark ? 'bg-gradient-to-br from-green-900/50 to-primary-900/50 border border-green-800' : 'bg-gradient-to-br from-green-50 to-primary-50 border border-green-200'} shadow-lg`}>
               <h3 className={`text-sm font-medium mb-1 ${isDark ? 'text-green-400' : 'text-green-700'}`}>
                 {t('tools.taxEstimator.estimatedTakeHomePay', 'Estimated Take-Home Pay')}
               </h3>

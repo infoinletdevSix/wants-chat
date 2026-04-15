@@ -110,7 +110,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, onCancel, task }) => {
             Cancel
           </button>
         )}
-        <button type="submit" className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 font-bold py-2 px-4 rounded">
+        <button type="submit" className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 font-bold py-2 px-4 rounded">
           {task ? 'Update Task' : 'Create Task'}
         </button>
       </div>

@@ -30,7 +30,7 @@ const GoalSelector: React.FC<GoalSelectorProps> = ({
       title: 'Gain Weight',
       description: 'Build healthy weight through controlled surplus',
       icon: mdiTrendingUp,
-      iconColor: 'text-emerald-400'
+      iconColor: 'text-primary-400'
     },
     {
       id: 'maintain_weight' as const,
@@ -66,7 +66,7 @@ const GoalSelector: React.FC<GoalSelectorProps> = ({
             className={`
               p-6 cursor-pointer transition-all duration-300 border-2
               ${selectedGoal === goal.id
-                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-cyan-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
+                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-primary-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
                 : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
               }
             `}

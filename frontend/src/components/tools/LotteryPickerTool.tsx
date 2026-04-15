@@ -311,7 +311,7 @@ export const LotteryPickerTool: React.FC<LotteryPickerToolProps> = ({ uiConfig }
         )}
 
         {/* Generated Numbers Display */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-gradient-to-br from-green-50 to-emerald-50'}`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-gradient-to-br from-green-50 to-primary-50'}`}>
           <div className="text-center mb-4">
             <span className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {config.name}: Pick {config.mainNumbers} from 1-{config.maxNumber}
@@ -328,8 +328,8 @@ export const LotteryPickerTool: React.FC<LotteryPickerToolProps> = ({ uiConfig }
                     isGenerating ? 'animate-bounce' : ''
                   } ${
                     isDark
-                      ? 'bg-gradient-to-br from-green-600 to-emerald-700 text-white'
-                      : 'bg-gradient-to-br from-green-500 to-emerald-600 text-white'
+                      ? 'bg-gradient-to-br from-green-600 to-primary-700 text-white'
+                      : 'bg-gradient-to-br from-green-500 to-primary-600 text-white'
                   }`}
                   style={{ animationDelay: `${idx * 0.1}s` }}
                 >
@@ -392,7 +392,7 @@ export const LotteryPickerTool: React.FC<LotteryPickerToolProps> = ({ uiConfig }
           <button
             onClick={generateLottery}
             disabled={isGenerating}
-            className={`flex-1 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-green-500/30 ${
+            className={`flex-1 py-4 bg-gradient-to-r from-green-500 to-primary-500 hover:from-green-600 hover:to-primary-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-green-500/30 ${
               isGenerating ? 'animate-pulse cursor-not-allowed' : ''
             }`}
           >

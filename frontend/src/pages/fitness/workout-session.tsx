@@ -726,7 +726,7 @@ const WorkoutSession: React.FC = () => {
                         key={setNumber}
                         className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-medium border-2 flex-shrink-0 ${
                           isCompleted
-                            ? 'bg-emerald-500 text-white border-emerald-500'
+                            ? 'bg-primary-500 text-white border-primary-500'
                             : isCurrent
                             ? 'bg-primary text-white border-primary'
                             : 'bg-background text-muted-foreground border-border'
@@ -765,7 +765,7 @@ const WorkoutSession: React.FC = () => {
               {!isResting && (
                 <Button
                   onClick={completeSet}
-                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 h-12 text-lg"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 h-12 text-lg"
                   disabled={isPaused || isUpdating}
                 >
                   <CheckCircle className="h-5 w-5 mr-2" />
@@ -824,7 +824,7 @@ const WorkoutSession: React.FC = () => {
                     isCurrent
                       ? 'bg-primary/10 border-primary/20'
                       : completedSets === exercise.sets
-                      ? 'bg-emerald-50 border-emerald-200 dark:bg-emerald-950/20 dark:border-emerald-900'
+                      ? 'bg-primary-50 border-primary-200 dark:bg-primary-950/20 dark:border-primary-900'
                       : 'bg-secondary/10 border-border'
                   }`}
                 >
@@ -832,7 +832,7 @@ const WorkoutSession: React.FC = () => {
                     <div className="flex items-center gap-3">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                         completedSets === exercise.sets
-                          ? 'bg-emerald-500 text-white'
+                          ? 'bg-primary-500 text-white'
                           : isCurrent
                           ? 'bg-primary text-white'
                           : 'bg-background text-muted-foreground border border-border'
@@ -849,7 +849,7 @@ const WorkoutSession: React.FC = () => {
                     </div>
                     <div className="text-sm">
                       <span className={`font-medium ${
-                        completedSets === exercise.sets ? 'text-emerald-600' : 'text-muted-foreground'
+                        completedSets === exercise.sets ? 'text-primary-600' : 'text-muted-foreground'
                       }`}>
                         {completedSets}/{exercise.sets}
                       </span>
@@ -872,7 +872,7 @@ const WorkoutSession: React.FC = () => {
                     isCurrent
                       ? 'bg-primary/10 border-primary/20'
                       : completedSets === exercise.sets
-                      ? 'bg-emerald-50 border-emerald-200 dark:bg-emerald-950/20 dark:border-emerald-900'
+                      ? 'bg-primary-50 border-primary-200 dark:bg-primary-950/20 dark:border-primary-900'
                       : 'bg-secondary/10 border-border'
                   }`}
                 >
@@ -880,7 +880,7 @@ const WorkoutSession: React.FC = () => {
                     <div className="flex items-center gap-3">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                         completedSets === exercise.sets
-                          ? 'bg-emerald-500 text-white'
+                          ? 'bg-primary-500 text-white'
                           : isCurrent
                           ? 'bg-primary text-white'
                           : 'bg-background text-muted-foreground border border-border'
@@ -897,7 +897,7 @@ const WorkoutSession: React.FC = () => {
                     </div>
                     <div className="text-sm">
                       <span className={`font-medium ${
-                        completedSets === exercise.sets ? 'text-emerald-600' : 'text-muted-foreground'
+                        completedSets === exercise.sets ? 'text-primary-600' : 'text-muted-foreground'
                       }`}>
                         {completedSets}/{exercise.sets}
                       </span>
@@ -915,8 +915,8 @@ const WorkoutSession: React.FC = () => {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-card border border-border rounded-lg p-6 max-w-md mx-4">
             <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-8 w-8 text-emerald-600" />
+              <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="h-8 w-8 text-primary-600" />
               </div>
               <h2 className="text-xl font-bold text-foreground mb-2">
                 Workout Already Completed! 🎉
@@ -926,7 +926,7 @@ const WorkoutSession: React.FC = () => {
               </p>
               <Button 
                 onClick={() => navigate('/fitness/dashboard')}
-                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
               >
                 OK
               </Button>

@@ -49,7 +49,7 @@ const WeightStats: React.FC<WeightStatsProps> = ({
       </Card>
 
       <Card className="p-4 text-center bg-white/5 border border-white/10">
-        <Icon path={mdiCheckCircle} size={1.2} className="text-emerald-400 mx-auto mb-2" />
+        <Icon path={mdiCheckCircle} size={1.2} className="text-primary-400 mx-auto mb-2" />
         <p className="text-2xl font-bold text-white">
           {accuracy || 0}%
         </p>

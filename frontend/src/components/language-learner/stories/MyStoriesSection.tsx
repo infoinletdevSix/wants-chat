@@ -17,7 +17,7 @@ interface MyStoriesSectionProps {
 const getLevelColor = (level: string) => {
   switch (level) {
     case 'beginner':
-      return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+      return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
     case 'intermediate':
       return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
     case 'advanced':
@@ -38,7 +38,7 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
   if (myStories.length === 0) {
     return (
       <div className="text-center py-12">
-        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center">
+        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-500/10 to-primary-500/20 flex items-center justify-center">
           <BookOpen className="h-12 w-12 text-primary-400" />
         </div>
         <h3 className="text-xl font-semibold text-white mb-2">
@@ -49,7 +49,7 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
         </p>
         <Button
           onClick={onCreateStory}
-          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
         >
           <Plus className="h-4 w-4 mr-2" />
           Create Your First Story
@@ -68,7 +68,7 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
         >
           <div className="flex items-start space-x-6">
             {/* Story Thumbnail */}
-            <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center text-3xl flex-shrink-0">
+            <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary-500/10 to-primary-500/20 flex items-center justify-center text-3xl flex-shrink-0">
               {story.thumbnail}
             </div>
 
@@ -139,7 +139,7 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
                   e.stopPropagation();
                   onStoryClick(story);
                 }}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
               >
                 <BookOpen className="h-4 w-4 mr-2" />
                 Read Story

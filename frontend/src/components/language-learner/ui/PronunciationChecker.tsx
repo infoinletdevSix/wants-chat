@@ -255,15 +255,15 @@ const PronunciationChecker: React.FC<PronunciationCheckerProps> = ({
         {result && (
           <div className={`mb-4 p-4 rounded-lg ${
             result.isCorrect 
-              ? 'bg-emerald-50 dark:bg-emerald-900/20' 
+              ? 'bg-primary-50 dark:bg-primary-900/20' 
               : 'bg-orange-50 dark:bg-orange-900/20'
           }`}>
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center space-x-2">
                 {result.isCorrect ? (
                   <>
-                    <CheckCircle className="h-5 w-5 text-emerald-600" />
-                    <span className="font-semibold text-emerald-600">Great job!</span>
+                    <CheckCircle className="h-5 w-5 text-primary-600" />
+                    <span className="font-semibold text-primary-600">Great job!</span>
                   </>
                 ) : (
                   <>

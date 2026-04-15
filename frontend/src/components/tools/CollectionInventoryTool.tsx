@@ -532,7 +532,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
   const getConditionColor = (condition: ConditionGrade) => {
     switch (condition) {
       case 'Mint':
-        return 'text-emerald-500';
+        return 'text-primary-500';
       case 'Near Mint':
         return 'text-green-500';
       case 'Excellent':

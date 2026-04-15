@@ -958,7 +958,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} p-6 mb-6`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-primary-500 rounded-xl">
                 <Mountain className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -995,7 +995,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
               />
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-primary-500 text-white rounded-lg hover:from-blue-600 hover:to-primary-600 transition-all shadow-lg"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.skiShop.addNew', 'Add New')}
@@ -1051,7 +1051,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
             </div>
             <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-2 mb-1">
-                <Clock className="w-4 h-4 text-cyan-500" />
+                <Clock className="w-4 h-4 text-primary-500" />
                 <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Today&apos;s Appts</span>
               </div>
               <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1060,7 +1060,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
             </div>
             <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-2 mb-1">
-                <DollarSign className="w-4 h-4 text-emerald-500" />
+                <DollarSign className="w-4 h-4 text-primary-500" />
                 <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.skiShop.inventoryValue', 'Inventory Value')}</span>
               </div>
               <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1606,8 +1606,8 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
               {/* Package Info */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 {[
-                  { type: 'Junior', price: '$199', desc: 'Skis, boots, poles - Free size swaps', color: 'from-green-500 to-emerald-500' },
-                  { type: 'Adult', price: '$299', desc: 'Skis or board, boots, poles/bindings', color: 'from-blue-500 to-cyan-500' },
+                  { type: 'Junior', price: '$199', desc: 'Skis, boots, poles - Free size swaps', color: 'from-green-500 to-primary-500' },
+                  { type: 'Adult', price: '$299', desc: 'Skis or board, boots, poles/bindings', color: 'from-blue-500 to-primary-500' },
                   { type: 'Performance', price: '$449', desc: 'High-end equipment, unlimited swaps', color: 'from-purple-500 to-pink-500' },
                 ].map((pkg) => (
                   <div
@@ -1958,7 +1958,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
                   </div>
                   <button
                     onClick={addEquipment}
-                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all"
+                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-primary-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-primary-600 transition-all"
                   >
                     {t('tools.skiShop.addEquipment', 'Add Equipment')}
                   </button>
@@ -2115,7 +2115,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
                   </div>
                   <button
                     onClick={addCustomer}
-                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all"
+                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-primary-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-primary-600 transition-all"
                   >
                     {t('tools.skiShop.addCustomer', 'Add Customer')}
                   </button>
@@ -2250,7 +2250,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
                   </div>
                   <button
                     onClick={addService}
-                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all"
+                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-primary-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-primary-600 transition-all"
                   >
                     {t('tools.skiShop.createServiceTicket', 'Create Service Ticket')}
                   </button>
@@ -2386,7 +2386,7 @@ export const SkiShopTool: React.FC<SkiShopToolProps> = ({
                   </div>
                   <button
                     onClick={addRental}
-                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all"
+                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-primary-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-primary-600 transition-all"
                   >
                     {t('tools.skiShop.createRental2', 'Create Rental')}
                   </button>

@@ -188,7 +188,7 @@ const MeditationSession: React.FC = () => {
             <Button variant="outline" onClick={() => navigate(-1)} className="border-white/20 text-white hover:bg-white/10">
               Go Back
             </Button>
-            <Button onClick={() => navigate('/meditation')} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+            <Button onClick={() => navigate('/meditation')} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
               Browse Meditations
             </Button>
           </div>

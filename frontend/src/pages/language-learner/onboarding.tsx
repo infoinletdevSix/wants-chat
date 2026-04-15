@@ -118,14 +118,14 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Business & Career',
       description: 'Advance your professional goals',
       icon: Briefcase,
-      color: 'bg-emerald-500/20 text-emerald-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'education',
       title: 'Education & School',
       description: 'Academic success and studies',
       icon: GraduationCap,
-      color: 'bg-cyan-500/20 text-cyan-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'family',
@@ -163,7 +163,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Complete Beginner',
       description: "I'm new to this language",
       details: 'Start from the basics',
-      color: 'bg-emerald-500/20 text-emerald-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'some-phrases',
@@ -177,7 +177,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Intermediate',
       description: 'I can have simple conversations',
       details: 'Focus on expanding vocabulary',
-      color: 'bg-cyan-500/20 text-cyan-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'advanced',
@@ -201,14 +201,14 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Audio',
       description: 'Learn by listening and speaking',
       icon: Volume2,
-      color: 'bg-cyan-500/20 text-cyan-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'interactive',
       title: 'Interactive',
       description: 'Learn through games and activities',
       icon: MousePointer,
-      color: 'bg-emerald-500/20 text-emerald-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'reading',
@@ -228,7 +228,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Easy': return 'text-emerald-400 bg-emerald-500/20 border-emerald-500/30';
+      case 'Easy': return 'text-primary-400 bg-primary-500/20 border-primary-500/30';
       case 'Medium': return 'text-primary-400 bg-primary-500/20 border-primary-500/30';
       case 'Hard': return 'text-orange-400 bg-orange-500/20 border-orange-500/30';
       case 'Very Hard': return 'text-red-400 bg-red-500/20 border-red-500/30';
@@ -361,7 +361,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={language.code}
                     className={`group relative p-5 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${
                       onboardingData.targetLanguage === language.code
-                        ? 'bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
+                        ? 'bg-gradient-to-br from-primary-500/30 to-primary-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
                         : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-primary-400/50 hover:bg-white/15'
                     }`}
                     onClick={() => updateData({ targetLanguage: language.code })}
@@ -397,7 +397,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={language.code}
                     className={`group relative p-4 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${
                       onboardingData.targetLanguage === language.code
-                        ? 'bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
+                        ? 'bg-gradient-to-br from-primary-500/30 to-primary-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
                         : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-primary-400/50 hover:bg-white/15'
                     }`}
                     onClick={() => updateData({ targetLanguage: language.code })}
@@ -461,7 +461,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={language.code}
                   className={`group relative p-5 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${
                     onboardingData.nativeLanguage === language.code
-                      ? 'bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
+                      ? 'bg-gradient-to-br from-primary-500/30 to-primary-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
                       : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-primary-400/50 hover:bg-white/15'
                   }`}
                   onClick={() => updateData({ nativeLanguage: language.code })}
@@ -501,7 +501,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={purpose.id}
                     className={`h-auto p-6 flex items-center justify-start rounded-xl border transition-all duration-200 ${
                       onboardingData.purpose === purpose.id
-                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-primary-400 text-white'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-primary-400 text-white'
                         : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-primary-400/50 hover:bg-white/15'
                     }`}
                     onClick={() => updateData({ purpose: purpose.id })}
@@ -538,13 +538,13 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={goal.minutes}
                   className={`h-auto p-6 flex items-center justify-start rounded-xl border transition-all duration-200 relative ${
                     onboardingData.dailyGoal === goal.minutes
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-primary-400 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-primary-400 text-white'
                       : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-primary-400/50 hover:bg-white/15'
                   } ${goal.recommended ? 'ring-2 ring-primary-500 ring-opacity-50' : ''}`}
                   onClick={() => updateData({ dailyGoal: goal.minutes })}
                 >
                   {goal.recommended && (
-                    <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0">
+                    <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white border-0">
                       Recommended
                     </Badge>
                   )}
@@ -579,7 +579,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={level.id}
                   className={`h-auto p-6 flex items-center justify-start rounded-xl border transition-all duration-200 w-full ${
                     onboardingData.proficiencyLevel === level.id
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-primary-400 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-primary-400 text-white'
                       : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-primary-400/50 hover:bg-white/15'
                   }`}
                   onClick={() => updateData({ proficiencyLevel: level.id })}
@@ -601,7 +601,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30 w-fit mx-auto mb-6">
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-500/20 border border-primary-500/30 w-fit mx-auto mb-6">
                 <Brain className="h-8 w-8 text-primary-400" />
               </div>
               <h2 className="text-3xl font-bold text-white mb-3">
@@ -611,8 +611,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 Select all learning styles that work for you. We'll create a personalized experience that matches your preferences.
               </p>
               {onboardingData.learningStyles.length > 0 && (
-                <div className="mt-4 p-3 bg-emerald-500/20 rounded-xl border border-emerald-500/30 inline-block">
-                  <p className="text-emerald-400 text-sm font-medium">
+                <div className="mt-4 p-3 bg-primary-500/20 rounded-xl border border-primary-500/30 inline-block">
+                  <p className="text-primary-400 text-sm font-medium">
                     ✓ {onboardingData.learningStyles.length} style{onboardingData.learningStyles.length !== 1 ? 's' : ''} selected
                   </p>
                 </div>
@@ -629,7 +629,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={style.id}
                     className={`cursor-pointer transition-all duration-300 hover:-translate-y-1 rounded-2xl border-2 p-6 ${
                       isSelected
-                        ? 'border-primary-500 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 shadow-lg shadow-primary-500/10'
+                        ? 'border-primary-500 bg-gradient-to-br from-primary-500/10 to-primary-500/10 shadow-lg shadow-primary-500/10'
                         : 'border-white/20 hover:border-primary-500/50 bg-white/5 backdrop-blur-xl'
                     }`}
                     onClick={() => toggleLearningStyle(style.id)}
@@ -648,7 +648,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                       </div>
                       {isSelected && (
                         <div className="pt-2">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center mx-auto">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center mx-auto">
                             <CheckCircle className="h-5 w-5 text-white" />
                           </div>
                         </div>
@@ -665,8 +665,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-green-500/20 border border-emerald-500/30 w-fit mx-auto mb-6">
-                <Target className="h-8 w-8 text-emerald-400" />
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary-500/20 to-green-500/20 border border-primary-500/30 w-fit mx-auto mb-6">
+                <Target className="h-8 w-8 text-primary-400" />
               </div>
               <h2 className="text-3xl font-bold text-white mb-3">
                 Set up notifications
@@ -698,7 +698,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     onClick={() => updateData({ notifications: !onboardingData.notifications })}
                     className={`ml-6 px-6 transition-all duration-300 ${
                       onboardingData.notifications
-                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg'
                         : 'bg-white/10 border-2 border-white/20 hover:border-primary-500 text-white'
                     }`}
                   >
@@ -728,7 +728,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 )}
               </div>
 
-              <div className="bg-gradient-to-br from-emerald-500/20 to-green-500/10 backdrop-blur-xl rounded-2xl border border-emerald-500/30 p-8">
+              <div className="bg-gradient-to-br from-primary-500/20 to-green-500/10 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-8">
                 <div className="text-center space-y-4">
                   <div className="text-4xl mb-4">🎉</div>
                   <h4 className="text-2xl font-bold text-white">
@@ -745,7 +745,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                       <div className="text-xs text-white/60">Daily Goal</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-emerald-400">{onboardingData.learningStyles.length}</div>
+                      <div className="text-2xl font-bold text-primary-400">{onboardingData.learningStyles.length}</div>
                       <div className="text-xs text-white/60">Learning Styles</div>
                     </div>
                   </div>
@@ -784,7 +784,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 py-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+                <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-500/20 border border-primary-500/30">
                   <BookOpen className="h-6 w-6 text-primary-400" />
                 </div>
                 <div>
@@ -813,7 +813,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
             </div>
             <div className="h-3 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-500"
                 style={{ width: `${((currentStep + 1) / totalSteps) * 100}%` }}
               />
             </div>
@@ -847,7 +847,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     index === currentStep
                       ? 'bg-primary-400 w-8'
                       : index < currentStep
-                      ? 'bg-emerald-400'
+                      ? 'bg-primary-400'
                       : 'bg-white/30'
                   }`}
                 />
@@ -859,7 +859,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 onClick={handleComplete}
                 disabled={!canProceed() || createLessonMutation.loading}
                 size="lg"
-                className="h-12 px-8 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-70 disabled:transform-none"
+                className="h-12 px-8 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-70 disabled:transform-none"
               >
                 {createLessonMutation.loading ? (
                   <>
@@ -880,7 +880,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 size="lg"
                 className={`h-12 px-8 font-semibold transition-all duration-300 ${
                   canProceed()
-                    ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105'
                     : 'bg-white/10 text-white/40 cursor-not-allowed'
                 }`}
               >

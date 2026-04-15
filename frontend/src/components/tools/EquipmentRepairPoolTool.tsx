@@ -487,7 +487,7 @@ export const EquipmentRepairPoolTool: React.FC<EquipmentRepairPoolToolProps> = (
             { label: 'In Progress', value: stats.inProgress, icon: <Wrench className="w-5 h-5" />, color: 'bg-blue-500' },
             { label: 'Awaiting Parts', value: stats.awaitingParts, icon: <Timer className="w-5 h-5" />, color: 'bg-yellow-500' },
             { label: 'Completed (Month)', value: stats.completedThisMonth, icon: <CheckCircle className="w-5 h-5" />, color: 'bg-green-500' },
-            { label: 'Monthly Revenue', value: formatCurrency(stats.monthlyRevenue), icon: <DollarSign className="w-5 h-5" />, color: 'bg-emerald-500' },
+            { label: 'Monthly Revenue', value: formatCurrency(stats.monthlyRevenue), icon: <DollarSign className="w-5 h-5" />, color: 'bg-primary-500' },
             { label: 'Avg. Repair Hours', value: stats.avgRepairTime, icon: <Timer className="w-5 h-5" />, color: 'bg-purple-500' },
           ].map((stat, idx) => (
             <div key={idx} className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg p-4 shadow`}>

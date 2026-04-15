@@ -56,7 +56,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'all' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('all')}
-            className={filterBy === 'all' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'all' ? 'h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             All
             <span className="ml-1.5 text-xs opacity-70">{counts.all}</span>
@@ -65,7 +65,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'todo' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('todo')}
-            className={filterBy === 'todo' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'todo' ? 'h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             <Circle className="h-3 w-3 mr-1.5" />
             To Do
@@ -75,7 +75,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'in_progress' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('in_progress')}
-            className={filterBy === 'in_progress' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'in_progress' ? 'h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             <Clock className="h-3 w-3 mr-1.5" />
             In Progress
@@ -85,7 +85,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'done' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('done')}
-            className={filterBy === 'done' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'done' ? 'h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             <CheckCircle2 className="h-3 w-3 mr-1.5" />
             Done
@@ -127,11 +127,11 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
           {groupedTasks.inProgress && groupedTasks.inProgress.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="h-4 w-4 text-cyan-400" />
+                <Clock className="h-4 w-4 text-primary-400" />
                 <h3 className="text-sm font-medium text-white/60">
                   In Progress
                 </h3>
-                <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded-full">
+                <span className="text-xs text-primary-400 bg-primary-400/10 px-2 py-0.5 rounded-full">
                   {groupedTasks.inProgress.length}
                 </span>
               </div>
@@ -153,11 +153,11 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
           {groupedTasks.done && groupedTasks.done.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                <CheckCircle2 className="h-4 w-4 text-primary-400" />
                 <h3 className="text-sm font-medium text-white/60">
                   Completed
                 </h3>
-                <span className="text-xs text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">
+                <span className="text-xs text-primary-400 bg-primary-400/10 px-2 py-0.5 rounded-full">
                   {groupedTasks.done.length}
                 </span>
               </div>

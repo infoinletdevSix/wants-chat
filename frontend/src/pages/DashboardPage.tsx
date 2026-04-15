@@ -60,7 +60,7 @@ const getAppConfig = (moduleName: string) => {
     },
     travel: {
       icon: Plane,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-primary-500',
       route: '/travel-planner',
       description: 'AI-powered trip planning'
     },
@@ -78,7 +78,7 @@ const getAppConfig = (moduleName: string) => {
     },
     calories: {
       icon: Utensils,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-primary-500',
       route: '/calories-tracker',
       description: 'Track your nutrition'
     },
@@ -90,7 +90,7 @@ const getAppConfig = (moduleName: string) => {
     },
     finance: {
       icon: DollarSign,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-primary-500',
       route: '/expense-tracker',
       description: 'Budget & financial planning'
     }
@@ -152,13 +152,13 @@ const getActivityIcon = (iconName: string) => {
 const getActivityColorClasses = (color: string) => {
   const colorMap: Record<string, { bg: string; icon: string; border: string }> = {
     green: {
-      bg: 'from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10',
-      icon: 'from-green-500 to-emerald-500',
+      bg: 'from-green-50 to-primary-50 dark:from-green-900/10 dark:to-primary-900/10',
+      icon: 'from-green-500 to-primary-500',
       border: 'border-green-200/50 dark:border-green-700/30'
     },
     teal: {
-      bg: 'from-primary-50 to-cyan-50 dark:from-primary-900/10 dark:to-cyan-900/10',
-      icon: 'from-primary-500 to-cyan-500',
+      bg: 'from-primary-50 to-primary-50 dark:from-primary-900/10 dark:to-primary-900/10',
+      icon: 'from-primary-500 to-primary-600',
       border: 'border-primary-200/50 dark:border-primary-700/30'
     },
     sky: {
@@ -182,8 +182,8 @@ const getActivityColorClasses = (color: string) => {
       border: 'border-indigo-200/50 dark:border-indigo-700/30'
     },
     blue: {
-      bg: 'from-blue-50 to-cyan-50 dark:from-blue-900/10 dark:to-cyan-900/10',
-      icon: 'from-blue-500 to-cyan-500',
+      bg: 'from-blue-50 to-primary-50 dark:from-blue-900/10 dark:to-primary-900/10',
+      icon: 'from-blue-500 to-primary-500',
       border: 'border-blue-200/50 dark:border-blue-700/30'
     },
     red: {
@@ -336,7 +336,7 @@ export const DashboardPage = () => {
           className="flex items-center justify-between mb-6"
         >
           <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
               {t('dashboard.welcomeBack', { name: user?.name || user?.email?.split('@')[0] || 'User' })}
             </h1>
             <p className="text-white/60 mt-1">
@@ -389,8 +389,8 @@ export const DashboardPage = () => {
         >
           {quickStats.map((stat, index) => {
             const colors = [
-              'from-primary-500 to-cyan-500',
-              'from-emerald-500 to-green-500',
+              'from-primary-500 to-primary-600',
+              'from-primary-500 to-green-500',
               'from-purple-500 to-indigo-500',
               'from-amber-500 to-orange-500'
             ];
@@ -434,7 +434,7 @@ export const DashboardPage = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                       <TrendingUp className="h-4 w-4 text-white" />
                     </div>
                     {t('dashboard.personalStats.title')}
@@ -523,7 +523,7 @@ export const DashboardPage = () => {
                 {isAppSelected('calories-tracker') && (
                 <div className="p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl hover:shadow-lg transition-shadow duration-200">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-primary-500 rounded-lg flex items-center justify-center">
                       <Activity className="h-4 w-4 text-white" />
                     </div>
                     <h4 className="text-xs font-semibold text-white/60">Calories</h4>
@@ -548,7 +548,7 @@ export const DashboardPage = () => {
                 {isAppSelected('fitness') && (
                 <div className="p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl hover:shadow-lg transition-shadow duration-200">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-primary-500 rounded-lg flex items-center justify-center">
                       <Heart className="h-4 w-4 text-white" />
                     </div>
                     <h4 className="text-xs font-semibold text-white/60">Workouts</h4>
@@ -630,7 +630,7 @@ export const DashboardPage = () => {
                 {isAppSelected('expense-tracker') && (
                 <div className="p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl hover:shadow-lg transition-shadow duration-200">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                       <DollarSign className="h-4 w-4 text-white" />
                     </div>
                     <h4 className="text-xs font-semibold text-white/60">Transactions</h4>
@@ -819,7 +819,7 @@ export const DashboardPage = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                     <Grid3X3 className="h-4 w-4 text-white" />
                   </div>
                   {t('dashboard.myApps.title')}
@@ -934,7 +934,7 @@ export const DashboardPage = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                     <Activity className="h-4 w-4 text-white" />
                   </div>
                   {t('dashboard.todayActivity.title')}

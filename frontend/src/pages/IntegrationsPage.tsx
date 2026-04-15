@@ -13,7 +13,7 @@ const integrationCategories = [
   {
     name: 'Productivity',
     icon: Workflow,
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-500 to-primary-500',
     apps: [
       { name: 'Notion', logo: 'N', desc: 'All-in-one workspace' },
       { name: 'Slack', logo: 'S', desc: 'Team messaging' },
@@ -26,7 +26,7 @@ const integrationCategories = [
   {
     name: 'Communication',
     icon: MessageSquare,
-    color: 'from-emerald-500 to-primary-500',
+    color: 'from-primary-500 to-primary-600',
     apps: [
       { name: 'Gmail', logo: 'G', desc: 'Email service' },
       { name: 'Microsoft Teams', logo: 'T', desc: 'Business communication' },
@@ -156,12 +156,12 @@ const IntegrationsPage: React.FC = () => {
         {/* Animated background */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
           <motion.div
-            className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[150px]"
+            className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-[150px]"
             animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
             transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.div
-            className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[150px]"
+            className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[150px]"
             animate={{ x: [0, -80, 0], y: [0, -60, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -178,12 +178,12 @@ const IntegrationsPage: React.FC = () => {
               className="text-center"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                <Zap className="w-4 h-4 text-emerald-400" />
+                <Zap className="w-4 h-4 text-primary-400" />
                 <span className="text-sm font-medium text-white/80">{t('integrations.hero.badge')}</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-primary-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">
                   {t('integrations.hero.title')}
                 </span>
               </h1>
@@ -199,7 +199,7 @@ const IntegrationsPage: React.FC = () => {
                   <input
                     type="text"
                     placeholder={t('integrations.hero.searchPlaceholder')}
-                    className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
+                    className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-all"
                   />
                 </div>
               </div>
@@ -212,7 +212,7 @@ const IntegrationsPage: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.05 }}
-                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white/70 hover:bg-white/10 hover:border-emerald-500/30 transition-all cursor-pointer"
+                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white/70 hover:bg-white/10 hover:border-primary-500/30 transition-all cursor-pointer"
                   >
                     {app}
                   </motion.div>
@@ -240,7 +240,7 @@ const IntegrationsPage: React.FC = () => {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-white/60">{stat.label}</div>
@@ -289,12 +289,12 @@ const IntegrationsPage: React.FC = () => {
                       <motion.div
                         key={app.name}
                         whileHover={{ scale: 1.02, y: -2 }}
-                        className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-emerald-500/30 hover:bg-white/10 transition-all cursor-pointer group"
+                        className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-primary-500/30 hover:bg-white/10 transition-all cursor-pointer group"
                       >
                         <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center text-white font-bold text-lg mb-3`}>
                           {app.logo}
                         </div>
-                        <h4 className="font-medium text-white group-hover:text-emerald-400 transition-colors">
+                        <h4 className="font-medium text-white group-hover:text-primary-400 transition-colors">
                           {app.name}
                         </h4>
                         <p className="text-xs text-white/50 mt-1">{app.desc}</p>
@@ -347,8 +347,8 @@ const IntegrationsPage: React.FC = () => {
                   transition={{ delay: index * 0.1 }}
                   className="p-6 bg-gray-950/50 border border-white/10 rounded-xl"
                 >
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 w-fit mb-4">
-                    <feature.icon className="w-6 h-6 text-emerald-400" />
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-500/30 w-fit mb-4">
+                    <feature.icon className="w-6 h-6 text-primary-400" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-white/60">{feature.description}</p>
@@ -365,7 +365,7 @@ const IntegrationsPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-12 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 text-center"
+              className="p-12 rounded-2xl bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 {t('integrations.cta.title')}
@@ -376,7 +376,7 @@ const IntegrationsPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.location.href = '/signup'}
-                  className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2"
+                  className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all flex items-center justify-center gap-2"
                 >
                   {t('integrations.cta.getStarted')}
                   <ArrowRight className="w-5 h-5" />

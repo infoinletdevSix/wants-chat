@@ -45,7 +45,7 @@ const LearningPath: React.FC<LearningPathProps> = ({
     switch (category) {
       case 'basics': return 'bg-blue-500';
       case 'grammar': return 'bg-purple-500';
-      case 'vocabulary': return 'bg-emerald-500';
+      case 'vocabulary': return 'bg-primary-500';
       case 'conversation': return 'bg-orange-500';
       case 'culture': return 'bg-pink-500';
       default: return 'bg-gray-500';
@@ -109,7 +109,7 @@ const LearningPath: React.FC<LearningPathProps> = ({
               </div>
             </div>
             {isCompleted && (
-              <CheckCircle className="h-6 w-6 text-emerald-500" />
+              <CheckCircle className="h-6 w-6 text-primary-500" />
             )}
           </div>
         </CardHeader>

@@ -124,7 +124,7 @@ const STATUS_CONFIG: Record<OrderStatus, { label: string; color: string; bgColor
   processing: { label: 'Processing', color: 'text-blue-600', bgColor: 'bg-blue-100', icon: <RefreshCw className="w-4 h-4" /> },
   picking: { label: 'Picking', color: 'text-purple-600', bgColor: 'bg-purple-100', icon: <Box className="w-4 h-4" /> },
   packing: { label: 'Packing', color: 'text-indigo-600', bgColor: 'bg-indigo-100', icon: <Package className="w-4 h-4" /> },
-  shipped: { label: 'Shipped', color: 'text-cyan-600', bgColor: 'bg-cyan-100', icon: <Truck className="w-4 h-4" /> },
+  shipped: { label: 'Shipped', color: 'text-primary-600', bgColor: 'bg-primary-100', icon: <Truck className="w-4 h-4" /> },
   delivered: { label: 'Delivered', color: 'text-green-600', bgColor: 'bg-green-100', icon: <CheckCircle className="w-4 h-4" /> },
   cancelled: { label: 'Cancelled', color: 'text-red-600', bgColor: 'bg-red-100', icon: <PackageX className="w-4 h-4" /> },
 };
@@ -486,9 +486,9 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
               <p className={`text-sm ${theme === 'dark' ? 'text-blue-400' : 'text-blue-700'}`}>{t('tools.orderFulfillment.processing', 'Processing')}</p>
               <p className="text-2xl font-bold text-blue-500">{stats.processing}</p>
             </div>
-            <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-cyan-900/20' : 'bg-cyan-50'}`}>
-              <p className={`text-sm ${theme === 'dark' ? 'text-cyan-400' : 'text-cyan-700'}`}>{t('tools.orderFulfillment.shipped', 'Shipped')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.shipped}</p>
+            <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+              <p className={`text-sm ${theme === 'dark' ? 'text-primary-400' : 'text-primary-700'}`}>{t('tools.orderFulfillment.shipped', 'Shipped')}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.shipped}</p>
             </div>
             <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-green-900/20' : 'bg-green-50'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-green-400' : 'text-green-700'}`}>{t('tools.orderFulfillment.delivered', 'Delivered')}</p>

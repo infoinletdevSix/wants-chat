@@ -41,7 +41,7 @@ export const WeeklyProgress: React.FC<WeeklyProgressProps> = ({
         </div>
         <div className="w-full bg-white/10 rounded-full h-2">
           <div
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${Math.min((thisWeekMinutes / weeklyGoal) * 100, 100)}%` }}
           />
         </div>

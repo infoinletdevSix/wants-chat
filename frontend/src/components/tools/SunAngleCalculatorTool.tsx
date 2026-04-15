@@ -539,7 +539,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                   </div>
 
                   {/* Azimuth */}
-                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border border-blue-700/30' : 'bg-gradient-to-br from-blue-50 to-cyan-100 border border-blue-200'}`}>
+                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gradient-to-br from-blue-900/30 to-primary-900/30 border border-blue-700/30' : 'bg-gradient-to-br from-blue-50 to-primary-100 border border-blue-200'}`}>
                     <div className="flex items-center gap-2 mb-2">
                       <Compass className={`w-5 h-5 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`} />
                       <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>

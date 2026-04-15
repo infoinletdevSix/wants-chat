@@ -369,10 +369,10 @@ export const PreNeedContractTool: React.FC<PreNeedContractToolProps> = ({ uiConf
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2">
-              <FileText className="w-7 h-7 text-emerald-500" />
+              <FileText className="w-7 h-7 text-primary-500" />
               Pre-Need Contract Management
               {isPrefilled && (
-                <span className="ml-2 px-2 py-0.5 text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 rounded-full flex items-center gap-1">
+                <span className="ml-2 px-2 py-0.5 text-xs bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded-full flex items-center gap-1">
                   <Sparkles className="w-3 h-3" /> Auto-filled
                 </span>
               )}
@@ -404,7 +404,7 @@ export const PreNeedContractTool: React.FC<PreNeedContractToolProps> = ({ uiConf
             />
             <button
               onClick={handleCreateContract}
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
             >
               <Plus className="w-4 h-4" />
               {t('tools.preNeedContract.newContract', 'New Contract')}
@@ -485,7 +485,7 @@ export const PreNeedContractTool: React.FC<PreNeedContractToolProps> = ({ uiConf
                     onClick={() => setSelectedContractId(contract.id)}
                     className={`p-4 border-b cursor-pointer transition-colors ${
                       selectedContractId === contract.id
-                        ? theme === 'dark' ? 'bg-emerald-900/20' : 'bg-emerald-50'
+                        ? theme === 'dark' ? 'bg-primary-900/20' : 'bg-primary-50'
                         : theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-50'
                     } ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}
                   >
@@ -554,7 +554,7 @@ export const PreNeedContractTool: React.FC<PreNeedContractToolProps> = ({ uiConf
                         onClick={() => setActiveTab(tab)}
                         className={`px-4 py-3 text-sm font-medium capitalize border-b-2 transition-colors ${
                           activeTab === tab
-                            ? 'border-emerald-500 text-emerald-600'
+                            ? 'border-primary-500 text-primary-600'
                             : 'border-transparent text-gray-500 hover:text-gray-700'
                         }`}
                       >
@@ -827,7 +827,7 @@ export const PreNeedContractTool: React.FC<PreNeedContractToolProps> = ({ uiConf
                         <h3 className="font-medium">Payment History ({selectedContract.payments.length})</h3>
                         <button
                           onClick={() => setShowPaymentForm(true)}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
+                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                         >
                           <Plus className="w-4 h-4" /> Record Payment
                         </button>
@@ -973,7 +973,7 @@ const PaymentForm: React.FC<{
         <button onClick={onCancel} className="px-3 py-1.5 text-sm text-gray-500">{t('tools.preNeedContract.cancel', 'Cancel')}</button>
         <button
           onClick={() => payment.amount > 0 && onSubmit(payment)}
-          className="px-3 py-1.5 text-sm bg-emerald-600 text-white rounded hover:bg-emerald-700"
+          className="px-3 py-1.5 text-sm bg-primary-600 text-white rounded hover:bg-primary-700"
         >
           {t('tools.preNeedContract.recordPayment2', 'Record Payment')}
         </button>

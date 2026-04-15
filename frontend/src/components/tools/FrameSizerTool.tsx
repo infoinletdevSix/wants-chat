@@ -409,10 +409,10 @@ export const FrameSizerTool: React.FC<FrameSizerToolProps> = ({ uiConfig }) => {
             {/* Glass Size */}
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-3 h-3 rounded bg-cyan-500" />
+                <div className="w-3 h-3 rounded bg-primary-500" />
                 <span className={`font-medium text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.frameSizer.glassGlazing', 'Glass/Glazing')}</span>
               </div>
-              <div className="text-xl font-bold text-cyan-500">
+              <div className="text-xl font-bold text-primary-500">
                 {formatSize(calculations.glass.width)} x {formatSize(calculations.glass.height)}{calculations.unitLabel}
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -423,10 +423,10 @@ export const FrameSizerTool: React.FC<FrameSizerToolProps> = ({ uiConfig }) => {
             {/* Backing Board */}
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-3 h-3 rounded bg-emerald-500" />
+                <div className="w-3 h-3 rounded bg-primary-500" />
                 <span className={`font-medium text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.frameSizer.backingBoard', 'Backing Board')}</span>
               </div>
-              <div className="text-xl font-bold text-emerald-500">
+              <div className="text-xl font-bold text-primary-500">
                 {formatSize(calculations.backing.width)} x {formatSize(calculations.backing.height)}{calculations.unitLabel}
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

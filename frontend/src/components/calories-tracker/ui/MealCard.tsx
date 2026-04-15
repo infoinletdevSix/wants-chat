@@ -55,7 +55,7 @@ const MealCard: React.FC<MealCardProps> = ({
       case 'breakfast':
         return 'from-orange-500/10 to-yellow-500/10 border-orange-200';
       case 'lunch':
-        return 'from-emerald-500/10 to-green-500/10 border-emerald-200';
+        return 'from-primary-500/10 to-green-500/10 border-primary-200';
       case 'dinner':
         return 'from-blue-500/10 to-indigo-500/10 border-blue-200';
       case 'snacks':
@@ -102,7 +102,7 @@ const MealCard: React.FC<MealCardProps> = ({
               <Button
                 size="sm"
                 onClick={() => onAddFood(mealType)}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground h-8"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-primary-foreground h-8"
               >
                 <Icon path={mdiPlus} size={0.6} className="mr-1" />
                 Add

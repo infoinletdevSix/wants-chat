@@ -118,7 +118,7 @@ const MotherCare: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-primary-500 to-cyan-500">
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-primary-500 to-primary-600">
                   <CalendarDays className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Schedule Checkup</h3>
@@ -176,7 +176,7 @@ const MotherCare: React.FC = () => {
                     {pregnancyData?.data?.find(r => r.week)?.week || 0}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500">
+                <div className="p-3 rounded-full bg-gradient-to-r from-primary-500 to-primary-600">
                   <CalendarDays className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -206,7 +206,7 @@ const MotherCare: React.FC = () => {
                     {pregnancyData?.data?.reduce((total, r) => total + (r.medications?.length || 0), 0) || 0}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500">
+                <div className="p-3 rounded-full bg-gradient-to-r from-primary-500 to-primary-600">
                   <Pill className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -223,7 +223,7 @@ const MotherCare: React.FC = () => {
             </div>
             <Button
               onClick={() => navigate('/health/add-pregnancy-record')}
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-primary-600 text-white"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Record
@@ -242,7 +242,7 @@ const MotherCare: React.FC = () => {
               <p className="text-red-400 mb-4">{String(pregnancyError) || 'Failed to load pregnancy records'}</p>
               <Button
                 onClick={() => refetchPregnancy()}
-                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white"
               >
                 Try Again
               </Button>
@@ -457,7 +457,7 @@ const MotherCare: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/health/add-pregnancy-record')}
-                  className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                  className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Your First Record

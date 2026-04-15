@@ -46,7 +46,7 @@ export const TodaysPractice: React.FC<TodaysPracticeProps> = ({
   return (
     <div className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-5 lg:col-span-1">
       <h2 className="text-lg font-semibold mb-4 text-white flex items-center gap-2">
-        <div className="w-2 h-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full animate-pulse"></div>
+        <div className="w-2 h-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full animate-pulse"></div>
         Today's Practice
       </h2>
 
@@ -64,7 +64,7 @@ export const TodaysPractice: React.FC<TodaysPracticeProps> = ({
           </div>
           <div className="w-full bg-white/10 rounded-full h-2">
             <div
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-300"
               style={{ width: `${Math.min(((userStats.todayProgress / userStats.todayGoal) * 100) || 0, 100)}%` }}
             />
           </div>
@@ -103,7 +103,7 @@ export const TodaysPractice: React.FC<TodaysPracticeProps> = ({
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 p-3 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-lg border border-white/10">
+        <div className="grid grid-cols-3 gap-2 p-3 bg-gradient-to-r from-primary-500/20 to-primary-500/20 rounded-lg border border-white/10">
           <div className="text-center">
             {statsLoading ? (
               <Skeleton className="h-6 w-8 mx-auto mb-1" />
@@ -131,7 +131,7 @@ export const TodaysPractice: React.FC<TodaysPracticeProps> = ({
         </div>
 
         <Button
-          className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-10"
+          className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-10"
           onClick={() => navigate('/meditation/profile')}
         >
           <TrendingUp className="h-4 w-4 mr-2" />

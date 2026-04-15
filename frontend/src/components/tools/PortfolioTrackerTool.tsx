@@ -295,7 +295,7 @@ export const PortfolioTrackerTool: React.FC<PortfolioTrackerToolProps> = ({ uiCo
 
       {/* Header */}
       <div className="text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-primary-500 mb-4">
           <TrendingUp className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.portfolioTracker.portfolioTracker', 'Portfolio Tracker')}</h2>
@@ -318,12 +318,12 @@ export const PortfolioTrackerTool: React.FC<PortfolioTrackerToolProps> = ({ uiCo
 
         <div className={`${cardClass} p-4`}>
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <TrendingUp className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <TrendingUp className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.portfolioTracker.currentValue', 'Current Value')}</p>
-              <p className="text-xl font-bold text-cyan-500">${stats.totalCurrentValue.toFixed(2)}</p>
+              <p className="text-xl font-bold text-primary-500">${stats.totalCurrentValue.toFixed(2)}</p>
             </div>
           </div>
         </div>

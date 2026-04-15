@@ -80,10 +80,10 @@ export const TextReverserTool: React.FC<TextReverserToolProps> = ({ uiConfig }) 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg">
-            <RotateCcw className="w-5 h-5 text-cyan-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <RotateCcw className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.textReverser.textReverser', 'Text Reverser')}</h3>
@@ -113,7 +113,7 @@ export const TextReverserTool: React.FC<TextReverserToolProps> = ({ uiConfig }) 
                 onClick={() => setMode(m.value)}
                 className={`p-3 rounded-lg text-left transition-colors ${
                   mode === m.value
-                    ? 'bg-cyan-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -194,7 +194,7 @@ export const TextReverserTool: React.FC<TextReverserToolProps> = ({ uiConfig }) 
               {copied ? t('tools.textReverser.copied', 'Copied!') : t('tools.textReverser.copy', 'Copy')}
             </button>
           </div>
-          <div className={`min-h-[100px] p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-100'} border`}>
+          <div className={`min-h-[100px] p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <pre className={`whitespace-pre-wrap break-words font-mono ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {reversed || <span className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.textReverser.reversedTextWillAppearHere', 'Reversed text will appear here...')}</span>}
             </pre>

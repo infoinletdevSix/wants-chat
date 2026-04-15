@@ -416,15 +416,15 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -434,7 +434,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
 
   const tabClass = (active: boolean) => `px-4 py-2 font-medium rounded-lg transition-colors ${
     active
-      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+      ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
       : theme === 'dark'
         ? 'text-gray-400 hover:text-gray-200 hover:bg-gray-700'
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -445,7 +445,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl">
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
             <UserCheck className="w-8 h-8 text-primary-500" />
           </div>
           <div>
@@ -491,12 +491,12 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <ClipboardList className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <ClipboardList className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.patientDischarge.total', 'Total')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -591,7 +591,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredRecords.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -608,14 +608,14 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                       onClick={() => { setSelectedRecord(record); setActiveTab('overview'); }}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedRecord?.id === record.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <DispositionIcon className="w-4 h-4 text-cyan-500" />
+                            <DispositionIcon className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{record.patientName}</p>
@@ -714,7 +714,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                     {/* Diagnosis */}
                     <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                       <h3 className="font-semibold mb-2 flex items-center gap-2">
-                        <Stethoscope className="w-4 h-4 text-cyan-500" />
+                        <Stethoscope className="w-4 h-4 text-primary-500" />
                         {t('tools.patientDischarge.primaryDiagnosis2', 'Primary Diagnosis')}
                       </h3>
                       <p>{selectedRecord.diagnosis || 'Not specified'}</p>
@@ -764,16 +764,16 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                         <h3 className="font-semibold mb-3">{t('tools.patientDischarge.servicesReferrals', 'Services & Referrals')}</h3>
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
-                            <Heart className={`w-4 h-4 ${selectedRecord.homeHealthReferral ? 'text-cyan-500' : 'text-gray-400'}`} />
+                            <Heart className={`w-4 h-4 ${selectedRecord.homeHealthReferral ? 'text-primary-500' : 'text-gray-400'}`} />
                             <span>Home Health: {selectedRecord.homeHealthReferral ? selectedRecord.homeHealthAgency || 'Yes' : 'No'}</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Truck className={`w-4 h-4 ${selectedRecord.transportArranged ? 'text-cyan-500' : 'text-gray-400'}`} />
+                            <Truck className={`w-4 h-4 ${selectedRecord.transportArranged ? 'text-primary-500' : 'text-gray-400'}`} />
                             <span>Transport: {selectedRecord.transportArranged ? selectedRecord.transportType || 'Arranged' : 'Not arranged'}</span>
                           </div>
                           {selectedRecord.insuranceAuthNumber && (
                             <div className="flex items-center gap-2">
-                              <Shield className="w-4 h-4 text-cyan-500" />
+                              <Shield className="w-4 h-4 text-primary-500" />
                               <span>Auth #: {selectedRecord.insuranceAuthNumber}</span>
                             </div>
                           )}
@@ -820,7 +820,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Pill className="w-4 h-4 text-cyan-500" />
+                        <Pill className="w-4 h-4 text-primary-500" />
                         {t('tools.patientDischarge.medicationReconciliation', 'Medication Reconciliation')}
                       </h3>
                       <button
@@ -881,7 +881,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-cyan-500" />
+                        <Calendar className="w-4 h-4 text-primary-500" />
                         {t('tools.patientDischarge.followUpAppointments', 'Follow-up Appointments')}
                       </h3>
                       <button
@@ -938,7 +938,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                     {selectedRecord.dischargeInstructions && (
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-2 flex items-center gap-2">
-                          <FileText className="w-4 h-4 text-cyan-500" />
+                          <FileText className="w-4 h-4 text-primary-500" />
                           {t('tools.patientDischarge.dischargeInstructions2', 'Discharge Instructions')}
                         </h3>
                         <p className="text-sm whitespace-pre-wrap">{selectedRecord.dischargeInstructions}</p>
@@ -968,7 +968,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
 
                     {/* Emergency Contact */}
                     {selectedRecord.emergencyContactName && (
-                      <div className={`p-4 rounded-lg border border-cyan-500/30 ${theme === 'dark' ? 'bg-cyan-500/10' : 'bg-cyan-50'}`}>
+                      <div className={`p-4 rounded-lg border border-primary-500/30 ${theme === 'dark' ? 'bg-primary-500/10' : 'bg-primary-50'}`}>
                         <h3 className="font-semibold mb-2">{t('tools.patientDischarge.emergencyContact', 'Emergency Contact')}</h3>
                         <p className="text-sm">{selectedRecord.emergencyContactName} - {selectedRecord.emergencyContactPhone}</p>
                       </div>
@@ -1079,7 +1079,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {formData.secondaryDiagnoses.map((d, i) => (
-                        <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                        <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                           {d} <button onClick={() => removeSecondaryDiagnosis(d)}><X className="w-3 h-3" /></button>
                         </span>
                       ))}
@@ -1129,7 +1129,7 @@ export const PatientDischargeTool: React.FC<PatientDischargeToolProps> = ({ uiCo
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {formData.specialEquipment.map((e, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {e} <button onClick={() => removeEquipment(e)}><X className="w-3 h-3" /></button>
                     </span>
                   ))}

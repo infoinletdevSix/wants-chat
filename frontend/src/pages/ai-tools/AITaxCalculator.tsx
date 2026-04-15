@@ -103,8 +103,8 @@ ${result.tips.map((t, i) => `${i + 1}. ${t}`).join('\n')}
       title="AI Tax Calculator"
       description="Calculate your estimated taxes with AI-powered insights"
       icon={<Calculator className="w-8 h-8" />}
-      iconColor="text-emerald-400"
-      iconBgColor="bg-emerald-500/20"
+      iconColor="text-primary-400"
+      iconBgColor="bg-primary-500/20"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Form Section */}
@@ -212,7 +212,7 @@ ${result.tips.map((t, i) => `${i + 1}. ${t}`).join('\n')}
             <Button
               onClick={handleCalculate}
               disabled={loading || !formData.income}
-              className="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600"
+              className="w-full bg-gradient-to-r from-primary-500 to-green-500 hover:from-primary-600 hover:to-green-600"
             >
               {loading ? (
                 <>
@@ -252,15 +252,15 @@ ${result.tips.map((t, i) => `${i + 1}. ${t}`).join('\n')}
           <CardContent>
             {loading ? (
               <div className="flex items-center justify-center min-h-[400px]">
-                <Loader2 className="w-8 h-8 text-emerald-400 animate-spin" />
+                <Loader2 className="w-8 h-8 text-primary-400 animate-spin" />
               </div>
             ) : result ? (
               <div className="space-y-4 max-h-[600px] overflow-y-auto">
                 {/* Summary Cards */}
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-emerald-500/10 rounded-lg p-3 text-center">
+                  <div className="bg-primary-500/10 rounded-lg p-3 text-center">
                     <p className="text-white/60 text-xs">Take Home</p>
-                    <p className="text-emerald-400 text-xl font-bold">
+                    <p className="text-primary-400 text-xl font-bold">
                       {formatCurrency(result.takeHome)}
                     </p>
                   </div>
@@ -291,7 +291,7 @@ ${result.tips.map((t, i) => `${i + 1}. ${t}`).join('\n')}
                     <div className="h-px bg-white/10 my-2" />
                     <div className="flex justify-between">
                       <span className="text-white/60 text-sm">Effective Rate</span>
-                      <span className="text-emerald-400">{result.effectiveRate.toFixed(1)}%</span>
+                      <span className="text-primary-400">{result.effectiveRate.toFixed(1)}%</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-white/60 text-sm">Marginal Rate</span>
@@ -308,7 +308,7 @@ ${result.tips.map((t, i) => `${i + 1}. ${t}`).join('\n')}
                       <div key={idx} className="flex items-center gap-2">
                         <div className="flex-1 bg-white/5 rounded h-6 overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-emerald-500 to-green-500"
+                            className="h-full bg-gradient-to-r from-primary-500 to-green-500"
                             style={{
                               width: `${(item.amount / result.federalTax) * 100}%`,
                             }}

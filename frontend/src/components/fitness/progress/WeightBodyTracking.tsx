@@ -104,7 +104,7 @@ const WeightBodyTracking: React.FC<WeightBodyTrackingProps> = ({
           <h3 className="text-lg font-semibold text-white">Weight & Body Composition</h3>
         </div>
         {onAddPhoto && (
-          <Button size="sm" onClick={onAddPhoto} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+          <Button size="sm" onClick={onAddPhoto} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
             <Icon path={mdiCamera} size={0.7} className="mr-2" />
             Add Photo
           </Button>
@@ -149,7 +149,7 @@ const WeightBodyTracking: React.FC<WeightBodyTrackingProps> = ({
                   <td className="text-center p-3 text-white">{measurement.current}</td>
                   <td className="text-center p-3 text-white/60">{measurement.start}</td>
                   <td className={`text-center p-3 ${
-                    measurement.isPositive ? 'text-emerald-500' : 'text-white/60'
+                    measurement.isPositive ? 'text-primary-500' : 'text-white/60'
                   }`}>
                     {measurement.change}
                   </td>

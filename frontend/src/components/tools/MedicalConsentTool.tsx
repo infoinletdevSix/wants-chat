@@ -614,15 +614,15 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -632,7 +632,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
 
   const tabClass = (active: boolean) => `px-4 py-2 font-medium rounded-lg transition-colors ${
     active
-      ? 'bg-cyan-500/20 text-cyan-400'
+      ? 'bg-primary-500/20 text-primary-400'
       : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'
   }`;
 
@@ -641,7 +641,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl">
+          <div className="p-3 bg-gradient-to-br from-blue-500/20 to-primary-500/20 rounded-xl">
             <FileSignature className="w-8 h-8 text-blue-500" />
           </div>
           <div>
@@ -687,12 +687,12 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <FileText className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <FileText className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.medicalConsent.totalForms', 'Total Forms')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -797,7 +797,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
               <div className="max-h-[600px] overflow-y-auto">
                 {isLoading ? (
                   <div className="p-8 text-center">
-                    <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                    <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
                   </div>
                 ) : filteredConsents.length === 0 ? (
                   <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -817,14 +817,14 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                           }}
                           className={`p-4 cursor-pointer transition-colors ${
                             selectedConsent?.id === consent.id
-                              ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                              ? 'bg-primary-500/10 border-l-4 border-primary-500'
                               : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                           }`}
                         >
                           <div className="flex items-start justify-between">
                             <div className="flex items-start gap-3">
                               <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                                <TypeIcon className="w-4 h-4 text-cyan-500" />
+                                <TypeIcon className="w-4 h-4 text-primary-500" />
                               </div>
                               <div>
                                 <p className="font-medium">{consent.formTitle}</p>
@@ -914,7 +914,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                     {/* Patient Info */}
                     <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                       <h3 className="font-semibold mb-3 flex items-center gap-2">
-                        <User className="w-4 h-4 text-cyan-500" />
+                        <User className="w-4 h-4 text-primary-500" />
                         {t('tools.medicalConsent.patientInformation2', 'Patient Information')}
                       </h3>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -937,7 +937,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                     {selectedConsent.procedureName && (
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-2 flex items-center gap-2">
-                          <Clipboard className="w-4 h-4 text-cyan-500" />
+                          <Clipboard className="w-4 h-4 text-primary-500" />
                           {t('tools.medicalConsent.procedure', 'Procedure')}
                         </h3>
                         <p>{selectedConsent.procedureName}</p>
@@ -1000,7 +1000,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                     {selectedConsent.questions.length > 0 && (
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
-                          <Check className="w-4 h-4 text-cyan-500" />
+                          <Check className="w-4 h-4 text-primary-500" />
                           Consent Questions ({selectedConsent.questions.length})
                         </h3>
                         <div className="space-y-2">
@@ -1022,7 +1022,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                     {/* Signature Info */}
                     <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                       <h3 className="font-semibold mb-3 flex items-center gap-2">
-                        <PenTool className="w-4 h-4 text-cyan-500" />
+                        <PenTool className="w-4 h-4 text-primary-500" />
                         {t('tools.medicalConsent.signatureInformation', 'Signature Information')}
                       </h3>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -1061,7 +1061,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                     {selectedConsent.witnessName && (
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
-                          <Users className="w-4 h-4 text-cyan-500" />
+                          <Users className="w-4 h-4 text-primary-500" />
                           {t('tools.medicalConsent.witnessInformation2', 'Witness Information')}
                         </h3>
                         <div className="grid grid-cols-2 gap-4">
@@ -1081,7 +1081,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                     {selectedConsent.interpreterUsed && (
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
-                          <Languages className="w-4 h-4 text-cyan-500" />
+                          <Languages className="w-4 h-4 text-primary-500" />
                           {t('tools.medicalConsent.languageServices', 'Language Services')}
                         </h3>
                         <div className="grid grid-cols-2 gap-4">
@@ -1135,7 +1135,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                   <div key={template.id} className={`p-4 rounded-lg border ${theme === 'dark' ? 'border-gray-700 bg-gray-700/30' : 'border-gray-200 bg-gray-50'}`}>
                     <div className="flex items-start gap-3 mb-3">
                       <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-200'}`}>
-                        <TypeIcon className="w-5 h-5 text-cyan-500" />
+                        <TypeIcon className="w-5 h-5 text-primary-500" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-medium">{template.name}</h3>
@@ -1164,7 +1164,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                           applyTemplate(template);
                           setShowModal(true);
                         }}
-                        className="text-sm text-cyan-500 hover:text-cyan-400 font-medium"
+                        className="text-sm text-primary-500 hover:text-primary-400 font-medium"
                       >
                         {t('tools.medicalConsent.useTemplate', 'Use Template')}
                       </button>
@@ -1202,13 +1202,13 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                         entry.action === 'signed' ? 'bg-green-500/20' :
                         entry.action === 'revoked' ? 'bg-red-500/20' :
                         entry.action === 'viewed' ? 'bg-blue-500/20' :
-                        entry.action === 'created' ? 'bg-cyan-500/20' :
+                        entry.action === 'created' ? 'bg-primary-500/20' :
                         'bg-gray-500/20'
                       }`}>
                         {entry.action === 'signed' && <CheckCircle className="w-4 h-4 text-green-500" />}
                         {entry.action === 'revoked' && <XCircle className="w-4 h-4 text-red-500" />}
                         {entry.action === 'viewed' && <Eye className="w-4 h-4 text-blue-500" />}
-                        {entry.action === 'created' && <Plus className="w-4 h-4 text-cyan-500" />}
+                        {entry.action === 'created' && <Plus className="w-4 h-4 text-primary-500" />}
                         {entry.action === 'modified' && <Edit2 className="w-4 h-4 text-yellow-500" />}
                         {entry.action === 'expired' && <Clock className="w-4 h-4 text-orange-500" />}
                       </div>
@@ -1504,11 +1504,11 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                   <div
                     key={template.id}
                     onClick={() => applyTemplate(template)}
-                    className={`p-4 rounded-lg border cursor-pointer transition-colors ${theme === 'dark' ? 'border-gray-700 hover:border-cyan-500 hover:bg-gray-700/50' : 'border-gray-200 hover:border-cyan-500 hover:bg-gray-50'}`}
+                    className={`p-4 rounded-lg border cursor-pointer transition-colors ${theme === 'dark' ? 'border-gray-700 hover:border-primary-500 hover:bg-gray-700/50' : 'border-gray-200 hover:border-primary-500 hover:bg-gray-50'}`}
                   >
                     <div className="flex items-start gap-3">
                       <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                        <TypeIcon className="w-5 h-5 text-cyan-500" />
+                        <TypeIcon className="w-5 h-5 text-primary-500" />
                       </div>
                       <div>
                         <h3 className="font-medium">{template.name}</h3>
@@ -1574,7 +1574,7 @@ export const MedicalConsentTool: React.FC<MedicalConsentToolProps> = ({ uiConfig
                   onTouchEnd={stopDrawing}
                   className={`w-full border rounded-lg cursor-crosshair ${theme === 'dark' ? 'border-gray-700 bg-gray-800' : 'border-gray-300 bg-white'}`}
                 />
-                <button type="button" onClick={clearSignature} className="text-sm text-cyan-500 hover:text-cyan-400 mt-2">
+                <button type="button" onClick={clearSignature} className="text-sm text-primary-500 hover:text-primary-400 mt-2">
                   {t('tools.medicalConsent.clearSignature', 'Clear Signature')}
                 </button>
               </div>

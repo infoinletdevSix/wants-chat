@@ -19,7 +19,7 @@ const MotivationalQuote: React.FC<MotivationalQuoteProps> = ({ streak }) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   return (
-    <Card className="p-8 bg-gradient-to-r from-primary-500/20 via-cyan-500/10 to-purple-500/20 backdrop-blur-xl border border-white/20 shadow-lg">
+    <Card className="p-8 bg-gradient-to-r from-primary-500/20 via-primary-500/10 to-purple-500/20 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="text-center">
         <div className="p-3 bg-primary-500/20 rounded-full w-fit mx-auto mb-4">
           <Icon path={mdiHeart} size={2} className="text-primary-400" />

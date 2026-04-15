@@ -44,8 +44,8 @@ const AddExpenseModal: React.FC<AddExpenseModalProps> = ({ isOpen, onClose, onSa
     { value: 'Housing', label: 'Housing', icon: <Home className="h-5 w-5" />, bg: 'bg-indigo-50' },
     { value: 'Fuel', label: 'Fuel', icon: <LocalGasStation className="h-5 w-5" />, bg: 'bg-red-50' },
     { value: 'Dining', label: 'Dining', icon: <Restaurant className="h-5 w-5" />, bg: 'bg-pink-50' },
-    { value: 'Education', label: 'Education', icon: <School className="h-5 w-5" />, bg: 'bg-cyan-50' },
-    { value: 'Healthcare', label: 'Healthcare', icon: <LocalHospital className="h-5 w-5" />, bg: 'bg-emerald-50' },
+    { value: 'Education', label: 'Education', icon: <School className="h-5 w-5" />, bg: 'bg-primary-50' },
+    { value: 'Healthcare', label: 'Healthcare', icon: <LocalHospital className="h-5 w-5" />, bg: 'bg-primary-50' },
     { value: 'Other', label: 'Other', icon: <Category className="h-5 w-5" />, bg: 'bg-gray-50' }
   ];
 
@@ -241,7 +241,7 @@ const AddExpenseModal: React.FC<AddExpenseModalProps> = ({ isOpen, onClose, onSa
               </Button>
               <Button
                 type="submit"
-                className="flex-1 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                className="flex-1 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
               >
                 Add Expense
               </Button>

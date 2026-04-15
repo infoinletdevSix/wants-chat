@@ -74,7 +74,7 @@ const MetricsInput: React.FC<MetricsInputProps> = ({ data, onUpdate }) => {
                 onClick={() => onUpdate({ gender: gender.id })}
                 className={`h-12 flex items-center gap-2 transition-all duration-300 ${
                   data.gender === gender.id
-                    ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent shadow-lg shadow-primary-500/30'
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white border-transparent shadow-lg shadow-primary-500/30'
                     : 'bg-white/5 border-2 border-white/10 text-white hover:bg-white/10 hover:border-white/20'
                 }`}
               >
@@ -172,7 +172,7 @@ const MetricsInput: React.FC<MetricsInputProps> = ({ data, onUpdate }) => {
 
         {/* BMI Information Card */}
         {data.currentWeight && data.height && (
-          <Card className="p-4 bg-gradient-to-r from-cyan-500/10 to-primary-500/10 border border-cyan-500/20">
+          <Card className="p-4 bg-gradient-to-r from-primary-500/10 to-primary-500/10 border border-primary-500/20">
             <div className="space-y-3">
               <h3 className="font-medium text-white">Health Information</h3>
 
@@ -194,7 +194,7 @@ const MetricsInput: React.FC<MetricsInputProps> = ({ data, onUpdate }) => {
                 )}
               </div>
 
-              <div className="text-xs text-cyan-300">
+              <div className="text-xs text-primary-300">
                 <strong>Note:</strong> BMI is a general indicator. Consult healthcare professionals for personalized advice.
               </div>
             </div>
@@ -203,7 +203,7 @@ const MetricsInput: React.FC<MetricsInputProps> = ({ data, onUpdate }) => {
 
         {/* Weight Difference Display */}
         {data.currentWeight && data.targetWeight && (
-          <Card className="p-4 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
+          <Card className="p-4 bg-gradient-to-r from-primary-500/10 to-primary-500/10 border border-primary-500/20">
             <div className="text-center space-y-2">
               <p className="text-sm text-white/60">Weight Change Goal</p>
               <p className="text-2xl font-bold text-primary-400">

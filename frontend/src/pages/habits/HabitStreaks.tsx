@@ -584,7 +584,7 @@ const HabitStreaks: React.FC = () => {
                 value={`${selectedHabit.best_streak || 0}`}
                 subtitle="days"
                 icon={<EmojiEvents className="h-8 w-8" />}
-                color="from-emerald-500 to-primary-500"
+                color="from-primary-500 to-primary-600"
               />
 
               <StatCard
@@ -592,7 +592,7 @@ const HabitStreaks: React.FC = () => {
                 value={`${selectedHabit.completedCount}`}
                 subtitle="times"
                 icon={<CheckCircle className="h-8 w-8" />}
-                color="from-blue-500 to-cyan-500"
+                color="from-blue-500 to-primary-500"
               />
 
               <StatCard
@@ -617,7 +617,7 @@ const HabitStreaks: React.FC = () => {
                     onClick={() => setTimeRange(range)}
                     className={`rounded-xl capitalize ${
                       timeRange === range
-                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white border-0'
                         : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:bg-white/20'
                     }`}
                   >
@@ -726,7 +726,7 @@ const HabitStreaks: React.FC = () => {
                         key={i}
                         className={`aspect-square rounded ${
                           isCompleted
-                            ? 'bg-emerald-500'
+                            ? 'bg-primary-500'
                             : 'bg-white/10'
                         }`}
                         title={date.toLocaleDateString()}
@@ -736,7 +736,7 @@ const HabitStreaks: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-4 mt-4 text-xs text-white/60">
                   <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 bg-emerald-500 rounded" />
+                    <div className="w-4 h-4 bg-primary-500 rounded" />
                     <span>Completed</span>
                   </div>
                   <div className="flex items-center gap-2">

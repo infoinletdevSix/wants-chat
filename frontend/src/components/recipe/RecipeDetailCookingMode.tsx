@@ -55,7 +55,7 @@ export const RecipeDetailCookingMode: React.FC<RecipeDetailCookingModeProps> = (
           <Button
             onClick={onNextStep}
             disabled={currentStep === recipe.instructions.length - 1}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl flex-1 disabled:opacity-50"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl flex-1 disabled:opacity-50"
           >
             {currentStep === recipe.instructions.length - 1 ? 'Finish' : 'Next Step'}
           </Button>

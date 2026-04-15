@@ -39,7 +39,7 @@ const QuickAccessApps: React.FC = () => {
       id: 'health', 
       name: 'Health', 
       icon: LocalHospitalIcon, 
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-primary-500',
       description: 'Medical care and nutrition'
     },
     { 
@@ -53,7 +53,7 @@ const QuickAccessApps: React.FC = () => {
       id: 'finance', 
       name: 'Finance', 
       icon: AccountBalanceWalletIcon, 
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-primary-500',
       description: 'Money management'
     },
     { 
@@ -74,7 +74,7 @@ const QuickAccessApps: React.FC = () => {
       id: 'publication', 
       name: 'Publication', 
       icon: ArticleIcon, 
-      color: 'from-cyan-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       description: 'Content creation'
     }
   ];
@@ -107,7 +107,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'health',
       status: 'Available',
       icon: RestaurantIcon,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-primary-500',
       route: '/calories-tracker'
     },
     {
@@ -117,7 +117,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'health',
       status: 'Available',
       icon: LocalHospitalIcon,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-primary-500',
       route: '/health'
     },
     {
@@ -137,7 +137,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'finance',
       status: 'Available',
       icon: AccountBalanceWalletIcon,
-      color: 'from-emerald-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/expense-tracker'
     },
     {
@@ -167,7 +167,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'finance',
       status: 'Coming Soon',
       icon: CurrencyExchangeIcon,
-      color: 'from-primary-500 to-cyan-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/currency'
     },
     {
@@ -177,7 +177,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'tools',
       status: 'Coming Soon',
       icon: ChecklistIcon,
-      color: 'from-cyan-500 to-blue-500',
+      color: 'from-primary-500 to-blue-500',
       route: '/todo'
     },
     {
@@ -187,7 +187,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'publication',
       status: 'Available',
       icon: ArticleIcon,
-      color: 'from-cyan-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/changelog'
     }
   ];
@@ -247,7 +247,7 @@ const QuickAccessApps: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -283,7 +283,7 @@ const QuickAccessApps: React.FC = () => {
             onClick={() => setActiveCategory('All')}
             className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeCategory === 'All'
-                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg shadow-primary-500/25'
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/25'
                 : 'bg-white/10 text-white/80 border border-white/20 hover:bg-white/20'
             }`}
           >
@@ -295,7 +295,7 @@ const QuickAccessApps: React.FC = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
                 activeCategory === category.id
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg shadow-primary-500/25'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/25'
                   : 'bg-white/10 text-white/80 border border-white/20 hover:bg-white/20'
               }`}
             >
@@ -364,7 +364,7 @@ const QuickAccessApps: React.FC = () => {
                     variant={app.status === 'Available' ? 'default' : 'secondary'}
                     className={`text-xs font-semibold ${
                       app.status === 'Available'
-                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                        ? 'bg-primary-500/20 text-primary-400 border-primary-500/30'
                         : 'bg-amber-500/20 text-amber-400 border-amber-500/30'
                     }`}
                   >
@@ -416,7 +416,7 @@ const QuickAccessApps: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="group font-semibold px-8 py-4 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-300"
+              className="group font-semibold px-8 py-4 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-300"
               onClick={() => navigate('/login')}
             >
               ✨ Get Started Free
@@ -433,7 +433,7 @@ const QuickAccessApps: React.FC = () => {
 
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-white/60">
             <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-emerald-500" />
+              <div className="h-2 w-2 rounded-full bg-primary-500" />
               <span>7 Apps Available</span>
             </div>
             <div className="flex items-center gap-2">
@@ -441,7 +441,7 @@ const QuickAccessApps: React.FC = () => {
               <span>4 Apps Coming Soon</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-cyan-500" />
+              <div className="h-2 w-2 rounded-full bg-primary-500" />
               <span>Free Trial Available</span>
             </div>
           </div>

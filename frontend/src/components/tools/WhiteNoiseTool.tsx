@@ -38,7 +38,7 @@ export const WhiteNoiseTool: React.FC<WhiteNoiseToolProps> = ({ uiConfig }) => {
     { id: 'pink', name: 'Pink Noise', icon: <Waves className="w-5 h-5" />, color: 'bg-pink-500' },
     { id: 'brown', name: 'Brown Noise', icon: <Waves className="w-5 h-5" />, color: 'bg-amber-700' },
     { id: 'rain', name: 'Rain', icon: <CloudRain className="w-5 h-5" />, color: 'bg-blue-500' },
-    { id: 'wind', name: 'Wind', icon: <Wind className="w-5 h-5" />, color: 'bg-cyan-500' },
+    { id: 'wind', name: 'Wind', icon: <Wind className="w-5 h-5" />, color: 'bg-primary-500' },
     { id: 'cafe', name: 'Café', icon: <Coffee className="w-5 h-5" />, color: 'bg-amber-600' },
     { id: 'forest', name: 'Forest', icon: <Trees className="w-5 h-5" />, color: 'bg-green-600' },
   ];

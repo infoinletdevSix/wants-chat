@@ -77,12 +77,12 @@ const HealthSummary: React.FC<HealthSummaryProps> = ({
           </div>
 
           {/* Weight Progress */}
-          <div className="p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30">
+          <div className="p-4 bg-primary-500/10 rounded-lg border border-primary-500/30">
             <div className="flex items-center gap-2 mb-2">
-              <Icon path={mdiChartLine} size={0.8} className="text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-400">Progress</span>
+              <Icon path={mdiChartLine} size={0.8} className="text-primary-400" />
+              <span className="text-sm font-medium text-primary-400">Progress</span>
             </div>
-            <p className="text-xl font-bold text-emerald-400">{safeToFixed(Math.min(weightProgress, 100), 0)}%</p>
+            <p className="text-xl font-bold text-primary-400">{safeToFixed(Math.min(weightProgress, 100), 0)}%</p>
             <p className="text-xs text-white/60">{safeToFixed(remainingWeight)}kg to go</p>
           </div>
 

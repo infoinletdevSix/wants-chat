@@ -107,7 +107,7 @@ const LessonPlayer: React.FC<LessonPlayerProps> = ({
                     <div className={`rounded-2xl border-2 p-6 transition-all duration-300 ${
                       showFeedback
                         ? option === currentEx.correctAnswer
-                          ? 'border-emerald-500 bg-emerald-50/60 dark:bg-emerald-900/20 transform scale-105'
+                          ? 'border-primary-500 bg-primary-50/60 dark:bg-primary-900/20 transform scale-105'
                           : option === selectedAnswer && !isCorrect
                           ? 'border-red-500 bg-red-50/60 dark:bg-red-900/20'
                           : 'border-gray-200 opacity-70'
@@ -156,7 +156,7 @@ const LessonPlayer: React.FC<LessonPlayerProps> = ({
                     className={`h-16 text-lg transition-all duration-200 ${
                       showFeedback
                         ? option === currentEx.correctAnswer
-                          ? 'bg-emerald-500 hover:bg-emerald-500 text-white border-emerald-500'
+                          ? 'bg-primary-500 hover:bg-primary-500 text-white border-primary-500'
                           : option === selectedAnswer && !isCorrect
                           ? 'bg-destructive hover:bg-destructive text-white border-destructive'
                           : 'opacity-60'
@@ -214,7 +214,7 @@ const LessonPlayer: React.FC<LessonPlayerProps> = ({
                   className={`w-full p-5 text-xl font-medium border-2 rounded-2xl transition-all duration-300 bg-background text-foreground ${
                     showFeedback
                       ? isCorrect
-                        ? 'border-emerald-500 bg-emerald-50/40 dark:bg-emerald-900/15'
+                        ? 'border-primary-500 bg-primary-50/40 dark:bg-primary-900/15'
                         : 'border-red-500 bg-red-50/40 dark:bg-red-900/15'
                       : 'border-gray-200 focus:border-[#47bdff] focus:outline-none focus:ring-3 focus:ring-[#47bdff]/15 hover:border-[#47bdff]/60'
                   }`}
@@ -222,7 +222,7 @@ const LessonPlayer: React.FC<LessonPlayerProps> = ({
                 {showFeedback && (
                   <div className="absolute right-4 top-1/2 -translate-y-1/2">
                     {isCorrect ? (
-                      <Check className="h-6 w-6 text-emerald-500" />
+                      <Check className="h-6 w-6 text-primary-500" />
                     ) : (
                       <X className="h-6 w-6 text-red-500" />
                     )}
@@ -284,23 +284,23 @@ const LessonPlayer: React.FC<LessonPlayerProps> = ({
       {showFeedback && (
         <Card className={`border-0 ${
           isCorrect 
-            ? 'bg-emerald-50/60 dark:bg-emerald-900/15' 
+            ? 'bg-primary-50/60 dark:bg-primary-900/15' 
             : 'bg-red-50/60 dark:bg-red-900/15'
         } backdrop-blur-sm`}>
           <CardContent className="p-8">
             <div className="flex items-start space-x-6">
               <div className={`p-3 rounded-2xl ${
-                isCorrect ? 'bg-emerald-100 dark:bg-emerald-900/25' : 'bg-red-100 dark:bg-red-900/25'
+                isCorrect ? 'bg-primary-100 dark:bg-primary-900/25' : 'bg-red-100 dark:bg-red-900/25'
               }`}>
                 {isCorrect ? (
-                  <Check className="h-7 w-7 text-emerald-600 dark:text-emerald-400" />
+                  <Check className="h-7 w-7 text-primary-600 dark:text-primary-400" />
                 ) : (
                   <X className="h-7 w-7 text-destructive" />
                 )}
               </div>
               <div className="flex-1">
                 <h3 className={`text-xl font-bold mb-3 ${
-                  isCorrect ? 'text-emerald-700 dark:text-emerald-400' : 'text-red-700 dark:text-red-400'
+                  isCorrect ? 'text-primary-700 dark:text-primary-400' : 'text-red-700 dark:text-red-400'
                 }`}>
                   {isCorrect ? '¡Correcto! 🎉' : 'Not quite right'}
                 </h3>
@@ -340,7 +340,7 @@ const LessonPlayer: React.FC<LessonPlayerProps> = ({
             onClick={handleContinue}
             className={`min-w-40 h-14 text-lg font-semibold border-0 transform hover:scale-[1.02] transition-all duration-300 rounded-xl ${
               isCorrect 
-                ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white' 
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white' 
                 : 'bg-gradient-to-r from-[#47bdff] to-[#47bdff]/90 hover:from-[#47bdff]/90 hover:to-[#47bdff]/80 text-white'
             }`}
           >

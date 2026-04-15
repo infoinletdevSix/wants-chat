@@ -176,7 +176,7 @@ const MealPlanGenerator: React.FC<MealPlanGeneratorProps> = ({ onPlanGenerated, 
       <div className="space-y-6">
         {/* Header */}
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
+          <div className="p-2 bg-gradient-to-br from-green-500 to-primary-500 rounded-lg">
             <ChefHat className="h-6 w-6 text-white" />
           </div>
           <div>

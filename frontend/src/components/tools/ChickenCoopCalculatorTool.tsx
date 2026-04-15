@@ -285,7 +285,7 @@ export const ChickenCoopCalculatorTool: React.FC<ChickenCoopCalculatorToolProps>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <Bird className="w-4 h-4 text-cyan-500" />
+                <Bird className="w-4 h-4 text-primary-500" />
                 <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.chickenCoopCalculator.waterCapacity', 'Water Capacity')}</span>
               </div>
               <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>

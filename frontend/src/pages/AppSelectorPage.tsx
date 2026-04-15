@@ -31,7 +31,7 @@ const APP_METADATA: Record<string, { name: string; icon: string; color: string }
   'calories-tracker': { name: 'Calories Tracker', icon: 'Apple', color: 'bg-red-500' },
   'health-tracker': { name: 'Health Tracker', icon: 'Activity', color: 'bg-pink-500' },
   'recipe-builder': { name: 'Recipe Builder', icon: 'ChefHat', color: 'bg-amber-500' },
-  'expense-tracker': { name: 'Expense Tracker', icon: 'Wallet', color: 'bg-emerald-500' },
+  'expense-tracker': { name: 'Expense Tracker', icon: 'Wallet', color: 'bg-primary-500' },
   'currency-converter': { name: 'Currency Converter', icon: 'Coins', color: 'bg-yellow-500' },
   'travel-planner': { name: 'Travel Planner', icon: 'Plane', color: 'bg-sky-500' },
   'language-learner': { name: 'Language Learner', icon: 'Languages', color: 'bg-indigo-500' },
@@ -40,12 +40,12 @@ const APP_METADATA: Record<string, { name: string; icon: string; color: string }
 
   // AI Tools
   'ai-image-generator': { name: 'AI Image Generator', icon: 'Image', color: 'bg-purple-500' },
-  'ai-translator': { name: 'AI Translator', icon: 'Languages', color: 'bg-cyan-500' },
+  'ai-translator': { name: 'AI Translator', icon: 'Languages', color: 'bg-primary-500' },
   'ai-text-to-speech': { name: 'AI Text to Speech', icon: 'Volume2', color: 'bg-green-500' },
   'ai-speech-to-text': { name: 'AI Speech to Text', icon: 'Mic', color: 'bg-orange-500' },
   'ai-resume-builder': { name: 'AI Resume Builder', icon: 'FileText', color: 'bg-indigo-500' },
   'ai-cover-letter': { name: 'AI Cover Letter', icon: 'Mail', color: 'bg-blue-500' },
-  'ai-email-composer': { name: 'AI Email Composer', icon: 'Send', color: 'bg-cyan-500' },
+  'ai-email-composer': { name: 'AI Email Composer', icon: 'Send', color: 'bg-primary-500' },
   'ai-social-captions': { name: 'AI Social Captions', icon: 'MessageSquare', color: 'bg-pink-500' },
   'ai-hashtag-generator': { name: 'AI Hashtag Generator', icon: 'Hash', color: 'bg-violet-500' },
   'ai-video-script': { name: 'AI Video Script', icon: 'Video', color: 'bg-red-500' },
@@ -53,7 +53,7 @@ const APP_METADATA: Record<string, { name: string; icon: string; color: string }
   'ai-study-notes': { name: 'AI Study Notes', icon: 'GraduationCap', color: 'bg-amber-500' },
   'ai-contract-analyzer': { name: 'AI Contract Analyzer', icon: 'FileSearch', color: 'bg-rose-500' },
   'ai-legal-document': { name: 'AI Legal Document', icon: 'Scale', color: 'bg-slate-500' },
-  'ai-tax-calculator': { name: 'AI Tax Calculator', icon: 'Calculator', color: 'bg-emerald-500' },
+  'ai-tax-calculator': { name: 'AI Tax Calculator', icon: 'Calculator', color: 'bg-primary-500' },
   'ai-investment-advisor': { name: 'AI Investment Advisor', icon: 'TrendingUp', color: 'bg-sky-500' },
 
   // Productivity

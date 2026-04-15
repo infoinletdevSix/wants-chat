@@ -31,7 +31,7 @@ export const SessionInfo: React.FC<SessionInfoProps> = ({
     <>
       <Card className="p-6 mb-6">
         <div className="text-center">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/30 mx-auto mb-4 flex items-center justify-center">
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500/20 to-primary-500/30 mx-auto mb-4 flex items-center justify-center">
             <Icon path={mdiMeditation} size={2} className="text-primary-400" />
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">

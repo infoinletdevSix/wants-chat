@@ -62,7 +62,7 @@ export const SettingsSubmenu: React.FC = () => {
       icon: Key,
       path: '/api-keys',
       badge: t('settingsMenu.devBadge'),
-      badgeColor: 'bg-emerald-500/20 text-emerald-500',
+      badgeColor: 'bg-primary-500/20 text-primary-500',
     },
     {
       id: 'settings',

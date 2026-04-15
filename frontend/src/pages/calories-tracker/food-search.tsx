@@ -381,8 +381,8 @@ const FoodSearchPage: React.FC = () => {
     <div className="space-y-6">
       {/* Success Message */}
       {successMessage && (
-        <Alert className="bg-emerald-500/10 border border-emerald-500/20">
-          <AlertDescription className="text-emerald-400">
+        <Alert className="bg-primary-500/10 border border-primary-500/20">
+          <AlertDescription className="text-primary-400">
             {successMessage}
           </AlertDescription>
         </Alert>

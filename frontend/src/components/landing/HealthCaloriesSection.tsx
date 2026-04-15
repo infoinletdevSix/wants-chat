@@ -155,7 +155,7 @@ const HealthCaloriesSection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -240,7 +240,7 @@ const HealthCaloriesSection: React.FC = () => {
                       <span className="text-2xl">🩺</span>
                       <span className="text-xs font-medium text-white/70">Appointments</span>
                     </div>
-                    <p className="text-3xl font-bold text-cyan-400">{appointmentsCount.toLocaleString()}</p>
+                    <p className="text-3xl font-bold text-primary-400">{appointmentsCount.toLocaleString()}</p>
                     <p className="text-xs text-white/50 mt-1">Scheduled this week</p>
                   </motion.div>
 
@@ -262,7 +262,7 @@ const HealthCaloriesSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <Button
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-gradient-to-r from-blue-600 to-primary-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
                   onClick={() => {
                     if (!isAuthenticated) {
                       navigate('/login');
@@ -326,7 +326,7 @@ const HealthCaloriesSection: React.FC = () => {
                         <span className="text-2xl">💧</span>
                         <span className="text-xs font-medium text-white/70">Hydration Logs</span>
                       </div>
-                      <p className="text-3xl font-bold text-cyan-400">{hydrationCount.toLocaleString()}</p>
+                      <p className="text-3xl font-bold text-primary-400">{hydrationCount.toLocaleString()}</p>
                       <p className="text-xs text-white/50 mt-1">Glasses logged this week</p>
                     </motion.div>
 
@@ -379,7 +379,7 @@ const HealthCaloriesSection: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button
                   size="lg"
-                  className="bg-cyan-500/10 border border-cyan-400 text-cyan-400 hover:scale-105 transition-all duration-200"
+                  className="bg-primary-500/10 border border-primary-400 text-primary-400 hover:scale-105 transition-all duration-200"
                   onClick={() => {
                     if (!isAuthenticated) {
                       navigate('/login');

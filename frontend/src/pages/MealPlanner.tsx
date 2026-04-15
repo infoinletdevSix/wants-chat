@@ -37,7 +37,7 @@ export const MealPlannerPage: React.FC = () => {
             
             <Button
               onClick={() => setShowCreateDialog(true)}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 gap-2"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 gap-2"
             >
               <Plus className="h-4 w-4" />
               Create Plan

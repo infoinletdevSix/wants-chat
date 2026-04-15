@@ -28,7 +28,7 @@ const TimeRangeSelector: React.FC<TimeRangeSelectorProps> = ({
             onClick={() => onChange(range.value)}
             className={`${
               selected === range.value
-                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent'
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white border-transparent'
                 : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
             }`}
           >

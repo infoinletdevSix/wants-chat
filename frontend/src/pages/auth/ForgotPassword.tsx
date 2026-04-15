@@ -35,8 +35,8 @@ const ForgotPassword: React.FC = () => {
   // Floating icons for background animation
   const floatingIcons = [
     { Icon: Key, color: 'text-amber-400', delay: 0, x: '15%', y: '25%' },
-    { Icon: Shield, color: 'text-emerald-400', delay: 0.5, x: '75%', y: '20%' },
-    { Icon: Mail, color: 'text-cyan-400', delay: 1, x: '20%', y: '70%' },
+    { Icon: Shield, color: 'text-primary-400', delay: 0.5, x: '75%', y: '20%' },
+    { Icon: Mail, color: 'text-primary-400', delay: 1, x: '20%', y: '70%' },
     { Icon: Sparkles, color: 'text-rose-400', delay: 1.5, x: '80%', y: '75%' },
   ];
 
@@ -44,7 +44,7 @@ const ForgotPassword: React.FC = () => {
     <div className="absolute inset-0 bg-gray-950">
       {/* Animated gradient orbs - matching landing page */}
       <motion.div
-        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, -30, 0],
           y: [0, 30, 0],
@@ -57,7 +57,7 @@ const ForgotPassword: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -70,7 +70,7 @@ const ForgotPassword: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -118,7 +118,7 @@ const ForgotPassword: React.FC = () => {
           <div className="text-center mb-8">
             <Link to="/" className="inline-flex items-center gap-2">
               <img src="/assets/logo.png" alt="Wants" className="h-10 w-10" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Wants</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Wants</span>
             </Link>
           </div>
 
@@ -134,19 +134,19 @@ const ForgotPassword: React.FC = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
-                className="w-20 h-20 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-emerald-500/30"
+                className="w-20 h-20 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-primary-500/30"
               >
-                <CheckCircle className="h-10 w-10 text-emerald-400" />
+                <CheckCircle className="h-10 w-10 text-primary-400" />
               </motion.div>
 
               <h2 className="text-2xl font-bold text-white mb-2">{t('auth.forgotPassword.success')}</h2>
               <p className="text-gray-400 mb-2">
                 {t('auth.forgotPassword.successSubtitle', { defaultValue: "We've sent password reset instructions to:" })}
               </p>
-              <p className="text-emerald-400 font-medium mb-6">{email}</p>
+              <p className="text-primary-400 font-medium mb-6">{email}</p>
 
-              <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-4 mb-6">
-                <p className="text-sm text-cyan-200">
+              <div className="bg-primary-500/10 border border-primary-500/30 rounded-xl p-4 mb-6">
+                <p className="text-sm text-primary-200">
                   <strong>Didn't receive the email?</strong> Check your spam folder or try resending.
                 </p>
               </div>
@@ -191,7 +191,7 @@ const ForgotPassword: React.FC = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2">
             <img src="/assets/logo.png" alt="Wants" className="h-10 w-10" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Wants</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Wants</span>
           </Link>
         </div>
 
@@ -208,9 +208,9 @@ const ForgotPassword: React.FC = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
-                className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-emerald-500/30"
+                className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary-500/30"
               >
-                <Key className="h-8 w-8 text-emerald-400" />
+                <Key className="h-8 w-8 text-primary-400" />
               </motion.div>
               <h2 className="text-2xl font-bold text-white mb-2">{t('auth.forgotPassword.title')}</h2>
               <p className="text-gray-400">
@@ -241,7 +241,7 @@ const ForgotPassword: React.FC = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     disabled={isLoading}
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20 rounded-xl h-12 pl-12"
+                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/20 rounded-xl h-12 pl-12"
                   />
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
                 </div>
@@ -253,7 +253,7 @@ const ForgotPassword: React.FC = () => {
               <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
+                  className="w-full h-12 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                   disabled={isLoading || !email}
                 >
                   {isLoading ? (
@@ -281,7 +281,7 @@ const ForgotPassword: React.FC = () => {
                 <span className="text-gray-600">|</span>
                 <Link
                   to="/signup"
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                  className="text-primary-400 hover:text-primary-300 transition-colors"
                 >
                   {t('auth.signup.createAccount')}
                 </Link>

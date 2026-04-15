@@ -104,9 +104,9 @@ export const ExposureCalculatorTool: React.FC<ExposureCalculatorToolProps> = ({ 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Aperture className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Aperture className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.exposureCalculator.exposureCalculator', 'Exposure Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.exposureCalculator.calculateEquivalentExposures', 'Calculate equivalent exposures')}</p>
@@ -124,12 +124,12 @@ export const ExposureCalculatorTool: React.FC<ExposureCalculatorToolProps> = ({ 
 
       <div className="p-6 space-y-6">
         {/* Current EV Display */}
-        <div className={`p-4 rounded-xl text-center ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-100'} border`}>
+        <div className={`p-4 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-center gap-2">
-            <Sun className="w-5 h-5 text-cyan-500" />
+            <Sun className="w-5 h-5 text-primary-500" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.exposureCalculator.exposureValue', 'Exposure Value')}</span>
           </div>
-          <div className={`text-4xl font-bold text-cyan-500 my-1`}>EV {ev.toFixed(1)}</div>
+          <div className={`text-4xl font-bold text-primary-500 my-1`}>EV {ev.toFixed(1)}</div>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {lightConditions.find(l => Math.abs(l.ev - ev) < 1)?.desc || 'Custom lighting'}
           </div>
@@ -165,7 +165,7 @@ export const ExposureCalculatorTool: React.FC<ExposureCalculatorToolProps> = ({ 
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>{t('tools.exposureCalculator.targetAperture', 'Target Aperture')}</label>
           <div className="flex flex-wrap gap-2">
             {apertures.map(a => (
-              <button key={a} onClick={() => setTargetAperture(a)} className={`px-4 py-2 rounded-lg ${targetAperture === a ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
+              <button key={a} onClick={() => setTargetAperture(a)} className={`px-4 py-2 rounded-lg ${targetAperture === a ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
                 f/{a}
               </button>
             ))}
@@ -186,8 +186,8 @@ export const ExposureCalculatorTool: React.FC<ExposureCalculatorToolProps> = ({ 
               <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>f/{newSettings.aperture}</div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.exposureCalculator.aperture2', 'Aperture')}</div>
             </div>
-            <div className={`p-3 rounded-lg ${isDark ? 'bg-cyan-900/30' : 'bg-cyan-50'}`}>
-              <div className={`text-2xl font-bold text-cyan-500`}>{newSettings.shutter}s</div>
+            <div className={`p-3 rounded-lg ${isDark ? 'bg-primary-900/30' : 'bg-primary-50'}`}>
+              <div className={`text-2xl font-bold text-primary-500`}>{newSettings.shutter}s</div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.exposureCalculator.shutter2', 'Shutter')}</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>

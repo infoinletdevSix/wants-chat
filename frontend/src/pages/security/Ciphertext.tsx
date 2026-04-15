@@ -42,7 +42,7 @@ const Ciphertext: React.FC = () => {
       id: 'atbash',
       name: 'Atbash Cipher',
       description: 'Substitution cipher where A↔Z, B↔Y, etc.',
-      color: 'from-primary-500 to-cyan-500',
+      color: 'from-primary-500 to-primary-600',
       icon: '🔀',
     },
     {
@@ -167,11 +167,11 @@ const Ciphertext: React.FC = () => {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-3 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl">
+            <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl">
               <Lock className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
                 Ciphertext Encoder
               </h1>
               <p className="text-slate-400 text-sm">Encrypt and decrypt text using various cipher methods</p>
@@ -191,7 +191,7 @@ const Ciphertext: React.FC = () => {
               onClick={() => setMode('encrypt')}
               className={`px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2 ${
                 mode === 'encrypt'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -202,7 +202,7 @@ const Ciphertext: React.FC = () => {
               onClick={() => setMode('decrypt')}
               className={`px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2 ${
                 mode === 'decrypt'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -319,7 +319,7 @@ const Ciphertext: React.FC = () => {
           <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-primary-400/30 p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-bold text-white flex items-center gap-2">
-                <Unlock className="w-5 h-5 text-cyan-400" />
+                <Unlock className="w-5 h-5 text-primary-400" />
                 Output Text
               </h3>
               {outputText && (
@@ -328,7 +328,7 @@ const Ciphertext: React.FC = () => {
                   className="p-2 bg-primary-500/20 hover:bg-primary-500/30 rounded-lg transition-all"
                 >
                   {copied ? (
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-primary-400" />
                   ) : (
                     <Copy className="w-4 h-4 text-primary-400" />
                   )}
@@ -354,7 +354,7 @@ const Ciphertext: React.FC = () => {
           <button
             onClick={handleProcess}
             disabled={!inputText}
-            className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary-500/50 flex items-center justify-center gap-2"
+            className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary-500/50 flex items-center justify-center gap-2"
           >
             {mode === 'encrypt' ? (
               <>

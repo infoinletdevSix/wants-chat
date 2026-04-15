@@ -41,7 +41,7 @@ export const PublicRecipeCard: React.FC<PublicRecipeCardProps> = ({ recipe }) =>
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-primary-500/20 to-cyan-500/10 flex items-center justify-center">
+          <div className="w-full h-full bg-gradient-to-br from-primary-500/20 to-primary-500/10 flex items-center justify-center">
             <ChefHat className="h-16 w-16 text-primary-400" />
           </div>
         )}
@@ -52,7 +52,7 @@ export const PublicRecipeCard: React.FC<PublicRecipeCardProps> = ({ recipe }) =>
           <div className="flex gap-2 flex-wrap">
             {recipe.difficulty && (
               <Badge className={`text-xs px-2 py-1 rounded-lg backdrop-blur-sm ${
-                recipe.difficulty === 'easy' ? 'bg-emerald-500/90 text-white' :
+                recipe.difficulty === 'easy' ? 'bg-primary-500/90 text-white' :
                 recipe.difficulty === 'medium' ? 'bg-yellow-500/90 text-white' :
                 'bg-red-500/90 text-white'
               }`}>

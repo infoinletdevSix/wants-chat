@@ -80,7 +80,7 @@ const APPOINTMENT_TYPES: { value: AppointmentType; label: string; duration: numb
   { value: 'dental', label: 'Dental', duration: 60, color: 'bg-yellow-100 text-yellow-800' },
   { value: 'grooming', label: 'Grooming', duration: 45, color: 'bg-pink-100 text-pink-800' },
   { value: 'emergency', label: 'Emergency', duration: 60, color: 'bg-red-100 text-red-800' },
-  { value: 'follow-up', label: 'Follow-up', duration: 20, color: 'bg-cyan-100 text-cyan-800' },
+  { value: 'follow-up', label: 'Follow-up', duration: 20, color: 'bg-primary-100 text-primary-800' },
   { value: 'other', label: 'Other', duration: 30, color: 'bg-gray-100 text-gray-800' },
 ];
 

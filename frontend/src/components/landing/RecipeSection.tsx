@@ -195,7 +195,7 @@ const RecipeSection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -451,7 +451,7 @@ const RecipeSection: React.FC = () => {
         >
           <Button
             size="lg"
-            className="group px-6 py-3 text-base font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-200"
+            className="group px-6 py-3 text-base font-medium bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-200"
             onClick={() => navigate('/recipe-builder')}
           >
             <ChefHatIcon className="mr-2 h-5 w-5" />

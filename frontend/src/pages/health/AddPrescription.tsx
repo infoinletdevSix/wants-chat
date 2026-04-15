@@ -655,7 +655,7 @@ const AddPrescription: React.FC = () => {
               </div>
               <Button
                 onClick={addMedication}
-                className="h-12 px-6 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                className="h-12 px-6 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
               >
                 <Plus className="h-5 w-5 mr-2" />
                 Add Medication
@@ -812,7 +812,7 @@ const AddPrescription: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="h-1 bg-gradient-to-r from-primary-500 to-cyan-500" />
+                <div className="h-1 bg-gradient-to-r from-primary-500 to-primary-600" />
               </Card>
             ))}
           </CardContent>
@@ -829,7 +829,7 @@ const AddPrescription: React.FC = () => {
           </Button>
           <Button
             onClick={handleSubmit}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
             disabled={createPrescriptionMutation.loading}
           >
             {createPrescriptionMutation.loading ? (

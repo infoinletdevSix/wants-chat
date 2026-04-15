@@ -116,7 +116,7 @@ const membershipColors: Record<MembershipType, string> = {
   Premium: 'bg-purple-500/20 text-purple-500',
   Family: 'bg-green-500/20 text-green-500',
   Senior: 'bg-amber-500/20 text-amber-500',
-  Student: 'bg-cyan-500/20 text-cyan-500',
+  Student: 'bg-primary-500/20 text-primary-500',
   Honorary: 'bg-rose-500/20 text-rose-500',
 };
 

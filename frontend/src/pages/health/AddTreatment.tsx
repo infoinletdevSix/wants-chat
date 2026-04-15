@@ -650,7 +650,7 @@ const AddTreatment: React.FC = () => {
             </Button>
             <Button
               type="submit"
-              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               disabled={createTreatmentMutation.loading || updateTreatmentMutation.loading}
             >
               <Save className="h-4 w-4 mr-2" />

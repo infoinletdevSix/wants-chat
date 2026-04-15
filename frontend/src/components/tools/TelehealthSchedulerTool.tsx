@@ -492,15 +492,15 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -510,7 +510,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg transition-colors font-medium ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+      ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
       : theme === 'dark'
         ? 'text-gray-400 hover:text-gray-200 hover:bg-gray-700'
         : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
@@ -521,8 +521,8 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl">
-            <Video className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-blue-500/20 rounded-xl">
+            <Video className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -567,12 +567,12 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Calendar className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Calendar className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.telehealthScheduler.today', 'Today')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.todayVisits}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.todayVisits}</p>
             </div>
           </div>
         </div>
@@ -684,7 +684,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredVisits.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -701,14 +701,14 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                       onClick={() => setSelectedVisit(visit)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedVisit?.id === visit.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <TypeIcon className="w-4 h-4 text-cyan-500" />
+                            <TypeIcon className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{visit.patientName}</p>
@@ -820,7 +820,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                 {/* Patient Contact Info */}
                 <div>
                   <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <User className="w-4 h-4 text-cyan-500" />
+                    <User className="w-4 h-4 text-primary-500" />
                     {t('tools.telehealthScheduler.patientInformation2', 'Patient Information')}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -845,7 +845,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                 {selectedVisit.meetingLink && (
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <Link className="w-4 h-4 text-cyan-500" />
+                      <Link className="w-4 h-4 text-primary-500" />
                       {t('tools.telehealthScheduler.meetingDetails', 'Meeting Details')}
                     </h3>
                     <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
@@ -929,7 +929,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                 {selectedVisit.chiefComplaint && (
                   <div>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-cyan-500" />
+                      <FileText className="w-4 h-4 text-primary-500" />
                       {t('tools.telehealthScheduler.chiefComplaint2', 'Chief Complaint')}
                     </h3>
                     <p className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
@@ -942,7 +942,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                 {selectedVisit.notes && (
                   <div>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-cyan-500" />
+                      <FileText className="w-4 h-4 text-primary-500" />
                       {t('tools.telehealthScheduler.notes2', 'Notes')}
                     </h3>
                     <p className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
@@ -955,7 +955,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                 {(selectedVisit.actualStartTime || selectedVisit.actualEndTime) && (
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-cyan-500" />
+                      <Clock className="w-4 h-4 text-primary-500" />
                       {t('tools.telehealthScheduler.visitTimeline', 'Visit Timeline')}
                     </h3>
                     <div className="space-y-2">
@@ -1179,7 +1179,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                       type="checkbox"
                       checked={formData.techCheckCompleted}
                       onChange={(e) => setFormData({ ...formData, techCheckCompleted: e.target.checked })}
-                      className="w-4 h-4 rounded border-gray-600 text-cyan-500 focus:ring-cyan-500"
+                      className="w-4 h-4 rounded border-gray-600 text-primary-500 focus:ring-primary-500"
                     />
                     <span>{t('tools.telehealthScheduler.techCheckCompleted', 'Tech Check Completed')}</span>
                   </label>
@@ -1188,7 +1188,7 @@ export const TelehealthSchedulerTool: React.FC<TelehealthSchedulerToolProps> = (
                       type="checkbox"
                       checked={formData.consentSigned}
                       onChange={(e) => setFormData({ ...formData, consentSigned: e.target.checked })}
-                      className="w-4 h-4 rounded border-gray-600 text-cyan-500 focus:ring-cyan-500"
+                      className="w-4 h-4 rounded border-gray-600 text-primary-500 focus:ring-primary-500"
                     />
                     <span>{t('tools.telehealthScheduler.consentFormSigned', 'Consent Form Signed')}</span>
                   </label>

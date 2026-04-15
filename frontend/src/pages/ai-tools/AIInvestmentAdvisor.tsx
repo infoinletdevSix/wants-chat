@@ -342,12 +342,12 @@ ${advice.tips.map((t, i) => `${i + 1}. ${t}`).join('\n')}
                 )}
 
                 {/* Tips */}
-                <div className="bg-emerald-500/10 rounded-lg p-4">
-                  <h4 className="text-emerald-400 font-medium text-sm mb-2">Investment Tips</h4>
+                <div className="bg-primary-500/10 rounded-lg p-4">
+                  <h4 className="text-primary-400 font-medium text-sm mb-2">Investment Tips</h4>
                   <ul className="space-y-1">
                     {advice.tips.map((tip, idx) => (
                       <li key={idx} className="text-white text-sm flex gap-2">
-                        <span className="text-emerald-400">✓</span>
+                        <span className="text-primary-400">✓</span>
                         {tip}
                       </li>
                     ))}

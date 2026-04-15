@@ -44,7 +44,7 @@ const ActivityLevelPicker: React.FC<ActivityLevelPickerProps> = ({
       examples: 'Jogging, swimming, cycling',
       multiplier: '1.55x BMR',
       icon: mdiBike,
-      iconColor: 'text-emerald-400'
+      iconColor: 'text-primary-400'
     },
     {
       id: 'very_active' as const,
@@ -84,7 +84,7 @@ const ActivityLevelPicker: React.FC<ActivityLevelPickerProps> = ({
             className={`
               p-6 cursor-pointer transition-all duration-300 border-2
               ${selectedLevel === level.id
-                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-cyan-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
+                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-primary-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
                 : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
               }
             `}
@@ -134,9 +134,9 @@ const ActivityLevelPicker: React.FC<ActivityLevelPickerProps> = ({
         ))}
       </div>
 
-      <div className="bg-cyan-500/10 p-4 rounded-lg border border-cyan-500/20">
+      <div className="bg-primary-500/10 p-4 rounded-lg border border-primary-500/20">
         <div className="space-y-2">
-          <p className="text-sm font-medium text-cyan-300">
+          <p className="text-sm font-medium text-primary-300">
             How is this calculated?
           </p>
           <p className="text-xs text-white/70">

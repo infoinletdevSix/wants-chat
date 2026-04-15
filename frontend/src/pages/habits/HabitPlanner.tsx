@@ -318,7 +318,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
     if (currentStreak >= 30) badges.push({ name: 'Monthly Master', icon: '📅', color: 'bg-purple-500' });
     if (currentStreak >= 100) badges.push({ name: 'Century Champion', icon: '💯', color: 'bg-yellow-500' });
     // Completion count badges
-    if (totalCompletions >= 5) badges.push({ name: 'Getting Started', icon: '⭐', color: 'bg-cyan-500' });
+    if (totalCompletions >= 5) badges.push({ name: 'Getting Started', icon: '⭐', color: 'bg-primary-500' });
     if (totalCompletions >= 10) badges.push({ name: 'Dedicated', icon: '💪', color: 'bg-indigo-500' });
     if (totalCompletions >= 50) badges.push({ name: 'Consistent', icon: '🏅', color: 'bg-amber-500' });
     // Success rate badge
@@ -450,7 +450,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
                   onClick={() => setTimeRange(range)}
                   className={`rounded-xl capitalize ${
                     timeRange === range
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white border-0'
                       : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                   }`}
                 >
@@ -849,7 +849,7 @@ const HabitCalendarContent: React.FC = () => {
                       {day.habits.length > 0 && (
                         <Badge
                           variant={completionRate === 100 ? 'default' : 'secondary'}
-                          className={`text-xs h-5 ${completionRate === 100 ? 'bg-gradient-to-r from-primary-500 to-cyan-500' : 'bg-white/10 text-white/70'}`}
+                          className={`text-xs h-5 ${completionRate === 100 ? 'bg-gradient-to-r from-primary-500 to-primary-600' : 'bg-white/10 text-white/70'}`}
                         >
                           {completionRate}%
                         </Badge>
@@ -933,7 +933,7 @@ const HabitCalendarContent: React.FC = () => {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className={isCompleted ? 'text-emerald-400' : 'text-white/40 hover:text-white'}
+                            className={isCompleted ? 'text-primary-400' : 'text-white/40 hover:text-white'}
                           >
                             {isCompleted ? (
                               <CheckCircle className="h-6 w-6" />
@@ -1175,7 +1175,7 @@ const HabitPlanner: React.FC = () => {
             </div>
             <Button
               onClick={() => navigate('/habit-planner/add')}
-              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 border-0"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 border-0"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add New Habit
@@ -1219,7 +1219,7 @@ const HabitPlanner: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/login')}
-                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               >
                 Go to Login
               </Button>
@@ -1264,7 +1264,7 @@ const HabitPlanner: React.FC = () => {
             title="Today's Progress"
             value={`${todayProgress}/${totalHabitsToday}`}
             icon={<Today className="h-6 w-6" />}
-            color="from-primary-500 to-cyan-500"
+            color="from-primary-500 to-primary-600"
             subtitle={<Progress value={progressPercentage} className="mt-2 bg-white/20" />}
           />
 
@@ -1272,7 +1272,7 @@ const HabitPlanner: React.FC = () => {
             title="Active Habits"
             value={habits.length}
             icon={<CheckCircle className="h-6 w-6" />}
-            color="from-emerald-500 to-primary-500"
+            color="from-primary-500 to-primary-600"
           />
 
           <StatCard
@@ -1319,7 +1319,7 @@ const HabitPlanner: React.FC = () => {
               onClick={() => setViewMode('grid')}
               className={`p-2.5 transition-colors ${
                 viewMode === 'grid'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                   : 'text-white/60 hover:text-white'
               }`}
               title="Grid view"
@@ -1330,7 +1330,7 @@ const HabitPlanner: React.FC = () => {
               onClick={() => setViewMode('list')}
               className={`p-2.5 transition-colors ${
                 viewMode === 'list'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                   : 'text-white/60 hover:text-white'
               }`}
               title="List view"
@@ -1355,7 +1355,7 @@ const HabitPlanner: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/habit-planner/add')}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Create Your First Habit
@@ -1418,7 +1418,7 @@ const HabitPlanner: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/habit-planner/add')}
-                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Create Your First Habit

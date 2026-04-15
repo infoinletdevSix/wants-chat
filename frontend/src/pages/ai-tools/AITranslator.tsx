@@ -103,8 +103,8 @@ const AITranslator: React.FC = () => {
       title="AI Translator"
       description="Translate text between 20+ languages instantly"
       icon={<Languages className="w-8 h-8" />}
-      iconColor="text-cyan-400"
-      iconBgColor="bg-cyan-500/20"
+      iconColor="text-primary-400"
+      iconBgColor="bg-primary-500/20"
     >
       <Card className="bg-white/10 backdrop-blur-xl border-white/20">
         <CardContent className="p-6">
@@ -174,7 +174,7 @@ const AITranslator: React.FC = () => {
               <div className="flex justify-between items-center mb-1">
                 <Label className="text-white">Translation</Label>
                 {detectedLanguage && sourceLanguage === 'auto' && (
-                  <span className="text-xs text-cyan-400">
+                  <span className="text-xs text-primary-400">
                     Detected: {LANGUAGES.find((l) => l.code === detectedLanguage)?.name || detectedLanguage}
                   </span>
                 )}
@@ -207,7 +207,7 @@ const AITranslator: React.FC = () => {
           <Button
             onClick={handleTranslate}
             disabled={loading || !sourceText.trim()}
-            className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600"
+            className="w-full mt-4 bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600"
           >
             {loading ? (
               <>

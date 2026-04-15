@@ -143,7 +143,7 @@ const STATUS_CONFIG: Record<DispatchStatus, { label: string; color: string; bgCo
   dispatching: { label: 'Dispatching', color: 'text-blue-600', bgColor: 'bg-blue-100', icon: <Radio className="w-4 h-4" /> },
   assigned: { label: 'Assigned', color: 'text-purple-600', bgColor: 'bg-purple-100', icon: <User className="w-4 h-4" /> },
   en_route: { label: 'En Route', color: 'text-orange-600', bgColor: 'bg-orange-100', icon: <Navigation className="w-4 h-4" /> },
-  on_scene: { label: 'On Scene', color: 'text-cyan-600', bgColor: 'bg-cyan-100', icon: <MapPin className="w-4 h-4" /> },
+  on_scene: { label: 'On Scene', color: 'text-primary-600', bgColor: 'bg-primary-100', icon: <MapPin className="w-4 h-4" /> },
   completed: { label: 'Completed', color: 'text-green-600', bgColor: 'bg-green-100', icon: <CheckCircle className="w-4 h-4" /> },
   cancelled: { label: 'Cancelled', color: 'text-red-600', bgColor: 'bg-red-100', icon: <X className="w-4 h-4" /> },
 };
@@ -599,7 +599,7 @@ export function EmergencyDispatchLockTool({ uiConfig }: EmergencyDispatchLockToo
                   <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.emergencyDispatchLock.techsReady', 'Techs Ready')}</p>
                   <p className="text-xl font-bold text-green-500">{stats.availableTechs}</p>
                 </div>
-                <User className="w-6 h-6 text-cyan-500 opacity-50" />
+                <User className="w-6 h-6 text-primary-500 opacity-50" />
               </div>
             </CardContent>
           </Card>
@@ -760,7 +760,7 @@ export function EmergencyDispatchLockTool({ uiConfig }: EmergencyDispatchLockToo
                             {call.status === 'en_route' && (
                               <button
                                 onClick={() => updateStatus(call.id, 'on_scene')}
-                                className="px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700"
+                                className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                               >
                                 <MapPin className="w-4 h-4 inline mr-1" />
                                 {t('tools.emergencyDispatchLock.onScene', 'On Scene')}

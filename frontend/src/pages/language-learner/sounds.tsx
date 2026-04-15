@@ -276,7 +276,7 @@ const SoundsPage: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'easy':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'medium':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
       case 'hard':
@@ -287,7 +287,7 @@ const SoundsPage: React.FC = () => {
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-emerald-400';
+    if (score >= 90) return 'text-primary-400';
     if (score >= 80) return 'text-yellow-400';
     return 'text-red-400';
   };
@@ -305,7 +305,7 @@ const SoundsPage: React.FC = () => {
                 : ''
             } ${
               completedPhonemes.includes(phoneme.id)
-                ? 'bg-emerald-500/10 border-emerald-500/50'
+                ? 'bg-primary-500/10 border-primary-500/50'
                 : ''
             }`}
             hover={true}
@@ -313,7 +313,7 @@ const SoundsPage: React.FC = () => {
           >
             <div className="flex justify-center mb-2 relative">
               {completedPhonemes.includes(phoneme.id) && (
-                <CheckCircle2 className="h-4 w-4 text-emerald-400 absolute -top-1 -right-1" />
+                <CheckCircle2 className="h-4 w-4 text-primary-400 absolute -top-1 -right-1" />
               )}
               <div className="text-2xl font-bold text-white mb-1">
                 {phoneme.symbol}
@@ -366,9 +366,9 @@ const SoundsPage: React.FC = () => {
             <div className="lg:col-span-2 space-y-6">
               <Tabs value={activeTab} onValueChange={setActiveTab}>
                 <TabsList className="grid w-full grid-cols-3 bg-white/10 backdrop-blur-xl border border-white/20">
-                  <TabsTrigger value="vowels" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Vowels</TabsTrigger>
-                  <TabsTrigger value="consonants" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Consonants</TabsTrigger>
-                  <TabsTrigger value="practice" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Practice</TabsTrigger>
+                  <TabsTrigger value="vowels" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">Vowels</TabsTrigger>
+                  <TabsTrigger value="consonants" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">Consonants</TabsTrigger>
+                  <TabsTrigger value="practice" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">Practice</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="vowels" className="space-y-4">
@@ -394,8 +394,8 @@ const SoundsPage: React.FC = () => {
               <TabsContent value="practice" className="space-y-4">
                 <Tabs value={practiceSubTab} onValueChange={setPracticeSubTab}>
                   <TabsList className="grid w-full grid-cols-2 bg-white/10 backdrop-blur-xl border border-white/20">
-                    <TabsTrigger value="minimal-pairs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Minimal Pairs</TabsTrigger>
-                    <TabsTrigger value="phonemes" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Phonemes</TabsTrigger>
+                    <TabsTrigger value="minimal-pairs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">Minimal Pairs</TabsTrigger>
+                    <TabsTrigger value="phonemes" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">Phonemes</TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="minimal-pairs" className="space-y-4 mt-4">
@@ -417,7 +417,7 @@ const SoundsPage: React.FC = () => {
                               <Button
                                 variant="outline"
                                 size="sm"
-                                className="border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-primary-500 hover:to-cyan-500 hover:border-primary-500 transition-all duration-300 flex items-center gap-2"
+                                className="border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-primary-500 hover:to-primary-600 hover:border-primary-500 transition-all duration-300 flex items-center gap-2"
                                 onClick={() => {
                                   // Play both words in the minimal pair
                                   handlePlayAudio(pair.pair[0]);
@@ -474,7 +474,7 @@ const SoundsPage: React.FC = () => {
           <div className="space-y-6">
             <GlassCard className="sticky top-6" hover={false}>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600">
                   <Volume2 className="h-5 w-5 text-white" />
                 </div>
                 <span className="text-lg font-semibold text-white">Practice Session</span>
@@ -506,7 +506,7 @@ const SoundsPage: React.FC = () => {
                           size="lg"
                           onClick={() => handlePlayAudio(selectedPhoneme.symbol)}
                           disabled={isPlaying}
-                          className="w-full mb-4 h-16 text-lg font-semibold border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-primary-500 hover:to-cyan-500 hover:border-primary-500 transition-all duration-300"
+                          className="w-full mb-4 h-16 text-lg font-semibold border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-primary-500 hover:to-primary-600 hover:border-primary-500 transition-all duration-300"
                         >
                           <Volume2 className={`h-6 w-6 mr-3 ${isPlaying ? 'animate-pulse' : ''}`} />
                           {isPlaying ? 'Playing...' : 'Listen to Sound'}

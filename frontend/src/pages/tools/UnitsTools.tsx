@@ -137,7 +137,7 @@ export default function UnitsTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-2">
               Unit Converter
             </h1>
             <p className="text-gray-400">Convert between different units of measurement</p>
@@ -145,19 +145,19 @@ export default function UnitsTools() {
 
           <Tabs defaultValue="length" className="w-full">
             <TabsList className="grid w-full grid-cols-4 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="length" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="length" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Ruler className="w-4 h-4 mr-2" />
                 Length
               </TabsTrigger>
-              <TabsTrigger value="weight" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="weight" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Weight className="w-4 h-4 mr-2" />
                 Weight
               </TabsTrigger>
-              <TabsTrigger value="temperature" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="temperature" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Thermometer className="w-4 h-4 mr-2" />
                 Temperature
               </TabsTrigger>
-              <TabsTrigger value="time" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="time" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Clock className="w-4 h-4 mr-2" />
                 Time
               </TabsTrigger>
@@ -194,7 +194,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertLength}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -242,7 +242,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertWeight}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -288,7 +288,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertTemperature}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -336,7 +336,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertTime}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>

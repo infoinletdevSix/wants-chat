@@ -121,7 +121,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({ expenses: propExpens
             variant="ghost"
             onClick={() => setTimeFilter('week')}
             className={timeFilter === 'week'
-              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+              ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
               : 'border border-white/20 text-white hover:bg-white/10'}
           >
             This Week
@@ -130,7 +130,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({ expenses: propExpens
             variant="ghost"
             onClick={() => setTimeFilter('month')}
             className={timeFilter === 'month'
-              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+              ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
               : 'border border-white/20 text-white hover:bg-white/10'}
           >
             This Month
@@ -139,7 +139,7 @@ export const AnalyticsTab: React.FC<AnalyticsTabProps> = ({ expenses: propExpens
             variant="ghost"
             onClick={() => setTimeFilter('3months')}
             className={timeFilter === '3months'
-              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+              ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
               : 'border border-white/20 text-white hover:bg-white/10'}
           >
             Last 3 Months

@@ -95,7 +95,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'completed': return 'text-emerald-400 bg-emerald-500/20';
+      case 'completed': return 'text-primary-400 bg-primary-500/20';
       case 'on-track': return 'text-primary-400 bg-primary-500/20';
       case 'urgent': return 'text-red-400 bg-red-500/20';
       case 'behind': return 'text-white/60 bg-white/10';
@@ -124,7 +124,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
                 <span className="text-lg font-semibold text-white">{stat.value}</span>
                 {stat.change !== 0 && (
                   <span className={`text-xs font-medium ${
-                    stat.change > 0 ? 'text-emerald-400' : 'text-red-400'
+                    stat.change > 0 ? 'text-primary-400' : 'text-red-400'
                   }`}>
                     {stat.change > 0 ? '+' : ''}{stat.change}%
                   </span>
@@ -184,14 +184,14 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
               <div className="space-y-1">
                 <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
+                    className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
                 <div className="flex justify-between text-xs">
                   <span className="text-white/60">{progress.toFixed(0)}% complete</span>
                   <span className={`font-medium ${
-                    status === 'completed' ? 'text-emerald-400' :
+                    status === 'completed' ? 'text-primary-400' :
                     status === 'on-track' ? 'text-primary-400' :
                     status === 'urgent' ? 'text-red-400' :
                     'text-white/60'

@@ -95,7 +95,7 @@ const WeightChart: React.FC<WeightChartProps> = ({
           <Button 
             onClick={onLogWeight}
             size="sm"
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-primary-foreground"
           >
             <Icon path={mdiPlus} size={0.6} className="mr-1" />
             Log Weight
@@ -116,7 +116,7 @@ const WeightChart: React.FC<WeightChartProps> = ({
           
           <div className="text-center p-4 bg-secondary/20 rounded-lg">
             <p className={`text-2xl font-bold ${
-              Math.abs(weightDifference) < 0.5 ? 'text-emerald-600' : 
+              Math.abs(weightDifference) < 0.5 ? 'text-primary-600' : 
               isLosingWeight ? 'text-orange-600' : 'text-blue-600'
             }`}>
               {Math.abs(weightDifference) < 0.1 ? '0' : 
@@ -138,7 +138,7 @@ const WeightChart: React.FC<WeightChartProps> = ({
           <div className="h-3 bg-secondary rounded-full overflow-hidden">
             <div 
               className={`h-full transition-all duration-700 ${
-                Math.abs(weightDifference) < 0.5 ? 'bg-emerald-500' : 'bg-primary'
+                Math.abs(weightDifference) < 0.5 ? 'bg-primary-500' : 'bg-primary'
               }`}
               style={{ width: `${progressPercentage}%` }}
             />
@@ -147,14 +147,14 @@ const WeightChart: React.FC<WeightChartProps> = ({
 
         {/* Weekly Trend */}
         {trend && (
-          <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
+          <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-primary-50 rounded-lg border border-blue-200">
             <div className="flex items-center gap-3">
               <Icon 
                 path={trend.direction === 'down' ? mdiTrendingDown : 
                       trend.direction === 'up' ? mdiTrendingUp : mdiMinus} 
                 size={1} 
                 className={
-                  trend.direction === 'down' ? 'text-emerald-600' : 
+                  trend.direction === 'down' ? 'text-primary-600' : 
                   trend.direction === 'up' ? 'text-orange-600' : 'text-gray-600'
                 } 
               />
@@ -172,7 +172,7 @@ const WeightChart: React.FC<WeightChartProps> = ({
             <Badge 
               variant={trend.direction === 'down' ? "default" : "secondary"}
               className={
-                trend.direction === 'down' ? 'bg-emerald-100 text-emerald-800' :
+                trend.direction === 'down' ? 'bg-primary-100 text-primary-800' :
                 trend.direction === 'up' ? 'bg-orange-100 text-orange-800' :
                 'bg-gray-100 text-gray-800'
               }

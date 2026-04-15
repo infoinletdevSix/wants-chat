@@ -22,7 +22,7 @@ const CTA: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, -60, 0],
           y: [0, 40, 0],
@@ -68,7 +68,7 @@ const CTA: React.FC = () => {
             <Link to="/login">
               <Button
                 size="lg"
-                className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/25"
+                className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg shadow-primary-500/25"
               >
                 Start Free Today
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

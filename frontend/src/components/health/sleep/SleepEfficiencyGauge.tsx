@@ -22,7 +22,7 @@ export const SleepEfficiencyGauge: React.FC<SleepEfficiencyGaugeProps> = ({
   const strokeDashoffset = circumference - (normalizedEfficiency / 100) * circumference;
 
   const getEfficiencyColor = (value: number) => {
-    if (value >= 85) return { stroke: '#10b981', text: 'text-emerald-400', bg: 'from-emerald-500 to-green-500' };
+    if (value >= 85) return { stroke: '#10b981', text: 'text-primary-400', bg: 'from-primary-500 to-green-500' };
     if (value >= 75) return { stroke: '#f59e0b', text: 'text-amber-400', bg: 'from-amber-500 to-yellow-500' };
     return { stroke: '#ef4444', text: 'text-red-400', bg: 'from-red-500 to-rose-500' };
   };

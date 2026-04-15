@@ -512,7 +512,7 @@ const PublicTravelPlanDetailPage: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => navigate('/login')}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               >
                 <Sparkles className="mr-2 h-5 w-5" />
                 Generate Your Travel Plan

@@ -452,7 +452,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
     return (
       <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-cyan-500" />
+          <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
         </div>
       </div>
     );
@@ -461,14 +461,14 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
   const renderPackingTab = () => (
     <div className="space-y-4">
       {/* Progress */}
-      <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+      <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
         <div className="flex items-center justify-between mb-2">
           <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cruisePlanner.packingProgress', 'Packing Progress')}</span>
-          <span className="text-cyan-500 font-bold">{packedCount}/{packingItems.length}</span>
+          <span className="text-primary-500 font-bold">{packedCount}/{packingItems.length}</span>
         </div>
         <div className={`w-full h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
           <div
-            className="h-full bg-cyan-500 rounded-full transition-all"
+            className="h-full bg-primary-500 rounded-full transition-all"
             style={{ width: `${packingItems.length > 0 ? (packedCount / packingItems.length) * 100 : 0}%` }}
           />
         </div>
@@ -492,7 +492,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
             <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>
-        <button onClick={handleAddPackingItem} className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600">
+        <button onClick={handleAddPackingItem} className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
           <Plus className="w-5 h-5" />
         </button>
       </div>
@@ -513,7 +513,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
                   onClick={() => togglePacked(item.id)}
                   className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                     item.packed
-                      ? 'bg-cyan-500 border-cyan-500 text-white'
+                      ? 'bg-primary-500 border-primary-500 text-white'
                       : isDark ? 'border-gray-600' : 'border-gray-300'
                   }`}
                 >
@@ -576,7 +576,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
             />
           </div>
         </div>
-        <button onClick={handleAddPortDay} className="w-full py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 flex items-center justify-center gap-2">
+        <button onClick={handleAddPortDay} className="w-full py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center justify-center gap-2">
           <Plus className="w-4 h-4" /> Add Port Day
         </button>
       </div>
@@ -592,7 +592,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
           <div key={day.id} className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold">
+                <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-bold">
                   {day.day}
                 </span>
                 <div>
@@ -647,7 +647,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
             />
           </div>
         </div>
-        <button onClick={handleAddSeaActivity} className="w-full py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 flex items-center justify-center gap-2">
+        <button onClick={handleAddSeaActivity} className="w-full py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center justify-center gap-2">
           <Plus className="w-4 h-4" /> Add Sea Day Activity
         </button>
       </div>
@@ -662,7 +662,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
         <div className="space-y-2">
           {seaActivities.sort((a, b) => a.time.localeCompare(b.time)).map(activity => (
             <div key={activity.id} className={`flex items-center gap-4 p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
-              <span className="text-cyan-500 font-mono font-bold">{activity.time}</span>
+              <span className="text-primary-500 font-mono font-bold">{activity.time}</span>
               <div className="flex-1">
                 <span className={isDark ? 'text-white' : 'text-gray-900'}>{activity.activity}</span>
                 {activity.location && (
@@ -682,9 +682,9 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
   const renderBudgetTab = () => (
     <div className="space-y-4">
       {/* Total */}
-      <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border text-center`}>
+      <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border text-center`}>
         <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cruisePlanner.totalOnboardSpending', 'Total Onboard Spending')}</div>
-        <div className="text-3xl font-bold text-cyan-500">${totalBudget.toFixed(2)}</div>
+        <div className="text-3xl font-bold text-primary-500">${totalBudget.toFixed(2)}</div>
       </div>
 
       {/* Add Budget Item */}
@@ -723,7 +723,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
             />
           </div>
         </div>
-        <button onClick={handleAddBudgetItem} className="w-full py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 flex items-center justify-center gap-2">
+        <button onClick={handleAddBudgetItem} className="w-full py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center justify-center gap-2">
           <Plus className="w-4 h-4" /> Add Expense
         </button>
       </div>
@@ -737,7 +737,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
           <div key={category} className="space-y-2">
             <div className="flex items-center justify-between">
               <h4 className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{category}</h4>
-              <span className="text-cyan-500 font-bold">${categoryTotal.toFixed(2)}</span>
+              <span className="text-primary-500 font-bold">${categoryTotal.toFixed(2)}</span>
             </div>
             {categoryItems.map(item => (
               <div key={item.id} className={`flex items-center justify-between p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
@@ -773,7 +773,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
         </div>
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'} text-center`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cruisePlanner.totalCost', 'Total Cost')}</div>
-          <div className="text-2xl font-bold text-cyan-500">${excursionsCost.toFixed(2)}</div>
+          <div className="text-2xl font-bold text-primary-500">${excursionsCost.toFixed(2)}</div>
         </div>
       </div>
 
@@ -821,7 +821,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
             />
           </div>
         </div>
-        <button onClick={handleAddExcursion} className="w-full py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 flex items-center justify-center gap-2">
+        <button onClick={handleAddExcursion} className="w-full py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center justify-center gap-2">
           <Plus className="w-4 h-4" /> Add Excursion
         </button>
       </div>
@@ -858,7 +858,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-cyan-500 font-bold">${excursion.cost.toFixed(2)}</span>
+                <span className="text-primary-500 font-bold">${excursion.cost.toFixed(2)}</span>
                 <button onClick={() => removeExcursion(excursion.id)} className="text-red-500 hover:text-red-600">
                   <Trash2 className="w-4 h-4" />
                 </button>
@@ -875,9 +875,9 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
 
   const renderDecksTab = () => (
     <div className="space-y-4">
-      <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+      <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
         <div className="flex items-start gap-2">
-          <Info className={`w-4 h-4 mt-0.5 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`} />
+          <Info className={`w-4 h-4 mt-0.5 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
           <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {t('tools.cruisePlanner.thisIsAGeneralReference', 'This is a general reference. Check your ship\'s deck plan for exact locations.')}
           </p>
@@ -887,7 +887,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
       {defaultDeckInfo.map(deck => (
         <div key={deck.deck} className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-3 mb-2">
-            <span className="w-10 h-10 bg-cyan-500 text-white rounded-lg flex items-center justify-center font-bold">
+            <span className="w-10 h-10 bg-primary-500 text-white rounded-lg flex items-center justify-center font-bold">
               {deck.deck}
             </span>
             <div>
@@ -911,15 +911,15 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg"><Ship className="w-5 h-5 text-cyan-500" /></div>
+            <div className="p-2 bg-primary-500/10 rounded-lg"><Ship className="w-5 h-5 text-primary-500" /></div>
             <div>
               <div className="flex items-center gap-2">
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cruisePlanner.cruisePlanner', 'Cruise Planner')}</h3>
                 {isPrefilled && (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400">
                     <Sparkles className="w-3 h-3" />
                     {t('tools.cruisePlanner.autoFilled', 'Auto-filled')}
                   </span>
@@ -965,7 +965,7 @@ export const CruisePlannerTool: React.FC<CruisePlannerToolProps> = ({ uiConfig }
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 py-2 px-4 rounded-lg text-sm ${
                 activeTab === tab.id
-                  ? 'bg-cyan-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
               }`}
             >

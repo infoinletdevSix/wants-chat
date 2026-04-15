@@ -374,15 +374,15 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -392,7 +392,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+      ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
       : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-900'
   }`;
 
@@ -401,8 +401,8 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <ShieldCheck className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <ShieldCheck className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -447,12 +447,12 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <ShieldCheck className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <ShieldCheck className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.securityDeposit.total', 'Total')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -548,7 +548,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredDeposits.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -563,14 +563,14 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                     onClick={() => setSelectedDeposit(deposit)}
                     className={`p-4 cursor-pointer transition-colors ${
                       selectedDeposit?.id === deposit.id
-                        ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                        ? 'bg-primary-500/10 border-l-4 border-primary-500'
                         : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                     }`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                          <User className="w-4 h-4 text-cyan-500" />
+                          <User className="w-4 h-4 text-primary-500" />
                         </div>
                         <div>
                           <p className="font-medium">{deposit.tenantName}</p>
@@ -578,7 +578,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                             {deposit.propertyAddress}
                           </p>
                           <div className="flex items-center gap-2 mt-1">
-                            <span className="text-sm font-medium text-cyan-500">
+                            <span className="text-sm font-medium text-primary-500">
                               {formatCurrency(deposit.depositAmount)}
                             </span>
                             <span className={`inline-block px-2 py-0.5 text-xs rounded border ${getStatusColor(deposit.status)}`}>
@@ -634,7 +634,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <p className="text-xs text-gray-400">{t('tools.securityDeposit.depositAmount', 'Deposit Amount')}</p>
-                    <p className="text-lg font-bold text-cyan-500">{formatCurrency(selectedDeposit.depositAmount)}</p>
+                    <p className="text-lg font-bold text-primary-500">{formatCurrency(selectedDeposit.depositAmount)}</p>
                   </div>
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <p className="text-xs text-gray-400">{t('tools.securityDeposit.accruedInterest', 'Accrued Interest')}</p>
@@ -644,9 +644,9 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                     <p className="text-xs text-gray-400">{t('tools.securityDeposit.deductions', 'Deductions')}</p>
                     <p className="text-lg font-bold text-red-500">-{formatCurrency(selectedDeposit.totalDeductions)}</p>
                   </div>
-                  <div className={`p-4 rounded-lg border-2 border-cyan-500/30 ${theme === 'dark' ? 'bg-cyan-500/10' : 'bg-cyan-50'}`}>
-                    <p className="text-xs text-cyan-400">{t('tools.securityDeposit.refundAmount', 'Refund Amount')}</p>
-                    <p className="text-lg font-bold text-cyan-500">{formatCurrency(selectedDeposit.refundAmount)}</p>
+                  <div className={`p-4 rounded-lg border-2 border-primary-500/30 ${theme === 'dark' ? 'bg-primary-500/10' : 'bg-primary-50'}`}>
+                    <p className="text-xs text-primary-400">{t('tools.securityDeposit.refundAmount', 'Refund Amount')}</p>
+                    <p className="text-lg font-bold text-primary-500">{formatCurrency(selectedDeposit.refundAmount)}</p>
                   </div>
                 </div>
 
@@ -673,7 +673,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                 {/* Tenant Contact */}
                 <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                   <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <User className="w-4 h-4 text-cyan-500" />
+                    <User className="w-4 h-4 text-primary-500" />
                     {t('tools.securityDeposit.tenantContact', 'Tenant Contact')}
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
@@ -1023,7 +1023,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                       ))
                     )}
                   </div>
-                  <div className={`mt-4 p-4 rounded-lg border-2 border-cyan-500/30 ${theme === 'dark' ? 'bg-cyan-500/10' : 'bg-cyan-50'}`}>
+                  <div className={`mt-4 p-4 rounded-lg border-2 border-primary-500/30 ${theme === 'dark' ? 'bg-primary-500/10' : 'bg-primary-50'}`}>
                     <div className="flex items-center justify-between">
                       <span className="font-medium">{t('tools.securityDeposit.totalDeductions', 'Total Deductions')}</span>
                       <span className="text-xl font-bold text-red-500">
@@ -1097,7 +1097,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                   </div>
 
                   {/* Refund Summary */}
-                  <div className={`p-4 rounded-lg border-2 border-cyan-500/30 ${theme === 'dark' ? 'bg-cyan-500/10' : 'bg-cyan-50'}`}>
+                  <div className={`p-4 rounded-lg border-2 border-primary-500/30 ${theme === 'dark' ? 'bg-primary-500/10' : 'bg-primary-50'}`}>
                     <h3 className="font-semibold mb-4">{t('tools.securityDeposit.refundCalculation', 'Refund Calculation')}</h3>
                     <div className="space-y-2">
                       <div className="flex justify-between">
@@ -1114,7 +1114,7 @@ export const SecurityDepositTool: React.FC<SecurityDepositToolProps> = ({
                       </div>
                       <div className={`border-t pt-2 mt-2 flex justify-between text-lg font-bold ${theme === 'dark' ? 'border-gray-600' : 'border-gray-300'}`}>
                         <span>{t('tools.securityDeposit.refundAmount2', 'Refund Amount')}</span>
-                        <span className="text-cyan-500">{formatCurrency(calculateRefund(formData))}</span>
+                        <span className="text-primary-500">{formatCurrency(calculateRefund(formData))}</span>
                       </div>
                     </div>
                   </div>

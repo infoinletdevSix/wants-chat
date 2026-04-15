@@ -32,10 +32,10 @@ const MacroSlider: React.FC<MacroSliderProps> = ({
     switch (color) {
       case 'emerald':
         return {
-          bg: 'bg-emerald-500',
-          text: 'text-emerald-600',
-          border: 'border-emerald-200',
-          light: 'bg-emerald-50'
+          bg: 'bg-primary-500',
+          text: 'text-primary-600',
+          border: 'border-primary-200',
+          light: 'bg-primary-50'
         };
       case 'blue':
         return {
@@ -77,7 +77,7 @@ const MacroSlider: React.FC<MacroSliderProps> = ({
   const getRecommendationColor = (status: string) => {
     switch (status) {
       case 'good':
-        return 'text-emerald-600';
+        return 'text-primary-600';
       case 'warning':
         return 'text-orange-600';
       case 'error':

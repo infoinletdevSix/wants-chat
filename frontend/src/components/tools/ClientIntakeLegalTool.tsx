@@ -121,7 +121,7 @@ const STATUS_OPTIONS: { value: IntakeStatus; label: string; color: string }[] = 
   { value: 'conflict-check', label: 'Conflict Check', color: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' },
   { value: 'approved', label: 'Approved', color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' },
   { value: 'rejected', label: 'Rejected', color: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' },
-  { value: 'converted', label: 'Converted to Client', color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200' },
+  { value: 'converted', label: 'Converted to Client', color: 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200' },
 ];
 
 const CLIENT_TYPE_OPTIONS: { value: ClientType; label: string }[] = [

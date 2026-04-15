@@ -30,7 +30,7 @@ const ProductsPageSimple: React.FC = () => {
       status: 'Available',
       route: '/health',
       icon: LocalHospitalIcon,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-primary-500'
     }
   ];
 

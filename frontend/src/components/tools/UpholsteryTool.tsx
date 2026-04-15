@@ -1288,7 +1288,7 @@ ${progress.map(w => `
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.upholstery.pendingDeliveries', 'Pending Deliveries')}</div>
           </div>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
-            <div className="text-2xl font-bold text-emerald-500">{formatCurrency(dashboardStats.totalRevenue)}</div>
+            <div className="text-2xl font-bold text-primary-500">{formatCurrency(dashboardStats.totalRevenue)}</div>
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.upholstery.totalRevenue', 'Total Revenue')}</div>
           </div>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>

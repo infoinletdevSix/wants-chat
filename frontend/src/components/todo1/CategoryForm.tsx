@@ -129,7 +129,7 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ onSubmit, category }) => {
 
       {/* Submit Button */}
       <div className="flex justify-end pt-2">
-        <Button type="submit" className="px-6 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+        <Button type="submit" className="px-6 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
           {category ? 'Update Category' : 'Create Category'}
         </Button>
       </div>

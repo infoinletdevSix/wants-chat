@@ -99,11 +99,11 @@ export const FileSizeCalculatorTool: React.FC<FileSizeCalculatorToolProps> = ({ 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <HardDrive className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <HardDrive className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.fileSizeCalculator.fileSizeCalculator', 'File Size Calculator')}</h3>
@@ -122,7 +122,7 @@ export const FileSizeCalculatorTool: React.FC<FileSizeCalculatorToolProps> = ({ 
               onClick={() => setUseBinaryMode(!useBinaryMode)}
               className={`relative w-12 h-6 rounded-full transition-colors ${
                 useBinaryMode
-                  ? 'bg-cyan-500'
+                  ? 'bg-primary-500'
                   : isDark
                   ? 'bg-gray-600'
                   : 'bg-gray-300'
@@ -154,7 +154,7 @@ export const FileSizeCalculatorTool: React.FC<FileSizeCalculatorToolProps> = ({ 
                 isDark
                   ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -168,7 +168,7 @@ export const FileSizeCalculatorTool: React.FC<FileSizeCalculatorToolProps> = ({ 
                 isDark
                   ? 'bg-gray-800 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
             >
               {unitList.map((unit) => (
                 <option key={unit} value={unit}>
@@ -207,12 +207,12 @@ export const FileSizeCalculatorTool: React.FC<FileSizeCalculatorToolProps> = ({ 
                 className={`${
                   conv.unit === inputUnit
                     ? isDark
-                      ? 'bg-cyan-900/30 border-cyan-700'
-                      : 'bg-cyan-50 border-cyan-200'
+                      ? 'bg-primary-900/30 border-primary-700'
+                      : 'bg-primary-50 border-primary-200'
                     : isDark
                     ? 'bg-gray-800/50 border-gray-700'
                     : 'bg-gray-50 border-gray-200'
-                } rounded-lg p-4 border cursor-pointer hover:border-cyan-500 transition-colors group`}
+                } rounded-lg p-4 border cursor-pointer hover:border-primary-500 transition-colors group`}
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -222,7 +222,7 @@ export const FileSizeCalculatorTool: React.FC<FileSizeCalculatorToolProps> = ({ 
                 </div>
                 <p className={`text-lg font-mono font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {conv.formatted}
-                  <span className={`text-sm ml-1 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>{conv.unit}</span>
+                  <span className={`text-sm ml-1 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{conv.unit}</span>
                 </p>
               </div>
             ))}

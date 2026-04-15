@@ -96,7 +96,7 @@ const MealSection: React.FC<MealSectionProps> = ({
           </div>
           </div>
 
-          <Button size="sm" onClick={onAddFood} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+          <Button size="sm" onClick={onAddFood} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
             <Icon path={mdiPlus} size={0.6} className="mr-1" />
             Add Food
           </Button>
@@ -119,7 +119,7 @@ const MealSection: React.FC<MealSectionProps> = ({
                     <div className="flex items-center justify-between">
                       <p className="text-sm text-white/60">
                         {entry.quantity} {entry.unit} • <span className="font-medium text-white">{entry.calories} cal</span> •
-                        <span className="text-emerald-400"> C: {entry.carbs}g</span> •
+                        <span className="text-primary-400"> C: {entry.carbs}g</span> •
                         <span className="text-blue-400"> P: {entry.protein}g</span> •
                         <span className="text-orange-400"> F: {entry.fat}g</span>
                       </p>
@@ -163,8 +163,8 @@ const MealSection: React.FC<MealSectionProps> = ({
             <p className="text-xs text-white/60">Calories</p>
           </div>
           <div className="text-center p-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg">
-            <Icon path={mdiBarley} size={0.8} className="text-emerald-400 mx-auto mb-1" />
-            <p className="text-lg font-bold text-emerald-400">{mealTotals.carbs}g</p>
+            <Icon path={mdiBarley} size={0.8} className="text-primary-400 mx-auto mb-1" />
+            <p className="text-lg font-bold text-primary-400">{mealTotals.carbs}g</p>
             <p className="text-xs text-white/60">Carbs</p>
           </div>
           <div className="text-center p-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg">

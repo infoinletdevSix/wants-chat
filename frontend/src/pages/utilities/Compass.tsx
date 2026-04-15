@@ -139,7 +139,7 @@ const Compass: React.FC = () => {
         >
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-2">
                 Digital Compass
               </h1>
               <p className="text-gray-400">
@@ -172,7 +172,7 @@ const Compass: React.FC = () => {
                   </p>
                   <Button
                     onClick={requestPermission}
-                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                    className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                   >
                     Grant Permission
                   </Button>
@@ -191,7 +191,7 @@ const Compass: React.FC = () => {
                   <CardContent>
                     <div className="relative w-full aspect-square max-w-md mx-auto">
                       {/* Compass Background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-full border-4 border-primary-500/30" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/30 to-primary-900/30 rounded-full border-4 border-primary-500/30" />
 
                       {/* Rotating Compass */}
                       <motion.div
@@ -276,7 +276,7 @@ const Compass: React.FC = () => {
                         </p>
                         <Button
                           onClick={getUserLocation}
-                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                         >
                           <MapPin className="w-4 h-4 mr-2" />
                           Find Qibla
@@ -284,7 +284,7 @@ const Compass: React.FC = () => {
                       </div>
                     ) : (
                       <div className="text-center space-y-4">
-                        <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-lg p-4 border border-primary-500/30">
+                        <div className="bg-gradient-to-br from-primary-900/30 to-primary-900/30 rounded-lg p-4 border border-primary-500/30">
                           <p className="text-sm text-gray-400 mb-1">Qibla Direction</p>
                           <p className="text-3xl font-bold text-green-400">
                             {Math.round(qiblaDirection)}°

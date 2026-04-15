@@ -22,7 +22,7 @@ const AppStoreBadges: React.FC = () => {
       {/* Background - matching login page */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-br from-primary-500/10 to-primary-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -39,12 +39,12 @@ const AppStoreBadges: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-4">
             Available Everywhere
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> Wants</span>
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent"> Wants</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Access Wants on any device - mobile, tablet, or desktop
@@ -61,16 +61,16 @@ const AppStoreBadges: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-            <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-emerald-500/50 transition-all duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+            <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-primary-500/50 transition-all duration-500">
               {/* Icon and Title */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
                   <Smartphone className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Wants Mobile</h3>
-                  <p className="text-emerald-400 text-sm">Available Now</p>
+                  <p className="text-primary-400 text-sm">Available Now</p>
                 </div>
               </div>
 
@@ -90,8 +90,8 @@ const AppStoreBadges: React.FC = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-emerald-400" />
+                    <div className="w-6 h-6 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-primary-400" />
                     </div>
                     <span className="text-white/90">{feature}</span>
                   </motion.div>
@@ -109,16 +109,16 @@ const AppStoreBadges: React.FC = () => {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-black rounded-xl p-4 border border-gray-800 hover:border-emerald-500/50 transition-all duration-300 flex items-center gap-4"
+                    className="bg-black rounded-xl p-4 border border-gray-800 hover:border-primary-500/50 transition-all duration-300 flex items-center gap-4"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center flex-shrink-0">
                       <Download className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <div className="text-xs text-gray-400 mb-0.5">GET IT ON</div>
                       <div className="text-lg font-bold text-white">Google Play</div>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover/badge:text-emerald-400 transition-colors" />
+                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover/badge:text-primary-400 transition-colors" />
                   </motion.div>
                 </a>
 
@@ -147,16 +147,16 @@ const AppStoreBadges: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-            <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-cyan-500/50 transition-all duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+            <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-primary-500/50 transition-all duration-500">
               {/* Icon and Title */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Wants Web</h3>
-                  <p className="text-cyan-400 text-sm">Use Anywhere</p>
+                  <p className="text-primary-400 text-sm">Use Anywhere</p>
                 </div>
               </div>
 
@@ -176,8 +176,8 @@ const AppStoreBadges: React.FC = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-emerald-400" />
+                    <div className="w-6 h-6 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-primary-400" />
                     </div>
                     <span className="text-white/90">{feature}</span>
                   </motion.div>
@@ -192,7 +192,7 @@ const AppStoreBadges: React.FC = () => {
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 rounded-xl p-4 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/20"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 rounded-xl p-4 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-primary-500/20"
                 >
                   <Globe className="w-6 h-6 text-white" />
                   <span className="text-lg font-bold text-white">Launch Wants</span>
@@ -226,7 +226,7 @@ const AppStoreBadges: React.FC = () => {
           className="mt-12 text-center"
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gray-900/50 border border-gray-800">
-            <Check className="w-5 h-5 text-emerald-400" />
+            <Check className="w-5 h-5 text-primary-400" />
             <span className="text-gray-400">Your data syncs seamlessly across all platforms</span>
           </div>
         </motion.div>

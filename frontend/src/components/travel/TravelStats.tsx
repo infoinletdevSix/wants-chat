@@ -106,7 +106,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-500/20 border border-primary-500/30 flex items-center justify-center">
             <Public className="h-5 w-5 text-primary-400" />
           </div>
           <div>
@@ -123,7 +123,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <Button
             size="sm"
             onClick={() => setViewMode('globe')}
-            className={`rounded-xl ${viewMode === 'globe' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
+            className={`rounded-xl ${viewMode === 'globe' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
           >
             <Public className="h-4 w-4 mr-1" />
             Globe
@@ -131,7 +131,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <Button
             size="sm"
             onClick={() => setViewMode('stats')}
-            className={`rounded-xl ${viewMode === 'stats' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
+            className={`rounded-xl ${viewMode === 'stats' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
           >
             <TravelExplore className="h-4 w-4 mr-1" />
             Stats

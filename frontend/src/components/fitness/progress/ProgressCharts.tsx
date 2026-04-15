@@ -44,8 +44,8 @@ const ProgressCharts: React.FC<ProgressChartsProps> = ({
       {/* Body Measurements */}
       <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg">
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <Icon path={mdiScaleBalance} size={1} className="text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Icon path={mdiScaleBalance} size={1} className="text-primary-500" />
           </div>
           <h3 className="text-lg font-semibold text-white">Body Measurements</h3>
         </div>

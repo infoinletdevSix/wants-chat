@@ -94,7 +94,7 @@ const CATEGORY_OPTIONS = [
   { value: 'vip', label: 'VIP', color: 'bg-purple-500', icon: Crown },
   { value: 'regular', label: 'Regular', color: 'bg-gray-500', icon: User },
   { value: 'vendor', label: 'Vendor', color: 'bg-orange-500', icon: Briefcase },
-  { value: 'staff', label: 'Staff', color: 'bg-cyan-500', icon: UserCheck },
+  { value: 'staff', label: 'Staff', color: 'bg-primary-500', icon: UserCheck },
 ];
 
 const EVENTS_STORAGE_KEY = 'event-guestlist-events';
@@ -705,7 +705,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
           key={event.id}
           className={`p-4 rounded-xl border cursor-pointer transition-all ${
             selectedEventId === event.id
-              ? 'border-cyan-500 ring-2 ring-cyan-500/20'
+              ? 'border-primary-500 ring-2 ring-primary-500/20'
               : isDark
               ? 'border-gray-700 hover:border-gray-600'
               : 'border-gray-200 hover:border-gray-300'
@@ -770,8 +770,8 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
         onClick={() => setShowEventModal(true)}
         className={`p-4 rounded-xl border-2 border-dashed flex flex-col items-center justify-center min-h-[200px] transition-all ${
           isDark
-            ? 'border-gray-700 hover:border-cyan-500/50 hover:bg-gray-800/50'
-            : 'border-gray-200 hover:border-cyan-500/50 hover:bg-gray-50'
+            ? 'border-gray-700 hover:border-primary-500/50 hover:bg-gray-800/50'
+            : 'border-gray-200 hover:border-primary-500/50 hover:bg-gray-50'
         }`}
       >
         <Plus className={`w-8 h-8 mb-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
@@ -795,7 +795,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-            } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+            } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
         </div>
 
@@ -806,7 +806,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
             isDark
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-200 text-gray-900'
-          } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+          } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
         >
           <option value="all">{t('tools.eventGuestList.allRsvp', 'All RSVP')}</option>
           {RSVP_STATUS_OPTIONS.map(s => (
@@ -821,7 +821,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
             isDark
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-200 text-gray-900'
-          } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+          } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
         >
           <option value="all">{t('tools.eventGuestList.allCategories', 'All Categories')}</option>
           {CATEGORY_OPTIONS.map(c => (
@@ -832,7 +832,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
         <button
           onClick={() => setShowGuestModal(true)}
           disabled={!selectedEventId}
-          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all shadow-lg shadow-cyan-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <UserPlus className="w-5 h-5" />
           {t('tools.eventGuestList.addGuest', 'Add Guest')}
@@ -1045,7 +1045,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.eventGuestList.totalExpected', 'Total Expected')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{eventStats.totalAttendees}</p>
+              <p className="text-2xl font-bold text-primary-500">{eventStats.totalAttendees}</p>
             </div>
             <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.eventGuestList.checkedIn', 'Checked In')}</p>
@@ -1075,7 +1075,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+              } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -1129,7 +1129,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                     className={`w-full py-2 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                       guest.checkedIn
                         ? 'bg-red-500/10 text-red-500 hover:bg-red-500/20'
-                        : 'bg-gradient-to-r from-cyan-500 to-primary-500 text-white hover:from-cyan-600 hover:to-primary-600'
+                        : 'bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700'
                     }`}
                   >
                     {guest.checkedIn ? (
@@ -1163,7 +1163,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-cyan-500" />
+          <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.eventGuestList.loadingGuestList', 'Loading guest list...')}</p>
         </div>
       </div>
@@ -1176,9 +1176,9 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
-            <span className="text-sm text-cyan-500 font-medium">{t('tools.eventGuestList.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.eventGuestList.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -1186,7 +1186,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
         <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-primary-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1246,7 +1246,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.eventGuestList.totalGuests', 'Total Guests')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{eventStats.totalGuests}</p>
+              <p className="text-2xl font-bold text-primary-500">{eventStats.totalGuests}</p>
             </div>
             <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.eventGuestList.confirmed', 'Confirmed')}</p>
@@ -1284,7 +1284,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
               onClick={() => setActiveTab(tab.id as TabType)}
               className={`flex-1 px-4 py-2.5 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-primary-500 text-white shadow-lg shadow-cyan-500/20'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/20'
                   : isDark
                   ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-white'
@@ -1337,7 +1337,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                   />
                 </div>
 
@@ -1355,7 +1355,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                   <div>
@@ -1370,7 +1370,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -1391,7 +1391,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -1411,7 +1411,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                   <div>
@@ -1427,7 +1427,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                   <div>
@@ -1443,7 +1443,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -1462,7 +1462,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none resize-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none resize-none`}
                   />
                 </div>
               </div>
@@ -1490,7 +1490,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                   <button
                     onClick={handleSaveEvent}
                     disabled={!eventFormData.name || !eventFormData.date}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Save className="w-4 h-4" />
                     {editingEvent ? t('tools.eventGuestList.update', 'Update') : t('tools.eventGuestList.create', 'Create')}
@@ -1534,7 +1534,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                   />
                 </div>
 
@@ -1555,7 +1555,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                           isDark
                             ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                             : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                        } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                        } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                       />
                     </div>
                   </div>
@@ -1574,7 +1574,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                           isDark
                             ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                             : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                        } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                        } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                       />
                     </div>
                   </div>
@@ -1645,7 +1645,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                   <div>
@@ -1659,7 +1659,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     >
                       <option value="">{t('tools.eventGuestList.unassigned', 'Unassigned')}</option>
                       {selectedEvent && Array.from({ length: selectedEvent.tableCount }, (_, i) => i + 1).map(t => (
@@ -1681,7 +1681,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -1702,7 +1702,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -1715,7 +1715,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         type="checkbox"
                         checked={guestFormData.invitationSent}
                         onChange={(e) => setGuestFormData({ ...guestFormData, invitationSent: e.target.checked })}
-                        className="w-4 h-4 text-cyan-500 rounded focus:ring-cyan-500"
+                        className="w-4 h-4 text-primary-500 rounded focus:ring-primary-500"
                       />
                       <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.eventGuestList.invitationSent', 'Invitation Sent')}
@@ -1726,7 +1726,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                         type="checkbox"
                         checked={guestFormData.checkedIn}
                         onChange={(e) => setGuestFormData({ ...guestFormData, checkedIn: e.target.checked })}
-                        className="w-4 h-4 text-cyan-500 rounded focus:ring-cyan-500"
+                        className="w-4 h-4 text-primary-500 rounded focus:ring-primary-500"
                       />
                       <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.eventGuestList.checkedIn2', 'Checked In')}
@@ -1749,7 +1749,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none resize-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none resize-none`}
                   />
                 </div>
               </div>
@@ -1777,7 +1777,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                   <button
                     onClick={handleSaveGuest}
                     disabled={!guestFormData.name}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Save className="w-4 h-4" />
                     {editingGuest ? t('tools.eventGuestList.update2', 'Update') : t('tools.eventGuestList.add', 'Add')}

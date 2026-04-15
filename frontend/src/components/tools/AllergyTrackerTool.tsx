@@ -297,15 +297,15 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -364,12 +364,12 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <AlertTriangle className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <AlertTriangle className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.allergyTracker.total', 'Total')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -456,7 +456,7 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredAllergies.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -473,14 +473,14 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
                       onClick={() => setSelectedAllergy(allergy)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedAllergy?.id === allergy.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <TypeIcon className="w-4 h-4 text-cyan-500" />
+                            <TypeIcon className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{allergy.allergen}</p>
@@ -595,7 +595,7 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
                 {/* Reaction History */}
                 <div>
                   <h3 className="font-semibold mb-3 flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-cyan-500" />
+                    <Clock className="w-4 h-4 text-primary-500" />
                     Reaction History ({selectedAllergy.reactions.length})
                   </h3>
                   {selectedAllergy.reactions.length === 0 ? (
@@ -612,7 +612,7 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
                           </div>
                           <div className="flex flex-wrap gap-1 mb-2">
                             {reaction.symptoms.map((s, i) => (
-                              <span key={i} className="px-2 py-0.5 text-xs bg-cyan-500/20 text-cyan-400 rounded">{s}</span>
+                              <span key={i} className="px-2 py-0.5 text-xs bg-primary-500/20 text-primary-400 rounded">{s}</span>
                             ))}
                           </div>
                           {reaction.treatment && <p className="text-sm"><span className="text-gray-400">{t('tools.allergyTracker.treatment', 'Treatment:')}</span> {reaction.treatment}</p>}
@@ -708,7 +708,7 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {formData.symptoms.map((s, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {s} <button onClick={() => removeSymptom(s)}><X className="w-3 h-3" /></button>
                     </span>
                   ))}
@@ -771,7 +771,7 @@ export const AllergyTrackerTool: React.FC<AllergyTrackerToolProps> = ({ uiConfig
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {newReaction.symptoms.map((s, i) => (
-                    <span key={i} className="px-2 py-1 text-sm rounded bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-2 py-1 text-sm rounded bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {s} <button onClick={() => setNewReaction({ ...newReaction, symptoms: newReaction.symptoms.filter((_, idx) => idx !== i) })}><X className="w-3 h-3" /></button>
                     </span>
                   ))}

@@ -580,7 +580,7 @@ export const InterviewSchedulerTool: React.FC<InterviewSchedulerToolProps> = ({ 
               <Card>
                 <CardContent className="p-3">
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-emerald-600">{analytics.hired}</p>
+                    <p className="text-2xl font-bold text-primary-600">{analytics.hired}</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">{t('tools.interviewScheduler.recommendedHire', 'Recommended Hire')}</p>
                   </div>
                 </CardContent>

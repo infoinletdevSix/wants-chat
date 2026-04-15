@@ -572,7 +572,7 @@ export const RentalTrackerTool: React.FC<RentalTrackerToolProps> = ({ uiConfig }
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
   }`;
   const labelClass = `block text-sm font-medium mb-1.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-blue-500/20';
+  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-blue-500 to-primary-500 hover:from-blue-600 hover:to-primary-600 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-blue-500/20';
   const buttonSecondary = `px-4 py-2.5 rounded-lg font-medium transition-colors ${
     isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
   }`;
@@ -604,8 +604,8 @@ export const RentalTrackerTool: React.FC<RentalTrackerToolProps> = ({ uiConfig }
       </div>
       <div className={`${cardClass} p-4`}>
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-cyan-500/10 rounded-lg">
-            <Calendar className="w-5 h-5 text-cyan-500" />
+          <div className="p-2.5 bg-primary-500/10 rounded-lg">
+            <Calendar className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Active Bookings</p>
@@ -997,7 +997,7 @@ export const RentalTrackerTool: React.FC<RentalTrackerToolProps> = ({ uiConfig }
         <div className="p-4 space-y-3">
           <div>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.rentalTracker.overallRate', 'Overall Rate')}</p>
-            <p className="text-3xl font-bold text-cyan-500">{stats.occupancyRate.toFixed(1)}%</p>
+            <p className="text-3xl font-bold text-primary-500">{stats.occupancyRate.toFixed(1)}%</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -1434,7 +1434,7 @@ export const RentalTrackerTool: React.FC<RentalTrackerToolProps> = ({ uiConfig }
         <div className={cardClass}>
           <div className="p-6">
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl shadow-lg shadow-blue-500/20">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-primary-500 rounded-xl shadow-lg shadow-blue-500/20">
                 <Home className="w-7 h-7 text-white" />
               </div>
               <div>

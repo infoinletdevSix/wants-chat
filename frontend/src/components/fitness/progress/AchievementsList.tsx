@@ -57,8 +57,8 @@ const AchievementsList: React.FC<AchievementsListProps> = ({ achievements }) => 
                 </p>
                 {achievement.unlockedAt ? (
                   <div className="flex items-center gap-2 mt-3">
-                    <Icon path={mdiCheckCircle} size={0.6} className="text-emerald-500" />
-                    <span className="text-xs text-emerald-600 font-medium">
+                    <Icon path={mdiCheckCircle} size={0.6} className="text-primary-500" />
+                    <span className="text-xs text-primary-600 font-medium">
                       Unlocked {achievement.unlockedAt.toLocaleDateString()}
                     </span>
                   </div>
@@ -86,18 +86,18 @@ const AchievementsList: React.FC<AchievementsListProps> = ({ achievements }) => 
       <div className="mt-8">
         <h4 className="font-semibold mb-4">Recent Milestones</h4>
         <div className="space-y-4">
-          <div className="flex items-start gap-4 p-4 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-lg">
-            <div className="p-2 bg-emerald-500/10 rounded-full">
-              <Icon path={mdiCheckCircle} size={0.8} className="text-emerald-500" />
+          <div className="flex items-start gap-4 p-4 bg-primary-50/50 dark:bg-primary-950/20 rounded-lg">
+            <div className="p-2 bg-primary-500/10 rounded-full">
+              <Icon path={mdiCheckCircle} size={0.8} className="text-primary-500" />
             </div>
             <div>
               <p className="font-medium">First 5kg Weight Loss</p>
               <p className="text-sm text-muted-foreground">Achieved on January 15, 2024</p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-lg">
-            <div className="p-2 bg-emerald-500/10 rounded-full">
-              <Icon path={mdiCheckCircle} size={0.8} className="text-emerald-500" />
+          <div className="flex items-start gap-4 p-4 bg-primary-50/50 dark:bg-primary-950/20 rounded-lg">
+            <div className="p-2 bg-primary-500/10 rounded-full">
+              <Icon path={mdiCheckCircle} size={0.8} className="text-primary-500" />
             </div>
             <div>
               <p className="font-medium">100kg Bench Press</p>

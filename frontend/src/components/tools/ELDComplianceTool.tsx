@@ -368,7 +368,7 @@ export default function ELDComplianceTool() {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <RefreshCw className="w-8 h-8 animate-spin text-emerald-600" />
+        <RefreshCw className="w-8 h-8 animate-spin text-primary-600" />
       </div>
     );
   }
@@ -379,7 +379,7 @@ export default function ELDComplianceTool() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Shield className="w-7 h-7 text-emerald-600" />
+            <Shield className="w-7 h-7 text-primary-600" />
             {t('tools.eLDCompliance.eldCompliance', 'ELD Compliance')}
           </h1>
           <p className="text-gray-600 mt-1">{t('tools.eLDCompliance.electronicLoggingDeviceComplianceManagement', 'Electronic Logging Device compliance management')}</p>
@@ -395,7 +395,7 @@ export default function ELDComplianceTool() {
           />
           <button
             onClick={() => setIsFormOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
           >
             <Plus className="w-5 h-5" />
             {t('tools.eLDCompliance.newRecord', 'New Record')}
@@ -471,7 +471,7 @@ export default function ELDComplianceTool() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === tab
-                  ? 'border-emerald-600 text-emerald-600'
+                  ? 'border-primary-600 text-primary-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -491,14 +491,14 @@ export default function ELDComplianceTool() {
               placeholder={t('tools.eLDCompliance.searchRecords', 'Search records...')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <input
             type="date"
             value={dateFilter}
             onChange={(e) => setDateFilter(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
           />
           <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
             <Download className="w-4 h-4" />
@@ -654,7 +654,7 @@ export default function ELDComplianceTool() {
       {activeTab === 'reports' && (
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-emerald-600" />
+            <BarChart3 className="w-5 h-5 text-primary-600" />
             {t('tools.eLDCompliance.complianceReports', 'Compliance Reports')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -698,7 +698,7 @@ export default function ELDComplianceTool() {
                     type="date"
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
                 <div>
@@ -707,7 +707,7 @@ export default function ELDComplianceTool() {
                     type="text"
                     value={formData.driverName}
                     onChange={(e) => setFormData({ ...formData, driverName: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
                 <div>
@@ -716,7 +716,7 @@ export default function ELDComplianceTool() {
                     type="text"
                     value={formData.vehicleId}
                     onChange={(e) => setFormData({ ...formData, vehicleId: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
               </div>
@@ -727,7 +727,7 @@ export default function ELDComplianceTool() {
                   <select
                     value={formData.eventType}
                     onChange={(e) => setFormData({ ...formData, eventType: e.target.value as ELDRecord['eventType'] })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   >
                     {EVENT_TYPES.map((e) => (
                       <option key={e.value} value={e.value}>{e.label}</option>
@@ -740,7 +740,7 @@ export default function ELDComplianceTool() {
                     type="time"
                     value={formData.startTime}
                     onChange={(e) => setFormData({ ...formData, startTime: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
                 <div>
@@ -749,7 +749,7 @@ export default function ELDComplianceTool() {
                     type="time"
                     value={formData.endTime || ''}
                     onChange={(e) => setFormData({ ...formData, endTime: e.target.value || null })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
               </div>
@@ -761,7 +761,7 @@ export default function ELDComplianceTool() {
                     type="text"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
                 <div>
@@ -769,7 +769,7 @@ export default function ELDComplianceTool() {
                   <select
                     value={formData.recordOrigin}
                     onChange={(e) => setFormData({ ...formData, recordOrigin: e.target.value as ELDRecord['recordOrigin'] })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   >
                     {RECORD_ORIGINS.map((o) => (
                       <option key={o.value} value={o.value}>{o.label}</option>
@@ -786,7 +786,7 @@ export default function ELDComplianceTool() {
                     step="0.1"
                     value={formData.engineHours}
                     onChange={(e) => setFormData({ ...formData, engineHours: parseFloat(e.target.value) || 0 })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
                 <div>
@@ -795,7 +795,7 @@ export default function ELDComplianceTool() {
                     type="number"
                     value={formData.odometer}
                     onChange={(e) => setFormData({ ...formData, odometer: parseInt(e.target.value) || 0 })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
               </div>
@@ -806,7 +806,7 @@ export default function ELDComplianceTool() {
                   rows={2}
                   value={formData.annotation}
                   onChange={(e) => setFormData({ ...formData, annotation: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
 
@@ -816,7 +816,7 @@ export default function ELDComplianceTool() {
                     type="checkbox"
                     checked={formData.malfunctionIndicator}
                     onChange={(e) => setFormData({ ...formData, malfunctionIndicator: e.target.checked })}
-                    className="rounded border-gray-300 text-emerald-600"
+                    className="rounded border-gray-300 text-primary-600"
                   />
                   <span className="text-sm text-gray-700">{t('tools.eLDCompliance.malfunctionIndicator', 'Malfunction Indicator')}</span>
                 </label>
@@ -825,7 +825,7 @@ export default function ELDComplianceTool() {
                     type="checkbox"
                     checked={formData.dataDiagnosticIndicator}
                     onChange={(e) => setFormData({ ...formData, dataDiagnosticIndicator: e.target.checked })}
-                    className="rounded border-gray-300 text-emerald-600"
+                    className="rounded border-gray-300 text-primary-600"
                   />
                   <span className="text-sm text-gray-700">{t('tools.eLDCompliance.dataDiagnosticIndicator', 'Data Diagnostic Indicator')}</span>
                 </label>
@@ -841,7 +841,7 @@ export default function ELDComplianceTool() {
               </button>
               <button
                 onClick={handleSubmit}
-                className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
               >
                 <Save className="w-4 h-4" />
                 {editingRecord ? t('tools.eLDCompliance.updateRecord', 'Update Record') : t('tools.eLDCompliance.createRecord', 'Create Record')}

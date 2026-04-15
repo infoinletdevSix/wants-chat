@@ -53,7 +53,7 @@ const MedicationsSection: React.FC<MedicationsSectionProps> = ({
           <Button
             onClick={onAddMedication}
             disabled={!currentMedication.trim()}
-            className="h-12 px-5 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-12 px-5 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Plus className="h-5 w-5 mr-1" />
             Add

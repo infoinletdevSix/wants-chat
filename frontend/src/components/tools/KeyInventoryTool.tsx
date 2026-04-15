@@ -513,7 +513,7 @@ export function KeyInventoryTool({
                   <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.keyInventory.retailValue', 'Retail Value')}</p>
                   <p className="text-xl font-bold">{formatCurrency(stats.totalRetailValue)}</p>
                 </div>
-                <TrendingUp className="w-6 h-6 text-cyan-500 opacity-50" />
+                <TrendingUp className="w-6 h-6 text-primary-500 opacity-50" />
               </div>
             </CardContent>
           </Card>

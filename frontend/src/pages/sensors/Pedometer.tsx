@@ -75,7 +75,7 @@ const Pedometer: React.FC = () => {
           className="mb-8"
         >
           <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <Activity className="w-10 h-10 text-cyan-400" />
+            <Activity className="w-10 h-10 text-primary-400" />
             Pedometer
           </h1>
           <p className="text-primary-200">Track your daily steps and reach your fitness goals</p>
@@ -85,7 +85,7 @@ const Pedometer: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 mb-6 shadow-2xl"
+          className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 mb-6 shadow-2xl"
         >
           <div className="flex flex-col items-center mb-6">
             {/* Circular Progress */}
@@ -131,7 +131,7 @@ const Pedometer: React.FC = () => {
               className={`px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                 isTracking
                   ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                  : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
+                  : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700'
               } shadow-lg hover:shadow-xl transform hover:scale-105`}
             >
               {isTracking ? 'Stop Tracking' : 'Start Tracking'}
@@ -160,7 +160,7 @@ const Pedometer: React.FC = () => {
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
               <div className="flex items-center gap-3 mb-2">
-                <TrendingUp className="w-5 h-5 text-cyan-400" />
+                <TrendingUp className="w-5 h-5 text-primary-400" />
                 <span className="text-primary-200 text-sm">Distance</span>
               </div>
               <div className="text-3xl font-bold text-white">{distance}</div>
@@ -174,10 +174,10 @@ const Pedometer: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
+          className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
         >
           <div className="flex items-center gap-3 mb-6">
-            <Calendar className="w-6 h-6 text-cyan-400" />
+            <Calendar className="w-6 h-6 text-primary-400" />
             <h2 className="text-2xl font-bold text-white">Weekly Progress</h2>
           </div>
 
@@ -191,8 +191,8 @@ const Pedometer: React.FC = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className={`w-full rounded-t-lg ${
                       day.steps >= dailyGoal
-                        ? 'bg-gradient-to-t from-primary-500 to-cyan-400'
-                        : 'bg-gradient-to-t from-primary-700 to-cyan-600'
+                        ? 'bg-gradient-to-t from-primary-500 to-primary-400'
+                        : 'bg-gradient-to-t from-primary-700 to-primary-600'
                     } relative group cursor-pointer hover:opacity-80 transition-opacity`}
                   >
                     <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap">

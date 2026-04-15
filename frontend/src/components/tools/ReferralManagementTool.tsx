@@ -184,7 +184,7 @@ export const ReferralManagementTool: React.FC<ReferralManagementToolProps> = ({ 
       pending: 'bg-yellow-500/20 text-yellow-400',
       sent: 'bg-blue-500/20 text-blue-400',
       scheduled: 'bg-green-500/20 text-green-400',
-      completed: 'bg-emerald-500/20 text-emerald-400',
+      completed: 'bg-primary-500/20 text-primary-400',
       cancelled: 'bg-red-500/20 text-red-400',
       expired: 'bg-gray-500/20 text-gray-400',
     };
@@ -202,11 +202,11 @@ export const ReferralManagementTool: React.FC<ReferralManagementToolProps> = ({ 
 
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark' ? 'bg-gray-800 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500`;
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium`;
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'}`;
 
   return (
@@ -234,7 +234,7 @@ export const ReferralManagementTool: React.FC<ReferralManagementToolProps> = ({ 
       {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-6">
         {[
-          { label: 'Total', value: stats.total, color: 'text-cyan-500' },
+          { label: 'Total', value: stats.total, color: 'text-primary-500' },
           { label: 'Pending', value: stats.pending, color: 'text-yellow-500' },
           { label: 'Sent', value: stats.sent, color: 'text-blue-500' },
           { label: 'Scheduled', value: stats.scheduled, color: 'text-green-500' },
@@ -279,13 +279,13 @@ export const ReferralManagementTool: React.FC<ReferralManagementToolProps> = ({ 
           <div className="p-4 border-b border-gray-700"><h2 className="text-lg font-semibold">{t('tools.referralManagement.referrals', 'Referrals')}</h2></div>
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
-              <div className="p-8 text-center"><div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div></div>
+              <div className="p-8 text-center"><div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div></div>
             ) : filteredReferrals.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}><Send className="w-12 h-12 mx-auto mb-3 opacity-50" /><p>{t('tools.referralManagement.noReferralsFound', 'No referrals found')}</p></div>
             ) : (
               <div className="divide-y divide-gray-700">
                 {filteredReferrals.map(ref => (
-                  <div key={ref.id} onClick={() => setSelectedReferral(ref)} className={`p-4 cursor-pointer transition-colors ${selectedReferral?.id === ref.id ? 'bg-cyan-500/10 border-l-4 border-cyan-500' : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'}`}>
+                  <div key={ref.id} onClick={() => setSelectedReferral(ref)} className={`p-4 cursor-pointer transition-colors ${selectedReferral?.id === ref.id ? 'bg-primary-500/10 border-l-4 border-primary-500' : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'}`}>
                     <div className="flex items-start justify-between">
                       <div>
                         <p className="font-medium">{ref.patientName}</p>

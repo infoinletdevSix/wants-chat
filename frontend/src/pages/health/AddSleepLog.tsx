@@ -475,7 +475,7 @@ const AddSleepLog: React.FC = () => {
                           size="sm"
                           className={
                             formData.moodAfter === option.value
-                              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent'
+                              ? 'bg-gradient-to-r from-primary-500 to-primary-600 border-transparent'
                               : 'border-white/20'
                           }
                           onClick={() =>
@@ -641,7 +641,7 @@ const AddSleepLog: React.FC = () => {
               <div className="flex flex-col gap-3 mt-4">
                 <Button
                   type="button"
-                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600"
                   disabled={isSubmitting || !formData.bedtime || !formData.wakeTime}
                   onClick={handleSubmit}
                 >

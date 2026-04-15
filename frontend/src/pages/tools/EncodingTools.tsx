@@ -88,7 +88,7 @@ export default function EncodingTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-2">
               Encoding Tools
             </h1>
             <p className="text-gray-400">Encode, decode, and hash your data securely</p>
@@ -96,15 +96,15 @@ export default function EncodingTools() {
 
           <Tabs defaultValue="base64" className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="base64" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="base64" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Lock className="w-4 h-4 mr-2" />
                 Base64
               </TabsTrigger>
-              <TabsTrigger value="url" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="url" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Link className="w-4 h-4 mr-2" />
                 URL
               </TabsTrigger>
-              <TabsTrigger value="hash" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="hash" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500">
                 <Hash className="w-4 h-4 mr-2" />
                 Hash
               </TabsTrigger>
@@ -122,7 +122,7 @@ export default function EncodingTools() {
                 <div className="flex gap-3 mt-4">
                   <button
                     onClick={encodeBase64}
-                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     Encode
                   </button>
@@ -166,7 +166,7 @@ export default function EncodingTools() {
                 <div className="flex gap-3 mt-4">
                   <button
                     onClick={encodeURL}
-                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     Encode
                   </button>
@@ -209,7 +209,7 @@ export default function EncodingTools() {
                 />
                 <button
                   onClick={generateHashes}
-                  className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Generate Hashes
                 </button>

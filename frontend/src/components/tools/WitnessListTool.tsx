@@ -86,7 +86,7 @@ const statusOptions: { value: WitnessStatus; label: string; color: string }[] = 
   { value: 'potential', label: 'Potential', color: 'bg-gray-100 text-gray-800' },
   { value: 'confirmed', label: 'Confirmed', color: 'bg-blue-100 text-blue-800' },
   { value: 'subpoenaed', label: 'Subpoenaed', color: 'bg-yellow-100 text-yellow-800' },
-  { value: 'interviewed', label: 'Interviewed', color: 'bg-cyan-100 text-cyan-800' },
+  { value: 'interviewed', label: 'Interviewed', color: 'bg-primary-100 text-primary-800' },
   { value: 'deposed', label: 'Deposed', color: 'bg-purple-100 text-purple-800' },
   { value: 'testified', label: 'Testified', color: 'bg-green-100 text-green-800' },
   { value: 'withdrawn', label: 'Withdrawn', color: 'bg-orange-100 text-orange-800' },

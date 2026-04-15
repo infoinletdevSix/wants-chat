@@ -170,7 +170,7 @@ ${notes.nextSteps.map((n) => `- ${n}`).join('\n')}
             <Button
               onClick={handleGenerate}
               disabled={loading || !formData.transcript.trim()}
-              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+              className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
             >
               {loading ? (
                 <>

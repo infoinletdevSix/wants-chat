@@ -547,9 +547,9 @@ export const DocumentReviewTool: React.FC<DocumentReviewToolProps> = ({ uiConfig
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -653,12 +653,12 @@ export const DocumentReviewTool: React.FC<DocumentReviewToolProps> = ({ uiConfig
         </div>
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <FileText className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <FileText className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.documentReview.totalDocs', 'Total Docs')}</p>
-              <p className="text-xl font-bold text-cyan-500">{stats.totalDocs.toLocaleString()}</p>
+              <p className="text-xl font-bold text-primary-500">{stats.totalDocs.toLocaleString()}</p>
             </div>
           </div>
         </div>

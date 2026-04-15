@@ -740,7 +740,7 @@ export const TeamRosterTool: React.FC<TeamRosterToolProps> = ({ uiConfig }) => {
 
                         {member.manager && (
                           <div className="flex items-center gap-2">
-                            <Users className="w-4 h-4 text-cyan-500 flex-shrink-0" />
+                            <Users className="w-4 h-4 text-primary-500 flex-shrink-0" />
                             <div>
                               <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.teamRoster.manager2', 'Manager')}</p>
                               <p className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{member.manager}</p>

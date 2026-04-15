@@ -175,7 +175,7 @@ const BloodSugarRecords: React.FC = () => {
         <div className="mb-12">
           <Button
             onClick={() => navigate('/health/add-vital-record')}
-            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             size="lg"
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -505,7 +505,7 @@ const BloodSugarRecords: React.FC = () => {
           </div>
           <Button
             onClick={() => navigate('/health/add-vital-record')}
-            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
           >
             <Plus className="h-4 w-4 mr-2" />
             Add Reading
@@ -666,7 +666,7 @@ const BloodSugarRecords: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/health/add-vital-record')}
-                className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Your First Reading

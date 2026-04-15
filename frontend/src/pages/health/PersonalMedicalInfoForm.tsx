@@ -197,10 +197,10 @@ const PersonalMedicalInfoForm: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Success Message */}
         {showSuccess && (
-          <div className="mb-6 p-4 bg-emerald-500/20 border border-emerald-500/30 rounded-xl">
+          <div className="mb-6 p-4 bg-primary-500/20 border border-primary-500/30 rounded-xl">
             <div className="flex items-center">
-              <Check className="h-5 w-5 text-emerald-400 mr-2" />
-              <p className="text-emerald-400">
+              <Check className="h-5 w-5 text-primary-400 mr-2" />
+              <p className="text-primary-400">
                 Medical profile saved successfully!
               </p>
             </div>
@@ -210,7 +210,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
         <Card className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
           <CardHeader className="border-b border-white/10">
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500 to-cyan-500">
+              <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600">
                 <UserCog className="h-5 w-5 text-white" />
               </div>
               {isEditMode ? 'Edit Your Medical Profile' : 'Complete Your Medical Profile'}
@@ -490,7 +490,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
               )}
               <Button
                 onClick={handleSave}
-                className={`h-12 px-6 rounded-md font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white ${isEditMode ? 'ml-auto' : ''}`}
+                className={`h-12 px-6 rounded-md font-medium bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white ${isEditMode ? 'ml-auto' : ''}`}
                 disabled={createProfileMutation.loading || updateProfileMutation.loading}
               >
                 {(createProfileMutation.loading || updateProfileMutation.loading)

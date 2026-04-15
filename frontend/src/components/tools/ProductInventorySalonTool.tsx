@@ -162,13 +162,13 @@ const formatDate = (dateStr: string) => {
 const getCategoryColor = (category: ProductCategory) => {
   const colorMap: Record<string, string> = {
     purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
-    cyan: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400',
+    cyan: 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400',
     pink: 'bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-400',
     indigo: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400',
     rose: 'bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400',
     slate: 'bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300',
     gray: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300',
-    emerald: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400',
+    emerald: 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400',
   };
   const cat = CATEGORIES.find(c => c.id === category);
   return colorMap[cat?.color || 'gray'];
@@ -762,12 +762,12 @@ export const ProductInventorySalonTool: React.FC<ProductInventorySalonToolProps>
           <Card>
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg">
-                  <ShoppingCart className="w-5 h-5 text-emerald-600" />
+                <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
+                  <ShoppingCart className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{t('tools.productInventorySalon.retailValue', 'Retail Value')}</p>
-                  <p className="text-xl font-bold text-emerald-600">{formatCurrency(stats.retailValue)}</p>
+                  <p className="text-xl font-bold text-primary-600">{formatCurrency(stats.retailValue)}</p>
                 </div>
               </div>
             </CardContent>

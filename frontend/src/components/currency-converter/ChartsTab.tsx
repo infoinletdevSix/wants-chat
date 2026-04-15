@@ -24,14 +24,14 @@ import {
 
 const popularCurrencies = [
   { code: 'USD', name: 'US Dollar', color: 'bg-gradient-to-br from-blue-500 to-blue-600' },
-  { code: 'EUR', name: 'Euro', color: 'bg-gradient-to-br from-emerald-500 to-emerald-600' },
+  { code: 'EUR', name: 'Euro', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'JPY', name: 'Japanese Yen', color: 'bg-gradient-to-br from-orange-500 to-orange-600' },
   { code: 'GBP', name: 'British Pound', color: 'bg-gradient-to-br from-purple-500 to-purple-600' },
   { code: 'AUD', name: 'Australian Dollar', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'CAD', name: 'Canadian Dollar', color: 'bg-gradient-to-br from-red-500 to-red-600' },
   { code: 'CHF', name: 'Swiss Franc', color: 'bg-gradient-to-br from-indigo-500 to-indigo-600' },
   { code: 'CNY', name: 'Chinese Yuan', color: 'bg-gradient-to-br from-pink-500 to-pink-600' },
-  { code: 'SEK', name: 'Swedish Krona', color: 'bg-gradient-to-br from-cyan-500 to-cyan-600' },
+  { code: 'SEK', name: 'Swedish Krona', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'NZD', name: 'New Zealand Dollar', color: 'bg-gradient-to-br from-yellow-500 to-yellow-600' }
 ];
 
@@ -129,7 +129,7 @@ const ChartsTab: React.FC = () => {
       '12H': 'bg-gradient-to-br from-red-500 to-red-600',
       '1D': 'bg-gradient-to-br from-orange-500 to-orange-600',
       '1W': 'bg-gradient-to-br from-yellow-500 to-yellow-600',
-      '1M': 'bg-gradient-to-br from-emerald-500 to-emerald-600',
+      '1M': 'bg-gradient-to-br from-primary-500 to-primary-600',
       '1Y': 'bg-gradient-to-br from-blue-500 to-blue-600',
       '2Y': 'bg-gradient-to-br from-indigo-500 to-indigo-600',
       '5Y': 'bg-gradient-to-br from-purple-500 to-purple-600',
@@ -144,7 +144,7 @@ const ChartsTab: React.FC = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <div className="p-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg">
                 <Icon path={mdiChartLineVariant} size={1.2} className="text-white" />
               </div>
               Currency Charts
@@ -155,11 +155,11 @@ const ChartsTab: React.FC = () => {
           </div>
           {performance !== null && (
             <div className="text-center">
-              <div className={`text-2xl font-bold ${performance >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+              <div className={`text-2xl font-bold ${performance >= 0 ? 'text-primary-400' : 'text-red-400'}`}>
                 {performance.toFixed(2)}%
               </div>
               <div className="text-xs text-white/60">Performance</div>
-              <div className={`inline-block ${performance >= 0 ? 'bg-emerald-500/20 border-emerald-400/30' : 'bg-red-500/20 border-red-400/30'} border rounded-full px-2 py-1 text-xs text-white/80 mt-1`}>
+              <div className={`inline-block ${performance >= 0 ? 'bg-primary-500/20 border-primary-400/30' : 'bg-red-500/20 border-red-400/30'} border rounded-full px-2 py-1 text-xs text-white/80 mt-1`}>
                 <Icon path={performance >= 0 ? mdiTrendingUp : mdiTrendingDown} size={0.4} className="inline mr-1" />
                 {timeFrame}
               </div>
@@ -255,7 +255,7 @@ const ChartsTab: React.FC = () => {
             <div className="flex justify-center pt-2">
               <Button
                 onClick={handleViewChart}
-                className="px-8 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 h-12 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
+                className="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 h-12 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
                 disabled={isLoading}
               >
                 <Icon path={mdiEye} size={0.8} />
@@ -286,7 +286,7 @@ const ChartsTab: React.FC = () => {
 
               <div className="flex items-center gap-4">
                 {performance !== null && (
-                  <div className={`inline-block ${performance >= 0 ? 'bg-emerald-500/20 border-emerald-400/30' : 'bg-red-500/20 border-red-400/30'} border rounded-full px-3 py-1 text-sm text-white/80`}>
+                  <div className={`inline-block ${performance >= 0 ? 'bg-primary-500/20 border-primary-400/30' : 'bg-red-500/20 border-red-400/30'} border rounded-full px-3 py-1 text-sm text-white/80`}>
                     <Icon path={performance >= 0 ? mdiTrendingUp : mdiTrendingDown} size={0.4} className="inline mr-1" />
                     {performance.toFixed(2)}%
                   </div>
@@ -319,12 +319,12 @@ const ChartsTab: React.FC = () => {
                   <p className="text-lg font-bold text-blue-300">{currentRate?.toFixed(4) || 'N/A'}</p>
                 </div>
 
-                <div className="bg-emerald-500/20 border border-emerald-400/30 rounded-xl p-4">
+                <div className="bg-primary-500/20 border border-primary-400/30 rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Icon path={mdiChartTimelineVariant} size={0.6} className="text-emerald-400" />
+                    <Icon path={mdiChartTimelineVariant} size={0.6} className="text-primary-400" />
                     <span className="text-sm font-medium text-white/80">High</span>
                   </div>
-                  <p className="text-lg font-bold text-emerald-300">
+                  <p className="text-lg font-bold text-primary-300">
                     {chartData.length > 0 ? Math.max(...chartData.map(d => d.rate)).toFixed(4) : 'N/A'}
                   </p>
                 </div>
@@ -426,7 +426,7 @@ const ChartsTab: React.FC = () => {
               <p className="text-white/60 mb-4">Select currencies and click "View Chart" to display historical data</p>
               <Button
                 onClick={handleViewChart}
-                className="gap-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                className="gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               >
                 <Icon path={mdiEye} size={0.6} />
                 Load Chart Data

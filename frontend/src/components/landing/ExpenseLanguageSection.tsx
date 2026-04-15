@@ -215,7 +215,7 @@ const ExpenseLanguageSection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -288,7 +288,7 @@ const ExpenseLanguageSection: React.FC = () => {
                       <span className="text-2xl">📝</span>
                       <span className="text-xs font-medium text-white/70">Transactions</span>
                     </div>
-                    <p className="text-3xl font-bold text-cyan-400">
+                    <p className="text-3xl font-bold text-primary-400">
                       {transactions}
                     </p>
                     <p className="text-xs text-white/50 mt-1">This month</p>
@@ -365,7 +365,7 @@ const ExpenseLanguageSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <Button
-                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all mt-auto"
+                  className="w-full bg-gradient-to-r from-green-600 to-primary-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all mt-auto"
                   onClick={() => {
                     if (!isAuthenticated) {
                       navigate('/login');
@@ -417,7 +417,7 @@ const ExpenseLanguageSection: React.FC = () => {
                         { flag: '🇮🇹', name: 'Italian', color: 'bg-green-500/20 border-green-500/30' },
                         { flag: '🇰🇷', name: 'Korean', color: 'bg-orange-500/20 border-orange-500/30' },
                         { flag: '🇨🇳', name: 'Chinese', color: 'bg-pink-500/20 border-pink-500/30' },
-                        { flag: '🇵🇹', name: 'Portuguese', color: 'bg-cyan-500/20 border-cyan-500/30' },
+                        { flag: '🇵🇹', name: 'Portuguese', color: 'bg-primary-500/20 border-primary-500/30' },
                       ].map((lang, index) => (
                         <motion.div
                           key={index}

@@ -101,7 +101,7 @@ interface PermitTrackerToolProps {
 const PERMIT_TYPES: { value: PermitType; label: string; color: string }[] = [
   { value: 'building', label: 'Building', color: 'bg-blue-500' },
   { value: 'electrical', label: 'Electrical', color: 'bg-yellow-500' },
-  { value: 'plumbing', label: 'Plumbing', color: 'bg-cyan-500' },
+  { value: 'plumbing', label: 'Plumbing', color: 'bg-primary-500' },
   { value: 'mechanical', label: 'Mechanical', color: 'bg-purple-500' },
   { value: 'demolition', label: 'Demolition', color: 'bg-red-500' },
   { value: 'zoning', label: 'Zoning', color: 'bg-green-500' },

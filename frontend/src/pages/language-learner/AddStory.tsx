@@ -201,7 +201,7 @@ const AddStory: React.FC = () => {
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'beginner':
-        return 'bg-emerald-500/20 text-emerald-400';
+        return 'bg-primary-500/20 text-primary-400';
       case 'intermediate':
         return 'bg-yellow-500/20 text-yellow-400';
       case 'advanced':
@@ -533,7 +533,7 @@ const AddStory: React.FC = () => {
               !formData.content.trim() ||
               createStoryMutation.isPending
             }
-            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0 font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0 font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Save className="h-5 w-5 mr-2" />
             {createStoryMutation.isPending ? 'Saving...' : 'Save Story'}

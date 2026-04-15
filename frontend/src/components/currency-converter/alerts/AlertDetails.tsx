@@ -119,7 +119,7 @@ const AlertDetails: React.FC<AlertDetailsProps> = ({
             {alert.name}
           </h2>
           <div className="flex items-center gap-2">
-            <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${isActive ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/30' : 'bg-white/10 text-white/60 border border-white/20'}`}>
+            <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${isActive ? 'bg-primary-500/20 text-primary-300 border border-primary-400/30' : 'bg-white/10 text-white/60 border border-white/20'}`}>
               {isActive ? 'Active' : 'Inactive'}
             </span>
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80 border border-white/20">
@@ -128,7 +128,7 @@ const AlertDetails: React.FC<AlertDetailsProps> = ({
           </div>
         </div>
         <div className="flex gap-2">
-          <Button onClick={handleTest} disabled={isTesting} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+          <Button onClick={handleTest} disabled={isTesting} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
             <PlayCircle className="h-4 w-4 mr-2" />
             Test Alert
           </Button>

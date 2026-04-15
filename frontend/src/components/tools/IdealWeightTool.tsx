@@ -130,10 +130,10 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <Target className="w-5 h-5 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Target className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.idealWeight.idealWeightCalculator', 'Ideal Weight Calculator')}</h3>
@@ -145,9 +145,9 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
-            <Sparkles className="w-4 h-4 text-emerald-500" />
-            <span className="text-sm text-emerald-500 font-medium">{t('tools.idealWeight.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.idealWeight.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -162,7 +162,7 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
                 onClick={() => setGender('male')}
                 className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                   gender === 'male'
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -174,7 +174,7 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
                 onClick={() => setGender('female')}
                 className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                   gender === 'female'
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -193,7 +193,7 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
                 onClick={() => setUnit('imperial')}
                 className={`flex-1 py-2 rounded-lg transition-colors ${
                   unit === 'imperial'
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -205,7 +205,7 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
                 onClick={() => setUnit('metric')}
                 className={`flex-1 py-2 rounded-lg transition-colors ${
                   unit === 'metric'
-                    ? 'bg-emerald-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -258,9 +258,9 @@ export const IdealWeightTool: React.FC<IdealWeightToolProps> = ({ uiConfig }) =>
         {results && (
           <>
             {/* Main Result */}
-            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-100'} border`}>
+            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.idealWeight.recommendedIdealWeight', 'Recommended Ideal Weight')}</div>
-              <div className={`text-5xl font-bold text-emerald-500 my-2`}>
+              <div className={`text-5xl font-bold text-primary-500 my-2`}>
                 {formatWeight(results.average)}
               </div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

@@ -250,7 +250,7 @@ const StudySessionManager: React.FC<StudySessionManagerProps> = ({
                   className={`h-16 text-lg ${
                     showFeedback
                       ? option === currentQ.correctAnswer
-                        ? 'bg-emerald-500 hover:bg-emerald-500 text-white'
+                        ? 'bg-primary-500 hover:bg-primary-500 text-white'
                         : option === selectedAnswer && !isCorrect
                         ? 'bg-red-500 hover:bg-red-500 text-white'
                         : ''
@@ -276,7 +276,7 @@ const StudySessionManager: React.FC<StudySessionManagerProps> = ({
                 className={`w-full p-4 text-xl border-2 rounded-lg ${
                   showFeedback
                     ? isCorrect
-                      ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20'
+                      ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
                       : 'border-red-500 bg-red-50 dark:bg-red-900/20'
                     : 'border-gray-200 dark:border-gray-700'
                 } bg-background text-foreground`}
@@ -288,14 +288,14 @@ const StudySessionManager: React.FC<StudySessionManagerProps> = ({
           {showFeedback && (
             <div className={`mt-6 p-4 rounded-lg ${
               isCorrect 
-                ? 'bg-emerald-50 dark:bg-emerald-900/20' 
+                ? 'bg-primary-50 dark:bg-primary-900/20' 
                 : 'bg-red-50 dark:bg-red-900/20'
             }`}>
               <div className="flex items-center justify-center space-x-2 mb-2">
                 {isCorrect ? (
                   <>
-                    <Check className="h-5 w-5 text-emerald-600" />
-                    <span className="font-semibold text-emerald-600">Correct!</span>
+                    <Check className="h-5 w-5 text-primary-600" />
+                    <span className="font-semibold text-primary-600">Correct!</span>
                   </>
                 ) : (
                   <>

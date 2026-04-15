@@ -349,7 +349,7 @@ const StoryReader: React.FC<StoryReaderProps> = ({
                     index === currentParagraph
                       ? 'bg-[#47bdff] w-8'
                       : index < currentParagraph
-                      ? 'bg-emerald-500'
+                      ? 'bg-primary-500'
                       : 'bg-gray-300 dark:bg-gray-600'
                   }`}
                   onClick={() => setCurrentParagraph(index)}

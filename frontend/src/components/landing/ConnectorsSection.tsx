@@ -36,8 +36,8 @@ interface Connector {
 const connectors: Connector[] = [
   // Google Suite
   { name: 'Google Drive', icon: HardDrive, category: 'Google', gradient: 'from-blue-500 to-green-500' },
-  { name: 'Google Sheets', icon: FileSpreadsheet, category: 'Google', gradient: 'from-green-500 to-emerald-500' },
-  { name: 'Google Calendar', icon: Calendar, category: 'Google', gradient: 'from-blue-500 to-cyan-500' },
+  { name: 'Google Sheets', icon: FileSpreadsheet, category: 'Google', gradient: 'from-green-500 to-primary-500' },
+  { name: 'Google Calendar', icon: Calendar, category: 'Google', gradient: 'from-blue-500 to-primary-500' },
   { name: 'Gmail', icon: Mail, category: 'Google', gradient: 'from-red-500 to-orange-500' },
 
   // Microsoft
@@ -49,7 +49,7 @@ const connectors: Connector[] = [
   { name: 'Slack', icon: MessageSquare, category: 'Communication', gradient: 'from-purple-500 to-pink-500' },
   { name: 'Discord', icon: MessageSquare, category: 'Communication', gradient: 'from-indigo-500 to-purple-500' },
   { name: 'Twilio', icon: Phone, category: 'Communication', gradient: 'from-red-500 to-pink-500' },
-  { name: 'SendGrid', icon: Send, category: 'Communication', gradient: 'from-blue-500 to-cyan-500' },
+  { name: 'SendGrid', icon: Send, category: 'Communication', gradient: 'from-blue-500 to-primary-500' },
 
   // Productivity
   { name: 'Notion', icon: FileText, category: 'Productivity', gradient: 'from-gray-600 to-gray-800' },
@@ -63,7 +63,7 @@ const connectors: Connector[] = [
 
   // Cloud Providers
   { name: 'AWS', icon: Cloud, category: 'Cloud', gradient: 'from-orange-500 to-yellow-500' },
-  { name: 'Azure', icon: Cloud, category: 'Cloud', gradient: 'from-blue-500 to-cyan-500' },
+  { name: 'Azure', icon: Cloud, category: 'Cloud', gradient: 'from-blue-500 to-primary-500' },
   { name: 'GCP', icon: Cloud, category: 'Cloud', gradient: 'from-red-500 to-blue-500' },
 
   // Payments
@@ -72,7 +72,7 @@ const connectors: Connector[] = [
   { name: 'Square', icon: CreditCard, category: 'Payments', gradient: 'from-gray-700 to-gray-900' },
 
   // CRM
-  { name: 'Salesforce', icon: Users, category: 'CRM', gradient: 'from-blue-500 to-cyan-500' },
+  { name: 'Salesforce', icon: Users, category: 'CRM', gradient: 'from-blue-500 to-primary-500' },
   { name: 'HubSpot', icon: Users, category: 'CRM', gradient: 'from-orange-500 to-red-500' },
   { name: 'Zoho', icon: Users, category: 'CRM', gradient: 'from-red-500 to-yellow-500' },
 
@@ -86,17 +86,17 @@ const connectors: Connector[] = [
   { name: 'Box', icon: HardDrive, category: 'Storage', gradient: 'from-blue-600 to-blue-700' },
 
   // AI
-  { name: 'OpenAI', icon: Bot, category: 'AI', gradient: 'from-emerald-500 to-primary-500' },
+  { name: 'OpenAI', icon: Bot, category: 'AI', gradient: 'from-primary-500 to-primary-600' },
   { name: 'Claude', icon: Bot, category: 'AI', gradient: 'from-orange-500 to-amber-500' },
   { name: 'Gemini', icon: Bot, category: 'AI', gradient: 'from-blue-500 to-purple-500' },
 
   // Business
-  { name: 'QuickBooks', icon: BarChart3, category: 'Business', gradient: 'from-green-500 to-emerald-500' },
+  { name: 'QuickBooks', icon: BarChart3, category: 'Business', gradient: 'from-green-500 to-primary-500' },
   { name: 'Shopify', icon: ShoppingCart, category: 'Business', gradient: 'from-green-500 to-lime-500' },
   { name: 'Jira', icon: Briefcase, category: 'Business', gradient: 'from-blue-500 to-indigo-500' },
   { name: 'Asana', icon: Briefcase, category: 'Business', gradient: 'from-rose-500 to-pink-500' },
   { name: 'Monday', icon: Building2, category: 'Business', gradient: 'from-red-500 to-orange-500' },
-  { name: 'Zendesk', icon: Users, category: 'Business', gradient: 'from-primary-500 to-cyan-500' },
+  { name: 'Zendesk', icon: Users, category: 'Business', gradient: 'from-primary-500 to-primary-600' },
 ];
 
 const containerVariants = {
@@ -130,7 +130,7 @@ const ConnectorsSection: React.FC = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <motion.div
-        className="absolute top-[-300px] left-[-200px] w-[700px] h-[700px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute top-[-300px] left-[-200px] w-[700px] h-[700px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, 50, 0],
           y: [0, -30, 0],
@@ -143,7 +143,7 @@ const ConnectorsSection: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-[-300px] right-[-200px] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute bottom-[-300px] right-[-200px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, -40, 0],
           y: [0, 40, 0],
@@ -164,12 +164,12 @@ const ConnectorsSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-4">
             {t('landing.connectors.badge')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('landing.connectors.title')}{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
               {t('landing.connectors.titleHighlight')}
             </span>
           </h2>
@@ -242,7 +242,7 @@ const ConnectorsSection: React.FC = () => {
             {['Google', 'Microsoft', 'Automation', 'Cloud', 'Payments', 'CRM', 'Development', 'AI', 'Storage', 'Communication'].map((category) => (
               <span
                 key={category}
-                className="px-4 py-2 rounded-full bg-gray-900/50 border border-gray-800 text-gray-400 text-sm hover:border-cyan-500/50 hover:text-cyan-400 transition-colors cursor-default"
+                className="px-4 py-2 rounded-full bg-gray-900/50 border border-gray-800 text-gray-400 text-sm hover:border-primary-500/50 hover:text-primary-400 transition-colors cursor-default"
               >
                 {category}
               </span>
@@ -267,7 +267,7 @@ const ConnectorCard: React.FC<ConnectorCardProps> = ({ connector }) => {
 
   return (
     <div className="flex-shrink-0 group">
-      <div className="bg-gray-900/50 backdrop-blur-xl rounded-xl p-4 border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 w-[140px]">
+      <div className="bg-gray-900/50 backdrop-blur-xl rounded-xl p-4 border border-gray-800 hover:border-primary-500/50 transition-all duration-300 w-[140px]">
         <div className="flex flex-col items-center gap-2">
           <div
             className={`w-10 h-10 rounded-lg bg-gradient-to-br ${connector.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}

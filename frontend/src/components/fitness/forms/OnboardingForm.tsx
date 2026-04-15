@@ -63,7 +63,7 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
         </div>
         <div className="w-full bg-white/10 rounded-full h-2">
           <div
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${(step / totalSteps) * 100}%` }}
           />
         </div>
@@ -245,7 +245,7 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
           <Button
             onClick={handleNext}
             disabled={isLoading}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
           >
             {isLoading ? (
               <>

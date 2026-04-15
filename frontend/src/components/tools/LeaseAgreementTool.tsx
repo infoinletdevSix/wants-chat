@@ -268,11 +268,11 @@ export const LeaseAgreementTool: React.FC = () => {
   };
 
   const cardClass = `rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`;
-  const inputClass = `w-full px-4 py-2.5 border rounded-lg outline-none transition-all focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 ${
+  const inputClass = `w-full px-4 py-2.5 border rounded-lg outline-none transition-all focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 ${
     isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'
   }`;
   const labelClass = `block text-sm font-medium mb-1.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-primary-500 hover:from-emerald-600 hover:to-primary-600 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-emerald-500/20';
+  const buttonPrimary = 'px-4 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-primary-500/20';
   const buttonSecondary = `px-4 py-2.5 rounded-lg font-medium transition-colors ${isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`;
 
   return (
@@ -283,7 +283,7 @@ export const LeaseAgreementTool: React.FC = () => {
           <div className="p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-emerald-500 to-primary-500 rounded-xl shadow-lg">
+                <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-lg">
                   <FileCheck className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -322,7 +322,7 @@ export const LeaseAgreementTool: React.FC = () => {
           </div>
           <div className={`${cardClass} p-4`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.leaseAgreement.monthlyRevenue', 'Monthly Revenue')}</p>
-            <p className="text-2xl font-bold text-emerald-500">${stats.totalMonthlyRevenue.toLocaleString()}</p>
+            <p className="text-2xl font-bold text-primary-500">${stats.totalMonthlyRevenue.toLocaleString()}</p>
           </div>
         </div>
 
@@ -588,7 +588,7 @@ export const LeaseAgreementTool: React.FC = () => {
                         {UTILITIES.map(utility => (
                           <label key={utility} className={`flex items-center gap-2 px-3 py-2 rounded-lg border cursor-pointer ${
                             form.utilitiesIncluded?.includes(utility)
-                              ? 'border-emerald-500 bg-emerald-500/10 text-emerald-500'
+                              ? 'border-primary-500 bg-primary-500/10 text-primary-500'
                               : isDark ? 'border-gray-600 text-gray-400' : 'border-gray-200 text-gray-600'
                           }`}>
                             <input

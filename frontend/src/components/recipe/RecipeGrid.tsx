@@ -109,7 +109,7 @@ export const RecipeGrid: React.FC<RecipeGridProps> = ({
             <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
               <div className="flex gap-2">
                 <Badge className={`text-xs px-2 py-1 rounded-lg backdrop-blur-sm ${
-                  recipe.difficulty === 'easy' ? 'bg-emerald-500/90 text-white' :
+                  recipe.difficulty === 'easy' ? 'bg-primary-500/90 text-white' :
                   recipe.difficulty === 'medium' ? 'bg-yellow-500/90 text-white' :
                   'bg-red-500/90 text-white'
                 }`}>

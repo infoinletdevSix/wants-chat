@@ -44,14 +44,14 @@ const GoalsProgress: React.FC<GoalsProgressProps> = ({ goals, onAddGoal }) => {
       case 'primary':
         return {
           badge: 'bg-primary-500/20 text-primary-400',
-          progress: 'bg-gradient-to-r from-primary-500 to-cyan-400',
+          progress: 'bg-gradient-to-r from-primary-500 to-primary-400',
           icon: 'text-primary-400'
         };
       case 'emerald':
         return {
-          badge: 'bg-emerald-500/20 text-emerald-400',
-          progress: 'bg-gradient-to-r from-emerald-500 to-green-400',
-          icon: 'text-emerald-400'
+          badge: 'bg-primary-500/20 text-primary-400',
+          progress: 'bg-gradient-to-r from-primary-500 to-green-400',
+          icon: 'text-primary-400'
         };
       case 'purple':
         return {
@@ -78,7 +78,7 @@ const GoalsProgress: React.FC<GoalsProgressProps> = ({ goals, onAddGoal }) => {
           <h3 className="text-lg font-semibold text-white">Goal Progress</h3>
         </div>
         {onAddGoal && (
-          <Button size="sm" onClick={onAddGoal} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+          <Button size="sm" onClick={onAddGoal} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
             <Icon path={mdiPlus} size={0.7} className="mr-2" />
             Add Goal
           </Button>
@@ -108,9 +108,9 @@ const GoalsProgress: React.FC<GoalsProgressProps> = ({ goals, onAddGoal }) => {
               <div className="flex items-center justify-between text-sm text-white/60">
                 <span>{goal.current} / {goal.target} {goal.unit}</span>
                 <span className={`font-medium ${
-                  goal.status === 'On track' ? 'text-emerald-400' :
+                  goal.status === 'On track' ? 'text-primary-400' :
                   goal.status === 'Almost there' ? 'text-orange-400' :
-                  goal.status === 'Excellent' ? 'text-emerald-400' :
+                  goal.status === 'Excellent' ? 'text-primary-400' :
                   'text-white/60'
                 }`}>
                   {goal.status}

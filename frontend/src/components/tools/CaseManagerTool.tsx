@@ -117,7 +117,7 @@ const caseTypeOptions: { value: Case['case_type']; label: string; color: string 
   { value: 'civil', label: 'Civil', color: 'bg-blue-500' },
   { value: 'criminal', label: 'Criminal', color: 'bg-red-500' },
   { value: 'family', label: 'Family', color: 'bg-purple-500' },
-  { value: 'corporate', label: 'Corporate', color: 'bg-emerald-500' },
+  { value: 'corporate', label: 'Corporate', color: 'bg-primary-500' },
 ];
 
 const statusOptions: { value: Case['status']; label: string; icon: React.ElementType; color: string }[] = [

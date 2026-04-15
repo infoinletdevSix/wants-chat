@@ -181,7 +181,7 @@ const FAQSection: React.FC = () => {
       {/* Background - matching login page */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       <motion.div
-        className="absolute bottom-1/4 left-1/3 w-[700px] h-[700px] bg-emerald-500/5 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-1/3 w-[700px] h-[700px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 12, repeat: Infinity }}
       />
@@ -194,12 +194,12 @@ const FAQSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-4">
             {t('landing.faq.badge')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('landing.faq.title')}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> {t('landing.faq.titleHighlight')}</span>
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent"> {t('landing.faq.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             {t('landing.faq.subtitle')}
@@ -225,7 +225,7 @@ const FAQSection: React.FC = () => {
                   }}
                   className={`flex items-center gap-2 px-5 py-3 rounded-full border transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border-emerald-500/50 text-white'
+                      ? 'bg-gradient-to-r from-primary-500/20 to-primary-500/20 border-primary-500/50 text-white'
                       : 'bg-gray-900/50 border-gray-800 text-gray-400 hover:bg-gray-800/50 hover:border-gray-700'
                   }`}
                 >
@@ -252,7 +252,7 @@ const FAQSection: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-gray-900/50 backdrop-blur-xl rounded-2xl border border-gray-800 overflow-hidden hover:border-emerald-500/30 transition-all duration-300"
+                  className="bg-gray-900/50 backdrop-blur-xl rounded-2xl border border-gray-800 overflow-hidden hover:border-primary-500/30 transition-all duration-300"
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
@@ -264,7 +264,7 @@ const FAQSection: React.FC = () => {
                       transition={{ duration: 0.3 }}
                       className="flex-shrink-0"
                     >
-                      <ChevronDown className="w-6 h-6 text-emerald-400" />
+                      <ChevronDown className="w-6 h-6 text-primary-400" />
                     </motion.div>
                   </button>
 
@@ -295,11 +295,11 @@ const FAQSection: React.FC = () => {
             viewport={{ once: true }}
             className="mt-12 text-center"
           >
-            <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-primary-500/10 to-primary-500/10 border border-primary-500/20">
               <span className="text-white">{t('landing.faq.stillHaveQuestions')}</span>
               <a
                 href="https://github.com/wants-chat/wants-chat/issues" target="_blank" rel="noopener noreferrer"
-                className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors underline"
+                className="text-primary-400 hover:text-primary-300 font-semibold transition-colors underline"
               >
                 {t('landing.faq.contactSupport')}
               </a>

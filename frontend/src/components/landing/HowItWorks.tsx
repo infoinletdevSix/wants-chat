@@ -9,14 +9,14 @@ const HowItWorks: React.FC = () => {
       title: 'Sign Up',
       description: 'Create your free account in seconds with email or social login',
       icon: UserPlus,
-      color: 'from-primary-500 to-cyan-500'
+      color: 'from-primary-500 to-primary-600'
     },
     {
       number: '2',
       title: 'Customize',
       description: 'Set up your dashboard and select the apps you need',
       icon: Settings,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-primary-500 to-blue-500'
     },
     {
       number: '3',
@@ -74,7 +74,7 @@ const HowItWorks: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, -60, 0],
           y: [0, 50, 0],
@@ -138,7 +138,7 @@ const HowItWorks: React.FC = () => {
 
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 h-full group-hover:shadow-xl group-hover:shadow-primary-500/20">
                   {/* Step Number */}
-                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {step.number}
                   </div>
 

@@ -42,10 +42,10 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
               <Icon
                 path={totalLost > 0 ? mdiTrendingDown : mdiTrendingUp}
                 size={0.8}
-                className={totalLost > 0 ? 'text-emerald-400' : 'text-red-400'}
+                className={totalLost > 0 ? 'text-primary-400' : 'text-red-400'}
               />
               <span className={`text-sm font-medium ${
-                totalLost > 0 ? 'text-emerald-400' : 'text-red-400'
+                totalLost > 0 ? 'text-primary-400' : 'text-red-400'
               }`}>
                 {totalLost > 0 ? '-' : '+'}{safeToFixed(Math.abs(totalLost || 0))}kg
               </span>
@@ -111,7 +111,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
                 {safeToFixed(progress || 0, 0)}%
               </span>
             </div>
-            <Progress value={progress || 0} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-cyan-500" />
+            <Progress value={progress || 0} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-primary-500" />
           </div>
         </div>
       </Card>
@@ -137,7 +137,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
                   {previousEntry && previousEntry.weight && (
                     <p className={`text-xs ${
                       entry.weight < previousEntry.weight
-                        ? 'text-emerald-400' : 'text-orange-400'
+                        ? 'text-primary-400' : 'text-orange-400'
                     }`}>
                       {entry.weight < previousEntry.weight ? '↓' : '↑'}
                       {safeToFixed(Math.abs(entry.weight - previousEntry.weight))}kg

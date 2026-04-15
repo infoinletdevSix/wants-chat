@@ -66,7 +66,7 @@ const VibrationDetector: React.FC = () => {
   }, [isDetecting]);
 
   const getVibrationColor = (level: number) => {
-    if (level < 20) return 'from-primary-500 to-cyan-500';
+    if (level < 20) return 'from-primary-500 to-primary-600';
     if (level < 40) return 'from-yellow-500 to-orange-500';
     if (level < 60) return 'from-orange-500 to-red-500';
     return 'from-red-500 to-pink-500';
@@ -101,7 +101,7 @@ const VibrationDetector: React.FC = () => {
           className="mb-8"
         >
           <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <Vibrate className="w-10 h-10 text-cyan-400" />
+            <Vibrate className="w-10 h-10 text-primary-400" />
             Vibration Detector
           </h1>
           <p className="text-primary-200">Detect and measure device motion and vibrations</p>
@@ -111,7 +111,7 @@ const VibrationDetector: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+          className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
         >
           {/* Visual Indicator */}
           <div className="flex flex-col items-center mb-8">
@@ -163,7 +163,7 @@ const VibrationDetector: React.FC = () => {
                 transition={{ duration: 0.5, repeat: isDetecting ? Infinity : 0 }}
                 className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm rounded-full p-3 border border-primary-400/30"
               >
-                <Vibrate className="w-6 h-6 text-cyan-400" />
+                <Vibrate className="w-6 h-6 text-primary-400" />
               </motion.div>
             </div>
 
@@ -177,7 +177,7 @@ const VibrationDetector: React.FC = () => {
                 className={`px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                   isDetecting
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
+                    : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700'
                 } shadow-lg hover:shadow-xl transform hover:scale-105`}
               >
                 {isDetecting ? 'Stop Detection' : 'Start Detection'}
@@ -238,10 +238,10 @@ const VibrationDetector: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+            className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Activity className="w-6 h-6 text-cyan-400" />
+              <Activity className="w-6 h-6 text-primary-400" />
               <h2 className="text-2xl font-bold text-white">Vibration History</h2>
             </div>
 

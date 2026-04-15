@@ -808,7 +808,7 @@ export const TimeEntryTool: React.FC<TimeEntryToolProps> = ({ uiConfig }) => {
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500'
   } focus:outline-none focus:ring-2 focus:ring-green-500/20`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-green-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-600 to-primary-600 hover:from-green-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-green-500/20`;
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     isDark ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
   }`;

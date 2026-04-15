@@ -49,7 +49,7 @@ const FitnessLanding: React.FC = () => {
             <span className="text-sm font-medium text-primary-400">Let's Get Started</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white">
-            Welcome to <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">Fitness Tracker</span>
+            Welcome to <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Fitness Tracker</span>
           </h1>
           <p className="text-xl text-white/60">
             Where do you prefer to workout?
@@ -59,7 +59,7 @@ const FitnessLanding: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Gym Option */}
           <div className="group relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative">
               <div className="inline-flex p-3 rounded-lg bg-blue-500/20 mb-6">
                 <Dumbbell className="h-8 w-8 text-blue-400" />
@@ -87,7 +87,7 @@ const FitnessLanding: React.FC = () => {
               </ul>
               <Button
                 onClick={() => handleLocationSelect('gym')}
-                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
                 size="lg"
               >
                 Select Gym Workouts
@@ -97,7 +97,7 @@ const FitnessLanding: React.FC = () => {
 
           {/* Home Option */}
           <div className="group relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative">
               <div className="inline-flex p-3 rounded-lg bg-green-500/20 mb-6">
                 <Home className="h-8 w-8 text-green-400" />
@@ -125,7 +125,7 @@ const FitnessLanding: React.FC = () => {
               </ul>
               <Button
                 onClick={() => handleLocationSelect('home')}
-                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
                 size="lg"
               >
                 Select Home Workouts

@@ -251,7 +251,7 @@ const RefillRequests: React.FC = () => {
             </div>
             <Button
               onClick={() => setShowRequestForm(true)}
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             >
               <Plus className="h-4 w-4 mr-2" />
               New Request
@@ -329,7 +329,7 @@ const RefillRequests: React.FC = () => {
               onClick={() => setActiveTab('active')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-colors ${
                 activeTab === 'active'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-sm'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-sm'
                   : 'text-white/60 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -339,7 +339,7 @@ const RefillRequests: React.FC = () => {
               onClick={() => setActiveTab('history')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-colors ${
                 activeTab === 'history'
-                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-sm'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-sm'
                   : 'text-white/60 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -502,7 +502,7 @@ const RefillRequests: React.FC = () => {
                 {activeTab === 'active' && (
                   <Button
                     onClick={() => setShowRequestForm(true)}
-                    className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                    className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                   >
                     <Plus className="h-4 w-4 mr-2" />
                     Create First Request
@@ -671,7 +671,7 @@ const RefillRequests: React.FC = () => {
                   </Button>
                   <Button
                     type="submit"
-                    className="flex-1 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                    className="flex-1 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                   >
                     <SendIcon className="h-4 w-4 mr-2" />
                     Submit Request

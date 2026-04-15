@@ -291,8 +291,8 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-100 rounded-lg">
-              <CalendarClock className="w-6 h-6 text-cyan-600" />
+            <div className="p-2 bg-primary-100 rounded-lg">
+              <CalendarClock className="w-6 h-6 text-primary-600" />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">{t('tools.paymentScheduler.paymentScheduler', 'Payment Scheduler')}</h1>
@@ -344,7 +344,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
               key={tab.id}
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`flex items-center gap-2 px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-                activeTab === tab.id ? 'border-cyan-500 text-cyan-600' : 'border-transparent text-gray-500 hover:text-gray-700'
+                activeTab === tab.id ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
               {tab.icon}
@@ -365,7 +365,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
                   placeholder={t('tools.paymentScheduler.searchPayments', 'Search payments...')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
             </div>
@@ -388,7 +388,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
               <div className="text-center py-12 bg-white rounded-lg shadow-sm">
                 <CalendarClock className="w-12 h-12 mx-auto text-gray-300 mb-4" />
                 <h3 className="text-lg font-medium text-gray-900 mb-2">{t('tools.paymentScheduler.noPaymentsScheduled', 'No payments scheduled')}</h3>
-                <button onClick={() => setActiveTab('new')} className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600">
+                <button onClick={() => setActiveTab('new')} className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
                   <Plus className="w-4 h-4" />
                   {t('tools.paymentScheduler.schedulePayment', 'Schedule Payment')}
                 </button>
@@ -403,8 +403,8 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
                     <div className="p-4 cursor-pointer hover:bg-gray-50" onClick={() => setExpandedId(expandedId === pmt.id ? null : pmt.id)}>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
-                          <div className={`p-2 rounded-lg ${overdue ? 'bg-red-50' : upcoming ? 'bg-blue-50' : 'bg-cyan-50'}`}>
-                            <DollarSign className={`w-5 h-5 ${overdue ? 'text-red-600' : upcoming ? 'text-blue-600' : 'text-cyan-600'}`} />
+                          <div className={`p-2 rounded-lg ${overdue ? 'bg-red-50' : upcoming ? 'bg-blue-50' : 'bg-primary-50'}`}>
+                            <DollarSign className={`w-5 h-5 ${overdue ? 'text-red-600' : upcoming ? 'text-blue-600' : 'text-primary-600'}`} />
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
@@ -506,7 +506,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
                             </select>
                           </div>
                           <div className="flex items-center gap-2">
-                            <button onClick={() => handleEdit(pmt)} className="p-2 text-cyan-600 hover:bg-cyan-50 rounded-lg">
+                            <button onClick={() => handleEdit(pmt)} className="p-2 text-primary-600 hover:bg-primary-50 rounded-lg">
                               <Edit2 className="w-4 h-4" />
                             </button>
                             <button onClick={() => handleDelete(pmt.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg">
@@ -532,18 +532,18 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.accountNumber', 'Account Number')}</label>
-                <input type="text" value={formData.accountNumber || ''} onChange={(e) => setFormData({ ...formData, accountNumber: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="text" value={formData.accountNumber || ''} onChange={(e) => setFormData({ ...formData, accountNumber: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.customerName', 'Customer Name')}</label>
-                <input type="text" value={formData.customerName || ''} onChange={(e) => setFormData({ ...formData, customerName: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="text" value={formData.customerName || ''} onChange={(e) => setFormData({ ...formData, customerName: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.paymentType', 'Payment Type')}</label>
-                <select value={formData.paymentType || ''} onChange={(e) => setFormData({ ...formData, paymentType: e.target.value as PaymentType })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500">
+                <select value={formData.paymentType || ''} onChange={(e) => setFormData({ ...formData, paymentType: e.target.value as PaymentType })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500">
                   {PAYMENT_TYPES.map(t => (
                     <option key={t.value} value={t.value}>{t.label}</option>
                   ))}
@@ -551,7 +551,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.frequency', 'Frequency')}</label>
-                <select value={formData.frequency || ''} onChange={(e) => setFormData({ ...formData, frequency: e.target.value as PaymentFrequency })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500">
+                <select value={formData.frequency || ''} onChange={(e) => setFormData({ ...formData, frequency: e.target.value as PaymentFrequency })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500">
                   {FREQUENCY_OPTIONS.map(f => (
                     <option key={f.value} value={f.value}>{f.label}</option>
                   ))}
@@ -559,37 +559,37 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.scheduledDate', 'Scheduled Date')}</label>
-                <input type="date" value={formData.scheduledDate || ''} onChange={(e) => setFormData({ ...formData, scheduledDate: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="date" value={formData.scheduledDate || ''} onChange={(e) => setFormData({ ...formData, scheduledDate: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.totalAmount', 'Total Amount')}</label>
-                <input type="number" step="0.01" value={formData.amount || ''} onChange={(e) => setFormData({ ...formData, amount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="number" step="0.01" value={formData.amount || ''} onChange={(e) => setFormData({ ...formData, amount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.principal2', 'Principal')}</label>
-                <input type="number" step="0.01" value={formData.principalAmount || ''} onChange={(e) => setFormData({ ...formData, principalAmount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="number" step="0.01" value={formData.principalAmount || ''} onChange={(e) => setFormData({ ...formData, principalAmount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.interest2', 'Interest')}</label>
-                <input type="number" step="0.01" value={formData.interestAmount || ''} onChange={(e) => setFormData({ ...formData, interestAmount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="number" step="0.01" value={formData.interestAmount || ''} onChange={(e) => setFormData({ ...formData, interestAmount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.fees2', 'Fees')}</label>
-                <input type="number" step="0.01" value={formData.feeAmount || ''} onChange={(e) => setFormData({ ...formData, feeAmount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="number" step="0.01" value={formData.feeAmount || ''} onChange={(e) => setFormData({ ...formData, feeAmount: Number(e.target.value) })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.fromAccount', 'From Account')}</label>
-                <input type="text" value={formData.fromAccount || ''} onChange={(e) => setFormData({ ...formData, fromAccount: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="text" value={formData.fromAccount || ''} onChange={(e) => setFormData({ ...formData, fromAccount: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.toAccount', 'To Account')}</label>
-                <input type="text" value={formData.toAccount || ''} onChange={(e) => setFormData({ ...formData, toAccount: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+                <input type="text" value={formData.toAccount || ''} onChange={(e) => setFormData({ ...formData, toAccount: e.target.value })} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
               </div>
             </div>
 
@@ -599,7 +599,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
                   type="checkbox"
                   checked={formData.isRecurring || false}
                   onChange={(e) => setFormData({ ...formData, isRecurring: e.target.checked })}
-                  className="w-4 h-4 text-cyan-600 border-gray-300 rounded focus:ring-cyan-500"
+                  className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
                 />
                 <span className="text-sm text-gray-700">{t('tools.paymentScheduler.recurringPayment', 'Recurring payment')}</span>
               </label>
@@ -607,12 +607,12 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">{t('tools.paymentScheduler.notes', 'Notes')}</label>
-              <textarea value={formData.notes || ''} onChange={(e) => setFormData({ ...formData, notes: e.target.value })} rows={3} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500" />
+              <textarea value={formData.notes || ''} onChange={(e) => setFormData({ ...formData, notes: e.target.value })} rows={3} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
             </div>
 
             <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
               <button onClick={() => { setFormData(getInitialFormState()); setEditingId(null); }} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.paymentScheduler.cancel', 'Cancel')}</button>
-              <button onClick={handleSubmit} className="flex items-center gap-2 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600">
+              <button onClick={handleSubmit} className="flex items-center gap-2 px-6 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
                 <Save className="w-4 h-4" />
                 {editingId ? t('tools.paymentScheduler.update', 'Update') : t('tools.paymentScheduler.schedule2', 'Schedule')}
               </button>
@@ -640,7 +640,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="text-sm text-gray-500">{t('tools.paymentScheduler.thisMonth', 'This Month')}</div>
-              <div className="text-2xl font-bold text-cyan-600">{formatCurrency(analytics.monthlyTotal)}</div>
+              <div className="text-2xl font-bold text-primary-600">{formatCurrency(analytics.monthlyTotal)}</div>
             </div>
           </div>
 
@@ -655,7 +655,7 @@ export const PaymentSchedulerTool: React.FC<PaymentSchedulerToolProps> = ({ uiCo
                     <div key={key} className="flex items-center gap-3">
                       <div className={`w-28 px-2 py-0.5 rounded-full text-xs font-medium ${config.color}`}>{config.label}</div>
                       <div className="flex-1 bg-gray-200 rounded-full h-3">
-                        <div className="bg-cyan-500 h-3 rounded-full" style={{ width: `${pct}%` }} />
+                        <div className="bg-primary-500 h-3 rounded-full" style={{ width: `${pct}%` }} />
                       </div>
                       <div className="w-10 text-right text-sm font-medium">{count}</div>
                     </div>

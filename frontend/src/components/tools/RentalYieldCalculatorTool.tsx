@@ -831,7 +831,7 @@ export const RentalYieldCalculatorTool: React.FC<RentalYieldCalculatorToolProps>
                       icon={PiggyBank}
                       color={
                         result.cashOnCashReturn >= 0
-                          ? 'text-emerald-500'
+                          ? 'text-primary-500'
                           : 'text-red-500'
                       }
                       positive={result.cashOnCashReturn >= 0}

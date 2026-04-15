@@ -357,7 +357,7 @@ const AlertsForm: React.FC<AlertsFormProps> = ({
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+            className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             disabled={(!formData.email_notification && !formData.push_notification) || isCreating || isUpdating}
           >
             {(isCreating || isUpdating) ? (

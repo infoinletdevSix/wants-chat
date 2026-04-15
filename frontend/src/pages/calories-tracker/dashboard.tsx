@@ -269,7 +269,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
 
   const getCalorieStatus = () => {
     const remaining = getRemainingCalories();
-    if (remaining > 500) return { text: 'Great job! Plenty of calories left', color: 'text-emerald-600' };
+    if (remaining > 500) return { text: 'Great job! Plenty of calories left', color: 'text-primary-600' };
     if (remaining > 200) return { text: 'On track! Watch your portions', color: 'text-primary' };
     if (remaining > 0) return { text: 'Almost there! Choose wisely', color: 'text-orange-600' };
     return { text: 'Goal reached! Consider stopping', color: 'text-red-600' };
@@ -307,7 +307,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
               <div className="text-xs text-white/60">Day Streak</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-cyan-400">{dailyStats.mealsLogged}</div>
+              <div className="text-2xl font-bold text-primary-400">{dailyStats.mealsLogged}</div>
               <div className="text-xs text-white/60">Meals Today</div>
             </div>
           </div>
@@ -376,7 +376,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-white/60">Burned</span>
-                  <span className="font-medium text-cyan-400">-{dailyStats.caloriesBurned}</span>
+                  <span className="font-medium text-primary-400">-{dailyStats.caloriesBurned}</span>
                 </div>
                 <div className="flex justify-between text-sm font-medium pt-2 border-t border-white/20">
                   <span className="text-white">Net</span>
@@ -388,7 +388,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
               <div className="mt-3">
                 <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 transition-all"
+                    className="h-full bg-gradient-to-r from-primary-500 to-primary-600 transition-all"
                     style={{
                       width: `${Math.min((dailyStats.caloriesConsumed / profile.targetCalories) * 100, 100)}%`
                     }}
@@ -422,7 +422,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-2 p-3 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-lg">
+            <div className="grid grid-cols-3 gap-2 p-3 bg-gradient-to-r from-primary-500/10 to-primary-500/10 rounded-lg">
               <div className="text-center">
                 <p className="text-lg font-bold text-white">{dailyStats.proteinConsumed}g</p>
                 <p className="text-xs text-white/60">Protein</p>
@@ -440,7 +440,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             {/* Action Buttons */}
             <div className="grid grid-cols-2 gap-2">
               <Button
-                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-10"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-10"
                 onClick={() => navigate('/calories-tracker/food-search')}
               >
                 <Plus className="h-4 w-4 mr-1" />
@@ -615,7 +615,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
         <GlassCard className="p-4 cursor-pointer" onClick={() => setShowMealPlanGenerator(!showMealPlanGenerator)}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg">
                 <ChefHat className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -664,7 +664,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
       <GlassCard className="p-4" gradient>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-lg">
+            <div className="p-2 bg-gradient-to-r from-primary-500/20 to-primary-500/20 rounded-lg">
               <Target className="h-5 w-5 text-primary-400" />
             </div>
             <div>
@@ -678,7 +678,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             <Button variant="outline" size="sm" className="h-8 text-xs bg-white/10 border-white/20 text-white hover:bg-white/20" onClick={() => navigate('/calories-tracker/profile')}>
               Update Goals
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 text-xs" onClick={() => navigate('/calories-tracker/progress')}>
+            <Button size="sm" className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-8 text-xs" onClick={() => navigate('/calories-tracker/progress')}>
               View Progress
             </Button>
           </div>

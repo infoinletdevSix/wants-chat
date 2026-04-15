@@ -861,8 +861,8 @@ export const ShootingRangeTool: React.FC<ShootingRangeToolProps> = ({
         <Card className={theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-emerald-100 dark:bg-emerald-900 rounded-lg">
-                <DollarSign className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+              <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                <DollarSign className="w-5 h-5 text-primary-600 dark:text-primary-400" />
               </div>
               <div>
                 <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>Today's Revenue</p>

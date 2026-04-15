@@ -140,7 +140,7 @@ const SleepGoals: React.FC = () => {
             </Button>
             <div>
               <h1 className="text-2xl font-bold flex items-center gap-2">
-                <Target className="w-6 h-6 text-emerald-400" />
+                <Target className="w-6 h-6 text-primary-400" />
                 Sleep Goals
               </h1>
               <p className="text-white/60">Set targets for better sleep</p>
@@ -159,7 +159,7 @@ const SleepGoals: React.FC = () => {
               </Button>
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-primary-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-primary-600"
                 onClick={handleSave}
                 disabled={updateGoalMutation.isPending}
               >

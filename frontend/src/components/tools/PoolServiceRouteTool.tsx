@@ -490,7 +490,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-cyan-500 rounded-lg">
+              <div className="p-3 bg-primary-500 rounded-lg">
                 <Route className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -546,7 +546,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-cyan-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -563,9 +563,9 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
           {[
             { label: "Today's Routes", value: stats.todaysRoutes, icon: <Calendar className="w-5 h-5" />, color: 'bg-blue-500' },
-            { label: 'Total Routes', value: stats.totalRoutes, icon: <Route className="w-5 h-5" />, color: 'bg-cyan-500' },
+            { label: 'Total Routes', value: stats.totalRoutes, icon: <Route className="w-5 h-5" />, color: 'bg-primary-500' },
             { label: 'Total Stops', value: stats.totalStops, icon: <MapPin className="w-5 h-5" />, color: 'bg-green-500' },
-            { label: 'Completed', value: stats.completedStops, icon: <CheckCircle className="w-5 h-5" />, color: 'bg-emerald-500' },
+            { label: 'Completed', value: stats.completedStops, icon: <CheckCircle className="w-5 h-5" />, color: 'bg-primary-500' },
             { label: 'Est. Hours', value: stats.totalEstimatedTime, icon: <Clock className="w-5 h-5" />, color: 'bg-purple-500' },
             { label: 'Available Techs', value: stats.availableTechs, icon: <User className="w-5 h-5" />, color: 'bg-orange-500' },
           ].map((stat, idx) => (
@@ -620,7 +620,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
               </select>
               <button
                 onClick={() => setShowRouteForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.poolServiceRoute.addRoute', 'Add Route')}
@@ -755,7 +755,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
                             </h4>
                             <button
                               onClick={() => setShowStopForm(true)}
-                              className="flex items-center gap-1 text-sm px-3 py-1 bg-cyan-500 text-white rounded hover:bg-cyan-600"
+                              className="flex items-center gap-1 text-sm px-3 py-1 bg-primary-500 text-white rounded hover:bg-primary-600"
                             >
                               <Plus className="w-4 h-4" />
                               {t('tools.poolServiceRoute.addStop', 'Add Stop')}
@@ -843,7 +843,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
               </h2>
               <button
                 onClick={() => setShowStopForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.poolServiceRoute.addStop2', 'Add Stop')}
@@ -1095,7 +1095,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handleAddRoute}
-                  className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                 >
                   {t('tools.poolServiceRoute.createRoute', 'Create Route')}
                 </button>
@@ -1263,7 +1263,7 @@ export const PoolServiceRouteTool: React.FC<PoolServiceRouteToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handleAddStop}
-                  className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                 >
                   {t('tools.poolServiceRoute.addStop3', 'Add Stop')}
                 </button>

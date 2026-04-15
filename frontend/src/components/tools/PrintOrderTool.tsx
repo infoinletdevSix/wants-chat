@@ -136,7 +136,7 @@ const STATUS_COLORS: Record<OrderStatus, { bg: string; text: string }> = {
   processing: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-700 dark:text-blue-300' },
   printing: { bg: 'bg-indigo-100 dark:bg-indigo-900/30', text: 'text-indigo-700 dark:text-indigo-300' },
   'quality-check': { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-700 dark:text-purple-300' },
-  shipped: { bg: 'bg-cyan-100 dark:bg-cyan-900/30', text: 'text-cyan-700 dark:text-cyan-300' },
+  shipped: { bg: 'bg-primary-100 dark:bg-primary-900/30', text: 'text-primary-700 dark:text-primary-300' },
   delivered: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-700 dark:text-green-300' },
   cancelled: { bg: 'bg-red-100 dark:bg-red-900/30', text: 'text-red-700 dark:text-red-300' },
 };
@@ -548,7 +548,7 @@ export const PrintOrderTool: React.FC<PrintOrderToolProps> = ({ uiConfig }) => {
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.printOrder.shipped', 'Shipped')}</p>
-              <p className={`text-2xl font-bold text-cyan-500`}>{stats.shipped}</p>
+              <p className={`text-2xl font-bold text-primary-500`}>{stats.shipped}</p>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.printOrder.monthRevenue', 'Month Revenue')}</p>

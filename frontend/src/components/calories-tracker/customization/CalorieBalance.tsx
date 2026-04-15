@@ -38,7 +38,7 @@ const CalorieBalance: React.FC<CalorieBalanceProps> = ({
   const getCalorieCategory = (calories: number) => {
     if (calories < 1200) return { text: 'Very Low', color: 'text-red-600', bg: 'bg-red-50 border-red-200' };
     if (calories < 1500) return { text: 'Low', color: 'text-orange-600', bg: 'bg-orange-50 border-orange-200' };
-    if (calories < 2500) return { text: 'Moderate', color: 'text-emerald-600', bg: 'bg-emerald-50 border-emerald-200' };
+    if (calories < 2500) return { text: 'Moderate', color: 'text-primary-600', bg: 'bg-primary-50 border-primary-200' };
     if (calories < 3500) return { text: 'High', color: 'text-blue-600', bg: 'bg-blue-50 border-blue-200' };
     return { text: 'Very High', color: 'text-purple-600', bg: 'bg-purple-50 border-purple-200' };
   };

@@ -67,7 +67,7 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
             <Button
               onClick={onAnalyzeWithAI}
               disabled={isAnalyzing}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
               size="lg"
             >
               {isAnalyzing ? (
@@ -117,7 +117,7 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
             <Button
               onClick={onAnalyzeWithAI}
               disabled={isAnalyzing}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
               size="lg"
             >
               {isAnalyzing ? (
@@ -153,7 +153,7 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
       <Button
         onClick={onAnalyzeWithAI}
         disabled={!videoUrl || isAnalyzing}
-        className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+        className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
         size="lg"
       >
         {isAnalyzing ? (

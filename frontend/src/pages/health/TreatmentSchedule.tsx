@@ -271,7 +271,7 @@ const TreatmentSchedule: React.FC = () => {
             Failed to load treatments
           </h3>
           <p className="text-white/60 mb-4">{error}</p>
-          <Button onClick={refetch} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Try Again</Button>
+          <Button onClick={refetch} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">Try Again</Button>
         </div>
       </div>
     );
@@ -391,7 +391,7 @@ const TreatmentSchedule: React.FC = () => {
           </Select>
 
           <Button
-            className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+            className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
             onClick={() => navigate('/health/add-treatment')}
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -402,11 +402,11 @@ const TreatmentSchedule: React.FC = () => {
         {/* Tabs for different views */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid grid-cols-2 gap-2 h-auto p-1 bg-white/10 border border-white/20 rounded-xl">
-            <TabsTrigger value="schedule" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="schedule" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">
               <Schedule className="h-5 w-5 mr-2" />
               Active
             </TabsTrigger>
-            <TabsTrigger value="completed" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="completed" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white text-white/60">
               <CheckCircle className="h-5 w-5 mr-2" />
               Completed
             </TabsTrigger>
@@ -559,7 +559,7 @@ const TreatmentSchedule: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/health/add-treatment')}
-                  className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                  className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Treatment

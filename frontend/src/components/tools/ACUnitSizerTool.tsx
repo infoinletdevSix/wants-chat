@@ -212,9 +212,9 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Snowflake className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Snowflake className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aCUnitSizer.acUnitSizeCalculator', 'AC Unit Size Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aCUnitSizer.calculateTheRightBtuAnd', 'Calculate the right BTU and tonnage for your space')}</p>
@@ -271,7 +271,7 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
               <button
                 key={zone}
                 onClick={() => setClimateZone(zone)}
-                className={`py-2 px-3 rounded-lg text-sm ${climateZone === zone ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${climateZone === zone ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {climateZones[zone].name}
               </button>
@@ -305,7 +305,7 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
                 <button
                   key={size}
                   onClick={() => setWindowSize(size)}
-                  className={`flex-1 py-2 px-2 rounded-lg text-sm capitalize ${windowSize === size ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`flex-1 py-2 px-2 rounded-lg text-sm capitalize ${windowSize === size ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {size}
                 </button>
@@ -325,7 +325,7 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
               <button
                 key={level}
                 onClick={() => setSunExposure(level)}
-                className={`py-2 px-3 rounded-lg text-sm ${sunExposure === level ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${sunExposure === level ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {sunExposureLevels[level].name}
               </button>
@@ -347,7 +347,7 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
               <button
                 key={level}
                 onClick={() => setInsulation(level)}
-                className={`py-2 px-3 rounded-lg text-sm ${insulation === level ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${insulation === level ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {insulationLevels[level].name}
               </button>
@@ -368,7 +368,7 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
               <button
                 key={n}
                 onClick={() => setOccupants(n.toString())}
-                className={`flex-1 py-2 rounded-lg ${parseInt(occupants) === n ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg ${parseInt(occupants) === n ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {n}
               </button>
@@ -377,15 +377,15 @@ export const ACUnitSizerTool: React.FC<ACUnitSizerToolProps> = ({ uiConfig }) =>
         </div>
 
         {/* Results */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aCUnitSizer.recommendedAcSize', 'Recommended AC Size')}</h4>
           <div className="grid grid-cols-2 gap-4">
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className="flex items-center gap-2 mb-2">
-                <Snowflake className="w-4 h-4 text-cyan-500" />
+                <Snowflake className="w-4 h-4 text-primary-500" />
                 <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aCUnitSizer.tonnage', 'Tonnage')}</span>
               </div>
-              <div className="text-3xl font-bold text-cyan-500">{calculations.recommendedTons} Ton</div>
+              <div className="text-3xl font-bold text-primary-500">{calculations.recommendedTons} Ton</div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                 Calculated: {calculations.exactTonnage} tons
               </div>

@@ -145,8 +145,8 @@ const VerifyEmail: React.FC = () => {
         };
       case 'success':
         return {
-          icon: <CheckCircle className="h-10 w-10 text-emerald-400" />,
-          bgColor: 'bg-emerald-500/20 border-emerald-500/30',
+          icon: <CheckCircle className="h-10 w-10 text-primary-400" />,
+          bgColor: 'bg-primary-500/20 border-primary-500/30',
           title: 'Email Verified!',
           description: 'Your email address has been successfully verified.'
         };
@@ -238,7 +238,7 @@ const VerifyEmail: React.FC = () => {
                 </p>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
-                    className="w-full h-12 bg-gradient-to-r from-emerald-600 to-primary-600 hover:from-emerald-500 hover:to-primary-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
+                    className="w-full h-12 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                     onClick={() => navigate('/login')}
                   >
                     Continue to Login
@@ -253,7 +253,7 @@ const VerifyEmail: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-emerald-500/20 border border-emerald-500/30 text-emerald-200 px-4 py-3 rounded-xl flex items-center gap-2"
+                    className="bg-primary-500/20 border border-primary-500/30 text-primary-200 px-4 py-3 rounded-xl flex items-center gap-2"
                   >
                     <CheckCircle className="h-4 w-4 flex-shrink-0" />
                     <span className="text-sm">Verification email sent! Please check your inbox.</span>
@@ -263,7 +263,7 @@ const VerifyEmail: React.FC = () => {
                     <Button
                       onClick={handleResendVerification}
                       disabled={isResending}
-                      className="w-full h-12 bg-gradient-to-r from-primary-600 to-cyan-600 hover:from-primary-500 hover:to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
+                      className="w-full h-12 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                     >
                       {isResending ? (
                         <>

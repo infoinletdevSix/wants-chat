@@ -96,7 +96,7 @@ export const DiscoverStoriesGrid: React.FC<DiscoverStoriesGridProps> = ({
             }}
             className={`text-sm ${
               activeCategory === category.id
-                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
                 : 'bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:text-white'
             }`}
           >

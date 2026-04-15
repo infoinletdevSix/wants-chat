@@ -699,8 +699,8 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <GraduationCap className="w-6 h-6 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <GraduationCap className="w-6 h-6 text-primary-500" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${textPrimary}`}>{t('tools.gradeBook.gradeBook', 'Grade Book')}</h2>
@@ -737,9 +737,9 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
-          <Sparkles className="w-4 h-4 text-emerald-500" />
-          <span className="text-sm text-emerald-500 font-medium">{t('tools.gradeBook.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-500 font-medium">{t('tools.gradeBook.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -751,7 +751,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
             onClick={() => setActiveTab(tab.id)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
               activeTab === tab.id
-                ? 'bg-emerald-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : `${textSecondary} ${hoverBg}`
             }`}
           >
@@ -772,7 +772,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                 placeholder={t('tools.gradeBook.searchClasses', 'Search classes...')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className={`flex-1 px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-emerald-500/20`}
+                className={`flex-1 px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
               />
             </div>
             <div className="flex gap-2">
@@ -785,7 +785,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
               </button>
               <button
                 onClick={() => setShowCourseForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.gradeBook.addClass', 'Add Class')}
@@ -865,7 +865,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={handleSaveStudent}
-                    className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                   >
                     <Save className="w-4 h-4" />
                     {t('tools.gradeBook.save', 'Save')}
@@ -985,7 +985,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={handleSaveCourse}
-                    className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                   >
                     <Save className="w-4 h-4" />
                     {t('tools.gradeBook.save2', 'Save')}
@@ -1074,7 +1074,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                           setSelectedCourse(course);
                           setActiveTab('grades');
                         }}
-                        className="flex-1 px-3 py-2 bg-emerald-500/10 text-emerald-500 rounded-lg hover:bg-emerald-500/20 text-sm"
+                        className="flex-1 px-3 py-2 bg-primary-500/10 text-primary-500 rounded-lg hover:bg-primary-500/20 text-sm"
                       >
                         {t('tools.gradeBook.viewGrades', 'View Grades')}
                       </button>
@@ -1146,7 +1146,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                 }
               }}
               disabled={!selectedAssignment}
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors disabled:opacity-50"
             >
               <Plus className="w-4 h-4" />
               {t('tools.gradeBook.enterGrade', 'Enter Grade')}
@@ -1209,7 +1209,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={handleSaveGrade}
-                    className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                   >
                     <Save className="w-4 h-4" />
                     {t('tools.gradeBook.saveGrade', 'Save Grade')}
@@ -1334,7 +1334,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                   placeholder={t('tools.gradeBook.searchAssignments', 'Search assignments...')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className={`flex-1 px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-emerald-500/20`}
+                  className={`flex-1 px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
                 />
               </div>
               <select
@@ -1360,7 +1360,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
             </div>
             <button
               onClick={() => setShowAssignmentForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.gradeBook.addAssignment', 'Add Assignment')}
@@ -1470,7 +1470,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={handleSaveAssignment}
-                    className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                   >
                     <Save className="w-4 h-4" />
                     {t('tools.gradeBook.save3', 'Save')}
@@ -1600,7 +1600,7 @@ export const GradeBookTool: React.FC<GradeBookToolProps> = ({ uiConfig }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Card className={`${cardBg} ${borderColor} border`}>
               <CardContent className="p-4 text-center">
-                <BookOpen className="w-6 h-6 mx-auto text-emerald-500 mb-2" />
+                <BookOpen className="w-6 h-6 mx-auto text-primary-500 mb-2" />
                 <p className={`text-2xl font-bold ${textPrimary}`}>{courses.length}</p>
                 <p className={`text-xs ${textSecondary}`}>{t('tools.gradeBook.totalClasses', 'Total Classes')}</p>
               </CardContent>

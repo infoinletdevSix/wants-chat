@@ -100,7 +100,7 @@ const NotificationDropdown: React.FC<NotificationDropdownProps> = ({
                           markNotificationAsRead(notification.id);
                           setShowNotifications(false);
                         }}
-                        className="h-5 px-2 text-xs bg-emerald-500 hover:bg-emerald-600 text-white"
+                        className="h-5 px-2 text-xs bg-primary-500 hover:bg-primary-600 text-white"
                       >
                         ✓ Read
                       </Button>

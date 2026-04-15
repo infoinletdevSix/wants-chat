@@ -31,19 +31,19 @@ const apps: AppCard[] = [
   { id: 'habit-tracker', name: 'Habit Tracker', description: 'Daily habits & streaks with cloud sync', icon: '📊', category: 'Life Management', color: 'from-pink-500 to-rose-500' },
   { id: 'meditation', name: 'Meditation', description: 'Mindfulness & stress relief', icon: '🧘', category: 'Life Management', color: 'from-purple-500 to-violet-500' },
   { id: 'fitness', name: 'Fitness', description: 'Workout plans & tracking', icon: '💪', category: 'Life Management', color: 'from-orange-500 to-red-500' },
-  { id: 'calories-tracker', name: 'Calories Tracker', description: 'Nutrition & meal tracking', icon: '🥗', category: 'Life Management', color: 'from-green-500 to-emerald-500' },
+  { id: 'calories-tracker', name: 'Calories Tracker', description: 'Nutrition & meal tracking', icon: '🥗', category: 'Life Management', color: 'from-green-500 to-primary-500' },
   { id: 'health-tracker', name: 'Health Tracker', description: 'Medical records & vitals', icon: '❤️', category: 'Life Management', color: 'from-red-500 to-pink-500' },
   { id: 'recipe-builder', name: 'Recipe Builder', description: 'Create & organize recipes', icon: '👨‍🍳', category: 'Life Management', color: 'from-amber-500 to-orange-500' },
-  { id: 'expense-tracker', name: 'Expense Tracker', description: 'Budget & financial management', icon: '💳', category: 'Life Management', color: 'from-emerald-500 to-primary-500' },
-  { id: 'currency-converter', name: 'Currency Converter', description: 'Real-time exchange rates', icon: '💱', category: 'Life Management', color: 'from-primary-500 to-cyan-500' },
+  { id: 'expense-tracker', name: 'Expense Tracker', description: 'Budget & financial management', icon: '💳', category: 'Life Management', color: 'from-primary-500 to-primary-600' },
+  { id: 'currency-converter', name: 'Currency Converter', description: 'Real-time exchange rates', icon: '💱', category: 'Life Management', color: 'from-primary-500 to-primary-600' },
   { id: 'travel-planner', name: 'Travel Planner', description: 'AI-powered trip planning', icon: '🗺️', category: 'Life Management', color: 'from-indigo-500 to-blue-500' },
   { id: 'language-learner', name: 'Language Learner', description: 'Interactive language learning', icon: '🌐', category: 'Life Management', color: 'from-yellow-500 to-orange-500' },
-  { id: 'blog', name: 'Blog', description: 'Content & community platform', icon: '📝', category: 'Life Management', color: 'from-cyan-500 to-blue-500' },
+  { id: 'blog', name: 'Blog', description: 'Content & community platform', icon: '📝', category: 'Life Management', color: 'from-primary-500 to-blue-500' },
   { id: 'todo', name: 'Todo & Tasks', description: 'Task & project management', icon: '✅', category: 'Life Management', color: 'from-blue-500 to-indigo-500' },
 
   // AI Tools (16 apps)
   { id: 'ai-image-generator', name: 'AI Image Generator', description: 'Generate images from text prompts', icon: '🎨', category: 'AI Tools', color: 'from-violet-500 to-purple-500' },
-  { id: 'ai-translator', name: 'AI Translator', description: 'Translate text between languages', icon: '🌍', category: 'AI Tools', color: 'from-cyan-500 to-blue-500' },
+  { id: 'ai-translator', name: 'AI Translator', description: 'Translate text between languages', icon: '🌍', category: 'AI Tools', color: 'from-primary-500 to-blue-500' },
   { id: 'ai-text-to-speech', name: 'AI Text to Speech', description: 'Convert text to audio with AI', icon: '🔊', category: 'AI Tools', color: 'from-purple-500 to-pink-500' },
   { id: 'ai-speech-to-text', name: 'AI Speech to Text', description: 'Transcribe audio to text with AI', icon: '🎤', category: 'AI Tools', color: 'from-fuchsia-500 to-purple-500' },
   { id: 'ai-resume-builder', name: 'AI Resume Builder', description: 'Create professional resumes', icon: '📄', category: 'AI Tools', color: 'from-indigo-500 to-violet-500' },
@@ -52,8 +52,8 @@ const apps: AppCard[] = [
   { id: 'ai-social-captions', name: 'AI Social Captions', description: 'Create engaging captions', icon: '💬', category: 'AI Tools', color: 'from-pink-500 to-rose-500' },
   { id: 'ai-hashtag-generator', name: 'AI Hashtag Generator', description: 'Generate trending hashtags', icon: '#️⃣', category: 'AI Tools', color: 'from-rose-500 to-pink-500' },
   { id: 'ai-video-script', name: 'AI Video Script', description: 'Write video scripts', icon: '🎬', category: 'AI Tools', color: 'from-orange-500 to-red-500' },
-  { id: 'ai-meeting-notes', name: 'AI Meeting Notes', description: 'Organize meeting notes', icon: '📋', category: 'AI Tools', color: 'from-cyan-500 to-primary-500' },
-  { id: 'ai-study-notes', name: 'AI Study Notes', description: 'Generate study materials', icon: '📚', category: 'AI Tools', color: 'from-green-500 to-emerald-500' },
+  { id: 'ai-meeting-notes', name: 'AI Meeting Notes', description: 'Organize meeting notes', icon: '📋', category: 'AI Tools', color: 'from-primary-500 to-primary-600' },
+  { id: 'ai-study-notes', name: 'AI Study Notes', description: 'Generate study materials', icon: '📚', category: 'AI Tools', color: 'from-green-500 to-primary-500' },
   { id: 'ai-contract-analyzer', name: 'AI Contract Analyzer', description: 'Analyze legal contracts', icon: '⚖️', category: 'AI Tools', color: 'from-amber-600 to-yellow-600' },
   { id: 'ai-legal-document', name: 'AI Legal Document', description: 'Draft legal documents', icon: '📜', category: 'AI Tools', color: 'from-slate-500 to-gray-500' },
   { id: 'ai-tax-calculator', name: 'AI Tax Calculator', description: 'Estimate your taxes', icon: '🧮', category: 'AI Tools', color: 'from-primary-500 to-green-500' },
@@ -67,23 +67,23 @@ const apps: AppCard[] = [
 
   // Developer Tools (7 apps) - Mobile Only
   { id: 'text-tools', name: 'Text Tools', description: 'JSON, CSV, Markdown tools', icon: '📝', category: 'Developer Tools', color: 'from-blue-500 to-indigo-500', mobileOnly: true },
-  { id: 'encoding-tools', name: 'Encoding Tools', description: 'Base64, URL, Hash tools', icon: '🔒', category: 'Developer Tools', color: 'from-green-500 to-emerald-500', mobileOnly: true },
+  { id: 'encoding-tools', name: 'Encoding Tools', description: 'Base64, URL, Hash tools', icon: '🔒', category: 'Developer Tools', color: 'from-green-500 to-primary-500', mobileOnly: true },
   { id: 'units-tools', name: 'Units Tools', description: 'Unit & color converters', icon: '📐', category: 'Developer Tools', color: 'from-orange-500 to-amber-500', mobileOnly: true },
   { id: 'images-tools', name: 'Images Tools', description: 'Compress, resize, convert', icon: '🖼️', category: 'Developer Tools', color: 'from-purple-500 to-violet-500', mobileOnly: true },
-  { id: 'qr-barcode', name: 'QR & Barcode', description: 'Generate & scan codes', icon: '📱', category: 'Developer Tools', color: 'from-cyan-500 to-blue-500', mobileOnly: true },
+  { id: 'qr-barcode', name: 'QR & Barcode', description: 'Generate & scan codes', icon: '📱', category: 'Developer Tools', color: 'from-primary-500 to-blue-500', mobileOnly: true },
   { id: 'docs-tools', name: 'Docs Tools', description: 'PDF merge, split, convert', icon: '📄', category: 'Developer Tools', color: 'from-red-500 to-rose-500', mobileOnly: true },
-  { id: 'media-tools', name: 'Media Tools', description: 'Video & audio conversion', icon: '🎞️', category: 'Developer Tools', color: 'from-primary-500 to-cyan-500', mobileOnly: true },
+  { id: 'media-tools', name: 'Media Tools', description: 'Video & audio conversion', icon: '🎞️', category: 'Developer Tools', color: 'from-primary-500 to-primary-600', mobileOnly: true },
 
   // Utilities (5 apps)
   { id: 'internet-speed', name: 'Internet Speed', description: 'Speed test & history', icon: '📶', category: 'Utilities', color: 'from-indigo-500 to-blue-500' },
-  { id: 'file-transfer', name: 'File Transfer', description: 'WiFi & Bluetooth transfer', icon: '📤', category: 'Utilities', color: 'from-blue-500 to-cyan-500', mobileOnly: true },
+  { id: 'file-transfer', name: 'File Transfer', description: 'WiFi & Bluetooth transfer', icon: '📤', category: 'Utilities', color: 'from-blue-500 to-primary-500', mobileOnly: true },
   { id: 'compass-qibla', name: 'Compass & Qibla', description: 'Navigation & Qibla finder', icon: '🧭', category: 'Utilities', color: 'from-red-500 to-rose-500', mobileOnly: true },
   { id: 'flashlight', name: 'Flashlight', description: 'SOS & strobe modes', icon: '🔦', category: 'Utilities', color: 'from-yellow-500 to-amber-500', mobileOnly: true },
-  { id: 'receipt-scanner', name: 'Receipt Scanner', description: 'Scan & extract receipts', icon: '🧾', category: 'Utilities', color: 'from-green-500 to-emerald-500', mobileOnly: true },
+  { id: 'receipt-scanner', name: 'Receipt Scanner', description: 'Scan & extract receipts', icon: '🧾', category: 'Utilities', color: 'from-green-500 to-primary-500', mobileOnly: true },
 
   // Media & Entertainment (5 apps) - Mobile Only
   { id: 'podcast-player', name: 'Podcast Player', description: 'Play podcasts from URLs', icon: '🎙️', category: 'Media & Entertainment', color: 'from-purple-500 to-violet-500', mobileOnly: true },
-  { id: 'photo-gallery', name: 'Photo Gallery', description: 'Browse device photos', icon: '🖼️', category: 'Media & Entertainment', color: 'from-primary-500 to-cyan-500', mobileOnly: true },
+  { id: 'photo-gallery', name: 'Photo Gallery', description: 'Browse device photos', icon: '🖼️', category: 'Media & Entertainment', color: 'from-primary-500 to-primary-600', mobileOnly: true },
   { id: 'music-player', name: 'Music Player', description: 'Play local music files', icon: '🎵', category: 'Media & Entertainment', color: 'from-pink-500 to-rose-500', mobileOnly: true },
   { id: 'video-player', name: 'Video Player', description: 'Play local video files', icon: '🎬', category: 'Media & Entertainment', color: 'from-orange-500 to-red-500', mobileOnly: true },
   { id: 'audio-recorder', name: 'Audio Recorder', description: 'Record voice memos', icon: '🎤', category: 'Media & Entertainment', color: 'from-red-500 to-orange-500', mobileOnly: true },
@@ -94,13 +94,13 @@ const apps: AppCard[] = [
   { id: 'ciphertext', name: 'Ciphertext', description: 'Encrypt & decrypt text', icon: '🔐', category: 'Security & Privacy', color: 'from-amber-600 to-yellow-600', mobileOnly: true },
 
   // Sensors & Detection (7 apps) - Mobile Only
-  { id: 'pedometer', name: 'Pedometer', description: 'Track your daily steps', icon: '🚶', category: 'Sensors & Detection', color: 'from-green-500 to-emerald-500', mobileOnly: true },
+  { id: 'pedometer', name: 'Pedometer', description: 'Track your daily steps', icon: '🚶', category: 'Sensors & Detection', color: 'from-green-500 to-primary-500', mobileOnly: true },
   { id: 'magnifier', name: 'Magnifier', description: 'Camera magnification tool', icon: '🔍', category: 'Sensors & Detection', color: 'from-slate-500 to-gray-500', mobileOnly: true },
   { id: 'vibration-detector', name: 'Vibration Detector', description: 'Detect device vibrations', icon: '📳', category: 'Sensors & Detection', color: 'from-orange-500 to-red-500', mobileOnly: true },
   { id: 'light-detector', name: 'Light Detector', description: 'Measure light intensity', icon: '💡', category: 'Sensors & Detection', color: 'from-yellow-500 to-amber-500', mobileOnly: true },
   { id: 'color-detector', name: 'Color Detector', description: 'Detect colors from camera', icon: '🎨', category: 'Sensors & Detection', color: 'from-purple-500 to-violet-500', mobileOnly: true },
   { id: 'nfc-scanner', name: 'NFC Scanner', description: 'Scan NFC tags', icon: '📡', category: 'Sensors & Detection', color: 'from-blue-500 to-indigo-500', mobileOnly: true },
-  { id: 'room-temperature', name: 'Room Temperature', description: 'Check ambient temperature', icon: '🌡️', category: 'Sensors & Detection', color: 'from-cyan-500 to-blue-500', mobileOnly: true },
+  { id: 'room-temperature', name: 'Room Temperature', description: 'Check ambient temperature', icon: '🌡️', category: 'Sensors & Detection', color: 'from-primary-500 to-blue-500', mobileOnly: true },
 
   // Calculators & Tools (4 apps) - Mobile Only
   { id: 'jewellery-calculator', name: 'Jewellery Calculator', description: 'Gold & silver value calculator', icon: '💎', category: 'Calculators & Tools', color: 'from-yellow-400 to-amber-400', mobileOnly: true },
@@ -109,13 +109,13 @@ const apps: AppCard[] = [
   { id: 'inductor-codes', name: 'Inductor Codes', description: 'Inductor color code calculator', icon: '🔌', category: 'Calculators & Tools', color: 'from-gray-500 to-slate-500', mobileOnly: true },
 
   // Camera Utilities (2 apps) - Mobile Only
-  { id: 'night-mode-cam', name: 'Night Mode Cam', description: 'Night vision camera modes', icon: '🌙', category: 'Camera Utilities', color: 'from-green-400 to-emerald-400', mobileOnly: true },
+  { id: 'night-mode-cam', name: 'Night Mode Cam', description: 'Night vision camera modes', icon: '🌙', category: 'Camera Utilities', color: 'from-green-400 to-primary-400', mobileOnly: true },
   { id: 'blank-cam', name: 'Blank Cam', description: 'Discreet camera capture', icon: '📷', category: 'Camera Utilities', color: 'from-gray-600 to-slate-600', mobileOnly: true },
 
   // Home & Life (5 apps)
   { id: 'home-repair', name: 'Home Repair', description: 'Track home repairs & maintenance', icon: '🏠', category: 'Home & Life', color: 'from-amber-600 to-yellow-600' },
   { id: 'pet-care', name: 'Pet Care', description: 'Manage pet health & records', icon: '🐾', category: 'Home & Life', color: 'from-orange-400 to-amber-400' },
-  { id: 'bill-reminder', name: 'Bill Reminder', description: 'Track bills & payments', icon: '📅', category: 'Home & Life', color: 'from-primary-500 to-cyan-500' },
+  { id: 'bill-reminder', name: 'Bill Reminder', description: 'Track bills & payments', icon: '📅', category: 'Home & Life', color: 'from-primary-500 to-primary-600' },
   { id: 'investment-tracker', name: 'Investment Tracker', description: 'Track investments & portfolio', icon: '📊', category: 'Home & Life', color: 'from-blue-500 to-indigo-500' },
   { id: 'event-reminder', name: 'Event Reminder', description: 'Never miss important events', icon: '🎉', category: 'Home & Life', color: 'from-purple-500 to-violet-500' },
 ];
@@ -268,7 +268,7 @@ const AppSettingsPage: React.FC = () => {
               <Button
                 onClick={handleSave}
                 disabled={!hasChanges || selectedApps.length === 0 || isSubmitting}
-                className="min-w-[100px] bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+                className="min-w-[100px] bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
               >
                 {isSubmitting ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
@@ -386,7 +386,7 @@ const AppSettingsPage: React.FC = () => {
                               >
                                 {/* Selection indicator */}
                                 {isSelected && (
-                                  <div className="absolute top-3 right-3 w-6 h-6 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full flex items-center justify-center">
+                                  <div className="absolute top-3 right-3 w-6 h-6 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
                                     <Check className="h-4 w-4 text-white" />
                                   </div>
                                 )}
@@ -446,7 +446,7 @@ const AppSettingsPage: React.FC = () => {
             <Button
               onClick={handleSave}
               disabled={!hasChanges || selectedApps.length === 0 || isSubmitting}
-              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+              className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
               size="lg"
             >
               {isSubmitting ? (

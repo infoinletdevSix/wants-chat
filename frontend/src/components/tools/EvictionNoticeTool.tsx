@@ -451,15 +451,15 @@ Date: ___________________
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -469,7 +469,7 @@ Date: ___________________
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+      ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
       : theme === 'dark'
         ? 'text-gray-400 hover:text-gray-200 hover:bg-gray-700'
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -533,12 +533,12 @@ Date: ___________________
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <FileText className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <FileText className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.evictionNotice.total', 'Total')}</p>
-              <p className="text-xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -633,7 +633,7 @@ Date: ___________________
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredNotices.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -650,7 +650,7 @@ Date: ___________________
                       onClick={() => setSelectedNotice(notice)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedNotice?.id === notice.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
@@ -727,7 +727,7 @@ Date: ___________________
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <Home className="w-4 h-4 text-cyan-500" />
+                      <Home className="w-4 h-4 text-primary-500" />
                       {t('tools.evictionNotice.propertyInformation', 'Property Information')}
                     </h3>
                     <div className="space-y-2 text-sm">
@@ -739,7 +739,7 @@ Date: ___________________
                   </div>
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <User className="w-4 h-4 text-cyan-500" />
+                      <User className="w-4 h-4 text-primary-500" />
                       {t('tools.evictionNotice.tenantInformation', 'Tenant Information')}
                     </h3>
                     <div className="space-y-2 text-sm">
@@ -793,7 +793,7 @@ Date: ___________________
                 {selectedNotice.deliveryDate && (
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <Send className="w-4 h-4 text-cyan-500" />
+                      <Send className="w-4 h-4 text-primary-500" />
                       {t('tools.evictionNotice.deliveryInformation', 'Delivery Information')}
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -909,7 +909,7 @@ Date: ___________________
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {formData.tenant.additionalOccupants.map((occupant, i) => (
-                        <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                        <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                           {occupant} <button onClick={() => removeOccupant(occupant)}><X className="w-3 h-3" /></button>
                         </span>
                       ))}
@@ -969,11 +969,11 @@ Date: ___________________
                             onClick={() => setFormData({ ...formData, noticeType: type.value as any })}
                             className={`p-4 rounded-lg border text-left transition-colors ${
                               formData.noticeType === type.value
-                                ? 'border-cyan-500 bg-cyan-500/10'
+                                ? 'border-primary-500 bg-primary-500/10'
                                 : theme === 'dark' ? 'border-gray-700 hover:border-gray-600' : 'border-gray-200 hover:border-gray-300'
                             }`}
                           >
-                            <TypeIcon className={`w-5 h-5 mb-2 ${formData.noticeType === type.value ? 'text-cyan-500' : 'text-gray-400'}`} />
+                            <TypeIcon className={`w-5 h-5 mb-2 ${formData.noticeType === type.value ? 'text-primary-500' : 'text-gray-400'}`} />
                             <p className="font-medium text-sm">{type.label}</p>
                             <p className="text-xs text-gray-400 mt-1">{type.description}</p>
                           </button>

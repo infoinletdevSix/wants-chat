@@ -21,7 +21,7 @@ const SimpleMoodTracker: React.FC<SimpleMoodTrackerProps> = ({ title, value, onC
     { value: 4, icon: mdiEmoticonSad, color: 'text-orange-500', label: 'Bad' },
     { value: 6, icon: mdiEmoticonNeutral, color: 'text-yellow-500', label: 'Neutral' },
     { value: 8, icon: mdiEmoticonHappy, color: 'text-green-500', label: 'Good' },
-    { value: 10, icon: mdiEmoticonExcited, color: 'text-emerald-500', label: 'Excellent' }
+    { value: 10, icon: mdiEmoticonExcited, color: 'text-primary-500', label: 'Excellent' }
   ];
 
   return (

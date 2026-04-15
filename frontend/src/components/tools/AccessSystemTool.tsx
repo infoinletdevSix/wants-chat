@@ -156,7 +156,7 @@ const STATUS_CONFIG: Record<InstallStatus, { label: string; color: string; bgCol
   scheduled: { label: 'Scheduled', color: 'text-purple-600', bgColor: 'bg-purple-100' },
   in_progress: { label: 'In Progress', color: 'text-orange-600', bgColor: 'bg-orange-100' },
   completed: { label: 'Completed', color: 'text-green-600', bgColor: 'bg-green-100' },
-  maintenance: { label: 'Maintenance', color: 'text-cyan-600', bgColor: 'bg-cyan-100' },
+  maintenance: { label: 'Maintenance', color: 'text-primary-600', bgColor: 'bg-primary-100' },
 };
 
 const ZONE_TYPES: { type: ZoneType; label: string }[] = [
@@ -641,7 +641,7 @@ export function AccessSystemTool({ uiConfig }: AccessSystemToolProps) {
                   <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.accessSystem.totalUsers', 'Total Users')}</p>
                   <p className="text-xl font-bold">{stats.totalUsers}</p>
                 </div>
-                <Users className="w-6 h-6 text-cyan-500 opacity-50" />
+                <Users className="w-6 h-6 text-primary-500 opacity-50" />
               </div>
             </CardContent>
           </Card>

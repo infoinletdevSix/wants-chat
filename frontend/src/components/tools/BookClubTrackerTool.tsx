@@ -434,11 +434,11 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-500/10 rounded-lg">
-              <BookOpen className="w-5 h-5 text-emerald-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <BookOpen className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bookClubTracker.bookClubTracker', 'Book Club Tracker')}</h3>
@@ -522,7 +522,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
 
       <div className="p-6 space-y-6">
         {/* Current Book Display */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-3">
             <div>
               <h4 className={`font-semibold text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -533,13 +533,13 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
               </p>
             </div>
             <div className="text-right">
-              <div className="text-2xl font-bold text-emerald-500">{groupProgress.percent}%</div>
+              <div className="text-2xl font-bold text-primary-500">{groupProgress.percent}%</div>
               <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.bookClubTracker.groupProgress', 'group progress')}</p>
             </div>
           </div>
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
             <div
-              className="bg-emerald-500 h-2 rounded-full transition-all duration-300"
+              className="bg-primary-500 h-2 rounded-full transition-all duration-300"
               style={{ width: `${groupProgress.percent}%` }}
             />
           </div>
@@ -557,7 +557,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-emerald-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'text-gray-400 hover:text-gray-200'
                   : 'text-gray-600 hover:text-gray-900'
@@ -585,7 +585,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                   <div key={member.id} className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500 font-medium text-sm">
+                        <div className="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 font-medium text-sm">
                           {member.name.charAt(0)}
                         </div>
                         <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -610,7 +610,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
                       <div
-                        className="bg-emerald-500 h-1.5 rounded-full transition-all duration-300"
+                        className="bg-primary-500 h-1.5 rounded-full transition-all duration-300"
                         style={{ width: `${progress}%` }}
                       />
                     </div>
@@ -635,8 +635,8 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                   className={`p-4 rounded-lg border ${
                     milestone.completed
                       ? isDark
-                        ? 'bg-emerald-900/20 border-emerald-800'
-                        : 'bg-emerald-50 border-emerald-200'
+                        ? 'bg-primary-900/20 border-primary-800'
+                        : 'bg-primary-50 border-primary-200'
                       : isDark
                       ? 'bg-gray-800 border-gray-700'
                       : 'bg-gray-50 border-gray-200'
@@ -648,10 +648,10 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                         onClick={() => toggleMilestone(milestone.id)}
                         className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
                           milestone.completed
-                            ? 'bg-emerald-500 border-emerald-500 text-white'
+                            ? 'bg-primary-500 border-primary-500 text-white'
                             : isDark
-                            ? 'border-gray-600 hover:border-emerald-500'
-                            : 'border-gray-300 hover:border-emerald-500'
+                            ? 'border-gray-600 hover:border-primary-500'
+                            : 'border-gray-300 hover:border-primary-500'
                         }`}
                       >
                         {milestone.completed && <Check className="w-4 h-4" />}
@@ -666,7 +666,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className={`font-medium ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                      <p className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                         Page {milestone.targetPage}
                       </p>
                       <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -706,7 +706,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
               <button
                 onClick={handleAddQuestion}
                 disabled={!newQuestionText.trim()}
-                className="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Plus className="w-5 h-5" />
               </button>
@@ -732,10 +732,10 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                       onClick={() => toggleQuestionAnswered(question.id)}
                       className={`mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
                         question.answered
-                          ? 'bg-emerald-500 border-emerald-500 text-white'
+                          ? 'bg-primary-500 border-primary-500 text-white'
                           : isDark
-                          ? 'border-gray-600 hover:border-emerald-500'
-                          : 'border-gray-300 hover:border-emerald-500'
+                          ? 'border-gray-600 hover:border-primary-500'
+                          : 'border-gray-300 hover:border-primary-500'
                       }`}
                     >
                       {question.answered && <Check className="w-3 h-3" />}
@@ -824,7 +824,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                 <button
                   onClick={handleAddBookCandidate}
                   disabled={!newBookTitle.trim() || !newBookAuthor.trim()}
-                  className="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Plus className="w-5 h-5" />
                 </button>
@@ -843,8 +843,8 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                       className={`p-4 rounded-lg border ${
                         index === 0 && book.votes > 0
                           ? isDark
-                            ? 'bg-emerald-900/20 border-emerald-800'
-                            : 'bg-emerald-50 border-emerald-200'
+                            ? 'bg-primary-900/20 border-primary-800'
+                            : 'bg-primary-50 border-primary-200'
                           : isDark
                           ? 'bg-gray-800 border-gray-700'
                           : 'bg-white border-gray-200'
@@ -866,7 +866,7 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                         </div>
                         <div className="flex items-center gap-3">
                           <div className="text-center">
-                            <p className={`font-bold text-lg ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                            <p className={`font-bold text-lg ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                               {book.votes}
                             </p>
                             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -877,10 +877,10 @@ export const BookClubTrackerTool: React.FC<BookClubTrackerToolProps> = ({ uiConf
                             onClick={() => voteForBook(book.id)}
                             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                               hasVoted
-                                ? 'bg-emerald-500 text-white'
+                                ? 'bg-primary-500 text-white'
                                 : isDark
-                                ? 'bg-gray-700 text-gray-300 hover:bg-emerald-500/20 hover:text-emerald-400'
-                                : 'bg-gray-100 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600'
+                                ? 'bg-gray-700 text-gray-300 hover:bg-primary-500/20 hover:text-primary-400'
+                                : 'bg-gray-100 text-gray-700 hover:bg-primary-50 hover:text-primary-600'
                             }`}
                           >
                             {hasVoted ? t('tools.bookClubTracker.voted', 'Voted') : t('tools.bookClubTracker.vote', 'Vote')}

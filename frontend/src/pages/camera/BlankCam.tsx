@@ -262,7 +262,7 @@ const BlankCam: React.FC = () => {
                       className={`px-6 py-3 rounded-xl font-medium transition-all ${
                         isRecording
                           ? 'bg-red-500 hover:bg-red-600 text-white'
-                          : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white'
+                          : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white'
                       }`}
                     >
                       {isRecording ? 'Stop Recording' : 'Record'}

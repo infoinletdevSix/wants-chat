@@ -121,7 +121,7 @@ const DIETARY_TAGS: { tag: DietaryTag; label: string; color: string }[] = [
   { tag: 'nut-free', label: 'Nut-Free', color: 'bg-orange-100 text-orange-700' },
   { tag: 'halal', label: 'Halal', color: 'bg-purple-100 text-purple-700' },
   { tag: 'kosher', label: 'Kosher', color: 'bg-purple-100 text-purple-700' },
-  { tag: 'pescatarian', label: 'Pescatarian', color: 'bg-cyan-100 text-cyan-700' },
+  { tag: 'pescatarian', label: 'Pescatarian', color: 'bg-primary-100 text-primary-700' },
 ];
 
 // Sample menu items

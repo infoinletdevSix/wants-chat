@@ -103,7 +103,7 @@ const FileTransfer: React.FC = () => {
         >
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-2">
                 File Transfer
               </h1>
               <p className="text-gray-400">
@@ -124,7 +124,7 @@ const FileTransfer: React.FC = () => {
                       ${
                         isDragging
                           ? 'border-primary-400 bg-primary-900/30'
-                          : 'border-primary-500/30 bg-gradient-to-br from-primary-900/10 to-cyan-900/10'
+                          : 'border-primary-500/30 bg-gradient-to-br from-primary-900/10 to-primary-900/10'
                       }
                     `}
                   >
@@ -140,7 +140,7 @@ const FileTransfer: React.FC = () => {
                       <label htmlFor="file-upload">
                         <Button
                           asChild
-                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                         >
                           <span className="cursor-pointer">
                             <Upload className="w-4 h-4 mr-2" />
@@ -232,7 +232,7 @@ const FileTransfer: React.FC = () => {
                                 </div>
                                 <div className="w-full bg-slate-600 rounded-full h-2 overflow-hidden">
                                   <motion.div
-                                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500"
+                                    className="h-full bg-gradient-to-r from-primary-500 to-primary-600"
                                     style={{ width: `${file.progress}%` }}
                                     transition={{ duration: 0.3 }}
                                   />

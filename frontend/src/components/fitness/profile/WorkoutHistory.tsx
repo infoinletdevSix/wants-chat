@@ -140,7 +140,7 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
   // Get intensity color
   const getIntensityColor = (intensity: string) => {
     switch (intensity) {
-      case 'low': return 'bg-emerald-500';
+      case 'low': return 'bg-primary-500';
       case 'medium': return 'bg-primary-500';
       case 'high': return 'bg-red-500';
       default: return 'bg-white/20';
@@ -210,14 +210,14 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
           <Button
             size="sm"
             onClick={() => setViewMode('calendar')}
-            className={`h-7 px-2 text-xs ${viewMode === 'calendar' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'}`}
+            className={`h-7 px-2 text-xs ${viewMode === 'calendar' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'}`}
           >
             Calendar
           </Button>
           <Button
             size="sm"
             onClick={() => setViewMode('list')}
-            className={`h-7 px-2 text-xs ${viewMode === 'list' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'}`}
+            className={`h-7 px-2 text-xs ${viewMode === 'list' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'}`}
           >
             Recent
           </Button>
@@ -239,7 +239,7 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
         </div>
         
         <div className="text-center p-2 bg-white/5 border border-white/10 rounded-lg">
-          <Icon path={mdiDumbbell} size={0.7} className="text-emerald-500 mx-auto mb-1" />
+          <Icon path={mdiDumbbell} size={0.7} className="text-primary-500 mx-auto mb-1" />
           <div className="text-lg font-bold text-white">{totalWorkouts}</div>
           <div className="text-xs text-white/60">Total</div>
         </div>
@@ -258,8 +258,8 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
         <div className="flex items-center justify-between mb-2">
           <h4 className="text-sm font-medium text-white">This Week</h4>
           <div className="flex items-center gap-1">
-            <Icon path={mdiTrendingUp} size={0.5} className="text-emerald-500" />
-            <span className="text-xs text-emerald-400 dark:text-emerald-400 font-medium">
+            <Icon path={mdiTrendingUp} size={0.5} className="text-primary-500" />
+            <span className="text-xs text-primary-400 dark:text-primary-400 font-medium">
               {(() => {
                 const thisWeekWorkouts = workouts.filter(w => {
                   const weekAgo = new Date();
@@ -414,7 +414,7 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
           {/* Legend */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+              <div className="w-3 h-3 rounded-full bg-primary-500"></div>
               <span>Low Intensity</span>
             </div>
             <div className="flex items-center gap-2">
@@ -504,12 +504,12 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
                         </div>
                         <div className="text-2xl font-bold text-red-400">{dateData.totalCalories}</div>
                       </div>
-                      <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-500/20 p-4 rounded-xl border border-emerald-500/20">
+                      <div className="bg-gradient-to-br from-primary-500/10 to-primary-500/20 p-4 rounded-xl border border-primary-500/20">
                         <div className="flex items-center gap-2 mb-2">
-                          <Icon path={mdiClockOutline} size={0.7} className="text-emerald-400" />
+                          <Icon path={mdiClockOutline} size={0.7} className="text-primary-400" />
                           <span className="text-xs font-medium text-white/60 uppercase tracking-wide">Duration</span>
                         </div>
-                        <div className="text-2xl font-bold text-emerald-400">{(dateData.totalDuration / 60).toFixed(2)}h</div>
+                        <div className="text-2xl font-bold text-primary-400">{(dateData.totalDuration / 60).toFixed(2)}h</div>
                       </div>
                       {dateData.weight && (
                         <div className="bg-gradient-to-br from-primary-500/10 to-primary-500/20 p-4 rounded-xl border border-primary-500/20">
@@ -564,8 +564,8 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
                     {/* Workout Details */}
                     <div className="space-y-4">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 bg-emerald-500/10 rounded-lg">
-                          <Icon path={mdiDumbbell} size={0.8} className="text-emerald-400" />
+                        <div className="p-2 bg-primary-500/10 rounded-lg">
+                          <Icon path={mdiDumbbell} size={0.8} className="text-primary-400" />
                         </div>
                         <h5 className="font-bold text-lg text-white">Workout Sessions ({dateData.workouts.length})</h5>
                       </div>
@@ -591,7 +591,7 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
                               <Badge variant="outline" className={`text-xs font-medium ${
                                 workout.intensity === 'high' ? 'bg-red-500/10 text-red-400 border-destructive/20' :
                                 workout.intensity === 'medium' ? 'bg-primary-500/20 text-primary-400 border-primary-500/20' :
-                                'bg-emerald-500/10 text-emerald-400 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800'
+                                'bg-primary-500/10 text-primary-400 dark:text-primary-400 border-primary-200 dark:border-primary-800'
                               }`}>
                                 {workout.intensity.toUpperCase()}
                               </Badge>
@@ -613,7 +613,7 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
                               </div>
                             </div>
                             <div className="bg-white/5 border border-white/10 p-3 rounded-lg flex items-center gap-2">
-                              <Icon path={mdiDumbbell} size={0.6} className="text-emerald-400" />
+                              <Icon path={mdiDumbbell} size={0.6} className="text-primary-400" />
                               <div>
                                 <div className="font-bold text-sm">{workout.exercises?.length || 8} exercises</div>
                                 <div className="text-xs text-white/60">Exercises</div>
@@ -676,7 +676,7 @@ const WorkoutHistory: React.FC<WorkoutHistoryProps> = ({
                     <Badge variant="outline" className={`text-xs ${
                       workout.intensity === 'high' ? 'bg-red-500/10 text-red-400 border-destructive/20' :
                       workout.intensity === 'medium' ? 'bg-primary-500/20 text-primary-400 border-primary-500/20' :
-                      'bg-emerald-500/10 text-emerald-400 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800'
+                      'bg-primary-500/10 text-primary-400 dark:text-primary-400 border-primary-200 dark:border-primary-800'
                     }`}>
                       {workout.intensity} intensity
                     </Badge>

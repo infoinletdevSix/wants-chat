@@ -44,13 +44,13 @@ const FeaturesPage: React.FC = () => {
       icon: DashboardCustomizeIcon,
       titleKey: 'features.page.coreFeatures.instantToolRendering.title',
       descriptionKey: 'features.page.coreFeatures.instantToolRendering.description',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-primary-500',
     },
     {
       icon: SmartToyIcon,
       titleKey: 'features.page.coreFeatures.contextualTools.title',
       descriptionKey: 'features.page.coreFeatures.contextualTools.description',
-      color: 'from-emerald-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
     },
     {
       icon: BoltIcon,
@@ -95,7 +95,7 @@ const FeaturesPage: React.FC = () => {
         'features.page.toolCategories.examples.medicationTracker',
         'features.page.toolCategories.examples.symptomChecker',
       ],
-      color: 'from-emerald-500 to-primary-600',
+      color: 'from-primary-500 to-primary-600',
     },
     {
       icon: GavelIcon,
@@ -131,7 +131,7 @@ const FeaturesPage: React.FC = () => {
         'features.page.toolCategories.examples.taxCalculator',
         'features.page.toolCategories.examples.mortgageTools',
       ],
-      color: 'from-green-500 to-emerald-600',
+      color: 'from-green-500 to-primary-600',
     },
     {
       icon: BrushIcon,
@@ -155,7 +155,7 @@ const FeaturesPage: React.FC = () => {
         'features.page.toolCategories.examples.rentVsBuy',
         'features.page.toolCategories.examples.squareFootage',
       ],
-      color: 'from-cyan-500 to-blue-600',
+      color: 'from-primary-500 to-blue-600',
     },
     {
       icon: DirectionsCarIcon,
@@ -240,9 +240,9 @@ const FeaturesPage: React.FC = () => {
       {/* Hero Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
         {/* Background effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-primary-500/10" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-[120px]" />
 
         <motion.div
           className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
@@ -257,7 +257,7 @@ const FeaturesPage: React.FC = () => {
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
             >
-              <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30 px-4 py-2">
+              <Badge className="bg-primary-500/20 text-primary-400 border-primary-500/30 px-4 py-2">
                 <AutoAwesomeIcon className="h-4 w-4 mr-2" />
                 {t('features.page.heroBadge')}
               </Badge>
@@ -271,7 +271,7 @@ const FeaturesPage: React.FC = () => {
             >
               <span className="text-white">{t('features.page.heroTitleLine1')}</span>
               <br />
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-primary-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">
                 {t('features.page.heroTitleLine2')}
               </span>
             </motion.h1>
@@ -294,11 +294,11 @@ const FeaturesPage: React.FC = () => {
               transition={{ delay: 0.5 }}
             >
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400">1,100+</div>
+                <div className="text-4xl font-bold text-primary-400">1,100+</div>
                 <div className="text-gray-500 text-sm">{t('features.page.stats.smartTools')}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400">30+</div>
+                <div className="text-4xl font-bold text-primary-400">30+</div>
                 <div className="text-gray-500 text-sm">{t('features.page.stats.aiModels')}</div>
               </div>
               <div className="text-center">
@@ -306,7 +306,7 @@ const FeaturesPage: React.FC = () => {
                 <div className="text-gray-500 text-sm">{t('features.page.stats.integrations')}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400">50+</div>
+                <div className="text-4xl font-bold text-primary-400">50+</div>
                 <div className="text-gray-500 text-sm">{t('features.page.stats.industries')}</div>
               </div>
             </motion.div>
@@ -319,7 +319,7 @@ const FeaturesPage: React.FC = () => {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8"
                 onClick={() => navigate('/signup')}
               >
                 {t('common.tryFree')}
@@ -342,7 +342,7 @@ const FeaturesPage: React.FC = () => {
       <section className="py-20 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30 mb-4">
+            <Badge className="bg-primary-500/20 text-primary-400 border-primary-500/30 mb-4">
               {t('features.title')}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -379,7 +379,7 @@ const FeaturesPage: React.FC = () => {
       <section className="py-20 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/30 mb-4">
+            <Badge className="bg-primary-500/20 text-primary-400 border-primary-500/30 mb-4">
               {t('howItWorks.title')}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -401,9 +401,9 @@ const FeaturesPage: React.FC = () => {
                 transition={{ delay: index * 0.15 }}
               >
                 {index < howItWorks.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-emerald-500/50 to-transparent" />
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-primary-500/50 to-transparent" />
                 )}
-                <div className="text-6xl font-bold text-emerald-500/20 mb-4">{step.step}</div>
+                <div className="text-6xl font-bold text-primary-500/20 mb-4">{step.step}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{t(step.titleKey)}</h3>
                 <p className="text-gray-400 text-sm">{t(step.descriptionKey)}</p>
               </motion.div>
@@ -442,7 +442,7 @@ const FeaturesPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-sm font-bold text-white">{t(category.nameKey)}</h3>
-                    <span className="text-xs text-emerald-400 font-medium">{category.count}</span>
+                    <span className="text-xs text-primary-400 font-medium">{category.count}</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
                     {category.exampleKeys.slice(0, 2).map((exampleKey) => (
@@ -497,12 +497,12 @@ const FeaturesPage: React.FC = () => {
             </Card>
 
             {/* Wants */}
-            <Card className="p-8 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 border-emerald-500/30">
-              <h3 className="text-xl font-bold text-emerald-400 mb-6">{t('features.page.comparison.wants.title')}</h3>
+            <Card className="p-8 bg-gradient-to-br from-primary-500/10 to-primary-500/10 border-primary-500/30">
+              <h3 className="text-xl font-bold text-primary-400 mb-6">{t('features.page.comparison.wants.title')}</h3>
               <ul className="space-y-4">
                 {wantsItems.map((itemKey, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-300">
-                    <CheckCircleIcon className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <CheckCircleIcon className="h-5 w-5 text-primary-400 mt-0.5 flex-shrink-0" />
                     {t(itemKey)}
                   </li>
                 ))}
@@ -531,7 +531,7 @@ const FeaturesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8"
                 onClick={() => navigate('/signup')}
               >
                 {t('common.startFreeTrial')}
@@ -541,15 +541,15 @@ const FeaturesPage: React.FC = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
-                <CheckCircleIcon className="h-5 w-5 text-emerald-500" />
+                <CheckCircleIcon className="h-5 w-5 text-primary-500" />
                 <span>{t('features.page.cta.freeTierAvailable')}</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircleIcon className="h-5 w-5 text-emerald-500" />
+                <CheckCircleIcon className="h-5 w-5 text-primary-500" />
                 <span>{t('features.page.cta.noCreditCard')}</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircleIcon className="h-5 w-5 text-emerald-500" />
+                <CheckCircleIcon className="h-5 w-5 text-primary-500" />
                 <span>{t('features.page.cta.cancelAnytime')}</span>
               </div>
             </div>

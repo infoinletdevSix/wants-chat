@@ -507,15 +507,15 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -527,7 +527,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500 text-white'
+      ? 'bg-primary-500 text-white'
       : theme === 'dark'
       ? 'text-gray-400 hover:text-white hover:bg-gray-700'
       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -538,8 +538,8 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <Stethoscope className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <Stethoscope className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -589,9 +589,9 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-          <Sparkles className="w-4 h-4 text-cyan-500" />
-          <span className="text-sm text-cyan-500 font-medium">{t('tools.patientRecords.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-500 font-medium">{t('tools.patientRecords.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -599,12 +599,12 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Users className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Users className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.patientRecords.totalPatients', 'Total Patients')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.totalPatients}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.totalPatients}</p>
             </div>
           </div>
         </div>
@@ -649,7 +649,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
         <div className={`${cardClass} lg:col-span-1`}>
           <div className="p-4 border-b border-gray-700">
             <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <User className="w-5 h-5 text-cyan-500" />
+              <User className="w-5 h-5 text-primary-500" />
               {t('tools.patientRecords.patients', 'Patients')}
             </h2>
 
@@ -694,7 +694,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto mb-2"></div>
                 <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}>{t('tools.patientRecords.loadingPatients', 'Loading patients...')}</p>
               </div>
             ) : filteredPatients.length === 0 ? (
@@ -714,7 +714,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                     }}
                     className={`p-4 cursor-pointer transition-colors ${
                       selectedPatient?.id === patient.id
-                        ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                        ? 'bg-primary-500/10 border-l-4 border-primary-500'
                         : theme === 'dark'
                         ? 'hover:bg-gray-700/50'
                         : 'hover:bg-gray-50'
@@ -863,7 +863,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
-                          <Phone className="w-4 h-4 text-cyan-500" />
+                          <Phone className="w-4 h-4 text-primary-500" />
                           {t('tools.patientRecords.emergencyContact', 'Emergency Contact')}
                         </h3>
                         <div className="space-y-2 text-sm">
@@ -874,7 +874,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                       </div>
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
-                          <Shield className="w-4 h-4 text-cyan-500" />
+                          <Shield className="w-4 h-4 text-primary-500" />
                           {t('tools.patientRecords.insuranceInformation', 'Insurance Information')}
                         </h3>
                         <div className="space-y-2 text-sm">
@@ -889,7 +889,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                     {selectedPatient.vitals.length > 0 && (
                       <div>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
-                          <Activity className="w-4 h-4 text-cyan-500" />
+                          <Activity className="w-4 h-4 text-primary-500" />
                           {t('tools.patientRecords.latestVitals', 'Latest Vitals')}
                         </h3>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -903,7 +903,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                                   <p className="text-xs text-gray-400">{t('tools.patientRecords.bloodPressure', 'Blood Pressure')}</p>
                                 </div>
                                 <div className={`p-3 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
-                                  <Activity className="w-5 h-5 text-cyan-500 mx-auto mb-1" />
+                                  <Activity className="w-5 h-5 text-primary-500 mx-auto mb-1" />
                                   <p className="text-lg font-bold">{latestVital.heartRate}</p>
                                   <p className="text-xs text-gray-400">{t('tools.patientRecords.heartRate', 'Heart Rate')}</p>
                                 </div>
@@ -978,7 +978,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                         onClick={() => toggleSection('surgeries')}
                       >
                         <h3 className="font-semibold flex items-center gap-2">
-                          <Stethoscope className="w-4 h-4 text-cyan-500" />
+                          <Stethoscope className="w-4 h-4 text-primary-500" />
                           Surgeries ({selectedPatient.surgeries.length})
                         </h3>
                         {expandedSections.surgeries ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -1041,7 +1041,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-cyan-500" />
+                        <Calendar className="w-4 h-4 text-primary-500" />
                         {t('tools.patientRecords.appointmentHistory', 'Appointment History')}
                       </h3>
                       <button onClick={() => setShowAppointmentModal(true)} className={buttonPrimary}>
@@ -1086,7 +1086,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Activity className="w-4 h-4 text-cyan-500" />
+                        <Activity className="w-4 h-4 text-primary-500" />
                         {t('tools.patientRecords.vitalRecords', 'Vital Records')}
                       </h3>
                       <button onClick={() => setShowVitalModal(true)} className={buttonPrimary}>
@@ -1135,7 +1135,7 @@ export const PatientRecordsTool: React.FC<PatientRecordsToolProps> = ({ uiConfig
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <FileText className="w-4 h-4 text-cyan-500" />
+                        <FileText className="w-4 h-4 text-primary-500" />
                         {t('tools.patientRecords.patientNotes', 'Patient Notes')}
                       </h3>
                       <button onClick={() => setShowNoteModal(true)} className={buttonPrimary}>
@@ -1535,7 +1535,7 @@ const PatientForm: React.FC<PatientFormProps> = ({
       {/* Basic Information */}
       <div>
         <h3 className="font-semibold mb-4 flex items-center gap-2">
-          <User className="w-4 h-4 text-cyan-500" />
+          <User className="w-4 h-4 text-primary-500" />
           {t('tools.patientRecords.basicInformation', 'Basic Information')}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1661,7 +1661,7 @@ const PatientForm: React.FC<PatientFormProps> = ({
       {/* Emergency Contact */}
       <div>
         <h3 className="font-semibold mb-4 flex items-center gap-2">
-          <Phone className="w-4 h-4 text-cyan-500" />
+          <Phone className="w-4 h-4 text-primary-500" />
           {t('tools.patientRecords.emergencyContact2', 'Emergency Contact')}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1707,7 +1707,7 @@ const PatientForm: React.FC<PatientFormProps> = ({
       {/* Insurance */}
       <div>
         <h3 className="font-semibold mb-4 flex items-center gap-2">
-          <Shield className="w-4 h-4 text-cyan-500" />
+          <Shield className="w-4 h-4 text-primary-500" />
           {t('tools.patientRecords.insuranceInformation2', 'Insurance Information')}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

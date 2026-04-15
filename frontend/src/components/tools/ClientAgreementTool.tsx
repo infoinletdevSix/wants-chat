@@ -435,15 +435,15 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -453,7 +453,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
 
   const tabClass = (active: boolean) => `px-4 py-2 font-medium transition-colors rounded-lg ${
     active
-      ? 'bg-cyan-500/20 text-cyan-400'
+      ? 'bg-primary-500/20 text-primary-400'
       : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'
   }`;
 
@@ -462,8 +462,8 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <FileSignature className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <FileSignature className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -508,12 +508,12 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <FileText className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <FileText className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.clientAgreement.totalAgreements', 'Total Agreements')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -629,7 +629,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredAgreements.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -646,14 +646,14 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
                       onClick={() => { setSelectedAgreement(agreement); setActiveTab('details'); }}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedAgreement?.id === agreement.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <TypeIcon className="w-4 h-4 text-cyan-500" />
+                            <TypeIcon className="w-4 h-4 text-primary-500" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <p className="font-medium truncate">{agreement.clientName}</p>
@@ -812,7 +812,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
                       <div className="flex items-center justify-between">
                         <div>
                           <h3 className="font-semibold flex items-center gap-2">
-                            <Wallet className={`w-4 h-4 ${isRetainerLow(selectedAgreement) ? 'text-red-500' : 'text-cyan-500'}`} />
+                            <Wallet className={`w-4 h-4 ${isRetainerLow(selectedAgreement) ? 'text-red-500' : 'text-primary-500'}`} />
                             {t('tools.clientAgreement.retainerBalance', 'Retainer Balance')}
                           </h3>
                           {selectedAgreement.minimumRetainer && selectedAgreement.minimumRetainer > 0 && (
@@ -822,7 +822,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
                           )}
                         </div>
                         <div className="text-right">
-                          <p className={`text-2xl font-bold ${isRetainerLow(selectedAgreement) ? 'text-red-500' : 'text-cyan-500'}`}>
+                          <p className={`text-2xl font-bold ${isRetainerLow(selectedAgreement) ? 'text-red-500' : 'text-primary-500'}`}>
                             {formatCurrency(selectedAgreement.retainerBalance)}
                           </p>
                           {isRetainerLow(selectedAgreement) && (
@@ -837,7 +837,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
                     {/* Client Contact */}
                     <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                       <h3 className="font-semibold mb-3 flex items-center gap-2">
-                        <User className="w-4 h-4 text-cyan-500" />
+                        <User className="w-4 h-4 text-primary-500" />
                         {t('tools.clientAgreement.clientContact', 'Client Contact')}
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -920,7 +920,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <History className="w-4 h-4 text-cyan-500" />
+                        <History className="w-4 h-4 text-primary-500" />
                         {t('tools.clientAgreement.paymentHistory', 'Payment History')}
                       </h3>
                       <button onClick={() => setShowPaymentModal(true)} className={buttonPrimary}>
@@ -975,7 +975,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <FileEdit className="w-4 h-4 text-cyan-500" />
+                        <FileEdit className="w-4 h-4 text-primary-500" />
                         {t('tools.clientAgreement.amendmentHistory', 'Amendment History')}
                       </h3>
                       <button onClick={() => setShowAmendmentModal(true)} className={buttonPrimary}>
@@ -1042,7 +1042,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
               {/* Client Information */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <User className="w-4 h-4 text-cyan-500" />
+                  <User className="w-4 h-4 text-primary-500" />
                   {t('tools.clientAgreement.clientInformation', 'Client Information')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1068,7 +1068,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
               {/* Matter Information */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <Briefcase className="w-4 h-4 text-cyan-500" />
+                  <Briefcase className="w-4 h-4 text-primary-500" />
                   {t('tools.clientAgreement.matterInformation', 'Matter Information')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1090,7 +1090,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
               {/* Fee Arrangement */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <DollarSign className="w-4 h-4 text-cyan-500" />
+                  <DollarSign className="w-4 h-4 text-primary-500" />
                   {t('tools.clientAgreement.feeArrangement2', 'Fee Arrangement')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1142,7 +1142,7 @@ export const ClientAgreementTool: React.FC<ClientAgreementToolProps> = ({ uiConf
               {/* Dates & Status */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-cyan-500" />
+                  <Calendar className="w-4 h-4 text-primary-500" />
                   {t('tools.clientAgreement.datesStatus', 'Dates & Status')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

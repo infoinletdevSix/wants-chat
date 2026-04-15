@@ -114,7 +114,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
       case 'underweight':
         return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
       case 'normal':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'overweight':
         return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
       case 'obese':
@@ -261,7 +261,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
           </Button>
         ) : (
           <div className="flex items-center gap-2">
-            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 px-3">
+            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-8 px-3">
               <Icon path={mdiCheck} size={0.6} className="mr-1" />
               Save
             </Button>
@@ -303,7 +303,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
                     size={0.5} 
                     className={
                       weightTrend.trend === 'up' ? 'text-red-400' :
-                      weightTrend.trend === 'down' ? 'text-emerald-500' : 'text-white/40'
+                      weightTrend.trend === 'down' ? 'text-primary-500' : 'text-white/40'
                     } 
                   />
                 )}
@@ -399,7 +399,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
                 </div>
                 <div className="h-1 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
+                    className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-500"
                     style={{ width: `${progressToTarget}%` }}
                   />
                 </div>
@@ -610,7 +610,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
             <span className="text-white/60">Underweight</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+            <div className="w-2 h-2 rounded-full bg-primary-500"></div>
             <span className="text-white/60">Normal</span>
           </div>
           <div className="flex items-center gap-1.5">
@@ -627,7 +627,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
       {/* Current Plan Section */}
       {currentPlan && (
         <div className="mt-5">
-          <div className="p-4 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-lg border border-primary-500/30">
+          <div className="p-4 bg-gradient-to-r from-primary-500/10 to-primary-500/10 rounded-lg border border-primary-500/30">
             {/* Plan Header */}
             <div className="flex items-center gap-3 mb-3">
               <div className="p-2 rounded-lg bg-primary-500/20">
@@ -648,7 +648,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
                 <Badge className="text-primary-400 border border-primary-500/30 bg-primary-500/10 text-xs">
                   {currentPlan.duration} days
                 </Badge>
-                <Badge className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs">
+                <Badge className="bg-primary-500/20 text-primary-400 border border-primary-500/30 text-xs">
                   Active
                 </Badge>
               </div>
@@ -666,7 +666,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
             <div className="mb-4">
               <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300"
                   style={{ width: `${(currentPlan.daysCompleted / currentPlan.totalDays) * 100}%` }}
                 />
               </div>
@@ -693,7 +693,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
                   <Button 
                     size="sm" 
                     onClick={onStartWorkout}
-                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 px-3"
+                    className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-8 px-3"
                   >
                     <Icon path={mdiPlay} size={0.5} className="mr-1" />
                     Start

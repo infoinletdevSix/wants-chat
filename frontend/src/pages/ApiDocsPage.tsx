@@ -147,7 +147,7 @@ const ApiDocsPage: React.FC = () => {
   };
 
   const methodColors = {
-    GET: 'bg-emerald-500/20 text-emerald-400',
+    GET: 'bg-primary-500/20 text-primary-400',
     POST: 'bg-blue-500/20 text-blue-400',
     PUT: 'bg-amber-500/20 text-amber-400',
     DELETE: 'bg-red-500/20 text-red-400',
@@ -187,11 +187,11 @@ print(data)`;
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#333] mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span className="w-2 h-2 rounded-full bg-primary-500"></span>
             <span className="text-sm text-gray-400 uppercase tracking-wider">Developer API</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            REST API <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-primary-400">Documentation</span>
+            REST API <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500">Documentation</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Access your tool data programmatically. Build integrations, automate workflows, and extend Wants functionality.
@@ -207,27 +207,27 @@ print(data)`;
 
           <div className="space-y-4">
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
               <div>
                 <p className="font-medium text-white">Get your API Key</p>
                 <p className="text-sm text-gray-400">
-                  <Link to="/login" className="text-emerald-400 hover:text-emerald-300 transition-colors">Sign in</Link> and go to Settings → API Keys to create a new key
+                  <Link to="/login" className="text-primary-400 hover:text-primary-300 transition-colors">Sign in</Link> and go to Settings → API Keys to create a new key
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
               <div>
                 <p className="font-medium text-white">Add the API Key header</p>
                 <p className="text-sm text-gray-400">
-                  Include <code className="px-2 py-1 rounded bg-[#1a1a1a] text-emerald-400 text-xs font-mono">X-API-Key: your_key</code> in all requests
+                  Include <code className="px-2 py-1 rounded bg-[#1a1a1a] text-primary-400 text-xs font-mono">X-API-Key: your_key</code> in all requests
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
               <div>
                 <p className="font-medium text-white">Make API calls</p>
                 <p className="text-sm text-gray-400">
@@ -250,7 +250,7 @@ print(data)`;
           </p>
 
           <div className="p-4 rounded-xl bg-[#0a0a0a] border border-[#222] font-mono text-sm relative group">
-            <code className="text-emerald-400">
+            <code className="text-primary-400">
               X-API-Key: sk_live_your_api_key_here
             </code>
             <button
@@ -258,7 +258,7 @@ print(data)`;
               className="absolute top-3 right-3 p-1.5 rounded-lg bg-[#1a1a1a] hover:bg-[#222] transition-colors opacity-0 group-hover:opacity-100"
             >
               {copiedCode === 'auth' ? (
-                <Check className="w-4 h-4 text-emerald-400" />
+                <Check className="w-4 h-4 text-primary-400" />
               ) : (
                 <Copy className="w-4 h-4 text-gray-400" />
               )}
@@ -356,17 +356,17 @@ print(data)`;
             {/* cURL */}
             <div>
               <h3 className="text-sm font-medium mb-3 text-gray-300 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span className="w-2 h-2 rounded-full bg-primary-500"></span>
                 cURL
               </h3>
               <div className="p-4 rounded-xl bg-[#0a0a0a] border border-[#222] font-mono text-sm relative group">
-                <pre className="overflow-x-auto text-emerald-400">{curlExample}</pre>
+                <pre className="overflow-x-auto text-primary-400">{curlExample}</pre>
                 <button
                   onClick={() => copyToClipboard(curlExample, 'curl')}
                   className="absolute top-3 right-3 p-1.5 rounded-lg bg-[#1a1a1a] hover:bg-[#222] transition-colors opacity-0 group-hover:opacity-100"
                 >
                   {copiedCode === 'curl' ? (
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-primary-400" />
                   ) : (
                     <Copy className="w-4 h-4 text-gray-400" />
                   )}
@@ -387,7 +387,7 @@ print(data)`;
                   className="absolute top-3 right-3 p-1.5 rounded-lg bg-[#1a1a1a] hover:bg-[#222] transition-colors opacity-0 group-hover:opacity-100"
                 >
                   {copiedCode === 'js' ? (
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-primary-400" />
                   ) : (
                     <Copy className="w-4 h-4 text-gray-400" />
                   )}
@@ -408,7 +408,7 @@ print(data)`;
                   className="absolute top-3 right-3 p-1.5 rounded-lg bg-[#1a1a1a] hover:bg-[#222] transition-colors opacity-0 group-hover:opacity-100"
                 >
                   {copiedCode === 'python' ? (
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-primary-400" />
                   ) : (
                     <Copy className="w-4 h-4 text-gray-400" />
                   )}
@@ -430,15 +430,15 @@ print(data)`;
 
           <ul className="list-none space-y-2 text-gray-400">
             <li className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
               1000 requests per minute (default)
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
               Rate limits are per API key
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
               Exceeded limits return HTTP 429
             </li>
           </ul>

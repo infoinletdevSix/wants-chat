@@ -560,12 +560,12 @@ export const HospiceCareTool: React.FC<HospiceCareToolProps> = ({ uiConfig }) =>
         </div>
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Home className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Home className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.hospiceCare.routineCare', 'Routine Care')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.routineCare}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.routineCare}</p>
             </div>
           </div>
         </div>
@@ -833,7 +833,7 @@ export const HospiceCareTool: React.FC<HospiceCareToolProps> = ({ uiConfig }) =>
                     {selectedPatient.visitSchedule && (
                       <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                         <h3 className="font-semibold mb-2 flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-cyan-500" />
+                          <Calendar className="w-4 h-4 text-primary-500" />
                           {t('tools.hospiceCare.visitSchedule2', 'Visit Schedule')}
                         </h3>
                         <p className="text-sm">{selectedPatient.visitSchedule}</p>
@@ -1126,7 +1126,7 @@ export const HospiceCareTool: React.FC<HospiceCareToolProps> = ({ uiConfig }) =>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {formData.equipmentNeeded.map((eq, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {eq} <button onClick={() => removeEquipment(eq)}><X className="w-3 h-3" /></button>
                     </span>
                   ))}

@@ -48,7 +48,7 @@ const ActiveFasting: React.FC<ActiveFastingProps> = ({
   };
 
   const getStatus = () => {
-    if (isComplete) return { text: 'Fasting Complete!', color: 'text-emerald-400' };
+    if (isComplete) return { text: 'Fasting Complete!', color: 'text-primary-400' };
     if (progress > 80) return { text: 'Almost there!', color: 'text-primary-400' };
     if (progress > 50) return { text: 'Over halfway!', color: 'text-blue-400' };
     return { text: 'Keep going!', color: 'text-orange-400' };
@@ -122,13 +122,13 @@ const ActiveFasting: React.FC<ActiveFastingProps> = ({
         {isComplete && (
           <div className="p-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg">
             <div className="flex items-center gap-3 mb-3">
-              <CheckCircle className="h-5 w-5 text-emerald-400" />
+              <CheckCircle className="h-5 w-5 text-primary-400" />
               <p className="font-medium text-white">
                 Congratulations! You've completed your fast!
               </p>
             </div>
             <Button
-              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+              className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               onClick={onEndFast}
             >
               End Fasting Session

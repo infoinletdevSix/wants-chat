@@ -86,7 +86,7 @@ const JewelleryCalculator: React.FC = () => {
       <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary-500 to-cyan-500 p-6">
+          <div className="bg-gradient-to-r from-primary-500 to-primary-600 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                 <Scale className="h-8 w-8 text-white" />
@@ -108,7 +108,7 @@ const JewelleryCalculator: React.FC = () => {
                   onClick={() => handleMetalChange(metal)}
                   className={`px-4 py-3 rounded-lg font-medium transition-all ${
                     state.metalType === metal
-                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
                       : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
                   }`}
                 >
@@ -176,7 +176,7 @@ const JewelleryCalculator: React.FC = () => {
           </div>
 
           {/* Results */}
-          <div className="p-6 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border-t border-white/10">
+          <div className="p-6 bg-gradient-to-br from-primary-500/10 to-primary-500/10 border-t border-white/10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Pure Weight */}
               <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
@@ -190,7 +190,7 @@ const JewelleryCalculator: React.FC = () => {
               </div>
 
               {/* Total Value */}
-              <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-4 border border-primary-400/30">
+              <div className="bg-gradient-to-r from-primary-500/20 to-primary-500/20 backdrop-blur-sm rounded-lg p-4 border border-primary-400/30">
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="h-5 w-5 text-primary-400" />
                   <p className="text-sm text-white/60">Estimated Value</p>

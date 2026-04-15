@@ -329,8 +329,8 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-lg ${isDark ? 'bg-cyan-500/20' : 'bg-cyan-100'}`}>
-            <Droplets className="w-6 h-6 text-cyan-500" />
+          <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+            <Droplets className="w-6 h-6 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -361,7 +361,7 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
           />
           <button
             onClick={() => setShowAddForm(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.irrigationScheduler.addSchedule', 'Add Schedule')}
@@ -401,8 +401,8 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isDark ? 'bg-cyan-500/20' : 'bg-cyan-100'}`}>
-              <Droplets className="w-5 h-5 text-cyan-500" />
+            <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+              <Droplets className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.irrigationScheduler.dailyWater', 'Daily Water')}</p>
@@ -436,7 +436,7 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors ${
               activeTab === tab.id
-                ? 'bg-cyan-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                   ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-300'
@@ -462,7 +462,7 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
                 isDark
                   ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500'
                   : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400'
-              } focus:outline-none focus:ring-2 focus:ring-cyan-500`}
+              } focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
 
@@ -496,7 +496,7 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
                 <div className="flex items-start justify-between">
                   <div className="flex items-start gap-3">
                     <div className={`p-2 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                      <Droplets className="w-5 h-5 text-cyan-500" />
+                      <Droplets className="w-5 h-5 text-primary-500" />
                     </div>
                     <div>
                       <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -795,7 +795,7 @@ export function IrrigationSchedulerTool({ uiConfig }: IrrigationSchedulerToolPro
                 <button
                   onClick={handleAddSchedule}
                   disabled={!newSchedule.zoneName.trim()}
-                  className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 disabled:opacity-50"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
                 >
                   {t('tools.irrigationScheduler.addSchedule2', 'Add Schedule')}
                 </button>

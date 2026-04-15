@@ -61,16 +61,16 @@ const HealthPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 py-16">
           {/* Header Section */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-6 bg-gradient-to-r from-primary-500 to-cyan-500">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-6 bg-gradient-to-r from-primary-500 to-primary-600">
               <LocalHospital className="h-6 w-6 text-white" />
             </div>
             <div className="mb-2">
-              <span className="text-lg font-medium bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-lg font-medium bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
                 Let's Get Started
               </span>
             </div>
             <h1 className="text-6xl font-bold text-white mb-6">
-              Welcome to <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">Health Manager</span>
+              Welcome to <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Health Manager</span>
             </h1>
             <p className="text-xl text-white/60 mb-16">
               What type of health management do you need?
@@ -87,7 +87,7 @@ const HealthPage: React.FC = () => {
             >
               <div className="p-6">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8 bg-gradient-to-r from-primary-500 to-cyan-500">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8 bg-gradient-to-r from-primary-500 to-primary-600">
                     <MedicalServices className="h-10 w-10 text-white" />
                   </div>
 
@@ -123,7 +123,7 @@ const HealthPage: React.FC = () => {
                   </div>
 
                   <Button
-                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-cyan-500 hover:opacity-90 transition-opacity"
+                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-primary-600 hover:opacity-90 transition-opacity"
                     onClick={(e) => { e.stopPropagation(); navigate('/health/medical-records'); }}
                   >
                     Select Medical Records
@@ -140,7 +140,7 @@ const HealthPage: React.FC = () => {
             >
               <div className="p-6">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8 bg-gradient-to-r from-emerald-500 to-primary-500">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8 bg-gradient-to-r from-primary-500 to-primary-600">
                     <Medication className="h-10 w-10 text-white" />
                   </div>
 
@@ -150,33 +150,33 @@ const HealthPage: React.FC = () => {
 
                   <div className="space-y-4 text-left mb-8">
                     <div className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/20">
-                        <span className="text-emerald-400 text-xs">✓</span>
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-primary-500/20">
+                        <span className="text-primary-400 text-xs">✓</span>
                       </div>
                       <span className="text-white/60">Never miss a dose</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/20">
-                        <span className="text-emerald-400 text-xs">✓</span>
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-primary-500/20">
+                        <span className="text-primary-400 text-xs">✓</span>
                       </div>
                       <span className="text-white/60">Medication reminders</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/20">
-                        <span className="text-emerald-400 text-xs">✓</span>
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-primary-500/20">
+                        <span className="text-primary-400 text-xs">✓</span>
                       </div>
                       <span className="text-white/60">Prescription refill tracking</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-emerald-500/20">
-                        <span className="text-emerald-400 text-xs">✓</span>
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center bg-primary-500/20">
+                        <span className="text-primary-400 text-xs">✓</span>
                       </div>
                       <span className="text-white/60">Flexible scheduling</span>
                     </div>
                   </div>
 
                   <Button
-                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-cyan-500 hover:opacity-90 transition-opacity"
+                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-primary-600 hover:opacity-90 transition-opacity"
                     onClick={(e) => { e.stopPropagation(); navigate('/health/medications'); }}
                   >
                     Select Medication Tracker
@@ -232,7 +232,7 @@ const HealthPage: React.FC = () => {
                   </div>
 
                   <Button
-                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-cyan-500 hover:opacity-90 transition-opacity"
+                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-primary-600 hover:opacity-90 transition-opacity"
                     onClick={(e) => { e.stopPropagation(); navigate('/health/mother-care'); }}
                   >
                     Select Mother Care
@@ -285,7 +285,7 @@ const HealthPage: React.FC = () => {
                   </div>
 
                   <Button
-                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-cyan-500 hover:opacity-90 transition-opacity"
+                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-primary-600 hover:opacity-90 transition-opacity"
                     onClick={(e) => { e.stopPropagation(); navigate('/health/serious-care'); }}
                   >
                     Select Serious Care
@@ -338,7 +338,7 @@ const HealthPage: React.FC = () => {
                   </div>
 
                   <Button
-                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-cyan-500 hover:opacity-90 transition-opacity"
+                    className="w-full py-4 text-white font-normal text-base rounded-md bg-gradient-to-r from-primary-500 to-primary-600 hover:opacity-90 transition-opacity"
                     onClick={(e) => { e.stopPropagation(); navigate('/health/sleep'); }}
                   >
                     Select Sleep Tracking

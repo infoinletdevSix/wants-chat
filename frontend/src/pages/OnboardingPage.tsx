@@ -878,7 +878,7 @@ export const OnboardingPage: React.FC = () => {
               {/* Finance Section */}
               <div>
                 <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                  <Building2 className="h-5 w-5 text-emerald-500" />
+                  <Building2 className="h-5 w-5 text-primary-500" />
                   Finance
                 </h3>
                 <div className="grid grid-cols-2 gap-4">

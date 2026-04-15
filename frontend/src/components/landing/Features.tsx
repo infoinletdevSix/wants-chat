@@ -82,7 +82,7 @@ const Features: React.FC = () => {
         }}
       />
       <div
-        className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[120px] animate-pulse"
+        className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px] animate-pulse"
         style={{
           animation: 'pulse 10s ease-in-out infinite',
           animationDelay: '2s',
@@ -145,7 +145,7 @@ const Features: React.FC = () => {
 
                 {/* Hover Effect Overlay */}
                 {feature.link && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 )}
               </div>
             );
@@ -158,7 +158,7 @@ const Features: React.FC = () => {
             Ready to transform your life management?
           </p>
           <Link to="/login">
-            <Button size="lg" className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+            <Button size="lg" className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>

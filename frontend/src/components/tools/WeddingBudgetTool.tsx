@@ -319,8 +319,8 @@ export const WeddingBudgetTool: React.FC<WeddingBudgetToolProps> = ({ uiConfig }
                     ? 'text-red-400'
                     : 'text-red-600'
                   : isDark
-                  ? 'text-emerald-400'
-                  : 'text-emerald-600'
+                  ? 'text-primary-400'
+                  : 'text-primary-600'
               }`}
             >
               {formatCurrency(summary.remaining)}

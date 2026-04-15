@@ -263,11 +263,11 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <Barcode className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Barcode className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.barcodeGenerator.barcodeGenerator', 'Barcode Generator')}</h3>
@@ -278,7 +278,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
             onClick={() => setShowSettings(!showSettings)}
             className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
               showSettings
-                ? 'bg-cyan-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -321,7 +321,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
                 max="4"
                 value={options.width}
                 onChange={(e) => setOptions({ ...options, width: parseInt(e.target.value) })}
-                className="w-full accent-cyan-500"
+                className="w-full accent-primary-500"
               />
             </div>
 
@@ -335,7 +335,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
                 max="200"
                 value={options.height}
                 onChange={(e) => setOptions({ ...options, height: parseInt(e.target.value) })}
-                className="w-full accent-cyan-500"
+                className="w-full accent-primary-500"
               />
             </div>
 
@@ -368,7 +368,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
                 type="checkbox"
                 checked={options.displayValue}
                 onChange={(e) => setOptions({ ...options, displayValue: e.target.checked })}
-                className="w-4 h-4 rounded text-cyan-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <span className="text-sm">{t('tools.barcodeGenerator.showValue', 'Show Value')}</span>
             </label>
@@ -395,7 +395,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
               isDark
                 ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+            } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
           {error && (
             <p className="text-sm text-red-500">{error}</p>
@@ -426,7 +426,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
           <div className="flex gap-3">
             <button
               onClick={handleDownload}
-              className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-cyan-500/20"
+              className="flex-1 py-3 bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/20"
             >
               <Download className="w-5 h-5" />
               {t('tools.barcodeGenerator.downloadPng', 'Download PNG')}

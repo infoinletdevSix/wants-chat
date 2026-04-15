@@ -90,9 +90,9 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onEdit, onDelete, onComplete 
         };
       case 'low':
         return {
-          color: 'text-emerald-400',
-          bg: 'bg-emerald-400/10',
-          border: 'border-emerald-400/50',
+          color: 'text-primary-400',
+          bg: 'bg-primary-400/10',
+          border: 'border-primary-400/50',
           label: 'Low Priority'
         };
       default:
@@ -110,15 +110,15 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onEdit, onDelete, onComplete 
       case 'done':
         return {
           icon: CheckCircle2,
-          color: 'text-emerald-400',
-          bg: 'bg-emerald-400/10',
+          color: 'text-primary-400',
+          bg: 'bg-primary-400/10',
           label: 'Completed'
         };
       case 'in_progress':
         return {
           icon: Clock,
-          color: 'text-cyan-400',
-          bg: 'bg-cyan-400/10',
+          color: 'text-primary-400',
+          bg: 'bg-primary-400/10',
           label: 'In Progress'
         };
       default:
@@ -154,14 +154,14 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onEdit, onDelete, onComplete 
             disabled={isCompleted}
             className={cn(
               "mt-0.5 flex-shrink-0 rounded-full p-0.5 transition-colors",
-              !isCompleted && "hover:bg-emerald-400/20"
+              !isCompleted && "hover:bg-primary-400/20"
             )}
           >
             <StatusIcon
               className={cn(
                 "h-5 w-5 transition-colors",
                 statusConfig.color,
-                !isCompleted && "hover:text-emerald-400"
+                !isCompleted && "hover:text-primary-400"
               )}
             />
           </button>
@@ -194,7 +194,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onEdit, onDelete, onComplete 
                     variant="ghost"
                     size="sm"
                     onClick={handleComplete}
-                    className="h-8 w-8 p-0 text-emerald-400 hover:text-emerald-300 hover:bg-emerald-400/20"
+                    className="h-8 w-8 p-0 text-primary-400 hover:text-primary-300 hover:bg-primary-400/20"
                   >
                     <CheckCircle2 className="h-4 w-4" />
                   </Button>

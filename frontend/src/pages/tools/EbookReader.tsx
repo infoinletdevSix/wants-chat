@@ -155,7 +155,7 @@ const EbookReader: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-primary-900">
       <BackgroundEffects />
       <Header />
 
@@ -182,7 +182,7 @@ const EbookReader: React.FC = () => {
               />
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+                className="w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all flex items-center justify-center gap-2 shadow-lg"
               >
                 <Upload className="w-5 h-5" />
                 Upload Book (TXT, PDF, EPUB)
@@ -225,7 +225,7 @@ const EbookReader: React.FC = () => {
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
                         <div
-                          className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all"
+                          className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all"
                           style={{ width: `${(book.currentPage / book.totalPages) * 100}%` }}
                         />
                       </div>
@@ -450,7 +450,7 @@ const EbookReader: React.FC = () => {
               <button
                 onClick={() => goToPage(selectedBook.currentPage - 1)}
                 disabled={selectedBook.currentPage === 0}
-                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
+                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
               >
                 <ChevronLeft className="w-5 h-5" />
                 Previous Page
@@ -458,7 +458,7 @@ const EbookReader: React.FC = () => {
               <button
                 onClick={() => goToPage(selectedBook.currentPage + 1)}
                 disabled={selectedBook.currentPage >= selectedBook.totalPages - 1}
-                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
+                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
               >
                 Next Page
                 <ChevronRight className="w-5 h-5" />

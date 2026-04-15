@@ -68,8 +68,8 @@ const AIEmailComposer: React.FC = () => {
       title="AI Email Composer"
       description="Write professional emails instantly"
       icon={<Mail className="w-8 h-8" />}
-      iconColor="text-cyan-400"
-      iconBgColor="bg-cyan-500/20"
+      iconColor="text-primary-400"
+      iconBgColor="bg-primary-500/20"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card className="bg-white/10 backdrop-blur-xl border-white/20">
@@ -146,7 +146,7 @@ const AIEmailComposer: React.FC = () => {
             <Button
               onClick={handleGenerate}
               disabled={loading}
-              className="w-full bg-gradient-to-r from-cyan-500 to-blue-500"
+              className="w-full bg-gradient-to-r from-primary-500 to-blue-500"
             >
               {loading ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Wand2 className="w-4 h-4 mr-2" />}
               {loading ? 'Composing...' : 'Compose Email'}
@@ -168,7 +168,7 @@ const AIEmailComposer: React.FC = () => {
           <CardContent>
             {loading ? (
               <div className="flex items-center justify-center min-h-[300px]">
-                <Loader2 className="w-8 h-8 text-cyan-400 animate-spin" />
+                <Loader2 className="w-8 h-8 text-primary-400 animate-spin" />
               </div>
             ) : result ? (
               <div className="space-y-4">

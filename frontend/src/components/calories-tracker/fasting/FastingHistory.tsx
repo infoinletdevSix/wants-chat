@@ -81,7 +81,7 @@ const FastingHistory: React.FC<FastingHistoryProps> = ({
                 </div>
 
                 {session.completed ? (
-                  <Icon path={mdiCheckCircle} size={1} className="text-emerald-400" />
+                  <Icon path={mdiCheckCircle} size={1} className="text-primary-400" />
                 ) : (
                   <Badge className="bg-white/10 text-white/70 border border-white/20">Incomplete</Badge>
                 )}

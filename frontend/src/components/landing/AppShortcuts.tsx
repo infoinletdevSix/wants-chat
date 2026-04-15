@@ -60,7 +60,7 @@ const AppShortcuts: React.FC = () => {
 
   // Color mapping for gradient backgrounds
   const getGradientFromColor = (color?: string): string => {
-    if (!color) return 'from-primary-500 to-cyan-500';
+    if (!color) return 'from-primary-500 to-primary-600';
     // Create gradient from single color
     return `from-[${color}] to-[${color}]`;
   };
@@ -75,12 +75,12 @@ const AppShortcuts: React.FC = () => {
     >
       {/* Animated gradient orbs - matching login page */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -94,7 +94,7 @@ const AppShortcuts: React.FC = () => {
         >
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 mb-4">
-              <AutoAwesomeIcon className="h-4 w-4 text-emerald-400" />
+              <AutoAwesomeIcon className="h-4 w-4 text-primary-400" />
               <span className="text-sm font-medium text-white">{TOTAL_APPS_COUNT}+ Apps Available</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
@@ -129,7 +129,7 @@ const AppShortcuts: React.FC = () => {
             onClick={() => setActiveCategory('All')}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
               activeCategory === 'All'
-                ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/25'
+                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/25'
                 : 'bg-gray-900/50 text-white/80 border border-gray-800 hover:bg-gray-800/50'
             }`}
           >
@@ -141,7 +141,7 @@ const AppShortcuts: React.FC = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                 activeCategory === category.id
-                  ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/25'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/25'
                   : 'bg-gray-900/50 text-white/80 border border-gray-800 hover:bg-gray-800/50'
               }`}
             >
@@ -173,7 +173,7 @@ const AppShortcuts: React.FC = () => {
             >
               <div
                 className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 h-full
-                  border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50 hover:shadow-xl hover:shadow-emerald-500/20
+                  border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50 hover:shadow-xl hover:shadow-primary-500/20
                   transition-all duration-300 cursor-pointer"
                 onClick={() => handleAppClick(app.link)}
               >
@@ -203,7 +203,7 @@ const AppShortcuts: React.FC = () => {
 
                 {/* Content */}
                 <div>
-                  <h3 className="font-bold text-sm mb-1 text-white group-hover:text-emerald-400 transition-colors duration-300">
+                  <h3 className="font-bold text-sm mb-1 text-white group-hover:text-primary-400 transition-colors duration-300">
                     {app.name}
                   </h3>
                   <p className="text-xs text-white/60 leading-relaxed line-clamp-2">
@@ -212,8 +212,8 @@ const AppShortcuts: React.FC = () => {
                 </div>
 
                 {/* Action Indicator */}
-                <div className="absolute bottom-2 right-2 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ArrowForwardIcon className="h-3 w-3 text-emerald-400" />
+                <div className="absolute bottom-2 right-2 w-6 h-6 rounded-full bg-primary-500/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowForwardIcon className="h-3 w-3 text-primary-400" />
                 </div>
               </div>
             </motion.div>
@@ -227,14 +227,14 @@ const AppShortcuts: React.FC = () => {
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 p-4 rounded-2xl bg-gray-900/50 border border-gray-800"
           >
             <div className="flex items-center gap-3 text-white/70">
-              <AddCircleOutlineIcon className="h-5 w-5 text-emerald-400" />
+              <AddCircleOutlineIcon className="h-5 w-5 text-primary-400" />
               <span className="text-sm">
                 Want to customize your apps? Add or remove apps from your quick access.
               </span>
             </div>
             <Button
               size="sm"
-              className="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 hover:scale-105 transition-all duration-200"
+              className="bg-primary-500/10 border border-primary-500/30 text-primary-400 hover:bg-primary-500/20 hover:scale-105 transition-all duration-200"
               onClick={() => navigate('/app-settings')}
             >
               <SettingsIcon className="h-4 w-4 mr-2" />

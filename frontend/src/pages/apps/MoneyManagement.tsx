@@ -138,9 +138,9 @@ const MoneyManagement: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-green-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading financial data...</p>
         </div>
       </div>
@@ -148,7 +148,7 @@ const MoneyManagement: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-green-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -160,9 +160,9 @@ const MoneyManagement: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
             <div className="flex items-center justify-between mb-2">
-              <WalletIcon className="h-8 w-8 text-emerald-500" />
+              <WalletIcon className="h-8 w-8 text-primary-500" />
               {summary.balanceChange !== 0 && (
-                <span className={`text-sm ${summary.balanceChange > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
+                <span className={`text-sm ${summary.balanceChange > 0 ? 'text-primary-600 dark:text-primary-400' : 'text-red-600 dark:text-red-400'}`}>
                   {summary.balanceChange > 0 ? '+' : ''}{summary.balanceChange.toFixed(1)}%
                 </span>
               )}
@@ -220,7 +220,7 @@ const MoneyManagement: React.FC = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`flex-1 py-2 px-4 rounded-lg capitalize transition-colors ${
                   activeTab === tab
-                    ? 'bg-white dark:bg-gray-700 text-emerald-600 dark:text-emerald-400 shadow-sm'
+                    ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
@@ -344,7 +344,7 @@ const MoneyManagement: React.FC = () => {
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                         <div
-                          className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-3 rounded-full transition-all duration-300"
+                          className="bg-gradient-to-r from-primary-400 to-primary-600 h-3 rounded-full transition-all duration-300"
                           style={{ width: `${Math.min(goal.percentage, 100)}%` }}
                         />
                       </div>
@@ -357,7 +357,7 @@ const MoneyManagement: React.FC = () => {
                   No savings goals found. Create your first goal to start tracking!
                 </div>
               )}
-              <button className="mt-6 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+              <button className="mt-6 w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                 Add New Goal
               </button>
             </div>
@@ -422,7 +422,7 @@ const MoneyManagement: React.FC = () => {
                             ? 'bg-red-500'
                             : ((budget.spent || 0) / (budget.limit || budget.amount || 1)) > 0.7
                               ? 'bg-yellow-500'
-                              : 'bg-emerald-500'
+                              : 'bg-primary-500'
                         }`}
                         style={{ width: `${Math.min(((budget.spent || 0) / (budget.limit || budget.amount || 1)) * 100, 100)}%` }}
                       />
@@ -435,7 +435,7 @@ const MoneyManagement: React.FC = () => {
                 No budgets found. Create your first budget to start tracking spending!
               </div>
             )}
-            <button className="mt-6 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+            <button className="mt-6 w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
               Create New Budget
             </button>
           </div>

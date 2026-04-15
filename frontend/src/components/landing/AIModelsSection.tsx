@@ -32,40 +32,40 @@ const aiModels: AIModel[] = [
     provider: 'OpenAI',
     bestFor: 'All-rounder',
     bestForIcon: Sparkles,
-    gradient: 'from-emerald-500 to-primary-500',
-    providerColor: 'text-emerald-400',
+    gradient: 'from-primary-500 to-primary-600',
+    providerColor: 'text-primary-400',
   },
   {
     name: 'GPT-4 Turbo',
     provider: 'OpenAI',
     bestFor: 'Complex tasks',
     bestForIcon: Brain,
-    gradient: 'from-emerald-500 to-green-500',
-    providerColor: 'text-emerald-400',
+    gradient: 'from-primary-500 to-green-500',
+    providerColor: 'text-primary-400',
   },
   {
     name: 'GPT-3.5 Turbo',
     provider: 'OpenAI',
     bestFor: 'Fast & cheap',
     bestForIcon: Zap,
-    gradient: 'from-primary-500 to-cyan-500',
-    providerColor: 'text-emerald-400',
+    gradient: 'from-primary-500 to-primary-600',
+    providerColor: 'text-primary-400',
   },
   {
     name: 'o1',
     provider: 'OpenAI',
     bestFor: 'Reasoning',
     bestForIcon: Calculator,
-    gradient: 'from-emerald-600 to-primary-600',
-    providerColor: 'text-emerald-400',
+    gradient: 'from-primary-600 to-primary-700',
+    providerColor: 'text-primary-400',
   },
   {
     name: 'o1-mini',
     provider: 'OpenAI',
     bestFor: 'Quick reasoning',
     bestForIcon: Gauge,
-    gradient: 'from-green-500 to-emerald-500',
-    providerColor: 'text-emerald-400',
+    gradient: 'from-green-500 to-primary-500',
+    providerColor: 'text-primary-400',
   },
 
   // Anthropic
@@ -204,8 +204,8 @@ const aiModels: AIModel[] = [
     provider: 'DeepSeek',
     bestFor: 'Research',
     bestForIcon: BookOpen,
-    gradient: 'from-cyan-500 to-blue-500',
-    providerColor: 'text-cyan-400',
+    gradient: 'from-primary-500 to-blue-500',
+    providerColor: 'text-primary-400',
   },
   {
     name: 'Qwen 2.5',
@@ -229,7 +229,7 @@ const aiModels: AIModel[] = [
     bestFor: 'Image gen',
     bestForIcon: Image,
     gradient: 'from-pink-500 to-rose-500',
-    providerColor: 'text-emerald-400',
+    providerColor: 'text-primary-400',
   },
   {
     name: 'Stable Diffusion 3',
@@ -244,8 +244,8 @@ const aiModels: AIModel[] = [
     provider: 'OpenAI',
     bestFor: 'Transcription',
     bestForIcon: MessageSquare,
-    gradient: 'from-primary-600 to-emerald-600',
-    providerColor: 'text-emerald-400',
+    gradient: 'from-primary-600 to-primary-700',
+    providerColor: 'text-primary-400',
   },
 ];
 
@@ -282,7 +282,7 @@ const AIModelsSection: React.FC = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <motion.div
-        className="absolute top-[-200px] right-[-200px] w-[700px] h-[700px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute top-[-200px] right-[-200px] w-[700px] h-[700px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, -60, 0],
           y: [0, 40, 0],
@@ -295,7 +295,7 @@ const AIModelsSection: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-[-200px] left-[-200px] w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute bottom-[-200px] left-[-200px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, 50, 0],
           y: [0, -30, 0],
@@ -316,12 +316,12 @@ const AIModelsSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-4">
             {t('landing.aiModels.badge')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('landing.aiModels.title')}{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
               {t('landing.aiModels.titleHighlight')}
             </span>
           </h2>
@@ -340,7 +340,7 @@ const AIModelsSection: React.FC = () => {
           {providers.map((provider) => (
             <span
               key={provider}
-              className="px-4 py-2 rounded-full bg-gray-900/50 border border-gray-800 text-gray-400 text-sm font-medium hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default"
+              className="px-4 py-2 rounded-full bg-gray-900/50 border border-gray-800 text-gray-400 text-sm font-medium hover:border-primary-500/50 hover:text-primary-400 transition-colors cursor-default"
             >
               {provider}
             </span>
@@ -361,9 +361,9 @@ const AIModelsSection: React.FC = () => {
               variants={itemVariants}
               className="group"
             >
-              <div className="bg-gray-900/50 backdrop-blur-xl rounded-2xl p-5 border border-gray-800 hover:border-emerald-500/50 transition-all duration-300 h-full relative overflow-hidden">
+              <div className="bg-gray-900/50 backdrop-blur-xl rounded-2xl p-5 border border-gray-800 hover:border-primary-500/50 transition-all duration-300 h-full relative overflow-hidden">
                 {/* Hover glow */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/5 to-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 <div className="relative z-10">
                   {/* Model Icon */}
@@ -385,7 +385,7 @@ const AIModelsSection: React.FC = () => {
 
                   {/* Best For Tag */}
                   <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-800/50 border border-gray-700 w-fit">
-                    <model.bestForIcon className="w-3.5 h-3.5 text-emerald-400" />
+                    <model.bestForIcon className="w-3.5 h-3.5 text-primary-400" />
                     <span className="text-xs text-gray-300 font-medium">
                       {model.bestFor}
                     </span>
@@ -406,7 +406,7 @@ const AIModelsSection: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl p-8 border border-gray-800 max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Sparkles className="w-6 h-6 text-emerald-400" />
+              <Sparkles className="w-6 h-6 text-primary-400" />
               <h3 className="text-2xl font-bold text-white">
                 {t('landing.aiModels.autoSelect')}
               </h3>

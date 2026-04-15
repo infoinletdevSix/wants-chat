@@ -144,11 +144,11 @@ export const TravelBudgetTool: React.FC<TravelBudgetToolProps> = ({ uiConfig }) 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <MapPin className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <MapPin className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.travelBudget.travelBudgetPlanner', 'Travel Budget Planner')}</h3>
@@ -186,9 +186,9 @@ export const TravelBudgetTool: React.FC<TravelBudgetToolProps> = ({ uiConfig }) 
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-cyan-900/20 border border-cyan-800' : 'bg-cyan-50 border border-cyan-200'}`}>
-          <Sparkles className="w-4 h-4 text-cyan-500" />
-          <span className={`text-sm ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.travelBudget.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>

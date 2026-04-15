@@ -71,7 +71,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
   const getRarityGlow = (rarity: string) => {
     switch (rarity) {
       case 'legendary':
-        return 'shadow-lg shadow-emerald-500/20';
+        return 'shadow-lg shadow-primary-500/20';
       case 'epic':
         return 'shadow-lg shadow-accent/20';
       case 'rare':
@@ -166,9 +166,9 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
 
         {/* Next Milestone */}
         {nextMilestone && (
-          <div className="p-4 bg-gradient-to-br from-cyan-500/10 to-cyan-500/20 rounded-lg">
+          <div className="p-4 bg-gradient-to-br from-primary-500/10 to-primary-500/20 rounded-lg">
             <div className="flex items-center gap-3 mb-2">
-              <Icon path={mdiTarget} size={1} className="text-cyan-400" />
+              <Icon path={mdiTarget} size={1} className="text-primary-400" />
               <h4 className="font-semibold">Next Milestone</h4>
             </div>
             <div className="text-lg font-bold mb-2">{nextMilestone.title}</div>
@@ -259,8 +259,8 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
               {achievement.unlockedAt ? (
                 <div className="space-y-2">
                   <div className="flex items-center justify-center gap-1">
-                    <Icon path={mdiCheckCircle} size={0.6} className="text-emerald-500" />
-                    <span className="text-xs text-emerald-600 font-medium">
+                    <Icon path={mdiCheckCircle} size={0.6} className="text-primary-500" />
+                    <span className="text-xs text-primary-600 font-medium">
                       Unlocked {achievement.unlockedAt.toLocaleDateString()}
                     </span>
                   </div>
@@ -351,7 +351,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
             <span>Streak Achievements</span>
           </div>
           <div className="flex items-center gap-2">
-            <Icon path={mdiTarget} size={0.6} className="text-emerald-500" />
+            <Icon path={mdiTarget} size={0.6} className="text-primary-500" />
             <span>Weight Achievements</span>
           </div>
           <div className="flex items-center gap-2">

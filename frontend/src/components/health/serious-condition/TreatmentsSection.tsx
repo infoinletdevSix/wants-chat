@@ -128,7 +128,7 @@ const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
               <Button
                 onClick={onAddTreatment}
                 disabled={!currentTreatment.type}
-                className="w-full h-11 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full h-11 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Treatment

@@ -379,9 +379,9 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
-            <span className="text-sm text-cyan-500 font-medium">{t('tools.maintenanceScheduler.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.maintenanceScheduler.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -389,7 +389,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
         <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-primary-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl">
                 <Wrench className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -440,7 +440,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
               {/* New Task Button */}
               <button
                 onClick={openNewTask}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all shadow-lg shadow-cyan-500/20"
+                className="px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/20"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.maintenanceScheduler.newTask', 'New Task')}
@@ -453,7 +453,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.maintenanceScheduler.totalTasks', 'Total Tasks')}</p>
-            <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+            <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
           </div>
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.maintenanceScheduler.pending', 'Pending')}</p>
@@ -489,7 +489,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                       : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                  } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                  } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                 />
               </div>
 
@@ -501,7 +501,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
               >
                 <option value="all">{t('tools.maintenanceScheduler.allCategories', 'All Categories')}</option>
                 {CATEGORY_OPTIONS.map(cat => (
@@ -517,7 +517,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
               >
                 <option value="all">{t('tools.maintenanceScheduler.allStatus', 'All Status')}</option>
                 {STATUS_OPTIONS.map(status => (
@@ -578,7 +578,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                   />
                 </div>
 
@@ -596,7 +596,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none resize-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none resize-none`}
                   />
                 </div>
 
@@ -613,7 +613,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     >
                       {CATEGORY_OPTIONS.map(cat => (
                         <option key={cat.value} value={cat.value}>{cat.label}</option>
@@ -632,7 +632,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     >
                       {PRIORITY_OPTIONS.map(p => (
                         <option key={p.value} value={p.value}>{p.label}</option>
@@ -655,7 +655,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
 
@@ -670,7 +670,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     >
                       {STATUS_OPTIONS.map(s => (
                         <option key={s.value} value={s.value}>{s.label}</option>
@@ -693,7 +693,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                   />
                 </div>
 
@@ -712,7 +712,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
 
@@ -729,7 +729,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -748,7 +748,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none resize-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none resize-none`}
                   />
                 </div>
               </div>
@@ -779,7 +779,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                   <button
                     onClick={handleSave}
                     disabled={!formData.title || !formData.dueDate}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {editingTask ? t('tools.maintenanceScheduler.update', 'Update') : t('tools.maintenanceScheduler.create', 'Create')}
                   </button>

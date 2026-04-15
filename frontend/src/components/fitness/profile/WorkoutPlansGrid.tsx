@@ -184,7 +184,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
           </Select>
           
           {/* Create New Plan */}
-          <Button onClick={onCreatePlan} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+          <Button onClick={onCreatePlan} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
             <Icon path={mdiPlus} size={0.7} className="mr-2" />
             New Plan
           </Button>
@@ -291,7 +291,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
                 <Button 
                   size="sm" 
                   onClick={() => onStartWorkout?.(plan.id)}
-                  className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                  className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                 >
                   <Icon path={mdiPlay} size={0.7} className="mr-1" />
                   Start
@@ -311,7 +311,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
                 <Button
                   size="sm"
                   onClick={() => onEditPlan?.(plan.id)}
-                  className="bg-white/10 border border-white/20 text-white hover:bg-cyan-500/20 hover:border-cyan-500/30 hover:text-cyan-400"
+                  className="bg-white/10 border border-white/20 text-white hover:bg-primary-500/20 hover:border-primary-500/30 hover:text-primary-400"
                 >
                   <Icon path={mdiPencil} size={0.7} className="mr-1" />
                   Edit
@@ -345,7 +345,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
             }
           </p>
           {filter === 'all' && (
-            <Button onClick={onCreatePlan} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+            <Button onClick={onCreatePlan} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
               <Icon path={mdiPlus} size={0.7} className="mr-2" />
               Create Your First Plan
             </Button>

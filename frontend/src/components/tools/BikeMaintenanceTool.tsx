@@ -332,17 +332,17 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-cyan-500" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
       </div>
     );
   }
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg"><Bike className="w-5 h-5 text-cyan-500" /></div>
+            <div className="p-2 bg-primary-500/10 rounded-lg"><Bike className="w-5 h-5 text-primary-500" /></div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.bikeMaintenanceTracker', 'Bike Maintenance Tracker')}</h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.bikeMaintenance.keepYourRideInTop', 'Keep your ride in top condition')}</p>
@@ -386,7 +386,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
             <button
               key={bike.id}
               onClick={() => setSelectedBikeId(bike.id)}
-              className={`py-2 px-4 rounded-lg text-sm flex items-center gap-2 ${selectedBikeId === bike.id ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-2 px-4 rounded-lg text-sm flex items-center gap-2 ${selectedBikeId === bike.id ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <Bike className="w-4 h-4" />
               {bike.name}
@@ -417,7 +417,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 <button
                   key={type}
                   onClick={() => setNewBikeType(type)}
-                  className={`py-2 px-3 rounded-lg text-sm ${newBikeType === type ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}
+                  className={`py-2 px-3 rounded-lg text-sm ${newBikeType === type ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}
                 >
                   {bikeTypeConfigs[type].name}
                 </button>
@@ -426,7 +426,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
             <div className="flex gap-2">
               <button
                 onClick={handleAddBike}
-                className="flex-1 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                className="flex-1 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
               >
                 {t('tools.bikeMaintenance.addBike2', 'Add Bike')}
               </button>
@@ -451,7 +451,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
-              className={`py-2 px-4 rounded-lg text-sm flex items-center gap-2 ${activeTab === tab.id ? 'bg-cyan-500 text-white' : isDark ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`py-2 px-4 rounded-lg text-sm flex items-center gap-2 ${activeTab === tab.id ? 'bg-primary-500 text-white' : isDark ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-900'}`}
             >
               <tab.icon className="w-4 h-4" />
               {tab.label}
@@ -464,10 +464,10 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
             {/* Profile Tab */}
             {activeTab === 'profile' && (
               <div className="space-y-4">
-                <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+                <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                   <div className="flex items-center justify-between mb-2">
                     <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{selectedBike.name}</h4>
-                    <span className="text-cyan-500 font-bold">{bikeTypeConfigs[selectedBike.type].name}</span>
+                    <span className="text-primary-500 font-bold">{bikeTypeConfigs[selectedBike.type].name}</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-sm">
                     <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>
@@ -483,7 +483,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 {maintenanceStatus.nextService && (
                   <div className={`p-4 rounded-lg ${maintenanceStatus.nextService.milesRemaining < 100 ? (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200') : (isDark ? 'bg-gray-800' : 'bg-gray-50')} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Wrench className={`w-5 h-5 ${maintenanceStatus.nextService.milesRemaining < 100 ? 'text-red-500' : 'text-cyan-500'}`} />
+                      <Wrench className={`w-5 h-5 ${maintenanceStatus.nextService.milesRemaining < 100 ? 'text-red-500' : 'text-primary-500'}`} />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.nextServiceDue', 'Next Service Due')}</span>
                     </div>
                     <div className={`text-lg font-bold ${maintenanceStatus.nextService.milesRemaining < 100 ? 'text-red-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -496,7 +496,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Link2 className="w-4 h-4 text-cyan-500" />
+                      <Link2 className="w-4 h-4 text-primary-500" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.chain', 'Chain')}</span>
                     </div>
                     <div className={`text-2xl font-bold ${getStatusColor(maintenanceStatus.chainWearPercent)}`}>
@@ -508,7 +508,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                   </div>
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <CircleDot className="w-4 h-4 text-cyan-500" />
+                      <CircleDot className="w-4 h-4 text-primary-500" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.tires', 'Tires')}</span>
                     </div>
                     <div className={`text-2xl font-bold ${getStatusColor(maintenanceStatus.tireWearPercent)}`}>
@@ -559,7 +559,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                     />
                     <button
                       onClick={handleAddMileage}
-                      className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                      className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                     >
                       {t('tools.bikeMaintenance.add', 'Add')}
                     </button>
@@ -587,7 +587,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <Link2 className="w-5 h-5 text-cyan-500" />
+                      <Link2 className="w-5 h-5 text-primary-500" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.chainWear', 'Chain Wear')}</span>
                     </div>
                     <span className={`text-sm font-medium ${getStatusColor(maintenanceStatus.chainWearPercent)}`}>
@@ -609,7 +609,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <CircleDot className="w-5 h-5 text-cyan-500" />
+                      <CircleDot className="w-5 h-5 text-primary-500" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.tireWear', 'Tire Wear')}</span>
                     </div>
                     <span className={`text-sm font-medium ${getStatusColor(maintenanceStatus.tireWearPercent)}`}>
@@ -631,7 +631,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <Disc className="w-5 h-5 text-cyan-500" />
+                      <Disc className="w-5 h-5 text-primary-500" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.brakeCheck', 'Brake Check')}</span>
                     </div>
                     <span className={`text-sm font-medium ${getStatusColor(maintenanceStatus.brakeCheckPercent)}`}>
@@ -653,7 +653,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 <div className={`p-4 rounded-lg ${maintenanceStatus.pressureCheckPercent >= 100 ? (isDark ? 'bg-amber-900/20 border-amber-800' : 'bg-amber-50 border-amber-200') : (isDark ? 'bg-gray-800' : 'bg-gray-50')} border ${maintenanceStatus.pressureCheckPercent >= 100 ? '' : isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <Gauge className="w-5 h-5 text-cyan-500" />
+                      <Gauge className="w-5 h-5 text-primary-500" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bikeMaintenance.tirePressureCheck', 'Tire Pressure Check')}</span>
                     </div>
                     {maintenanceStatus.pressureCheckPercent >= 100 ? (
@@ -677,7 +677,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                   </div>
                   <button
                     onClick={handlePressureCheck}
-                    className="mt-2 px-4 py-2 bg-cyan-500 text-white rounded-lg text-sm hover:bg-cyan-600"
+                    className="mt-2 px-4 py-2 bg-primary-500 text-white rounded-lg text-sm hover:bg-primary-600"
                   >
                     {t('tools.bikeMaintenance.markAsChecked', 'Mark as Checked')}
                   </button>
@@ -686,7 +686,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                 {/* Add Service Record */}
                 <button
                   onClick={() => setShowAddService(true)}
-                  className="w-full py-3 bg-cyan-500 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-cyan-600"
+                  className="w-full py-3 bg-primary-500 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-primary-600"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.bikeMaintenance.logService', 'Log Service')}
@@ -721,7 +721,7 @@ export const BikeMaintenanceTool: React.FC<BikeMaintenanceToolProps> = ({ uiConf
                     <div className="flex gap-2">
                       <button
                         onClick={handleAddServiceRecord}
-                        className="flex-1 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                        className="flex-1 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                       >
                         {t('tools.bikeMaintenance.saveRecord', 'Save Record')}
                       </button>

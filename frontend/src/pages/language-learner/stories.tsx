@@ -139,7 +139,7 @@ const StoriesPage: React.FC = () => {
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'beginner':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'intermediate':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
       case 'advanced':
@@ -417,7 +417,7 @@ const StoriesPage: React.FC = () => {
           /* Story Reader */
           <div className="space-y-6">
             {/* Story Header */}
-            <GlassCard className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10" hover={false} glow>
+            <GlassCard className="bg-gradient-to-r from-primary-500/10 to-primary-500/10" hover={false} glow>
               <div className="flex items-start justify-between mb-4">
                 <Button
                   variant="ghost"
@@ -477,7 +477,7 @@ const StoriesPage: React.FC = () => {
                 <div className="mt-4">
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-500"
                       style={{ width: `${selectedStory.completionRate}%` }}
                     />
                   </div>

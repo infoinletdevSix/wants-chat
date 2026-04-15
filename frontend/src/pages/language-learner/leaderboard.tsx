@@ -84,14 +84,14 @@ const LeaderboardPage: React.FC = () => {
               title="My Rank"
               value={isLoading ? '-' : `#${myRank}`}
               icon={<Trophy />}
-              color="from-blue-500 to-cyan-500"
+              color="from-blue-500 to-primary-500"
             />
 
             <StatCard
               title="Total Users"
               value={isLoading ? '-' : leaderboardData.length.toString()}
               icon={<Users />}
-              color="from-emerald-500 to-green-500"
+              color="from-primary-500 to-green-500"
             />
 
             <StatCard
@@ -120,7 +120,7 @@ const LeaderboardPage: React.FC = () => {
                 variant={selectedPeriod === 'weekly' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedPeriod('weekly')}
-                className={selectedPeriod === 'weekly' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+                className={selectedPeriod === 'weekly' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
               >
                 Weekly
               </Button>
@@ -128,7 +128,7 @@ const LeaderboardPage: React.FC = () => {
                 variant={selectedPeriod === 'monthly' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedPeriod('monthly')}
-                className={selectedPeriod === 'monthly' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+                className={selectedPeriod === 'monthly' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
               >
                 Monthly
               </Button>
@@ -136,7 +136,7 @@ const LeaderboardPage: React.FC = () => {
                 variant={selectedPeriod === 'all-time' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedPeriod('all-time')}
-                className={selectedPeriod === 'all-time' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+                className={selectedPeriod === 'all-time' ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
               >
                 All Time
               </Button>
@@ -163,7 +163,7 @@ const LeaderboardPage: React.FC = () => {
                       </div>
 
                       <Avatar className="h-12 w-12">
-                        <AvatarFallback className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white font-semibold">
+                        <AvatarFallback className="bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold">
                           {entry.username.substring(0, 2).toUpperCase()}
                         </AvatarFallback>
                       </Avatar>

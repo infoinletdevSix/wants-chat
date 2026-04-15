@@ -141,7 +141,7 @@ const STATUS_CONFIG: Record<CallStatus, { label: string; color: string; bgColor:
   new: { label: 'New', color: 'text-blue-600', bgColor: 'bg-blue-100' },
   assigned: { label: 'Assigned', color: 'text-purple-600', bgColor: 'bg-purple-100' },
   en_route: { label: 'En Route', color: 'text-orange-600', bgColor: 'bg-orange-100' },
-  on_site: { label: 'On Site', color: 'text-cyan-600', bgColor: 'bg-cyan-100' },
+  on_site: { label: 'On Site', color: 'text-primary-600', bgColor: 'bg-primary-100' },
   completed: { label: 'Completed', color: 'text-green-600', bgColor: 'bg-green-100' },
   cancelled: { label: 'Cancelled', color: 'text-red-600', bgColor: 'bg-red-100' },
   follow_up: { label: 'Follow Up', color: 'text-yellow-600', bgColor: 'bg-yellow-100' },
@@ -727,7 +727,7 @@ export function ServiceCallLocksmithTool({
                           {call.status === 'en_route' && (
                             <button
                               onClick={() => updateStatus(call.id, 'on_site')}
-                              className="px-3 py-2 bg-cyan-600 text-white rounded-lg text-sm hover:bg-cyan-700"
+                              className="px-3 py-2 bg-primary-600 text-white rounded-lg text-sm hover:bg-primary-700"
                             >
                               {t('tools.serviceCallLocksmith.onSite', 'On Site')}
                             </button>

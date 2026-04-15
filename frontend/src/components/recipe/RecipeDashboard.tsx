@@ -345,25 +345,25 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
         <TabsList className="grid w-full grid-cols-4 mb-8 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-1 h-auto">
           <TabsTrigger
             value="overview"
-            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
+            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
           >
             Overview
           </TabsTrigger>
           <TabsTrigger
             value="favorites"
-            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
+            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
           >
             Favorites
           </TabsTrigger>
           <TabsTrigger
             value="popular"
-            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
+            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
           >
             Popular
           </TabsTrigger>
           <TabsTrigger
             value="shopping"
-            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
+            className="rounded-lg px-4 py-3 text-white/60 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-primary-500 data-[state=active]:text-white data-[state=active]:shadow-lg hover:text-white hover:bg-white/10 transition-all"
           >
             Shopping
           </TabsTrigger>
@@ -383,7 +383,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
             </div>
             <Button
               onClick={() => onNavigate('/recipe-builder/add')}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl h-12 px-6"
             >
               <Plus className="h-5 w-5 mr-2" />
               Add New Recipe
@@ -513,7 +513,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
                   <p className="text-white/60 mb-4">No recipes yet</p>
                   <Button
                     onClick={() => onNavigate('/recipe-builder/add')}
-                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+                    className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
                   >
                     <Plus className="h-4 w-4 mr-2" />
                     Create Your First Recipe
@@ -616,7 +616,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
               </h3>
               <Button
                 onClick={() => onNavigate('/recipe-builder/shopping')}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 New List
@@ -660,7 +660,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
                       </div>
                       <div className="mt-3">
                         <div className="w-full bg-white/10 rounded-full h-2.5">
-                          <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2.5 rounded-full"
+                          <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-2.5 rounded-full"
                                style={{width: `${list.completionPercentage || 0}%`}}></div>
                         </div>
                       </div>
@@ -673,7 +673,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
                   <p className="text-white/60 mb-4">No shopping lists yet</p>
                   <Button
                     onClick={() => onNavigate('/recipe-builder/shopping')}
-                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                    className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                   >
                     <Plus className="h-4 w-4 mr-2" />
                     Create Your First List
@@ -724,7 +724,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setRatingDialogOpen(false)} className="bg-transparent border-white/20 text-white hover:bg-white/10">Cancel</Button>
-            <Button onClick={submitRating} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">Submit Rating</Button>
+            <Button onClick={submitRating} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">Submit Rating</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -753,7 +753,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
                 onChange={(e) => setNewItemQuantity(e.target.value)}
                 className="w-32 bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
-              <Button onClick={handleAddItem} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">Add</Button>
+              <Button onClick={handleAddItem} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">Add</Button>
             </div>
 
             {/* Items list */}
@@ -796,7 +796,7 @@ export const RecipeDashboard: React.FC<RecipeDashboardProps> = ({ recipes, onNav
                 <span className="text-white">{selectedShoppingList?.completionPercentage || 0}%</span>
               </div>
               <div className="w-full bg-white/10 rounded-full h-2.5">
-                <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2.5 rounded-full"
+                <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-2.5 rounded-full"
                      style={{width: `${selectedShoppingList?.completionPercentage || 0}%`}}></div>
               </div>
             </div>

@@ -247,9 +247,9 @@ export const HotTubMaintenanceTool: React.FC<HotTubMaintenanceToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Droplets className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Droplets className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.hotTubMaintenance.hotTubMaintenanceTool', 'Hot Tub Maintenance Tool')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.hotTubMaintenance.waterChemistryFiltersAndMaintenance', 'Water chemistry, filters, and maintenance schedules')}</p>
@@ -261,7 +261,7 @@ export const HotTubMaintenanceTool: React.FC<HotTubMaintenanceToolProps> = ({ ui
         {/* Water Volume Section */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <Droplets className="w-4 h-4 text-cyan-500" />
+            <Droplets className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.hotTubMaintenance.waterVolume', 'Water Volume')}</h4>
           </div>
 
@@ -270,14 +270,14 @@ export const HotTubMaintenanceTool: React.FC<HotTubMaintenanceToolProps> = ({ ui
               <button
                 key={size}
                 onClick={() => setTubSize(size)}
-                className={`py-2 px-3 rounded-lg text-sm ${tubSize === size ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${tubSize === size ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {TUB_SIZES[size].name}
               </button>
             ))}
             <button
               onClick={() => setTubSize('custom')}
-              className={`col-span-2 py-2 px-3 rounded-lg text-sm ${tubSize === 'custom' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`col-span-2 py-2 px-3 rounded-lg text-sm ${tubSize === 'custom' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {t('tools.hotTubMaintenance.customSize', 'Custom Size')}
             </button>
@@ -300,7 +300,7 @@ export const HotTubMaintenanceTool: React.FC<HotTubMaintenanceToolProps> = ({ ui
 
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hotTubMaintenance.yourHotTubVolume', 'Your Hot Tub Volume')}</div>
-            <div className="text-3xl font-bold text-cyan-500">{waterVolume.toLocaleString()} gal</div>
+            <div className="text-3xl font-bold text-primary-500">{waterVolume.toLocaleString()} gal</div>
             <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
               {(waterVolume * 3.785).toLocaleString(undefined, { maximumFractionDigits: 0 })} liters
             </div>
@@ -543,7 +543,7 @@ export const HotTubMaintenanceTool: React.FC<HotTubMaintenanceToolProps> = ({ ui
               </div>
               <div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hotTubMaintenance.totalTime', 'Total Time')}</div>
-                <div className="text-xl font-bold text-cyan-500">{drainRefillCalc.totalTime} hrs</div>
+                <div className="text-xl font-bold text-primary-500">{drainRefillCalc.totalTime} hrs</div>
               </div>
             </div>
           </div>

@@ -338,7 +338,7 @@ const LanguageLearnerDashboard: React.FC = () => {
           <p className="text-white/60 mb-4">
             {progressError || leaderboardError || achievementsError || analyticsError}
           </p>
-          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
+          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700">
             Try Again
           </Button>
         </GlassCard>
@@ -385,7 +385,7 @@ const LanguageLearnerDashboard: React.FC = () => {
           {/* Continue Learning */}
           <GlassCard hover={false}>
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
+              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600">
                 <BookOpen className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-semibold text-white">
@@ -411,7 +411,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                   </div>
                 </div>
                 <Button
-                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                   size="lg"
                   onClick={() => {
                     if (lessonId) {
@@ -442,12 +442,12 @@ const LanguageLearnerDashboard: React.FC = () => {
                 </div>
                 <div className="h-2 bg-white/10 rounded-full overflow-hidden mb-4">
                   <div
-                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full"
+                    className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"
                     style={{ width: `${dashboardData.currentLesson.progress}%` }}
                   />
                 </div>
                 <Button
-                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                   size="lg"
                   onClick={() => navigate('/language-learner/learning')}
                 >
@@ -462,7 +462,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-1">Ready to Learn?</h3>
                 <p className="text-sm text-white/60 mb-4">Select a lesson to continue your journey</p>
                 <Button
-                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                   size="lg"
                   onClick={() => navigate('/language-learner/learning')}
                 >
@@ -511,7 +511,7 @@ const LanguageLearnerDashboard: React.FC = () => {
           {/* Weekly Progress */}
           <GlassCard hover={false}>
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
+              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600">
                 <BarChart3 className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -532,12 +532,12 @@ const LanguageLearnerDashboard: React.FC = () => {
                       {dashboardData.weeklyXp.reduce((a, b) => a + b, 0)}
                     </p>
                   </div>
-                  <div className="bg-emerald-500/10 rounded-xl p-4 border border-emerald-500/20">
+                  <div className="bg-primary-500/10 rounded-xl p-4 border border-primary-500/20">
                     <div className="flex items-center gap-2 mb-2">
-                      <Flame className="h-4 w-4 text-emerald-400" />
+                      <Flame className="h-4 w-4 text-primary-400" />
                       <p className="text-sm font-medium text-white/70">Active Days</p>
                     </div>
-                    <p className="text-3xl font-bold text-emerald-400">
+                    <p className="text-3xl font-bold text-primary-400">
                       {dashboardData.weeklyXp.filter(xp => xp > 0).length}
                     </p>
                   </div>
@@ -562,7 +562,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                             </div>
                           )}
                           <div
-                            className={`w-full max-w-8 rounded-t transition-all duration-300 ${isToday ? 'bg-gradient-to-t from-primary-500 to-cyan-500' : 'bg-white/20'}`}
+                            className={`w-full max-w-8 rounded-t transition-all duration-300 ${isToday ? 'bg-gradient-to-t from-primary-500 to-primary-600' : 'bg-white/20'}`}
                             style={{
                               height: `${Math.max(heightPercent, 5)}%`,
                             }}

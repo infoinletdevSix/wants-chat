@@ -439,7 +439,7 @@ const AddRecipe: React.FC = () => {
               </Button>
               <Button
                 onClick={handleSaveRecipe}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6 flex-1"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl h-12 px-6 flex-1"
                 disabled={!newRecipe.title?.trim() || createRecipe.loading}
               >
                 {createRecipe.loading ? (

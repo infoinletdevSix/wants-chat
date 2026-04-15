@@ -247,7 +247,7 @@ const SleepAlarms: React.FC = () => {
               setEditingAlarm(null);
               setShowDialog(true);
             }}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500"
+            className="bg-gradient-to-r from-primary-500 to-primary-600"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add Alarm
@@ -415,7 +415,7 @@ const SleepAlarms: React.FC = () => {
               </p>
               <Button
                 onClick={() => setShowDialog(true)}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-primary-600"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create Your First Alarm
@@ -533,7 +533,7 @@ const SleepAlarms: React.FC = () => {
                   </Button>
                 )}
                 <Button
-                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600"
                   onClick={dismissAlarm}
                 >
                   <X className="w-4 h-4 mr-2" />

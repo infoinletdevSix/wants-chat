@@ -657,9 +657,9 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -719,12 +719,12 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
         </div>
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Hand className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Hand className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>Hand Hygiene</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.avgHandHygieneCompliance}%</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.avgHandHygieneCompliance}%</p>
             </div>
           </div>
         </div>
@@ -800,7 +800,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
         <div className={cardClass}>
           <div className="p-4 border-b border-gray-700">
             <h3 className="font-semibold flex items-center gap-2">
-              <Clock className="w-5 h-5 text-cyan-500" />
+              <Clock className="w-5 h-5 text-primary-500" />
               Recent Cases
             </h3>
           </div>
@@ -841,7 +841,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
         <div className={cardClass}>
           <div className="p-4 border-b border-gray-700">
             <h3 className="font-semibold flex items-center gap-2">
-              <Hand className="w-5 h-5 text-cyan-500" />
+              <Hand className="w-5 h-5 text-primary-500" />
               {t('tools.infectionControl.handHygieneComplianceTrend', 'Hand Hygiene Compliance Trend')}
             </h3>
           </div>
@@ -1171,7 +1171,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
                     <p className="text-xs text-gray-400">{t('tools.infectionControl.units', 'Units')}</p>
                   </div>
                   <div className={`p-2 rounded text-center ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
-                    <p className="text-lg font-bold text-cyan-400">{outbreak.interventions.length}</p>
+                    <p className="text-lg font-bold text-primary-400">{outbreak.interventions.length}</p>
                     <p className="text-xs text-gray-400">{t('tools.infectionControl.interventions', 'Interventions')}</p>
                   </div>
                 </div>
@@ -1189,7 +1189,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
                   <p className="text-xs text-gray-400 mb-1">{t('tools.infectionControl.interventions2', 'Interventions')}</p>
                   <div className="flex flex-wrap gap-1">
                     {outbreak.interventions.slice(0, 3).map((int, i) => (
-                      <span key={i} className="px-2 py-0.5 text-xs bg-cyan-500/20 text-cyan-400 rounded">{int}</span>
+                      <span key={i} className="px-2 py-0.5 text-xs bg-primary-500/20 text-primary-400 rounded">{int}</span>
                     ))}
                     {outbreak.interventions.length > 3 && (
                       <span className="px-2 py-0.5 text-xs bg-gray-500/20 text-gray-400 rounded">+{outbreak.interventions.length - 3} more</span>
@@ -1221,7 +1221,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
       <div className={cardClass}>
         <div className="p-4 border-b border-gray-700">
           <h3 className="font-semibold flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-cyan-500" />
+            <BarChart3 className="w-5 h-5 text-primary-500" />
             {t('tools.infectionControl.surveillanceMetricsRatePer1', 'Surveillance Metrics (Rate per 1,000 Device Days)')}
           </h3>
         </div>
@@ -1300,7 +1300,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
       <div className={cardClass}>
         <div className="p-4 border-b border-gray-700">
           <h3 className="font-semibold flex items-center gap-2">
-            <Hand className="w-5 h-5 text-cyan-500" />
+            <Hand className="w-5 h-5 text-primary-500" />
             {t('tools.infectionControl.handHygieneAudits', 'Hand Hygiene Audits')}
           </h3>
         </div>
@@ -1711,7 +1711,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {outbreakFormData.interventions.map((int, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {int} <button onClick={() => removeIntervention(int)}><X className="w-3 h-3" /></button>
                     </span>
                   ))}
@@ -1782,7 +1782,7 @@ export const InfectionControlTool: React.FC<InfectionControlToolProps> = ({ uiCo
               </div>
 
               <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
-                <p className="text-sm text-gray-400">Calculated Rate: <span className="font-bold text-cyan-400">
+                <p className="text-sm text-gray-400">Calculated Rate: <span className="font-bold text-primary-400">
                   {metricFormData.deviceDays > 0 ? ((metricFormData.caseCount / metricFormData.deviceDays) * 1000).toFixed(2) : '0.00'}
                 </span> {t('tools.infectionControl.per1000DeviceDays', 'per 1,000 device days')}</p>
               </div>

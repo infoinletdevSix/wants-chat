@@ -232,7 +232,7 @@ const MeditationHistory: React.FC = () => {
     const colors: { [key: string]: string } = {
       // Backend session types
       'mindfulness': 'bg-green-100 text-green-800',
-      'breathing': 'bg-cyan-100 text-cyan-800',
+      'breathing': 'bg-primary-100 text-primary-800',
       'body_scan': 'bg-indigo-100 text-indigo-800',
       'loving_kindness': 'bg-pink-100 text-pink-800',
       'walking': 'bg-primary-100 text-primary-800',
@@ -416,7 +416,7 @@ const MeditationHistory: React.FC = () => {
                     ? "You haven't meditated this week yet."
                     : "You haven't started your meditation journey yet."}
               </p>
-              <Button onClick={() => navigate('/meditation')} className="flex items-center gap-2 mx-auto bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+              <Button onClick={() => navigate('/meditation')} className="flex items-center gap-2 mx-auto bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
                 <Play className="h-4 w-4" />
                 Start Meditating
               </Button>
@@ -519,7 +519,7 @@ const MeditationHistory: React.FC = () => {
                     variant={page === currentPage ? "default" : "outline"}
                     size="sm"
                     onClick={() => setCurrentPage(page)}
-                    className={page === currentPage ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white" : "border-white/20 text-white hover:bg-white/10"}
+                    className={page === currentPage ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white" : "border-white/20 text-white hover:bg-white/10"}
                   >
                     {page}
                   </Button>

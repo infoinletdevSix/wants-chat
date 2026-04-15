@@ -189,10 +189,10 @@ export const EquationSolverTool: React.FC<EquationSolverToolProps> = ({ uiConfig
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 rounded-lg">
-            <Calculator className="w-5 h-5 text-emerald-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Calculator className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.equationSolver.equationSolver', 'Equation Solver')}</h3>
@@ -222,7 +222,7 @@ export const EquationSolverTool: React.FC<EquationSolverToolProps> = ({ uiConfig
               onClick={() => setEquationType(type.value as EquationType)}
               className={`px-4 py-2 text-sm rounded-lg transition-colors ${
                 equationType === type.value
-                  ? 'bg-emerald-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -338,11 +338,11 @@ export const EquationSolverTool: React.FC<EquationSolverToolProps> = ({ uiConfig
         )}
 
         {/* Solution Display */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-100'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <Lightbulb className="w-5 h-5 text-emerald-500" />
-              <span className={`font-medium ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>{t('tools.equationSolver.solution', 'Solution')}</span>
+              <Lightbulb className="w-5 h-5 text-primary-500" />
+              <span className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>{t('tools.equationSolver.solution', 'Solution')}</span>
             </div>
             <button
               onClick={handleCopy}
@@ -376,8 +376,8 @@ export const EquationSolverTool: React.FC<EquationSolverToolProps> = ({ uiConfig
               </div>
 
               {(solution as any).steps && (
-                <div className="space-y-1 pt-4 border-t border-emerald-200 dark:border-emerald-800">
-                  <div className={`text-sm font-medium ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>{t('tools.equationSolver.steps', 'Steps:')}</div>
+                <div className="space-y-1 pt-4 border-t border-primary-200 dark:border-primary-800">
+                  <div className={`text-sm font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>{t('tools.equationSolver.steps', 'Steps:')}</div>
                   {(solution as any).steps.map((step: string, idx: number) => (
                     <div key={idx} className={`text-sm font-mono ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       {idx + 1}. {step}

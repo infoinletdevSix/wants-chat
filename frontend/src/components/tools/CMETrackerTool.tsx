@@ -502,15 +502,15 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -520,7 +520,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
 
   const tabClass = (isActive: boolean) => `px-4 py-2 font-medium rounded-lg transition-colors ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400'
+      ? 'bg-primary-500/20 text-primary-400'
       : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'
   }`;
 
@@ -531,8 +531,8 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <GraduationCap className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <GraduationCap className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -577,12 +577,12 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <Users className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <Users className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.cMETracker.providers', 'Providers')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -679,7 +679,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredProviders.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -696,14 +696,14 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
                       onClick={() => setSelectedProvider(provider)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedProvider?.id === provider.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3 flex-1">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <User className="w-4 h-4 text-cyan-500" />
+                            <User className="w-4 h-4 text-primary-500" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <p className="font-medium truncate">{provider.name}</p>
@@ -722,7 +722,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
                               <div
                                 className={`h-full rounded-full transition-all ${
                                   progressPercent >= 100 ? 'bg-green-500' :
-                                  progressPercent >= 75 ? 'bg-cyan-500' :
+                                  progressPercent >= 75 ? 'bg-primary-500' :
                                   progressPercent >= 50 ? 'bg-yellow-500' : 'bg-red-500'
                                 }`}
                                 style={{ width: `${progressPercent}%` }}
@@ -801,7 +801,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
                 <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold">{t('tools.cMETracker.creditProgress', 'Credit Progress')}</h3>
-                    <span className="text-lg font-bold text-cyan-500">
+                    <span className="text-lg font-bold text-primary-500">
                       {selectedProvider.earnedCredits} / {selectedProvider.requiredCredits} credits
                     </span>
                   </div>
@@ -810,7 +810,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
                       className={`h-full rounded-full transition-all ${
                         getProgressPercentage(selectedProvider.earnedCredits, selectedProvider.requiredCredits) >= 100
                           ? 'bg-green-500'
-                          : 'bg-gradient-to-r from-cyan-500 to-primary-500'
+                          : 'bg-gradient-to-r from-primary-500 to-primary-600'
                       }`}
                       style={{ width: `${getProgressPercentage(selectedProvider.earnedCredits, selectedProvider.requiredCredits)}%` }}
                     />
@@ -865,7 +865,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
                               <div className="flex items-start justify-between">
                                 <div className="flex items-start gap-3 flex-1">
                                   <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                                    <ActivityIcon className="w-4 h-4 text-cyan-500" />
+                                    <ActivityIcon className="w-4 h-4 text-primary-500" />
                                   </div>
                                   <div className="flex-1">
                                     <div className="flex items-center gap-2">
@@ -878,7 +878,7 @@ export const CMETrackerTool: React.FC<CMETrackerToolProps> = ({ uiConfig }) => {
                                       {activity.provider}
                                     </p>
                                     <div className="flex flex-wrap items-center gap-2 mt-2">
-                                      <span className="px-2 py-0.5 text-xs bg-cyan-500/20 text-cyan-400 rounded">
+                                      <span className="px-2 py-0.5 text-xs bg-primary-500/20 text-primary-400 rounded">
                                         {activity.credits} credits
                                       </span>
                                       <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-400 rounded">

@@ -571,7 +571,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
       case 'review': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       case 'approved': return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'filed': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
-      case 'served': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+      case 'served': return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
@@ -602,15 +602,15 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -620,7 +620,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
 
   const tabClass = (isActive: boolean) => `px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+      ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
       : theme === 'dark'
         ? 'text-gray-400 hover:bg-gray-700'
         : 'text-gray-600 hover:bg-gray-100'
@@ -681,12 +681,12 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <FileText className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <FileText className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.pleadingDrafter.total', 'Total')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -774,7 +774,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredPleadings.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -792,7 +792,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
                       onClick={() => setSelectedPleading(pleading)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedPleading?.id === pleading.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
@@ -905,7 +905,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
                 {selectedPleading.parties.length > 0 && (
                   <div>
                     <h3 className="font-semibold mb-3 flex items-center gap-2">
-                      <Users className="w-4 h-4 text-cyan-500" />
+                      <Users className="w-4 h-4 text-primary-500" />
                       Parties ({selectedPleading.parties.length})
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -950,7 +950,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
                       {selectedPleading.paragraphs.map((para) => (
                         <div key={para.id} className={`p-3 border-b last:border-b-0 ${theme === 'dark' ? 'border-gray-600' : 'border-gray-200'}`}>
                           <div className="flex items-start gap-3">
-                            <span className="text-sm font-mono text-cyan-500 flex-shrink-0">{para.number}.</span>
+                            <span className="text-sm font-mono text-primary-500 flex-shrink-0">{para.number}.</span>
                             <div className="flex-1">
                               <p className="text-sm line-clamp-2">{para.content}</p>
                               <div className="flex items-center gap-2 mt-1">
@@ -1362,7 +1362,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
                       {formData.paragraphs.map((para, idx) => (
                         <div key={para.id} className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                           <div className="flex items-start gap-3">
-                            <span className="text-lg font-mono font-bold text-cyan-500 flex-shrink-0">{para.number}.</span>
+                            <span className="text-lg font-mono font-bold text-primary-500 flex-shrink-0">{para.number}.</span>
                             <div className="flex-1">
                               <p className="text-sm">{para.content || 'Empty paragraph'}</p>
                               <div className="flex items-center gap-2 mt-2 flex-wrap">
@@ -1490,7 +1490,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
                     <div className="space-y-2">
                       {formData.prayerForRelief.map((relief, idx) => (
                         <div key={idx} className={`flex items-center gap-3 p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
-                          <span className="font-mono text-cyan-500">{idx + 1}.</span>
+                          <span className="font-mono text-primary-500">{idx + 1}.</span>
                           <span className="flex-1">{relief}</span>
                           <button onClick={() => removePrayerForRelief(relief)} className="p-1 hover:bg-red-500/20 rounded">
                             <X className="w-4 h-4 text-red-500" />
@@ -1561,7 +1561,7 @@ export const PleadingDrafterTool: React.FC<PleadingDrafterToolProps> = ({ uiConf
                           ...formData,
                           verificationText: 'I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct. Executed on [DATE] at [CITY], [STATE].'
                         })}
-                        className={`mt-2 text-sm ${theme === 'dark' ? 'text-cyan-400 hover:text-cyan-300' : 'text-cyan-600 hover:text-cyan-700'}`}
+                        className={`mt-2 text-sm ${theme === 'dark' ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
                       >
                         {t('tools.pleadingDrafter.useStandardFederalVerification', 'Use standard federal verification')}
                       </button>

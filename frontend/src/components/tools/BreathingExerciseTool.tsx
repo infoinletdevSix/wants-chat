@@ -646,7 +646,7 @@ export const BreathingExerciseTool = ({ uiConfig }: BreathingExerciseToolProps) 
             </CardHeader>
             <CardContent className="pt-0">
               <div className="flex gap-2 flex-wrap">
-                <span className={`px-2 py-1 rounded text-xs font-medium ${theme === 'dark' ? 'bg-emerald-900/30 text-emerald-400' : 'bg-emerald-100 text-emerald-700'}`}>
+                <span className={`px-2 py-1 rounded text-xs font-medium ${theme === 'dark' ? 'bg-primary-900/30 text-primary-400' : 'bg-primary-100 text-primary-700'}`}>
                   Inhale: {selectedPattern.phases.inhale}s
                 </span>
                 {selectedPattern.phases.hold > 0 && (
@@ -789,7 +789,7 @@ export const BreathingExerciseTool = ({ uiConfig }: BreathingExerciseToolProps) 
               <>
                 <button
                   onClick={handlePause}
-                  className={`flex items-center gap-2 px-6 py-4 rounded-xl transition-colors font-medium text-white ${isPaused ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-amber-500 hover:bg-amber-600'}`}
+                  className={`flex items-center gap-2 px-6 py-4 rounded-xl transition-colors font-medium text-white ${isPaused ? 'bg-primary-600 hover:bg-primary-700' : 'bg-amber-500 hover:bg-amber-600'}`}
                 >
                   {isPaused ? (
                     <>

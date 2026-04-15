@@ -105,7 +105,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               {alreadyLost > 0 ? (
-                <TrendingDown className="h-4 w-4 text-emerald-400" />
+                <TrendingDown className="h-4 w-4 text-primary-400" />
               ) : (
                 <TrendingUp className="h-4 w-4 text-orange-400" />
               )}
@@ -123,7 +123,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
         <div className="p-4 bg-white/5 rounded-lg border border-white/10">
           <div className="flex items-center justify-between">
             <span className="text-sm text-white/60">Weekly change</span>
-            <span className={`text-sm font-medium ${getWeeklyChange() < 0 ? 'text-emerald-400' : 'text-orange-400'}`}>
+            <span className={`text-sm font-medium ${getWeeklyChange() < 0 ? 'text-primary-400' : 'text-orange-400'}`}>
               {getWeeklyChange() > 0 ? '+' : ''}{getWeeklyChange()}kg/week
             </span>
           </div>
@@ -197,7 +197,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
               Cancel
             </Button>
             <Button
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               onClick={async () => {
                 const weightValue = parseFloat(weight);
                 if (isNaN(weightValue) || weightValue < 30 || weightValue > 300) {

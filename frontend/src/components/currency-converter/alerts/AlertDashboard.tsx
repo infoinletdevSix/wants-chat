@@ -90,11 +90,11 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
   return (
     <div className="space-y-6">
       {/* Welcome Header */}
-      <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 p-6 rounded-xl border border-primary-400/30">
+      <div className="bg-gradient-to-r from-primary-500/20 to-primary-500/20 p-6 rounded-xl border border-primary-400/30">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <div className="p-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg">
                 <Icon path={mdiBellOutline} size={1.2} className="text-white" />
               </div>
               Currency Alerts
@@ -129,15 +129,15 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
           </p>
         </div>
 
-        <div className="bg-emerald-500/20 border border-emerald-400/30 rounded-xl p-6">
+        <div className="bg-primary-500/20 border border-primary-400/30 rounded-xl p-6">
           <div className="flex items-center justify-between mb-3">
-            <div className="p-2 bg-emerald-500/20 rounded-lg">
-              <Icon path={mdiPulse} size={0.8} className="text-emerald-400" />
+            <div className="p-2 bg-primary-500/20 rounded-lg">
+              <Icon path={mdiPulse} size={0.8} className="text-primary-400" />
             </div>
-            <span className="text-xs text-emerald-300 font-medium">Active</span>
+            <span className="text-xs text-primary-300 font-medium">Active</span>
           </div>
-          <div className="text-2xl font-bold text-emerald-300">{stats.active}</div>
-          <p className="text-sm text-emerald-300/70 mt-1">
+          <div className="text-2xl font-bold text-primary-300">{stats.active}</div>
+          <p className="text-sm text-primary-300/70 mt-1">
             Currently monitoring
           </p>
         </div>
@@ -314,10 +314,10 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
 
       {/* Getting Started Guide */}
       {stats.total === 0 && (
-        <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl border border-primary-400/30">
+        <div className="bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl border border-primary-400/30">
           <div className="p-8">
             <div className="text-center mb-6">
-              <div className="p-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+              <div className="p-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                 <Icon path={mdiBell} size={2} className="text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Getting Started with Alerts</h3>
@@ -334,8 +334,8 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
               </div>
 
               <div className="text-center">
-                <div className="p-3 bg-emerald-500/20 rounded-full w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-xl font-bold text-emerald-300">2</span>
+                <div className="p-3 bg-primary-500/20 rounded-full w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                  <span className="text-xl font-bold text-primary-300">2</span>
                 </div>
                 <h4 className="font-semibold text-white mb-2">Configure Notifications</h4>
                 <p className="text-sm text-white/60">Choose how you want to be notified when thresholds are reached</p>
@@ -353,7 +353,7 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
             <div className="text-center">
               <Button
                 onClick={onCreateNew}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 h-12 px-8 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 h-12 px-8 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
               >
                 <Icon path={mdiPlusCircleOutline} size={0.8} />
                 Create Your First Alert

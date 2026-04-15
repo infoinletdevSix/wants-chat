@@ -103,7 +103,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 16,
       icon: LocalHospitalIcon,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-primary-500',
       route: '/health',
       tagline: 'Comprehensive healthcare management with specialized care modules',
       description: 'Complete health platform with medical records, prescription management, vital signs monitoring (BP, sugar, heart rate, weight), pregnancy tracking, chronic condition management, and doctor appointments.',
@@ -192,7 +192,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 11,
       icon: RestaurantIcon,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-primary-500',
       route: '/calories-tracker',
       tagline: 'Advanced nutrition tracking with intermittent fasting support',
       description: 'Complete nutrition platform with food database, barcode scanner, macro/calorie tracking, water intake monitoring, and 5 intermittent fasting plans with live timer and pause/resume functionality.',
@@ -234,7 +234,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 2,
       icon: AccountBalanceWalletIcon,
-      color: 'from-emerald-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/expense-tracker',
       tagline: 'Smart expense tracking with visual analytics',
       description: 'Financial management platform with expense categorization, payment method tracking, monthly budget limits, visual analytics with charts, advanced search/filtering, and CSV export for tax reporting.',
@@ -431,7 +431,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 1,
       icon: CurrencyExchangeIcon,
-      color: 'from-cyan-500 to-cyan-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/currency-exchange',
       tagline: 'Real-time currency exchange with multi-currency support',
       description: 'Fast and accurate currency conversion with real-time exchange rates, conversion history, and favorite currency pairs.',
@@ -463,7 +463,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 1,
       icon: CheckBoxIcon,
-      color: 'from-cyan-500 to-primary-500',
+      color: 'from-primary-500 to-primary-600',
       route: '/todo',
       tagline: 'Task and project management made simple',
       description: 'Comprehensive task management with priorities, due dates, categories, and completion tracking with analytics.',
@@ -687,7 +687,7 @@ const FeaturesPageFixed: React.FC = () => {
                         {product.status === 'Available' ? (
                           <Button
                             size="lg"
-                            className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
+                            className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700"
                             onClick={() => {
                               if (isAuthenticated) {
                                 navigate(product.route);

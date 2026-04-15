@@ -164,8 +164,8 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-emerald-500/20' : 'bg-emerald-100'}`}>
-            <Calculator className={`w-8 h-8 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`} />
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+            <Calculator className={`w-8 h-8 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -201,7 +201,7 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder="10000"
                   />
                 </div>
@@ -226,7 +226,7 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder="15"
                   />
                 </div>
@@ -251,7 +251,7 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder="25"
                   />
                 </div>
@@ -273,7 +273,7 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder="5000"
                   />
                 </div>
@@ -293,7 +293,7 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                       : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400'
-                  } focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                  } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   placeholder="1500"
                 />
                 <p className={`text-xs mt-1 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -308,8 +308,8 @@ export const BreakEvenCalculatorTool: React.FC<BreakEvenCalculatorToolProps> = (
             {/* Main Results Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {/* Break-Even Units */}
-              <div className={`rounded-2xl p-5 ${isDark ? 'bg-gradient-to-br from-emerald-500/20 to-emerald-600/10' : 'bg-gradient-to-br from-emerald-50 to-emerald-100'}`}>
-                <p className={`text-sm font-medium mb-1 ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>
+              <div className={`rounded-2xl p-5 ${isDark ? 'bg-gradient-to-br from-primary-500/20 to-primary-600/10' : 'bg-gradient-to-br from-primary-50 to-primary-100'}`}>
+                <p className={`text-sm font-medium mb-1 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   {t('tools.breakEvenCalculator.breakEvenUnits2', 'Break-Even Units')}
                 </p>
                 <p className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>

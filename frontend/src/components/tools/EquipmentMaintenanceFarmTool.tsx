@@ -373,7 +373,7 @@ const EquipmentMaintenanceFarmTool: React.FC = () => {
       case 'replacement':
         return 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400';
       case 'overhaul':
-        return 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400';
+        return 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400';
       default:
         return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300';
     }

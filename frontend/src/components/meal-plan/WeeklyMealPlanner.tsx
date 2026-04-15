@@ -367,7 +367,7 @@ export const WeeklyMealPlanner: React.FC<WeeklyMealPlannerProps> = ({ className 
           {/* Create Plan Button */}
           <Button
             onClick={() => navigate('/meal-planner/create')}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:opacity-90"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:opacity-90"
           >
             <Plus className="h-4 w-4 mr-2" />
             Create Plan
@@ -470,7 +470,7 @@ export const WeeklyMealPlanner: React.FC<WeeklyMealPlannerProps> = ({ className 
             <p className="text-white/60 mb-6 max-w-md mx-auto">
               Create a meal plan to organize your weekly meals and generate shopping lists automatically.
             </p>
-            <Button onClick={() => navigate('/meal-planner/create')} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+            <Button onClick={() => navigate('/meal-planner/create')} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
               Create Your First Meal Plan
             </Button>
           </CardContent>

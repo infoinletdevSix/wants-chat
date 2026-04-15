@@ -427,7 +427,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
     return (
       <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-emerald-500" />
+          <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
         </div>
       </div>
     );
@@ -438,12 +438,12 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
       className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}
     >
       <div
-        className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-emerald-900/20' : 'bg-gradient-to-r from-white to-emerald-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}
+        className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-500/10 rounded-lg">
-              <Search className="w-5 h-5 text-emerald-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Search className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -500,21 +500,21 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
         <div className="flex gap-2">
           <button
             onClick={() => setActiveTab('items')}
-            className={`flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-2 ${activeTab === 'items' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-2 ${activeTab === 'items' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             <MapPin className="w-4 h-4" />
             {t('tools.scavengerHunt.items', 'Items')}
           </button>
           <button
             onClick={() => setActiveTab('teams')}
-            className={`flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-2 ${activeTab === 'teams' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-2 ${activeTab === 'teams' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             <Users className="w-4 h-4" />
             {t('tools.scavengerHunt.teams', 'Teams')}
           </button>
           <button
             onClick={() => setActiveTab('hunt')}
-            className={`flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-2 ${activeTab === 'hunt' ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-2 ${activeTab === 'hunt' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             <Trophy className="w-4 h-4" />
             {t('tools.scavengerHunt.hunt', 'Hunt')}
@@ -534,7 +534,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                   <button
                     key={d}
                     onClick={() => setDifficulty(d)}
-                    className={`py-2 px-3 rounded-lg text-sm capitalize ${difficulty === d ? 'bg-emerald-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                    className={`py-2 px-3 rounded-lg text-sm capitalize ${difficulty === d ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                   >
                     {d}
                   </button>
@@ -544,7 +544,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
 
             {/* Add New Item */}
             <div
-              className={`p-4 rounded-lg ${isDark ? 'bg-emerald-900/20 border-emerald-800' : 'bg-emerald-50 border-emerald-200'} border`}
+              className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}
             >
               <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.scavengerHunt.addNewItem', 'Add New Item')}
@@ -567,7 +567,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                 />
                 <button
                   onClick={addItem}
-                  className="p-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+                  className="p-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                 </button>
@@ -592,13 +592,13 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                 {items.map((item) => (
                   <div
                     key={item.id}
-                    className={`p-4 rounded-lg border ${item.found ? (isDark ? 'bg-emerald-900/30 border-emerald-700' : 'bg-emerald-50 border-emerald-200') : isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}
+                    className={`p-4 rounded-lg border ${item.found ? (isDark ? 'bg-primary-900/30 border-primary-700' : 'bg-primary-50 border-primary-200') : isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
                           <span
-                            className={`font-medium ${item.found ? 'line-through text-emerald-500' : isDark ? 'text-white' : 'text-gray-900'}`}
+                            className={`font-medium ${item.found ? 'line-through text-primary-500' : isDark ? 'text-white' : 'text-gray-900'}`}
                           >
                             {item.name}
                           </span>
@@ -608,7 +608,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                             {item.points} pts
                           </span>
                           {item.found && (
-                            <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-primary-500 text-white">
                               {t('tools.scavengerHunt.found', 'Found!')}
                             </span>
                           )}
@@ -623,7 +623,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                             />
                             <button
                               onClick={() => updateClue(item.id, editingClue)}
-                              className="p-1 text-emerald-500 hover:bg-emerald-500/10 rounded"
+                              className="p-1 text-primary-500 hover:bg-primary-500/10 rounded"
                             >
                               <Save className="w-4 h-4" />
                             </button>
@@ -771,7 +771,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                 </div>
                 <button
                   onClick={() => setHasTimeLimit(!hasTimeLimit)}
-                  className={`w-12 h-6 rounded-full relative transition-colors ${hasTimeLimit ? 'bg-emerald-500' : isDark ? 'bg-gray-600' : 'bg-gray-300'}`}
+                  className={`w-12 h-6 rounded-full relative transition-colors ${hasTimeLimit ? 'bg-primary-500' : isDark ? 'bg-gray-600' : 'bg-gray-300'}`}
                 >
                   <span
                     className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${hasTimeLimit ? 'left-7' : 'left-1'}`}
@@ -842,7 +842,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
               </div>
               <div className={`h-3 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                 <div
-                  className="h-full rounded-full bg-emerald-500 transition-all"
+                  className="h-full rounded-full bg-primary-500 transition-all"
                   style={{ width: `${stats.progress}%` }}
                 />
               </div>
@@ -853,7 +853,7 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
               <button
                 onClick={toggleHunt}
                 disabled={items.length === 0}
-                className={`flex-1 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors ${items.length === 0 ? 'opacity-50 cursor-not-allowed' : ''} ${isHuntActive ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-emerald-500 hover:bg-emerald-600 text-white'}`}
+                className={`flex-1 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors ${items.length === 0 ? 'opacity-50 cursor-not-allowed' : ''} ${isHuntActive ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-primary-500 hover:bg-primary-600 text-white'}`}
               >
                 {isHuntActive ? (
                   <>
@@ -884,14 +884,14 @@ export const ScavengerHuntTool: React.FC<ScavengerHuntToolProps> = ({
                 {items.map((item) => (
                   <div
                     key={item.id}
-                    className={`p-3 rounded-lg border flex items-center justify-between ${item.found ? (isDark ? 'bg-emerald-900/30 border-emerald-700' : 'bg-emerald-50 border-emerald-200') : isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}
+                    className={`p-3 rounded-lg border flex items-center justify-between ${item.found ? (isDark ? 'bg-primary-900/30 border-primary-700' : 'bg-primary-50 border-primary-200') : isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}
                   >
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() =>
                           teams.length > 0 ? undefined : toggleItemFound(item.id)
                         }
-                        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${item.found ? 'bg-emerald-500 border-emerald-500 text-white' : isDark ? 'border-gray-600' : 'border-gray-300'}`}
+                        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${item.found ? 'bg-primary-500 border-primary-500 text-white' : isDark ? 'border-gray-600' : 'border-gray-300'}`}
                       >
                         {item.found && <Check className="w-4 h-4" />}
                       </button>

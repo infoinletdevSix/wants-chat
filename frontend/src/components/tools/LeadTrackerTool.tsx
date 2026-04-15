@@ -392,10 +392,10 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
     const colors: Record<string, string> = {
       blue: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
       purple: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
-      cyan: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400',
+      cyan: 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400',
       yellow: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
       orange: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400',
-      green: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
+      green: 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400',
       red: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
     };
     const statusObj = leadStatuses.find(s => s.value === status);
@@ -431,11 +431,11 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
   return (
     <div className={`rounded-xl shadow-sm border overflow-hidden ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
       {/* Header */}
-      <div className={`px-6 py-4 border-b ${isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gradient-to-r from-white to-emerald-50 border-gray-100'}`}>
+      <div className={`px-6 py-4 border-b ${isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gradient-to-r from-white to-primary-50 border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-500/10 rounded-lg">
-              <Target className="w-5 h-5 text-emerald-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Target className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <div className="flex items-center gap-3">
@@ -464,13 +464,13 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
             <div className={`flex rounded-lg border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 ${viewMode === 'list' ? 'bg-emerald-500 text-white' : isDark ? 'text-gray-400 hover:bg-gray-700' : 'text-gray-500 hover:bg-gray-100'} rounded-l-lg transition-colors`}
+                className={`p-2 ${viewMode === 'list' ? 'bg-primary-500 text-white' : isDark ? 'text-gray-400 hover:bg-gray-700' : 'text-gray-500 hover:bg-gray-100'} rounded-l-lg transition-colors`}
               >
                 <List className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode('kanban')}
-                className={`p-2 ${viewMode === 'kanban' ? 'bg-emerald-500 text-white' : isDark ? 'text-gray-400 hover:bg-gray-700' : 'text-gray-500 hover:bg-gray-100'} rounded-r-lg transition-colors`}
+                className={`p-2 ${viewMode === 'kanban' ? 'bg-primary-500 text-white' : isDark ? 'text-gray-400 hover:bg-gray-700' : 'text-gray-500 hover:bg-gray-100'} rounded-r-lg transition-colors`}
               >
                 <LayoutGrid className="w-4 h-4" />
               </button>
@@ -488,7 +488,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
             />
             <button
               onClick={handleAddNew}
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
             >
               <UserPlus className="w-4 h-4" />
               {t('tools.leadTracker.addLead', 'Add Lead')}
@@ -504,7 +504,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.leadTracker.totalLeads', 'Total Leads')}</p>
         </div>
         <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
-          <p className="text-2xl font-bold text-emerald-500">{stats.won}</p>
+          <p className="text-2xl font-bold text-primary-500">{stats.won}</p>
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.leadTracker.wonDeals', 'Won Deals')}</p>
         </div>
         <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
@@ -588,14 +588,14 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
       <div className="px-4 pb-4">
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-emerald-500" />
+            <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
           </div>
         ) : filteredLeads.length === 0 ? (
           <div className={`text-center py-12 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
             <Target className="w-12 h-12 mx-auto mb-3 opacity-30" />
             <p>{leads.length === 0 ? t('tools.leadTracker.noLeadsFound', 'No leads found') : t('tools.leadTracker.noResultsMatchYourFilters', 'No results match your filters')}</p>
             {leads.length === 0 && (
-              <button onClick={handleAddNew} className="mt-2 text-emerald-500 hover:underline">
+              <button onClick={handleAddNew} className="mt-2 text-primary-500 hover:underline">
                 {t('tools.leadTracker.addYourFirstLead', 'Add your first lead')}
               </button>
             )}
@@ -636,7 +636,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
                         </span>
                       )}
                       {lead.estimated_value && lead.estimated_value > 0 && (
-                        <span className="flex items-center gap-1 text-emerald-500">
+                        <span className="flex items-center gap-1 text-primary-500">
                           <DollarSign className="w-3 h-3" /> {formatCurrency(lead.estimated_value)}
                         </span>
                       )}
@@ -710,7 +710,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
                           </p>
                         )}
                         {lead.estimated_value && lead.estimated_value > 0 && (
-                          <p className="text-xs text-emerald-500 font-medium">
+                          <p className="text-xs text-primary-500 font-medium">
                             {formatCurrency(lead.estimated_value)}
                           </p>
                         )}
@@ -894,7 +894,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 disabled:opacity-50"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
               >
                 {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                 {saving ? t('tools.leadTracker.saving', 'Saving...') : t('tools.leadTracker.save', 'Save')}
@@ -934,7 +934,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
                         onClick={() => setNewActivity({ ...newActivity, type: type.value as LeadActivity['type'] })}
                         className={`flex items-center gap-1 px-2 py-1 text-xs rounded ${
                           newActivity.type === type.value
-                            ? 'bg-emerald-500 text-white'
+                            ? 'bg-primary-500 text-white'
                             : isDark
                             ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -957,7 +957,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
                   <button
                     onClick={handleAddActivity}
                     disabled={savingActivity || !newActivity.content.trim()}
-                    className="px-3 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 disabled:opacity-50"
+                    className="px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
                   >
                     {savingActivity ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
                   </button>
@@ -968,7 +968,7 @@ export const LeadTrackerTool: React.FC<LeadTrackerToolProps> = ({ uiConfig }) =>
               <div className="max-h-64 overflow-y-auto space-y-2">
                 {loadingActivities ? (
                   <div className="flex items-center justify-center py-8">
-                    <Loader2 className="w-6 h-6 animate-spin text-emerald-500" />
+                    <Loader2 className="w-6 h-6 animate-spin text-primary-500" />
                   </div>
                 ) : activities.length === 0 ? (
                   <div className={`text-center py-8 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>

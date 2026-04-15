@@ -240,7 +240,7 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
           <div className="flex items-center gap-3">
             <div
               className={`p-3 rounded-xl ${
-                isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-100 text-emerald-600'
+                isDark ? 'bg-primary-500/20 text-primary-400' : 'bg-primary-100 text-primary-600'
               }`}
             >
               <Wallet className="w-8 h-8" />
@@ -297,7 +297,7 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                   max="18"
                   value={childAge}
                   onChange={(e) => setChildAge(parseInt(e.target.value))}
-                  className="flex-1 h-2 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                  className="flex-1 h-2 rounded-lg appearance-none cursor-pointer accent-primary-500"
                   style={{
                     background: isDark
                       ? `linear-gradient(to right, #10b981 0%, #10b981 ${((childAge - 4) / 14) * 100}%, #374151 ${((childAge - 4) / 14) * 100}%, #374151 100%)`
@@ -306,7 +306,7 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                 />
                 <span
                   className={`text-2xl font-bold min-w-[3rem] text-center ${
-                    isDark ? 'text-emerald-400' : 'text-emerald-600'
+                    isDark ? 'text-primary-400' : 'text-primary-600'
                   }`}
                 >
                   {childAge}
@@ -339,8 +339,8 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                     className={`p-3 rounded-lg text-left transition-all ${
                       calculationMethod === method.value
                         ? isDark
-                          ? 'bg-emerald-500/20 border-2 border-emerald-500'
-                          : 'bg-emerald-50 border-2 border-emerald-500'
+                          ? 'bg-primary-500/20 border-2 border-primary-500'
+                          : 'bg-primary-50 border-2 border-primary-500'
                         : isDark
                           ? 'bg-gray-700 border-2 border-transparent hover:bg-gray-600'
                           : 'bg-gray-100 border-2 border-transparent hover:bg-gray-200'
@@ -415,8 +415,8 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                       className={`w-full flex items-center justify-between p-3 rounded-lg transition-all ${
                         chore.completed
                           ? isDark
-                            ? 'bg-emerald-500/20 border border-emerald-500/50'
-                            : 'bg-emerald-50 border border-emerald-300'
+                            ? 'bg-primary-500/20 border border-primary-500/50'
+                            : 'bg-primary-50 border border-primary-300'
                           : isDark
                             ? 'bg-gray-700 border border-gray-600 hover:bg-gray-600'
                             : 'bg-gray-50 border border-gray-200 hover:bg-gray-100'
@@ -426,7 +426,7 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                         <div
                           className={`w-5 h-5 rounded-full flex items-center justify-center ${
                             chore.completed
-                              ? 'bg-emerald-500 text-white'
+                              ? 'bg-primary-500 text-white'
                               : isDark
                                 ? 'bg-gray-600 border-2 border-gray-500'
                                 : 'bg-white border-2 border-gray-300'
@@ -438,8 +438,8 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                           className={`${
                             chore.completed
                               ? isDark
-                                ? 'text-emerald-400'
-                                : 'text-emerald-700'
+                                ? 'text-primary-400'
+                                : 'text-primary-700'
                               : isDark
                                 ? 'text-gray-300'
                                 : 'text-gray-700'
@@ -450,7 +450,7 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                       </div>
                       <span
                         className={`font-semibold ${
-                          isDark ? 'text-emerald-400' : 'text-emerald-600'
+                          isDark ? 'text-primary-400' : 'text-primary-600'
                         }`}
                       >
                         ${chore.value}
@@ -486,8 +486,8 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                     className={`py-2 px-3 rounded-lg text-sm font-medium transition-all ${
                       frequency === freq.value
                         ? isDark
-                          ? 'bg-emerald-500 text-white'
-                          : 'bg-emerald-500 text-white'
+                          ? 'bg-primary-500 text-white'
+                          : 'bg-primary-500 text-white'
                         : isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -506,31 +506,31 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
             <div
               className={`p-6 rounded-xl ${
                 isDark
-                  ? 'bg-gradient-to-br from-emerald-900/50 to-emerald-800/30 border border-emerald-700/50'
-                  : 'bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200'
+                  ? 'bg-gradient-to-br from-primary-900/50 to-primary-800/30 border border-primary-700/50'
+                  : 'bg-gradient-to-br from-primary-50 to-primary-100 border border-primary-200'
               }`}
             >
               <div className="flex items-center gap-2 mb-4">
-                <Calculator className={`w-5 h-5 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`} />
-                <span className={`font-medium ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>
+                <Calculator className={`w-5 h-5 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
+                <span className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   {t('tools.allowanceCalculator.calculatedAllowance', 'Calculated Allowance')}
                 </span>
               </div>
               <div className="text-center">
                 <div
                   className={`text-5xl font-bold mb-1 ${
-                    isDark ? 'text-emerald-400' : 'text-emerald-600'
+                    isDark ? 'text-primary-400' : 'text-primary-600'
                   }`}
                 >
                   ${displayAllowance.toFixed(2)}
                 </div>
-                <div className={`text-sm ${isDark ? 'text-emerald-300/70' : 'text-emerald-700/70'}`}>
+                <div className={`text-sm ${isDark ? 'text-primary-300/70' : 'text-primary-700/70'}`}>
                   per {frequencyLabel}
                 </div>
               </div>
               <div
                 className={`mt-4 pt-4 border-t ${
-                  isDark ? 'border-emerald-700/50' : 'border-emerald-200'
+                  isDark ? 'border-primary-700/50' : 'border-primary-200'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -570,7 +570,7 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                 />
                 <div
                   className={`absolute left-0 top-0 h-full rounded-full ${
-                    weeklyAllowance >= nationalAverage ? 'bg-emerald-500' : 'bg-amber-500'
+                    weeklyAllowance >= nationalAverage ? 'bg-primary-500' : 'bg-amber-500'
                   }`}
                   style={{
                     width: `${Math.min((weeklyAllowance / (nationalAverage * 2)) * 100, 100)}%`,
@@ -635,8 +635,8 @@ export const AllowanceCalculatorTool: React.FC<AllowanceCalculatorToolProps> = (
                       className={`text-lg font-semibold ${
                         item.color === 'emerald'
                           ? isDark
-                            ? 'text-emerald-400'
-                            : 'text-emerald-600'
+                            ? 'text-primary-400'
+                            : 'text-primary-600'
                           : item.color === 'blue'
                             ? isDark
                               ? 'text-blue-400'

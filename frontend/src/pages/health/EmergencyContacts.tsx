@@ -258,7 +258,7 @@ const EmergencyContacts: React.FC = () => {
                 Emergency Contacts ({!isLoading && !isError ? filteredContacts.length : '...'})
               </h2>
               <Button
-                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
                 onClick={() => navigate('/health/add-emergency-contact')}
               >
                 <PersonAdd className="h-5 w-5 mr-2" />
@@ -292,7 +292,7 @@ const EmergencyContacts: React.FC = () => {
                 <p className="text-white/60 mb-6">
                   {error || 'Failed to load emergency contacts. Please try again.'}
                 </p>
-                <Button onClick={() => refetch()} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+                <Button onClick={() => refetch()} className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
                   Try Again
                 </Button>
               </GlassCard>
@@ -380,7 +380,7 @@ const EmergencyContacts: React.FC = () => {
                       <Button
                         size="sm"
                         onClick={() => window.location.href = `tel:${contact.phone}`}
-                        className="rounded-lg flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                        className="rounded-lg flex-1 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                       >
                         <Phone className="h-4 w-4 mr-1" />
                         Call
@@ -421,7 +421,7 @@ const EmergencyContacts: React.FC = () => {
                 {!searchQuery && (
                   <Button
                     onClick={() => navigate('/health/add-emergency-contact')}
-                    className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                    className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
                   >
                     <PersonAdd className="h-5 w-5 mr-2" />
                     Add Your First Contact
@@ -438,7 +438,7 @@ const EmergencyContacts: React.FC = () => {
                 Medical Facilities ({!facilitiesLoading && !facilitiesError ? filteredFacilities.length : '...'})
               </h2>
               <Button
-                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
                 onClick={() => navigate('/health/add-medical-facility')}
               >
                 <Plus className="h-5 w-5 mr-2" />
@@ -472,7 +472,7 @@ const EmergencyContacts: React.FC = () => {
                 <p className="text-white/60 mb-6">
                   {facilitiesErrorMessage || 'Failed to load medical facilities. Please try again.'}
                 </p>
-                <Button onClick={() => refetchFacilities()} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+                <Button onClick={() => refetchFacilities()} className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
                   Try Again
                 </Button>
               </GlassCard>
@@ -560,7 +560,7 @@ const EmergencyContacts: React.FC = () => {
                       <Button
                         size="sm"
                         onClick={() => window.location.href = `tel:${facility.phone}`}
-                        className="rounded-lg flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                        className="rounded-lg flex-1 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                       >
                         <Phone className="h-4 w-4 mr-1" />
                         Call
@@ -610,7 +610,7 @@ const EmergencyContacts: React.FC = () => {
                 {!searchQuery && (
                   <Button
                     onClick={() => navigate('/health/add-medical-facility')}
-                    className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                    className="rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
                   >
                     <Plus className="h-5 w-5 mr-2" />
                     Add Your First Facility

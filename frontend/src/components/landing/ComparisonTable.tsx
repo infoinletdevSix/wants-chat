@@ -85,7 +85,7 @@ const ComparisonTable: React.FC = () => {
   const renderIcon = (value: boolean | 'partial', isWants: boolean = false) => {
     if (value === true) {
       return (
-        <div className={`flex items-center justify-center ${isWants ? 'text-emerald-400' : 'text-emerald-500'}`}>
+        <div className={`flex items-center justify-center ${isWants ? 'text-primary-400' : 'text-primary-500'}`}>
           <Check className="w-5 h-5 md:w-6 md:h-6" />
         </div>
       );
@@ -109,7 +109,7 @@ const ComparisonTable: React.FC = () => {
       {/* Background - matching login page */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       <motion.div
-        className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl"
+        className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity }}
       />
@@ -122,12 +122,12 @@ const ComparisonTable: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-medium mb-4">
             {t('landing.comparison.badge')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('landing.comparison.title')}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> {t('landing.comparison.titleHighlight')}</span>
+            <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent"> {t('landing.comparison.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             {t('landing.comparison.subtitle')}
@@ -190,13 +190,13 @@ const ComparisonTable: React.FC = () => {
                     <th key={competitor.key} className="p-3 md:p-4 text-center min-w-[100px]">
                       {competitor.key === 'wants' ? (
                         <div className="relative">
-                          <div className="absolute -inset-2 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-xl blur-lg" />
-                          <div className="relative bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-xl px-2 py-2 md:px-4 md:py-3 border border-primary-500/30">
+                          <div className="absolute -inset-2 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl blur-lg" />
+                          <div className="relative bg-gradient-to-br from-primary-500/10 to-primary-500/10 rounded-xl px-2 py-2 md:px-4 md:py-3 border border-primary-500/30">
                             <div className="flex items-center justify-center gap-1 md:gap-2 mb-1">
-                              <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
+                              <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary-400" />
                               <span className="text-white font-bold text-sm md:text-lg">{t(`landing.comparison.competitors.${competitor.nameKey}.name`)}</span>
                             </div>
-                            <span className="text-[10px] md:text-xs text-emerald-400">{t(`landing.comparison.competitors.${competitor.nameKey}.subtitle`)}</span>
+                            <span className="text-[10px] md:text-xs text-primary-400">{t(`landing.comparison.competitors.${competitor.nameKey}.subtitle`)}</span>
                           </div>
                         </div>
                       ) : (
@@ -225,7 +225,7 @@ const ComparisonTable: React.FC = () => {
                     {competitorData.map((competitor) => (
                       <td
                         key={competitor.key}
-                        className={`p-3 md:p-4 ${competitor.key === 'wants' ? 'bg-gradient-to-br from-emerald-500/5 to-cyan-500/5' : ''}`}
+                        className={`p-3 md:p-4 ${competitor.key === 'wants' ? 'bg-gradient-to-br from-primary-500/5 to-primary-500/5' : ''}`}
                       >
                         {renderIcon(feature[competitor.key], competitor.key === 'wants')}
                       </td>
@@ -241,11 +241,11 @@ const ComparisonTable: React.FC = () => {
                   {competitorData.map((competitor) => (
                     <td
                       key={competitor.key}
-                      className={`p-3 md:p-4 ${competitor.key === 'wants' ? 'bg-gradient-to-br from-emerald-500/5 to-cyan-500/5' : ''}`}
+                      className={`p-3 md:p-4 ${competitor.key === 'wants' ? 'bg-gradient-to-br from-primary-500/5 to-primary-500/5' : ''}`}
                     >
                       <div className="flex items-center justify-center">
                         {competitor.key === 'wants' ? (
-                          <span className="text-sm md:text-lg font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
+                          <span className="text-sm md:text-lg font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent whitespace-nowrap">
                             {t(`landing.comparison.competitors.${competitor.nameKey}.uniqueValue`)}
                           </span>
                         ) : (
@@ -270,7 +270,7 @@ const ComparisonTable: React.FC = () => {
             className="mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6"
           >
             <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-emerald-400" />
+              <Check className="w-5 h-5 text-primary-400" />
               <span className="text-gray-400 text-sm">{t('landing.comparison.fullSupport')}</span>
             </div>
             <div className="flex items-center gap-2">

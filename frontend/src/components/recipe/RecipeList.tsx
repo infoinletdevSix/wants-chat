@@ -43,7 +43,7 @@ export const RecipeList: React.FC<RecipeListProps> = ({
         </div>
         <Button
           onClick={() => onNavigate('/recipe-builder/add')}
-          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6"
+          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl h-12 px-6"
         >
           <Plus className="h-4 w-4 mr-2" />
           Add Recipe

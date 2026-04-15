@@ -243,9 +243,9 @@ const AddFoodPage: React.FC = () => {
         </div>
 
         {showSuccess && (
-          <div className="mb-8 p-4 bg-emerald-500/20 border border-emerald-400/30 rounded-lg flex items-center">
-            <Check className="h-5 w-5 text-emerald-400 mr-2" />
-            <span className="text-emerald-300">
+          <div className="mb-8 p-4 bg-primary-500/20 border border-primary-400/30 rounded-lg flex items-center">
+            <Check className="h-5 w-5 text-primary-400 mr-2" />
+            <span className="text-primary-300">
               Custom food created successfully! Redirecting...
             </span>
           </div>
@@ -600,7 +600,7 @@ const AddFoodPage: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="h-12 px-8 text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
+            className="h-12 px-8 text-white font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 disabled:opacity-50"
           >
             {isSubmitting ? (
               <>

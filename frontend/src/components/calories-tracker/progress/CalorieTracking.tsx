@@ -35,7 +35,7 @@ const CalorieTracking: React.FC<CalorieTrackingProps> = ({
                   <div
                     key={index}
                     className={`flex-1 rounded-t transition-colors ${
-                      isOnTarget ? 'bg-emerald-500/40 hover:bg-emerald-500/60' : 'bg-orange-500/40 hover:bg-orange-500/60'
+                      isOnTarget ? 'bg-primary-500/40 hover:bg-primary-500/60' : 'bg-orange-500/40 hover:bg-orange-500/60'
                     }`}
                     style={{ height: `${Math.max(height, 10)}%` }}
                     title={`${entry.consumed} calories`}
@@ -46,12 +46,12 @@ const CalorieTracking: React.FC<CalorieTrackingProps> = ({
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="text-center p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30">
-              <p className="text-2xl font-bold text-emerald-400">{daysOnTarget || 0}</p>
+            <div className="text-center p-4 bg-primary-500/10 rounded-lg border border-primary-500/30">
+              <p className="text-2xl font-bold text-primary-400">{daysOnTarget || 0}</p>
               <p className="text-sm text-white/60">Days on Target</p>
             </div>
-            <div className="text-center p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/30">
-              <p className="text-2xl font-bold text-cyan-400">{avgConsumed || 0}</p>
+            <div className="text-center p-4 bg-primary-500/10 rounded-lg border border-primary-500/30">
+              <p className="text-2xl font-bold text-primary-400">{avgConsumed || 0}</p>
               <p className="text-sm text-white/60">Average Intake</p>
             </div>
           </div>

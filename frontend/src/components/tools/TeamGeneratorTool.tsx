@@ -15,11 +15,11 @@ interface Team {
 const TEAM_COLORS = [
   'from-red-500 to-rose-600',
   'from-blue-500 to-indigo-600',
-  'from-green-500 to-emerald-600',
+  'from-green-500 to-primary-600',
   'from-yellow-500 to-amber-600',
   'from-purple-500 to-violet-600',
   'from-pink-500 to-fuchsia-600',
-  'from-cyan-500 to-primary-600',
+  'from-primary-500 to-primary-600',
   'from-orange-500 to-red-600',
 ];
 
@@ -30,7 +30,7 @@ const TEAM_BG_COLORS = [
   'bg-yellow-500/10 border-yellow-500/30',
   'bg-purple-500/10 border-purple-500/30',
   'bg-pink-500/10 border-pink-500/30',
-  'bg-cyan-500/10 border-cyan-500/30',
+  'bg-primary-500/10 border-primary-500/30',
   'bg-orange-500/10 border-orange-500/30',
 ];
 

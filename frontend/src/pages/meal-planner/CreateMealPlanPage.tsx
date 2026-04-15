@@ -103,7 +103,7 @@ const CreateMealPlanPage: React.FC = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
                 <ChefHat className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -204,7 +204,7 @@ const CreateMealPlanPage: React.FC = () => {
           {/* Create Plan Card */}
           <div className="bg-white/10 backdrop-blur-xl rounded-2xl border-2 border-dashed border-white/20 hover:border-primary-400/50 transition-colors">
             <div className="p-8 text-center space-y-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto border border-primary-400/30">
+              <div className="w-16 h-16 bg-gradient-to-r from-primary-500/20 to-primary-500/20 rounded-full flex items-center justify-center mx-auto border border-primary-400/30">
                 <Plus className="h-8 w-8 text-primary-400" />
               </div>
               <div>
@@ -224,7 +224,7 @@ const CreateMealPlanPage: React.FC = () => {
                 <Button
                   onClick={handleCreatePlan}
                   disabled={createMealPlan.loading}
-                  className="px-8 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+                  className="px-8 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                 >
                   {createMealPlan.loading ? 'Creating...' : 'Create Meal Plan'}
                 </Button>

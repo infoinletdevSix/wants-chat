@@ -712,7 +712,7 @@ const AddPregnancyRecord: React.FC = () => {
                 onKeyPress={(e) => e.key === 'Enter' && addSymptom()}
                 className="flex-1 h-12 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
-              <Button onClick={addSymptom} className="h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+              <Button onClick={addSymptom} className="h-12 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
@@ -775,7 +775,7 @@ const AddPregnancyRecord: React.FC = () => {
                 onKeyPress={(e) => e.key === 'Enter' && addMedication()}
                 className="flex-1 h-12 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
-              <Button onClick={addMedication} className="h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
+              <Button onClick={addMedication} className="h-12 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white">
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
@@ -853,7 +853,7 @@ const AddPregnancyRecord: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createPregnancyMutation.loading || updatePregnancyMutation.loading || (isEditMode && recordLoading)}
-            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {(createPregnancyMutation.loading || updatePregnancyMutation.loading) ? (
               <>

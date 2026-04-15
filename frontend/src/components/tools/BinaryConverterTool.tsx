@@ -129,9 +129,9 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Binary className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Binary className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.binaryConverter.binaryConverter', 'Binary Converter')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.binaryConverter.convertBetweenTextBinaryHex', 'Convert between text, binary, hex & more')}</p>
@@ -152,13 +152,13 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
         <div className="flex gap-2">
           <button
             onClick={() => setMode('text')}
-            className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${mode === 'text' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${mode === 'text' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.binaryConverter.textBinary', 'Text ↔ Binary')}
           </button>
           <button
             onClick={() => setMode('number')}
-            className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${mode === 'number' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 ${mode === 'number' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.binaryConverter.numberBases', 'Number Bases')}
           </button>
@@ -224,7 +224,7 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
             </div>
 
             {/* Binary to Text */}
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
                 <ArrowRightLeft className="w-4 h-4 inline mr-1" />
                 {t('tools.binaryConverter.binaryToTextPasteBinary', 'Binary to Text (paste binary here)')}
@@ -252,7 +252,7 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
                   <button
                     key={base}
                     onClick={() => setInputBase(base)}
-                    className={`flex-1 py-2 rounded-lg text-sm capitalize ${inputBase === base ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                    className={`flex-1 py-2 rounded-lg text-sm capitalize ${inputBase === base ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                   >
                     {base.slice(0, 3)}
                   </button>
@@ -277,7 +277,7 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
 
             {/* Conversions */}
             <div className="grid grid-cols-2 gap-3">
-              <div className={`p-4 rounded-lg ${inputBase === 'binary' ? 'ring-2 ring-cyan-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-4 rounded-lg ${inputBase === 'binary' ? 'ring-2 ring-primary-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.binaryConverter.binaryBase2', 'Binary (Base 2)')}</span>
                   <CopyButton value={numberConversions.binary} />
@@ -287,7 +287,7 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
                 </div>
               </div>
 
-              <div className={`p-4 rounded-lg ${inputBase === 'decimal' ? 'ring-2 ring-cyan-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-4 rounded-lg ${inputBase === 'decimal' ? 'ring-2 ring-primary-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.binaryConverter.decimalBase10', 'Decimal (Base 10)')}</span>
                   <CopyButton value={numberConversions.decimal} />
@@ -297,7 +297,7 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
                 </div>
               </div>
 
-              <div className={`p-4 rounded-lg ${inputBase === 'hexadecimal' ? 'ring-2 ring-cyan-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-4 rounded-lg ${inputBase === 'hexadecimal' ? 'ring-2 ring-primary-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.binaryConverter.hexadecimalBase16', 'Hexadecimal (Base 16)')}</span>
                   <CopyButton value={numberConversions.hex} />
@@ -307,7 +307,7 @@ export const BinaryConverterTool: React.FC<BinaryConverterToolProps> = ({ uiConf
                 </div>
               </div>
 
-              <div className={`p-4 rounded-lg ${inputBase === 'octal' ? 'ring-2 ring-cyan-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-4 rounded-lg ${inputBase === 'octal' ? 'ring-2 ring-primary-500' : ''} ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.binaryConverter.octalBase8', 'Octal (Base 8)')}</span>
                   <CopyButton value={numberConversions.octal} />

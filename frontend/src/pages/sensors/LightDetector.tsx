@@ -72,7 +72,7 @@ const LightDetector: React.FC = () => {
     if (lux < 10) return { text: 'Very Dark', icon: Moon, color: 'from-indigo-900 to-purple-900' };
     if (lux < 50) return { text: 'Dark', icon: Moon, color: 'from-blue-900 to-indigo-900' };
     if (lux < 200) return { text: 'Dim', icon: Sunrise, color: 'from-blue-700 to-primary-700' };
-    if (lux < 500) return { text: 'Normal', icon: Lightbulb, color: 'from-primary-600 to-cyan-600' };
+    if (lux < 500) return { text: 'Normal', icon: Lightbulb, color: 'from-primary-600 to-primary-700' };
     if (lux < 1000) return { text: 'Bright', icon: Sun, color: 'from-yellow-500 to-orange-500' };
     if (lux < 5000) return { text: 'Very Bright', icon: Sun, color: 'from-orange-400 to-red-400' };
     return { text: 'Extremely Bright', icon: Sunset, color: 'from-red-500 to-pink-500' };
@@ -95,7 +95,7 @@ const LightDetector: React.FC = () => {
           className="mb-8"
         >
           <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <Lightbulb className="w-10 h-10 text-cyan-400" />
+            <Lightbulb className="w-10 h-10 text-primary-400" />
             Light Detector
           </h1>
           <p className="text-primary-200">Measure ambient light levels using your device's light sensor</p>
@@ -105,7 +105,7 @@ const LightDetector: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+          className="bg-gradient-to-br from-primary-900/50 to-primary-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
         >
           {/* Gauge Display */}
           <div className="flex flex-col items-center mb-8">
@@ -156,7 +156,7 @@ const LightDetector: React.FC = () => {
                 animate={{ rotate: gaugeRotation - 90 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-full h-full bg-gradient-to-t from-white to-cyan-400 rounded-full shadow-lg"></div>
+                <div className="w-full h-full bg-gradient-to-t from-white to-primary-400 rounded-full shadow-lg"></div>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full shadow-lg"></div>
               </motion.div>
 
@@ -184,7 +184,7 @@ const LightDetector: React.FC = () => {
               className={`px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                 isDetecting
                   ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                  : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
+                  : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700'
               } shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
             >
               {isDetecting ? 'Stop Detection' : 'Start Detection'}
@@ -194,7 +194,7 @@ const LightDetector: React.FC = () => {
           {/* Light Scale Reference */}
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary-400/20">
             <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-cyan-400" />
+              <Activity className="w-5 h-5 text-primary-400" />
               Light Level Reference
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">

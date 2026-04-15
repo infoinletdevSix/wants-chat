@@ -35,7 +35,7 @@ const TravelPlanCard: React.FC<TravelPlanCardProps> = ({
         {plan.image ? (
           <img src={plan.image} alt={plan.destination} className="w-full h-full object-cover" />
         ) : (
-          <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20"></div>
+          <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-primary-500/20"></div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
         <div className="absolute top-2 sm:top-4 right-2 sm:right-4 flex gap-1 sm:gap-2">

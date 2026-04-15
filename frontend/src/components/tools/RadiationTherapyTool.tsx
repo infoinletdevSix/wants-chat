@@ -389,7 +389,7 @@ export const RadiationTherapyTool: React.FC<RadiationTherapyToolProps> = ({ uiCo
       case 'planning': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       case 'active': return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'on-hold': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-      case 'completed': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+      case 'completed': return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'discontinued': return 'bg-red-500/20 text-red-400 border-red-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
@@ -430,15 +430,15 @@ export const RadiationTherapyTool: React.FC<RadiationTherapyToolProps> = ({ uiCo
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -530,12 +530,12 @@ export const RadiationTherapyTool: React.FC<RadiationTherapyToolProps> = ({ uiCo
         </div>
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <CheckCircle className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <CheckCircle className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.radiationTherapy.completed', 'Completed')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.completed}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.completed}</p>
             </div>
           </div>
         </div>

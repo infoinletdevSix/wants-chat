@@ -457,7 +457,7 @@ export const ProjectManagerTool: React.FC<ProjectManagerToolProps> = ({ uiConfig
       gray: 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300',
       blue: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400',
       yellow: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
-      green: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
+      green: 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400',
       red: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
       orange: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400',
     };
@@ -576,8 +576,8 @@ export const ProjectManagerTool: React.FC<ProjectManagerToolProps> = ({ uiConfig
         </div>
         <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-            <p className="text-2xl font-bold text-emerald-500">{stats.completed}</p>
+            <CheckCircle2 className="w-4 h-4 text-primary-500" />
+            <p className="text-2xl font-bold text-primary-500">{stats.completed}</p>
           </div>
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.projectManager.completed', 'Completed')}</p>
         </div>

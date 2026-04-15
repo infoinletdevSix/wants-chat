@@ -42,7 +42,7 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({
         </div>
         <Button
           onClick={onAddStoryClick}
-          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
+          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-0"
         >
           <Plus className="h-4 w-4 mr-2" />
           Add Story

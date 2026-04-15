@@ -109,10 +109,10 @@ Write the complete press release, ready for distribution.`;
 
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-cyan-900/20' : 'from-white to-cyan-50'} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : 'from-white to-primary-50'} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg">
-            <Newspaper className="w-5 h-5 text-cyan-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Newspaper className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.pressRelease.pressReleaseGenerator', 'Press Release Generator')}</h3>
@@ -124,9 +124,9 @@ Write the complete press release, ready for distribution.`;
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
-            <span className="text-sm text-cyan-500 font-medium">{t('tools.pressRelease.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.pressRelease.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -205,7 +205,7 @@ Write the complete press release, ready for distribution.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !headline.trim() || !companyName.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"
+          className="w-full py-3 px-6 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {isGenerating ? <Loader2 className="w-5 h-5 animate-spin" /> : <Newspaper className="w-5 h-5" />}
           {isGenerating ? t('tools.pressRelease.writingPressRelease', 'Writing Press Release...') : t('tools.pressRelease.generatePressRelease', 'Generate Press Release')}

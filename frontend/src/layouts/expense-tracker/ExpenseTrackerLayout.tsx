@@ -81,7 +81,7 @@ export const ExpenseTrackerLayout: React.FC<ExpenseTrackerLayoutProps> = ({
 
             <Button
               onClick={onAddExpense}
-              className="my-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+              className="my-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
             >
               <Add className="h-4 w-4 mr-2" />
               Add Expense

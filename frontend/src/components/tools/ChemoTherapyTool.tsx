@@ -676,15 +676,15 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -751,12 +751,12 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <User className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <User className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.chemoTherapy.totalPatients', 'Total Patients')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -857,7 +857,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredPatients.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -872,7 +872,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                     onClick={() => setSelectedPatient(patient)}
                     className={`p-4 cursor-pointer transition-colors ${
                       selectedPatient?.id === patient.id
-                        ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                        ? 'bg-primary-500/10 border-l-4 border-primary-500'
                         : theme === 'dark'
                           ? 'hover:bg-gray-700/50'
                           : 'hover:bg-gray-50'
@@ -881,7 +881,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                          <User className="w-4 h-4 text-cyan-500" />
+                          <User className="w-4 h-4 text-primary-500" />
                         </div>
                         <div>
                           <p className="font-medium">{patient.patientName}</p>
@@ -978,7 +978,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                     onClick={() => setActiveTab('cycles')}
                     className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
                       activeTab === 'cycles'
-                        ? 'border-cyan-500 text-cyan-500'
+                        ? 'border-primary-500 text-primary-500'
                         : `border-transparent ${theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'}`
                     }`}
                   >
@@ -991,7 +991,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                     onClick={() => setActiveTab('side-effects')}
                     className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
                       activeTab === 'side-effects'
-                        ? 'border-cyan-500 text-cyan-500'
+                        ? 'border-primary-500 text-primary-500'
                         : `border-transparent ${theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'}`
                     }`}
                   >
@@ -1004,7 +1004,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                     onClick={() => setActiveTab('labs')}
                     className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
                       activeTab === 'labs'
-                        ? 'border-cyan-500 text-cyan-500'
+                        ? 'border-primary-500 text-primary-500'
                         : `border-transparent ${theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'}`
                     }`}
                   >
@@ -1020,7 +1020,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <h3 className="font-semibold flex items-center gap-2">
-                        <Syringe className="w-4 h-4 text-cyan-500" />
+                        <Syringe className="w-4 h-4 text-primary-500" />
                         {t('tools.chemoTherapy.treatmentCycles', 'Treatment Cycles')}
                       </h3>
                       <button onClick={() => openCycleModal()} className={buttonPrimary}>
@@ -1081,7 +1081,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                                         className={`p-2 rounded ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-200'}`}
                                       >
                                         <div className="flex items-center gap-2">
-                                          <Pill className="w-4 h-4 text-cyan-500" />
+                                          <Pill className="w-4 h-4 text-primary-500" />
                                           <span className="font-medium">{drug.name}</span>
                                           <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                                             {drug.dose} {drug.unit} ({drug.route})
@@ -1294,7 +1294,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                 {selectedPatient.notes && (
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-cyan-500" />
+                      <FileText className="w-4 h-4 text-primary-500" />
                       {t('tools.chemoTherapy.notes4', 'Notes')}
                     </h3>
                     <p className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -1607,7 +1607,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                           className={`flex items-center justify-between p-2 rounded ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-200'}`}
                         >
                           <div className="flex items-center gap-2">
-                            <Pill className="w-4 h-4 text-cyan-500" />
+                            <Pill className="w-4 h-4 text-primary-500" />
                             <span>
                               {drug.name} - {drug.dose} {drug.unit} ({drug.route})
                             </span>
@@ -1648,7 +1648,7 @@ export const ChemoTherapyTool: React.FC<ChemoTherapyToolProps> = ({ uiConfig }) 
                   {cycleFormData.premedications.map((med, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1"
+                      className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1"
                     >
                       {med}
                       <button onClick={() => removePremedicationFromCycle(med)}>

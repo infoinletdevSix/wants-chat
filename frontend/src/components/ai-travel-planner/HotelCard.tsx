@@ -15,7 +15,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
         {hotel.image ? (
           <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover" />
         ) : (
-          <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20"></div>
+          <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-primary-500/20"></div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       </div>

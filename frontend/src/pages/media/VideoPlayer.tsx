@@ -222,7 +222,7 @@ const VideoPlayer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-primary-900">
       <BackgroundEffects />
       <Header />
 
@@ -231,11 +231,11 @@ const VideoPlayer: React.FC = () => {
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h1 className="text-4xl font-bold text-white mb-2">Video Player</h1>
-            <p className="text-cyan-300">Watch and manage your video library</p>
+            <p className="text-primary-300">Watch and manage your video library</p>
           </div>
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-2xl hover:from-cyan-600 hover:to-primary-600 transition shadow-lg flex items-center gap-2"
+            className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-2xl hover:from-primary-600 hover:to-primary-700 transition shadow-lg flex items-center gap-2"
           >
             <Upload size={20} />
             Upload Video
@@ -273,7 +273,7 @@ const VideoPlayer: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                   <button
                     onClick={togglePlay}
-                    className="p-8 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white shadow-2xl hover:scale-110 transition"
+                    className="p-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-2xl hover:scale-110 transition"
                   >
                     <Play size={48} />
                   </button>
@@ -293,31 +293,31 @@ const VideoPlayer: React.FC = () => {
                   max={duration || 0}
                   value={currentTime}
                   onChange={handleSeek}
-                  className="w-full h-1 bg-white/30 rounded-lg appearance-none cursor-pointer mb-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-cyan-400"
+                  className="w-full h-1 bg-white/30 rounded-lg appearance-none cursor-pointer mb-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-400"
                 />
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <button
                       onClick={togglePlay}
-                      className="text-white hover:text-cyan-400 transition"
+                      className="text-white hover:text-primary-400 transition"
                     >
                       {isPlaying ? <Pause size={28} /> : <Play size={28} />}
                     </button>
                     <button
                       onClick={playPrevious}
-                      className="text-white hover:text-cyan-400 transition"
+                      className="text-white hover:text-primary-400 transition"
                     >
                       <SkipBack size={24} />
                     </button>
                     <button
                       onClick={playNext}
-                      className="text-white hover:text-cyan-400 transition"
+                      className="text-white hover:text-primary-400 transition"
                     >
                       <SkipForward size={24} />
                     </button>
                     <div className="flex items-center gap-2">
-                      <button onClick={toggleMute} className="text-white hover:text-cyan-400 transition">
+                      <button onClick={toggleMute} className="text-white hover:text-primary-400 transition">
                         {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
                       </button>
                       <input
@@ -327,7 +327,7 @@ const VideoPlayer: React.FC = () => {
                         step="0.01"
                         value={isMuted ? 0 : volume}
                         onChange={handleVolumeChange}
-                        className="w-20 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-cyan-400"
+                        className="w-20 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-400"
                       />
                     </div>
                     <span className="text-white text-sm">
@@ -339,12 +339,12 @@ const VideoPlayer: React.FC = () => {
                     <div className="relative">
                       <button
                         onClick={() => setShowSettings(!showSettings)}
-                        className="text-white hover:text-cyan-400 transition"
+                        className="text-white hover:text-primary-400 transition"
                       >
                         <Settings size={24} />
                       </button>
                       {showSettings && (
-                        <div className="absolute bottom-full right-0 mb-2 bg-gray-900 rounded-xl p-2 min-w-[120px] border border-cyan-500/30">
+                        <div className="absolute bottom-full right-0 mb-2 bg-gray-900 rounded-xl p-2 min-w-[120px] border border-primary-500/30">
                           <div className="text-white text-sm font-semibold mb-2 px-2">Speed</div>
                           {[0.25, 0.5, 0.75, 1, 1.25, 1.5, 2].map((rate) => (
                             <button
@@ -352,7 +352,7 @@ const VideoPlayer: React.FC = () => {
                               onClick={() => changePlaybackRate(rate)}
                               className={`w-full text-left px-3 py-2 rounded-lg text-sm transition ${
                                 playbackRate === rate
-                                  ? 'bg-cyan-500/30 text-cyan-400'
+                                  ? 'bg-primary-500/30 text-primary-400'
                                   : 'text-white hover:bg-white/10'
                               }`}
                             >
@@ -364,7 +364,7 @@ const VideoPlayer: React.FC = () => {
                     </div>
                     <button
                       onClick={toggleFullscreen}
-                      className="text-white hover:text-cyan-400 transition"
+                      className="text-white hover:text-primary-400 transition"
                     >
                       {isFullscreen ? <Minimize size={24} /> : <Maximize size={24} />}
                     </button>
@@ -374,9 +374,9 @@ const VideoPlayer: React.FC = () => {
             </div>
 
             {/* Video Info */}
-            <div className="mt-6 bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-cyan-500/30">
+            <div className="mt-6 bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-primary-500/30">
               <h2 className="text-2xl font-bold text-white mb-2">{currentVideo.title}</h2>
-              <div className="flex items-center gap-4 text-cyan-300">
+              <div className="flex items-center gap-4 text-primary-300">
                 <span>{currentVideo.duration}</span>
                 <span>•</span>
                 <span>{currentVideo.size}</span>
@@ -388,13 +388,13 @@ const VideoPlayer: React.FC = () => {
 
           {/* Playlist */}
           <div className="lg:col-span-1">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-cyan-500/30">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-primary-500/30">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center gap-2">
                   <List size={24} />
                   Playlist
                 </h3>
-                <span className="text-cyan-300">{videos.length}</span>
+                <span className="text-primary-300">{videos.length}</span>
               </div>
 
               <div className="space-y-3 max-h-[700px] overflow-y-auto">
@@ -404,7 +404,7 @@ const VideoPlayer: React.FC = () => {
                     onClick={() => playVideo(video)}
                     className={`cursor-pointer rounded-xl overflow-hidden transition ${
                       currentVideo.id === video.id
-                        ? 'ring-2 ring-cyan-400'
+                        ? 'ring-2 ring-primary-400'
                         : 'hover:ring-2 hover:ring-white/30'
                     }`}
                   >
@@ -419,19 +419,19 @@ const VideoPlayer: React.FC = () => {
                       </div>
                       {currentVideo.id === video.id && isPlaying && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                          <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin" />
+                          <div className="w-8 h-8 border-4 border-primary-400 border-t-transparent rounded-full animate-spin" />
                         </div>
                       )}
                     </div>
                     <div className={`p-3 ${
                       currentVideo.id === video.id
-                        ? 'bg-gradient-to-r from-cyan-500/30 to-primary-500/30'
+                        ? 'bg-gradient-to-r from-primary-500/30 to-primary-500/30'
                         : 'bg-white/5'
                     }`}>
                       <h4 className="text-white font-semibold text-sm line-clamp-2 mb-1">
                         {video.title}
                       </h4>
-                      <p className="text-cyan-300 text-xs">{video.size}</p>
+                      <p className="text-primary-300 text-xs">{video.size}</p>
                     </div>
                   </div>
                 ))}

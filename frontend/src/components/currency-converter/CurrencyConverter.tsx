@@ -256,7 +256,7 @@ const CurrencyConverter: React.FC = () => {
                 variant="outline"
                 size="icon"
                 onClick={handleSwap}
-                className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl shadow-md border-2 border-white/20 hover:bg-gradient-to-r hover:from-primary-500 hover:to-cyan-500 hover:text-white hover:border-primary-400 transition-all"
+                className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl shadow-md border-2 border-white/20 hover:bg-gradient-to-r hover:from-primary-500 hover:to-primary-600 hover:text-white hover:border-primary-400 transition-all"
               >
                 <ArrowRightLeft className="h-5 w-5" />
               </Button>
@@ -290,7 +290,7 @@ const CurrencyConverter: React.FC = () => {
             </div>
 
             {/* To Amount */}
-            <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl p-4 border border-primary-400/30">
+            <div className="bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl p-4 border border-primary-400/30">
               <label className="block text-xs font-medium text-white/60 mb-2">Converted Amount</label>
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{toCurrencyData?.flag}</span>
@@ -379,7 +379,7 @@ const CurrencyConverter: React.FC = () => {
                   onClick={() => handleFromAmountChange(amount.toString())}
                   className={cn(
                     "h-8 text-xs border border-white/20 bg-white/5 text-white/60 hover:bg-white/10 hover:text-white",
-                    fromAmount === amount.toString() && "bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-primary-400"
+                    fromAmount === amount.toString() && "bg-gradient-to-r from-primary-500 to-primary-600 text-white border-primary-400"
                   )}
                 >
                   {amount.toLocaleString()}

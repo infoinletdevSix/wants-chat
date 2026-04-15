@@ -99,7 +99,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
             </div>
             <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-500"
                 style={{ width: `${(userData.xp / userData.nextLevelXp) * 100}%` }}
               />
             </div>

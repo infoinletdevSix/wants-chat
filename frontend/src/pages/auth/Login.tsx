@@ -178,9 +178,9 @@ const Login: React.FC = () => {
   // Floating icons for background animation
   const floatingIcons = [
     { Icon: Heart, color: 'text-rose-400', delay: 0, x: '10%', y: '20%' },
-    { Icon: Brain, color: 'text-emerald-400', delay: 0.5, x: '80%', y: '15%' },
-    { Icon: Wallet, color: 'text-cyan-400', delay: 1, x: '15%', y: '70%' },
-    { Icon: Plane, color: 'text-emerald-400', delay: 1.5, x: '75%', y: '75%' },
+    { Icon: Brain, color: 'text-primary-400', delay: 0.5, x: '80%', y: '15%' },
+    { Icon: Wallet, color: 'text-primary-400', delay: 1, x: '15%', y: '70%' },
+    { Icon: Plane, color: 'text-primary-400', delay: 1.5, x: '75%', y: '75%' },
     { Icon: Sparkles, color: 'text-amber-400', delay: 2, x: '50%', y: '10%' },
   ];
 
@@ -198,7 +198,7 @@ const Login: React.FC = () => {
         <div className="absolute inset-0 bg-gray-950">
           {/* Animated gradient orbs */}
           <motion.div
-            className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl"
+            className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
             animate={{
               x: [0, -50, 0],
               y: [0, 30, 0],
@@ -211,7 +211,7 @@ const Login: React.FC = () => {
             }}
           />
           <motion.div
-            className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl"
+            className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl"
             animate={{
               x: [0, 40, 0],
               y: [0, -30, 0],
@@ -224,7 +224,7 @@ const Login: React.FC = () => {
             }}
           />
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -279,10 +279,10 @@ const Login: React.FC = () => {
             >
               <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
                 <img src="/assets/logo.png" alt="Wants" className="h-20 w-20 mx-auto mb-4" />
-                <span className="text-lg bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-medium">Wants</span>
+                <span className="text-lg bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent font-medium">Wants</span>
               </Link>
               <h1 className="text-5xl font-bold text-white mb-4 mt-4">
-                {t('auth.branding.welcomeBack')} <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">{t('auth.branding.back')}</span>
+                {t('auth.branding.welcomeBack')} <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">{t('auth.branding.back')}</span>
               </h1>
               <p className="text-xl text-gray-400">
                 {t('auth.branding.tagline')}
@@ -309,8 +309,8 @@ const Login: React.FC = () => {
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
                   whileHover={{ scale: 1.05, borderColor: 'rgba(16, 185, 129, 0.3)' }}
                 >
-                  <stat.icon className="h-5 w-5 text-emerald-400 mx-auto mb-2" />
-                  <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">{stat.value}</div>
+                  <stat.icon className="h-5 w-5 text-primary-400 mx-auto mb-2" />
+                  <div className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">{stat.value}</div>
                   <div className="text-sm text-gray-500">{stat.label}</div>
                 </motion.div>
               ))}
@@ -330,8 +330,8 @@ const Login: React.FC = () => {
                 t('auth.branding.feature4')
               ].map((feature, index) => (
                 <div key={index} className="flex items-center gap-3 text-gray-400">
-                  <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                    <Check className="h-3 w-3 text-emerald-400" />
+                  <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+                    <Check className="h-3 w-3 text-primary-400" />
                   </div>
                   <span className="text-sm">{feature}</span>
                 </div>
@@ -354,7 +354,7 @@ const Login: React.FC = () => {
                 "{t('auth.branding.testimonial')}"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-semibold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white font-semibold">
                   J
                 </div>
                 <div className="text-left">
@@ -378,7 +378,7 @@ const Login: React.FC = () => {
             <div className="lg:hidden text-center mb-8">
               <Link to="/" className="inline-flex items-center gap-2">
                 <img src="/assets/logo.png" alt="Wants" className="h-10 w-10" />
-                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Wants</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Wants</span>
               </Link>
             </div>
 
@@ -395,9 +395,9 @@ const Login: React.FC = () => {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
-                    className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-emerald-500/30"
+                    className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary-500/30"
                   >
-                    <Sparkles className="h-8 w-8 text-emerald-400" />
+                    <Sparkles className="h-8 w-8 text-primary-400" />
                   </motion.div>
                   <h2 className="text-2xl font-bold text-white mb-2">{t('auth.login.title')}</h2>
                   <p className="text-gray-400">{t('auth.login.subtitle')}</p>
@@ -406,10 +406,10 @@ const Login: React.FC = () => {
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-4 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center gap-2"
+                      className="mt-4 p-3 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center gap-2"
                     >
-                      <Users className="w-4 h-4 text-emerald-400" />
-                      <span className="text-emerald-400 text-sm">
+                      <Users className="w-4 h-4 text-primary-400" />
+                      <span className="text-primary-400 text-sm">
                         Joining <span className="font-semibold">{invitationInfo.organizationName}</span>
                       </span>
                     </motion.div>
@@ -517,14 +517,14 @@ const Login: React.FC = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                       disabled={isLoading}
-                      className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20 rounded-xl h-12"
+                      className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/20 rounded-xl h-12"
                     />
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <Label htmlFor="password" className="text-gray-300">{t('auth.login.password')}</Label>
-                      <Link to="/forgot-password" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                      <Link to="/forgot-password" className="text-sm text-primary-400 hover:text-primary-300 transition-colors">
                         {t('auth.login.forgotPassword')}
                       </Link>
                     </div>
@@ -537,7 +537,7 @@ const Login: React.FC = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                         disabled={isLoading}
-                        className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20 rounded-xl h-12 pr-12"
+                        className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/20 rounded-xl h-12 pr-12"
                       />
                       <button
                         type="button"
@@ -558,7 +558,7 @@ const Login: React.FC = () => {
                     <input
                       type="checkbox"
                       id="remember"
-                      className="rounded border-gray-700 bg-gray-800/50 text-emerald-500 focus:ring-emerald-500/20"
+                      className="rounded border-gray-700 bg-gray-800/50 text-primary-500 focus:ring-primary-500/20"
                     />
                     <label htmlFor="remember" className="text-sm text-gray-400">
                       {t('auth.login.rememberMe')}
@@ -568,7 +568,7 @@ const Login: React.FC = () => {
                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                     <Button
                       type="submit"
-                      className="w-full h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
+                      className="w-full h-12 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                       disabled={isLoading}
                     >
                       {isLoading ? (
@@ -590,7 +590,7 @@ const Login: React.FC = () => {
                   {t('auth.login.noAccount')}{' '}
                   <Link
                     to={invitationInfo?.token ? `/signup?invite=${invitationInfo.token}` : '/signup'}
-                    className="text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+                    className="text-primary-400 hover:text-primary-300 font-medium transition-colors"
                   >
                     {t('auth.login.signUp')}
                   </Link>

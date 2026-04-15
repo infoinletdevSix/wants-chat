@@ -194,7 +194,7 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
                   variant="default"
                   onClick={handleSaveEdits}
                   disabled={isSaving}
-                  className="text-sm sm:text-base bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+                  className="text-sm sm:text-base bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
                   size="sm"
                 >
                   {isSaving ? (
@@ -215,7 +215,7 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
                   variant="default"
                   onClick={handleSavePlan}
                   disabled={isSaving}
-                  className="text-sm sm:text-base bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
+                  className="text-sm sm:text-base bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl"
                   size="sm"
                 >
                   {isSaving ? (

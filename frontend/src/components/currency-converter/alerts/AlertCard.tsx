@@ -46,11 +46,11 @@ const AlertCard: React.FC<AlertCardProps> = ({
   const getAlertTypeIcon = () => {
     switch (alertType) {
       case 'above':
-        return <TrendingUp className="h-5 w-5 text-emerald-400" />;
+        return <TrendingUp className="h-5 w-5 text-primary-400" />;
       case 'below':
         return <TrendingDown className="h-5 w-5 text-rose-400" />;
       case 'change':
-        return <Activity className="h-5 w-5 text-cyan-400" />;
+        return <Activity className="h-5 w-5 text-primary-400" />;
       default:
         return null;
     }
@@ -96,7 +96,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
         <div className="flex-1">
           {/* Alert Name and Status */}
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-2 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-lg border border-primary-400/20">
+            <div className="p-2 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-lg border border-primary-400/20">
               {getAlertTypeIcon()}
             </div>
             <div className="flex-1">
@@ -128,7 +128,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
               onToggleStatus(alert.id, checked);
             }}
             onClick={(e) => e.stopPropagation()}
-            className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-primary-500 data-[state=checked]:to-cyan-500 data-[state=unchecked]:bg-white/20 [&>span]:bg-white [&>span]:shadow-md"
+            className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-primary-500 data-[state=checked]:to-primary-500 data-[state=unchecked]:bg-white/20 [&>span]:bg-white [&>span]:shadow-md"
           />
           <Button
             variant="ghost"
@@ -181,7 +181,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
                 <div
                   className={`h-2 rounded-full transition-all ${
                     alertType === 'above'
-                      ? 'bg-gradient-to-r from-primary-400 to-emerald-400'
+                      ? 'bg-gradient-to-r from-primary-400 to-primary-500'
                       : 'bg-gradient-to-r from-rose-400 to-orange-400'
                   }`}
                   style={{ width: `${getProgressPercentage()}%` }}

@@ -70,7 +70,7 @@ const CongratulationsOverlay: React.FC<{
       <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-10 mx-4 max-w-lg w-full text-center shadow-2xl border border-white/20">
         {/* Trophy icon */}
         <div className="mb-8 flex justify-center">
-          <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-full flex items-center justify-center shadow-xl animate-bounce relative">
+          <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-xl animate-bounce relative">
             <Trophy className="h-14 w-14 text-white" />
             <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
           </div>
@@ -87,13 +87,13 @@ const CongratulationsOverlay: React.FC<{
         </div>
 
         {/* XP earned */}
-        <div className="bg-gradient-to-r from-primary-500/20 via-cyan-500/20 to-primary-500/20 rounded-2xl p-6 mb-8 border border-primary-500/30 shadow-inner">
+        <div className="bg-gradient-to-r from-primary-500/20 via-primary-500/20 to-primary-500/20 rounded-2xl p-6 mb-8 border border-primary-500/30 shadow-inner">
           <div className="flex items-center justify-center space-x-3 mb-3">
             <Star className="h-7 w-7 text-primary-400 animate-spin" />
             <span className="text-3xl font-bold text-white tracking-tight">
               +{xpEarned} XP
             </span>
-            <Star className="h-7 w-7 text-cyan-400 animate-spin" style={{ animationDirection: 'reverse' }} />
+            <Star className="h-7 w-7 text-primary-400 animate-spin" style={{ animationDirection: 'reverse' }} />
           </div>
           <p className="text-sm text-white/60 font-medium">Experience Points Earned</p>
         </div>
@@ -111,7 +111,7 @@ const CongratulationsOverlay: React.FC<{
         {/* Continue button */}
         <Button
           onClick={onContinue}
-          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-none shadow-lg transform hover:scale-[1.02] transition-all duration-300 rounded-xl"
+          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white border-none shadow-lg transform hover:scale-[1.02] transition-all duration-300 rounded-xl"
         >
           Continue Learning
           <ArrowLeft className="h-5 w-5 ml-2 rotate-180" />
@@ -644,7 +644,7 @@ const LessonPage: React.FC = () => {
                     <div className={`rounded-2xl border-2 p-6 transition-all duration-300 ${
                       showFeedback
                         ? option === currentEx.correctAnswer
-                          ? 'border-emerald-500 bg-emerald-50/60 dark:bg-emerald-900/20 transform scale-105'
+                          ? 'border-primary-500 bg-primary-50/60 dark:bg-primary-900/20 transform scale-105'
                           : option === selectedAnswer && !isCorrect
                           ? 'border-red-500 bg-red-50/60 dark:bg-red-900/20'
                           : 'border-gray-200 opacity-70'
@@ -693,7 +693,7 @@ const LessonPage: React.FC = () => {
                     className={`h-16 text-lg transition-all duration-200 ${
                       showFeedback
                         ? option === currentEx.correctAnswer
-                          ? 'bg-emerald-500 hover:bg-emerald-500 text-white border-emerald-500'
+                          ? 'bg-primary-500 hover:bg-primary-500 text-white border-primary-500'
                           : option === selectedAnswer && !isCorrect
                           ? 'bg-destructive hover:bg-destructive text-white border-destructive'
                           : 'opacity-60'
@@ -749,7 +749,7 @@ const LessonPage: React.FC = () => {
                   className={`w-full p-5 text-xl font-medium border-2 rounded-2xl transition-all duration-300 bg-background text-foreground ${
                     showFeedback
                       ? isCorrect
-                        ? 'border-emerald-500 bg-emerald-50/40 dark:bg-emerald-900/15'
+                        ? 'border-primary-500 bg-primary-50/40 dark:bg-primary-900/15'
                         : 'border-red-500 bg-red-50/40 dark:bg-red-900/15'
                       : 'border-gray-200 focus:border-[#47bdff] focus:outline-none focus:ring-3 focus:ring-[#47bdff]/15 hover:border-[#47bdff]/60'
                   }`}
@@ -757,7 +757,7 @@ const LessonPage: React.FC = () => {
                 {showFeedback && (
                   <div className="absolute right-4 top-1/2 -translate-y-1/2">
                     {isCorrect ? (
-                      <Check className="h-6 w-6 text-emerald-500" />
+                      <Check className="h-6 w-6 text-primary-500" />
                     ) : (
                       <X className="h-6 w-6 text-red-500" />
                     )}
@@ -797,7 +797,7 @@ const LessonPage: React.FC = () => {
                     <div className={`rounded-2xl border-2 p-6 transition-all duration-300 ${
                       showFeedback
                         ? option === currentEx.correctAnswer
-                          ? 'border-emerald-500 bg-emerald-50/60 dark:bg-emerald-900/20 transform scale-105'
+                          ? 'border-primary-500 bg-primary-50/60 dark:bg-primary-900/20 transform scale-105'
                           : option === selectedAnswer && !isCorrect
                           ? 'border-red-500 bg-red-50/60 dark:bg-red-900/20'
                           : 'border-gray-200 opacity-70'
@@ -846,7 +846,7 @@ const LessonPage: React.FC = () => {
                     className={`h-14 text-lg transition-all duration-200 ${
                       showFeedback
                         ? option === currentEx.correctAnswer
-                          ? 'bg-emerald-500 hover:bg-emerald-500 text-white border-emerald-500'
+                          ? 'bg-primary-500 hover:bg-primary-500 text-white border-primary-500'
                           : option === selectedAnswer && !isCorrect
                           ? 'bg-destructive hover:bg-destructive text-white border-destructive'
                           : 'opacity-60'
@@ -922,7 +922,7 @@ const LessonPage: React.FC = () => {
               } else {
                 navigate('/language-learner/learning');
               }
-            }} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+            }} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
               Back to Lessons
             </Button>
           </div>
@@ -949,7 +949,7 @@ const LessonPage: React.FC = () => {
                 } else {
                   navigate('/language-learner/learning');
                 }
-              }} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+              }} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
                 Back to Units
               </Button>
             </div>
@@ -972,7 +972,7 @@ const LessonPage: React.FC = () => {
             } else {
               navigate('/language-learner/learning');
             }
-          }} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
+          }} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white">
             Choose a Lesson
           </Button>
         </GlassCard>
@@ -1033,7 +1033,7 @@ const LessonPage: React.FC = () => {
             <div className="flex-1 max-w-lg mx-6">
               <div className="h-3 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-500"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -1056,7 +1056,7 @@ const LessonPage: React.FC = () => {
                   <Badge className="bg-white/10 text-white border-white/20 capitalize">
                     Difficulty {(specificExercise as any).difficulty_level}
                   </Badge>
-                  <Badge className={specificExercise.user_progress.status === 'completed' ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'bg-white/10 text-white border-white/20'}>
+                  <Badge className={specificExercise.user_progress.status === 'completed' ? 'bg-primary-500/20 text-primary-400 border-primary-500/30' : 'bg-white/10 text-white border-white/20'}>
                     {specificExercise.user_progress.status.replace('_', ' ')}
                   </Badge>
                   {specificExercise.user_progress.attempts_count > 0 && (

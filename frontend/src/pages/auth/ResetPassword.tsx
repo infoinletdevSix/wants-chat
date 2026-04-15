@@ -97,8 +97,8 @@ const ResetPassword: React.FC = () => {
   // Floating icons for background animation
   const floatingIcons = [
     { Icon: Key, color: 'text-amber-400', delay: 0, x: '15%', y: '25%' },
-    { Icon: Shield, color: 'text-emerald-400', delay: 0.5, x: '75%', y: '20%' },
-    { Icon: Lock, color: 'text-cyan-400', delay: 1, x: '20%', y: '70%' },
+    { Icon: Shield, color: 'text-primary-400', delay: 0.5, x: '75%', y: '20%' },
+    { Icon: Lock, color: 'text-primary-400', delay: 1, x: '20%', y: '70%' },
     { Icon: Sparkles, color: 'text-rose-400', delay: 1.5, x: '80%', y: '75%' },
   ];
 
@@ -106,7 +106,7 @@ const ResetPassword: React.FC = () => {
     <div className="absolute inset-0 bg-gray-950">
       {/* Animated gradient orbs - matching landing page */}
       <motion.div
-        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, -30, 0],
           y: [0, 30, 0],
@@ -119,7 +119,7 @@ const ResetPassword: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -132,7 +132,7 @@ const ResetPassword: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -177,7 +177,7 @@ const ResetPassword: React.FC = () => {
           <div className="text-center mb-8">
             <Link to="/" className="inline-flex items-center gap-2">
               <img src="/assets/logo.png" alt="Wants" className="h-10 w-10" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Wants</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Wants</span>
             </Link>
           </div>
 
@@ -192,9 +192,9 @@ const ResetPassword: React.FC = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
-                className="w-20 h-20 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-emerald-500/30"
+                className="w-20 h-20 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-primary-500/30"
               >
-                <CheckCircle className="h-10 w-10 text-emerald-400" />
+                <CheckCircle className="h-10 w-10 text-primary-400" />
               </motion.div>
 
               <h2 className="text-2xl font-bold text-white mb-2">{t('auth.resetPassword.success')}</h2>
@@ -208,7 +208,7 @@ const ResetPassword: React.FC = () => {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
-                  className="w-full h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
+                  className="w-full h-12 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                   onClick={() => navigate('/login')}
                 >
                   <Zap className="mr-2 h-5 w-5" />
@@ -235,7 +235,7 @@ const ResetPassword: React.FC = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2">
             <img src="/assets/logo.png" alt="Wants" className="h-10 w-10" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Wants</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">Wants</span>
           </Link>
         </div>
 
@@ -251,9 +251,9 @@ const ResetPassword: React.FC = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
-                className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-emerald-500/30"
+                className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary-500/30"
               >
-                <Lock className="h-8 w-8 text-emerald-400" />
+                <Lock className="h-8 w-8 text-primary-400" />
               </motion.div>
               <h2 className="text-2xl font-bold text-white mb-2">{t('auth.resetPassword.title')}</h2>
               <p className="text-gray-400">{t('auth.resetPassword.subtitle')}</p>
@@ -283,7 +283,7 @@ const ResetPassword: React.FC = () => {
                     onChange={handleChange}
                     required
                     disabled={isLoading || !token}
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20 rounded-xl h-12 pr-12"
+                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/20 rounded-xl h-12 pr-12"
                   />
                   <button
                     type="button"
@@ -308,11 +308,11 @@ const ResetPassword: React.FC = () => {
                     {passwordRequirements.map((req, index) => (
                       <div key={index} className="flex items-center gap-2 text-xs">
                         {req.met ? (
-                          <Check className="h-3 w-3 text-emerald-400" />
+                          <Check className="h-3 w-3 text-primary-400" />
                         ) : (
                           <X className="h-3 w-3 text-gray-600" />
                         )}
-                        <span className={req.met ? 'text-emerald-400' : 'text-gray-500'}>
+                        <span className={req.met ? 'text-primary-400' : 'text-gray-500'}>
                           {req.label}
                         </span>
                       </div>
@@ -333,7 +333,7 @@ const ResetPassword: React.FC = () => {
                     onChange={handleChange}
                     required
                     disabled={isLoading || !token}
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20 rounded-xl h-12 pr-12"
+                    className="bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/20 rounded-xl h-12 pr-12"
                   />
                   <button
                     type="button"
@@ -355,7 +355,7 @@ const ResetPassword: React.FC = () => {
                   </p>
                 )}
                 {formData.confirmPassword && formData.password === formData.confirmPassword && formData.password && (
-                  <p className="text-xs text-emerald-400 flex items-center gap-1">
+                  <p className="text-xs text-primary-400 flex items-center gap-1">
                     <Check className="h-3 w-3" />
                     Passwords match
                   </p>
@@ -365,7 +365,7 @@ const ResetPassword: React.FC = () => {
               <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} className="pt-2">
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
+                  className="w-full h-12 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                   disabled={isLoading || !token}
                 >
                   {isLoading ? (

@@ -266,7 +266,7 @@ export const PhotoBoothPropsTool: React.FC<PhotoBoothPropsToolProps> = ({
       purple: { bg: 'bg-purple-500', text: 'text-purple-500', border: 'border-purple-500', light: 'bg-purple-500/10' },
       blue: { bg: 'bg-blue-500', text: 'text-blue-500', border: 'border-blue-500', light: 'bg-blue-500/10' },
       pink: { bg: 'bg-pink-500', text: 'text-pink-500', border: 'border-pink-500', light: 'bg-pink-500/10' },
-      emerald: { bg: 'bg-emerald-500', text: 'text-emerald-500', border: 'border-emerald-500', light: 'bg-emerald-500/10' },
+      emerald: { bg: 'bg-primary-500', text: 'text-primary-500', border: 'border-primary-500', light: 'bg-primary-500/10' },
       red: { bg: 'bg-red-500', text: 'text-red-500', border: 'border-red-500', light: 'bg-red-500/10' },
     };
     return colors[color] || colors.purple;

@@ -123,7 +123,7 @@ const TravelPlannerHeader: React.FC<TravelPlannerHeaderProps> = ({
             </Button>
             <Button
               onClick={() => navigate('/generate-travel-plan')}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl hover:from-primary-600 hover:to-cyan-600"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl hover:from-primary-600 hover:to-primary-700"
               size="sm"
             >
               <AutoAwesome className="h-4 w-4 sm:mr-2" />

@@ -124,7 +124,7 @@ const CaloriesTrackerLanding: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-white/20">
+            <div className="p-4 bg-gradient-to-r from-primary-500/20 to-primary-500/20 rounded-2xl backdrop-blur-sm border border-white/20">
               <Icon path={mdiFoodApple} size={3} className="text-primary-400" />
             </div>
           </div>
@@ -189,7 +189,7 @@ const CaloriesTrackerLanding: React.FC = () => {
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-lg">
+                    <div className="p-3 bg-gradient-to-r from-primary-500/20 to-primary-500/20 rounded-lg">
                       <Icon path={feature.icon} size={1.2} className="text-primary-400" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-primary-400 transition-colors">
@@ -211,7 +211,7 @@ const CaloriesTrackerLanding: React.FC = () => {
         <GlassCard className="p-8 text-center" glow gradient>
           <div className="space-y-6">
             <div className="flex justify-center">
-              <div className="p-4 bg-gradient-to-r from-primary-500/30 to-cyan-500/30 rounded-2xl">
+              <div className="p-4 bg-gradient-to-r from-primary-500/30 to-primary-500/30 rounded-2xl">
                 <Icon path={mdiTrophy} size={2} className="text-primary-400" />
               </div>
             </div>
@@ -230,7 +230,7 @@ const CaloriesTrackerLanding: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => navigate('/calories-tracker/onboarding')}
-                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/30"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg shadow-primary-500/30"
               >
                 <Icon path={mdiFire} size={0.8} className="mr-2" />
                 Start Your Journey

@@ -156,9 +156,9 @@ export const PoolVolumeCalculatorTool: React.FC<PoolVolumeCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Waves className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Waves className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.poolVolumeCalculator.poolVolumeCalculator', 'Pool Volume Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.poolVolumeCalculator.calculateWaterVolumeCostAnd', 'Calculate water volume, cost, and chemical dosing')}</p>
@@ -173,7 +173,7 @@ export const PoolVolumeCalculatorTool: React.FC<PoolVolumeCalculatorToolProps> =
             <button
               key={s}
               onClick={() => setShape(s)}
-              className={`py-3 px-3 rounded-lg text-sm transition-all ${shape === s ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              className={`py-3 px-3 rounded-lg text-sm transition-all ${shape === s ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             >
               <div className="text-lg font-mono mb-1">{shapes[s].icon}</div>
               {shapes[s].name}
@@ -182,7 +182,7 @@ export const PoolVolumeCalculatorTool: React.FC<PoolVolumeCalculatorToolProps> =
         </div>
 
         {/* Shape Info */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-1">
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{shapes[shape].name} Pool</h4>
           </div>
@@ -195,13 +195,13 @@ export const PoolVolumeCalculatorTool: React.FC<PoolVolumeCalculatorToolProps> =
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('feet')}
-            className={`flex-1 py-2 rounded-lg ${unit === 'feet' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unit === 'feet' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.poolVolumeCalculator.feet', 'Feet')}
           </button>
           <button
             onClick={() => setUnit('meters')}
-            className={`flex-1 py-2 rounded-lg ${unit === 'meters' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unit === 'meters' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.poolVolumeCalculator.meters', 'Meters')}
           </button>
@@ -312,10 +312,10 @@ export const PoolVolumeCalculatorTool: React.FC<PoolVolumeCalculatorToolProps> =
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Waves className="w-4 h-4 text-cyan-500" />
+              <Waves className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.poolVolumeCalculator.gallons', 'Gallons')}</span>
             </div>
-            <div className="text-3xl font-bold text-cyan-500">{formatNumber(calculations.gallons)}</div>
+            <div className="text-3xl font-bold text-primary-500">{formatNumber(calculations.gallons)}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {t('tools.poolVolumeCalculator.usGallons', 'US gallons')}
             </div>

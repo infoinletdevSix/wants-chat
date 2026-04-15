@@ -221,14 +221,14 @@ const VocabularyPage: React.FC = () => {
   const paginatedWords = sortedWords;
 
   const getMasteryColor = (mastery: number) => {
-    if (mastery >= 80) return 'text-emerald-400';
+    if (mastery >= 80) return 'text-primary-400';
     if (mastery >= 60) return 'text-yellow-400';
     if (mastery >= 40) return 'text-orange-400';
     return 'text-red-400';
   };
 
   const getMasteryBgColor = (mastery: number) => {
-    if (mastery >= 80) return 'bg-emerald-500/20 border-emerald-500/30';
+    if (mastery >= 80) return 'bg-primary-500/20 border-primary-500/30';
     if (mastery >= 60) return 'bg-yellow-500/20 border-yellow-500/30';
     if (mastery >= 40) return 'bg-orange-500/20 border-orange-500/30';
     return 'bg-red-500/20 border-red-500/30';
@@ -237,7 +237,7 @@ const VocabularyPage: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'easy':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'medium':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
       case 'hard':
@@ -457,7 +457,7 @@ const VocabularyPage: React.FC = () => {
     <div className="space-y-6">
       {/* Modern Header */}
       <div className="flex items-center space-x-4">
-        <div className="p-3 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+        <div className="p-3 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-500/20 border border-primary-500/30">
           <BookOpen className="h-6 w-6 text-primary-400" />
         </div>
         <div>
@@ -498,7 +498,7 @@ const VocabularyPage: React.FC = () => {
                     <ArrowLeft className="h-4 w-4 mr-2" />
                     Back to Vocabulary
                   </Button>
-                  <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0 capitalize">
+                  <Badge className="bg-gradient-to-r from-primary-500 to-primary-600 text-white border-0 capitalize">
                     Flashcards
                   </Badge>
                 </div>
@@ -536,7 +536,7 @@ const VocabularyPage: React.FC = () => {
               </GlassCard>
 
               <GlassCard className="text-center" hover={false} glow>
-                <div className="p-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 w-fit mx-auto mb-4">
+                <div className="p-3 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 w-fit mx-auto mb-4">
                   <Award className="h-8 w-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-1">
@@ -748,7 +748,7 @@ const VocabularyPage: React.FC = () => {
                       ) : (
                         <Button
                           size="lg"
-                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200"
+                          className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200"
                           disabled={completeVocabularyMutation.isPending}
                           onClick={async (e) => {
                             e.stopPropagation();

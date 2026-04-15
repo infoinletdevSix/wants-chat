@@ -35,7 +35,7 @@ All three security pages have been successfully created in `/Users/nymulislam/DE
 ## 🎨 Design Features
 
 ### Consistent Theme
-- **Colors**: Teal/cyan gradient (`from-primary-500 to-cyan-500`)
+- **Colors**: Teal/cyan gradient (`from-primary-500 to-primary-500`)
 - **Background**: Animated gradient orbs with BackgroundEffects
 - **Cards**: Glass-morphism with `backdrop-blur-xl`
 - **Borders**: Subtle `border-primary-400/30`

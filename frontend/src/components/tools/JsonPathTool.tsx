@@ -303,7 +303,7 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
           />
           <button
             onClick={parseJson}
-            className="w-full py-2.5 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2"
+            className="w-full py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2"
           >
             <Search className="w-4 h-4" />
             {t('tools.jsonPath.parseJson', 'Parse JSON')}

@@ -170,7 +170,7 @@ const GoalsSettings: React.FC<GoalsSettingsProps> = ({
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/20 rounded-lg">
+            <div className="p-2 bg-primary-500/20 rounded-lg">
               <span className="text-lg">💪</span>
             </div>
             <div>
@@ -180,7 +180,7 @@ const GoalsSettings: React.FC<GoalsSettingsProps> = ({
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-500/20 rounded-lg">
+            <div className="p-2 bg-primary-500/20 rounded-lg">
               <span className="text-lg">🍎</span>
             </div>
             <div>
@@ -242,7 +242,7 @@ const GoalsSettings: React.FC<GoalsSettingsProps> = ({
               </Button>
               <span className={`text-sm px-3 py-1 rounded-full font-medium ${
                 isBalanced
-                  ? 'bg-emerald-500/20 text-emerald-400'
+                  ? 'bg-primary-500/20 text-primary-400'
                   : 'bg-orange-500/20 text-orange-400'
               }`}>
                 Total: {totalPercentage.toFixed(1)}%
@@ -323,7 +323,7 @@ const GoalsSettings: React.FC<GoalsSettingsProps> = ({
           <Button
             onClick={handleSave}
             disabled={!isBalanced || isSaving}
-            className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
+            className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 disabled:opacity-50"
           >
             {isSaving ? 'Saving...' : 'Save Goals'}
           </Button>

@@ -289,7 +289,7 @@ const EventReminder: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-primary-900">
       <BackgroundEffects />
       <Header />
 
@@ -351,7 +351,7 @@ const EventReminder: React.FC = () => {
             {/* Add button */}
             <button
               onClick={() => setShowModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               <Plus className="w-5 h-5" />
               Add Event
@@ -488,7 +488,7 @@ const EventReminder: React.FC = () => {
                           </div>
                         )}
                         {event.notificationEnabled && (
-                          <div className="flex items-center gap-2 text-cyan-300 text-sm">
+                          <div className="flex items-center gap-2 text-primary-300 text-sm">
                             <Bell className="w-4 h-4" />
                             <span>Reminder: {notificationOptions.find(o => o.value === event.notificationMinutes)?.label}</span>
                           </div>
@@ -714,7 +714,7 @@ const EventReminder: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all shadow-lg"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg"
                   >
                     {editingEvent ? 'Update' : 'Add'} Event
                   </button>

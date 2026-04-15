@@ -115,7 +115,7 @@ const aiBrowserFeatures = [
     icon: Link2,
     title: "URL Detection + Auto-Summarize",
     description: "Paste any URL - we detect it, fetch content, and provide instant summaries with key insights.",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-blue-500 to-primary-500",
     tag: "AI Browser"
   },
   {
@@ -129,7 +129,7 @@ const aiBrowserFeatures = [
     icon: Globe,
     title: "Research Mode (Deep Web Search)",
     description: "Multi-source research with citations. Search academic papers, news, and real-time data.",
-    color: "from-emerald-500 to-primary-500",
+    color: "from-primary-500 to-primary-600",
     tag: "Deep Research"
   },
   {
@@ -164,14 +164,14 @@ const aiBrowserFeatures = [
     icon: Code,
     title: "Code Generation & Review",
     description: "Generate, explain, debug, and review code in any language. Full-stack development assistant.",
-    color: "from-green-500 to-emerald-500",
+    color: "from-green-500 to-primary-500",
     tag: "Code AI"
   },
   {
     icon: Database,
     title: "Data Extraction & Analysis",
     description: "Extract structured data from any source. Tables, forms, receipts - AI understands it all.",
-    color: "from-cyan-500 to-blue-500",
+    color: "from-primary-500 to-blue-500",
     tag: "Data AI"
   },
   {
@@ -198,7 +198,7 @@ const uniqueCapabilities = [
     icon: Terminal,
     title: "One Prompt → Full Backend",
     description: "Generate complete Hono.js APIs with PostgreSQL, authentication, and business logic from natural language.",
-    color: "from-green-500 to-emerald-500",
+    color: "from-green-500 to-primary-500",
     example: "\"Build me a REST API for a todo app with user auth\""
   },
   {
@@ -327,7 +327,7 @@ const ToolsPage: React.FC = () => {
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-950" />
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,11 +368,11 @@ const ToolsPage: React.FC = () => {
                 className="flex flex-wrap justify-center gap-8 mb-8"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-400">1100+</div>
+                  <div className="text-3xl font-bold text-primary-400">1100+</div>
                   <div className="text-sm text-gray-500">{t('tools.statsContextualTools')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">{toolCategories.length}</div>
+                  <div className="text-3xl font-bold text-primary-400">{toolCategories.length}</div>
                   <div className="text-sm text-gray-500">{t('tools.statsCategories')}</div>
                 </div>
                 <div className="text-center">
@@ -419,8 +419,8 @@ const ToolsPage: React.FC = () => {
                 >
                   {/* Available Badge */}
                   <div className="absolute top-3 right-3">
-                    <span className="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] font-medium rounded-full flex items-center gap-1">
-                      <span className="w-1 h-1 bg-emerald-400 rounded-full animate-pulse" />
+                    <span className="px-2 py-0.5 bg-primary-500/20 text-primary-400 text-[10px] font-medium rounded-full flex items-center gap-1">
+                      <span className="w-1 h-1 bg-primary-400 rounded-full animate-pulse" />
                       {t('tools.live')}
                     </span>
                   </div>
@@ -450,12 +450,12 @@ const ToolsPage: React.FC = () => {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">
-                <Rocket className="w-4 h-4 text-emerald-400" />
-                <span className="text-sm font-medium text-emerald-400">{t('tools.nobodyElseHasThis')}</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full mb-4">
+                <Rocket className="w-4 h-4 text-primary-400" />
+                <span className="text-sm font-medium text-primary-400">{t('tools.nobodyElseHasThis')}</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                {t('tools.onePrompt')} <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">{t('tools.fullStackApps')}</span>
+                {t('tools.onePrompt')} <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">{t('tools.fullStackApps')}</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
                 {t('tools.onePromptDescription')}
@@ -478,7 +478,7 @@ const ToolsPage: React.FC = () => {
                   <h3 className="text-lg font-semibold mb-2">{cap.title}</h3>
                   <p className="text-gray-400 text-sm mb-3">{cap.description}</p>
                   <div className="bg-gray-800/50 rounded-lg p-3">
-                    <code className="text-xs text-emerald-400">{cap.example}</code>
+                    <code className="text-xs text-primary-400">{cap.example}</code>
                   </div>
                 </motion.div>
               ))}
@@ -500,7 +500,7 @@ const ToolsPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder={t('tools.searchPlaceholder')}
-                  className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors"
+                  className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
                 />
                 {searchQuery && (
                   <button
@@ -534,7 +534,7 @@ const ToolsPage: React.FC = () => {
                 {selectedCategory && (
                   <button
                     onClick={() => handleCategorySelect(null)}
-                    className="ml-2 text-emerald-400 hover:underline"
+                    className="ml-2 text-primary-400 hover:underline"
                   >
                     {t('tools.clearFilter')}
                   </button>
@@ -561,7 +561,7 @@ const ToolsPage: React.FC = () => {
                     <button
                       onClick={() => handleCategorySelect(null)}
                       className={`w-full text-left px-3 py-2 rounded-lg transition-colors flex items-center justify-between ${
-                        !selectedCategory ? 'bg-emerald-500/20 text-emerald-400' : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                        !selectedCategory ? 'bg-primary-500/20 text-primary-400' : 'text-gray-400 hover:bg-gray-800 hover:text-white'
                       }`}
                     >
                       <span className="flex items-center gap-2">
@@ -575,7 +575,7 @@ const ToolsPage: React.FC = () => {
                         key={category.id}
                         onClick={() => handleCategorySelect(category.id)}
                         className={`w-full text-left px-3 py-2 rounded-lg transition-colors flex items-center justify-between ${
-                          selectedCategory === category.id ? 'bg-emerald-500/20 text-emerald-400' : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                          selectedCategory === category.id ? 'bg-primary-500/20 text-primary-400' : 'text-gray-400 hover:bg-gray-800 hover:text-white'
                         }`}
                       >
                         <span className="flex items-center gap-2 truncate">
@@ -599,7 +599,7 @@ const ToolsPage: React.FC = () => {
                     <button
                       onClick={() => handleCategorySelect(null)}
                       className={`px-4 py-2 rounded-full whitespace-nowrap transition-colors ${
-                        !selectedCategory ? 'bg-emerald-500 text-white' : 'bg-gray-800 text-gray-300'
+                        !selectedCategory ? 'bg-primary-500 text-white' : 'bg-gray-800 text-gray-300'
                       }`}
                     >
                       All ({allTools.length})
@@ -609,7 +609,7 @@ const ToolsPage: React.FC = () => {
                         key={cat.id}
                         onClick={() => handleCategorySelect(cat.id)}
                         className={`px-4 py-2 rounded-full whitespace-nowrap transition-colors ${
-                          selectedCategory === cat.id ? 'bg-emerald-500 text-white' : 'bg-gray-800 text-gray-300'
+                          selectedCategory === cat.id ? 'bg-primary-500 text-white' : 'bg-gray-800 text-gray-300'
                         }`}
                       >
                         {categoryEmojis[cat.id]} {cat.name}
@@ -697,7 +697,7 @@ const ToolsPage: React.FC = () => {
                             {!isExpanded && categoryTools.length > 6 && (
                               <button
                                 onClick={() => toggleCategory(category.id)}
-                                className="mt-4 w-full py-2 text-center text-emerald-400 hover:text-emerald-300 transition-colors flex items-center justify-center gap-2"
+                                className="mt-4 w-full py-2 text-center text-primary-400 hover:text-primary-300 transition-colors flex items-center justify-center gap-2"
                               >
                                 {t('tools.showMore', { count: categoryTools.length - 6 })} <ChevronRight className="w-4 h-4" />
                               </button>
@@ -720,7 +720,7 @@ const ToolsPage: React.FC = () => {
                         setSearchQuery('');
                         handleCategorySelect(null);
                       }}
-                      className="px-6 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-lg transition-colors"
+                      className="px-6 py-2 bg-primary-500 hover:bg-primary-600 rounded-lg transition-colors"
                     >
                       {t('tools.clearAllFilters')}
                     </button>
@@ -734,7 +734,7 @@ const ToolsPage: React.FC = () => {
         {/* ============================================ */}
         {/* CTA SECTION */}
         {/* ============================================ */}
-        <section className="py-16 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-blue-500/10">
+        <section className="py-16 bg-gradient-to-r from-primary-500/10 via-primary-500/10 to-blue-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {t('tools.ctaTitle')}
@@ -745,7 +745,7 @@ const ToolsPage: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={() => navigate('/signup')}
-                className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 rounded-xl font-semibold text-lg flex items-center gap-2 transition-all transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 rounded-xl font-semibold text-lg flex items-center gap-2 transition-all transform hover:scale-105"
               >
                 {t('tools.startFreeNow')} <ArrowRight className="w-5 h-5" />
               </button>
@@ -784,14 +784,14 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, viewMode, index, onClick }) =
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: index * 0.02 }}
         onClick={onClick}
-        className="w-full flex items-center gap-4 p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/50 hover:bg-gray-800/50 transition-all text-left group"
+        className="w-full flex items-center gap-4 p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-primary-500/50 hover:bg-gray-800/50 transition-all text-left group"
       >
         <span className="text-2xl">{emoji}</span>
         <div className="flex-1 min-w-0">
-          <h4 className="font-medium group-hover:text-emerald-400 transition-colors">{tool.title}</h4>
+          <h4 className="font-medium group-hover:text-primary-400 transition-colors">{tool.title}</h4>
           <p className="text-sm text-gray-500 truncate">{tool.description}</p>
         </div>
-        <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all shrink-0" />
+        <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-primary-400 group-hover:translate-x-1 transition-all shrink-0" />
       </motion.button>
     );
   }
@@ -802,16 +802,16 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, viewMode, index, onClick }) =
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.02 }}
       onClick={onClick}
-      className="w-full p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/50 hover:bg-gray-800/50 transition-all text-left group"
+      className="w-full p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-primary-500/50 hover:bg-gray-800/50 transition-all text-left group"
     >
       <div className="flex items-start gap-3">
         <span className="text-2xl">{emoji}</span>
         <div className="flex-1 min-w-0">
-          <h4 className="font-medium group-hover:text-emerald-400 transition-colors line-clamp-1">{tool.title}</h4>
+          <h4 className="font-medium group-hover:text-primary-400 transition-colors line-clamp-1">{tool.title}</h4>
           <p className="text-sm text-gray-500 line-clamp-2 mt-1">{tool.description}</p>
         </div>
       </div>
-      <div className="mt-3 flex items-center justify-end text-xs text-gray-600 group-hover:text-emerald-400 transition-colors">
+      <div className="mt-3 flex items-center justify-end text-xs text-gray-600 group-hover:text-primary-400 transition-colors">
         {t('tools.useTool')} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
       </div>
     </motion.button>

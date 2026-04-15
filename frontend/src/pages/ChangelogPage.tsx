@@ -13,7 +13,7 @@ const changelogEntries = [
     version: '2.5.0',
     date: 'January 2, 2026',
     tag: 'Latest',
-    tagColor: 'bg-emerald-500',
+    tagColor: 'bg-primary-500',
     changes: [
       { type: 'feature', icon: Sparkles, text: 'Introduced AI-powered workflow automation with 500+ app integrations' },
       { type: 'feature', icon: Sparkles, text: 'New dark mode improvements across all pages' },
@@ -98,7 +98,7 @@ const changelogEntries = [
     version: '1.0.0',
     date: 'July 1, 2025',
     tag: 'Initial Release',
-    tagColor: 'bg-cyan-500',
+    tagColor: 'bg-primary-500',
     changes: [
       { type: 'feature', icon: Rocket, text: 'Official launch of Wants platform' },
       { type: 'feature', icon: Sparkles, text: 'Core AI chat functionality' },
@@ -111,9 +111,9 @@ const changelogEntries = [
 const getTypeStyles = (type: string) => {
   switch (type) {
     case 'feature':
-      return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+      return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
     case 'improvement':
-      return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+      return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
     case 'fix':
       return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
     case 'security':
@@ -153,12 +153,12 @@ const ChangelogPage: React.FC = () => {
         {/* Animated background */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
           <motion.div
-            className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px]"
+            className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[150px]"
             animate={{ x: [0, -80, 0], y: [0, 60, 0] }}
             transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.div
-            className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[120px]"
+            className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-primary-500/10 rounded-full blur-[120px]"
             animate={{ x: [0, 60, 0], y: [0, -40, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -175,12 +175,12 @@ const ChangelogPage: React.FC = () => {
               className="text-center"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                <Clock className="w-4 h-4 text-emerald-400" />
+                <Clock className="w-4 h-4 text-primary-400" />
                 <span className="text-sm font-medium text-white/80">{t('changelog.hero.badge')}</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-primary-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">
                   {t('changelog.hero.title')}
                 </span>
               </h1>
@@ -197,7 +197,7 @@ const ChangelogPage: React.FC = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="relative">
               {/* Vertical line */}
-              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/50 via-cyan-500/30 to-transparent transform md:-translate-x-1/2" />
+              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary-500/50 via-primary-500/30 to-transparent transform md:-translate-x-1/2" />
 
               {/* Entries */}
               <div className="space-y-12">
@@ -211,11 +211,11 @@ const ChangelogPage: React.FC = () => {
                     className="relative pl-8 md:pl-0"
                   >
                     {/* Timeline dot */}
-                    <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 transform -translate-x-1/2 mt-2 ring-4 ring-gray-950" />
+                    <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 transform -translate-x-1/2 mt-2 ring-4 ring-gray-950" />
 
                     {/* Content card */}
                     <div className={`md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:ml-auto md:pl-8' : 'md:mr-auto md:pr-8'}`}>
-                      <div className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-emerald-500/30 transition-all">
+                      <div className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-primary-500/30 transition-all">
                         {/* Header */}
                         <div className="flex flex-wrap items-center gap-3 mb-4">
                           <span className="text-2xl font-bold text-white">v{entry.version}</span>
@@ -254,9 +254,9 @@ const ChangelogPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 text-center"
+              className="p-8 rounded-2xl bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-500/30 text-center"
             >
-              <Star className="w-10 h-10 text-emerald-400 mx-auto mb-4" />
+              <Star className="w-10 h-10 text-primary-400 mx-auto mb-4" />
               <h2 className="text-2xl font-bold mb-3">{t('changelog.subscribe.title')}</h2>
               <p className="text-white/70 mb-6">
                 {t('changelog.subscribe.subtitle')}
@@ -265,9 +265,9 @@ const ChangelogPage: React.FC = () => {
                 <input
                   type="email"
                   placeholder={t('changelog.subscribe.emailPlaceholder')}
-                  className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-emerald-500/50"
+                  className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-primary-500/50"
                 />
-                <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all whitespace-nowrap">
+                <button className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all whitespace-nowrap">
                   {t('changelog.subscribe.button')}
                 </button>
               </div>

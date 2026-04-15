@@ -136,7 +136,7 @@ export const RecentSessions: React.FC<RecentSessionsProps> = ({
             <p>No recent sessions found</p>
             <Button
               size="sm"
-              className="mt-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
+              className="mt-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
               onClick={() => navigate('/meditation')}
             >
               Start Your First Session

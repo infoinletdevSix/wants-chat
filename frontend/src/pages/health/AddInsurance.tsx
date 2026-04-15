@@ -1012,7 +1012,7 @@ const AddInsurance: React.FC = () => {
           <Button 
             onClick={handleSubmit}
             disabled={createInsuranceMutation.loading || updateInsuranceMutation.loading || (isEditMode && insuranceLoading)}
-            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {(createInsuranceMutation.loading || updateInsuranceMutation.loading) ? (
               <>

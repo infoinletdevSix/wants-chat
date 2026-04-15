@@ -401,10 +401,10 @@ export const LaundryCalculatorTool: React.FC<LaundryCalculatorToolProps> = ({
               </div>
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Droplets className="w-4 h-4 text-cyan-500" />
+                  <Droplets className="w-4 h-4 text-primary-500" />
                   <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.laundryCalculator.water', 'Water')}</span>
                 </div>
-                <div className="text-3xl font-bold text-cyan-500">{loadConfig.waterGallons} gal</div>
+                <div className="text-3xl font-bold text-primary-500">{loadConfig.waterGallons} gal</div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                   {loadConfig.waterLiters} L (standard washer)
                 </div>
@@ -620,15 +620,15 @@ export const LaundryCalculatorTool: React.FC<LaundryCalculatorToolProps> = ({
               <div className="grid grid-cols-3 gap-3 mb-4">
                 <div className={`p-3 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>{t('tools.laundryCalculator.perLoad', 'Per Load')}</span>
-                  <div className="text-lg font-bold text-cyan-500">{energyEstimates.waterPerLoad} gal</div>
+                  <div className="text-lg font-bold text-primary-500">{energyEstimates.waterPerLoad} gal</div>
                 </div>
                 <div className={`p-3 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>{t('tools.laundryCalculator.weekly', 'Weekly')}</span>
-                  <div className="text-lg font-bold text-cyan-500">{energyEstimates.weeklyWater} gal</div>
+                  <div className="text-lg font-bold text-primary-500">{energyEstimates.weeklyWater} gal</div>
                 </div>
                 <div className={`p-3 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>{t('tools.laundryCalculator.yearly', 'Yearly')}</span>
-                  <div className="text-lg font-bold text-cyan-500">{energyEstimates.yearlyWater} gal</div>
+                  <div className="text-lg font-bold text-primary-500">{energyEstimates.yearlyWater} gal</div>
                 </div>
               </div>
 

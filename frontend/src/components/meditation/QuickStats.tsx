@@ -59,8 +59,8 @@ export const QuickStats: React.FC<QuickStatsProps> = ({
             <p className="text-xs sm:text-sm text-white/60">Longest Streak</p>
             <p className="text-xl sm:text-2xl font-bold text-white">{longestStreak} days</p>
           </div>
-          <div className="p-2 bg-emerald-500/20 border border-emerald-500/30 rounded-lg">
-            <Trophy className="h-5 w-5 text-emerald-400" />
+          <div className="p-2 bg-primary-500/20 border border-primary-500/30 rounded-lg">
+            <Trophy className="h-5 w-5 text-primary-400" />
           </div>
         </div>
       </Card>

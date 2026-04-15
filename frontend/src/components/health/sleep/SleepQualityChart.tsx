@@ -102,7 +102,7 @@ export const SleepQualityChart: React.FC<SleepQualityChartProps> = ({
               <span className="text-white/60">Quality</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500" />
+              <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary-500 to-primary-600" />
               <span className="text-white/60">Duration</span>
             </div>
           </div>

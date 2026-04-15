@@ -96,7 +96,7 @@ const JOB_STATUSES: { status: JobStatus; label: string; color: string }[] = [
   { status: 'in_progress', label: 'In Progress', color: 'bg-blue-500' },
   { status: 'proofing', label: 'Proofing', color: 'bg-purple-500' },
   { status: 'approved', label: 'Approved', color: 'bg-indigo-500' },
-  { status: 'printing', label: 'Printing', color: 'bg-cyan-500' },
+  { status: 'printing', label: 'Printing', color: 'bg-primary-500' },
   { status: 'finishing', label: 'Finishing', color: 'bg-orange-500' },
   { status: 'completed', label: 'Completed', color: 'bg-green-500' },
   { status: 'shipped', label: 'Shipped', color: 'bg-primary-500' },

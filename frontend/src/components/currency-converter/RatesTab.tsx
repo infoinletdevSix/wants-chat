@@ -22,14 +22,14 @@ import Sparkline from './Sparkline';
 
 const popularCurrencies = [
   { code: 'USD', name: 'US Dollar', color: 'bg-gradient-to-br from-blue-500 to-blue-600' },
-  { code: 'EUR', name: 'Euro', color: 'bg-gradient-to-br from-emerald-500 to-emerald-600' },
+  { code: 'EUR', name: 'Euro', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'JPY', name: 'Japanese Yen', color: 'bg-gradient-to-br from-orange-500 to-orange-600' },
   { code: 'GBP', name: 'British Pound', color: 'bg-gradient-to-br from-purple-500 to-purple-600' },
   { code: 'AUD', name: 'Australian Dollar', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'CAD', name: 'Canadian Dollar', color: 'bg-gradient-to-br from-red-500 to-red-600' },
   { code: 'CHF', name: 'Swiss Franc', color: 'bg-gradient-to-br from-indigo-500 to-indigo-600' },
   { code: 'CNY', name: 'Chinese Yuan', color: 'bg-gradient-to-br from-pink-500 to-pink-600' },
-  { code: 'SEK', name: 'Swedish Krona', color: 'bg-gradient-to-br from-cyan-500 to-cyan-600' },
+  { code: 'SEK', name: 'Swedish Krona', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'NZD', name: 'New Zealand Dollar', color: 'bg-gradient-to-br from-yellow-500 to-yellow-600' }
 ];
 
@@ -132,7 +132,7 @@ const RatesTab: React.FC = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <div className="p-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg">
                 <Icon path={mdiBank} size={1.2} className="text-white" />
               </div>
               Exchange Rates
@@ -156,7 +156,7 @@ const RatesTab: React.FC = () => {
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-white">Popular Exchange Rates</h3>
-            <div className="inline-block bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-400/30 rounded-full px-3 py-1 text-xs text-white/80">
+            <div className="inline-block bg-gradient-to-r from-primary-500/20 to-primary-500/20 border border-primary-400/30 rounded-full px-3 py-1 text-xs text-white/80">
               <Icon path={mdiTrendingUp} size={0.5} className="inline mr-1" />
               30-Day Trends
             </div>
@@ -203,7 +203,7 @@ const RatesTab: React.FC = () => {
                         <p className="text-xs text-white/60">{currencyInfo?.name || currency}</p>
                       </div>
                     </div>
-                    <div className={`inline-block ${performance >= 0 ? 'bg-emerald-500/20 border-emerald-400/30' : 'bg-red-500/20 border-red-400/30'} border rounded-full px-2 py-1 text-xs text-white/80`}>
+                    <div className={`inline-block ${performance >= 0 ? 'bg-primary-500/20 border-primary-400/30' : 'bg-red-500/20 border-red-400/30'} border rounded-full px-2 py-1 text-xs text-white/80`}>
                       <Icon path={performance >= 0 ? mdiTrendingUp : mdiTrendingDown} size={0.4} className="inline mr-1" />
                       {performance.toFixed(2)}%
                     </div>
@@ -289,7 +289,7 @@ const RatesTab: React.FC = () => {
               </div>
               <Button
                 onClick={handleAddRate}
-                className="h-12 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2"
+                className="h-12 bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2"
                 disabled={!fromCurrency || !toCurrency || fromCurrency === toCurrency}
               >
                 <Icon path={mdiPlusCircle} size={0.8} />
@@ -305,7 +305,7 @@ const RatesTab: React.FC = () => {
                   const toCurrencyInfo = popularCurrencies.find(c => c.code === rate.to);
 
                   return (
-                    <div key={index} className="bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-400/30 rounded-xl hover:shadow-md transition-all duration-200 p-4">
+                    <div key={index} className="bg-gradient-to-br from-primary-500/10 to-primary-500/10 border border-primary-400/30 rounded-xl hover:shadow-md transition-all duration-200 p-4">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
                           <div className="flex items-center gap-1">

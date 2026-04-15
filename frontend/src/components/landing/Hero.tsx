@@ -26,16 +26,16 @@ import ToolRequestModal from './ToolRequestModal';
 
 // Tool cards for the scrolling animation
 const toolCards = [
-  { name: 'Currency Converter', icon: DollarSign, color: 'from-emerald-500 to-cyan-500' },
+  { name: 'Currency Converter', icon: DollarSign, color: 'from-primary-500 to-primary-600' },
   { name: 'AI Logo Generator', icon: Palette, color: 'from-violet-500 to-purple-500' },
-  { name: 'Expense Tracker', icon: BarChart3, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Expense Tracker', icon: BarChart3, color: 'from-blue-500 to-primary-500' },
   { name: 'BMI Calculator', icon: Calculator, color: 'from-amber-500 to-orange-500' },
   { name: 'QR Generator', icon: QrCode, color: 'from-rose-500 to-pink-500' },
   { name: 'Image Editor', icon: Image, color: 'from-indigo-500 to-violet-500' },
   { name: 'PDF Tools', icon: FileText, color: 'from-red-500 to-orange-500' },
-  { name: 'Audio Converter', icon: Music, color: 'from-cyan-500 to-blue-500' },
+  { name: 'Audio Converter', icon: Music, color: 'from-primary-500 to-blue-500' },
   { name: 'Video Compressor', icon: Video, color: 'from-purple-500 to-pink-500' },
-  { name: 'Code Generator', icon: Code2, color: 'from-emerald-500 to-primary-500' },
+  { name: 'Code Generator', icon: Code2, color: 'from-primary-500 to-primary-600' },
   { name: 'Web Scraper', icon: Globe, color: 'from-blue-500 to-indigo-500' },
   { name: 'Time Zone Converter', icon: Clock, color: 'from-amber-500 to-yellow-500' },
 ];
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
     <section className="relative overflow-hidden bg-gray-950">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, -50, 0],
           y: [0, 30, 0],
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, 40, 0],
           y: [0, -30, 0],
@@ -154,7 +154,7 @@ const Hero: React.FC = () => {
             className="flex justify-center mb-8"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-gray-900/50 backdrop-blur-sm">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></span>
               <span className="text-sm font-medium text-gray-300 tracking-wide">
                 {t('landing.hero.badge')}
               </span>
@@ -171,7 +171,7 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight max-w-5xl mx-auto">
               <span className="text-white">{t('landing.hero.headline')}</span>
               <br />
-              <span className="bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-primary-500 to-primary-500 bg-clip-text text-transparent">
                 {t('landing.hero.subheadline')}
               </span>
             </h1>
@@ -272,7 +272,7 @@ const Hero: React.FC = () => {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white group h-14 px-8 text-base shadow-lg shadow-emerald-500/25"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white group h-14 px-8 text-base shadow-lg shadow-primary-500/25"
               onClick={() => navigate('/signup')}
             >
               {t('landing.hero.startFree')}
@@ -296,15 +296,15 @@ const Hero: React.FC = () => {
             className="flex flex-wrap gap-6 justify-center text-sm text-gray-500"
           >
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+              <span className="w-2 h-2 bg-primary-400 rounded-full"></span>
               {t('landing.hero.trustNoCreditCard')}
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+              <span className="w-2 h-2 bg-primary-400 rounded-full"></span>
               {t('landing.hero.trustToolsIncluded')}
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+              <span className="w-2 h-2 bg-primary-400 rounded-full"></span>
               {t('landing.hero.trustCancelAnytime')}
             </span>
           </motion.div>
@@ -318,7 +318,7 @@ const Hero: React.FC = () => {
           >
             <p className="text-base md:text-lg">
               <span className="text-white font-bold">{t('landing.hero.cantFindQuestion')}</span>{' '}
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent font-semibold">
+              <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent font-semibold">
                 {t('landing.hero.cantFindAnswer')}
               </span>
             </p>
@@ -326,7 +326,7 @@ const Hero: React.FC = () => {
               onClick={() => setIsToolModalOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white text-sm font-bold hover:from-emerald-600 hover:to-cyan-600 transition-all shadow-lg shadow-emerald-500/25"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-bold hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/25"
             >
               <Search className="w-4 h-4" />
               {t('landing.hero.browseAllTools')}
@@ -344,9 +344,9 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="flex justify-center mb-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 backdrop-blur-sm">
-              <Zap className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-400 tracking-wide">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-500/30 bg-primary-500/10 backdrop-blur-sm">
+              <Zap className="w-4 h-4 text-primary-400" />
+              <span className="text-sm font-medium text-primary-400 tracking-wide">
                 {t('landing.hero.intentBadge')}
               </span>
             </div>
@@ -363,7 +363,7 @@ const Hero: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl mx-auto">
               <span className="text-white">{t('landing.hero.intentHeadline')}</span>
               <br />
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
                 {t('landing.hero.intentSubheadline')}
               </span>
             </h2>
@@ -398,12 +398,12 @@ const Hero: React.FC = () => {
                 <div className="mb-8">
                   <div className="relative">
                     <div className="flex items-center gap-3 p-4 rounded-2xl bg-gray-900 border border-gray-800">
-                      <Sparkles className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                      <Sparkles className="w-5 h-5 text-primary-400 flex-shrink-0" />
                       <div className="flex-1 text-gray-300 text-lg">
                         {typedText}
-                        <span className="inline-block w-0.5 h-5 bg-emerald-400 ml-1 animate-pulse"></span>
+                        <span className="inline-block w-0.5 h-5 bg-primary-400 ml-1 animate-pulse"></span>
                       </div>
-                      <button className="w-10 h-10 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                      <button className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center flex-shrink-0">
                         <Send className="w-4 h-4 text-white" />
                       </button>
                     </div>
@@ -423,7 +423,7 @@ const Hero: React.FC = () => {
                 >
                   {/* AI Response */}
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center flex-shrink-0">
                       <Sparkles className="w-4 h-4 text-white" />
                     </div>
                     <div className="flex-1">
@@ -435,7 +435,7 @@ const Hero: React.FC = () => {
                       <div className="rounded-2xl bg-gray-900/80 border border-gray-800 overflow-hidden">
                         <div className="p-4 border-b border-gray-800 flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 flex items-center justify-center">
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center">
                               <DollarSign className="w-5 h-5 text-white" />
                             </div>
                             <div>
@@ -443,7 +443,7 @@ const Hero: React.FC = () => {
                               <p className="text-xs text-gray-500">{t('landing.hero.realTimeRates')}</p>
                             </div>
                           </div>
-                          <span className="px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-medium">
+                          <span className="px-2 py-1 rounded-full bg-primary-500/20 text-primary-400 text-xs font-medium">
                             {t('landing.hero.live')}
                           </span>
                         </div>
@@ -461,12 +461,12 @@ const Hero: React.FC = () => {
 
                             {/* Arrow */}
                             <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
-                              <ArrowRight className="w-5 h-5 text-emerald-400" />
+                              <ArrowRight className="w-5 h-5 text-primary-400" />
                             </div>
 
                             {/* To */}
                             <div className="flex-1 text-center">
-                              <div className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-1">
+                              <div className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent mb-1">
                                 460.25
                               </div>
                               <div className="flex items-center justify-center gap-2">
@@ -494,14 +494,14 @@ const Hero: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-full blur-2xl"
+              className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-primary-500/20 to-primary-500/5 rounded-full blur-2xl"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="absolute -top-8 -left-8 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl"
+              className="absolute -top-8 -left-8 w-40 h-40 bg-gradient-to-br from-primary-500/10 to-transparent rounded-full blur-3xl"
             />
           </motion.div>
 
@@ -518,7 +518,7 @@ const Hero: React.FC = () => {
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white group h-12 px-6 text-base shadow-lg shadow-emerald-500/25"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white group h-12 px-6 text-base shadow-lg shadow-primary-500/25"
               onClick={() => navigate('/signup')}
             >
               {t('landing.hero.experienceIntentAI')}

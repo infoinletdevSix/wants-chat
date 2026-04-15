@@ -147,7 +147,7 @@ const DailyOverview: React.FC<DailyOverviewProps> = ({
                   +{totalCalories - goalCalories} calories over
                 </span>
               ) : (
-                <span className="text-emerald-600 font-medium">
+                <span className="text-primary-600 font-medium">
                   {remainingCalories} calories remaining
                 </span>
               )}
@@ -197,7 +197,7 @@ const DailyOverview: React.FC<DailyOverviewProps> = ({
       </Card>
 
       {/* Water Intake */}
-      <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 border-blue-200">
+      <Card className="p-6 bg-gradient-to-br from-blue-50 to-primary-50 dark:from-blue-950/20 dark:to-primary-950/20 border-blue-200">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -257,7 +257,7 @@ const DailyOverview: React.FC<DailyOverviewProps> = ({
         
         <Card className="p-4 text-center">
           <div className="space-y-2">
-            <Icon path={mdiDumbbell} size={1} className="text-emerald-600 mx-auto" />
+            <Icon path={mdiDumbbell} size={1} className="text-primary-600 mx-auto" />
             <p className="text-2xl font-bold text-foreground">{totalProtein}g</p>
             <p className="text-xs text-muted-foreground">Protein</p>
           </div>

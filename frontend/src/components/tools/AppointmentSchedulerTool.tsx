@@ -72,7 +72,7 @@ type ViewMode = 'week' | 'day';
 
 const STATUS_OPTIONS = [
   { value: 'scheduled', label: 'Scheduled', color: 'bg-blue-500', icon: Clock },
-  { value: 'confirmed', label: 'Confirmed', color: 'bg-cyan-500', icon: CheckCircle },
+  { value: 'confirmed', label: 'Confirmed', color: 'bg-primary-500', icon: CheckCircle },
   { value: 'completed', label: 'Completed', color: 'bg-green-500', icon: CheckCircle },
   { value: 'cancelled', label: 'Cancelled', color: 'bg-red-500', icon: XCircle },
   { value: 'no-show', label: 'No-Show', color: 'bg-orange-500', icon: AlertCircle },
@@ -431,7 +431,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
           <StatusBadge status={apt.status} small={compact} />
         </div>
         {apt.isRecurring && (
-          <div className={`mt-1 flex items-center gap-1 text-xs ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>
+          <div className={`mt-1 flex items-center gap-1 text-xs ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
             <Repeat className="w-3 h-3" />
             {apt.recurringPattern}
           </div>
@@ -450,7 +450,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-cyan-500" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
       </div>
     );
   }
@@ -460,9 +460,9 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-            <Sparkles className="w-4 h-4 text-cyan-500" />
-            <span className="text-sm text-cyan-500 font-medium">{t('tools.appointmentScheduler.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.appointmentScheduler.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -470,7 +470,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
         <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-primary-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -509,7 +509,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                       : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                  } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                  } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                 />
               </div>
 
@@ -521,7 +521,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
               >
                 <option value="all">{t('tools.appointmentScheduler.allStatus', 'All Status')}</option>
                 {STATUS_OPTIONS.map(s => (
@@ -549,7 +549,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
               {/* New Appointment Button */}
               <button
                 onClick={() => openNewAppointment()}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all shadow-lg shadow-cyan-500/20"
+                className="px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/20"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.appointmentScheduler.newAppointment', 'New Appointment')}
@@ -563,7 +563,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
           {/* Left Sidebar - Today's Summary */}
           <div className={`lg:col-span-1 p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
             <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Clock className="w-5 h-5 text-cyan-500" />
+              <Clock className="w-5 h-5 text-primary-500" />
               {t('tools.appointmentScheduler.todaySAppointments', 'Today\'s Appointments')}
             </h2>
             <div className="space-y-3">
@@ -583,7 +583,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                  <p className="text-2xl font-bold text-cyan-500">
+                  <p className="text-2xl font-bold text-primary-500">
                     {filteredAppointments.filter(a => {
                       const aptDate = new Date(a.date);
                       return weekDates.some(d => formatDate(d) === formatDate(aptDate));
@@ -650,7 +650,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                     onClick={() => setViewMode('day')}
                     className={`px-3 py-1.5 text-sm font-medium ${
                       viewMode === 'day'
-                        ? 'bg-cyan-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-white text-gray-700 hover:bg-gray-50'
@@ -662,7 +662,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                     onClick={() => setViewMode('week')}
                     className={`px-3 py-1.5 text-sm font-medium ${
                       viewMode === 'week'
-                        ? 'bg-cyan-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-white text-gray-700 hover:bg-gray-50'
@@ -687,7 +687,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                       key={idx}
                       className={`p-2 text-center cursor-pointer ${
                         isToday(date)
-                          ? 'bg-cyan-500/10'
+                          ? 'bg-primary-500/10'
                           : ''
                       }`}
                       onClick={() => {
@@ -700,7 +700,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                       </p>
                       <p className={`text-lg font-semibold ${
                         isToday(date)
-                          ? 'text-cyan-500'
+                          ? 'text-primary-500'
                           : isDark
                           ? 'text-white'
                           : 'text-gray-900'
@@ -737,7 +737,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                                     : apt.status === 'completed'
                                     ? 'bg-green-500/20 text-green-400'
                                     : apt.status === 'confirmed'
-                                    ? 'bg-cyan-500/20 text-cyan-400'
+                                    ? 'bg-primary-500/20 text-primary-400'
                                     : 'bg-blue-500/20 text-blue-400'
                                 }`}
                                 onClick={(e) => {
@@ -816,7 +816,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                   />
                 </div>
 
@@ -833,7 +833,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     >
                       <option value="">{t('tools.appointmentScheduler.selectACustomer', 'Select a customer...')}</option>
                       {customers.map(customer => (
@@ -850,7 +850,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   )}
                 </div>
@@ -869,7 +869,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                   <div>
@@ -884,7 +884,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                   <div>
@@ -899,7 +899,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -920,7 +920,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                           : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                      } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none`}
+                      } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
                     />
                   </div>
                 </div>
@@ -964,7 +964,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                         : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                    } focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 outline-none resize-none`}
+                    } focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none resize-none`}
                   />
                 </div>
 
@@ -976,7 +976,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                       id="recurring"
                       checked={formData.isRecurring}
                       onChange={(e) => setFormData({ ...formData, isRecurring: e.target.checked })}
-                      className="w-4 h-4 text-cyan-500 rounded focus:ring-cyan-500"
+                      className="w-4 h-4 text-primary-500 rounded focus:ring-primary-500"
                     />
                     <label htmlFor="recurring" className={`text-sm font-medium flex items-center gap-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       <Repeat className="w-4 h-4" />
@@ -1030,7 +1030,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                       id="reminders"
                       checked={formData.reminders}
                       onChange={(e) => setFormData({ ...formData, reminders: e.target.checked })}
-                      className="w-4 h-4 text-cyan-500 rounded focus:ring-cyan-500"
+                      className="w-4 h-4 text-primary-500 rounded focus:ring-primary-500"
                     />
                     <label htmlFor="reminders" className={`text-sm font-medium flex items-center gap-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       <Bell className="w-4 h-4" />
@@ -1078,7 +1078,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                   <button
                     onClick={handleSave}
                     disabled={!formData.title || !formData.date || !formData.startTime || !formData.endTime}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium flex items-center gap-2 hover:from-primary-600 hover:to-primary-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Save className="w-4 h-4" />
                     {editingAppointment ? t('tools.appointmentScheduler.update', 'Update') : t('tools.appointmentScheduler.create', 'Create')}

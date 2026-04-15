@@ -588,15 +588,15 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -606,7 +606,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
 
   const tabClass = (active: boolean) => `flex-1 py-3 px-4 text-center font-medium transition-colors ${
     active
-      ? 'text-cyan-600 border-b-2 border-cyan-600'
+      ? 'text-primary-600 border-b-2 border-primary-600'
       : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-900'
   }`;
 
@@ -679,12 +679,12 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
         </div>
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <CalendarCheck className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <CalendarCheck className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.courtCalendar.thisWeek', 'This Week')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.eventsThisWeek}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.eventsThisWeek}</p>
             </div>
           </div>
         </div>
@@ -799,7 +799,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : activeTab === 'events' || activeTab === 'calendar' ? (
               filteredEvents.length === 0 ? (
@@ -818,14 +818,14 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                         onClick={() => setSelectedEvent(event)}
                         className={`p-4 cursor-pointer transition-colors ${
                           selectedEvent?.id === event.id
-                            ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                            ? 'bg-primary-500/10 border-l-4 border-primary-500'
                             : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                         }`}
                       >
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-3">
                             <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                              <typeConfig.icon className="w-4 h-4 text-cyan-500" />
+                              <typeConfig.icon className="w-4 h-4 text-primary-500" />
                             </div>
                             <div>
                               <p className="font-medium">{event.eventTitle}</p>
@@ -880,7 +880,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                         onClick={() => setSelectedDeadline(deadline)}
                         className={`p-4 cursor-pointer transition-colors ${
                           selectedDeadline?.id === deadline.id
-                            ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                            ? 'bg-primary-500/10 border-l-4 border-primary-500'
                             : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                         }`}
                       >
@@ -994,7 +994,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                         day.isCurrentMonth
                           ? theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
                           : theme === 'dark' ? 'bg-gray-900 border-gray-700' : 'bg-gray-50 border-gray-100'
-                      } ${isToday ? 'ring-2 ring-cyan-500' : ''}`}
+                      } ${isToday ? 'ring-2 ring-primary-500' : ''}`}
                     >
                       <div className={`text-sm font-medium mb-1 ${
                         day.isCurrentMonth
@@ -1082,7 +1082,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                 {/* Participants */}
                 <div>
                   <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <Users className="w-4 h-4 text-cyan-500" />
+                    <Users className="w-4 h-4 text-primary-500" />
                     {t('tools.courtCalendar.participants', 'Participants')}
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
@@ -1113,7 +1113,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                 {selectedEvent.documents.length > 0 && (
                   <div>
                     <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-cyan-500" />
+                      <FileText className="w-4 h-4 text-primary-500" />
                       {t('tools.courtCalendar.documents2', 'Documents')}
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -1129,7 +1129,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                 {/* Preparation Tasks */}
                 <div>
                   <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <ListChecks className="w-4 h-4 text-cyan-500" />
+                    <ListChecks className="w-4 h-4 text-primary-500" />
                     Preparation Tasks ({selectedEvent.preparation.filter(t => t.completed).length}/{selectedEvent.preparation.length})
                   </h3>
                   {selectedEvent.preparation.length === 0 ? (
@@ -1311,7 +1311,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {eventForm.additionalStaff.map((staff, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {staff} <button onClick={() => removeStaff(staff)}><X className="w-3 h-3" /></button>
                     </span>
                   ))}
@@ -1327,7 +1327,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {eventForm.documents.map((doc, i) => (
-                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-cyan-500/20 text-cyan-400 flex items-center gap-1">
+                    <span key={i} className="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-400 flex items-center gap-1">
                       {doc} <button onClick={() => removeDocument(doc)}><X className="w-3 h-3" /></button>
                     </span>
                   ))}

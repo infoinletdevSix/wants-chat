@@ -60,14 +60,14 @@ export const RecipeDetailSidebar: React.FC<RecipeDetailSidebarProps> = ({
                 key={index}
                 className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer transition-colors ${
                   completedIngredients[index]
-                    ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400'
+                    ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
                     : 'hover:bg-white/5 hover:backdrop-blur-sm hover:border hover:border-white/10'
                 }`}
                 onClick={() => onToggleIngredient(index)}
               >
                 <div className="flex-shrink-0">
                   {completedIngredients[index] ? (
-                    <CheckCircle className="h-5 w-5 text-emerald-500" />
+                    <CheckCircle className="h-5 w-5 text-primary-500" />
                   ) : (
                     <div className="w-5 h-5 border-2 border-white/30 rounded-full"></div>
                   )}

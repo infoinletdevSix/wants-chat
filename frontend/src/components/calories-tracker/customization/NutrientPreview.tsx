@@ -39,7 +39,7 @@ const NutrientPreview: React.FC<NutrientPreviewProps> = ({
       grams: carbsGrams,
       color: 'emerald',
       icon: mdiGrass,
-      colorClasses: 'text-emerald-600 bg-emerald-50 border-emerald-200'
+      colorClasses: 'text-primary-600 bg-primary-50 border-primary-200'
     },
     {
       name: 'Protein',
@@ -62,7 +62,7 @@ const NutrientPreview: React.FC<NutrientPreviewProps> = ({
   const getProgressColor = (color: string) => {
     switch (color) {
       case 'emerald':
-        return 'bg-emerald-500';
+        return 'bg-primary-500';
       case 'blue':
         return 'bg-blue-500';
       case 'orange':
@@ -108,11 +108,11 @@ const NutrientPreview: React.FC<NutrientPreviewProps> = ({
       <Card className="p-6">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isBalanced ? 'bg-emerald-50' : 'bg-orange-50'}`}>
+            <div className={`p-2 rounded-lg ${isBalanced ? 'bg-primary-50' : 'bg-orange-50'}`}>
               <Icon 
                 path={isBalanced ? mdiCheckCircle : mdiFire} 
                 size={1.2} 
-                className={isBalanced ? 'text-emerald-600' : 'text-orange-600'} 
+                className={isBalanced ? 'text-primary-600' : 'text-orange-600'} 
               />
             </div>
             <div>
@@ -203,7 +203,7 @@ const NutrientPreview: React.FC<NutrientPreviewProps> = ({
       </Card>
 
       {/* Tips */}
-      <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200">
+      <Card className="p-6 bg-gradient-to-br from-blue-50 to-primary-50 border-blue-200">
         <div className="space-y-3">
           <h3 className="font-semibold text-foreground">Success Tips</h3>
           <div className="text-sm text-muted-foreground space-y-2">

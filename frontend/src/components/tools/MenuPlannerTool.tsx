@@ -393,14 +393,14 @@ export const MenuPlannerTool: React.FC<MenuPlannerToolProps> = ({ uiConfig }) =>
     const tagObj = DIETARY_TAGS.find(t => t.value === tag);
     const colors: Record<string, string> = {
       green: isDark ? 'bg-green-900/50 text-green-300' : 'bg-green-100 text-green-800',
-      emerald: isDark ? 'bg-emerald-900/50 text-emerald-300' : 'bg-emerald-100 text-emerald-800',
+      emerald: isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-800',
       yellow: isDark ? 'bg-yellow-900/50 text-yellow-300' : 'bg-yellow-100 text-yellow-800',
       blue: isDark ? 'bg-blue-900/50 text-blue-300' : 'bg-blue-100 text-blue-800',
       orange: isDark ? 'bg-orange-900/50 text-orange-300' : 'bg-orange-100 text-orange-800',
       purple: isDark ? 'bg-purple-900/50 text-purple-300' : 'bg-purple-100 text-purple-800',
       indigo: isDark ? 'bg-indigo-900/50 text-indigo-300' : 'bg-indigo-100 text-indigo-800',
       red: isDark ? 'bg-red-900/50 text-red-300' : 'bg-red-100 text-red-800',
-      cyan: isDark ? 'bg-cyan-900/50 text-cyan-300' : 'bg-cyan-100 text-cyan-800',
+      cyan: isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-800',
       pink: isDark ? 'bg-pink-900/50 text-pink-300' : 'bg-pink-100 text-pink-800',
     };
     return colors[tagObj?.color || 'gray'];

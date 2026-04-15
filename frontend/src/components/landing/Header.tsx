@@ -110,7 +110,7 @@ const Header: React.FC = () => {
 
             {/* Always-visible "Get Started" CTA — routes to /chat for authed, /signup otherwise */}
             <Button
-              className="hidden md:inline-flex bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-xl px-6"
+              className="hidden md:inline-flex bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl px-6"
               onClick={() => navigate(isAuthenticated ? '/chat' : '/signup')}
             >
               {t('header.getStarted')}
@@ -241,7 +241,7 @@ const Header: React.FC = () => {
                         className="w-10 h-10 rounded-full object-cover"
                       />
                     ) : (
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white flex items-center justify-center text-sm font-medium">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-white flex items-center justify-center text-sm font-medium">
                         {getUserInitials(user.name || user.email || 'User')}
                       </div>
                     )}
@@ -277,7 +277,7 @@ const Header: React.FC = () => {
               ) : (
                 <>
                   <Button variant="ghost" className="w-full text-white hover:bg-white/10" onClick={() => navigate('/login')}>{t('header.signIn')}</Button>
-                  <Button className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-xl" onClick={() => navigate('/signup')}>{t('header.getStarted')}</Button>
+                  <Button className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl" onClick={() => navigate('/signup')}>{t('header.getStarted')}</Button>
                 </>
               )}
             </div>

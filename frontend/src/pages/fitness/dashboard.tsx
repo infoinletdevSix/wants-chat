@@ -191,7 +191,7 @@ const FitnessDashboard: React.FC = () => {
               <div className="text-xs text-white/60">Day Streak</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-emerald-400">{workoutStats?.totalWorkouts || 0}</div>
+              <div className="text-2xl font-bold text-primary-400">{workoutStats?.totalWorkouts || 0}</div>
               <div className="text-xs text-white/60">Workouts</div>
             </div>
           </div>
@@ -296,7 +296,7 @@ const FitnessDashboard: React.FC = () => {
 
               {/* Action Button */}
               <Button
-                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-10"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-10"
                 onClick={() => navigate('/fitness/workout-session')}
               >
                 <Dumbbell className="h-4 w-4 mr-2" />
@@ -365,7 +365,7 @@ const FitnessDashboard: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-2">
-            <Button size="sm" className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 text-xs" onClick={() => navigate('/fitness/progress')}>
+            <Button size="sm" className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-8 text-xs" onClick={() => navigate('/fitness/progress')}>
               View Progress
             </Button>
           </div>

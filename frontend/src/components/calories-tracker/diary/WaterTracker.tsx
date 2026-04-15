@@ -45,7 +45,7 @@ const WaterTracker: React.FC<WaterTrackerProps> = ({
           </Badge>
         </div>
 
-        <Progress value={Math.min(waterProgress, 100)} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-blue-500 [&>div]:to-cyan-500" />
+        <Progress value={Math.min(waterProgress, 100)} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-blue-500 [&>div]:to-primary-500" />
 
         <div className="space-y-3">
           {/* Add Water Buttons */}

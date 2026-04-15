@@ -12,17 +12,17 @@ const FastingBenefits: React.FC = () => {
   ];
 
   return (
-    <Card className="p-6 bg-gradient-to-br from-cyan-500/10 to-primary-500/10 border border-cyan-500/20">
+    <Card className="p-6 bg-gradient-to-br from-primary-500/10 to-primary-500/10 border border-primary-500/20">
       <div className="space-y-3">
         <div className="flex items-center gap-2">
-          <Icon path={mdiInformation} size={1} className="text-cyan-400" />
+          <Icon path={mdiInformation} size={1} className="text-primary-400" />
           <h3 className="font-semibold text-white">Fasting Benefits</h3>
         </div>
 
         <div className="text-sm text-white/70 space-y-2">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start gap-2">
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
+              <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0" />
               <p>{benefit}</p>
             </div>
           ))}

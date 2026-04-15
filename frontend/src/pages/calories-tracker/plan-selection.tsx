@@ -68,8 +68,8 @@ const DietPlanSelection: React.FC = () => {
       protein: 20,
       fat: 30,
       icon: mdiScaleBalance,
-      color: 'from-emerald-500/10 to-green-500/10 border-emerald-200',
-      iconColor: 'text-emerald-600',
+      color: 'from-primary-500/10 to-green-500/10 border-primary-200',
+      iconColor: 'text-primary-600',
       benefits: [
         'Easy to follow and maintain',
         'Includes all food groups',
@@ -125,7 +125,7 @@ const DietPlanSelection: React.FC = () => {
       protein: 20,
       fat: 35,
       icon: mdiHeart,
-      color: 'from-blue-500/10 to-cyan-500/10 border-blue-200',
+      color: 'from-blue-500/10 to-primary-500/10 border-blue-200',
       iconColor: 'text-blue-600',
       benefits: [
         'Heart-healthy',
@@ -153,8 +153,8 @@ const DietPlanSelection: React.FC = () => {
       protein: 25,
       fat: 30,
       icon: mdiSnowflake,
-      color: 'from-cyan-500/10 to-blue-500/10 border-cyan-200',
-      iconColor: 'text-cyan-600',
+      color: 'from-primary-500/10 to-blue-500/10 border-primary-200',
+      iconColor: 'text-primary-600',
       benefits: [
         'Environmentally sustainable',
         'High in omega-3s',
@@ -261,7 +261,7 @@ const DietPlanSelection: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy':
-        return 'bg-emerald-500/20 text-emerald-400';
+        return 'bg-primary-500/20 text-primary-400';
       case 'Moderate':
         return 'bg-yellow-500/20 text-yellow-400';
       case 'Challenging':
@@ -318,7 +318,7 @@ const DietPlanSelection: React.FC = () => {
 
           <div className="space-y-4">
             <div className="w-full bg-white/10 rounded-full h-2">
-              <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: '66.6%' }} />
+              <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full" style={{ width: '66.6%' }} />
             </div>
 
             <div className="text-center">
@@ -388,7 +388,7 @@ const DietPlanSelection: React.FC = () => {
                       <h3 className="text-xl font-bold text-white flex items-center gap-2">
                         {plan.name}
                         {plan.recommended && (
-                          <Badge className="bg-emerald-500/20 text-emerald-400">Recommended</Badge>
+                          <Badge className="bg-primary-500/20 text-primary-400">Recommended</Badge>
                         )}
                       </h3>
                       <p className="text-sm text-white/60 mt-1">
@@ -412,11 +412,11 @@ const DietPlanSelection: React.FC = () => {
                   <h4 className="font-medium text-white">Macronutrient Distribution</h4>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <div className="text-lg font-bold text-emerald-400">{plan.carbs}%</div>
+                      <div className="text-lg font-bold text-primary-400">{plan.carbs}%</div>
                       <div className="text-xs text-white/60">Carbs</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-lg font-bold text-cyan-400">{plan.protein}%</div>
+                      <div className="text-lg font-bold text-primary-400">{plan.protein}%</div>
                       <div className="text-xs text-white/60">Protein</div>
                     </div>
                     <div className="text-center">
@@ -431,7 +431,7 @@ const DietPlanSelection: React.FC = () => {
                       <span className="text-xs w-12 text-white/60">Carbs</span>
                       <div className="flex-1 h-2 bg-white/10 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-emerald-500 rounded-full transition-all duration-500"
+                          className="h-full bg-primary-500 rounded-full transition-all duration-500"
                           style={{ width: `${plan.carbs}%` }}
                         />
                       </div>
@@ -441,7 +441,7 @@ const DietPlanSelection: React.FC = () => {
                       <span className="text-xs w-12 text-white/60">Protein</span>
                       <div className="flex-1 h-2 bg-white/10 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-cyan-500 rounded-full transition-all duration-500"
+                          className="h-full bg-primary-500 rounded-full transition-all duration-500"
                           style={{ width: `${plan.protein}%` }}
                         />
                       </div>
@@ -524,7 +524,7 @@ const DietPlanSelection: React.FC = () => {
           <Button
             onClick={handleContinue}
             disabled={!selectedPlan}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white disabled:opacity-50"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white disabled:opacity-50"
           >
             Continue
             <Icon path={mdiArrowRight} size={0.8} className="ml-2" />

@@ -76,7 +76,7 @@ const RecentReminders: React.FC<RecentRemindersProps> = ({
           <Button 
             size="sm" 
             onClick={() => onAction?.(reminder.id, 'start_workout')}
-            className="bg-emerald-500 hover:bg-emerald-600 text-white h-6 px-2 text-xs"
+            className="bg-primary-500 hover:bg-primary-600 text-white h-6 px-2 text-xs"
           >
             Start Now
           </Button>
@@ -86,7 +86,7 @@ const RecentReminders: React.FC<RecentRemindersProps> = ({
           <Button 
             size="sm" 
             onClick={() => onAction?.(reminder.id, 'reschedule')}
-            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-6 px-2 text-xs"
+            className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white h-6 px-2 text-xs"
           >
             Reschedule
           </Button>

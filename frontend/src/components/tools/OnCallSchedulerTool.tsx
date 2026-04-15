@@ -611,15 +611,15 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -629,7 +629,7 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500 text-white'
+      ? 'bg-primary-500 text-white'
       : theme === 'dark'
         ? 'text-gray-400 hover:text-white hover:bg-gray-700'
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -640,8 +640,8 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <Phone className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <Phone className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -682,12 +682,12 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-3">
-            <div className="p-2 bg-cyan-500/10 rounded-lg">
-              <Calendar className="w-5 h-5 text-cyan-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Calendar className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.onCallScheduler.thisMonth', 'This Month')}</p>
-              <p className="text-xl font-bold text-cyan-500">{stats.monthShifts}</p>
+              <p className="text-xl font-bold text-primary-500">{stats.monthShifts}</p>
             </div>
           </div>
         </div>
@@ -876,13 +876,13 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
                         !day.isCurrentMonth
                           ? theme === 'dark' ? 'bg-gray-800/50 text-gray-600' : 'bg-gray-50 text-gray-400'
                           : isSelected
-                            ? 'bg-cyan-500/20 border border-cyan-500'
+                            ? 'bg-primary-500/20 border border-primary-500'
                             : isToday
-                              ? theme === 'dark' ? 'bg-gray-700 border border-cyan-500/50' : 'bg-cyan-50 border border-cyan-200'
+                              ? theme === 'dark' ? 'bg-gray-700 border border-primary-500/50' : 'bg-primary-50 border border-primary-200'
                               : theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-50'
                       }`}
                     >
-                      <div className={`text-sm font-medium mb-1 ${isToday ? 'text-cyan-500' : ''}`}>
+                      <div className={`text-sm font-medium mb-1 ${isToday ? 'text-primary-500' : ''}`}>
                         {day.date.getDate()}
                       </div>
                       <div className="space-y-0.5">
@@ -918,7 +918,7 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
             <div className="max-h-[500px] overflow-y-auto">
               {isLoading ? (
                 <div className="p-8 text-center">
-                  <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                  <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
                 </div>
               ) : selectedDate ? (
                 (() => {
@@ -945,7 +945,7 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
                           onClick={() => setSelectedShift(shift)}
                           className={`p-4 cursor-pointer transition-colors ${
                             selectedShift?.id === shift.id
-                              ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                              ? 'bg-primary-500/10 border-l-4 border-primary-500'
                               : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                           }`}
                         >
@@ -1016,14 +1016,14 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
                       onClick={() => setSelectedProvider(provider)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedProvider?.id === provider.id
-                          ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <User className="w-4 h-4 text-cyan-500" />
+                            <User className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{provider.name}</p>
@@ -1054,7 +1054,7 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-4">
                       <div className={`p-4 rounded-xl ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                        <User className="w-8 h-8 text-cyan-500" />
+                        <User className="w-8 h-8 text-primary-500" />
                       </div>
                       <div>
                         <h2 className="text-xl font-bold">{selectedProvider.name}</h2>
@@ -1081,7 +1081,7 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                       <div className="flex items-center gap-2 mb-1">
-                        <Phone className="w-4 h-4 text-cyan-500" />
+                        <Phone className="w-4 h-4 text-primary-500" />
                         <p className="text-xs text-gray-400">{t('tools.onCallScheduler.phone', 'Phone')}</p>
                       </div>
                       <p className="font-medium">{selectedProvider.phone || 'N/A'}</p>
@@ -1269,15 +1269,15 @@ export const OnCallSchedulerTool: React.FC<OnCallSchedulerToolProps> = ({ uiConf
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm">
-                      <RefreshCw className="w-4 h-4 text-cyan-500" />
+                      <RefreshCw className="w-4 h-4 text-primary-500" />
                       <span className="capitalize">{template.rotationType} rotation</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
-                      <Clock className="w-4 h-4 text-cyan-500" />
+                      <Clock className="w-4 h-4 text-primary-500" />
                       <span>{template.startTime} - {template.endTime}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
-                      <Users className="w-4 h-4 text-cyan-500" />
+                      <Users className="w-4 h-4 text-primary-500" />
                       <span>{template.providers.length} providers</span>
                     </div>
                   </div>

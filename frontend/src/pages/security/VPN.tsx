@@ -51,7 +51,7 @@ const VPN: React.FC = () => {
   };
 
   const getLoadColor = (load: number) => {
-    if (load < 40) return 'text-emerald-400';
+    if (load < 40) return 'text-primary-400';
     if (load < 70) return 'text-yellow-400';
     return 'text-red-400';
   };
@@ -69,11 +69,11 @@ const VPN: React.FC = () => {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-3 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl">
+            <div className="p-3 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl">
               <Shield className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
                 VPN Shield
               </h1>
               <p className="text-slate-400 text-sm">Secure your connection with encrypted VPN</p>
@@ -104,12 +104,12 @@ const VPN: React.FC = () => {
                     }}
                     className={`p-4 rounded-full ${
                       isConnected
-                        ? 'bg-emerald-500/20 border-2 border-emerald-500'
+                        ? 'bg-primary-500/20 border-2 border-primary-500'
                         : 'bg-slate-700/50 border-2 border-slate-600'
                     }`}
                   >
                     {isConnected ? (
-                      <Wifi className="w-8 h-8 text-emerald-400" />
+                      <Wifi className="w-8 h-8 text-primary-400" />
                     ) : (
                       <WifiOff className="w-8 h-8 text-slate-400" />
                     )}
@@ -139,7 +139,7 @@ const VPN: React.FC = () => {
                         <Zap className="w-3 h-3" />
                         <span>Ping</span>
                       </div>
-                      <p className="text-lg font-bold text-emerald-400">{selectedServer.ping}ms</p>
+                      <p className="text-lg font-bold text-primary-400">{selectedServer.ping}ms</p>
                     </div>
                     <div className="bg-slate-700/30 rounded-lg p-3">
                       <div className="flex items-center gap-2 text-slate-400 text-xs mb-1">
@@ -155,7 +155,7 @@ const VPN: React.FC = () => {
                         <Clock className="w-3 h-3" />
                         <span>Protocol</span>
                       </div>
-                      <p className="text-lg font-bold text-cyan-400">WireGuard</p>
+                      <p className="text-lg font-bold text-primary-400">WireGuard</p>
                     </div>
                   </div>
                 )}
@@ -170,7 +170,7 @@ const VPN: React.FC = () => {
                 className={`px-8 py-4 rounded-xl font-bold text-lg transition-all ${
                   isConnected
                     ? 'bg-gradient-to-r from-red-500 to-rose-500 hover:from-red-600 hover:to-rose-600 text-white shadow-lg shadow-red-500/50'
-                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/50 disabled:opacity-50 disabled:cursor-not-allowed'
+                    : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg shadow-primary-500/50 disabled:opacity-50 disabled:cursor-not-allowed'
                 }`}
               >
                 {isConnecting ? 'Connecting...' : isConnected ? 'Disconnect' : 'Select Server'}
@@ -201,7 +201,7 @@ const VPN: React.FC = () => {
                 onClick={() => !isConnected && handleConnect(server)}
                 className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border p-4 cursor-pointer transition-all ${
                   selectedServer?.id === server.id && isConnected
-                    ? 'border-emerald-500 bg-emerald-500/10'
+                    ? 'border-primary-500 bg-primary-500/10'
                     : 'border-primary-400/30 hover:border-primary-400/50'
                 } ${isConnected ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
@@ -212,7 +212,7 @@ const VPN: React.FC = () => {
                       <h3 className="font-bold text-white flex items-center gap-2">
                         {server.country}
                         {selectedServer?.id === server.id && isConnected && (
-                          <Check className="w-4 h-4 text-emerald-400" />
+                          <Check className="w-4 h-4 text-primary-400" />
                         )}
                       </h3>
                       <p className="text-sm text-slate-400">{server.city}</p>
@@ -244,7 +244,7 @@ const VPN: React.FC = () => {
                     transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
                     className={`h-full rounded-full ${
                       server.load < 40
-                        ? 'bg-gradient-to-r from-emerald-500 to-green-500'
+                        ? 'bg-gradient-to-r from-primary-500 to-green-500'
                         : server.load < 70
                         ? 'bg-gradient-to-r from-yellow-500 to-amber-500'
                         : 'bg-gradient-to-r from-red-500 to-rose-500'

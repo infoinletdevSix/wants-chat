@@ -328,7 +328,7 @@ export const RoyaltyTrackerTool: React.FC<RoyaltyTrackerToolProps> = ({
     performance: 'bg-green-500/10 text-green-500',
     sync: 'bg-orange-500/10 text-orange-500',
     master: 'bg-pink-500/10 text-pink-500',
-    publishing: 'bg-cyan-500/10 text-cyan-500',
+    publishing: 'bg-primary-500/10 text-primary-500',
   };
 
   const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;

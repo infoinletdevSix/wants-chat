@@ -35,12 +35,12 @@ const Footer: React.FC = () => {
     <footer className="relative overflow-hidden bg-gray-950">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 left-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[120px]"
+        className="absolute top-0 left-0 w-[400px] h-[400px] bg-primary-500/10 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, 30, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[100px]"
+        className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary-500/10 rounded-full blur-[100px]"
         animate={{ x: [0, -30, 0], y: [0, -20, 0], scale: [1, 1.3, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X (Twitter)"
-                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-emerald-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
+                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-primary-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
                 >
                   <XIcon className="h-5 w-5" />
                 </a>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-emerald-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
+                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-primary-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
                 >
                   <Github className="h-5 w-5" />
                 </a>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-emerald-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
+                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-primary-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-emerald-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
+                  className="p-3 rounded-xl bg-gray-800/50 hover:bg-primary-500 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-700"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
@@ -118,22 +118,22 @@ const Footer: React.FC = () => {
               <h4 className="font-semibold text-base mb-6 text-white">{t('footer.product')}</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/features" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
+                  <Link to="/features" className="text-sm text-white/70 hover:text-primary-400 transition-colors font-medium">
                     {t('common.features')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tools" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
+                  <Link to="/tools" className="text-sm text-white/70 hover:text-primary-400 transition-colors font-medium">
                     {t('footer.allTools')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/integrations" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
+                  <Link to="/integrations" className="text-sm text-white/70 hover:text-primary-400 transition-colors font-medium">
                     {t('footer.integrations')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/changelog" className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium">
+                  <Link to="/changelog" className="text-sm text-white/70 hover:text-primary-400 transition-colors font-medium">
                     {t('footer.changelog')}
                   </Link>
                 </li>
@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
                     href="https://infoinlet.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-white/70 hover:text-emerald-400 transition-colors font-medium"
+                    className="text-sm text-white/70 hover:text-primary-400 transition-colors font-medium"
                   >
                     InfoInlet
                   </a>
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
               <LanguageSwitcher variant="footer" />
               <button
                 onClick={scrollToTop}
-                className="p-3 rounded-xl bg-gray-800/50 hover:bg-emerald-500 text-white/80 hover:text-white transition-all duration-300 group hover:scale-110 border border-gray-700"
+                className="p-3 rounded-xl bg-gray-800/50 hover:bg-primary-500 text-white/80 hover:text-white transition-all duration-300 group hover:scale-110 border border-gray-700"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="h-4 w-4 group-hover:-translate-y-1 transition-transform duration-300" />

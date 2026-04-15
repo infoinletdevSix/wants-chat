@@ -91,7 +91,7 @@ const PhotoProgress: React.FC<PhotoProgressProps> = ({
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
               size="sm"
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
             >
               <Icon path={mdiCamera} size={0.8} className="mr-2" />
               Add Photo
@@ -195,7 +195,7 @@ const PhotoProgress: React.FC<PhotoProgressProps> = ({
             <Button
               onClick={handleUpload}
               disabled={isUploading || !selectedFile}
-              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 disabled:opacity-50"
             >
               {isUploading ? 'Uploading...' : 'Upload'}
             </Button>

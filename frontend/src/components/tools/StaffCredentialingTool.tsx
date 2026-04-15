@@ -604,15 +604,15 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-cyan-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-500'
-  } focus:outline-none focus:ring-2 focus:ring-cyan-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -622,7 +622,7 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     isActive
-      ? 'bg-cyan-500/20 text-cyan-400'
+      ? 'bg-primary-500/20 text-primary-400'
       : theme === 'dark' ? 'text-gray-400 hover:bg-gray-700' : 'text-gray-500 hover:bg-gray-100'
   }`;
 
@@ -631,8 +631,8 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
-            <BadgeCheck className="w-8 h-8 text-cyan-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-primary-500/20 rounded-xl">
+            <BadgeCheck className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -677,12 +677,12 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-cyan-500/10 rounded-lg">
-              <User className="w-6 h-6 text-cyan-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <User className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.staffCredentialing.totalStaff', 'Total Staff')}</p>
-              <p className="text-2xl font-bold text-cyan-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -820,7 +820,7 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredStaff.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -835,14 +835,14 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
                     onClick={() => setSelectedStaff(staff)}
                     className={`p-4 cursor-pointer transition-colors ${
                       selectedStaff?.id === staff.id
-                        ? 'bg-cyan-500/10 border-l-4 border-cyan-500'
+                        ? 'bg-primary-500/10 border-l-4 border-primary-500'
                         : theme === 'dark' ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'
                     }`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                          <User className="w-4 h-4 text-cyan-500" />
+                          <User className="w-4 h-4 text-primary-500" />
                         </div>
                         <div>
                           <p className="font-medium">{staff.name}</p>
@@ -1071,7 +1071,7 @@ export const StaffCredentialingTool: React.FC<StaffCredentialingToolProps> = ({
                                       <div className="flex items-center gap-2">
                                         <div className="flex-1 h-2 bg-gray-600 rounded-full overflow-hidden">
                                           <div
-                                            className="h-full bg-cyan-500 rounded-full"
+                                            className="h-full bg-primary-500 rounded-full"
                                             style={{ width: `${ceuProgress}%` }}
                                           />
                                         </div>

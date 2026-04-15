@@ -63,7 +63,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
       name: 'Balanced',
       description: 'Well-rounded nutrition',
       icon: Apple,
-      iconColor: 'text-emerald-400',
+      iconColor: 'text-primary-400',
       macros: { carbs: 45, protein: 25, fat: 30 }
     },
     {
@@ -208,14 +208,14 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
         <Button
           size="sm"
           onClick={() => setCustomMode(false)}
-          className={`flex-1 ${!customMode ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
+          className={`flex-1 ${!customMode ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
         >
           Quick Presets
         </Button>
         <Button
           size="sm"
           onClick={() => setCustomMode(true)}
-          className={`flex-1 ${customMode ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
+          className={`flex-1 ${customMode ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
         >
           <Settings className="h-4 w-4 mr-1" />
           Custom
@@ -236,7 +236,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                   className={cn(
                     "p-4 cursor-pointer transition-all duration-300 border-2",
                     isSelected
-                      ? "bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-xl shadow-primary-500/30 scale-[1.02]"
+                      ? "bg-gradient-to-br from-primary-500/30 to-primary-500/30 border-primary-400 shadow-xl shadow-primary-500/30 scale-[1.02]"
                       : "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
                   )}
                   onClick={() => applyPreset(plan)}
@@ -332,7 +332,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
 
             <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="absolute h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300 ease-out"
+                className="absolute h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300 ease-out"
                 style={{ width: `${((dailyCalories - 1200) / (4000 - 1200)) * 100}%` }}
               />
               <Input
@@ -360,7 +360,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
               <div className={cn(
                 "text-sm font-medium px-2 py-1 rounded",
                 isBalanced
-                  ? "bg-emerald-500/20 text-emerald-400"
+                  ? "bg-primary-500/20 text-primary-400"
                   : "bg-orange-500/20 text-orange-400"
               )}>
                 {totalPercentage}%
@@ -398,7 +398,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
               </div>
               <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="absolute h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300 ease-out"
+                  className="absolute h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-300 ease-out"
                   style={{ width: `${(proteinPercentage / 70) * 100}%` }}
                 />
                 <Input
@@ -434,7 +434,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label className="text-sm font-medium text-white flex items-center gap-2">
-                  <Wheat className="h-4 w-4 text-emerald-400" />
+                  <Wheat className="h-4 w-4 text-primary-400" />
                   Carbohydrates
                 </Label>
                 <div className="flex items-center gap-2">
@@ -446,7 +446,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                   >
                     <Minus className="h-3 w-3" />
                   </Button>
-                  <Badge className="font-mono min-w-[60px] text-center bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  <Badge className="font-mono min-w-[60px] text-center bg-primary-500/20 text-primary-400 border border-primary-500/30">
                     {carbsPercentage}%
                   </Badge>
                   <Button
@@ -461,7 +461,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
               </div>
               <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="absolute h-full bg-emerald-500 rounded-full transition-all duration-300 ease-out"
+                  className="absolute h-full bg-primary-500 rounded-full transition-all duration-300 ease-out"
                   style={{ width: `${(carbsPercentage / 70) * 100}%` }}
                 />
                 <Input
@@ -584,7 +584,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
 
           {/* Summary Card */}
           {isBalanced && (
-            <Card className="p-4 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
+            <Card className="p-4 bg-gradient-to-r from-primary-500/10 to-primary-500/10 border border-primary-500/20">
               <div className="space-y-3">
                 <h3 className="font-medium text-white flex items-center gap-2">
                   <Calculator className="h-4 w-4 text-primary-400" />
@@ -602,7 +602,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs text-white/60">Carbs</p>
-                    <p className="text-lg font-bold text-emerald-400">{carbsGrams}g</p>
+                    <p className="text-lg font-bold text-primary-400">{carbsGrams}g</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs text-white/60">Fat</p>
@@ -616,12 +616,12 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
       )}
 
       {/* Info Card */}
-      <Card className="p-4 bg-cyan-500/10 border border-cyan-500/20">
+      <Card className="p-4 bg-primary-500/10 border border-primary-500/20">
         <div className="flex items-start gap-3">
-          <TrendingUp className="h-4 w-4 text-cyan-400 mt-0.5" />
+          <TrendingUp className="h-4 w-4 text-primary-400 mt-0.5" />
           <div className="text-sm text-white/80 space-y-1">
             <p>
-              <strong className="text-cyan-400">Tip:</strong> You can adjust these targets anytime in your dashboard.
+              <strong className="text-primary-400">Tip:</strong> You can adjust these targets anytime in your dashboard.
             </p>
             <p className="text-xs text-white/60">
               Recommended ranges: Protein 10-35%, Carbs 45-65%, Fat 20-35%

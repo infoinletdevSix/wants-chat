@@ -53,7 +53,7 @@ const LanguageLearnerLayout: React.FC = () => {
                   className={cn(
                     "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200",
                     isActive
-                      ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg"
+                      ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg"
                       : "text-white/60 hover:text-white hover:bg-white/10"
                   )}
                 >

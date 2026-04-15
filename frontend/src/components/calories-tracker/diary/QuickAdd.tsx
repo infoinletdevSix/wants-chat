@@ -271,7 +271,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
           <Button
             onClick={handleShowFavorites}
             className={`relative ${showFavorites
-              ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+              ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
               : "bg-white/10 border border-white/20 text-white hover:bg-white/20"
             }`}
           >
@@ -283,7 +283,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
               </Badge>
             )}
           </Button>
-          <Button onClick={onSearch} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
+          <Button onClick={onSearch} className="bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700">
             <Icon path={mdiMagnify} size={0.8} className="mr-2" />
             <span className="sr-only sm:not-sr-only">More</span>
           </Button>
@@ -449,7 +449,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
                   onClick={() => handleMealSelect(meal.id)}
                   className={`justify-start ${
                     meal.id === getAutoDetectedMeal()
-                      ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
+                      ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700"
                       : "bg-white/10 border border-white/20 text-white hover:bg-white/20"
                   }`}
                 >

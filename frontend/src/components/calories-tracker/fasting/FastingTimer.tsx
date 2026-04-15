@@ -53,7 +53,7 @@ const FastingTimer: React.FC<FastingTimerProps> = ({
   };
 
   return (
-    <Card className="p-8 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
+    <Card className="p-8 bg-gradient-to-br from-primary-500/10 to-primary-500/10 border border-primary-500/20">
       <div className="space-y-6">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-2">
@@ -78,7 +78,7 @@ const FastingTimer: React.FC<FastingTimerProps> = ({
 
         {/* Progress */}
         <div className="space-y-2">
-          <Progress value={getProgress()} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-cyan-500" />
+          <Progress value={getProgress()} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-primary-500" />
           <div className="flex justify-between text-sm text-white/60">
             <span>0h</span>
             <span>{Math.round(getProgress())}%</span>
@@ -109,8 +109,8 @@ const FastingTimer: React.FC<FastingTimerProps> = ({
 
         {/* Tips */}
         <div className="grid grid-cols-2 gap-4 mt-6">
-          <div className="text-center p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/30">
-            <Icon path={mdiWater} size={1.5} className="text-cyan-400 mx-auto mb-2" />
+          <div className="text-center p-4 bg-primary-500/10 rounded-lg border border-primary-500/30">
+            <Icon path={mdiWater} size={1.5} className="text-primary-400 mx-auto mb-2" />
             <p className="text-sm font-medium text-white">Stay Hydrated</p>
             <p className="text-xs text-white/60">Drink water regularly</p>
           </div>

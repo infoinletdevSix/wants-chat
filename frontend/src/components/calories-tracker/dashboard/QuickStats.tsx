@@ -28,7 +28,7 @@ const QuickStats: React.FC<QuickStatsProps> = ({
         <Icon path={mdiFire} size={1.5} className="text-destructive mx-auto mb-2" />
         <p className="text-2xl font-bold text-foreground">{consumedCalories}</p>
         <p className="text-xs text-muted-foreground">Calories Today</p>
-        <p className={`text-xs font-medium ${remainingCalories > 0 ? 'text-emerald-600' : 'text-orange-600'}`}>
+        <p className={`text-xs font-medium ${remainingCalories > 0 ? 'text-primary-600' : 'text-orange-600'}`}>
           {remainingCalories > 0 ? `${remainingCalories} left` : `${Math.abs(remainingCalories)} over`}
         </p>
       </Card>
@@ -43,10 +43,10 @@ const QuickStats: React.FC<QuickStatsProps> = ({
       </Card>
       
       <Card className="p-4 text-center">
-        <Icon path={mdiTrendingUp} size={1.5} className="text-emerald-600 mx-auto mb-2" />
+        <Icon path={mdiTrendingUp} size={1.5} className="text-primary-600 mx-auto mb-2" />
         <p className="text-2xl font-bold text-foreground">{currentWeight}kg</p>
         <p className="text-xs text-muted-foreground">Current Weight</p>
-        <p className={`text-xs font-medium ${weightChange < 0 ? 'text-emerald-600' : 'text-orange-600'}`}>
+        <p className={`text-xs font-medium ${weightChange < 0 ? 'text-primary-600' : 'text-orange-600'}`}>
           {weightChange > 0 ? '+' : ''}{weightChange}kg this week
         </p>
       </Card>

@@ -205,9 +205,9 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Fish className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Fish className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aquariumCalculator.aquariumCalculator', 'Aquarium Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aquariumCalculator.calculateTankVolumeStockingAnd', 'Calculate tank volume, stocking, and equipment needs')}</p>
@@ -220,13 +220,13 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
         <div className="flex gap-2">
           <button
             onClick={() => setUnitSystem('imperial')}
-            className={`flex-1 py-2 rounded-lg ${unitSystem === 'imperial' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unitSystem === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.aquariumCalculator.imperialInGal', 'Imperial (in/gal)')}
           </button>
           <button
             onClick={() => setUnitSystem('metric')}
-            className={`flex-1 py-2 rounded-lg ${unitSystem === 'metric' ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg ${unitSystem === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.aquariumCalculator.metricCmL', 'Metric (cm/L)')}
           </button>
@@ -242,7 +242,7 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
               <button
                 key={shape}
                 onClick={() => setTankShape(shape)}
-                className={`py-2 px-3 rounded-lg text-sm ${tankShape === shape ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${tankShape === shape ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {tankShapes[shape].name}
               </button>
@@ -251,7 +251,7 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
         </div>
 
         {/* Tank Dimensions */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Tank Dimensions ({unitSystem === 'imperial' ? 'inches' : 'cm'})
           </h4>
@@ -335,10 +335,10 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Droplets className="w-4 h-4 text-cyan-500" />
+              <Droplets className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aquariumCalculator.volume', 'Volume')}</span>
             </div>
-            <div className="text-3xl font-bold text-cyan-500">
+            <div className="text-3xl font-bold text-primary-500">
               {unitSystem === 'imperial' ? calculations.volumeGallons : calculations.volumeLiters}
               <span className="text-lg ml-1">{unitSystem === 'imperial' ? 'gal' : 'L'}</span>
             </div>
@@ -431,9 +431,9 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
         </div>
 
         {/* Water Change Calculator */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center gap-2 mb-3">
-            <RefreshCw className="w-4 h-4 text-cyan-500" />
+            <RefreshCw className="w-4 h-4 text-primary-500" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aquariumCalculator.waterChangeCalculator', 'Water Change Calculator')}</span>
           </div>
           <div className="space-y-3">
@@ -444,12 +444,12 @@ export const AquariumCalculatorTool: React.FC<AquariumCalculatorToolProps> = ({ 
                 max="50"
                 value={waterChangePercent}
                 onChange={(e) => setWaterChangePercent(e.target.value)}
-                className="flex-1 accent-cyan-500"
+                className="flex-1 accent-primary-500"
               />
-              <span className={`font-bold text-cyan-500 w-12`}>{waterChangePercent}%</span>
+              <span className={`font-bold text-primary-500 w-12`}>{waterChangePercent}%</span>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-cyan-500">
+              <div className="text-2xl font-bold text-primary-500">
                 {unitSystem === 'imperial' ? calculations.waterChangeGallons : calculations.waterChangeLiters}
                 <span className="text-lg ml-1">{unitSystem === 'imperial' ? 'gal' : 'L'}</span>
               </div>

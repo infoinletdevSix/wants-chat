@@ -198,9 +198,9 @@ export const SprinklerCalculatorTool: React.FC<SprinklerCalculatorToolProps> = (
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-cyan-500/10 rounded-lg"><Droplets className="w-5 h-5 text-cyan-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Droplets className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.sprinklerCalculator.sprinklerSystemCalculator', 'Sprinkler System Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.sprinklerCalculator.planYourIrrigationSystemWith', 'Plan your irrigation system with precision')}</p>
@@ -215,7 +215,7 @@ export const SprinklerCalculatorTool: React.FC<SprinklerCalculatorToolProps> = (
             <button
               key={type}
               onClick={() => setSprinklerType(type)}
-              className={`py-2 px-3 rounded-lg text-sm ${sprinklerType === type ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`py-2 px-3 rounded-lg text-sm ${sprinklerType === type ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {sprinklerTypes[type].name}
             </button>
@@ -223,10 +223,10 @@ export const SprinklerCalculatorTool: React.FC<SprinklerCalculatorToolProps> = (
         </div>
 
         {/* Sprinkler Info */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-cyan-900/20 border-cyan-800' : 'bg-cyan-50 border-cyan-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-2">
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{config.name}</h4>
-            <span className="text-cyan-500 font-bold">{coverage} sq ft/head</span>
+            <span className="text-primary-500 font-bold">{coverage} sq ft/head</span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>
@@ -310,7 +310,7 @@ export const SprinklerCalculatorTool: React.FC<SprinklerCalculatorToolProps> = (
               <button
                 key={n}
                 onClick={() => setMaxHeadsPerZone(n.toString())}
-                className={`flex-1 py-2 rounded-lg ${parseInt(maxHeadsPerZone) === n ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg ${parseInt(maxHeadsPerZone) === n ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {n}
               </button>
@@ -329,7 +329,7 @@ export const SprinklerCalculatorTool: React.FC<SprinklerCalculatorToolProps> = (
               <button
                 key={n}
                 onClick={() => setRuntimeMinutes(n.toString())}
-                className={`flex-1 py-2 rounded-lg ${parseInt(runtimeMinutes) === n ? 'bg-cyan-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg ${parseInt(runtimeMinutes) === n ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {n}
               </button>
@@ -347,10 +347,10 @@ export const SprinklerCalculatorTool: React.FC<SprinklerCalculatorToolProps> = (
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <CircleDot className="w-4 h-4 text-cyan-500" />
+              <CircleDot className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.sprinklerCalculator.headsNeeded', 'Heads Needed')}</span>
             </div>
-            <div className="text-3xl font-bold text-cyan-500">{calculations.headsNeeded}</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.headsNeeded}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {t('tools.sprinklerCalculator.sprinklerHeadsTotal', 'sprinkler heads total')}
             </div>
