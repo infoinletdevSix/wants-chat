@@ -20,7 +20,7 @@ const OSSComparison: React.FC = () => {
   const { t } = useTranslation();
 
   const renderCell = (v: Cell) => {
-    if (v === true) return <Check className="h-5 w-5 text-emerald-400 mx-auto" />;
+    if (v === true) return <Check className="h-5 w-5 text-oss-mist mx-auto" />;
     if (v === false) return <X className="h-5 w-5 text-gray-600 mx-auto" />;
     if ('kind' in v) return <span className="text-sm text-gray-200">{t(`oss.comparison.values.${v.kind}`)}</span>;
     return <span className="text-sm text-gray-200">{v.text}</span>;
@@ -30,7 +30,7 @@ const OSSComparison: React.FC = () => {
     <section className="bg-gray-950 py-20 border-t border-gray-900">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold tracking-wider text-emerald-400 uppercase">{t('oss.comparison.eyebrow')}</p>
+          <p className="text-sm font-semibold tracking-wider text-oss-mist uppercase">{t('oss.comparison.eyebrow')}</p>
           <h2 className="mt-3 text-3xl md:text-5xl font-bold text-white">{t('oss.comparison.title')}</h2>
         </div>
 
@@ -43,7 +43,7 @@ const OSSComparison: React.FC = () => {
                   <th
                     key={c}
                     className={`px-4 py-4 text-sm font-semibold ${
-                      c === 'Wants' ? 'text-emerald-300' : 'text-gray-400'
+                      c === 'Wants' ? 'text-oss-mist' : 'text-gray-400'
                     }`}
                   >
                     {c}
@@ -61,7 +61,7 @@ const OSSComparison: React.FC = () => {
                   {r.cells.map((v, idx) => (
                     <td
                       key={idx}
-                      className={`px-4 py-4 ${idx === cols.length - 1 ? 'bg-emerald-500/5' : ''}`}
+                      className={`px-4 py-4 ${idx === cols.length - 1 ? 'bg-oss-accent/5' : ''}`}
                     >
                       {renderCell(v)}
                     </td>

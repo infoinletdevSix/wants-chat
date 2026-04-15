@@ -24,8 +24,8 @@ const DualCTA: React.FC = () => {
             </a>
           </div>
 
-          <div className="rounded-2xl border border-emerald-500/40 bg-gradient-to-br from-emerald-500/10 to-cyan-500/5 p-8">
-            <div className="text-xs font-semibold tracking-wider text-emerald-300 uppercase mb-3">{t('oss.dualCta.selfBadge')}</div>
+          <div className="rounded-2xl border border-oss-accent/40 bg-gradient-to-br from-oss-accent/10 to-oss-mist/5 p-8">
+            <div className="text-xs font-semibold tracking-wider text-oss-mist uppercase mb-3">{t('oss.dualCta.selfBadge')}</div>
             <h3 className="text-2xl font-bold text-white">{t('oss.dualCta.selfTitle')}</h3>
             <p className="mt-3 text-gray-300">{t('oss.dualCta.selfBody')}</p>
             <a

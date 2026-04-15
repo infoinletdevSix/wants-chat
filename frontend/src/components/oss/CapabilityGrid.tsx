@@ -3,8 +3,8 @@ import { MessageSquare, Code2, Wrench, Blocks } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const items = [
-  { key: 'chat', icon: MessageSquare, accent: 'from-emerald-500/20 to-emerald-500/0' },
-  { key: 'code', icon: Code2, accent: 'from-cyan-500/20 to-cyan-500/0' },
+  { key: 'chat', icon: MessageSquare, accent: 'from-oss-accent/20 to-oss-accent/0' },
+  { key: 'code', icon: Code2, accent: 'from-oss-mist/20 to-oss-mist/0' },
   { key: 'tools', icon: Wrench, accent: 'from-purple-500/20 to-purple-500/0' },
   { key: 'builder', icon: Blocks, accent: 'from-pink-500/20 to-pink-500/0' },
 ] as const;

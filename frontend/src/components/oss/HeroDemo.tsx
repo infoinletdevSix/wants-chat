@@ -23,7 +23,7 @@ const HeroDemo: React.FC = () => {
 
   return (
     <div className="relative max-w-3xl mx-auto">
-      <div className="rounded-2xl border border-gray-800 bg-gray-900/60 backdrop-blur overflow-hidden shadow-2xl shadow-emerald-500/10">
+      <div className="rounded-2xl border border-gray-800 bg-gray-900/60 backdrop-blur overflow-hidden shadow-2xl shadow-oss-accent/10">
         <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-gray-800 bg-black/40">
           <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
@@ -41,7 +41,7 @@ const HeroDemo: React.FC = () => {
               transition={{ duration: 0.3 }}
               className="flex justify-end"
             >
-              <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-emerald-500/20 border border-emerald-500/30 px-4 py-2.5 text-sm text-emerald-50">
+              <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-oss-accent/20 border border-oss-accent/30 px-4 py-2.5 text-sm text-oss-paper">
                 {t(`oss.heroDemo.${k}.prompt`)}
               </div>
             </motion.div>
@@ -58,7 +58,7 @@ const HeroDemo: React.FC = () => {
             >
               <div className="max-w-[85%] w-full rounded-2xl rounded-tl-sm bg-gray-800/60 border border-gray-700 p-4">
                 <div className="flex items-center gap-2 mb-3">
-                  <Sparkles className="h-4 w-4 text-emerald-400" />
+                  <Sparkles className="h-4 w-4 text-oss-mist" />
                   <span className="text-sm font-semibold text-white">{t(`oss.heroDemo.${k}.tool`)}</span>
                 </div>
                 <div className="space-y-2 text-sm">
@@ -67,7 +67,7 @@ const HeroDemo: React.FC = () => {
                       key={idx}
                       className={`flex justify-between ${
                         row.highlight
-                          ? 'pt-2 border-t border-gray-700 text-emerald-400 font-semibold'
+                          ? 'pt-2 border-t border-gray-700 text-oss-mist font-semibold'
                           : 'text-gray-300'
                       }`}
                     >
@@ -86,7 +86,7 @@ const HeroDemo: React.FC = () => {
             <span
               key={idx}
               className={`h-1.5 rounded-full transition-all ${
-                idx === i ? 'w-6 bg-emerald-400' : 'w-1.5 bg-gray-700'
+                idx === i ? 'w-6 bg-oss-mist' : 'w-1.5 bg-gray-700'
               }`}
             />
           ))}

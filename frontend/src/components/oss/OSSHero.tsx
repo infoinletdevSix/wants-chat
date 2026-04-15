@@ -9,15 +9,15 @@ const OSSHero: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden bg-gray-950 pt-24 pb-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-oss-accent/15 via-transparent to-oss-mist/10" />
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-300 mb-6"
+          className="inline-flex items-center gap-2 rounded-full border border-oss-accent/40 bg-oss-accent/10 px-4 py-1.5 text-sm text-oss-mist mb-6"
         >
-          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="h-2 w-2 rounded-full bg-oss-mist animate-pulse" />
           {t('oss.hero.eyebrow')}
         </motion.div>
 
@@ -28,7 +28,7 @@ const OSSHero: React.FC = () => {
           className="text-5xl md:text-7xl font-bold tracking-tight text-white"
         >
           {t('oss.hero.headlineStart')}{' '}
-          <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-oss-mist to-oss-paper bg-clip-text text-transparent">
             {t('oss.hero.headlineHighlight')}
           </span>
           {t('oss.hero.headlineEnd')}
@@ -69,7 +69,7 @@ const OSSHero: React.FC = () => {
           </a>
           <a
             href="#quick-start"
-            className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/40 text-emerald-300 px-6 py-3 font-semibold hover:bg-emerald-500/10 transition"
+            className="inline-flex items-center gap-2 rounded-xl border border-oss-accent/50 text-oss-mist px-6 py-3 font-semibold hover:bg-oss-accent/10 transition"
           >
             {t('oss.hero.ctaSelfHost')}
             <ArrowDown className="h-4 w-4" />

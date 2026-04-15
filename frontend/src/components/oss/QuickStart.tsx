@@ -20,7 +20,7 @@ const QuickStart: React.FC = () => {
   return (
     <section id="quick-start" className="bg-gray-950 py-20 border-t border-gray-900">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300 mb-4">
+        <div className="inline-flex items-center gap-2 rounded-full border border-oss-accent/30 bg-oss-accent/10 px-3 py-1 text-xs text-oss-mist mb-4">
           <Terminal className="h-3.5 w-3.5" />
           {t('oss.quickStart.badge')}
         </div>
@@ -38,7 +38,7 @@ const QuickStart: React.FC = () => {
               onClick={copy}
               className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition"
             >
-              {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+              {copied ? <Check className="h-3.5 w-3.5 text-oss-mist" /> : <Copy className="h-3.5 w-3.5" />}
               {copied ? t('oss.quickStart.copied') : t('oss.quickStart.copy')}
             </button>
           </div>
@@ -51,7 +51,7 @@ const QuickStart: React.FC = () => {
           href={OSS.docs}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block text-emerald-400 hover:text-emerald-300 text-sm"
+          className="mt-6 inline-block text-oss-mist hover:text-oss-mist text-sm"
         >
           {t('oss.quickStart.viewDocs')}
         </a>

@@ -7,7 +7,7 @@ const Contributors: React.FC = () => {
   return (
     <section className="bg-gray-950 py-20 border-t border-gray-900">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <p className="text-sm font-semibold tracking-wider text-emerald-400 uppercase">{t('oss.contributors.eyebrow')}</p>
+        <p className="text-sm font-semibold tracking-wider text-oss-mist uppercase">{t('oss.contributors.eyebrow')}</p>
         <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">{t('oss.contributors.title')}</h2>
         <p className="mt-3 text-gray-400">{t('oss.contributors.subtitle')}</p>
 

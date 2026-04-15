@@ -80,6 +80,19 @@ const config: Config = {
           DEFAULT: '#ef4444',
           foreground: '#ffffff',
         },
+        // OSS edition palette — slate-blue + cream, used on the public OSS
+        // landing page for a calmer, community-focused identity. Core app
+        // surfaces still use the teal brand.
+        oss: {
+          ink: '#14232B',      // body / headings on cream
+          accent: {
+            DEFAULT: '#6096B4',  // primary action, links
+            dark: '#4C7F98',     // hover / active
+          },
+          mist: '#93BFCF',     // soft sky-blue, info chips
+          fog: '#BDCDD6',      // pale blue-gray surfaces
+          paper: '#EEE9DA',    // cream page background
+        },
         // Fitness theme colors
         emerald: {
           50: '#ecfdf5',

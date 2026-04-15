@@ -7,10 +7,10 @@ const MoatSection: React.FC = () => {
     <section className="bg-gray-950 py-20 border-t border-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold tracking-wider text-emerald-400 uppercase">{t('oss.moat.eyebrow')}</p>
+          <p className="text-sm font-semibold tracking-wider text-oss-mist uppercase">{t('oss.moat.eyebrow')}</p>
           <h2 className="mt-3 text-3xl md:text-5xl font-bold text-white">
             {t('oss.moat.titleStart')}{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-oss-mist to-oss-mist bg-clip-text text-transparent">
               {t('oss.moat.titleEnd')}
             </span>
           </h2>
@@ -33,8 +33,8 @@ const MoatSection: React.FC = () => {
             <p className="mt-4 text-sm text-gray-500">{t('oss.moat.traditionalCaption')}</p>
           </div>
 
-          <div className="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 p-6">
-            <div className="text-xs font-semibold tracking-wider text-emerald-400 uppercase mb-3">
+          <div className="rounded-2xl border border-oss-accent/30 bg-gradient-to-br from-oss-accent/5 to-oss-mist/5 p-6">
+            <div className="text-xs font-semibold tracking-wider text-oss-mist uppercase mb-3">
               {t('oss.moat.wants')}
             </div>
             <div className="rounded-lg bg-black/40 border border-gray-800 p-4">
@@ -50,7 +50,7 @@ const MoatSection: React.FC = () => {
                   <span>{t('oss.heroDemo.step1.row2Label')}</span>
                   <span className="font-mono">{t('oss.heroDemo.step1.row2Value')}</span>
                 </div>
-                <div className="flex justify-between pt-2 border-t border-gray-800 text-emerald-400 font-semibold">
+                <div className="flex justify-between pt-2 border-t border-gray-800 text-oss-mist font-semibold">
                   <span>{t('oss.heroDemo.step1.row3Label')}</span>
                   <span className="font-mono">{t('oss.heroDemo.step1.row3Value')}</span>
                 </div>

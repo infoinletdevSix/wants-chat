@@ -20,7 +20,7 @@ const WhyContribute: React.FC = () => {
     <section className="bg-gray-950 py-20 border-t border-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold tracking-wider text-cyan-400 uppercase">{t('oss.whyContribute.eyebrow')}</p>
+          <p className="text-sm font-semibold tracking-wider text-oss-mist uppercase">{t('oss.whyContribute.eyebrow')}</p>
           <h2 className="mt-3 text-3xl md:text-5xl font-bold text-white">{t('oss.whyContribute.title')}</h2>
         </div>
 
@@ -28,10 +28,10 @@ const WhyContribute: React.FC = () => {
           {reasons.map((r) => (
             <div
               key={r.key}
-              className="rounded-2xl border border-gray-800 bg-gray-900/40 p-6 hover:border-cyan-500/30 transition"
+              className="rounded-2xl border border-gray-800 bg-gray-900/40 p-6 hover:border-oss-mist/30 transition"
             >
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-500/20 mb-4">
-                <r.icon className="h-5 w-5 text-cyan-400" />
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-oss-mist/10 border border-oss-mist/20 mb-4">
+                <r.icon className="h-5 w-5 text-oss-mist" />
               </div>
               <h3 className="text-lg font-semibold text-white">{t(`oss.whyContribute.${r.key}.title`)}</h3>
               <p className="mt-2 text-gray-400 text-sm leading-relaxed">{t(`oss.whyContribute.${r.key}.body`)}</p>
@@ -46,7 +46,7 @@ const WhyContribute: React.FC = () => {
               href={l.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-gray-800 bg-gray-900/40 px-5 py-2.5 text-sm text-gray-200 hover:border-cyan-500/40 hover:text-white transition"
+              className="inline-flex items-center gap-2 rounded-xl border border-gray-800 bg-gray-900/40 px-5 py-2.5 text-sm text-gray-200 hover:border-oss-mist/40 hover:text-white transition"
             >
               {l.label}
               <ArrowRight className="h-4 w-4" />

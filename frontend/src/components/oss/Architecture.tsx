@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const nodes = [
-  { label: 'React + Vite', subKey: 'frontend', color: 'border-emerald-500/40 text-emerald-300' },
-  { label: 'NestJS API', subKey: 'backend', color: 'border-cyan-500/40 text-cyan-300' },
+  { label: 'React + Vite', subKey: 'frontend', color: 'border-oss-accent/40 text-oss-mist' },
+  { label: 'NestJS API', subKey: 'backend', color: 'border-oss-mist/40 text-oss-fog' },
   { label: 'Postgres', subKey: 'data', color: 'border-purple-500/40 text-purple-300' },
   { label: 'Redis', subKey: 'cache', color: 'border-pink-500/40 text-pink-300' },
   { label: 'OpenRouter', subKey: 'models', color: 'border-amber-500/40 text-amber-300' },
