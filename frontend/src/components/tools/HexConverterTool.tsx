@@ -19,7 +19,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
   const [textInput, setTextInput] = useState<string>('Hello');
   const [numberInput, setNumberInput] = useState<string>('FF');
   const [inputBase, setInputBase] = useState<InputBase>('hex');
-  const [colorInput, setColorInput] = useState<string>('#0D9488');
+  const [colorInput, setColorInput] = useState<string>('#6096B4');
   const [copied, setCopied] = useState<string>('');
   const [isPrefilled, setIsPrefilled] = useState(false);
 
@@ -221,7 +221,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
           } rounded-lg shadow-lg p-8`}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Hash className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -233,9 +233,9 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.hexConverter.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.hexConverter.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -246,7 +246,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                 onClick={() => setMode('number')}
                 className={`flex-1 py-3 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                   mode === 'number'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDarkMode
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -258,7 +258,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                 onClick={() => setMode('text')}
                 className={`flex-1 py-3 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                   mode === 'text'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDarkMode
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -270,7 +270,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                 onClick={() => setMode('color')}
                 className={`flex-1 py-3 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                   mode === 'color'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDarkMode
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -295,7 +295,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                       onClick={() => setInputBase(base)}
                       className={`flex-1 py-2 rounded-lg text-sm capitalize transition-colors ${
                         inputBase === base
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDarkMode
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -320,56 +320,56 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
               {numberConversions && (
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <div className={`p-4 rounded-lg border ${inputBase === 'hex' ? 'ring-2 ring-[#0D9488]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
+                  <div className={`p-4 rounded-lg border ${inputBase === 'hex' ? 'ring-2 ring-[#6096B4]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.hexConverter.hexadecimalBase162', 'Hexadecimal (Base 16)')}
                       </span>
                       <CopyButton value={numberConversions.hexFormatted} label="hex" />
                     </div>
-                    <div className="font-mono text-xl text-[#0D9488] font-bold">
+                    <div className="font-mono text-xl text-[#6096B4] font-bold">
                       {numberConversions.hexFormatted}
                     </div>
                   </div>
 
-                  <div className={`p-4 rounded-lg border ${inputBase === 'decimal' ? 'ring-2 ring-[#0D9488]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
+                  <div className={`p-4 rounded-lg border ${inputBase === 'decimal' ? 'ring-2 ring-[#6096B4]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.hexConverter.decimalBase10', 'Decimal (Base 10)')}
                       </span>
                       <CopyButton value={numberConversions.decimal} label="decimal" />
                     </div>
-                    <div className="font-mono text-xl text-[#0D9488] font-bold">
+                    <div className="font-mono text-xl text-[#6096B4] font-bold">
                       {numberConversions.decimal}
                     </div>
                   </div>
 
-                  <div className={`p-4 rounded-lg border ${inputBase === 'binary' ? 'ring-2 ring-[#0D9488]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
+                  <div className={`p-4 rounded-lg border ${inputBase === 'binary' ? 'ring-2 ring-[#6096B4]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.hexConverter.binaryBase2', 'Binary (Base 2)')}
                       </span>
                       <CopyButton value={numberConversions.binary} label="binary" />
                     </div>
-                    <div className="font-mono text-xl text-[#0D9488] font-bold break-all">
+                    <div className="font-mono text-xl text-[#6096B4] font-bold break-all">
                       {numberConversions.binaryFormatted}
                     </div>
                   </div>
 
-                  <div className={`p-4 rounded-lg border ${inputBase === 'octal' ? 'ring-2 ring-[#0D9488]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
+                  <div className={`p-4 rounded-lg border ${inputBase === 'octal' ? 'ring-2 ring-[#6096B4]' : ''} ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.hexConverter.octalBase8', 'Octal (Base 8)')}
                       </span>
                       <CopyButton value={numberConversions.octalFormatted} label="octal" />
                     </div>
-                    <div className="font-mono text-xl text-[#0D9488] font-bold">
+                    <div className="font-mono text-xl text-[#6096B4] font-bold">
                       {numberConversions.octalFormatted}
                     </div>
                   </div>
@@ -394,7 +394,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -437,7 +437,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
               </div>
 
               {/* Hex to Text */}
-              <div className={`p-4 rounded-lg border ${isDarkMode ? t('tools.hexConverter.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'}`}>
+              <div className={`p-4 rounded-lg border ${isDarkMode ? t('tools.hexConverter.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'}`}>
                 <label className={`block text-sm font-medium mb-2 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
                   <ArrowRightLeft className="w-4 h-4 inline mr-1" />
                   {t('tools.hexConverter.hexToTextPasteHex', 'Hex to Text (paste hex here)')}
@@ -453,7 +453,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                     isDarkMode
                       ? 'bg-gray-800 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -471,16 +471,16 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                     type="text"
                     value={colorInput}
                     onChange={(e) => setColorInput(e.target.value)}
-                    placeholder="#0D9488"
+                    placeholder="#6096B4"
                     className={`flex-1 px-4 py-3 rounded-lg border font-mono text-lg ${
                       isDarkMode
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <input
                     type="color"
-                    value={colorConversions?.hex || '#0D9488'}
+                    value={colorConversions?.hex || '#6096B4'}
                     onChange={(e) => setColorInput(e.target.value)}
                     className="w-14 h-12 rounded-lg cursor-pointer border-0"
                   />
@@ -503,7 +503,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                         </span>
                         <CopyButton value={colorConversions.hex} label="colorHex" />
                       </div>
-                      <div className="font-mono text-xl text-[#0D9488] font-bold">
+                      <div className="font-mono text-xl text-[#6096B4] font-bold">
                         {colorConversions.hex}
                       </div>
                     </div>
@@ -515,7 +515,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                         </span>
                         <CopyButton value={colorConversions.rgb} label="rgb" />
                       </div>
-                      <div className="font-mono text-xl text-[#0D9488] font-bold">
+                      <div className="font-mono text-xl text-[#6096B4] font-bold">
                         {colorConversions.rgb}
                       </div>
                     </div>
@@ -527,7 +527,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                         </span>
                         <CopyButton value={colorConversions.rgba} label="rgba" />
                       </div>
-                      <div className="font-mono text-xl text-[#0D9488] font-bold">
+                      <div className="font-mono text-xl text-[#6096B4] font-bold">
                         {colorConversions.rgba}
                       </div>
                     </div>
@@ -539,7 +539,7 @@ const HexConverterTool: React.FC<HexConverterToolProps> = ({ uiConfig }) => {
                         </span>
                         <CopyButton value={colorConversions.hsl} label="hsl" />
                       </div>
-                      <div className="font-mono text-xl text-[#0D9488] font-bold">
+                      <div className="font-mono text-xl text-[#6096B4] font-bold">
                         {colorConversions.hsl}
                       </div>
                     </div>

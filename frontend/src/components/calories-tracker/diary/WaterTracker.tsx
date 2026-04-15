@@ -50,13 +50,13 @@ const WaterTracker: React.FC<WaterTrackerProps> = ({
         <div className="space-y-3">
           {/* Add Water Buttons */}
           <div className="flex gap-2 justify-center">
-            <Button size="sm" onClick={() => onAddWater(250)} className="bg-white/10 border border-white/20 text-white hover:bg-teal-500/20 hover:border-teal-400 hover:text-teal-400">
+            <Button size="sm" onClick={() => onAddWater(250)} className="bg-white/10 border border-white/20 text-white hover:bg-primary-500/20 hover:border-primary-400 hover:text-primary-400">
               +250ml
             </Button>
-            <Button size="sm" onClick={() => onAddWater(500)} className="bg-white/10 border border-white/20 text-white hover:bg-teal-500/20 hover:border-teal-400 hover:text-teal-400">
+            <Button size="sm" onClick={() => onAddWater(500)} className="bg-white/10 border border-white/20 text-white hover:bg-primary-500/20 hover:border-primary-400 hover:text-primary-400">
               +500ml
             </Button>
-            <Button size="sm" onClick={() => onAddWater(1000)} className="bg-white/10 border border-white/20 text-white hover:bg-teal-500/20 hover:border-teal-400 hover:text-teal-400">
+            <Button size="sm" onClick={() => onAddWater(1000)} className="bg-white/10 border border-white/20 text-white hover:bg-primary-500/20 hover:border-primary-400 hover:text-primary-400">
               +1L
             </Button>
           </div>

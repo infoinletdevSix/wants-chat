@@ -251,11 +251,11 @@ const TravelPlannerSection: React.FC = () => {
   // Color palette for tour spot chips
   const chipColors = [
     'bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/30',
-    'bg-teal-500/20 text-teal-700 dark:text-teal-300 border-teal-500/30',
+    'bg-primary-500/20 text-primary-700 dark:text-primary-300 border-primary-500/30',
     'bg-pink-500/20 text-pink-700 dark:text-pink-300 border-pink-500/30',
     'bg-green-500/20 text-green-700 dark:text-green-300 border-green-500/30',
     'bg-orange-500/20 text-orange-700 dark:text-orange-300 border-orange-500/30',
-    'bg-teal-500/20 text-teal-700 dark:text-teal-300 border-teal-500/30',
+    'bg-primary-500/20 text-primary-700 dark:text-primary-300 border-primary-500/30',
     'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border-indigo-500/30',
     'bg-rose-500/20 text-rose-700 dark:text-rose-300 border-rose-500/30',
     'bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 border-cyan-500/30',
@@ -288,11 +288,11 @@ const TravelPlannerSection: React.FC = () => {
 
   if (loading && apiDestinations.length === 0) {
     return (
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center">
-              <Loader2 className="h-12 w-12 animate-spin text-teal-400 mx-auto mb-4" />
+              <Loader2 className="h-12 w-12 animate-spin text-primary-400 mx-auto mb-4" />
               <p className="text-white/60">Loading amazing destinations...</p>
             </div>
           </div>
@@ -303,7 +303,7 @@ const TravelPlannerSection: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -311,7 +311,7 @@ const TravelPlannerSection: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, 30, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -326,7 +326,7 @@ const TravelPlannerSection: React.FC = () => {
         {/* Section Header */}
         <motion.div className="text-center mb-8 sm:mb-12" variants={cardVariants}>
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 sm:mb-6">
-            <Sparkles className="h-4 w-4 text-teal-400" />
+            <Sparkles className="h-4 w-4 text-primary-400" />
             <span className="text-xs sm:text-sm font-medium text-white">
               AI Travel Planner
             </span>
@@ -334,7 +334,7 @@ const TravelPlannerSection: React.FC = () => {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4 text-white">
             Discover Your Next
-            <span className="text-teal-400"> Adventure</span>
+            <span className="text-primary-400"> Adventure</span>
           </h2>
 
           <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto px-4">
@@ -360,7 +360,7 @@ const TravelPlannerSection: React.FC = () => {
               </Button>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg shadow-teal-500/25 hover:shadow-xl group w-full sm:w-auto text-sm sm:text-base transition-all"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl group w-full sm:w-auto text-sm sm:text-base transition-all"
                 onClick={() => {
                   if (!isAuthenticated) {
                     navigate('/login');
@@ -386,8 +386,8 @@ const TravelPlannerSection: React.FC = () => {
             >
               {/* Budget Label */}
               <div className="flex flex-wrap items-center gap-2">
-                <div className="px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30">
-                  <span className="text-sm font-bold text-teal-400">{currentDestination.budgetLabel}</span>
+                <div className="px-4 py-2 rounded-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+                  <span className="text-sm font-bold text-primary-400">{currentDestination.budgetLabel}</span>
                 </div>
                 <span className="text-sm text-white/60">{currentDestination.budgetRange}</span>
               </div>
@@ -399,7 +399,7 @@ const TravelPlannerSection: React.FC = () => {
                   whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 >
                   <Card
-                    className="overflow-hidden border border-white/20 bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl hover:shadow-teal-500/20 transition-all duration-300 cursor-pointer"
+                    className="overflow-hidden border border-white/20 bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 cursor-pointer"
                     onClick={() => navigate(`/travel-plans/${currentDestination.name.toLowerCase().replace(/\s+/g, '-')}`)}
                   >
                     <div className="relative h-64 sm:h-80 overflow-hidden">
@@ -422,8 +422,8 @@ const TravelPlannerSection: React.FC = () => {
                         {currentDestination.description}
                       </p>
                       <div className="flex items-center gap-2 text-sm">
-                        <DollarSign className="h-4 w-4 text-teal-400" />
-                        <span className="text-teal-400 font-semibold">{currentDestination.budgetRange}</span>
+                        <DollarSign className="h-4 w-4 text-primary-400" />
+                        <span className="text-primary-400 font-semibold">{currentDestination.budgetRange}</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -432,7 +432,7 @@ const TravelPlannerSection: React.FC = () => {
                 {/* Right: Tour Spots */}
                 <div className="relative min-h-[300px] sm:min-h-[440px] p-4 sm:p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                   <div className="flex items-center gap-2 mb-4 sm:mb-6">
-                    <MapPin className="h-5 w-5 text-teal-400" />
+                    <MapPin className="h-5 w-5 text-primary-400" />
                     <h4 className="text-base sm:text-lg font-bold text-white">Popular Tour Spots</h4>
                   </div>
                   <div className="relative h-[240px] sm:h-[360px] overflow-hidden">

@@ -37,7 +37,7 @@ export const ExpenseTrackerLayout: React.FC<ExpenseTrackerLayoutProps> = ({
                 onClick={() => setActiveTab('dashboard')}
                 className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                   activeTab === 'dashboard'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -48,7 +48,7 @@ export const ExpenseTrackerLayout: React.FC<ExpenseTrackerLayoutProps> = ({
                 onClick={() => setActiveTab('expenses')}
                 className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                   activeTab === 'expenses'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -59,7 +59,7 @@ export const ExpenseTrackerLayout: React.FC<ExpenseTrackerLayoutProps> = ({
                 onClick={() => setActiveTab('analytics')}
                 className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                   activeTab === 'analytics'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -70,7 +70,7 @@ export const ExpenseTrackerLayout: React.FC<ExpenseTrackerLayoutProps> = ({
                 onClick={() => setActiveTab('budget')}
                 className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                   activeTab === 'budget'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -81,7 +81,7 @@ export const ExpenseTrackerLayout: React.FC<ExpenseTrackerLayoutProps> = ({
 
             <Button
               onClick={onAddExpense}
-              className="my-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+              className="my-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
             >
               <Add className="h-4 w-4 mr-2" />
               Add Expense

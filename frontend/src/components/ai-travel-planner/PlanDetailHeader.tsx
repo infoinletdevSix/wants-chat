@@ -17,7 +17,7 @@ interface PlanDetailHeaderProps {
 
 const PlanDetailHeader: React.FC<PlanDetailHeaderProps> = ({ plan }) => {
   return (
-    <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-teal-500 mt-4 sm:mt-6">
+    <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-primary-500 mt-4 sm:mt-6">
       <CardContent className="p-4 sm:p-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
           <div className="flex-1">
@@ -26,17 +26,17 @@ const PlanDetailHeader: React.FC<PlanDetailHeaderProps> = ({ plan }) => {
             </h1>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-white/80">
               <span className="flex items-center gap-1">
-                <CalendarMonth className="h-4 w-4 sm:h-5 sm:w-5 text-teal-400" />
+                <CalendarMonth className="h-4 w-4 sm:h-5 sm:w-5 text-primary-400" />
                 <span className="text-sm sm:text-base">{plan.duration} days</span>
               </span>
               <span className="flex items-center gap-1">
-                <AttachMoney className="h-4 w-4 sm:h-5 sm:w-5 text-teal-400" />
+                <AttachMoney className="h-4 w-4 sm:h-5 sm:w-5 text-primary-400" />
                 <span className="text-sm sm:text-base">
                   ${plan.budget} {plan.currency}
                 </span>
               </span>
               <span className="flex items-center gap-1">
-                <Schedule className="h-4 w-4 sm:h-5 sm:w-5 text-teal-400" />
+                <Schedule className="h-4 w-4 sm:h-5 sm:w-5 text-primary-400" />
                 <span className="text-sm sm:text-base">
                   {plan.startDate} - {plan.endDate}
                 </span>

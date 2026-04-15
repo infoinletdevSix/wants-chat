@@ -27,7 +27,7 @@ const moods = [
   { value: 'hopeful', label: 'Hopeful', icon: Sparkles, color: 'text-yellow-500' },
   { value: 'dark', label: 'Dark', icon: Cloud, color: 'text-purple-500' },
   { value: 'whimsical', label: 'Whimsical', icon: Sparkles, color: 'text-green-500' },
-  { value: 'peaceful', label: 'Peaceful', icon: Feather, color: 'text-teal-500' },
+  { value: 'peaceful', label: 'Peaceful', icon: Feather, color: 'text-primary-500' },
 ];
 
 const lengths = [
@@ -174,11 +174,11 @@ Make it emotionally resonant and memorable.`;
     }`}>
       {/* Header */}
       <div className={`px-6 py-4 border-b ${
-        isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.poetryGenerator.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#0D9488]/5 border-gray-100')
+        isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.poetryGenerator.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#6096B4]/5 border-gray-100')
       }`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Feather className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Feather className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -194,9 +194,9 @@ Make it emotionally resonant and memorable.`;
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.poetryGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.poetryGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -209,7 +209,7 @@ Make it emotionally resonant and memorable.`;
           <select
             value={poetryType}
             onChange={(e) => setPoetryType(e.target.value)}
-            className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
@@ -239,7 +239,7 @@ Make it emotionally resonant and memorable.`;
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             placeholder={t('tools.poetryGenerator.eGNatureLoveTime', 'e.g., Nature, Love, Time, Dreams, Ocean, Memories')}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
@@ -257,7 +257,7 @@ Make it emotionally resonant and memorable.`;
             <select
               value={mood}
               onChange={(e) => setMood(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -279,7 +279,7 @@ Make it emotionally resonant and memorable.`;
               <select
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
-                className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+                className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
@@ -310,7 +310,7 @@ Make it emotionally resonant and memorable.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !subject.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -349,7 +349,7 @@ Make it emotionally resonant and memorable.`;
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#2DD4BF] transition-all flex items-center gap-2 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#75AAC1] transition-all flex items-center gap-2 disabled:opacity-50"
                 >
                   {isSaving ? (
                     <Loader2 className="w-4 h-4 animate-spin" />

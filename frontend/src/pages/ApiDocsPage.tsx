@@ -191,7 +191,7 @@ print(data)`;
             <span className="text-sm text-gray-400 uppercase tracking-wider">Developer API</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            REST API <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Documentation</span>
+            REST API <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-primary-400">Documentation</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Access your tool data programmatically. Build integrations, automate workflows, and extend Wants functionality.
@@ -207,7 +207,7 @@ print(data)`;
 
           <div className="space-y-4">
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
               <div>
                 <p className="font-medium text-white">Get your API Key</p>
                 <p className="text-sm text-gray-400">
@@ -217,7 +217,7 @@ print(data)`;
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
               <div>
                 <p className="font-medium text-white">Add the API Key header</p>
                 <p className="text-sm text-gray-400">
@@ -227,7 +227,7 @@ print(data)`;
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
               <div>
                 <p className="font-medium text-white">Make API calls</p>
                 <p className="text-sm text-gray-400">
@@ -281,7 +281,7 @@ print(data)`;
         {/* Endpoints */}
         <div className="mb-8 p-6 rounded-2xl bg-[#111] border border-[#222]">
           <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 text-white">
-            <Code className="w-5 h-5 text-teal-400" />
+            <Code className="w-5 h-5 text-primary-400" />
             Endpoints
           </h2>
 

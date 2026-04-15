@@ -194,8 +194,8 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
   return (
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-          <ListChecks className="w-6 h-6 text-[#0D9488]" />
+        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+          <ListChecks className="w-6 h-6 text-[#6096B4]" />
         </div>
         <div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -209,9 +209,9 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{isEditFromGallery ? t('tools.howToGuide.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.howToGuide.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{isEditFromGallery ? t('tools.howToGuide.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.howToGuide.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
         </div>
       )}
 
@@ -230,7 +230,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
           />
         </div>
 
@@ -247,7 +247,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             >
               {skillLevels.map((level) => (
                 <option key={level.value} value={level.value}>
@@ -269,7 +269,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             >
               {formats.map((fmt) => (
                 <option key={fmt.value} value={fmt.value}>
@@ -287,7 +287,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
               type="checkbox"
               checked={includeTips}
               onChange={(e) => setIncludeTips(e.target.checked)}
-              className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+              className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
               {t('tools.howToGuide.includeHelpfulTipsAndBest', 'Include helpful tips and best practices')}
@@ -299,7 +299,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
               type="checkbox"
               checked={includeWarnings}
               onChange={(e) => setIncludeWarnings(e.target.checked)}
-              className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+              className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
               {t('tools.howToGuide.includeWarningsAndCommonPitfalls', 'Include warnings and common pitfalls')}
@@ -326,7 +326,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
           <button
             onClick={handleGenerate}
             disabled={isGenerating || !topic.trim()}
-            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#0D9488]/20"
+            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#6096B4]/20"
           >
             {isGenerating ? (
               <>
@@ -378,7 +378,7 @@ ${includeWarnings ? '- Include warnings marked with "⚠️ Warning:"' : ''}`;
                   disabled={isSaving}
                   className={`flex items-center gap-2 px-3 py-1 rounded-lg transition-colors text-sm ${
                     isSaving
-                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.howToGuide.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.howToGuide.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                   }`}
                 >
                   {isSaving ? (

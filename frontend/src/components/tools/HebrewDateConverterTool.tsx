@@ -242,7 +242,7 @@ export default function HebrewDateConverterTool({
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Star className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -280,7 +280,7 @@ export default function HebrewDateConverterTool({
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             {gregorianDate && (
               <p className={`text-sm mt-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -299,7 +299,7 @@ export default function HebrewDateConverterTool({
             <button
               onClick={convertDate}
               disabled={loading}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {loading ? (
                 <RefreshCw className="w-5 h-5 animate-spin" />
@@ -323,11 +323,11 @@ export default function HebrewDateConverterTool({
           {/* Hebrew Date Result */}
           {hebrewResult && (
             <div className="space-y-4">
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.hebrewDateConverter.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.hebrewDateConverter.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-[#0D9488] mb-2" dir="rtl">
+                  <div className="text-3xl font-bold text-[#6096B4] mb-2" dir="rtl">
                     {hebrewResult.dayHebrew} {hebrewResult.monthHebrew} {hebrewResult.yearHebrew}
                   </div>
                   <div className={`text-xl ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -337,7 +337,7 @@ export default function HebrewDateConverterTool({
 
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                    <div className="text-2xl font-bold text-[#0D9488]">{hebrewResult.day}</div>
+                    <div className="text-2xl font-bold text-[#6096B4]">{hebrewResult.day}</div>
                     <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hebrewDateConverter.day', 'Day')}</div>
                   </div>
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
@@ -347,7 +347,7 @@ export default function HebrewDateConverterTool({
                     <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hebrewDateConverter.month', 'Month')}</div>
                   </div>
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                    <div className="text-2xl font-bold text-[#0D9488]">{hebrewResult.year}</div>
+                    <div className="text-2xl font-bold text-[#6096B4]">{hebrewResult.year}</div>
                     <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hebrewDateConverter.year', 'Year')}</div>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function HebrewDateConverterTool({
               <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <div className="flex items-center justify-between">
                   <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.hebrewDateConverter.yearType', 'Year Type:')}</span>
-                  <span className={`font-medium ${hebrewResult.isLeapYear ? 'text-[#0D9488]' : theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  <span className={`font-medium ${hebrewResult.isLeapYear ? 'text-[#6096B4]' : theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {hebrewResult.isLeapYear ? t('tools.hebrewDateConverter.leapYear13Months', 'Leap Year (13 months)') : t('tools.hebrewDateConverter.regularYear12Months', 'Regular Year (12 months)')}
                   </span>
                 </div>
@@ -380,7 +380,7 @@ export default function HebrewDateConverterTool({
                     <ul className="space-y-2">
                       {getHolidaysForMonth(hebrewResult.month).map((holiday, idx) => (
                         <li key={idx} className={`flex items-center gap-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-                          <Star className="w-4 h-4 text-[#0D9488]" />
+                          <Star className="w-4 h-4 text-[#6096B4]" />
                           {holiday}
                         </li>
                       ))}

@@ -240,9 +240,9 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Flower2 className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Flower2 className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.springCleaning.springCleaningChecklist', 'Spring Cleaning Checklist')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.springCleaning.completeRoomByRoomSpring', 'Complete room-by-room spring cleaning guide')}</p>
@@ -252,9 +252,9 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.springCleaning.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.springCleaning.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -271,7 +271,7 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
                 onClick={() => setHomeType(type)}
                 className={`py-2 px-2 rounded-lg text-sm text-center ${
                   homeType === type
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -319,11 +319,11 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
         </p>
 
         {/* Progress Overview */}
-        <div className={`p-4 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between mb-2">
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.springCleaning.overallProgress', 'Overall Progress')}</span>
             <div className="flex items-center gap-2">
-              <span className="text-teal-500 font-bold">{calculations.progressPercent}%</span>
+              <span className="text-primary-500 font-bold">{calculations.progressPercent}%</span>
               <button
                 onClick={resetProgress}
                 className={`p-1 rounded ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-200'}`}
@@ -335,7 +335,7 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
           </div>
           <div className={`h-3 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
             <div
-              className="h-3 rounded-full bg-teal-500 transition-all duration-300"
+              className="h-3 rounded-full bg-primary-500 transition-all duration-300"
               style={{ width: `${calculations.progressPercent}%` }}
             />
           </div>
@@ -354,7 +354,7 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
             </div>
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.springCleaning.perDay', 'Per Day')}</div>
-              <div className="font-bold text-teal-500">
+              <div className="font-bold text-primary-500">
                 {calculations.hoursPerDay}h
               </div>
             </div>
@@ -372,7 +372,7 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
                   onClick={() => setActiveCategory(cat.id)}
                   className={`py-2 px-4 rounded-lg text-sm flex items-center gap-2 whitespace-nowrap ${
                     activeCategory === cat.id
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300'
                       : 'bg-gray-100 text-gray-700'
@@ -412,8 +412,8 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
                   className={`flex items-start gap-3 p-3 rounded-lg cursor-pointer transition-colors ${
                     completedTasks.has(task.id)
                       ? isDark
-                        ? 'bg-teal-900/30'
-                        : 'bg-teal-100'
+                        ? 'bg-primary-900/30'
+                        : 'bg-primary-100'
                       : isDark
                       ? 'bg-gray-700/50 hover:bg-gray-700'
                       : 'bg-white hover:bg-gray-100'
@@ -423,7 +423,7 @@ export const SpringCleaningTool: React.FC<SpringCleaningToolProps> = ({
                     type="checkbox"
                     checked={completedTasks.has(task.id)}
                     onChange={() => toggleTask(task.id)}
-                    className="w-5 h-5 mt-0.5 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                    className="w-5 h-5 mt-0.5 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
                   />
                   <div className="flex-1">
                     <span className={`${completedTasks.has(task.id) ? 'line-through opacity-60' : ''} ${isDark ? 'text-white' : 'text-gray-900'}`}>

@@ -204,9 +204,9 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Route className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Route className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.roadTripCost.roadTripCostCalculator', 'Road Trip Cost Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.roadTripCost.estimateTotalTripCostsIncluding', 'Estimate total trip costs including fuel and more')}</p>
@@ -216,9 +216,9 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.roadTripCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.roadTripCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -227,7 +227,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
           <button
             onClick={() => setMode('simple')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'simple' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'simple' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Calculator className="w-4 h-4" /> Simple Trip
@@ -235,7 +235,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
           <button
             onClick={() => setMode('multi-leg')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'multi-leg' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'multi-leg' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <MapPin className="w-4 h-4" /> Multi-Stop
@@ -246,7 +246,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
           <button
             onClick={() => setUnit('imperial')}
             className={`flex-1 py-2 rounded-lg text-sm ${
-              unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             {t('tools.roadTripCost.milesGallons', 'Miles / Gallons')}
@@ -254,7 +254,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
           <button
             onClick={() => setUnit('metric')}
             className={`flex-1 py-2 rounded-lg text-sm ${
-              unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             {t('tools.roadTripCost.kmLiters', 'Km / Liters')}
@@ -323,7 +323,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={roundTrip}
                 onChange={(e) => setRoundTrip(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                 <Route className="w-4 h-4 inline mr-1" />
@@ -339,7 +339,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                   onClick={() => setMpg(v.mpg.toString())}
                   className={`px-3 py-1.5 rounded-lg text-xs ${
                     parseFloat(mpg) === v.mpg
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -386,7 +386,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 <button
                   onClick={addLeg}
                   disabled={!newFrom || !newTo || !newDistance}
-                  className="py-2 bg-teal-500 text-white rounded-lg font-medium disabled:opacity-50"
+                  className="py-2 bg-primary-500 text-white rounded-lg font-medium disabled:opacity-50"
                 >
                   {t('tools.roadTripCost.add', 'Add')}
                 </button>
@@ -399,7 +399,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 {legs.map((leg, idx) => (
                   <div key={leg.id} className={`p-3 rounded-lg flex items-center justify-between ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                     <div className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-teal-500 text-white text-xs flex items-center justify-center">
+                      <span className="w-6 h-6 rounded-full bg-primary-500 text-white text-xs flex items-center justify-center">
                         {idx + 1}
                       </span>
                       <div>
@@ -465,7 +465,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={includeTolls}
                 onChange={(e) => setIncludeTolls(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <label className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.roadTripCost.tolls', 'Tolls')}</label>
               {includeTolls && (
@@ -482,7 +482,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={includeFood}
                 onChange={(e) => setIncludeFood(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <label className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.roadTripCost.food', 'Food')}</label>
               {includeFood && (
@@ -499,7 +499,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={includeLodging}
                 onChange={(e) => setIncludeLodging(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <label className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.roadTripCost.lodging', 'Lodging')}</label>
               {includeLodging && (
@@ -516,7 +516,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={includeParking}
                 onChange={(e) => setIncludeParking(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <label className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.roadTripCost.parking', 'Parking')}</label>
               {includeParking && (
@@ -534,9 +534,9 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
         {/* Results */}
         {mode === 'simple' ? (
           <>
-            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roadTripCost.totalTripCost', 'Total Trip Cost')}</div>
-              <div className="text-5xl font-bold text-teal-500 my-2">
+              <div className="text-5xl font-bold text-primary-500 my-2">
                 ${simpleCalc.totalCost.toFixed(2)}
               </div>
               <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -547,7 +547,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
             <div className="grid grid-cols-3 gap-4">
               <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roadTripCost.fuelCost', 'Fuel Cost')}</div>
-                <div className="text-xl font-bold text-teal-500">${simpleCalc.fuelCost.toFixed(2)}</div>
+                <div className="text-xl font-bold text-primary-500">${simpleCalc.fuelCost.toFixed(2)}</div>
                 <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                   {simpleCalc.fuelNeeded.toFixed(1)} {simpleCalc.fuelUnit}
                 </div>
@@ -568,9 +568,9 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
           </>
         ) : multiLegCalc ? (
           <>
-            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roadTripCost.totalTripCost2', 'Total Trip Cost')}</div>
-              <div className="text-5xl font-bold text-teal-500 my-2">
+              <div className="text-5xl font-bold text-primary-500 my-2">
                 ${multiLegCalc.totalCost.toFixed(2)}
               </div>
               <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -581,7 +581,7 @@ export const RoadTripCostTool: React.FC<RoadTripCostToolProps> = ({ uiConfig }) 
             <div className="grid grid-cols-2 gap-4">
               <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roadTripCost.fuelCost2', 'Fuel Cost')}</div>
-                <div className="text-xl font-bold text-teal-500">${multiLegCalc.totalFuelCost.toFixed(2)}</div>
+                <div className="text-xl font-bold text-primary-500">${multiLegCalc.totalFuelCost.toFixed(2)}</div>
               </div>
               <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roadTripCost.perPerson2', 'Per Person')}</div>

@@ -117,7 +117,7 @@ const iconMap: { [key: string]: React.ElementType } = {
 const colorOptions = [
   '#3B82F6', '#8B5CF6', '#F59E0B', '#10B981', '#EF4444',
   '#EC4899', '#06B6D4', '#22C55E', '#F97316', '#6B7280',
-  '#14B8A6', '#A855F7', '#84CC16', '#0EA5E9', '#D946EF',
+  '#75AAC1', '#A855F7', '#84CC16', '#0EA5E9', '#D946EF',
 ];
 
 const STORAGE_KEY = 'budget_dashboard_data';
@@ -460,7 +460,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
         <div className={`${cardBg} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-3 flex-1">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Wallet className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
@@ -500,7 +500,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                 <select
                   value={dateRange}
                   onChange={(e) => setDateRange(e.target.value as typeof dateRange)}
-                  className={`px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="this-month">{t('tools.budgetDashboard.thisMonth', 'This Month')}</option>
                   <option value="last-month">{t('tools.budgetDashboard.lastMonth', 'Last Month')}</option>
@@ -514,14 +514,14 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                     type="date"
                     value={customDateStart}
                     onChange={(e) => setCustomDateStart(e.target.value)}
-                    className={`px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <span className={textSecondary}>to</span>
                   <input
                     type="date"
                     value={customDateEnd}
                     onChange={(e) => setCustomDateEnd(e.target.value)}
-                    className={`px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-3 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               )}
@@ -530,9 +530,9 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
         </div>
 
         {isPrefilled && (
-          <div className={`p-3 rounded-lg flex items-center gap-2 ${theme === 'dark' ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className={`text-sm ${theme === 'dark' ? 'text-teal-400' : 'text-teal-700'}`}>
+          <div className={`p-3 rounded-lg flex items-center gap-2 ${theme === 'dark' ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className={`text-sm ${theme === 'dark' ? 'text-primary-400' : 'text-primary-700'}`}>
               {t('tools.budgetDashboard.preFilledBasedOnYour', 'Pre-filled based on your request')}
             </span>
           </div>
@@ -547,7 +547,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab)}
                 className={`flex-1 min-w-[120px] py-3 px-4 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'text-gray-300 hover:bg-gray-700'
                     : 'text-gray-700 hover:bg-gray-100'
@@ -700,7 +700,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                 <h2 className={`text-lg font-semibold ${textPrimary}`}>{t('tools.budgetDashboard.recentTransactions', 'Recent Transactions')}</h2>
                 <button
                   onClick={() => setActiveTab('transactions')}
-                  className="text-[#0D9488] hover:underline text-sm"
+                  className="text-[#6096B4] hover:underline text-sm"
                 >
                   {t('tools.budgetDashboard.viewAll', 'View All')}
                 </button>
@@ -760,7 +760,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                   setIncomeForm({ name: '', amount: '', frequency: 'monthly' });
                   setShowIncomeModal(true);
                 }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.budgetDashboard.addIncome', 'Add Income')}
@@ -858,7 +858,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                     setCategoryForm({ name: '', icon: 'Wallet', color: '#3B82F6', budgetLimit: '' });
                     setShowCategoryModal(true);
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.budgetDashboard.addCategory', 'Add Category')}
@@ -903,7 +903,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                             <div className="flex items-center gap-2">
                               <span className={`font-medium ${textPrimary}`}>{category.name}</span>
                               {category.isCustom && (
-                                <span className="px-2 py-0.5 text-xs bg-[#0D9488]/20 text-[#0D9488] rounded">
+                                <span className="px-2 py-0.5 text-xs bg-[#6096B4]/20 text-[#6096B4] rounded">
                                   {t('tools.budgetDashboard.custom', 'Custom')}
                                 </span>
                               )}
@@ -962,7 +962,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                                   value={category.budgetLimit || ''}
                                   onChange={(e) => handleUpdateBudgetLimit(category.id, parseFloat(e.target.value) || 0)}
                                   placeholder={t('tools.budgetDashboard.setBudgetLimit', 'Set budget limit')}
-                                  className={`flex-1 px-4 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  className={`flex-1 px-4 py-2 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                             </div>
@@ -1025,7 +1025,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                   });
                   setShowTransactionModal(true);
                 }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.budgetDashboard.addTransaction', 'Add Transaction')}
@@ -1141,7 +1141,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                     value={incomeForm.name}
                     onChange={(e) => setIncomeForm({ ...incomeForm, name: e.target.value })}
                     placeholder={t('tools.budgetDashboard.eGSalaryFreelance', 'e.g., Salary, Freelance')}
-                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1156,7 +1156,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                       value={incomeForm.amount}
                       onChange={(e) => setIncomeForm({ ...incomeForm, amount: e.target.value })}
                       placeholder="0.00"
-                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1168,7 +1168,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                   <select
                     value={incomeForm.frequency}
                     onChange={(e) => setIncomeForm({ ...incomeForm, frequency: e.target.value as typeof incomeForm.frequency })}
-                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="weekly">{t('tools.budgetDashboard.weekly', 'Weekly')}</option>
                     <option value="bi-weekly">{t('tools.budgetDashboard.biWeekly', 'Bi-weekly')}</option>
@@ -1188,7 +1188,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={handleAddIncome}
-                  className="flex-1 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                 >
                   <Check className="w-5 h-5" />
                   {editingIncome ? t('tools.budgetDashboard.update', 'Update') : t('tools.budgetDashboard.add', 'Add')}
@@ -1226,7 +1226,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                     value={categoryForm.name}
                     onChange={(e) => setCategoryForm({ ...categoryForm, name: e.target.value })}
                     placeholder={t('tools.budgetDashboard.eGSubscriptions', 'e.g., Subscriptions')}
-                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1243,11 +1243,11 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                           onClick={() => setCategoryForm({ ...categoryForm, icon: iconName })}
                           className={`p-3 rounded-lg border transition-colors ${
                             categoryForm.icon === iconName
-                              ? 'border-[#0D9488] bg-[#0D9488]/20'
+                              ? 'border-[#6096B4] bg-[#6096B4]/20'
                               : borderColor
                           } ${theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
                         >
-                          <IconComponent className={`w-5 h-5 ${categoryForm.icon === iconName ? 'text-[#0D9488]' : textSecondary}`} />
+                          <IconComponent className={`w-5 h-5 ${categoryForm.icon === iconName ? 'text-[#6096B4]' : textSecondary}`} />
                         </button>
                       );
                     })}
@@ -1283,7 +1283,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                       value={categoryForm.budgetLimit}
                       onChange={(e) => setCategoryForm({ ...categoryForm, budgetLimit: e.target.value })}
                       placeholder="0.00"
-                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1300,7 +1300,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={handleAddCategory}
-                  className="flex-1 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                 >
                   <Check className="w-5 h-5" />
                   {editingCategory ? t('tools.budgetDashboard.update2', 'Update') : t('tools.budgetDashboard.add2', 'Add')}
@@ -1371,7 +1371,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                       type="date"
                       value={transactionForm.date}
                       onChange={(e) => setTransactionForm({ ...transactionForm, date: e.target.value })}
-                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1383,7 +1383,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                   <select
                     value={transactionForm.categoryId}
                     onChange={(e) => setTransactionForm({ ...transactionForm, categoryId: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.budgetDashboard.selectCategory', 'Select category')}</option>
                     {data.categories.map((cat) => (
@@ -1403,7 +1403,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                     value={transactionForm.description}
                     onChange={(e) => setTransactionForm({ ...transactionForm, description: e.target.value })}
                     placeholder={t('tools.budgetDashboard.eGGroceryShopping', 'e.g., Grocery shopping')}
-                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1418,7 +1418,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                       value={transactionForm.amount}
                       onChange={(e) => setTransactionForm({ ...transactionForm, amount: e.target.value })}
                       placeholder="0.00"
-                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full pl-10 pr-4 py-3 rounded-lg border ${inputBg} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1435,7 +1435,7 @@ export const BudgetDashboardTool: React.FC<BudgetDashboardToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={handleAddTransaction}
-                  className="flex-1 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                 >
                   <Check className="w-5 h-5" />
                   {editingTransaction ? t('tools.budgetDashboard.update3', 'Update') : t('tools.budgetDashboard.add3', 'Add')}

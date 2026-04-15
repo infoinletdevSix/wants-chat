@@ -435,14 +435,14 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg">
                 <ScrollText className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">{t('tools.termsGenerator.termsOfServiceGenerator', 'Terms of Service Generator')}</h1>
-                <p className="text-teal-100 text-sm mt-1">{t('tools.termsGenerator.createComprehensiveTermsOfService', 'Create comprehensive terms of service for your business')}</p>
+                <p className="text-primary-100 text-sm mt-1">{t('tools.termsGenerator.createComprehensiveTermsOfService', 'Create comprehensive terms of service for your business')}</p>
               </div>
             </div>
           </div>
@@ -450,9 +450,9 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
           <div className="p-6 space-y-6">
             {/* Prefill Indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {isEditFromGallery
                     ? t('tools.termsGenerator.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.termsGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}
                 </span>
@@ -467,7 +467,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                   onClick={() => setActiveTab(tab)}
                   className={`px-4 py-2 font-medium text-sm capitalize transition-colors ${
                     activeTab === tab
-                      ? 'text-teal-600 border-b-2 border-teal-600'
+                      ? 'text-primary-600 border-b-2 border-primary-600'
                       : isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -491,7 +491,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                       placeholder={t('tools.termsGenerator.yourCompanyName', 'Your Company Name')}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                   <div>
@@ -503,7 +503,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                       onChange={(e) => setTermsData(prev => ({ ...prev, serviceType: e.target.value as ServiceType }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     >
                       {SERVICE_TYPES.map((type) => (
                         <option key={type.value} value={type.value}>{type.label}</option>
@@ -523,7 +523,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                     placeholder={t('tools.termsGenerator.httpsWwwExampleCom', 'https://www.example.com')}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -539,7 +539,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                       placeholder={t('tools.termsGenerator.legalExampleCom', 'legal@example.com')}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                   <div>
@@ -552,7 +552,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                       onChange={(e) => setTermsData(prev => ({ ...prev, effectiveDate: e.target.value }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                 </div>
@@ -568,7 +568,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                     rows={3}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -581,7 +581,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                     onChange={(e) => setTermsData(prev => ({ ...prev, governingLaw: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     {US_STATES.map((state) => (
                       <option key={state} value={state}>{state}</option>
@@ -602,7 +602,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         type="checkbox"
                         checked={termsData.accountRequired}
                         onChange={(e) => setTermsData(prev => ({ ...prev, accountRequired: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.accountRegistrationRequired', 'Account Registration Required')}</span>
                     </label>
@@ -617,7 +617,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                           onChange={(e) => setTermsData(prev => ({ ...prev, minimumAge: e.target.value }))}
                           className={`w-full px-3 py-2 rounded-lg border ${
                             isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                          } focus:ring-2 focus:ring-teal-500`}
+                          } focus:ring-2 focus:ring-primary-500`}
                         >
                           <option value="13">13 years</option>
                           <option value="16">16 years</option>
@@ -637,7 +637,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         type="checkbox"
                         checked={termsData.userGeneratedContent}
                         onChange={(e) => setTermsData(prev => ({ ...prev, userGeneratedContent: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.allowUserGeneratedContent', 'Allow User-Generated Content')}</span>
                     </label>
@@ -652,7 +652,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                           onChange={(e) => setTermsData(prev => ({ ...prev, contentLicense: e.target.value }))}
                           className={`w-full px-3 py-2 rounded-lg border ${
                             isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                          } focus:ring-2 focus:ring-teal-500`}
+                          } focus:ring-2 focus:ring-primary-500`}
                         >
                           <option value="non-exclusive">{t('tools.termsGenerator.nonExclusiveLicense', 'Non-Exclusive License')}</option>
                           <option value="exclusive">{t('tools.termsGenerator.exclusiveLicense', 'Exclusive License')}</option>
@@ -666,7 +666,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         type="checkbox"
                         checked={termsData.acceptableUse}
                         onChange={(e) => setTermsData(prev => ({ ...prev, acceptableUse: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.includeAcceptableUsePolicy', 'Include Acceptable Use Policy')}</span>
                     </label>
@@ -676,7 +676,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         type="checkbox"
                         checked={termsData.intellectualProperty}
                         onChange={(e) => setTermsData(prev => ({ ...prev, intellectualProperty: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.includeIntellectualPropertySection', 'Include Intellectual Property Section')}</span>
                     </label>
@@ -694,7 +694,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                       type="checkbox"
                       checked={termsData.paidService}
                       onChange={(e) => setTermsData(prev => ({ ...prev, paidService: e.target.checked }))}
-                      className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                      className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                     />
                     <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.termsGenerator.paidService', 'Paid Service')}</span>
                   </label>
@@ -706,7 +706,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                           type="checkbox"
                           checked={termsData.subscriptionBased}
                           onChange={(e) => setTermsData(prev => ({ ...prev, subscriptionBased: e.target.checked }))}
-                          className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                          className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                         />
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.subscriptionBasedBilling', 'Subscription-Based Billing')}</span>
                       </label>
@@ -723,7 +723,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                             onChange={(e) => setTermsData(prev => ({ ...prev, freeTrialDays: e.target.value }))}
                             className={`w-32 px-3 py-2 rounded-lg border ${
                               isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                            } focus:ring-2 focus:ring-teal-500`}
+                            } focus:ring-2 focus:ring-primary-500`}
                           />
                         </div>
                       )}
@@ -737,7 +737,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                           onChange={(e) => setTermsData(prev => ({ ...prev, refundPolicy: e.target.value }))}
                           className={`w-full px-3 py-2 rounded-lg border ${
                             isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                          } focus:ring-2 focus:ring-teal-500`}
+                          } focus:ring-2 focus:ring-primary-500`}
                         >
                           <option value="">{t('tools.termsGenerator.noRefunds', 'No Refunds')}</option>
                           <option value="7">7 Days</option>
@@ -763,7 +763,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         type="checkbox"
                         checked={termsData.warrantyDisclaimer}
                         onChange={(e) => setTermsData(prev => ({ ...prev, warrantyDisclaimer: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.includeWarrantyDisclaimer', 'Include Warranty Disclaimer')}</span>
                     </label>
@@ -777,7 +777,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         onChange={(e) => setTermsData(prev => ({ ...prev, liabilityLimit: e.target.value }))}
                         className={`w-full px-3 py-2 rounded-lg border ${
                           isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                        } focus:ring-2 focus:ring-teal-500`}
+                        } focus:ring-2 focus:ring-primary-500`}
                       >
                         <option value="amount paid">{t('tools.termsGenerator.amountPaidInLast6', 'Amount Paid in Last 6 Months')}</option>
                         <option value="$100">$100</option>
@@ -800,7 +800,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                         onChange={(e) => setTermsData(prev => ({ ...prev, disputeResolution: e.target.value as 'arbitration' | 'court' | 'mediation' }))}
                         className={`w-full px-3 py-2 rounded-lg border ${
                           isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                        } focus:ring-2 focus:ring-teal-500`}
+                        } focus:ring-2 focus:ring-primary-500`}
                       >
                         <option value="arbitration">{t('tools.termsGenerator.bindingArbitration', 'Binding Arbitration')}</option>
                         <option value="mediation">{t('tools.termsGenerator.mediationFirst', 'Mediation First')}</option>
@@ -814,7 +814,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                           type="checkbox"
                           checked={termsData.classActionWaiver}
                           onChange={(e) => setTermsData(prev => ({ ...prev, classActionWaiver: e.target.checked }))}
-                          className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                          className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                         />
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.termsGenerator.includeClassActionWaiver', 'Include Class Action Waiver')}</span>
                       </label>
@@ -833,7 +833,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                     onChange={(e) => setTermsData(prev => ({ ...prev, terminationNotice: e.target.value }))}
                     className={`w-32 px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -843,7 +843,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
             <div className="flex gap-3">
               <button
                 onClick={generateTerms}
-                className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <ScrollText className="w-5 h-5" />
                 {t('tools.termsGenerator.generateTermsOfService', 'Generate Terms of Service')}
@@ -896,7 +896,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                     </button>
                     <button
                       onClick={downloadTerms}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
                     >
                       <Download className="w-4 h-4" />
                       {t('tools.termsGenerator.download', 'Download')}
@@ -906,8 +906,8 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                       disabled={isSaving}
                       className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                         isDark
-                          ? 'bg-teal-900/30 hover:bg-teal-900/50 text-teal-300'
-                          : 'bg-teal-50 hover:bg-teal-100 text-teal-700'
+                          ? 'bg-primary-900/30 hover:bg-primary-900/50 text-primary-300'
+                          : 'bg-primary-50 hover:bg-primary-100 text-primary-700'
                       } disabled:opacity-50`}
                     >
                       <Save className="w-4 h-4" />
@@ -919,7 +919,7 @@ ${websiteUrl ? `Website: ${websiteUrl}` : ''}
                   value={generatedTerms}
                   onChange={(e) => setGeneratedTerms(e.target.value)}
                   rows={20}
-                  className={`w-full text-sm font-mono p-4 rounded-lg border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all resize-y ${
+                  className={`w-full text-sm font-mono p-4 rounded-lg border focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none transition-all resize-y ${
                     isDark ? 'bg-gray-800 border-gray-600 text-gray-300' : 'bg-white border-gray-200 text-gray-700'
                   }`}
                   placeholder={t('tools.termsGenerator.generatedTermsWillAppearHere', 'Generated terms will appear here...')}

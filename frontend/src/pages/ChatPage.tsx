@@ -504,7 +504,7 @@ const ChatPage: React.FC = () => {
   const getTierIcon = (tier: string) => {
     switch (tier) {
       case 'auto':
-        return <Sparkles className="w-3 h-3 text-[#0D9488]" />;
+        return <Sparkles className="w-3 h-3 text-[#6096B4]" />;
       case 'free':
         return null;
       case 'standard':
@@ -2618,8 +2618,8 @@ Please respond helpfully to continue this branch conversation.`;
                               className={cn(
                                 "w-full rounded-2xl px-5 py-3 shadow-sm resize-none outline-none ring-0 focus:ring-0",
                                 theme === 'dark'
-                                  ? 'bg-[#2a2a2a] text-white border border-[#0D9488]'
-                                  : 'bg-slate-50 text-slate-900 border border-[#0D9488]'
+                                  ? 'bg-[#2a2a2a] text-white border border-[#6096B4]'
+                                  : 'bg-slate-50 text-slate-900 border border-[#6096B4]'
                               )}
                               rows={Math.min(editContent.split('\n').length + 1, 8)}
                               autoFocus
@@ -2638,7 +2638,7 @@ Please respond helpfully to continue this branch conversation.`;
                               </button>
                               <button
                                 onClick={handleSaveEdit}
-                                className="px-3 py-1.5 rounded-lg text-sm font-medium bg-[#0D9488] text-white hover:bg-[#0B8278] transition-colors"
+                                className="px-3 py-1.5 rounded-lg text-sm font-medium bg-[#6096B4] text-white hover:bg-[#0B8278] transition-colors"
                               >
                                 Save & Send
                               </button>
@@ -2665,7 +2665,7 @@ Please respond helpfully to continue this branch conversation.`;
                                 "max-w-[80%] rounded-2xl px-5 py-3 shadow-sm",
                                 theme === 'dark'
                                   ? 'bg-[#2a2a2a] text-white border border-[#3a3a3a]'
-                                  : 'bg-gradient-to-br from-[#0D9488] to-[#0F766E] text-white'
+                                  : 'bg-gradient-to-br from-[#6096B4] to-[#4C7F98] text-white'
                               )}>
                                 {/* Show attached files */}
                                 {message.metadata?.attachments && message.metadata.attachments.length > 0 && (
@@ -2728,7 +2728,7 @@ Please respond helpfully to continue this branch conversation.`;
                     ) : (
                       <div className="flex gap-4 group/message">
                         <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-200 shadow-sm">
-                          <Sparkles className="w-4 h-4 text-[#0D9488]" />
+                          <Sparkles className="w-4 h-4 text-[#6096B4]" />
                         </div>
                         <div className={cn(
                           "flex-1 pt-1 min-w-0",
@@ -2750,7 +2750,7 @@ Please respond helpfully to continue this branch conversation.`;
                           />
                           {/* Streaming cursor - shows blinking cursor while streaming */}
                           {message.id === streamingMessageId && (
-                            <span className="inline-block w-2 h-4 ml-0.5 bg-[#0D9488] animate-pulse rounded-sm" />
+                            <span className="inline-block w-2 h-4 ml-0.5 bg-[#6096B4] animate-pulse rounded-sm" />
                           )}
                           {/* Tool Launch Button - only show after typewriter/streaming completes */}
                           {message.id !== typewriterMessageId && message.id !== streamingMessageId && message.uiConfig && toolComponents[message.uiConfig.toolId || ''] && (
@@ -2783,8 +2783,8 @@ Please respond helpfully to continue this branch conversation.`;
                                       ? 'opacity-70 cursor-not-allowed'
                                       : '',
                                     theme === 'dark'
-                                      ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-                                      : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+                                      ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+                                      : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
                                   )}
                                 >
                                   {loadingPreviewId === message.id ? (
@@ -2820,8 +2820,8 @@ Please respond helpfully to continue this branch conversation.`;
                                   className={cn(
                                     "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all",
                                     theme === 'dark'
-                                      ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-                                      : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+                                      ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+                                      : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
                                   )}
                                 >
                                   <Eye className="w-3.5 h-3.5" />
@@ -2905,7 +2905,7 @@ Please respond helpfully to continue this branch conversation.`;
                                       ? 'opacity-70 cursor-not-allowed'
                                       : '',
                                     activeThread?.parentMessage.id === message.id
-                                      ? 'bg-[#0D9488]/20 text-[#0D9488]'
+                                      ? 'bg-[#6096B4]/20 text-[#6096B4]'
                                       : theme === 'dark'
                                         ? 'bg-[#2a2a2a] text-slate-400 hover:text-white hover:bg-[#3a3a3a]'
                                         : 'bg-slate-100 text-slate-500 hover:text-slate-700 hover:bg-slate-200'
@@ -2987,7 +2987,7 @@ Please respond helpfully to continue this branch conversation.`;
                                   {regularTools.length > 0 && (
                                     <>
                                       <div className="flex items-center gap-2 mb-3">
-                                        <Wrench className="w-4 h-4 text-[#0D9488]" />
+                                        <Wrench className="w-4 h-4 text-[#6096B4]" />
                                         <span className={cn(
                                           "text-xs font-medium",
                                           theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
@@ -3045,8 +3045,8 @@ Please respond helpfully to continue this branch conversation.`;
                                                   ? 'opacity-50 cursor-not-allowed'
                                                   : 'hover:scale-105',
                                                 theme === 'dark'
-                                                  ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-                                                  : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+                                                  ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+                                                  : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
                                               )}
                                             >
                                               {isToolLoading && (
@@ -3072,21 +3072,21 @@ Please respond helpfully to continue this branch conversation.`;
                 {(isLoading || isTyping) && !streamingMessageId && !appBuilderProgress?.isGenerating && (
                   <div className="flex gap-4">
                     <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-200 shadow-sm">
-                      <Sparkles className="w-4 h-4 text-[#0D9488] animate-pulse" />
+                      <Sparkles className="w-4 h-4 text-[#6096B4] animate-pulse" />
                     </div>
                     <div className="flex flex-col gap-1 pt-2">
                       {currentIntent?.intent?.matched && (
                         <p className={cn(
                           "text-xs mb-1 font-medium",
-                          theme === 'dark' ? 'text-slate-400' : 'text-[#0D9488]'
+                          theme === 'dark' ? 'text-slate-400' : 'text-[#6096B4]'
                         )}>
                           Launching: <span className="font-semibold">{currentIntent.uiConfig?.title}</span>
                         </p>
                       )}
                       <div className="flex gap-1.5 pt-1">
-                        <span className="w-2 h-2 rounded-full animate-bounce bg-[#0D9488]" />
-                        <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.2s] bg-[#0D9488]/70" />
-                        <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.4s] bg-[#0D9488]/40" />
+                        <span className="w-2 h-2 rounded-full animate-bounce bg-[#6096B4]" />
+                        <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.2s] bg-[#6096B4]/70" />
+                        <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.4s] bg-[#6096B4]/40" />
                       </div>
                     </div>
                   </div>
@@ -3116,12 +3116,12 @@ Please respond helpfully to continue this branch conversation.`;
                     theme === 'dark'
                       ? 'bg-[#232323] border-[#3a3a3a]'
                       : 'bg-[#f9f8f6] border-[#e8e6e3] shadow-sm',
-                    isDraggingOnInput && 'border-[#0D9488] border-2 border-dashed'
+                    isDraggingOnInput && 'border-[#6096B4] border-2 border-dashed'
                   )}>
                   {/* Drag overlay */}
                   {isDraggingOnInput && (
-                    <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-[#0D9488]/10 backdrop-blur-sm">
-                      <div className="flex flex-col items-center gap-2 text-[#0D9488]">
+                    <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-[#6096B4]/10 backdrop-blur-sm">
+                      <div className="flex flex-col items-center gap-2 text-[#6096B4]">
                         <Upload className="w-8 h-8" />
                         <span className="text-sm font-medium">{t('chat.dropFilesHere')}</span>
                       </div>
@@ -3215,7 +3215,7 @@ Please respond helpfully to continue this branch conversation.`;
                         title="Attach files (images, documents, data files)"
                         className={cn(
                           "p-2 rounded-xl transition-all duration-200",
-                          theme === 'dark' ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#0D9488]' : 'hover:bg-slate-100 text-slate-500 hover:text-[#0D9488]'
+                          theme === 'dark' ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#6096B4]' : 'hover:bg-slate-100 text-slate-500 hover:text-[#6096B4]'
                         )}
                       >
                         <Plus className="w-5 h-5" />
@@ -3261,13 +3261,13 @@ Please respond helpfully to continue this branch conversation.`;
                                 className={cn(
                                   "w-full px-4 py-2.5 text-left text-sm transition-all duration-200 flex items-center gap-2",
                                   selectedModelId === 'auto'
-                                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#6096B4]/10 text-[#6096B4]'
                                     : theme === 'dark' ? 'text-slate-300 hover:bg-[#2a2a2a]' : 'text-slate-600 hover:bg-slate-50'
                                 )}
                               >
-                                <Sparkles className="w-3 h-3 text-[#0D9488]" />
+                                <Sparkles className="w-3 h-3 text-[#6096B4]" />
                                 <span className="flex-1">Auto</span>
-                                <span className="text-xs px-1.5 py-0.5 rounded bg-[#0D9488]/20 text-[#0D9488]">Smart</span>
+                                <span className="text-xs px-1.5 py-0.5 rounded bg-[#6096B4]/20 text-[#6096B4]">Smart</span>
                               </button>
                             </div>
                             {Object.entries(groupedModels).map(([provider, models]) => (
@@ -3288,7 +3288,7 @@ Please respond helpfully to continue this branch conversation.`;
                                     className={cn(
                                       "w-full px-4 py-2.5 text-left text-sm transition-all duration-200 flex items-center gap-2",
                                       selectedModelId === model.id
-                                        ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                                        ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#6096B4]/10 text-[#6096B4]'
                                         : theme === 'dark' ? 'text-slate-300 hover:bg-[#2a2a2a]' : 'text-slate-600 hover:bg-slate-50'
                                     )}
                                   >
@@ -3311,7 +3311,7 @@ Please respond helpfully to continue this branch conversation.`;
                         className={cn(
                           "p-2.5 rounded-xl transition-all duration-200 disabled:opacity-40",
                           (inputValue.trim() || attachedFiles.length > 0)
-                            ? 'bg-gradient-to-br from-[#0D9488] to-[#0F766E] hover:from-[#14B8A6] hover:to-[#0D9488] text-white shadow-md shadow-[#0D9488]/25 hover:shadow-lg hover:shadow-[#0D9488]/40'
+                            ? 'bg-gradient-to-br from-[#6096B4] to-[#4C7F98] hover:from-[#75AAC1] hover:to-[#6096B4] text-white shadow-md shadow-[#6096B4]/25 hover:shadow-lg hover:shadow-[#6096B4]/40'
                             : theme === 'dark' ? 'bg-[#2a2a2a] text-slate-500' : 'bg-slate-100 text-slate-400'
                         )}
                       >
@@ -3338,14 +3338,14 @@ Please respond helpfully to continue this branch conversation.`;
 
             {/* Greeting */}
             <div className="text-center mb-10">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl shadow-xl shadow-[#0D9488]/20 mb-6 overflow-hidden">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl shadow-xl shadow-[#6096B4]/20 mb-6 overflow-hidden">
                 <img src="/assets/logo.png" alt="Wants" className="w-full h-full object-contain" />
               </div>
               <h1 className={cn(
                 "text-4xl md:text-5xl font-bold tracking-tight",
                 theme === 'dark' ? 'text-white' : 'text-slate-900'
               )}>
-                {t('chat.greeting')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9488] to-[#14B8A6]">{firstName}</span>
+                {t('chat.greeting')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6096B4] to-[#75AAC1]">{firstName}</span>
               </h1>
               <p className={cn(
                 "mt-3 text-lg",
@@ -3375,12 +3375,12 @@ Please respond helpfully to continue this branch conversation.`;
                   theme === 'dark'
                     ? 'bg-[#232323] border-[#3a3a3a]'
                     : 'bg-[#f9f8f6] border-[#e8e6e3] shadow-sm',
-                  isDraggingOnInput && 'border-[#0D9488] border-2 border-dashed'
+                  isDraggingOnInput && 'border-[#6096B4] border-2 border-dashed'
                 )}>
                 {/* Drag overlay */}
                 {isDraggingOnInput && (
-                  <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-[#0D9488]/10 backdrop-blur-sm">
-                    <div className="flex flex-col items-center gap-2 text-[#0D9488]">
+                  <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-[#6096B4]/10 backdrop-blur-sm">
+                    <div className="flex flex-col items-center gap-2 text-[#6096B4]">
                       <Upload className="w-8 h-8" />
                       <span className="text-sm font-medium">{t('chat.dropFilesHere')}</span>
                     </div>
@@ -3474,7 +3474,7 @@ Please respond helpfully to continue this branch conversation.`;
                       title="Attach files (images, documents, data files)"
                       className={cn(
                         "p-2 rounded-xl transition-all duration-200",
-                        theme === 'dark' ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#0D9488]' : 'hover:bg-slate-100 text-slate-500 hover:text-[#0D9488]'
+                        theme === 'dark' ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#6096B4]' : 'hover:bg-slate-100 text-slate-500 hover:text-[#6096B4]'
                       )}
                     >
                       <Plus className="w-5 h-5" />
@@ -3520,13 +3520,13 @@ Please respond helpfully to continue this branch conversation.`;
                               className={cn(
                                 "w-full px-4 py-2.5 text-left text-sm transition-all duration-200 flex items-center gap-2",
                                 selectedModelId === 'auto'
-                                  ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                                  ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#6096B4]/10 text-[#6096B4]'
                                   : theme === 'dark' ? 'text-slate-300 hover:bg-[#2a2a2a]' : 'text-slate-600 hover:bg-slate-50'
                               )}
                             >
-                              <Sparkles className="w-3 h-3 text-[#0D9488]" />
+                              <Sparkles className="w-3 h-3 text-[#6096B4]" />
                               <span className="flex-1">Auto</span>
-                              <span className="text-xs px-1.5 py-0.5 rounded bg-[#0D9488]/20 text-[#0D9488]">Smart</span>
+                              <span className="text-xs px-1.5 py-0.5 rounded bg-[#6096B4]/20 text-[#6096B4]">Smart</span>
                             </button>
                           </div>
                           {Object.entries(groupedModels).map(([provider, models]) => (
@@ -3547,7 +3547,7 @@ Please respond helpfully to continue this branch conversation.`;
                                   className={cn(
                                     "w-full px-4 py-2.5 text-left text-sm transition-all duration-200 flex items-center gap-2",
                                     selectedModelId === model.id
-                                      ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                                      ? theme === 'dark' ? 'bg-[#2a2a2a] text-white' : 'bg-[#6096B4]/10 text-[#6096B4]'
                                       : theme === 'dark' ? 'text-slate-300 hover:bg-[#2a2a2a]' : 'text-slate-600 hover:bg-slate-50'
                                   )}
                                 >
@@ -3570,7 +3570,7 @@ Please respond helpfully to continue this branch conversation.`;
                       className={cn(
                         "p-2.5 rounded-xl transition-all duration-200 disabled:opacity-40",
                         (inputValue.trim() || attachedFiles.length > 0)
-                          ? 'bg-gradient-to-br from-[#0D9488] to-[#0F766E] hover:from-[#14B8A6] hover:to-[#0D9488] text-white shadow-md shadow-[#0D9488]/25 hover:shadow-lg hover:shadow-[#0D9488]/40'
+                          ? 'bg-gradient-to-br from-[#6096B4] to-[#4C7F98] hover:from-[#75AAC1] hover:to-[#6096B4] text-white shadow-md shadow-[#6096B4]/25 hover:shadow-lg hover:shadow-[#6096B4]/40'
                           : theme === 'dark' ? 'bg-[#2a2a2a] text-slate-500' : 'bg-slate-100 text-slate-400'
                       )}
                     >
@@ -3591,16 +3591,16 @@ Please respond helpfully to continue this branch conversation.`;
                       "flex items-center gap-2.5 px-5 py-2.5 rounded-xl border transition-all duration-200 text-sm font-medium group",
                       activeQuickAction === label
                         ? theme === 'dark'
-                          ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
-                          : 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488] shadow-md shadow-[#0D9488]/20'
+                          ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
+                          : 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4] shadow-md shadow-[#6096B4]/20'
                         : theme === 'dark'
                           ? 'border-[#2a2a2a] text-slate-300 hover:bg-[#2a2a2a] hover:border-[#3a3a3a]'
-                          : 'border-slate-200 text-slate-600 hover:bg-white hover:border-[#0D9488]/30 hover:text-[#0D9488] hover:shadow-md hover:shadow-[#0D9488]/10'
+                          : 'border-slate-200 text-slate-600 hover:bg-white hover:border-[#6096B4]/30 hover:text-[#6096B4] hover:shadow-md hover:shadow-[#6096B4]/10'
                     )}
                   >
                     <Icon className={cn(
                       "w-4 h-4 transition-colors",
-                      activeQuickAction === label ? 'text-[#0D9488]' : theme === 'dark' ? '' : 'group-hover:text-[#0D9488]'
+                      activeQuickAction === label ? 'text-[#6096B4]' : theme === 'dark' ? '' : 'group-hover:text-[#6096B4]'
                     )} />
                     {label}
                     <ChevronDown className={cn(
@@ -3853,7 +3853,7 @@ Please respond helpfully to continue this branch conversation.`;
                       </a>
                       <button
                         onClick={() => downloadImage(webContentData.screenshot!, `screenshot-${Date.now()}.png`)}
-                        className="px-4 py-2 bg-[#0D9488] rounded-lg text-sm font-medium text-white hover:bg-[#0B7A70] flex items-center gap-2"
+                        className="px-4 py-2 bg-[#6096B4] rounded-lg text-sm font-medium text-white hover:bg-[#4C7F98] flex items-center gap-2"
                       >
                         <Download className="w-4 h-4" />
                         Download
@@ -3871,7 +3871,7 @@ Please respond helpfully to continue this branch conversation.`;
                         href={webContentData.sourceUrl || webContentData.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs text-[#0D9488] hover:underline"
+                        className="inline-flex items-center gap-1 text-xs text-[#6096B4] hover:underline"
                       >
                         <ExternalLink className="w-3 h-3" />
                         {webContentData.sourceUrl || webContentData.url}
@@ -3887,7 +3887,7 @@ Please respond helpfully to continue this branch conversation.`;
                     <ul className="space-y-1.5">
                       {webContentData.metadata.keyPoints.map((point: string, i: number) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                          <span className="text-[#0D9488] mt-0.5">•</span>
+                          <span className="text-[#6096B4] mt-0.5">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -3901,7 +3901,7 @@ Please respond helpfully to continue this branch conversation.`;
                     <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300">Notable Quotes</h3>
                     <div className="space-y-2">
                       {webContentData.metadata.quotes.map((quote: string, i: number) => (
-                        <blockquote key={i} className="pl-3 border-l-2 border-[#0D9488] text-sm italic text-gray-600 dark:text-gray-400">
+                        <blockquote key={i} className="pl-3 border-l-2 border-[#6096B4] text-sm italic text-gray-600 dark:text-gray-400">
                           "{quote}"
                         </blockquote>
                       ))}
@@ -3938,7 +3938,7 @@ Please respond helpfully to continue this branch conversation.`;
                       href={webContentData.sourceUrl || webContentData.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-[#0D9488] rounded-lg hover:bg-[#0B7A70] transition-colors"
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-[#6096B4] rounded-lg hover:bg-[#4C7F98] transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Open Website
@@ -4138,7 +4138,7 @@ Please respond helpfully to continue this branch conversation.`;
                           cx="48"
                           cy="48"
                           r="40"
-                          className="stroke-[#0D9488] transition-all duration-300"
+                          className="stroke-[#6096B4] transition-all duration-300"
                           strokeWidth="6"
                           fill="none"
                           strokeDasharray={2 * Math.PI * 40}
@@ -4147,7 +4147,7 @@ Please respond helpfully to continue this branch conversation.`;
                         />
                       </svg>
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-lg font-semibold text-[#0D9488]">
+                        <span className="text-lg font-semibold text-[#6096B4]">
                           {researchData.progress || 0}%
                         </span>
                       </div>
@@ -4181,7 +4181,7 @@ Please respond helpfully to continue this branch conversation.`;
                                 href={source.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-[#0D9488] hover:underline truncate block"
+                                className="text-[#6096B4] hover:underline truncate block"
                               >
                                 {source.title || source.url}
                               </a>

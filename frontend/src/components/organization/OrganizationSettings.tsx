@@ -171,7 +171,7 @@ export function OrganizationSettings({
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center gap-3">
-        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
           <Building2 className="w-6 h-6 text-white" />
         </div>
         <div>
@@ -237,7 +237,7 @@ export function OrganizationSettings({
               <Button
                 onClick={handleSaveGeneral}
                 disabled={saving}
-                className="bg-teal-600 hover:bg-teal-700"
+                className="bg-primary-600 hover:bg-primary-700"
               >
                 {saving ? (
                   <>

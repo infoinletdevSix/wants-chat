@@ -288,14 +288,14 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
     delivered: 'bg-blue-500/10 text-blue-500 border-blue-500/20',
   };
 
-  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
   const cardClass = `p-4 rounded-xl border ${isDark ? 'bg-[#1a1a1a] border-[#333]' : 'bg-white border-gray-200'} shadow-sm`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -304,7 +304,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Disc3 className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.clientMasters.clientMasters', 'Client Masters')}</h2>
@@ -313,9 +313,9 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.clientMasters.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.clientMasters.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
@@ -323,8 +323,8 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
       <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
         <div className={cardClass}>
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Disc3 className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Disc3 className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.clientMasters.total', 'Total')}</p>
@@ -441,7 +441,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
           />
           <button
             onClick={() => { setShowForm(!showForm); setEditingId(null); setFormData(emptyForm); }}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
           >
             <Plus className="w-5 h-5" />
             {t('tools.clientMasters.newMaster', 'New Master')}
@@ -633,7 +633,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
                   onClick={() => handleFormatToggle(format)}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     formData.deliveryFormat.includes(format)
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark ? 'bg-[#252525] text-gray-300 hover:bg-[#333]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -680,7 +680,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
               <button
                 onClick={addMasterFile}
                 disabled={!newFile.fileName}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50"
               >
                 <Plus className="w-5 h-5" />
               </button>
@@ -717,7 +717,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
             <button
               onClick={saveMaster}
               disabled={!formData.clientName || !formData.projectTitle}
-              className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {editingId ? t('tools.clientMasters.updateMaster', 'Update Master') : t('tools.clientMasters.saveMaster', 'Save Master')}
             </button>
@@ -739,7 +739,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
             <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.clientMasters.noMastersFound', 'No masters found')}</p>
             <button
               onClick={() => setShowForm(true)}
-              className="mt-4 text-[#0D9488] hover:underline"
+              className="mt-4 text-[#6096B4] hover:underline"
             >
               {t('tools.clientMasters.addYourFirstClientMaster', 'Add your first client master')}
             </button>
@@ -790,7 +790,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
                       <h5 className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.clientMasters.masterFiles', 'Master Files')}</h5>
                       {master.masterFiles.map(file => (
                         <div key={file.id} className={`flex items-center gap-3 p-2 rounded ${isDark ? 'bg-[#252525]' : 'bg-gray-50'}`}>
-                          <FileAudio className="w-4 h-4 text-[#0D9488]" />
+                          <FileAudio className="w-4 h-4 text-[#6096B4]" />
                           <span className={`flex-1 text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{file.fileName}</span>
                           <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{file.format}</span>
                           <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>v{file.version}</span>
@@ -800,7 +800,7 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
                   )}
                 </div>
                 <div className="flex flex-col items-end gap-2">
-                  <span className="text-lg font-bold text-[#0D9488]">
+                  <span className="text-lg font-bold text-[#6096B4]">
                     ${master.totalFee}
                   </span>
                   <div className="flex items-center gap-2">
@@ -818,13 +818,13 @@ export const ClientMastersTool: React.FC<ClientMastersToolProps> = ({ uiConfig }
                       onClick={() => setSelectedMaster(selectedMaster === master.id ? null : master.id)}
                       className={`p-2 rounded-lg ${isDark ? 'hover:bg-[#252525]' : 'hover:bg-gray-100'}`}
                     >
-                      <FileAudio className="w-4 h-4 text-[#0D9488]" />
+                      <FileAudio className="w-4 h-4 text-[#6096B4]" />
                     </button>
                     <button
                       onClick={() => handleEdit(master)}
                       className={`p-2 rounded-lg ${isDark ? 'hover:bg-[#252525]' : 'hover:bg-gray-100'}`}
                     >
-                      <Edit2 className="w-4 h-4 text-[#0D9488]" />
+                      <Edit2 className="w-4 h-4 text-[#6096B4]" />
                     </button>
                     <button
                       onClick={() => deleteItem(master.id)}

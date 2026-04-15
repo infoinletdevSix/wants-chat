@@ -170,10 +170,10 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Truck className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Truck className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.shippingCostCalculator.shippingCostCalculator', 'Shipping Cost Calculator')}</h3>
@@ -184,9 +184,9 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.shippingCostCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.shippingCostCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -194,13 +194,13 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('imperial')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.shippingCostCalculator.lbsInches', 'lbs / inches')}
           </button>
           <button
             onClick={() => setUnit('metric')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.shippingCostCalculator.kgCm', 'kg / cm')}
           </button>
@@ -217,7 +217,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
               type="number"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -229,7 +229,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
               type="number"
               value={distance}
               onChange={(e) => setDistance(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
         </div>
@@ -247,7 +247,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
                 placeholder={t('tools.shippingCostCalculator.length2', 'Length')}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.shippingCostCalculator.length', 'Length')}</span>
             </div>
@@ -257,7 +257,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
                 value={width}
                 onChange={(e) => setWidth(e.target.value)}
                 placeholder={t('tools.shippingCostCalculator.width2', 'Width')}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.shippingCostCalculator.width', 'Width')}</span>
             </div>
@@ -267,7 +267,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder={t('tools.shippingCostCalculator.height2', 'Height')}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.shippingCostCalculator.height', 'Height')}</span>
             </div>
@@ -285,7 +285,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
               <button
                 key={key}
                 onClick={() => setCarrier(key as ShippingCarrier)}
-                className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${carrier === key ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${carrier === key ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 {info.name}
               </button>
@@ -304,7 +304,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
               <button
                 key={s}
                 onClick={() => setSpeed(s)}
-                className={`py-2 px-3 rounded-lg text-sm font-medium capitalize transition-colors ${speed === s ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-2 px-3 rounded-lg text-sm font-medium capitalize transition-colors ${speed === s ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 {s}
               </button>
@@ -313,9 +313,9 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.shippingCostCalculator.estimatedShippingCost', 'Estimated Shipping Cost')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             ${calculations.totalCost.toFixed(2)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -339,7 +339,7 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.shippingCostCalculator.billableWeight', 'Billable Weight')}</div>
-            <div className="text-xl font-bold text-teal-500">
+            <div className="text-xl font-bold text-primary-500">
               {calculations.billableWeight.toFixed(1)} lbs
             </div>
           </div>
@@ -353,12 +353,12 @@ export const ShippingCostCalculatorTool: React.FC<ShippingCostCalculatorToolProp
           </h4>
           <div className="space-y-2">
             {allCarrierCosts.map((c, idx) => (
-              <div key={c.key} className={`flex justify-between items-center p-2 rounded ${c.key === carrier ? 'bg-teal-500/20' : ''}`}>
+              <div key={c.key} className={`flex justify-between items-center p-2 rounded ${c.key === carrier ? 'bg-primary-500/20' : ''}`}>
                 <span className={`${isDark ? 'text-gray-300' : 'text-gray-700'} ${idx === 0 ? 'font-medium' : ''}`}>
-                  {idx === 0 && <span className="text-teal-500 mr-2">{t('tools.shippingCostCalculator.lowest', 'Lowest')}</span>}
+                  {idx === 0 && <span className="text-primary-500 mr-2">{t('tools.shippingCostCalculator.lowest', 'Lowest')}</span>}
                   {c.name}
                 </span>
-                <span className={`font-medium ${c.key === carrier ? 'text-teal-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
+                <span className={`font-medium ${c.key === carrier ? 'text-primary-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
                   ${c.cost.toFixed(2)}
                 </span>
               </div>

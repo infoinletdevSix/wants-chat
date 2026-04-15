@@ -302,7 +302,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
           <label className={`block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
             Password Length: {length}
             {isPrefilled && (
-              <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#0D9488]">
+              <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#6096B4]">
                 <Sparkles className="w-3 h-3" />
                 {t('tools.passwordGenerator.prefilledFromAi', 'Prefilled from AI')}
               </span>
@@ -314,7 +314,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
             max="128"
             value={length}
             onChange={(e) => setLength(Number(e.target.value))}
-            className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+            className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
           />
           <div className="flex justify-between text-xs text-gray-500 mt-1">
             <span>8</span>
@@ -334,7 +334,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
                 type="checkbox"
                 checked={includeUppercase}
                 onChange={(e) => setIncludeUppercase(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                 {t('tools.passwordGenerator.uppercaseAZ', 'Uppercase (A-Z)')}
@@ -346,7 +346,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
                 type="checkbox"
                 checked={includeLowercase}
                 onChange={(e) => setIncludeLowercase(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                 {t('tools.passwordGenerator.lowercaseAZ', 'Lowercase (a-z)')}
@@ -358,7 +358,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
                 type="checkbox"
                 checked={includeNumbers}
                 onChange={(e) => setIncludeNumbers(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                 {t('tools.passwordGenerator.numbers09', 'Numbers (0-9)')}
@@ -370,7 +370,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
                 type="checkbox"
                 checked={includeSymbols}
                 onChange={(e) => setIncludeSymbols(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                 {t('tools.passwordGenerator.symbols', 'Symbols (!@#$...)')}
@@ -395,11 +395,11 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <button
               onClick={handleGenerateMultiple}
-              className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <RefreshCw className="w-4 h-4" />
               Generate {multipleCount} Password{multipleCount !== 1 ? 's' : ''}
@@ -411,7 +411,7 @@ export const PasswordGeneratorTool = ({ uiConfig }: PasswordGeneratorToolProps) 
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleGenerate}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <RefreshCw className="w-4 h-4" />
             {t('tools.passwordGenerator.generatePassword', 'Generate Password')}

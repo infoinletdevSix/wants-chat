@@ -26,10 +26,10 @@ export const WeeklyProgress: React.FC<WeeklyProgressProps> = ({
     <Card className="p-4 sm:p-6 bg-white/10 backdrop-blur-xl border border-white/20">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold flex items-center gap-2 text-white">
-          <Calendar className="h-5 w-5 text-teal-400" />
+          <Calendar className="h-5 w-5 text-primary-400" />
           This Week's Progress
         </h3>
-        <Badge className="bg-teal-500/20 text-teal-400 border-teal-500/30">
+        <Badge className="bg-primary-500/20 text-primary-400 border-primary-500/30">
           {thisWeekMinutes} minutes
         </Badge>
       </div>
@@ -41,7 +41,7 @@ export const WeeklyProgress: React.FC<WeeklyProgressProps> = ({
         </div>
         <div className="w-full bg-white/10 rounded-full h-2">
           <div
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
             style={{ width: `${Math.min((thisWeekMinutes / weeklyGoal) * 100, 100)}%` }}
           />
         </div>
@@ -53,7 +53,7 @@ export const WeeklyProgress: React.FC<WeeklyProgressProps> = ({
             <div className="text-[10px] sm:text-xs text-white/60 mb-1">{day.day}</div>
             <Card className={`h-12 sm:h-16 flex flex-col items-center justify-center transition-colors cursor-pointer ${
               day.completed
-                ? 'bg-teal-500/20 border-teal-500/30 hover:bg-teal-500/30'
+                ? 'bg-primary-500/20 border-primary-500/30 hover:bg-primary-500/30'
                 : 'bg-white/5 border-white/10 hover:bg-white/10'
             }`}
               title={`${day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}: ${day.minutes} minutes${day.sessions > 0 ? `, ${day.sessions} session${day.sessions > 1 ? 's' : ''}` : ''}`}

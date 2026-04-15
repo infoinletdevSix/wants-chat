@@ -127,7 +127,7 @@ const eventTypes = {
   cremation: { label: 'Cremation', icon: Package, color: 'bg-orange-100 text-orange-800' },
   reception: { label: 'Reception/Repast', icon: Users, color: 'bg-pink-100 text-pink-800' },
   wake: { label: 'Wake', icon: Clock, color: 'bg-yellow-100 text-yellow-800' },
-  graveside: { label: 'Graveside Service', icon: MapPin, color: 'bg-teal-100 text-teal-800' },
+  graveside: { label: 'Graveside Service', icon: MapPin, color: 'bg-primary-100 text-primary-800' },
 };
 
 const vendorTypes = {

@@ -859,7 +859,7 @@ export const LandscapingEstimateTool = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -870,7 +870,7 @@ export const LandscapingEstimateTool = ({
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="text-center">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488] mx-auto mb-4" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4] mx-auto mb-4" />
           <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.landscapingEstimate.loadingEstimates', 'Loading estimates...')}</p>
         </div>
       </div>
@@ -884,7 +884,7 @@ export const LandscapingEstimateTool = ({
         <div className={`${cardClass} p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <TreePine className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -921,7 +921,7 @@ export const LandscapingEstimateTool = ({
               </button>
               <button
                 onClick={saveEstimate}
-                className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.landscapingEstimate.save', 'Save')}
@@ -953,7 +953,7 @@ export const LandscapingEstimateTool = ({
                     key={estimate.id}
                     className={`flex items-center gap-2 px-3 py-1 rounded-lg text-sm ${
                       currentEstimateId === estimate.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300'
                         : 'bg-gray-100 text-gray-700'
@@ -984,7 +984,7 @@ export const LandscapingEstimateTool = ({
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'text-gray-300 hover:bg-gray-700'
                     : 'text-gray-700 hover:bg-gray-100'
@@ -1125,7 +1125,7 @@ export const LandscapingEstimateTool = ({
                     }}
                     className={`p-4 rounded-lg border-2 transition-colors flex items-center gap-3 ${
                       enabledCategories.includes(category.id)
-                        ? 'border-[#0D9488] bg-[#0D9488]/10'
+                        ? 'border-[#6096B4] bg-[#6096B4]/10'
                         : theme === 'dark'
                         ? 'border-gray-600 hover:border-gray-500'
                         : 'border-gray-200 hover:border-gray-300'
@@ -1133,7 +1133,7 @@ export const LandscapingEstimateTool = ({
                   >
                     <div className={`p-2 rounded-lg ${
                       enabledCategories.includes(category.id)
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300'
                         : 'bg-gray-100 text-gray-600'
@@ -1246,7 +1246,7 @@ export const LandscapingEstimateTool = ({
                 </h2>
                 <button
                   onClick={addMaterial}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.landscapingEstimate.addMaterial', 'Add Material')}
@@ -1341,7 +1341,7 @@ export const LandscapingEstimateTool = ({
                       <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.landscapingEstimate.totalMaterialsCost', 'Total Materials Cost')}
                       </span>
-                      <span className="text-xl font-bold text-[#0D9488]">
+                      <span className="text-xl font-bold text-[#6096B4]">
                         ${totals.materialsCost.toFixed(2)}
                       </span>
                     </div>
@@ -1360,7 +1360,7 @@ export const LandscapingEstimateTool = ({
                 </h2>
                 <button
                   onClick={addLabor}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.landscapingEstimate.addLabor', 'Add Labor')}
@@ -1440,7 +1440,7 @@ export const LandscapingEstimateTool = ({
                       <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.landscapingEstimate.totalLaborCost', 'Total Labor Cost')}
                       </span>
-                      <span className="text-xl font-bold text-[#0D9488]">
+                      <span className="text-xl font-bold text-[#6096B4]">
                         ${totals.laborCost.toFixed(2)}
                       </span>
                     </div>
@@ -1459,7 +1459,7 @@ export const LandscapingEstimateTool = ({
                 </h2>
                 <button
                   onClick={addEquipment}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.landscapingEstimate.addEquipment', 'Add Equipment')}
@@ -1557,7 +1557,7 @@ export const LandscapingEstimateTool = ({
                       <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.landscapingEstimate.totalEquipmentCost', 'Total Equipment Cost')}
                       </span>
-                      <span className="text-xl font-bold text-[#0D9488]">
+                      <span className="text-xl font-bold text-[#6096B4]">
                         ${totals.equipmentCost.toFixed(2)}
                       </span>
                     </div>
@@ -1576,7 +1576,7 @@ export const LandscapingEstimateTool = ({
                 </h2>
                 <button
                   onClick={addRecurringService}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.landscapingEstimate.addService', 'Add Service')}
@@ -1658,7 +1658,7 @@ export const LandscapingEstimateTool = ({
                       <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.landscapingEstimate.totalAnnualRecurringRevenue', 'Total Annual Recurring Revenue')}
                       </span>
-                      <span className="text-xl font-bold text-[#0D9488]">
+                      <span className="text-xl font-bold text-[#6096B4]">
                         ${totals.recurringAnnual.toFixed(2)}
                       </span>
                     </div>
@@ -1677,7 +1677,7 @@ export const LandscapingEstimateTool = ({
                 </h2>
                 <button
                   onClick={addOneTimeProject}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.landscapingEstimate.addProject', 'Add Project')}
@@ -1765,7 +1765,7 @@ export const LandscapingEstimateTool = ({
                       <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.landscapingEstimate.totalOneTimeProjects', 'Total One-Time Projects')}
                       </span>
-                      <span className="text-xl font-bold text-[#0D9488]">
+                      <span className="text-xl font-bold text-[#6096B4]">
                         ${totals.oneTimeCost.toFixed(2)}
                       </span>
                     </div>
@@ -1843,7 +1843,7 @@ export const LandscapingEstimateTool = ({
                 <h2 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.landscapingEstimate.propertyPhotosSketches', 'Property Photos & Sketches')}
                 </h2>
-                <label className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2 cursor-pointer">
+                <label className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2 cursor-pointer">
                   <Camera className="w-4 h-4" />
                   Upload Photos
                   <input
@@ -2110,7 +2110,7 @@ export const LandscapingEstimateTool = ({
                       <span className={`text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.landscapingEstimate.grandTotal', 'Grand Total:')}
                       </span>
-                      <span className="text-2xl font-bold text-[#0D9488]">
+                      <span className="text-2xl font-bold text-[#6096B4]">
                         ${totals.grandTotal.toFixed(2)}
                       </span>
                     </div>
@@ -2149,7 +2149,7 @@ export const LandscapingEstimateTool = ({
             <div className="flex items-center gap-6">
               <div className="text-center">
                 <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.landscapingEstimate.oneTime', 'One-Time')}</p>
-                <p className="text-xl font-bold text-[#0D9488]">${totals.grandTotal.toFixed(2)}</p>
+                <p className="text-xl font-bold text-[#6096B4]">${totals.grandTotal.toFixed(2)}</p>
               </div>
               {totals.recurringAnnual > 0 && (
                 <div className="text-center">

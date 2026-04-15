@@ -86,9 +86,9 @@ export const JsonFormatterTool: React.FC<JsonFormatterToolProps> = ({ uiConfig }
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.jsonFormatter.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.jsonFormatter.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
           </div>
         )}
 
@@ -105,7 +105,7 @@ export const JsonFormatterTool: React.FC<JsonFormatterToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                 : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -115,7 +115,7 @@ export const JsonFormatterTool: React.FC<JsonFormatterToolProps> = ({ uiConfig }
             onClick={handleFormat}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeOperation === 'format'
-                ? 'bg-[#0D9488] text-white hover:bg-[#0F766E]'
+                ? 'bg-[#6096B4] text-white hover:bg-[#4C7F98]'
                 : theme === 'dark'
                 ? 'bg-gray-600 text-white hover:bg-gray-500 border border-gray-500'
                 : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
@@ -127,7 +127,7 @@ export const JsonFormatterTool: React.FC<JsonFormatterToolProps> = ({ uiConfig }
             onClick={handleMinify}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeOperation === 'minify'
-                ? 'bg-[#0D9488] text-white hover:bg-[#0F766E]'
+                ? 'bg-[#6096B4] text-white hover:bg-[#4C7F98]'
                 : theme === 'dark'
                 ? 'bg-gray-600 text-white hover:bg-gray-500 border border-gray-500'
                 : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
@@ -139,7 +139,7 @@ export const JsonFormatterTool: React.FC<JsonFormatterToolProps> = ({ uiConfig }
             onClick={handleValidate}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeOperation === 'validate'
-                ? 'bg-[#0D9488] text-white hover:bg-[#0F766E]'
+                ? 'bg-[#6096B4] text-white hover:bg-[#4C7F98]'
                 : theme === 'dark'
                 ? 'bg-gray-600 text-white hover:bg-gray-500 border border-gray-500'
                 : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'

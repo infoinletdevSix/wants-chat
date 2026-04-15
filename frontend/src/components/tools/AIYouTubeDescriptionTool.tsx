@@ -311,7 +311,7 @@ export const AIYouTubeDescriptionTool: React.FC<AIYouTubeDescriptionToolProps> =
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aIYouTubeDescription.aiYoutubeDescriptionGenerator', 'AI YouTube Description Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aIYouTubeDescription.createSeoOptimizedDescriptionsFor', 'Create SEO-optimized descriptions for your videos')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aIYouTubeDescription.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>

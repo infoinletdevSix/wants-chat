@@ -359,8 +359,8 @@ const WitnessListTool: React.FC = () => {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-50 rounded-lg">
-              <Users className="w-6 h-6 text-teal-600" />
+            <div className="p-2 bg-primary-50 rounded-lg">
+              <Users className="w-6 h-6 text-primary-600" />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">{t('tools.witnessList.witnessListManager', 'Witness List Manager')}</h1>
@@ -445,7 +445,7 @@ const WitnessListTool: React.FC = () => {
               onClick={() => { setActiveTab('list'); resetForm(); }}
               className={`px-6 py-4 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === 'list'
-                  ? 'border-teal-500 text-teal-600'
+                  ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -458,7 +458,7 @@ const WitnessListTool: React.FC = () => {
               onClick={() => { setActiveTab('add'); if (!isEditing) resetForm(); }}
               className={`px-6 py-4 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === 'add'
-                  ? 'border-teal-500 text-teal-600'
+                  ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -469,7 +469,7 @@ const WitnessListTool: React.FC = () => {
             </button>
             {activeTab === 'view' && selectedWitness && (
               <button
-                className="px-6 py-4 text-sm font-medium border-b-2 border-teal-500 text-teal-600"
+                className="px-6 py-4 text-sm font-medium border-b-2 border-primary-500 text-primary-600"
               >
                 <div className="flex items-center gap-2">
                   <Eye className="w-4 h-4" />
@@ -494,14 +494,14 @@ const WitnessListTool: React.FC = () => {
                       placeholder={t('tools.witnessList.searchWitnesses', 'Search witnesses...')}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     />
                   </div>
                 </div>
                 <select
                   value={filterType}
                   onChange={(e) => setFilterType(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="all">{t('tools.witnessList.allTypes', 'All Types')}</option>
                   {witnessTypeOptions.map(type => (
@@ -511,7 +511,7 @@ const WitnessListTool: React.FC = () => {
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="all">{t('tools.witnessList.allStatuses', 'All Statuses')}</option>
                   {statusOptions.map(status => (
@@ -521,7 +521,7 @@ const WitnessListTool: React.FC = () => {
                 <select
                   value={filterAffiliation}
                   onChange={(e) => setFilterAffiliation(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="all">{t('tools.witnessList.allAffiliations', 'All Affiliations')}</option>
                   {affiliationOptions.map(aff => (
@@ -537,7 +537,7 @@ const WitnessListTool: React.FC = () => {
                   <p className="text-gray-500">{t('tools.witnessList.noWitnessesFound', 'No witnesses found')}</p>
                   <button
                     onClick={() => setActiveTab('add')}
-                    className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                    className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                   >
                     {t('tools.witnessList.addFirstWitness', 'Add First Witness')}
                   </button>
@@ -547,7 +547,7 @@ const WitnessListTool: React.FC = () => {
                   {filteredWitnesses.map((witness) => (
                     <div
                       key={witness.id}
-                      className="border border-gray-200 rounded-lg p-4 hover:border-teal-300 transition-colors"
+                      className="border border-gray-200 rounded-lg p-4 hover:border-primary-300 transition-colors"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
@@ -599,7 +599,7 @@ const WitnessListTool: React.FC = () => {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => handleView(witness)}
-                            className="p-2 text-gray-400 hover:text-teal-600 hover:bg-teal-50 rounded-lg"
+                            className="p-2 text-gray-400 hover:text-primary-600 hover:bg-primary-50 rounded-lg"
                             title={t('tools.witnessList.viewDetails', 'View Details')}
                           >
                             <Eye className="w-5 h-5" />
@@ -641,7 +641,7 @@ const WitnessListTool: React.FC = () => {
                       required
                       value={formData.name || ''}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -651,7 +651,7 @@ const WitnessListTool: React.FC = () => {
                       required
                       value={formData.matterName || ''}
                       onChange={(e) => setFormData({ ...formData, matterName: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -660,7 +660,7 @@ const WitnessListTool: React.FC = () => {
                       required
                       value={formData.witnessType || 'fact'}
                       onChange={(e) => setFormData({ ...formData, witnessType: e.target.value as WitnessType })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     >
                       {witnessTypeOptions.map(type => (
                         <option key={type.value} value={type.value}>{type.label}</option>
@@ -672,7 +672,7 @@ const WitnessListTool: React.FC = () => {
                     <select
                       value={formData.status || 'potential'}
                       onChange={(e) => setFormData({ ...formData, status: e.target.value as WitnessStatus })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     >
                       {statusOptions.map(status => (
                         <option key={status.value} value={status.value}>{status.label}</option>
@@ -684,7 +684,7 @@ const WitnessListTool: React.FC = () => {
                     <select
                       value={formData.partyAffiliation || 'neutral'}
                       onChange={(e) => setFormData({ ...formData, partyAffiliation: e.target.value as PartyAffiliation })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     >
                       {affiliationOptions.map(aff => (
                         <option key={aff.value} value={aff.value}>{aff.label}</option>
@@ -696,7 +696,7 @@ const WitnessListTool: React.FC = () => {
                     <select
                       value={formData.credibilityRating || 'unknown'}
                       onChange={(e) => setFormData({ ...formData, credibilityRating: e.target.value as CredibilityRating })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     >
                       {credibilityOptions.map(cred => (
                         <option key={cred.value} value={cred.value}>{cred.label}</option>
@@ -716,7 +716,7 @@ const WitnessListTool: React.FC = () => {
                       type="tel"
                       value={formData.phone || ''}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -725,7 +725,7 @@ const WitnessListTool: React.FC = () => {
                       type="email"
                       value={formData.email || ''}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div className="md:col-span-2 lg:col-span-1">
@@ -734,7 +734,7 @@ const WitnessListTool: React.FC = () => {
                       type="text"
                       value={formData.address || ''}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -750,7 +750,7 @@ const WitnessListTool: React.FC = () => {
                       type="text"
                       value={formData.occupation || ''}
                       onChange={(e) => setFormData({ ...formData, occupation: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -759,7 +759,7 @@ const WitnessListTool: React.FC = () => {
                       type="text"
                       value={formData.employer || ''}
                       onChange={(e) => setFormData({ ...formData, employer: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -768,7 +768,7 @@ const WitnessListTool: React.FC = () => {
                       type="text"
                       value={formData.relationship || ''}
                       onChange={(e) => setFormData({ ...formData, relationship: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -784,7 +784,7 @@ const WitnessListTool: React.FC = () => {
                       rows={3}
                       value={formData.expectedTestimony || ''}
                       onChange={(e) => setFormData({ ...formData, expectedTestimony: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -793,7 +793,7 @@ const WitnessListTool: React.FC = () => {
                       rows={3}
                       value={formData.interviewNotes || ''}
                       onChange={(e) => setFormData({ ...formData, interviewNotes: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -809,7 +809,7 @@ const WitnessListTool: React.FC = () => {
                       type="date"
                       value={formData.depositionDate || ''}
                       onChange={(e) => setFormData({ ...formData, depositionDate: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -818,7 +818,7 @@ const WitnessListTool: React.FC = () => {
                       type="date"
                       value={formData.trialDate || ''}
                       onChange={(e) => setFormData({ ...formData, trialDate: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -826,7 +826,7 @@ const WitnessListTool: React.FC = () => {
                     <select
                       value={formData.preparationStatus || 'not-started'}
                       onChange={(e) => setFormData({ ...formData, preparationStatus: e.target.value as 'not-started' | 'in-progress' | 'completed' })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     >
                       {prepStatusOptions.map(status => (
                         <option key={status.value} value={status.value}>{status.label}</option>
@@ -839,7 +839,7 @@ const WitnessListTool: React.FC = () => {
                       type="text"
                       value={formData.assignedAttorney || ''}
                       onChange={(e) => setFormData({ ...formData, assignedAttorney: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -849,7 +849,7 @@ const WitnessListTool: React.FC = () => {
                       type="checkbox"
                       checked={formData.subpoenaServed || false}
                       onChange={(e) => setFormData({ ...formData, subpoenaServed: e.target.checked })}
-                      className="rounded text-teal-600 focus:ring-teal-500"
+                      className="rounded text-primary-600 focus:ring-primary-500"
                     />
                     <span className="text-sm text-gray-700">{t('tools.witnessList.subpoenaServed', 'Subpoena Served')}</span>
                   </label>
@@ -868,7 +868,7 @@ const WitnessListTool: React.FC = () => {
                       step="0.01"
                       value={formData.witnessFee || 0}
                       onChange={(e) => setFormData({ ...formData, witnessFee: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                   <div>
@@ -879,7 +879,7 @@ const WitnessListTool: React.FC = () => {
                       step="0.01"
                       value={formData.travelExpenses || 0}
                       onChange={(e) => setFormData({ ...formData, travelExpenses: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -893,7 +893,7 @@ const WitnessListTool: React.FC = () => {
                   value={formData.notes || ''}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   placeholder={t('tools.witnessList.additionalNotesAboutThisWitness', 'Additional notes about this witness...')}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 />
               </div>
 
@@ -908,7 +908,7 @@ const WitnessListTool: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {isEditing ? t('tools.witnessList.updateWitness', 'Update Witness') : t('tools.witnessList.addWitness2', 'Add Witness')}
                 </button>

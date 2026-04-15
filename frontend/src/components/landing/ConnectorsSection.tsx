@@ -86,7 +86,7 @@ const connectors: Connector[] = [
   { name: 'Box', icon: HardDrive, category: 'Storage', gradient: 'from-blue-600 to-blue-700' },
 
   // AI
-  { name: 'OpenAI', icon: Bot, category: 'AI', gradient: 'from-emerald-500 to-teal-500' },
+  { name: 'OpenAI', icon: Bot, category: 'AI', gradient: 'from-emerald-500 to-primary-500' },
   { name: 'Claude', icon: Bot, category: 'AI', gradient: 'from-orange-500 to-amber-500' },
   { name: 'Gemini', icon: Bot, category: 'AI', gradient: 'from-blue-500 to-purple-500' },
 
@@ -96,7 +96,7 @@ const connectors: Connector[] = [
   { name: 'Jira', icon: Briefcase, category: 'Business', gradient: 'from-blue-500 to-indigo-500' },
   { name: 'Asana', icon: Briefcase, category: 'Business', gradient: 'from-rose-500 to-pink-500' },
   { name: 'Monday', icon: Building2, category: 'Business', gradient: 'from-red-500 to-orange-500' },
-  { name: 'Zendesk', icon: Users, category: 'Business', gradient: 'from-teal-500 to-cyan-500' },
+  { name: 'Zendesk', icon: Users, category: 'Business', gradient: 'from-primary-500 to-cyan-500' },
 ];
 
 const containerVariants = {

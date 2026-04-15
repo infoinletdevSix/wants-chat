@@ -16,7 +16,7 @@ const PRESET_COLORS = [
   '#f97316', // orange
   '#eab308', // yellow
   '#22c55e', // green
-  '#14b8a6', // teal
+  '#75AAC1', // teal
   '#3b82f6', // blue
   '#6366f1', // indigo
   '#8b5cf6', // violet
@@ -97,7 +97,7 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ onSubmit, category }) => {
               className={cn(
                 "w-8 h-8 rounded-lg transition-all duration-200 hover:scale-110",
                 color === presetColor
-                  ? "ring-2 ring-offset-2 ring-teal-400 ring-offset-transparent"
+                  ? "ring-2 ring-offset-2 ring-primary-400 ring-offset-transparent"
                   : "hover:ring-2 hover:ring-white/30"
               )}
               style={{ backgroundColor: presetColor }}
@@ -129,7 +129,7 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ onSubmit, category }) => {
 
       {/* Submit Button */}
       <div className="flex justify-end pt-2">
-        <Button type="submit" className="px-6 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+        <Button type="submit" className="px-6 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
           {category ? 'Update Category' : 'Create Category'}
         </Button>
       </div>

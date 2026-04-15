@@ -410,14 +410,14 @@ Date: _________________________________
   // Calculate template stats for export
   const templateCount = useMemo(() => savedTemplates.length, [savedTemplates]);
 
-  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
   const labelClass = `block text-sm font-medium mb-2 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
 
   // Loading state
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -426,18 +426,18 @@ Date: _________________________________
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 m-4 mb-0 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.contractGenerator.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 m-4 mb-0 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.contractGenerator.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.contractGenerator.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.contractGenerator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.contractGenerator.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.contractGenerator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Scale className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Scale className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.contractGenerator.contractGenerator', 'Contract Generator')}</h3>
@@ -515,7 +515,7 @@ Date: _________________________________
           {/* Party A */}
           <div className={`p-4 rounded-xl border ${isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}>
             <div className="flex items-center gap-2 mb-4">
-              <Users className="w-4 h-4 text-[#0D9488]" />
+              <Users className="w-4 h-4 text-[#6096B4]" />
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{contractType.partyALabel}</h4>
             </div>
             <div className="space-y-3">
@@ -555,7 +555,7 @@ Date: _________________________________
           {/* Party B */}
           <div className={`p-4 rounded-xl border ${isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}>
             <div className="flex items-center gap-2 mb-4">
-              <Users className="w-4 h-4 text-[#0D9488]" />
+              <Users className="w-4 h-4 text-[#6096B4]" />
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{contractType.partyBLabel}</h4>
             </div>
             <div className="space-y-3">
@@ -596,7 +596,7 @@ Date: _________________________________
         {/* Contract Details */}
         <div className={`p-4 rounded-xl border ${isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-4">
-            <FileCheck className="w-4 h-4 text-[#0D9488]" />
+            <FileCheck className="w-4 h-4 text-[#6096B4]" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.contractGenerator.contractDetails', 'Contract Details')}</h4>
           </div>
           <div className="space-y-4">
@@ -676,12 +676,12 @@ Date: _________________________________
         <div className={`p-4 rounded-xl border ${isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <FileText className="w-4 h-4 text-[#0D9488]" />
+              <FileText className="w-4 h-4 text-[#6096B4]" />
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.contractGenerator.contractClauses', 'Contract Clauses')}</h4>
             </div>
             <button
               onClick={() => setShowAddClause(!showAddClause)}
-              className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.contractGenerator.addClause', 'Add Clause')}
@@ -711,7 +711,7 @@ Date: _________________________________
                   <button
                     onClick={addCustomClause}
                     disabled={!customClause.title || !customClause.content}
-                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {t('tools.contractGenerator.addClause2', 'Add Clause')}
                   </button>
@@ -745,12 +745,12 @@ Date: _________________________________
                         onChange={() => toggleClause(clause.id)}
                         className="sr-only peer"
                       />
-                      <div className={`w-9 h-5 rounded-full peer ${isDark ? 'bg-gray-600' : 'bg-gray-200'} peer-checked:bg-[#0D9488] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-full`}></div>
+                      <div className={`w-9 h-5 rounded-full peer ${isDark ? 'bg-gray-600' : 'bg-gray-200'} peer-checked:bg-[#6096B4] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-full`}></div>
                     </label>
                     <span className={`font-medium text-sm ${isDark ? 'text-white' : 'text-gray-900'} ${!clause.enabled && 'opacity-50'}`}>
                       {clause.title}
                       {clause.isCustom && (
-                        <span className="ml-2 text-xs px-2 py-0.5 bg-[#0D9488]/10 text-[#0D9488] rounded-full">{t('tools.contractGenerator.custom', 'Custom')}</span>
+                        <span className="ml-2 text-xs px-2 py-0.5 bg-[#6096B4]/10 text-[#6096B4] rounded-full">{t('tools.contractGenerator.custom', 'Custom')}</span>
                       )}
                     </span>
                   </div>
@@ -781,7 +781,7 @@ Date: _________________________________
                       value={clause.content}
                       onChange={(e) => updateClauseContent(clause.id, e.target.value)}
                       rows={4}
-                      className={`w-full px-3 py-2 text-sm border ${isDark ? 'bg-gray-700 border-gray-600 text-gray-200' : 'bg-gray-50 border-gray-200 text-gray-700'} rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none resize-none`}
+                      className={`w-full px-3 py-2 text-sm border ${isDark ? 'bg-gray-700 border-gray-600 text-gray-200' : 'bg-gray-50 border-gray-200 text-gray-700'} rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none resize-none`}
                     />
                   </div>
                 )}
@@ -794,7 +794,7 @@ Date: _________________________________
         <div className="flex flex-wrap gap-3">
           <button
             onClick={() => setShowPreview(true)}
-            className="flex-1 min-w-[150px] py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+            className="flex-1 min-w-[150px] py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
           >
             <FileText className="w-5 h-5" />
             {t('tools.contractGenerator.previewContract', 'Preview Contract')}
@@ -892,7 +892,7 @@ Date: _________________________________
                 <button
                   onClick={saveTemplate}
                   disabled={!templateName}
-                  className="flex-1 py-2 px-4 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 py-2 px-4 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {t('tools.contractGenerator.save', 'Save')}
                 </button>
@@ -950,7 +950,7 @@ Date: _________________________________
                           <div className="flex gap-2">
                             <button
                               onClick={() => loadTemplate(template)}
-                              className="px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                              className="px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                             >
                               {t('tools.contractGenerator.load', 'Load')}
                             </button>

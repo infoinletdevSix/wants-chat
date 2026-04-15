@@ -114,7 +114,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Cylinder className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -126,9 +126,9 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.cylinderCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.cylinderCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -148,7 +148,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                 placeholder={t('tools.cylinderCalculator.enterRadius', 'Enter radius')}
               />
             </div>
@@ -166,7 +166,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                 placeholder={t('tools.cylinderCalculator.enterHeight', 'Enter height')}
               />
             </div>
@@ -187,7 +187,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     </span>
                     <CopyButton value={formatNumber(results.volume)} label="volume" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.volume)} <span className="text-sm opacity-75">units³</span>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     </span>
                     <CopyButton value={formatNumber(results.totalSurfaceArea)} label="totalSA" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.totalSurfaceArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -213,7 +213,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     </span>
                     <CopyButton value={formatNumber(results.lateralSurfaceArea)} label="lateralSA" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.lateralSurfaceArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     </span>
                     <CopyButton value={formatNumber(results.baseArea)} label="baseArea" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.baseArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     </span>
                     <CopyButton value={formatNumber(results.diameter)} label="diameter" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.diameter)}
                   </div>
                 </div>
@@ -252,7 +252,7 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     </span>
                     <CopyButton value={formatNumber(2 * Math.PI * results.radius)} label="circumference" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(2 * Math.PI * results.radius)}
                   </div>
                 </div>
@@ -275,12 +275,12 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     rx="60"
                     ry="20"
                     fill={isDarkMode ? 'rgba(13, 148, 136, 0.3)' : 'rgba(13, 148, 136, 0.2)'}
-                    stroke="#0D9488"
+                    stroke="#6096B4"
                     strokeWidth="2"
                   />
                   {/* Side lines */}
-                  <line x1="40" y1="40" x2="40" y2="180" stroke="#0D9488" strokeWidth="2" />
-                  <line x1="160" y1="40" x2="160" y2="180" stroke="#0D9488" strokeWidth="2" />
+                  <line x1="40" y1="40" x2="40" y2="180" stroke="#6096B4" strokeWidth="2" />
+                  <line x1="160" y1="40" x2="160" y2="180" stroke="#6096B4" strokeWidth="2" />
                   {/* Bottom ellipse */}
                   <ellipse
                     cx="100"
@@ -288,13 +288,13 @@ const CylinderCalculatorTool: React.FC<CylinderCalculatorToolProps> = ({ uiConfi
                     rx="60"
                     ry="20"
                     fill={isDarkMode ? 'rgba(13, 148, 136, 0.3)' : 'rgba(13, 148, 136, 0.2)'}
-                    stroke="#0D9488"
+                    stroke="#6096B4"
                     strokeWidth="2"
                   />
                   {/* Radius line */}
-                  <line x1="100" y1="40" x2="160" y2="40" stroke="#0D9488" strokeWidth="2" strokeDasharray="5,5" />
+                  <line x1="100" y1="40" x2="160" y2="40" stroke="#6096B4" strokeWidth="2" strokeDasharray="5,5" />
                   {/* Height line */}
-                  <line x1="170" y1="40" x2="170" y2="180" stroke="#0D9488" strokeWidth="2" strokeDasharray="5,5" />
+                  <line x1="170" y1="40" x2="170" y2="180" stroke="#6096B4" strokeWidth="2" strokeDasharray="5,5" />
                   {/* Labels */}
                   <text x="130" y="35" fill={isDarkMode ? '#fff' : '#333'} fontSize="11" textAnchor="middle">r</text>
                   <text x="180" y="115" fill={isDarkMode ? '#fff' : '#333'} fontSize="11" textAnchor="middle">h</text>

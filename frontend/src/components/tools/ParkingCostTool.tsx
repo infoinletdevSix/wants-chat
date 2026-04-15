@@ -216,9 +216,9 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Car className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Car className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.parkingCost.parkingCostCalculator', 'Parking Cost Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.parkingCost.calculateAndCompareParkingCosts', 'Calculate and compare parking costs')}</p>
@@ -228,9 +228,9 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.parkingCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.parkingCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -239,7 +239,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
           <button
             onClick={() => setMode('calculator')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'calculator' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'calculator' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Calculator className="w-4 h-4" /> Calculator
@@ -247,7 +247,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
           <button
             onClick={() => setMode('compare')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'compare' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'compare' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <TrendingUp className="w-4 h-4" /> Compare Options
@@ -274,7 +274,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
                     onClick={() => setParkingType(opt.value as typeof parkingType)}
                     className={`py-2 rounded-lg text-sm font-medium ${
                       parkingType === opt.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
                     }`}
                   >
@@ -397,7 +397,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
                     type="checkbox"
                     checked={hasDailyMax}
                     onChange={(e) => setHasDailyMax(e.target.checked)}
-                    className="w-4 h-4 rounded text-teal-500"
+                    className="w-4 h-4 rounded text-primary-500"
                   />
                   <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.parkingCost.dailyMaximum', 'Daily maximum')}</span>
                 </label>
@@ -427,7 +427,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
                     onClick={() => setDaysPerWeek(d)}
                     className={`flex-1 py-2 rounded-lg text-sm ${
                       daysPerWeek === d
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
                     }`}
                   >
@@ -438,9 +438,9 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
             </div>
 
             {/* Result */}
-            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.parkingCost.parkingCost', 'Parking Cost')}</div>
-              <div className="text-5xl font-bold text-teal-500 my-2">
+              <div className="text-5xl font-bold text-primary-500 my-2">
                 {formatCurrency(singleCalc.cost)}
               </div>
               <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -470,7 +470,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
               </div>
               <div className={`p-3 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.parkingCost.yearly', 'Yearly')}</div>
-                <div className="text-lg font-bold text-teal-500">
+                <div className="text-lg font-bold text-primary-500">
                   {formatCurrency(singleCalc.yearlyCost)}
                 </div>
               </div>
@@ -479,7 +479,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
             {/* Meter Timer */}
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-2 mb-3">
-                <Clock className="w-4 h-4 text-teal-500" />
+                <Clock className="w-4 h-4 text-primary-500" />
                 <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.parkingCost.meterExpirationCalculator', 'Meter Expiration Calculator')}</h4>
               </div>
               <div className="grid grid-cols-3 gap-4">
@@ -514,7 +514,7 @@ export const ParkingCostTool: React.FC<ParkingCostToolProps> = ({ uiConfig }) =>
               <div className={`mt-3 pt-3 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'} grid grid-cols-3 gap-4 text-center`}>
                 <div>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.parkingCost.expiresAt', 'Expires At')}</div>
-                  <div className={`font-bold text-teal-500`}>{meterCalc.expiresAt}</div>
+                  <div className={`font-bold text-primary-500`}>{meterCalc.expiresAt}</div>
                 </div>
                 <div>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.parkingCost.totalTime', 'Total Time')}</div>

@@ -687,7 +687,7 @@ export const GifCreatorTool: React.FC<GifCreatorToolProps> = ({ uiConfig, prefil
               <button
                 onClick={handleSaveToGallery}
                 disabled={isSaving}
-                className="py-3 px-6 bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+                className="py-3 px-6 bg-[#6096B4] hover:bg-[#6096B4]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {isSaving ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />}
                 Save

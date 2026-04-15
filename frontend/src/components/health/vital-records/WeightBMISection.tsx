@@ -13,10 +13,10 @@ const WeightBMISection: React.FC<VitalFormFieldProps> = ({
   getStatusBadge
 }) => {
   return (
-    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-white">
-          <Scale className="h-5 w-5 text-teal-400" />
+          <Scale className="h-5 w-5 text-primary-400" />
           Weight & BMI
         </CardTitle>
         <CardDescription className="text-white/60">
@@ -44,7 +44,7 @@ const WeightBMISection: React.FC<VitalFormFieldProps> = ({
                 <SelectTrigger className="w-24 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                   <SelectItem value="kg" className="text-white hover:bg-white/10">kg</SelectItem>
                   <SelectItem value="lbs" className="text-white hover:bg-white/10">lbs</SelectItem>
                 </SelectContent>
@@ -70,7 +70,7 @@ const WeightBMISection: React.FC<VitalFormFieldProps> = ({
                 <SelectTrigger className="w-24 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                   <SelectItem value="cm" className="text-white hover:bg-white/10">cm</SelectItem>
                   <SelectItem value="ft" className="text-white hover:bg-white/10">ft</SelectItem>
                 </SelectContent>

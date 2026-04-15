@@ -65,7 +65,7 @@ export const RecipeGrid: React.FC<RecipeGridProps> = ({
   if (recipes.length === 0) {
     return (
       <Card className="rounded-xl p-12 text-center bg-white/10 backdrop-blur-xl border border-white/20">
-        <ChefHat className="h-16 w-16 mx-auto mb-4 text-teal-400/50" />
+        <ChefHat className="h-16 w-16 mx-auto mb-4 text-primary-400/50" />
         <h3 className="text-xl font-semibold mb-2 text-white">
           {emptyStateConfig.title}
         </h3>
@@ -208,7 +208,7 @@ export const RecipeGrid: React.FC<RecipeGridProps> = ({
                   <Badge
                     key={tag}
                     variant="secondary"
-                    className="text-xs px-2 py-1 bg-teal-500/20 text-teal-400 border-0"
+                    className="text-xs px-2 py-1 bg-primary-500/20 text-primary-400 border-0"
                   >
                     {tag}
                   </Badge>

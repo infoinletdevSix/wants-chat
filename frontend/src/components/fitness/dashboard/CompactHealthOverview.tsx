@@ -166,7 +166,7 @@ const CompactHealthOverview: React.FC<CompactHealthOverviewProps> = ({
               />
             </div>
             <div className="col-span-2 flex gap-2">
-              <Button onClick={handleSave} size="sm" className="flex-1 h-7 text-xs bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+              <Button onClick={handleSave} size="sm" className="flex-1 h-7 text-xs bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
                 Save
               </Button>
               <Button onClick={handleCancel} variant="outline" size="sm" className="flex-1 h-7 text-xs">

@@ -986,10 +986,10 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2">
-              <Package className="w-7 h-7 text-teal-500" />
+              <Package className="w-7 h-7 text-primary-500" />
               Shipment Tracker
               {isPrefilled && (
-                <span className="ml-2 px-2 py-0.5 text-xs bg-teal-100 text-teal-700 rounded-full flex items-center gap-1">
+                <span className="ml-2 px-2 py-0.5 text-xs bg-primary-100 text-primary-700 rounded-full flex items-center gap-1">
                   <Sparkles className="w-3 h-3" />
                   {t('tools.shipmentTracker.prefilled', 'Prefilled')}
                 </span>
@@ -1070,9 +1070,9 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
             </p>
           </div>
 
-          <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-teal-50'}`}>
+          <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-primary-50'}`}>
             <div className="flex items-center gap-2">
-              <DollarSign className={`w-5 h-5 ${isDark ? 'text-teal-400' : 'text-teal-600'}`} />
+              <DollarSign className={`w-5 h-5 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.shipmentTracker.totalCost', 'Total Cost')}</span>
             </div>
             <p className={`text-2xl font-bold mt-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1090,8 +1090,8 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
               className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 whitespace-nowrap transition-colors ${
                 activeTab === tab.id
                   ? isDark
-                    ? 'bg-teal-600 text-white'
-                    : 'bg-teal-500 text-white'
+                    ? 'bg-primary-600 text-white'
+                    : 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -1132,7 +1132,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -1168,7 +1168,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
 
                 <button
                   onClick={() => setShowShipmentForm(true)}
-                  className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-2"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.shipmentTracker.addShipment', 'Add Shipment')}
@@ -1727,7 +1727,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                               type="checkbox"
                               checked={shipmentForm.signatureRequired}
                               onChange={(e) => setShipmentForm(prev => ({ ...prev, signatureRequired: e.target.checked }))}
-                              className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                              className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
                             />
                             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                               {t('tools.shipmentTracker.signatureRequired2', 'Signature Required')}
@@ -1770,7 +1770,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       </button>
                       <button
                         onClick={handleSaveShipment}
-                        className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 flex items-center gap-2"
+                        className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center gap-2"
                       >
                         <Save className="w-4 h-4" />
                         {editingShipment ? t('tools.shipmentTracker.updateShipment', 'Update Shipment') : t('tools.shipmentTracker.createShipment', 'Create Shipment')}
@@ -1994,7 +1994,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                                 <div className="flex flex-col items-center">
                                   <div className={`w-3 h-3 rounded-full ${
                                     index === 0
-                                      ? 'bg-teal-500'
+                                      ? 'bg-primary-500'
                                       : isDark ? 'bg-gray-600' : 'bg-gray-300'
                                   }`} />
                                   {index < shipment.trackingEvents.length - 1 && (
@@ -2047,12 +2047,12 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
                 <button
                   onClick={handleQuickTrack}
-                  className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-2"
+                  className="px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors flex items-center gap-2"
                 >
                   <Search className="w-4 h-4" />
                   {t('tools.shipmentTracker.track', 'Track')}
@@ -2100,7 +2100,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       <div key={event.id} className="flex gap-3">
                         <div className="flex flex-col items-center">
                           <div className={`w-3 h-3 rounded-full ${
-                            index === 0 ? 'bg-teal-500' : isDark ? 'bg-gray-600' : 'bg-gray-300'
+                            index === 0 ? 'bg-primary-500' : isDark ? 'bg-gray-600' : 'bg-gray-300'
                           }`} />
                           {index < trackingResult.trackingEvents.length - 1 && (
                             <div className={`w-0.5 h-full ${isDark ? 'bg-gray-600' : 'bg-gray-200'}`} />
@@ -2160,7 +2160,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
               </h2>
               <button
                 onClick={() => setShowCarrierForm(true)}
-                className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors flex items-center gap-2"
+                className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors flex items-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.shipmentTracker.addCarrier', 'Add Carrier')}
@@ -2306,7 +2306,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                           type="checkbox"
                           checked={carrierForm.isActive}
                           onChange={(e) => setCarrierForm(prev => ({ ...prev, isActive: e.target.checked }))}
-                          className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                          className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
                         />
                         <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                           {t('tools.shipmentTracker.active', 'Active')}
@@ -2329,7 +2329,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       </button>
                       <button
                         onClick={handleSaveCarrier}
-                        className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 flex items-center gap-2"
+                        className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center gap-2"
                       >
                         <Save className="w-4 h-4" />
                         {editingCarrier ? t('tools.shipmentTracker.update', 'Update') : t('tools.shipmentTracker.add', 'Add')} Carrier
@@ -2359,7 +2359,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg ${
                           carrier.isActive
-                            ? isDark ? 'bg-teal-900/30 text-teal-400' : 'bg-teal-100 text-teal-600'
+                            ? isDark ? 'bg-primary-900/30 text-primary-400' : 'bg-primary-100 text-primary-600'
                             : isDark ? 'bg-gray-700 text-gray-500' : 'bg-gray-100 text-gray-400'
                         }`}>
                           <Truck className="w-6 h-6" />
@@ -2452,7 +2452,7 @@ export const ShipmentTrackerTool: React.FC<ShipmentTrackerToolProps> = ({
                       <div className="flex-1">
                         <div className={`h-6 rounded ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                           <div
-                            className="h-full bg-teal-500 rounded flex items-center justify-end pr-2"
+                            className="h-full bg-primary-500 rounded flex items-center justify-end pr-2"
                             style={{ width: `${(count / stats.totalShipments) * 100}%` }}
                           >
                             <span className="text-xs text-white font-medium">{count}</span>

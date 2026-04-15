@@ -235,7 +235,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Flower className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -255,7 +255,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                 onClick={() => setInputMode('zip')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
                   inputMode === 'zip'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -268,7 +268,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                 onClick={() => setInputMode('temperature')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
                   inputMode === 'temperature'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -306,7 +306,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                         : theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } ${theme === 'dark' ? 'bg-gray-700 text-white placeholder-gray-400' : 'bg-white text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } ${theme === 'dark' ? 'bg-gray-700 text-white placeholder-gray-400' : 'bg-white text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 {formErrors.zipCode && (
@@ -336,7 +336,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                         : theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } ${theme === 'dark' ? 'bg-gray-700 text-white placeholder-gray-400' : 'bg-white text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } ${theme === 'dark' ? 'bg-gray-700 text-white placeholder-gray-400' : 'bg-white text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 {formErrors.temperature && (
@@ -353,7 +353,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateZone}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Flower className="w-5 h-5" />
               {t('tools.plantHardinessZone.findMyZone', 'Find My Zone')}
@@ -459,7 +459,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
               {/* Recommended Plants */}
               <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <h3 className={`font-semibold mb-3 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Flower className="w-5 h-5 text-[#0D9488]" />
+                  <Flower className="w-5 h-5 text-[#6096B4]" />
                   Plants That Thrive in Zone {result.zone.toUpperCase()}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -468,7 +468,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                       key={index}
                       className={`px-3 py-1 rounded-full text-sm ${
                         theme === 'dark'
-                          ? 'bg-gray-600 text-gray-200' : t('tools.plantHardinessZone.bg0d948810Text0d9488', 'bg-[#0D9488]/10 text-[#0D9488]')
+                          ? 'bg-gray-600 text-gray-200' : t('tools.plantHardinessZone.bg0d948810Text0d9488', 'bg-[#6096B4]/10 text-[#6096B4]')
                       }`}
                     >
                       {plant}
@@ -484,7 +484,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                   className={`w-full flex items-center justify-between ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}
                 >
                   <span className="font-semibold flex items-center gap-2">
-                    <ArrowLeftRight className="w-5 h-5 text-[#0D9488]" />
+                    <ArrowLeftRight className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.plantHardinessZone.compareWithAnotherZone', 'Compare with Another Zone')}
                   </span>
                   <span>{showComparison ? '−' : '+'}</span>
@@ -503,7 +503,7 @@ export const PlantHardinessZoneTool: React.FC<PlantHardinessZoneToolProps> = ({ 
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.plantHardinessZone.selectAZone', 'Select a zone')}</option>
                         {hardinessZones.map((zone) => (

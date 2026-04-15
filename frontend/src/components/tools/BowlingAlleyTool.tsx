@@ -687,15 +687,15 @@ export const BowlingAlleyTool = ({ uiConfig }: BowlingAlleyToolProps) => {
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClass = `w-full px-3 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
-  const buttonPrimary = "flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20";
+  const buttonPrimary = "flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20";
 
   const buttonSecondary = `px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -2210,7 +2210,7 @@ export const BowlingAlleyTool = ({ uiConfig }: BowlingAlleyToolProps) => {
                     r.category === 'arcade' ? 'bg-pink-500 text-white' :
                     r.category === 'party' ? 'bg-yellow-500 text-white' :
                     r.category === 'league' ? 'bg-indigo-500 text-white' :
-                    'bg-teal-500 text-white'
+                    'bg-primary-500 text-white'
                   }`}>
                     {r.category.replace('-', ' ')}
                   </span>
@@ -2256,7 +2256,7 @@ export const BowlingAlleyTool = ({ uiConfig }: BowlingAlleyToolProps) => {
     return (
       <div className={`max-w-7xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -2266,17 +2266,17 @@ export const BowlingAlleyTool = ({ uiConfig }: BowlingAlleyToolProps) => {
     <div className={`max-w-7xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.bowlingAlley.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.bowlingAlley.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Circle className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Circle className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -2350,7 +2350,7 @@ export const BowlingAlleyTool = ({ uiConfig }: BowlingAlleyToolProps) => {
               onClick={() => { setActiveTab(tab.id); setShowForm(false); setEditingId(null); }}
               className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'

@@ -101,7 +101,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
           className={cn(
             "p-2.5 rounded-xl mb-2 transition-all duration-200",
             activePage === 'chat'
-              ? 'bg-[#0D9488]/10 text-[#0D9488]'
+              ? 'bg-[#6096B4]/10 text-[#6096B4]'
               : theme === 'dark' ? 'hover:bg-[#2a2a2a] text-slate-400' : 'hover:bg-slate-100 text-slate-500 hover:text-slate-700'
           )}
           title={t('chatHistory.title')}
@@ -118,7 +118,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
               navigate('/chat');
             }
           }}
-          className="p-2.5 rounded-xl mb-4 transition-all duration-200 bg-gradient-to-br from-[#0D9488] to-[#0F766E] hover:from-[#14B8A6] hover:to-[#0D9488] text-white shadow-lg shadow-[#0D9488]/25 hover:shadow-[#0D9488]/40 hover:scale-105"
+          className="p-2.5 rounded-xl mb-4 transition-all duration-200 bg-gradient-to-br from-[#6096B4] to-[#4C7F98] hover:from-[#75AAC1] hover:to-[#6096B4] text-white shadow-lg shadow-[#6096B4]/25 hover:shadow-[#6096B4]/40 hover:scale-105"
           title={t('chatHistory.newChat')}
         >
           <Plus className="w-5 h-5" />
@@ -130,8 +130,8 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
           className={cn(
             "p-2.5 rounded-xl mb-2 transition-all duration-200",
             theme === 'dark'
-              ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#0D9488]'
-              : 'hover:bg-[#0D9488]/10 text-slate-500 hover:text-[#0D9488]'
+              ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#6096B4]'
+              : 'hover:bg-[#6096B4]/10 text-slate-500 hover:text-[#6096B4]'
           )}
           title={t('toolsModal.allTools')}
         >
@@ -158,8 +158,8 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                       className={cn(
                         "p-2.5 rounded-xl transition-all duration-200",
                         theme === 'dark'
-                          ? 'hover:bg-[#2a2a2a] text-[#0D9488]'
-                          : 'hover:bg-[#0D9488]/10 text-[#0D9488] hover:text-[#0F766E]'
+                          ? 'hover:bg-[#2a2a2a] text-[#6096B4]'
+                          : 'hover:bg-[#6096B4]/10 text-[#6096B4] hover:text-[#4C7F98]'
                       )}
                       title={tool.title}
                     >
@@ -197,7 +197,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             className={cn(
               "p-2.5 rounded-xl transition-all duration-200",
               showUserMenu
-                ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]'
                 : theme === 'dark' ? 'hover:bg-[#2a2a2a] text-slate-400' : 'hover:bg-slate-100 text-slate-500 hover:text-slate-700'
             )}
           >
@@ -218,7 +218,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                 theme === 'dark' ? 'border-[#2a2a2a]' : 'border-slate-100'
               )}>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-semibold bg-gradient-to-br from-[#0D9488] to-[#0F766E] text-white">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-semibold bg-gradient-to-br from-[#6096B4] to-[#4C7F98] text-white">
                     {user?.name?.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || user?.email?.charAt(0).toUpperCase() || 'U'}
                   </div>
                   <div>
@@ -264,7 +264,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                 className={cn(
                   "w-full px-4 py-2.5 text-left text-sm flex items-center gap-3 transition-all duration-200",
                   activePage === 'content'
-                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]'
                     : theme === 'dark'
                       ? 'text-slate-300 hover:bg-[#2a2a2a]'
                       : 'text-slate-600 hover:bg-slate-50'
@@ -283,7 +283,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                 className={cn(
                   "w-full px-4 py-2.5 text-left text-sm flex items-center gap-3 transition-all duration-200",
                   activePage === 'memories'
-                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]'
                     : theme === 'dark'
                       ? 'text-slate-300 hover:bg-[#2a2a2a]'
                       : 'text-slate-600 hover:bg-slate-50'
@@ -302,7 +302,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                 className={cn(
                   "w-full px-4 py-2.5 text-left text-sm flex items-center gap-3 transition-all duration-200",
                   location.pathname === '/settings'
-                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? theme === 'dark' ? 'bg-[#2a2a2a] text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]'
                     : theme === 'dark'
                       ? 'text-slate-300 hover:bg-[#2a2a2a]'
                       : 'text-slate-600 hover:bg-slate-50'

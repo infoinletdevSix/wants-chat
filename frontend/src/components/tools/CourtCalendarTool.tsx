@@ -119,7 +119,7 @@ const EVENT_TYPES = [
   { value: 'motion', label: 'Motion', icon: FileText, color: 'bg-purple-500/20 text-purple-600 border-purple-500/30' },
   { value: 'conference', label: 'Conference', icon: Users, color: 'bg-green-500/20 text-green-600 border-green-500/30' },
   { value: 'deposition', label: 'Deposition', icon: ClipboardList, color: 'bg-yellow-500/20 text-yellow-600 border-yellow-500/30' },
-  { value: 'mediation', label: 'Mediation', icon: Users, color: 'bg-teal-500/20 text-teal-600 border-teal-500/30' },
+  { value: 'mediation', label: 'Mediation', icon: Users, color: 'bg-primary-500/20 text-primary-600 border-primary-500/30' },
   { value: 'arbitration', label: 'Arbitration', icon: Scale, color: 'bg-indigo-500/20 text-indigo-600 border-indigo-500/30' },
   { value: 'deadline', label: 'Deadline', icon: AlertCircle, color: 'bg-orange-500/20 text-orange-600 border-orange-500/30' },
 ];
@@ -596,7 +596,7 @@ export const CourtCalendarTool: React.FC<CourtCalendarToolProps> = ({
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'

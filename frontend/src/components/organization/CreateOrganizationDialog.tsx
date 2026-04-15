@@ -81,7 +81,7 @@ export function CreateOrganizationDialog({
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
               <Building2 className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -134,7 +134,7 @@ export function CreateOrganizationDialog({
             <Button
               type="submit"
               disabled={loading || !name.trim()}
-              className="bg-teal-600 hover:bg-teal-700"
+              className="bg-primary-600 hover:bg-primary-700"
             >
               {loading ? (
                 <>

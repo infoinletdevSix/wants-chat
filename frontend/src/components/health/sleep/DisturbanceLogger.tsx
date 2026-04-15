@@ -96,7 +96,7 @@ export const DisturbanceLogger: React.FC<DisturbanceLoggerProps> = ({
             variant="ghost"
             size="sm"
             onClick={() => setShowAddForm(true)}
-            className="text-teal-400 hover:text-teal-300"
+            className="text-primary-400 hover:text-primary-300"
           >
             <Plus className="w-4 h-4 mr-1" />
             Add
@@ -160,7 +160,7 @@ export const DisturbanceLogger: React.FC<DisturbanceLoggerProps> = ({
                     size="sm"
                     className={cn(
                       newDisturbance.type === type.value
-                        ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-transparent'
+                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent'
                         : 'border-white/20'
                     )}
                     onClick={() =>
@@ -189,7 +189,7 @@ export const DisturbanceLogger: React.FC<DisturbanceLoggerProps> = ({
             <Button
               onClick={handleAddDisturbance}
               disabled={!newDisturbance.time}
-              className="w-full bg-gradient-to-r from-teal-500 to-cyan-500"
+              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500"
             >
               Add Disturbance
             </Button>

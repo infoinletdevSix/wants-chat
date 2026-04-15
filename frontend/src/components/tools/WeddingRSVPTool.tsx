@@ -216,11 +216,11 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Mail className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Mail className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingRSVP.weddingRsvpTracker', 'Wedding RSVP Tracker')}</h3>
@@ -236,7 +236,7 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
             </button>
             <button
               onClick={() => setShowAddForm(true)}
-              className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-teal-500 hover:bg-teal-600 text-white"
+              className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-primary-500 hover:bg-primary-600 text-white"
             >
               <Plus className="w-4 h-4" /> Add Guest
             </button>
@@ -245,9 +245,9 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.weddingRSVP.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -298,8 +298,8 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
             <div className="text-2xl font-bold text-yellow-500">{stats.pending}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingRSVP.pending', 'Pending')}</div>
           </div>
-          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'}`}>
-            <div className="text-2xl font-bold text-teal-500">{stats.totalAttending}</div>
+          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+            <div className="text-2xl font-bold text-primary-500">{stats.totalAttending}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingRSVP.totalAttending', 'Total Attending')}</div>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-purple-900/20' : 'bg-purple-50'}`}>
@@ -388,7 +388,7 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
               />
             </div>
             <div className="flex gap-2 mt-4">
-              <button onClick={handleAddEntry} className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium">
+              <button onClick={handleAddEntry} className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium">
                 {t('tools.weddingRSVP.addGuest', 'Add Guest')}
               </button>
               <button
@@ -468,7 +468,7 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
                     {!entry.sentDate && entry.email && (
                       <button
                         onClick={() => handleMarkAsSent(entry.id)}
-                        className={`p-1.5 rounded-lg ${isDark ? 'hover:bg-gray-700 text-teal-400' : 'hover:bg-gray-200 text-teal-600'}`}
+                        className={`p-1.5 rounded-lg ${isDark ? 'hover:bg-gray-700 text-primary-400' : 'hover:bg-gray-200 text-primary-600'}`}
                         title={t('tools.weddingRSVP.markAsSent', 'Mark as Sent')}
                       >
                         <Send className="w-4 h-4" />
@@ -513,7 +513,7 @@ export const WeddingRSVPTool: React.FC<WeddingRSVPToolProps> = ({ uiConfig }) =>
                 if (count === 0) return null;
                 return (
                   <div key={meal} className={`p-3 rounded-lg text-center ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
-                    <div className={`text-lg font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{count}</div>
+                    <div className={`text-lg font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{count}</div>
                     <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{meal}</div>
                   </div>
                 );

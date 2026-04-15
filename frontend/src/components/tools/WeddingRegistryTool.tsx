@@ -201,11 +201,11 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Gift className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Gift className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingRegistry.weddingRegistryChecklist', 'Wedding Registry Checklist')}</h3>
@@ -214,7 +214,7 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
           </div>
           <button
             onClick={() => setShowAddForm(true)}
-            className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-teal-500 hover:bg-teal-600 text-white"
+            className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-primary-500 hover:bg-primary-600 text-white"
           >
             <Plus className="w-4 h-4" /> Add Item
           </button>
@@ -222,9 +222,9 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.weddingRegistry.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -241,8 +241,8 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
             <div className="text-2xl font-bold text-green-500">{stats.purchasedItems}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingRegistry.purchased', 'Purchased')}</div>
           </div>
-          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'}`}>
-            <div className="text-xl font-bold text-teal-500">{formatCurrency(stats.purchasedValue)}</div>
+          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+            <div className="text-xl font-bold text-primary-500">{formatCurrency(stats.purchasedValue)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingRegistry.giftedValue', 'Gifted Value')}</div>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-purple-900/20' : 'bg-purple-50'}`}>
@@ -255,11 +255,11 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center justify-between mb-2">
             <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.weddingRegistry.registryCompletion', 'Registry Completion')}</span>
-            <span className={`text-sm font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{stats.completionRate.toFixed(0)}%</span>
+            <span className={`text-sm font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{stats.completionRate.toFixed(0)}%</span>
           </div>
           <div className={`h-3 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
             <div
-              className="h-full rounded-full bg-teal-500 transition-all"
+              className="h-full rounded-full bg-primary-500 transition-all"
               style={{ width: `${stats.completionRate}%` }}
             />
           </div>
@@ -362,7 +362,7 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
               />
             </div>
             <div className="flex gap-2 mt-4">
-              <button onClick={handleAddItem} className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium">
+              <button onClick={handleAddItem} className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium">
                 {t('tools.weddingRegistry.addItem', 'Add Item')}
               </button>
               <button
@@ -423,7 +423,7 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
                           <ShoppingCart className="w-3 h-3" /> {item.store}
                         </span>
                       )}
-                      <span className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                      <span className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                         {formatCurrency(item.price)}
                       </span>
                     </div>
@@ -439,7 +439,7 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`p-1.5 rounded-lg ${isDark ? 'hover:bg-gray-700 text-teal-400' : 'hover:bg-gray-200 text-teal-600'}`}
+                        className={`p-1.5 rounded-lg ${isDark ? 'hover:bg-gray-700 text-primary-400' : 'hover:bg-gray-200 text-primary-600'}`}
                       >
                         <ExternalLink className="w-4 h-4" />
                       </a>
@@ -478,7 +478,7 @@ export const WeddingRegistryTool: React.FC<WeddingRegistryToolProps> = ({ uiConf
                 <div key={category} className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
                   <div className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{category}</div>
                   <div className="flex items-center gap-1 mt-1">
-                    <span className={`text-lg font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{data.purchased}</span>
+                    <span className={`text-lg font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{data.purchased}</span>
                     <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>/ {data.total}</span>
                   </div>
                 </div>

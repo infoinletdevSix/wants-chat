@@ -649,7 +649,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
       <div className={`max-w-md mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="text-center mb-6">
           <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-            <Shield className="w-8 h-8 text-[#0D9488]" />
+            <Shield className="w-8 h-8 text-[#6096B4]" />
           </div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             {t('tools.passwordVault.setUpPasswordVault', 'Set Up Password Vault')}
@@ -674,7 +674,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 type="button"
@@ -714,7 +714,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -727,7 +727,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
 
           <button
             onClick={handleSetupMaster}
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <Lock className="w-5 h-5" />
             {t('tools.passwordVault.createVault', 'Create Vault')}
@@ -747,7 +747,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
       <div className={`max-w-md mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="text-center mb-6">
           <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-            <Lock className="w-8 h-8 text-[#0D9488]" />
+            <Lock className="w-8 h-8 text-[#6096B4]" />
           </div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             {t('tools.passwordVault.unlockVault', 'Unlock Vault')}
@@ -773,7 +773,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 type="button"
@@ -794,7 +794,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
 
           <button
             onClick={handleUnlock}
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <Unlock className="w-5 h-5" />
             {t('tools.passwordVault.unlock', 'Unlock')}
@@ -813,9 +813,9 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
             {t('tools.passwordVault.passwordVault', 'Password Vault')}
           </h2>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs text-[#0D9488] font-medium">{t('tools.passwordVault.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs text-[#6096B4] font-medium">{t('tools.passwordVault.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -885,7 +885,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -897,7 +897,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="All">{t('tools.passwordVault.allCategories', 'All Categories')}</option>
             {CATEGORIES.map(cat => (
@@ -912,7 +912,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="name">{t('tools.passwordVault.sortByName', 'Sort by Name')}</option>
             <option value="dateAdded">{t('tools.passwordVault.sortByDateAdded', 'Sort by Date Added')}</option>
@@ -942,7 +942,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
           setEditingEntry(null);
           setShowAddModal(true);
         }}
-        className="w-full mb-6 flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+        className="w-full mb-6 flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
       >
         <Plus className="w-5 h-5" />
         {t('tools.passwordVault.addNewPassword', 'Add New Password')}
@@ -989,7 +989,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                           href={entry.url.startsWith('http') ? entry.url : `https://${entry.url}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="truncate hover:text-[#0D9488]"
+                          className="truncate hover:text-[#6096B4]"
                         >
                           {entry.url}
                         </a>
@@ -1110,7 +1110,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1127,7 +1127,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1145,7 +1145,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                     <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
                       <button
@@ -1195,7 +1195,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1210,7 +1210,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {CATEGORIES.map(cat => (
                       <option key={cat} value={cat}>{cat}</option>
@@ -1231,7 +1231,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1253,7 +1253,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                   <button
                     onClick={handleSaveEntry}
                     disabled={!formData.name.trim() || !formData.password.trim()}
-                    className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {editingEntry ? t('tools.passwordVault.saveChanges', 'Save Changes') : t('tools.passwordVault.addPassword', 'Add Password')}
                   </button>
@@ -1343,7 +1343,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                     max="64"
                     value={genLength}
                     onChange={(e) => setGenLength(Number(e.target.value))}
-                    className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                    className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>8</span>
@@ -1361,7 +1361,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                         type="checkbox"
                         checked={genUppercase}
                         onChange={(e) => setGenUppercase(e.target.checked)}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                         {t('tools.passwordVault.uppercaseAZ', 'Uppercase (A-Z)')}
@@ -1372,7 +1372,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                         type="checkbox"
                         checked={genLowercase}
                         onChange={(e) => setGenLowercase(e.target.checked)}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                         {t('tools.passwordVault.lowercaseAZ', 'Lowercase (a-z)')}
@@ -1383,7 +1383,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                         type="checkbox"
                         checked={genNumbers}
                         onChange={(e) => setGenNumbers(e.target.checked)}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                         {t('tools.passwordVault.numbers09', 'Numbers (0-9)')}
@@ -1394,7 +1394,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                         type="checkbox"
                         checked={genSymbols}
                         onChange={(e) => setGenSymbols(e.target.checked)}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                         {t('tools.passwordVault.symbols', 'Symbols (!@#$...)')}
@@ -1406,7 +1406,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       type="checkbox"
                       checked={genExcludeAmbiguous}
                       onChange={(e) => setGenExcludeAmbiguous(e.target.checked)}
-                      className="w-4 h-4 rounded accent-[#0D9488]"
+                      className="w-4 h-4 rounded accent-[#6096B4]"
                     />
                     <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                       {t('tools.passwordVault.excludeAmbiguousLI1', 'Exclude ambiguous (l, I, 1, O, 0)')}
@@ -1416,7 +1416,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
 
                 <button
                   onClick={generatePassword}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
                 >
                   <RefreshCw className="w-4 h-4" />
                   {t('tools.passwordVault.generate', 'Generate')}
@@ -1479,7 +1479,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       setSettings(newSettings);
                       saveVault(entries, newSettings, masterPassword);
                     }}
-                    className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                    className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>1 min</span>
@@ -1502,7 +1502,7 @@ export const PasswordVaultTool: React.FC<PasswordVaultToolProps> = ({ uiConfig }
                       setSettings(newSettings);
                       saveVault(entries, newSettings, masterPassword);
                     }}
-                    className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                    className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>10s</span>
@@ -1635,7 +1635,7 @@ const ChangeMasterPasswordModal = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1651,7 +1651,7 @@ const ChangeMasterPasswordModal = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1667,7 +1667,7 @@ const ChangeMasterPasswordModal = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1691,7 +1691,7 @@ const ChangeMasterPasswordModal = ({
                 </button>
                 <button
                   onClick={handleSubmit}
-                  className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                  className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
                 >
                   {t('tools.passwordVault.changePassword', 'Change Password')}
                 </button>

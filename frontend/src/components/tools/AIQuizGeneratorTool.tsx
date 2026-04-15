@@ -258,8 +258,8 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
 
     if (!showResults) {
       return isSelected
-        ? 'border-[#0D9488] bg-[#0D9488]/10'
-        : 'border-gray-200 dark:border-gray-700 hover:border-[#0D9488]/50';
+        ? 'border-[#6096B4] bg-[#6096B4]/10'
+        : 'border-gray-200 dark:border-gray-700 hover:border-[#6096B4]/50';
     }
 
     if (isCorrect) {
@@ -276,11 +276,11 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <HelpCircle className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <HelpCircle className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aIQuizGenerator.aiQuizGenerator', 'AI Quiz Generator')}</h3>
@@ -290,9 +290,9 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aIQuizGenerator.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aIQuizGenerator.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -311,7 +311,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                 onChange={(e) => setTopic(e.target.value)}
                 placeholder={t('tools.aIQuizGenerator.enterTheTopicForYour', 'Enter the topic for your quiz (e.g., \'American Revolution\', \'Python programming basics\')...')}
                 rows={2}
-                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
               />
             </div>
 
@@ -327,7 +327,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                     const selected = questionCounts.find(c => c.value === Number(e.target.value));
                     if (selected) setQuestionCount(selected);
                   }}
-                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
                 >
                   {questionCounts.map(c => (
                     <option key={c.value} value={c.value}>{c.label}</option>
@@ -345,7 +345,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                     const selected = difficultyLevels.find(d => d.value === e.target.value);
                     if (selected) setDifficulty(selected);
                   }}
-                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
                 >
                   {difficultyLevels.map(d => (
                     <option key={d.value} value={d.value}>{d.label}</option>
@@ -363,7 +363,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                     const selected = questionTypes.find(t => t.value === e.target.value);
                     if (selected) setQuestionType(selected);
                   }}
-                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
                 >
                   {questionTypes.map(t => (
                     <option key={t.value} value={t.value}>{t.label}</option>
@@ -382,7 +382,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                 onChange={(e) => setAdditionalContext(e.target.value)}
                 placeholder={t('tools.aIQuizGenerator.specificAreasToFocusOn', 'Specific areas to focus on, chapters, or concepts...')}
                 rows={2}
-                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
               />
             </div>
 
@@ -397,7 +397,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
             <button
               onClick={handleGenerate}
               disabled={isGenerating || !topic.trim()}
-              className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+              className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
             >
               {isGenerating ? (
                 <>
@@ -419,8 +419,8 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
               {showResults ? (
                 /* Results View */
                 <div className="space-y-6">
-                  <div className="text-center p-6 bg-gradient-to-r from-[#0D9488]/10 to-[#2DD4BF]/10 rounded-xl">
-                    <Trophy className="w-12 h-12 text-[#0D9488] mx-auto mb-3" />
+                  <div className="text-center p-6 bg-gradient-to-r from-[#6096B4]/10 to-[#75AAC1]/10 rounded-xl">
+                    <Trophy className="w-12 h-12 text-[#6096B4] mx-auto mb-3" />
                     <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
                       {calculateScore().percentage}%
                     </h4>
@@ -471,7 +471,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                   <div className="flex gap-3">
                     <button
                       onClick={handleRestartQuiz}
-                      className="flex-1 py-3 px-6 bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 py-3 px-6 bg-[#6096B4] hover:bg-[#6096B4]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2"
                     >
                       <RotateCcw className="w-5 h-5" />
                       {t('tools.aIQuizGenerator.retakeQuiz', 'Retake Quiz')}
@@ -491,7 +491,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                     <span className="text-sm text-gray-500 dark:text-gray-400">
                       Question {currentQuestionIndex + 1} of {generatedQuiz.questions.length}
                     </span>
-                    <span className="text-sm text-[#0D9488] font-medium">
+                    <span className="text-sm text-[#6096B4] font-medium">
                       {Object.keys(selectedAnswers).length} answered
                     </span>
                   </div>
@@ -499,7 +499,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                   {/* Progress Bar */}
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div
-                      className="bg-[#0D9488] h-2 rounded-full transition-all"
+                      className="bg-[#6096B4] h-2 rounded-full transition-all"
                       style={{ width: `${((currentQuestionIndex + 1) / generatedQuiz.questions.length) * 100}%` }}
                     />
                   </div>
@@ -517,10 +517,10 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                           onClick={() => handleSelectAnswer(generatedQuiz.questions[currentQuestionIndex].id, optIdx)}
                           className={`w-full p-4 text-left rounded-xl border-2 transition-all ${
                             selectedAnswers[generatedQuiz.questions[currentQuestionIndex].id] === optIdx
-                              ? t('tools.aIQuizGenerator.border0d9488Bg0d948810', 'border-[#0D9488] bg-[#0D9488]/10') : t('tools.aIQuizGenerator.borderGray200DarkBorder', 'border-gray-200 dark:border-gray-700 hover:border-[#0D9488]/50')
+                              ? t('tools.aIQuizGenerator.border0d9488Bg0d948810', 'border-[#6096B4] bg-[#6096B4]/10') : t('tools.aIQuizGenerator.borderGray200DarkBorder', 'border-gray-200 dark:border-gray-700 hover:border-[#6096B4]/50')
                           }`}
                         >
-                          <span className="font-medium text-[#0D9488] mr-2">
+                          <span className="font-medium text-[#6096B4] mr-2">
                             {String.fromCharCode(65 + optIdx)})
                           </span>
                           <span className="text-gray-900 dark:text-white">{opt}</span>
@@ -541,7 +541,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                     {currentQuestionIndex < generatedQuiz.questions.length - 1 ? (
                       <button
                         onClick={() => setCurrentQuestionIndex(currentQuestionIndex + 1)}
-                        className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0D9488]/90 text-white rounded-lg transition-colors"
+                        className="flex-1 py-2 bg-[#6096B4] hover:bg-[#6096B4]/90 text-white rounded-lg transition-colors"
                       >
                         {t('tools.aIQuizGenerator.next', 'Next')}
                       </button>
@@ -549,7 +549,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
                       <button
                         onClick={handleSubmitQuiz}
                         disabled={Object.keys(selectedAnswers).length !== generatedQuiz.questions.length}
-                        className="flex-1 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                        className="flex-1 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                       >
                         {t('tools.aIQuizGenerator.submitQuiz', 'Submit Quiz')}
                       </button>
@@ -572,7 +572,7 @@ Create exactly ${questionCount.value} varied questions with ${optionCount} optio
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setQuizMode(true)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm bg-[#0D9488] hover:bg-[#0D9488]/90 text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-sm bg-[#6096B4] hover:bg-[#6096B4]/90 text-white rounded-lg transition-colors"
                 >
                   {t('tools.aIQuizGenerator.takeQuiz', 'Take Quiz')}
                 </button>

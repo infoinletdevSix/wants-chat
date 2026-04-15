@@ -323,7 +323,7 @@ const LanguageLearnerDashboard: React.FC = () => {
   if (progressLoading || lessonLoading || leaderboardLoading || achievementsLoading || analyticsLoading) {
     return (
       <div className="flex justify-center items-center min-h-[60vh]">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400"></div>
         <span className="ml-4 text-lg text-white/70">Loading dashboard...</span>
       </div>
     );
@@ -338,7 +338,7 @@ const LanguageLearnerDashboard: React.FC = () => {
           <p className="text-white/60 mb-4">
             {progressError || leaderboardError || achievementsError || analyticsError}
           </p>
-          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
             Try Again
           </Button>
         </GlassCard>
@@ -385,7 +385,7 @@ const LanguageLearnerDashboard: React.FC = () => {
           {/* Continue Learning */}
           <GlassCard hover={false}>
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500">
+              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
                 <BookOpen className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-semibold text-white">
@@ -405,13 +405,13 @@ const LanguageLearnerDashboard: React.FC = () => {
                     <Badge className="text-xs bg-white/10 text-white/70 border-white/20">
                       {selectedLesson.skill || 'N/A'}
                     </Badge>
-                    <Badge className="text-xs bg-teal-500/20 text-teal-300 border-teal-500/30">
+                    <Badge className="text-xs bg-primary-500/20 text-primary-300 border-primary-500/30">
                       {selectedLesson.difficulty || 'N/A'}
                     </Badge>
                   </div>
                 </div>
                 <Button
-                  className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                   size="lg"
                   onClick={() => {
                     if (lessonId) {
@@ -434,7 +434,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                     <p className="text-sm text-white/60">{dashboardData.currentLesson.nextLesson}</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-teal-400 mb-1">
+                    <div className="text-2xl font-bold text-primary-400 mb-1">
                       {dashboardData.currentLesson.progress}%
                     </div>
                     <span className="text-xs text-white/60">Complete</span>
@@ -442,12 +442,12 @@ const LanguageLearnerDashboard: React.FC = () => {
                 </div>
                 <div className="h-2 bg-white/10 rounded-full overflow-hidden mb-4">
                   <div
-                    className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full"
+                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full"
                     style={{ width: `${dashboardData.currentLesson.progress}%` }}
                   />
                 </div>
                 <Button
-                  className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                   size="lg"
                   onClick={() => navigate('/language-learner/learning')}
                 >
@@ -462,7 +462,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-1">Ready to Learn?</h3>
                 <p className="text-sm text-white/60 mb-4">Select a lesson to continue your journey</p>
                 <Button
-                  className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                   size="lg"
                   onClick={() => navigate('/language-learner/learning')}
                 >
@@ -479,7 +479,7 @@ const LanguageLearnerDashboard: React.FC = () => {
               hover={true}
               onClick={() => navigate('/language-learner/practice')}
             >
-              <Target className="h-8 w-8 text-teal-400 mx-auto mb-2" />
+              <Target className="h-8 w-8 text-primary-400 mx-auto mb-2" />
               <span className="text-sm font-medium text-white">Practice</span>
             </GlassCard>
             <GlassCard
@@ -487,7 +487,7 @@ const LanguageLearnerDashboard: React.FC = () => {
               hover={true}
               onClick={() => navigate('/language-learner/stories')}
             >
-              <MessageCircle className="h-8 w-8 text-teal-400 mx-auto mb-2" />
+              <MessageCircle className="h-8 w-8 text-primary-400 mx-auto mb-2" />
               <span className="text-sm font-medium text-white">Stories</span>
             </GlassCard>
             <GlassCard
@@ -495,7 +495,7 @@ const LanguageLearnerDashboard: React.FC = () => {
               hover={true}
               onClick={() => navigate('/language-learner/sounds')}
             >
-              <Volume2 className="h-8 w-8 text-teal-400 mx-auto mb-2" />
+              <Volume2 className="h-8 w-8 text-primary-400 mx-auto mb-2" />
               <span className="text-sm font-medium text-white">Sounds</span>
             </GlassCard>
             <GlassCard
@@ -503,7 +503,7 @@ const LanguageLearnerDashboard: React.FC = () => {
               hover={true}
               onClick={() => navigate('/language-learner/vocabulary')}
             >
-              <BookOpen className="h-8 w-8 text-teal-400 mx-auto mb-2" />
+              <BookOpen className="h-8 w-8 text-primary-400 mx-auto mb-2" />
               <span className="text-sm font-medium text-white">Vocabulary</span>
             </GlassCard>
           </div>
@@ -511,7 +511,7 @@ const LanguageLearnerDashboard: React.FC = () => {
           {/* Weekly Progress */}
           <GlassCard hover={false}>
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500">
+              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
                 <BarChart3 className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -523,12 +523,12 @@ const LanguageLearnerDashboard: React.FC = () => {
               <div className="space-y-6">
                 {/* Summary Stats */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-teal-500/10 rounded-xl p-4 border border-teal-500/20">
+                  <div className="bg-primary-500/10 rounded-xl p-4 border border-primary-500/20">
                     <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="h-4 w-4 text-teal-400" />
+                      <TrendingUp className="h-4 w-4 text-primary-400" />
                       <p className="text-sm font-medium text-white/70">Total XP</p>
                     </div>
-                    <p className="text-3xl font-bold text-teal-400">
+                    <p className="text-3xl font-bold text-primary-400">
                       {dashboardData.weeklyXp.reduce((a, b) => a + b, 0)}
                     </p>
                   </div>
@@ -562,13 +562,13 @@ const LanguageLearnerDashboard: React.FC = () => {
                             </div>
                           )}
                           <div
-                            className={`w-full max-w-8 rounded-t transition-all duration-300 ${isToday ? 'bg-gradient-to-t from-teal-500 to-cyan-500' : 'bg-white/20'}`}
+                            className={`w-full max-w-8 rounded-t transition-all duration-300 ${isToday ? 'bg-gradient-to-t from-primary-500 to-cyan-500' : 'bg-white/20'}`}
                             style={{
                               height: `${Math.max(heightPercent, 5)}%`,
                             }}
                           />
                         </div>
-                        <span className={`text-xs font-medium ${isToday ? 'text-teal-400' : 'text-white/50'}`}>
+                        <span className={`text-xs font-medium ${isToday ? 'text-primary-400' : 'text-white/50'}`}>
                           {day}
                         </span>
                       </div>
@@ -614,7 +614,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                 <div
                   key={friend.rank}
                   className={`flex items-center justify-between p-3 rounded-lg ${
-                    friend.isUser ? 'bg-teal-500/20 border border-teal-500/30' : 'bg-white/5 border border-white/10'
+                    friend.isUser ? 'bg-primary-500/20 border border-primary-500/30' : 'bg-white/5 border border-white/10'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -624,7 +624,7 @@ const LanguageLearnerDashboard: React.FC = () => {
                     <span className="text-2xl">{friend.avatar}</span>
                     <span className="font-medium text-white">{friend.name}</span>
                   </div>
-                  <span className="font-semibold text-teal-400">{friend.xp} XP</span>
+                  <span className="font-semibold text-primary-400">{friend.xp} XP</span>
                 </div>
               ))}
             </div>
@@ -649,13 +649,13 @@ const LanguageLearnerDashboard: React.FC = () => {
                     key={index}
                     className={`p-3 rounded-lg text-center border ${
                       achievement.unlocked
-                        ? 'bg-teal-500/10 border-teal-500/20'
+                        ? 'bg-primary-500/10 border-primary-500/20'
                         : 'bg-white/5 border-white/10 opacity-60'
                     }`}
                     title={achievement.description}
                   >
                     <Icon className={`h-6 w-6 mx-auto mb-2 ${
-                      achievement.unlocked ? 'text-teal-400' : 'text-white/30'
+                      achievement.unlocked ? 'text-primary-400' : 'text-white/30'
                     }`} />
                     <span className="text-xs font-medium block text-white">
                       {achievement.title}

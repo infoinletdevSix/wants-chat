@@ -790,15 +790,15 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-teal-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-teal-500'
-  } focus:outline-none focus:ring-2 focus:ring-teal-500/20`;
+      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`;
 
   const cardClass = `rounded-lg border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-lg transition-all font-medium shadow-lg shadow-teal-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -813,8 +813,8 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-teal-500/10 rounded-xl">
-            <Users className="w-8 h-8 text-teal-500" />
+          <div className="p-3 bg-primary-500/10 rounded-xl">
+            <Users className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -867,9 +867,9 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.memberDirectory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.memberDirectory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -877,8 +877,8 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         <div className={`${cardClass} p-4`}>
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Users className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Users className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.memberDirectory.totalMembers', 'Total Members')}</p>
@@ -932,7 +932,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-teal-500 text-white shadow-sm'
+                    ? 'bg-primary-500 text-white shadow-sm'
                     : theme === 'dark'
                     ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -967,7 +967,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                   </div>
                   <button
                     onClick={() => setShowFilters(!showFilters)}
-                    className={`${buttonSecondary} ${showFilters ? 'bg-teal-500/20 text-teal-500' : ''}`}
+                    className={`${buttonSecondary} ${showFilters ? 'bg-primary-500/20 text-primary-500' : ''}`}
                   >
                     <Filter className="w-4 h-4" />
                     Filters
@@ -1038,7 +1038,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-6">
                       <h2 className="text-xl font-bold flex items-center gap-2">
-                        <UserPlus className="w-5 h-5 text-teal-500" />
+                        <UserPlus className="w-5 h-5 text-primary-500" />
                         {editingMember ? t('tools.memberDirectory.editMember', 'Edit Member') : t('tools.memberDirectory.addNewMember', 'Add New Member')}
                       </h2>
                       <button
@@ -1056,7 +1056,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                     <div className="space-y-6">
                       {/* Basic Info */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.basicInformation', 'Basic Information')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.basicInformation', 'Basic Information')}</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                           <div>
                             <label className={labelClass}>{t('tools.memberDirectory.firstName', 'First Name *')}</label>
@@ -1124,7 +1124,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
                       {/* Address */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.address', 'Address')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.address', 'Address')}</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                           <div className="sm:col-span-2">
                             <label className={labelClass}>{t('tools.memberDirectory.streetAddress', 'Street Address')}</label>
@@ -1173,7 +1173,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
                       {/* Family & Groups */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.familyGroups', 'Family & Groups')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.familyGroups', 'Family & Groups')}</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div>
                             <label className={labelClass}>{t('tools.memberDirectory.family', 'Family')}</label>
@@ -1198,7 +1198,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                                   onClick={() => toggleGroupInMember(group.id)}
                                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                                     memberForm.groupIds.includes(group.id)
-                                      ? 'bg-teal-500 text-white'
+                                      ? 'bg-primary-500 text-white'
                                       : theme === 'dark'
                                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1214,7 +1214,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
                       {/* Dates */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.importantDates', 'Important Dates')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.importantDates', 'Important Dates')}</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div>
                             <label className={labelClass}>{t('tools.memberDirectory.birthday', 'Birthday')}</label>
@@ -1239,7 +1239,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
                       {/* Skills & Interests */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.skillsInterests', 'Skills & Interests')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.skillsInterests', 'Skills & Interests')}</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div>
                             <label className={labelClass}>{t('tools.memberDirectory.skills', 'Skills')}</label>
@@ -1304,7 +1304,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
                       {/* Communication Preferences */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.communicationPreferences', 'Communication Preferences')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.communicationPreferences', 'Communication Preferences')}</h3>
                         <div className="flex flex-wrap gap-2">
                           {communicationOptions.map(pref => (
                             <button
@@ -1313,7 +1313,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                               onClick={() => toggleCommunicationPreference(pref)}
                               className={`px-3 py-1 rounded-full text-sm transition-colors ${
                                 memberForm.communicationPreferences.includes(pref)
-                                  ? 'bg-teal-500 text-white'
+                                  ? 'bg-primary-500 text-white'
                                   : theme === 'dark'
                                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1327,7 +1327,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
 
                       {/* Notes & Status */}
                       <div>
-                        <h3 className="text-sm font-semibold mb-3 text-teal-500">{t('tools.memberDirectory.additionalInfo', 'Additional Info')}</h3>
+                        <h3 className="text-sm font-semibold mb-3 text-primary-500">{t('tools.memberDirectory.additionalInfo', 'Additional Info')}</h3>
                         <div className="grid grid-cols-1 gap-4">
                           <div>
                             <label className={labelClass}>{t('tools.memberDirectory.notes', 'Notes')}</label>
@@ -1345,7 +1345,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                               id="memberActive"
                               checked={memberForm.isActive}
                               onChange={(e) => setMemberForm(prev => ({ ...prev, isActive: e.target.checked }))}
-                              className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                              className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
                             />
                             <label htmlFor="memberActive" className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                               {t('tools.memberDirectory.activeMember', 'Active Member')}
@@ -1530,7 +1530,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-6">
                       <h2 className="text-xl font-bold flex items-center gap-2">
-                        <Home className="w-5 h-5 text-teal-500" />
+                        <Home className="w-5 h-5 text-primary-500" />
                         {editingFamily ? t('tools.memberDirectory.editFamily', 'Edit Family') : t('tools.memberDirectory.addNewFamily', 'Add New Family')}
                       </h2>
                       <button
@@ -1756,7 +1756,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-6">
                       <h2 className="text-xl font-bold flex items-center gap-2">
-                        <Building className="w-5 h-5 text-teal-500" />
+                        <Building className="w-5 h-5 text-primary-500" />
                         {editingGroup ? t('tools.memberDirectory.editGroup', 'Edit Group') : t('tools.memberDirectory.addNewGroup', 'Add New Group')}
                       </h2>
                       <button
@@ -1835,7 +1835,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                           id="groupActive"
                           checked={groupForm.isActive}
                           onChange={(e) => setGroupForm(prev => ({ ...prev, isActive: e.target.checked }))}
-                          className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                          className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
                         />
                         <label htmlFor="groupActive" className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                           {t('tools.memberDirectory.activeGroup', 'Active Group')}
@@ -1955,7 +1955,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
             <div className={cardClass}>
               <div className="p-6">
                 <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <BarChart3 className="w-5 h-5 text-teal-500" />
+                  <BarChart3 className="w-5 h-5 text-primary-500" />
                   {t('tools.memberDirectory.membershipStatistics', 'Membership Statistics')}
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -1970,7 +1970,7 @@ export const MemberDirectoryTool: React.FC<MemberDirectoryToolProps> = ({ uiConf
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
-                    New members this year: <span className="font-semibold text-teal-500">{stats.newMembersThisYear}</span>
+                    New members this year: <span className="font-semibold text-primary-500">{stats.newMembersThisYear}</span>
                   </p>
                 </div>
               </div>

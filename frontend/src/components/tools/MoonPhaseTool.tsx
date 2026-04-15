@@ -349,7 +349,7 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Moon className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -358,9 +358,9 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.moonPhase.dateLoadedFromAiResponse', 'Date loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.moonPhase.dateLoadedFromAiResponse', 'Date loaded from AI response')}</span>
             </div>
           )}
 
@@ -378,11 +378,11 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 onClick={goToToday}
-                className="px-4 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                className="px-4 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
               >
                 {t('tools.moonPhase.today', 'Today')}
               </button>
@@ -412,7 +412,7 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                <div className={`text-2xl font-bold text-[#0D9488]`}>
+                <div className={`text-2xl font-bold text-[#6096B4]`}>
                   {moonPhase.illumination}%
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -420,7 +420,7 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
                 </div>
               </div>
               <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                <div className={`text-2xl font-bold text-[#0D9488]`}>
+                <div className={`text-2xl font-bold text-[#6096B4]`}>
                   {moonPhase.moonAge}
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -428,7 +428,7 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
                 </div>
               </div>
               <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                <div className={`text-2xl font-bold text-[#0D9488]`}>
+                <div className={`text-2xl font-bold text-[#6096B4]`}>
                   {moonPhase.daysUntilFullMoon}
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -436,7 +436,7 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
                 </div>
               </div>
               <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                <div className={`text-2xl font-bold text-[#0D9488]`}>
+                <div className={`text-2xl font-bold text-[#6096B4]`}>
                   {moonPhase.daysUntilNewMoon}
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -447,8 +447,8 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
           </div>
 
           {/* Current Phase Description */}
-          <div className={`p-4 rounded-lg mb-6 border-l-4 border-[#0D9488] ${
-            theme === 'dark' ? 'bg-gray-700' : t('tools.moonPhase.bg0d948810', 'bg-[#0D9488]/10')
+          <div className={`p-4 rounded-lg mb-6 border-l-4 border-[#6096B4] ${
+            theme === 'dark' ? 'bg-gray-700' : t('tools.moonPhase.bg0d948810', 'bg-[#6096B4]/10')
           }`}>
             <h3 className={`font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               About {currentPhaseInfo.name}
@@ -511,10 +511,10 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
                   onClick={() => handleCalendarDayClick(day.date)}
                   className={`p-2 rounded-lg text-center transition-colors ${
                     isSelectedDate(day.date)
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isToday(day.date)
                         ? theme === 'dark'
-                          ? t('tools.moonPhase.bgGray600TextWhite', 'bg-gray-600 text-white ring-2 ring-[#0D9488]') : t('tools.moonPhase.bgGray200TextGray', 'bg-gray-200 text-gray-900 ring-2 ring-[#0D9488]')
+                          ? t('tools.moonPhase.bgGray600TextWhite', 'bg-gray-600 text-white ring-2 ring-[#6096B4]') : t('tools.moonPhase.bgGray200TextGray', 'bg-gray-200 text-gray-900 ring-2 ring-[#6096B4]')
                         : day.isCurrentMonth
                           ? theme === 'dark'
                             ? 'hover:bg-gray-600 text-white'
@@ -552,7 +552,7 @@ export const MoonPhaseTool: React.FC<MoonPhaseToolProps> = ({ uiConfig }) => {
                   key={phase.name}
                   className={`p-4 rounded-lg ${
                     theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
-                  } ${phase.name === moonPhase.phaseName ? 'ring-2 ring-[#0D9488]' : ''}`}
+                  } ${phase.name === moonPhase.phaseName ? 'ring-2 ring-[#6096B4]' : ''}`}
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">

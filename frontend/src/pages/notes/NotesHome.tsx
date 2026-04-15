@@ -213,8 +213,8 @@ const NotesHome: React.FC = () => {
             </Card>
             <Card className="bg-white/10 backdrop-blur-xl border-white/20">
               <CardContent className="p-4 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-teal-500/20">
-                  <Pin className="w-5 h-5 text-teal-400" />
+                <div className="p-2 rounded-lg bg-primary-500/20">
+                  <Pin className="w-5 h-5 text-primary-400" />
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-white">{stats.pinnedNotes}</p>

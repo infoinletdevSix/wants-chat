@@ -161,7 +161,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
             size="sm"
             onClick={() => setUnit('metric')}
             className={unit === 'metric'
-              ? "h-8 bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+              ? "h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
               : "h-8 bg-white/10 border border-white/20 text-white hover:scale-105 transition-all duration-200"
             }
           >
@@ -171,7 +171,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
             size="sm"
             onClick={() => setUnit('imperial')}
             className={unit === 'imperial'
-              ? "h-8 bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+              ? "h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
               : "h-8 bg-white/10 border border-white/20 text-white hover:scale-105 transition-all duration-200"
             }
           >
@@ -192,7 +192,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
                 value={weight}
                 onChange={(e) => setWeight(parseFloat(e.target.value) || 0)}
                 step="0.1"
-                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:ring-teal-500/50"
+                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:ring-primary-500/50"
               />
             </div>
           </div>
@@ -206,7 +206,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
                 type="number"
                 value={height}
                 onChange={(e) => setHeight(parseFloat(e.target.value) || 0)}
-                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:ring-teal-500/50"
+                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:ring-primary-500/50"
               />
             </div>
           </div>
@@ -214,7 +214,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
 
         <Button
           onClick={handleCalculate}
-          className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+          className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
         >
           <Calculator className="h-4 w-4 mr-2" />
           Calculate BMI
@@ -223,7 +223,7 @@ const HealthOverview: React.FC<HealthOverviewProps> = ({
         {/* BMI Result */}
         {bmi > 0 && (
           <>
-            <div className="text-center p-6 bg-gradient-to-br from-teal-500/20 to-cyan-500/10 rounded-lg">
+            <div className="text-center p-6 bg-gradient-to-br from-primary-500/20 to-cyan-500/10 rounded-lg">
               <p className="text-sm text-white/60 mb-2">Your BMI</p>
               <div className="text-4xl font-bold text-white mb-2">{bmi}</div>
               <Badge className={`${getBMIColor(bmiCategory)} mb-2`}>

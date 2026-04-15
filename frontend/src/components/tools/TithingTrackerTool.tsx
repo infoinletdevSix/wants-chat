@@ -588,7 +588,7 @@ export const TithingTrackerTool: React.FC<{ uiConfig?: UIConfig }> = ({ uiConfig
       special_gift: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
       building_fund: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
       missions: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200',
-      benevolence: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
+      benevolence: 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200',
       other: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200',
     };
     return colors[category] || colors.other;

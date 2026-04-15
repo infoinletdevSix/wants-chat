@@ -155,14 +155,14 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-2xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.percentageCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.percentageCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Percent className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -177,7 +177,7 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
                 onClick={() => { setMode('whatIs'); reset(); }}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors text-sm ${
                   mode === 'whatIs'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -189,7 +189,7 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
                 onClick={() => { setMode('isWhat'); reset(); }}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors text-sm ${
                   mode === 'isWhat'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -201,7 +201,7 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
                 onClick={() => { setMode('change'); reset(); }}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors text-sm ${
                   mode === 'change'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -234,7 +234,7 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -251,7 +251,7 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculate}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.percentageCalculator.calculate', 'Calculate')}
@@ -279,12 +279,12 @@ export default function PercentageCalculatorTool({ uiConfig }: PercentageCalcula
 
           {/* Result Display */}
           {result && (
-            <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-              theme === 'dark' ? 'bg-gray-700' : t('tools.percentageCalculator.bg0d948815', 'bg-[#0D9488]15')
+            <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+              theme === 'dark' ? 'bg-gray-700' : t('tools.percentageCalculator.bg0d948815', 'bg-[#6096B4]15')
             }`}>
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#0D9488] mb-2">
+                  <div className="text-4xl font-bold text-[#6096B4] mb-2">
                     {result.value}{mode === 'isWhat' || mode === 'change' ? '%' : ''}
                   </div>
                   <div className={`text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>

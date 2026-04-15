@@ -370,7 +370,7 @@ const MeditationSeries: React.FC = () => {
         <Card className="p-6 text-center bg-white/10 backdrop-blur-xl border border-white/20">
           <Icon path={mdiMeditation} size={2} className="text-white/40 mx-auto mb-4" />
           <p className="text-red-400 mb-4">{error}</p>
-          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">Try Again</Button>
+          <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Try Again</Button>
         </Card>
       </div>
     );
@@ -400,7 +400,7 @@ const MeditationSeries: React.FC = () => {
         </Card>
         <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20">
           <div className="space-y-2">
-            <p className="text-2xl font-bold text-teal-400">
+            <p className="text-2xl font-bold text-primary-400">
               {seriesData.filter((p) => {
                 const totalSessions = p.sessions || p.sessionsCount || 0;
                 const completedSessions = p.completed || 0;
@@ -421,7 +421,7 @@ const MeditationSeries: React.FC = () => {
         </Card>
         <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20">
           <div className="space-y-2">
-            <p className="text-2xl font-bold text-teal-400">
+            <p className="text-2xl font-bold text-primary-400">
               {seriesData.filter((p) =>
                 p.isEnrolled && p.enrollmentStatus === 'completed'
               ).length}
@@ -450,7 +450,7 @@ const MeditationSeries: React.FC = () => {
               totalSessions > 0 ? (completedSessions / totalSessions) * 100 : 0;
 
             return (
-              <Card className="lg:col-span-2 p-6 bg-teal-500/20 border border-teal-400/30">
+              <Card className="lg:col-span-2 p-6 bg-primary-500/20 border border-primary-400/30">
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">
@@ -458,7 +458,7 @@ const MeditationSeries: React.FC = () => {
                     </h3>
                     <p className="text-white/60">Pick up where you left off</p>
                   </div>
-                  <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+                  <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
                     <Play className="h-3 w-3 mr-1" />
                     In Progress
                   </Badge>
@@ -466,8 +466,8 @@ const MeditationSeries: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-lg bg-teal-500/20 flex items-center justify-center">
-                      <Icon path={mdiMeditation} size={1.5} className="text-teal-400" />
+                    <div className="w-16 h-16 rounded-lg bg-primary-500/20 flex items-center justify-center">
+                      <Icon path={mdiMeditation} size={1.5} className="text-primary-400" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold text-white">
@@ -498,13 +498,13 @@ const MeditationSeries: React.FC = () => {
                       </span>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full" style={{ width: `${progressPercentage}%` }} />
+                      <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: `${progressPercentage}%` }} />
                     </div>
                   </div>
 
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                     onClick={() => handleContinueSeries(currentSeries)}
                   >
                     <Play className="h-5 w-5 mr-2" />
@@ -516,7 +516,7 @@ const MeditationSeries: React.FC = () => {
           } else {
             // Show a "Start Your Journey" card if no series in progress
             return (
-              <Card className="lg:col-span-2 p-6 bg-teal-500/20 border border-teal-400/30">
+              <Card className="lg:col-span-2 p-6 bg-primary-500/20 border border-primary-400/30">
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">
@@ -534,8 +534,8 @@ const MeditationSeries: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-lg bg-teal-500/20 flex items-center justify-center">
-                      <Icon path={mdiMeditation} size={1.5} className="text-teal-400" />
+                    <div className="w-16 h-16 rounded-lg bg-primary-500/20 flex items-center justify-center">
+                      <Icon path={mdiMeditation} size={1.5} className="text-primary-400" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold text-white">Discover Meditation</h4>
@@ -554,7 +554,7 @@ const MeditationSeries: React.FC = () => {
 
                   <Button
                     size="lg"
-                    className="w-full bg-teal-500/10 border border-teal-400 text-teal-400 hover:scale-105 transition-all duration-200"
+                    className="w-full bg-primary-500/10 border border-primary-400 text-primary-400 hover:scale-105 transition-all duration-200"
                     onClick={() => {
                       // Scroll to All Series section
                       document
@@ -587,7 +587,7 @@ const MeditationSeries: React.FC = () => {
                 )}
               </div>
               <div className="w-full bg-white/10 rounded-full h-2">
-                <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full" style={{ width: `${Math.min(((stats?.todayProgress || 0) / (stats?.todayGoal || 20)) * 100, 100)}%` }} />
+                <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: `${Math.min(((stats?.todayProgress || 0) / (stats?.todayGoal || 20)) * 100, 100)}%` }} />
               </div>
               {!loading && (
                 <p className="text-xs text-white/60">
@@ -622,7 +622,7 @@ const MeditationSeries: React.FC = () => {
                       }}
                     >
                       <div className="flex items-center gap-2">
-                        <Icon path={mdiMeditation} size={0.7} className="text-teal-400" />
+                        <Icon path={mdiMeditation} size={0.7} className="text-primary-400" />
                         <span className="text-sm">{session.title}</span>
                       </div>
                       <span className="text-xs text-white/60">{durationMin} min</span>
@@ -663,12 +663,12 @@ const MeditationSeries: React.FC = () => {
             return (
               <Card
                 key={series.id}
-                className="p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer group bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50"
+                className="p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer group bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50"
               >
                 <div className="space-y-4">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors mb-2">
+                      <h4 className="text-lg font-semibold text-white group-hover:text-primary-400 transition-colors mb-2">
                         {series.title || series.name}
                       </h4>
                       <p className="text-sm text-white/60 leading-relaxed">
@@ -693,7 +693,7 @@ const MeditationSeries: React.FC = () => {
                         </Badge>
                       )}
                       {isStarted && !isCompleted && (
-                        <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs">
+                        <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white text-xs">
                           <Play className="h-3 w-3 mr-1" />
                           In Progress
                         </Badge>
@@ -719,7 +719,7 @@ const MeditationSeries: React.FC = () => {
                         </span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-1.5">
-                        <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-1.5 rounded-full" style={{ width: `${progressPercentage}%` }} />
+                        <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-1.5 rounded-full" style={{ width: `${progressPercentage}%` }} />
                       </div>
                       {series.lastSessionDate && (
                         <p className="text-xs text-white/60">
@@ -785,7 +785,7 @@ const MeditationSeries: React.FC = () => {
                       </Button>
                     ) : canContinue ? (
                       <Button
-                        className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                         onClick={() => handleContinueSeries(series)}
                       >
                         <Play className="h-4 w-4 mr-2" />
@@ -793,7 +793,7 @@ const MeditationSeries: React.FC = () => {
                       </Button>
                     ) : isEnrolled && !isStarted ? (
                       <Button
-                        className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                         onClick={() => handleStartSeries(series)}
                       >
                         <Play className="h-4 w-4 mr-2" />
@@ -801,7 +801,7 @@ const MeditationSeries: React.FC = () => {
                       </Button>
                     ) : (
                       <Button
-                        className="w-full bg-teal-500/10 border border-teal-400 text-teal-400 hover:scale-105 transition-all duration-200"
+                        className="w-full bg-primary-500/10 border border-primary-400 text-primary-400 hover:scale-105 transition-all duration-200"
                         onClick={() => handleStartSeries(series)}
                       >
                         <Zap className="h-4 w-4 mr-2" />

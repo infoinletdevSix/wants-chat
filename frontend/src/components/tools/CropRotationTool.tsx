@@ -339,7 +339,7 @@ export function CropRotationTool({
   if (isLoading) {
     return (
       <div className={`flex items-center justify-center h-64 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500 mr-3"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mr-3"></div>
         {t('tools.cropRotation.loadingRotationData', 'Loading rotation data...')}
       </div>
     );

@@ -88,7 +88,7 @@ export default function EncodingTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               Encoding Tools
             </h1>
             <p className="text-gray-400">Encode, decode, and hash your data securely</p>
@@ -96,15 +96,15 @@ export default function EncodingTools() {
 
           <Tabs defaultValue="base64" className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="base64" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="base64" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Lock className="w-4 h-4 mr-2" />
                 Base64
               </TabsTrigger>
-              <TabsTrigger value="url" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="url" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Link className="w-4 h-4 mr-2" />
                 URL
               </TabsTrigger>
-              <TabsTrigger value="hash" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="hash" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Hash className="w-4 h-4 mr-2" />
                 Hash
               </TabsTrigger>
@@ -117,12 +117,12 @@ export default function EncodingTools() {
                   value={base64Input}
                   onChange={(e) => setBase64Input(e.target.value)}
                   placeholder="Enter text to encode or base64 to decode"
-                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-teal-500 focus:outline-none"
+                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-primary-500 focus:outline-none"
                 />
                 <div className="flex gap-3 mt-4">
                   <button
                     onClick={encodeBase64}
-                    className="px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     Encode
                   </button>
@@ -161,12 +161,12 @@ export default function EncodingTools() {
                   value={urlInput}
                   onChange={(e) => setUrlInput(e.target.value)}
                   placeholder="Enter URL or text to encode/decode"
-                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-teal-500 focus:outline-none"
+                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-primary-500 focus:outline-none"
                 />
                 <div className="flex gap-3 mt-4">
                   <button
                     onClick={encodeURL}
-                    className="px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     Encode
                   </button>
@@ -205,11 +205,11 @@ export default function EncodingTools() {
                   value={hashInput}
                   onChange={(e) => setHashInput(e.target.value)}
                   placeholder="Enter text to hash"
-                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-teal-500 focus:outline-none"
+                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-primary-500 focus:outline-none"
                 />
                 <button
                   onClick={generateHashes}
-                  className="mt-4 px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Generate Hashes
                 </button>
@@ -218,7 +218,7 @@ export default function EncodingTools() {
                   <div className="mt-6 space-y-4">
                     <div className="relative">
                       <div className="flex justify-between items-center mb-2">
-                        <label className="text-sm font-semibold text-teal-400">MD5-like Hash</label>
+                        <label className="text-sm font-semibold text-primary-400">MD5-like Hash</label>
                         <button
                           onClick={() => copyToClipboard(md5Hash, 'md5')}
                           className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
@@ -233,7 +233,7 @@ export default function EncodingTools() {
 
                     <div className="relative">
                       <div className="flex justify-between items-center mb-2">
-                        <label className="text-sm font-semibold text-teal-400">SHA-256 Hash</label>
+                        <label className="text-sm font-semibold text-primary-400">SHA-256 Hash</label>
                         <button
                           onClick={() => copyToClipboard(sha256Hash, 'sha256')}
                           className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"

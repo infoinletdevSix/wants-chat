@@ -25,7 +25,7 @@ const WeightStats: React.FC<WeightStatsProps> = ({
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       <Card className="p-4 text-center bg-white/5 border border-white/10">
-        <Icon path={mdiScale} size={1.2} className="text-teal-400 mx-auto mb-2" />
+        <Icon path={mdiScale} size={1.2} className="text-primary-400 mx-auto mb-2" />
         <p className="text-2xl font-bold text-white">
           {safeToFixed(totalLost)}kg
         </p>

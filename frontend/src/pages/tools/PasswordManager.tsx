@@ -189,7 +189,7 @@ const PasswordManager: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -197,10 +197,10 @@ const PasswordManager: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
-            <Shield className="w-12 h-12 text-teal-400" />
+            <Shield className="w-12 h-12 text-primary-400" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Password Manager</h1>
-          <p className="text-teal-200">Securely store and manage your passwords</p>
+          <p className="text-primary-200">Securely store and manage your passwords</p>
         </div>
 
         {/* Controls */}
@@ -208,20 +208,20 @@ const PasswordManager: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-4 mb-4">
             {/* Search */}
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-teal-300 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary-300 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search passwords..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
               />
             </div>
 
             {/* Add button */}
             <button
               onClick={() => setShowModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               <Plus className="w-5 h-5" />
               Add Password
@@ -234,8 +234,8 @@ const PasswordManager: React.FC = () => {
               onClick={() => setSelectedCategory('All')}
               className={`px-4 py-2 rounded-lg font-medium transition-all ${
                 selectedCategory === 'All'
-                  ? 'bg-teal-500 text-white'
-                  : 'bg-white/10 text-teal-200 hover:bg-white/20'
+                  ? 'bg-primary-500 text-white'
+                  : 'bg-white/10 text-primary-200 hover:bg-white/20'
               }`}
             >
               All
@@ -246,8 +246,8 @@ const PasswordManager: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   selectedCategory === cat
-                    ? 'bg-teal-500 text-white'
-                    : 'bg-white/10 text-teal-200 hover:bg-white/20'
+                    ? 'bg-primary-500 text-white'
+                    : 'bg-white/10 text-primary-200 hover:bg-white/20'
                 }`}
               >
                 {cat}
@@ -259,9 +259,9 @@ const PasswordManager: React.FC = () => {
         {/* Password list */}
         {filteredPasswords.length === 0 ? (
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 text-center border border-white/20">
-            <Key className="w-16 h-16 text-teal-400 mx-auto mb-4" />
+            <Key className="w-16 h-16 text-primary-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">No passwords found</h3>
-            <p className="text-teal-200 mb-6">Start by adding your first password</p>
+            <p className="text-primary-200 mb-6">Start by adding your first password</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -273,7 +273,7 @@ const PasswordManager: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-white mb-1">{password.title}</h3>
-                    <span className="inline-block px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-xs font-medium">
+                    <span className="inline-block px-3 py-1 bg-primary-500/30 text-primary-200 rounded-full text-xs font-medium">
                       {password.category}
                     </span>
                   </div>
@@ -282,7 +282,7 @@ const PasswordManager: React.FC = () => {
                       onClick={() => handleEdit(password)}
                       className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
                     >
-                      <Edit2 className="w-4 h-4 text-teal-300" />
+                      <Edit2 className="w-4 h-4 text-primary-300" />
                     </button>
                     <button
                       onClick={() => handleDelete(password.id)}
@@ -295,20 +295,20 @@ const PasswordManager: React.FC = () => {
 
                 <div className="space-y-3">
                   <div>
-                    <label className="text-xs text-teal-300 mb-1 block">Username</label>
+                    <label className="text-xs text-primary-300 mb-1 block">Username</label>
                     <div className="flex items-center gap-2">
                       <p className="text-white flex-1 truncate">{password.username}</p>
                       <button
                         onClick={() => copyToClipboard(password.username, `username-${password.id}`)}
                         className="p-1.5 bg-white/10 rounded hover:bg-white/20 transition-all"
                       >
-                        <Copy className={`w-4 h-4 ${copiedId === `username-${password.id}` ? 'text-green-400' : 'text-teal-300'}`} />
+                        <Copy className={`w-4 h-4 ${copiedId === `username-${password.id}` ? 'text-green-400' : 'text-primary-300'}`} />
                       </button>
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-xs text-teal-300 mb-1 block">Password</label>
+                    <label className="text-xs text-primary-300 mb-1 block">Password</label>
                     <div className="flex items-center gap-2">
                       <p className="text-white flex-1 font-mono text-sm truncate">
                         {showPasswords[password.id] ? password.password : '••••••••'}
@@ -318,23 +318,23 @@ const PasswordManager: React.FC = () => {
                         className="p-1.5 bg-white/10 rounded hover:bg-white/20 transition-all"
                       >
                         {showPasswords[password.id] ? (
-                          <EyeOff className="w-4 h-4 text-teal-300" />
+                          <EyeOff className="w-4 h-4 text-primary-300" />
                         ) : (
-                          <Eye className="w-4 h-4 text-teal-300" />
+                          <Eye className="w-4 h-4 text-primary-300" />
                         )}
                       </button>
                       <button
                         onClick={() => copyToClipboard(password.password, `password-${password.id}`)}
                         className="p-1.5 bg-white/10 rounded hover:bg-white/20 transition-all"
                       >
-                        <Copy className={`w-4 h-4 ${copiedId === `password-${password.id}` ? 'text-green-400' : 'text-teal-300'}`} />
+                        <Copy className={`w-4 h-4 ${copiedId === `password-${password.id}` ? 'text-green-400' : 'text-primary-300'}`} />
                       </button>
                     </div>
                   </div>
 
                   {password.url && (
                     <div>
-                      <label className="text-xs text-teal-300 mb-1 block">URL</label>
+                      <label className="text-xs text-primary-300 mb-1 block">URL</label>
                       <a
                         href={password.url}
                         target="_blank"
@@ -348,7 +348,7 @@ const PasswordManager: React.FC = () => {
 
                   {password.notes && (
                     <div>
-                      <label className="text-xs text-teal-300 mb-1 block">Notes</label>
+                      <label className="text-xs text-primary-300 mb-1 block">Notes</label>
                       <p className="text-white/70 text-sm">{password.notes}</p>
                     </div>
                   )}
@@ -361,7 +361,7 @@ const PasswordManager: React.FC = () => {
         {/* Add/Edit Modal */}
         {showModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-teal-500/30">
+            <div className="bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-primary-500/30">
               <div className="p-6 border-b border-white/10">
                 <h2 className="text-2xl font-bold text-white">
                   {editingPassword ? 'Edit Password' : 'Add New Password'}
@@ -370,46 +370,46 @@ const PasswordManager: React.FC = () => {
 
               <form onSubmit={handleSubmit} className="p-6 space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Title *</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Title *</label>
                   <input
                     type="text"
                     required
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
                     placeholder="e.g., Gmail Account"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Username *</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Username *</label>
                   <input
                     type="text"
                     required
                     value={formData.username}
                     onChange={(e) => setFormData({ ...formData, username: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
                     placeholder="username or email"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Password *</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Password *</label>
                   <div className="flex gap-2">
                     <input
                       type="text"
                       required
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400 font-mono"
+                      className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400 font-mono"
                       placeholder="Enter password"
                     />
                     <button
                       type="button"
                       onClick={() => setShowGenerator(!showGenerator)}
-                      className="px-4 py-3 bg-teal-500/20 border border-teal-500 rounded-xl hover:bg-teal-500/30 transition-all"
+                      className="px-4 py-3 bg-primary-500/20 border border-primary-500 rounded-xl hover:bg-primary-500/30 transition-all"
                     >
-                      <RefreshCw className="w-5 h-5 text-teal-300" />
+                      <RefreshCw className="w-5 h-5 text-primary-300" />
                     </button>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ const PasswordManager: React.FC = () => {
 
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <label className="text-sm text-teal-300">Length: {generatorOptions.length}</label>
+                        <label className="text-sm text-primary-300">Length: {generatorOptions.length}</label>
                       </div>
                       <input
                         type="range"
@@ -439,7 +439,7 @@ const PasswordManager: React.FC = () => {
                           type="checkbox"
                           checked={generatorOptions.uppercase}
                           onChange={(e) => setGeneratorOptions({ ...generatorOptions, uppercase: e.target.checked })}
-                          className="w-4 h-4 rounded border-teal-500 text-teal-500 focus:ring-teal-400"
+                          className="w-4 h-4 rounded border-primary-500 text-primary-500 focus:ring-primary-400"
                         />
                         Uppercase (A-Z)
                       </label>
@@ -448,7 +448,7 @@ const PasswordManager: React.FC = () => {
                           type="checkbox"
                           checked={generatorOptions.lowercase}
                           onChange={(e) => setGeneratorOptions({ ...generatorOptions, lowercase: e.target.checked })}
-                          className="w-4 h-4 rounded border-teal-500 text-teal-500 focus:ring-teal-400"
+                          className="w-4 h-4 rounded border-primary-500 text-primary-500 focus:ring-primary-400"
                         />
                         Lowercase (a-z)
                       </label>
@@ -457,7 +457,7 @@ const PasswordManager: React.FC = () => {
                           type="checkbox"
                           checked={generatorOptions.numbers}
                           onChange={(e) => setGeneratorOptions({ ...generatorOptions, numbers: e.target.checked })}
-                          className="w-4 h-4 rounded border-teal-500 text-teal-500 focus:ring-teal-400"
+                          className="w-4 h-4 rounded border-primary-500 text-primary-500 focus:ring-primary-400"
                         />
                         Numbers (0-9)
                       </label>
@@ -466,7 +466,7 @@ const PasswordManager: React.FC = () => {
                           type="checkbox"
                           checked={generatorOptions.symbols}
                           onChange={(e) => setGeneratorOptions({ ...generatorOptions, symbols: e.target.checked })}
-                          className="w-4 h-4 rounded border-teal-500 text-teal-500 focus:ring-teal-400"
+                          className="w-4 h-4 rounded border-primary-500 text-primary-500 focus:ring-primary-400"
                         />
                         Symbols (!@#$)
                       </label>
@@ -482,7 +482,7 @@ const PasswordManager: React.FC = () => {
                       <button
                         type="button"
                         onClick={generatePassword}
-                        className="flex-1 px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-all font-medium"
+                        className="flex-1 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-all font-medium"
                       >
                         Generate
                       </button>
@@ -500,22 +500,22 @@ const PasswordManager: React.FC = () => {
                 )}
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">URL</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">URL</label>
                   <input
                     type="url"
                     value={formData.url}
                     onChange={(e) => setFormData({ ...formData, url: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
                     placeholder="https://example.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Category</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Category</label>
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                   >
                     {categories.map(cat => (
                       <option key={cat} value={cat} className="bg-slate-900">{cat}</option>
@@ -524,12 +524,12 @@ const PasswordManager: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Notes</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Notes</label>
                   <textarea
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     rows={3}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400 resize-none"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400 resize-none"
                     placeholder="Additional notes..."
                   />
                 </div>
@@ -544,7 +544,7 @@ const PasswordManager: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all shadow-lg"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all shadow-lg"
                   >
                     {editingPassword ? 'Update' : 'Add'} Password
                   </button>

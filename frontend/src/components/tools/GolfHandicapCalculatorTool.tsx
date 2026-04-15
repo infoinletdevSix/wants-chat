@@ -301,7 +301,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -312,7 +312,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center justify-between gap-3 mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Flag className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -375,7 +375,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                       isDark
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -392,7 +392,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                       isDark
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -408,14 +408,14 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                       isDark
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
               <div className="flex gap-3">
                 <button
                   onClick={addRound}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.golfHandicapCalculator.addRound', 'Add Round')}
@@ -436,15 +436,15 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
 
           {/* Handicap Result */}
           {result && (
-            <div className={`p-6 rounded-lg mb-6 border-l-4 border-[#0D9488] ${
-              isDark ? 'bg-gray-700' : t('tools.golfHandicapCalculator.bg0d948810', 'bg-[#0D9488]/10')
+            <div className={`p-6 rounded-lg mb-6 border-l-4 border-[#6096B4] ${
+              isDark ? 'bg-gray-700' : t('tools.golfHandicapCalculator.bg0d948810', 'bg-[#6096B4]/10')
             }`}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className={`text-sm font-medium mb-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.golfHandicapCalculator.handicapIndex', 'Handicap Index')}
                   </div>
-                  <div className="text-5xl font-bold text-[#0D9488]">
+                  <div className="text-5xl font-bold text-[#6096B4]">
                     {result.handicapIndex}
                   </div>
                 </div>
@@ -495,7 +495,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                         className={`flex items-center justify-between p-3 rounded-lg ${
                           isUsed
                             ? isDark
-                              ? t('tools.golfHandicapCalculator.bg0d948820BorderBorder', 'bg-[#0D9488]/20 border border-[#0D9488]/50') : t('tools.golfHandicapCalculator.bg0d948810BorderBorder', 'bg-[#0D9488]/10 border border-[#0D9488]/30')
+                              ? t('tools.golfHandicapCalculator.bg0d948820BorderBorder', 'bg-[#6096B4]/20 border border-[#6096B4]/50') : t('tools.golfHandicapCalculator.bg0d948810BorderBorder', 'bg-[#6096B4]/10 border border-[#6096B4]/30')
                             : isDark
                             ? 'bg-gray-600'
                             : 'bg-white border border-gray-200'
@@ -516,7 +516,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                         </div>
                         <div className="flex items-center gap-3">
                           <div className="text-right">
-                            <div className={`font-bold ${isUsed ? 'text-[#0D9488]' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                            <div className={`font-bold ${isUsed ? 'text-[#6096B4]' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                               {round.differential}
                             </div>
                             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -577,7 +577,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                         isDark
                           ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -593,13 +593,13 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                         isDark
                           ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
                 <button
                   onClick={calculateTargetScore}
-                  className="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Calculator className="w-5 h-5" />
                   {t('tools.golfHandicapCalculator.calculateTargetScore', 'Calculate Target Score')}
@@ -622,7 +622,7 @@ export const GolfHandicapCalculatorTool: React.FC<GolfHandicapCalculatorToolProp
                         <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                           {t('tools.golfHandicapCalculator.targetScore', 'Target Score')}
                         </div>
-                        <div className="text-2xl font-bold text-[#0D9488]">
+                        <div className="text-2xl font-bold text-[#6096B4]">
                           {targetScoreResult.targetScore}
                         </div>
                       </div>

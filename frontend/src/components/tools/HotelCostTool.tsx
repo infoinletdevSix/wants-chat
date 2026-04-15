@@ -120,7 +120,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Hotel className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -134,9 +134,9 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.hotelCost.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.hotelCost.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -153,7 +153,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="USD">{t('tools.hotelCost.usdUsDollar', 'USD - US Dollar')}</option>
                 <option value="EUR">{t('tools.hotelCost.eurEuro', 'EUR - Euro')}</option>
@@ -181,7 +181,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -198,7 +198,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -215,7 +215,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -237,7 +237,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -256,7 +256,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -281,7 +281,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -298,7 +298,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -315,7 +315,7 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -332,16 +332,16 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
             </div>
 
             {/* Results */}
-            <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/30 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
+            <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/30 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
               <div className="flex items-center gap-2 mb-4">
-                <Calculator className="w-5 h-5 text-[#0D9488]" />
+                <Calculator className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.hotelCost.costBreakdown', 'Cost Breakdown')}
                 </h3>
@@ -398,10 +398,10 @@ export const HotelCostTool: React.FC<HotelCostToolProps> = ({ uiConfig }) => {
                   </div>
                 )}
 
-                <div className={`border-t pt-3 ${isDark ? 'border-teal-700' : 'border-teal-200'}`}>
+                <div className={`border-t pt-3 ${isDark ? 'border-primary-700' : 'border-primary-200'}`}>
                   <div className="flex justify-between">
                     <span className={`text-lg font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.hotelCost.grandTotal', 'Grand Total')}</span>
-                    <span className="text-2xl font-bold text-[#0D9488]">{formatCurrency(calculations.grandTotal)}</span>
+                    <span className="text-2xl font-bold text-[#6096B4]">{formatCurrency(calculations.grandTotal)}</span>
                   </div>
                 </div>
               </div>

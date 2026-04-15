@@ -186,16 +186,16 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <User className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <User className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aIBioGenerator.aiBioGenerator', 'AI Bio Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aIBioGenerator.createProfessionalBiosForAny', 'Create professional bios for any platform')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aIBioGenerator.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -212,7 +212,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
             <select
               value={bioType}
               onChange={(e) => setBioType(e.target.value as BioType)}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {bioTypes.map((t) => (
                 <option key={t.value} value={t.value}>{t.label}</option>
@@ -225,7 +225,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
             <select
               value={tone}
               onChange={(e) => setTone(e.target.value as Tone)}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {tones.map((t) => (
                 <option key={t.value} value={t.value}>{t.label}</option>
@@ -238,7 +238,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
             <select
               value={length}
               onChange={(e) => setLength(e.target.value as Length)}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {lengths.map((l) => (
                 <option key={l.value} value={l.value}>{l.label} ({lengthDescriptions[l.value]})</option>
@@ -256,7 +256,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder={t('tools.aIBioGenerator.eGSarahJohnson', 'e.g., Sarah Johnson')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -267,7 +267,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
               placeholder={t('tools.aIBioGenerator.eGMarketingDirector', 'e.g., Marketing Director')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -278,7 +278,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
               value={formData.industry}
               onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
               placeholder={t('tools.aIBioGenerator.eGHealthcareTechnology', 'e.g., Healthcare, Technology')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -289,7 +289,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
               value={formData.experience}
               onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
               placeholder="e.g., 10"
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -300,7 +300,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
               value={formData.specialty}
               onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
               placeholder={t('tools.aIBioGenerator.eGDigitalMarketingBrand', 'e.g., Digital Marketing, Brand Strategy')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -311,7 +311,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
               value={formData.achievement}
               onChange={(e) => setFormData({ ...formData, achievement: e.target.value })}
               placeholder={t('tools.aIBioGenerator.eGIncreasedRevenueBy', 'e.g., increased revenue by 200%')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
         </div>
@@ -326,7 +326,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
                 onClick={() => setPronouns(p)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   pronouns === p
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -341,7 +341,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
         {/* Generate Button */}
         <button
           onClick={generateBio}
-          className="w-full py-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-teal-500/20"
+          className="w-full py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/20"
         >
           <Sparkles className="w-5 h-5" />
           {t('tools.aIBioGenerator.generateBio', 'Generate Bio')}
@@ -349,9 +349,9 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
 
         {/* Generated Bio */}
         {generatedBio && (
-          <div className={`p-5 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+          <div className={`p-5 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="flex justify-between items-start mb-3">
-              <span className={`text-sm font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+              <span className={`text-sm font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.aIBioGenerator.generatedBio', 'Generated Bio')}
               </span>
               <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -367,7 +367,7 @@ export const AIBioGeneratorTool: React.FC<AIBioGeneratorToolProps> = ({ uiConfig
                 className={`flex-1 py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                   copied
                     ? 'bg-green-500 text-white'
-                    : 'bg-teal-500 hover:bg-teal-600 text-white'
+                    : 'bg-primary-500 hover:bg-primary-600 text-white'
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}

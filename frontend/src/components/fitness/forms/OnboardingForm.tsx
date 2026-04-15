@@ -63,7 +63,7 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
         </div>
         <div className="w-full bg-white/10 rounded-full h-2">
           <div
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
             style={{ width: `${(step / totalSteps) * 100}%` }}
           />
         </div>
@@ -88,8 +88,8 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
                     className={cn(
                       "p-4 rounded-lg border-2 transition-all capitalize text-white",
                       formData.gender === gender
-                        ? "border-teal-400 bg-teal-500/20"
-                        : "border-white/20 bg-white/5 hover:border-teal-400/50"
+                        ? "border-primary-400 bg-primary-500/20"
+                        : "border-white/20 bg-white/5 hover:border-primary-400/50"
                     )}
                   >
                     {gender}
@@ -170,8 +170,8 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
                     className={cn(
                       "w-full p-4 rounded-lg border-2 transition-all text-left",
                       formData.activityLevel === level.value
-                        ? "border-teal-400 bg-teal-500/20"
-                        : "border-white/20 bg-white/5 hover:border-teal-400/50"
+                        ? "border-primary-400 bg-primary-500/20"
+                        : "border-white/20 bg-white/5 hover:border-primary-400/50"
                     )}
                   >
                     <div className="font-medium text-white">{level.label}</div>
@@ -205,8 +205,8 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
                     className={cn(
                       "w-full p-4 rounded-lg border-2 transition-all text-left flex items-center gap-3",
                       formData.fitnessGoal === goal.value
-                        ? "border-teal-400 bg-teal-500/20"
-                        : "border-white/20 bg-white/5 hover:border-teal-400/50"
+                        ? "border-primary-400 bg-primary-500/20"
+                        : "border-white/20 bg-white/5 hover:border-primary-400/50"
                     )}
                   >
                     <span className="text-2xl">{goal.emoji}</span>
@@ -245,7 +245,7 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete, isLoading =
           <Button
             onClick={handleNext}
             disabled={isLoading}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
           >
             {isLoading ? (
               <>

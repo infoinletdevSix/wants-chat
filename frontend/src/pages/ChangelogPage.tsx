@@ -180,7 +180,7 @@ const ChangelogPage: React.FC = () => {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-primary-400 bg-clip-text text-transparent">
                   {t('changelog.hero.title')}
                 </span>
               </h1>

@@ -543,7 +543,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
 
   const labelClass = `block text-sm font-medium mb-1 ${
     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
@@ -554,9 +554,9 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.childEnrollment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.childEnrollment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -564,7 +564,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Baby className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -600,7 +600,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
               />
               <button
                 onClick={() => setShowEnrollmentForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.childEnrollment.newEnrollment', 'New Enrollment')}
@@ -648,7 +648,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 />
               </div>
             </div>
@@ -692,7 +692,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
               {enrollments.length === 0 && (
                 <button
                   onClick={() => setShowEnrollmentForm(true)}
-                  className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.childEnrollment.addFirstEnrollment', 'Add First Enrollment')}
                 </button>
@@ -959,7 +959,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
                         }`}>
                           <div>
                             <p className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                              {guardian.name} {guardian.isPrimary && <span className="text-[#0D9488]">(Primary)</span>}
+                              {guardian.name} {guardian.isPrimary && <span className="text-[#6096B4]">(Primary)</span>}
                             </p>
                             <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                               {guardian.relationship} - {guardian.phone}
@@ -1053,7 +1053,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
                       <button
                         type="button"
                         onClick={addGuardian}
-                        className="ml-auto flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                        className="ml-auto flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                       >
                         <Plus className="w-4 h-4" />
                         {t('tools.childEnrollment.addGuardian', 'Add Guardian')}
@@ -1144,7 +1144,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
                       <button
                         type="button"
                         onClick={addEmergencyContact}
-                        className="ml-auto flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                        className="ml-auto flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                       >
                         <Plus className="w-4 h-4" />
                         {t('tools.childEnrollment.addContact', 'Add Contact')}
@@ -1235,7 +1235,7 @@ export const ChildEnrollmentTool: React.FC<ChildEnrollmentToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={submitEnrollment}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   <Save className="w-4 h-4" />
                   {editingEnrollment ? t('tools.childEnrollment.updateEnrollment', 'Update Enrollment') : t('tools.childEnrollment.createEnrollment', 'Create Enrollment')}

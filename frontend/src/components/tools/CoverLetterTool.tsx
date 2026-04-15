@@ -161,16 +161,16 @@ Format it as a professional business letter.`;
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.coverLetter.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.coverLetter.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.coverLetter.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.coverLetter.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Mail className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Mail className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.coverLetter.aiCoverLetterGenerator', 'AI Cover Letter Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.coverLetter.createCompellingPersonalizedCoverLetters', 'Create compelling, personalized cover letters')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.coverLetter.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -191,7 +191,7 @@ Format it as a professional business letter.`;
               value={jobTitle}
               onChange={(e) => setJobTitle(e.target.value)}
               placeholder={t('tools.coverLetter.eGSeniorSoftwareEngineer', 'e.g., Senior Software Engineer')}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -204,7 +204,7 @@ Format it as a professional business letter.`;
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
               placeholder={t('tools.coverLetter.eGTechInnovationsInc', 'e.g., Tech Innovations Inc.')}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
         </div>
@@ -219,7 +219,7 @@ Format it as a professional business letter.`;
             onChange={(e) => setJobDescription(e.target.value)}
             placeholder={t('tools.coverLetter.pasteTheJobDescriptionHere', 'Paste the job description here to help tailor your cover letter...')}
             rows={6}
-            className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -233,7 +233,7 @@ Format it as a professional business letter.`;
             onChange={(e) => setQualifications(e.target.value)}
             placeholder={t('tools.coverLetter.listYourRelevantSkillsExperiences', 'List your relevant skills, experiences, and achievements that match this role...&#10;&#10;• 5+ years of experience in...&#10;• Led team of 10 developers...&#10;• Increased performance by 40%...')}
             rows={5}
-            className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -246,7 +246,7 @@ Format it as a professional business letter.`;
               const tone = toneOptions.find((t) => t.label === e.target.value);
               if (tone) setSelectedTone(tone);
             }}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-200 text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-200 text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {toneOptions.map((tone) => (
               <option key={tone.label} value={tone.label}>
@@ -267,7 +267,7 @@ Format it as a professional business letter.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !jobTitle || !companyName}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>

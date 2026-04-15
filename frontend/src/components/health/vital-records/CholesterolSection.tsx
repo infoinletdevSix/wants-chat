@@ -12,10 +12,10 @@ const CholesterolSection: React.FC<VitalFormFieldProps> = ({
   getStatusBadge
 }) => {
   return (
-    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-white">
-          <Science className="h-5 w-5 text-teal-400" />
+          <Science className="h-5 w-5 text-primary-400" />
           Cholesterol Levels
         </CardTitle>
         <CardDescription className="text-white/60">

@@ -617,15 +617,15 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const selectClass = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
-  const buttonPrimary = 'bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
+  const buttonPrimary = 'bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
 
   const buttonSecondary = `px-4 py-2 rounded-lg font-medium transition-colors ${
     theme === 'dark' ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -648,7 +648,7 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
         key={toothNumber}
         onClick={() => setSelectedTooth(isSelected ? null : toothNumber)}
         className={`relative w-10 h-14 rounded-lg border-2 transition-all flex flex-col items-center justify-center ${
-          isSelected ? 'ring-2 ring-[#0D9488] ring-offset-2' : ''
+          isSelected ? 'ring-2 ring-[#6096B4] ring-offset-2' : ''
         } ${theme === 'dark' ? 'ring-offset-gray-800' : 'ring-offset-white'}`}
         style={{
           backgroundColor: tooth.condition === 'missing' ? 'transparent' : `${color}20`,
@@ -690,7 +690,7 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
         <div className={cardClass}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Stethoscope className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -953,7 +953,7 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1026,7 +1026,7 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
 
               {/* Selected Tooth Details */}
               {selectedTooth && (
-                <div className={`p-6 rounded-lg border-2 border-[#0D9488] ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
+                <div className={`p-6 rounded-lg border-2 border-[#6096B4] ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
                   <h3 className={`font-bold text-lg mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     Tooth #{selectedTooth} Details
                   </h3>
@@ -1402,7 +1402,7 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
                         <p className={`font-semibold mt-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                           {item.toothNumber ? `#${item.toothNumber} - ` : ''}{item.procedure}
                         </p>
-                        <p className={`text-lg font-bold text-[#0D9488]`}>
+                        <p className={`text-lg font-bold text-[#6096B4]`}>
                           ${item.estimatedCost.toLocaleString()}
                         </p>
                       </div>
@@ -1443,7 +1443,7 @@ export const DentalChartTool: React.FC<DentalChartToolProps> = ({ uiConfig }) =>
                     <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.dentalChart.totalEstimatedCostPendingScheduled', 'Total Estimated Cost (Pending/Scheduled):')}
                     </span>
-                    <span className="text-2xl font-bold text-[#0D9488]">
+                    <span className="text-2xl font-bold text-[#6096B4]">
                       ${totalEstimatedCosts.toLocaleString()}
                     </span>
                   </div>

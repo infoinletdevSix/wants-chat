@@ -285,7 +285,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
     <Card className={isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'}>
       <CardHeader>
         <CardTitle className={`${isDark ? 'text-white' : 'text-gray-900'} flex items-center gap-2`}>
-          <Eye className="w-5 h-5 text-[#0D9488]" />
+          <Eye className="w-5 h-5 text-[#6096B4]" />
           {activeTest === 'snellen' && 'Snellen Chart Test Instructions'}
           {activeTest === 'colorBlind' && 'Color Blindness Test Instructions'}
           {activeTest === 'astigmatism' && 'Astigmatism Test Instructions'}
@@ -335,7 +335,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
             setShowInstructions(false);
             setTestStarted(true);
           }}
-          className="w-full mt-4 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="w-full mt-4 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           Start Test
           <ChevronRight className="w-5 h-5" />
@@ -420,14 +420,14 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
           value={colorBlindAnswer}
           onChange={(e) => setColorBlindAnswer(e.target.value)}
           placeholder={t('tools.visionTest.enterTheNumberYouSee', 'Enter the number you see')}
-          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D9488] ${
+          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6096B4] ${
             isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
           }`}
         />
         <button
           onClick={handleColorBlindAnswer}
           disabled={!colorBlindAnswer.trim()}
-          className="w-full px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors"
+          className="w-full px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors"
         >
           {t('tools.visionTest.submitAnswer', 'Submit Answer')}
         </button>
@@ -505,7 +505,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
               <div className={`rounded-lg p-4 ${isDark ? 'bg-gray-700/50' : 'bg-gray-100'}`}>
                 <h4 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.visionTest.visualAcuity', 'Visual Acuity')}</h4>
                 <div className="flex items-center gap-4">
-                  <div className="text-4xl font-bold text-[#0D9488]">
+                  <div className="text-4xl font-bold text-[#6096B4]">
                     {testResult.snellenRating}
                   </div>
                   <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -526,7 +526,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
               <div className={`rounded-lg p-4 ${isDark ? 'bg-gray-700/50' : 'bg-gray-100'}`}>
                 <h4 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.visionTest.colorVision', 'Color Vision')}</h4>
                 <div className="flex items-center gap-4">
-                  <div className="text-4xl font-bold text-[#0D9488]">
+                  <div className="text-4xl font-bold text-[#6096B4]">
                     {colorBlindPassed}/{colorBlindTotal}
                   </div>
                   <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -603,7 +603,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
               }}
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                 activeTest === 'snellen'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
@@ -616,7 +616,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
               }}
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                 activeTest === 'colorBlind'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
@@ -629,7 +629,7 @@ export const VisionTestTool = ({ uiConfig }: VisionTestToolProps) => {
               }}
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                 activeTest === 'astigmatism'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >

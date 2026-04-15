@@ -118,8 +118,8 @@ export const WaterUsageCalculatorTool: React.FC<WaterUsageCalculatorToolProps> =
       {/* Header */}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-blue-900/20' : 'bg-gradient-to-r from-white to-blue-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Droplets className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Droplets className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.waterUsageCalculator.waterUsageCalculator', 'Water Usage Calculator')}</h3>
@@ -139,7 +139,7 @@ export const WaterUsageCalculatorTool: React.FC<WaterUsageCalculatorToolProps> =
             <select
               value={householdSize}
               onChange={(e) => setHouseholdSize(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             >
               {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                 <option key={n} value={n}>
@@ -159,29 +159,29 @@ export const WaterUsageCalculatorTool: React.FC<WaterUsageCalculatorToolProps> =
               value={waterRate}
               onChange={(e) => setWaterRate(e.target.value)}
               placeholder="0.005"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
         </div>
 
         {/* Usage Summary */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.waterUsageCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.waterUsageCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.waterUsageCalculator.dailyUsage', 'Daily Usage')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{calculations.daily.toFixed(0)} gal</div>
+              <div className="text-xl font-bold text-[#6096B4]">{calculations.daily.toFixed(0)} gal</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.waterUsageCalculator.monthlyUsage', 'Monthly Usage')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{calculations.monthly.toFixed(0)} gal</div>
+              <div className="text-xl font-bold text-[#6096B4]">{calculations.monthly.toFixed(0)} gal</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.waterUsageCalculator.monthlyCost', 'Monthly Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.monthlyCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.monthlyCost.toFixed(2)}</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.waterUsageCalculator.perPerson', 'Per Person')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{calculations.perPerson.toFixed(0)} gal/day</div>
+              <div className="text-xl font-bold text-[#6096B4]">{calculations.perPerson.toFixed(0)} gal/day</div>
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ export const WaterUsageCalculatorTool: React.FC<WaterUsageCalculatorToolProps> =
             className={`w-full flex items-center justify-between p-4 rounded-lg ${isDark ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-50 hover:bg-gray-100'} transition-colors`}
           >
             <div className="flex items-center gap-2">
-              <TrendingDown className={`w-5 h-5 ${isDark ? t('tools.waterUsageCalculator.text0d9488', 'text-[#0D9488]') : t('tools.waterUsageCalculator.text0d94882', 'text-[#0D9488]')}`} />
+              <TrendingDown className={`w-5 h-5 ${isDark ? t('tools.waterUsageCalculator.text0d9488', 'text-[#6096B4]') : t('tools.waterUsageCalculator.text0d94882', 'text-[#6096B4]')}`} />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.waterUsageCalculator.waterSavingTips', 'Water Saving Tips')}</span>
             </div>
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -330,7 +330,7 @@ export const WaterUsageCalculatorTool: React.FC<WaterUsageCalculatorToolProps> =
                     className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}
                   >
                     <div className="flex items-start gap-2">
-                      <Droplets className={`w-4 h-4 mt-0.5 text-[#0D9488]`} />
+                      <Droplets className={`w-4 h-4 mt-0.5 text-[#6096B4]`} />
                       <div>
                         <p className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.tip}</p>
                         <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>

@@ -275,10 +275,10 @@ Please create an engaging post optimized for ${platform.label}, following best p
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Share2 className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Share2 className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white">
@@ -288,7 +288,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
               {t('tools.socialMediaPost.generateEngagingSocialMediaPosts', 'Generate engaging social media posts with AI')}
             </p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>
                   {isEditFromGallery
@@ -313,7 +313,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
                 onClick={() => setPlatform(p)}
                 className={`p-3 rounded-xl border-2 transition-all ${
                   platform.value === p.value
-                    ? t('tools.socialMediaPost.border0d9488Bg0d948810', 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]') : t('tools.socialMediaPost.borderGray200DarkBorder', 'border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-[#0D9488]/50')
+                    ? t('tools.socialMediaPost.border0d9488Bg0d948810', 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]') : t('tools.socialMediaPost.borderGray200DarkBorder', 'border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-[#6096B4]/50')
                 }`}
               >
                 <div className="font-semibold text-sm">{p.label}</div>
@@ -335,7 +335,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.socialMediaPost.whatDoYouWantTo', 'What do you want to post about? E.g., \'Launching our new product\', \'Tips for better productivity\', etc.')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -350,7 +350,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
               const selected = tones.find((t) => t.value === e.target.value);
               if (selected) setTone(selected);
             }}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
           >
             {tones.map((option) => (
               <option key={option.value} value={option.value}>
@@ -371,7 +371,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
                 type="checkbox"
                 checked={includeHashtags}
                 onChange={(e) => setIncludeHashtags(e.target.checked)}
-                className="w-4 h-4 text-[#0D9488] border-gray-300 rounded focus:ring-[#0D9488] focus:ring-2"
+                className="w-4 h-4 text-[#6096B4] border-gray-300 rounded focus:ring-[#6096B4] focus:ring-2"
               />
               <span className="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-1">
                 <Hash className="w-4 h-4" />
@@ -383,7 +383,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
                 type="checkbox"
                 checked={includeEmojis}
                 onChange={(e) => setIncludeEmojis(e.target.checked)}
-                className="w-4 h-4 text-[#0D9488] border-gray-300 rounded focus:ring-[#0D9488] focus:ring-2"
+                className="w-4 h-4 text-[#6096B4] border-gray-300 rounded focus:ring-[#6096B4] focus:ring-2"
               />
               <span className="text-sm text-gray-700 dark:text-gray-300">{t('tools.socialMediaPost.includeEmojis', 'Include Emojis')}</span>
             </label>
@@ -400,7 +400,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
             onChange={(e) => setAdditionalNotes(e.target.value)}
             placeholder={t('tools.socialMediaPost.anySpecificRequirementsCallTo', 'Any specific requirements, call-to-action, or details to include...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -415,7 +415,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -473,7 +473,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="flex items-center gap-2 px-3 py-1.5 text-sm bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 text-teal-700 dark:text-teal-300 rounded-lg transition-colors disabled:opacity-50"
+                  className="flex items-center gap-2 px-3 py-1.5 text-sm bg-primary-50 dark:bg-primary-900/30 hover:bg-primary-100 dark:hover:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-lg transition-colors disabled:opacity-50"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.socialMediaPost.save', 'Save')}
@@ -514,7 +514,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
                   content: e.target.value,
                 })}
                 rows={6}
-                className="w-full p-3 border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all resize-y leading-relaxed"
+                className="w-full p-3 border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none transition-all resize-y leading-relaxed"
                 placeholder={t('tools.socialMediaPost.generatedPostWillAppearHere', 'Generated post will appear here...')}
               />
               {generatedPost.hashtags.length > 0 && (
@@ -526,7 +526,7 @@ Please create an engaging post optimized for ${platform.label}, following best p
                     {generatedPost.hashtags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded-lg text-xs font-medium"
+                        className="px-2 py-1 bg-[#6096B4]/10 text-[#6096B4] rounded-lg text-xs font-medium"
                       >
                         {tag}
                       </span>

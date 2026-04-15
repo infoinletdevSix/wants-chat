@@ -171,8 +171,8 @@ Please structure the newsletter professionally with clear sections marked by hea
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Mail className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Mail className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -184,9 +184,9 @@ Please structure the newsletter professionally with clear sections marked by hea
           </div>
         </div>
         {isPrefilled && (
-          <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-            <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-            <span className="text-xs text-[#0D9488] font-medium">{t('tools.newsletter.prefilled', 'Prefilled')}</span>
+          <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+            <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+            <span className="text-xs text-[#6096B4] font-medium">{t('tools.newsletter.prefilled', 'Prefilled')}</span>
           </div>
         )}
       </div>
@@ -206,7 +206,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             >
               {newsletterTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -228,7 +228,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             >
               {tones.map((t) => (
                 <option key={t.value} value={t.value}>
@@ -253,7 +253,7 @@ Please structure the newsletter professionally with clear sections marked by hea
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
           />
         </div>
 
@@ -271,7 +271,7 @@ Please structure the newsletter professionally with clear sections marked by hea
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] resize-none`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] resize-none`}
           />
         </div>
 
@@ -286,7 +286,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                 type="checkbox"
                 checked={includeHeader}
                 onChange={(e) => setIncludeHeader(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.newsletter.header', 'Header')}
@@ -298,7 +298,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                 type="checkbox"
                 checked={includeBody}
                 onChange={(e) => setIncludeBody(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.newsletter.body', 'Body')}
@@ -310,7 +310,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                 type="checkbox"
                 checked={includeCta}
                 onChange={(e) => setIncludeCta(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.newsletter.cta', 'CTA')}
@@ -322,7 +322,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                 type="checkbox"
                 checked={includeFooter}
                 onChange={(e) => setIncludeFooter(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.newsletter.footer', 'Footer')}
@@ -350,7 +350,7 @@ Please structure the newsletter professionally with clear sections marked by hea
           <button
             onClick={handleGenerate}
             disabled={isGenerating || !mainTopics.trim()}
-            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#0D9488]/20"
+            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#6096B4]/20"
           >
             {isGenerating ? (
               <>
@@ -402,7 +402,7 @@ Please structure the newsletter professionally with clear sections marked by hea
                   disabled={isSaving}
                   className={`flex items-center gap-2 px-3 py-1 rounded-lg transition-colors text-sm ${
                     isSaving
-                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.newsletter.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.newsletter.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                   }`}
                 >
                   {isSaving ? (

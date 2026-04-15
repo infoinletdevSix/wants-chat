@@ -300,7 +300,7 @@ const ProfilePage: React.FC = () => {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
           <p className="text-white/70">Loading your profile...</p>
         </div>
       </div>
@@ -322,7 +322,7 @@ const ProfilePage: React.FC = () => {
               <RotateCcw className="h-4 w-4 mr-2" />
               Try Again
             </Button>
-            <Button onClick={() => navigate('/language-learner/dashboard')} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+            <Button onClick={() => navigate('/language-learner/dashboard')} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
               Back to Dashboard
             </Button>
           </div>
@@ -391,10 +391,10 @@ const ProfilePage: React.FC = () => {
 
       <div>
         {/* Profile Header */}
-        <GlassCard className="mb-6 bg-gradient-to-r from-teal-500/10 to-cyan-500/10" hover={false} glow>
+        <GlassCard className="mb-6 bg-gradient-to-r from-primary-500/10 to-cyan-500/10" hover={false} glow>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-4">
-              <div className="w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-teal-500/30">
+              <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-primary-500/30">
                 {(user?.name || 'L').charAt(0).toUpperCase()}
               </div>
               <div>
@@ -404,7 +404,7 @@ const ProfilePage: React.FC = () => {
                 <div className="flex items-center space-x-3 mt-2">
                   <LanguageFlag languageCode="es" showName languageName="Spanish" />
                   {userPosition?.rank_position && (
-                    <Badge className="bg-teal-500/20 text-teal-300 border-teal-500/30">
+                    <Badge className="bg-primary-500/20 text-primary-300 border-primary-500/30">
                       Rank #{userPosition.rank_position}
                     </Badge>
                   )}
@@ -437,7 +437,7 @@ const ProfilePage: React.FC = () => {
               {/* Course Progress */}
               <GlassCard hover={false}>
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
                     <BookOpen className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-lg font-semibold text-white">Course Progress</span>
@@ -458,7 +458,7 @@ const ProfilePage: React.FC = () => {
                     </div>
                     <div className="h-3 bg-white/10 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300"
+                        className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
                         style={{ width: `${(lessonProgress.lesson_progress.units_completed / lessonProgress.lesson_progress.total_units) * 100}%` }}
                       />
                     </div>
@@ -472,7 +472,7 @@ const ProfilePage: React.FC = () => {
               {/* Word Learning Progress */}
               <GlassCard hover={false}>
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-500 to-primary-500">
                     <BookOpen className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-lg font-semibold text-white">Word Learning Progress</span>
@@ -493,7 +493,7 @@ const ProfilePage: React.FC = () => {
                     </div>
                     <div className="h-3 bg-white/10 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full transition-all duration-300"
+                        className="h-full bg-gradient-to-r from-emerald-500 to-primary-500 rounded-full transition-all duration-300"
                         style={{ width: `${(vocabularyData.completed / vocabularyData.total) * 100}%` }}
                       />
                     </div>
@@ -547,7 +547,7 @@ const ProfilePage: React.FC = () => {
         {/* Achievements Section */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <Award className="h-6 w-6 text-teal-400" />
+            <Award className="h-6 w-6 text-primary-400" />
             Achievements
           </h2>
           {achievementsData.length === 0 ? (
@@ -559,7 +559,7 @@ const ProfilePage: React.FC = () => {
                   key={achievement.id}
                   className={`text-center p-4 ${
                     achievement.unlocked
-                      ? 'bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border-teal-500/30'
+                      ? 'bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border-primary-500/30'
                       : 'opacity-60'
                   }`}
                   hover={false}
@@ -579,7 +579,7 @@ const ProfilePage: React.FC = () => {
                     <div className="mt-2">
                       <div className="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
                         <div
-                          className="bg-gradient-to-r from-teal-500 to-cyan-500 h-1.5 rounded-full"
+                          className="bg-gradient-to-r from-primary-500 to-cyan-500 h-1.5 rounded-full"
                           style={{ width: `${achievement.progress}%` }}
                         />
                       </div>
@@ -600,7 +600,7 @@ const ProfilePage: React.FC = () => {
           <div className="space-y-6">
             <GlassCard hover={false}>
               <div className="flex items-center gap-2 mb-2">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
                   <BarChart3 className="h-5 w-5 text-white" />
                 </div>
                 <span className="text-lg font-semibold text-white">This Week's Progress</span>
@@ -611,16 +611,16 @@ const ProfilePage: React.FC = () => {
                 <div className="space-y-6">
                   {/* Summary Stats */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/10 rounded-xl p-4 border border-teal-500/20">
+                    <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/10 rounded-xl p-4 border border-primary-500/20">
                       <div className="flex items-center gap-2 mb-2">
-                        <TrendingUp className="h-4 w-4 text-teal-400" />
+                        <TrendingUp className="h-4 w-4 text-primary-400" />
                         <p className="text-sm font-medium text-white/70">Total XP</p>
                       </div>
-                      <p className="text-3xl font-bold text-teal-400">
+                      <p className="text-3xl font-bold text-primary-400">
                         {weeklyXp.reduce((a, b) => a + b, 0)}
                       </p>
                     </div>
-                    <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/10 rounded-xl p-4 border border-emerald-500/20">
+                    <div className="bg-gradient-to-br from-emerald-500/20 to-primary-500/10 rounded-xl p-4 border border-emerald-500/20">
                       <div className="flex items-center gap-2 mb-2">
                         <Flame className="h-4 w-4 text-emerald-400" />
                         <p className="text-sm font-medium text-white/70">Active Days</p>

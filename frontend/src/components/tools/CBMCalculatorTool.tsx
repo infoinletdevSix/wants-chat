@@ -130,10 +130,10 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Box className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Box className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cBMCalculator.cbmCalculator', 'CBM Calculator')}</h3>
@@ -144,9 +144,9 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.cBMCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.cBMCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -160,7 +160,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
             <button
               key={u.value}
               onClick={() => setUnit(u.value as typeof unit)}
-              className={`flex-1 py-2 rounded-lg transition-colors ${unit === u.value ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              className={`flex-1 py-2 rounded-lg transition-colors ${unit === u.value ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             >
               {u.label}
             </button>
@@ -176,7 +176,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
             </label>
             <button
               onClick={addItem}
-              className="flex items-center gap-1 px-3 py-1 text-sm bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors"
+              className="flex items-center gap-1 px-3 py-1 text-sm bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.cBMCalculator.addItem', 'Add Item')}
@@ -205,7 +205,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
                     value={item.length}
                     onChange={(e) => updateItem(item.id, 'length', e.target.value)}
                     placeholder={t('tools.cBMCalculator.length', 'Length')}
-                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Length ({unit})</span>
                 </div>
@@ -215,7 +215,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
                     value={item.width}
                     onChange={(e) => updateItem(item.id, 'width', e.target.value)}
                     placeholder={t('tools.cBMCalculator.width', 'Width')}
-                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Width ({unit})</span>
                 </div>
@@ -225,7 +225,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
                     value={item.height}
                     onChange={(e) => updateItem(item.id, 'height', e.target.value)}
                     placeholder={t('tools.cBMCalculator.height', 'Height')}
-                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Height ({unit})</span>
                 </div>
@@ -236,7 +236,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
                     value={item.quantity}
                     onChange={(e) => updateItem(item.id, 'quantity', e.target.value)}
                     placeholder={t('tools.cBMCalculator.qty', 'Qty')}
-                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                   <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.cBMCalculator.quantity', 'Quantity')}</span>
                 </div>
@@ -251,9 +251,9 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cBMCalculator.totalVolume', 'Total Volume')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {calculations.totalCBM.toFixed(4)}
           </div>
           <div className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.cBMCalculator.cubicMetersCbm', 'Cubic Meters (CBM)')}</div>
@@ -283,7 +283,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
               </div>
               <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-2">
                 <div
-                  className="h-full bg-teal-500 rounded-full transition-all"
+                  className="h-full bg-primary-500 rounded-full transition-all"
                   style={{ width: `${Math.min(container.data.utilization, 100)}%` }}
                 />
               </div>
@@ -291,7 +291,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
                 <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                   {container.data.utilization.toFixed(1)}% utilized
                 </span>
-                <span className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                <span className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                   {container.data.needed} container{container.data.needed !== 1 ? 's' : ''} needed
                 </span>
               </div>
@@ -301,7 +301,7 @@ export const CBMCalculatorTool: React.FC<CBMCalculatorToolProps> = ({ uiConfig }
 
         {/* Info Box */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.cBMCalculator.cbmCubicMeters', 'CBM (Cubic Meters)')}</p>
             <p>{t('tools.cBMCalculator.cbmIsTheStandardInternational', 'CBM is the standard international unit for measuring shipping volume. One CBM equals the volume of a cube with 1 meter sides. Most freight rates are calculated based on CBM or weight, whichever is greater.')}</p>

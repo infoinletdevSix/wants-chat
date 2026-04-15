@@ -596,9 +596,9 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.sportsLeague.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.sportsLeague.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -606,7 +606,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Trophy className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -663,7 +663,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -683,7 +683,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
             { label: 'Active Leagues', value: analytics.activeLeagues, icon: <TrendingUp className="w-5 h-5" />, color: 'bg-green-500' },
             { label: 'Total Teams', value: analytics.totalTeams, icon: <Users className="w-5 h-5" />, color: 'bg-purple-500' },
             { label: 'Upcoming Games', value: analytics.upcomingGames, icon: <Calendar className="w-5 h-5" />, color: 'bg-orange-500' },
-            { label: 'Completed Games', value: analytics.completedGames, icon: <Medal className="w-5 h-5" />, color: 'bg-teal-500' },
+            { label: 'Completed Games', value: analytics.completedGames, icon: <Medal className="w-5 h-5" />, color: 'bg-primary-500' },
           ].map((stat, index) => (
             <Card key={index} className={theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white'}>
               <CardContent className="p-4">
@@ -715,7 +715,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               <option value="">{t('tools.sportsLeague.selectALeague', 'Select a league...')}</option>
               {leagues.map(league => (
@@ -744,7 +744,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -754,7 +754,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.sportsLeague.allSports', 'All Sports')}</option>
                   {SPORT_TYPES.map(sport => (
@@ -764,7 +764,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
               </div>
               <button
                 onClick={() => setShowLeagueForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.sportsLeague.createLeague', 'Create League')}
@@ -797,7 +797,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -811,7 +811,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {SPORT_TYPES.map(sport => (
                           <option key={sport.sport} value={sport.sport}>{sport.icon} {sport.label}</option>
@@ -831,7 +831,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -845,7 +845,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {DIVISIONS.map(div => (
                           <option key={div.division} value={div.division}>{div.label}</option>
@@ -864,7 +864,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -879,7 +879,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -896,7 +896,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -912,7 +912,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -927,7 +927,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                     </button>
                     <button
                       onClick={addLeague}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                     >
                       <Save className="w-4 h-4 inline mr-2" />
                       {t('tools.sportsLeague.createLeague2', 'Create League')}
@@ -982,7 +982,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                             setSelectedLeagueId(league.id);
                             setActiveTab('teams');
                           }}
-                          className="flex-1 px-3 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] text-sm"
+                          className="flex-1 px-3 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] text-sm"
                         >
                           {t('tools.sportsLeague.manage', 'Manage')}
                         </button>
@@ -1018,7 +1018,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowTeamForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.sportsLeague.registerTeam2', 'Register Team')}
@@ -1050,7 +1050,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <div>
@@ -1065,7 +1065,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <div>
@@ -1080,7 +1080,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <div>
@@ -1095,7 +1095,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                       </div>
@@ -1110,7 +1110,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                         </button>
                         <button
                           onClick={addTeam}
-                          className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                          className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                         >
                           <Save className="w-4 h-4 inline mr-2" />
                           {t('tools.sportsLeague.registerTeam3', 'Register Team')}
@@ -1161,7 +1161,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                                 </p>
                               </div>
                               <div className="text-center">
-                                <p className={`text-lg font-bold text-[#0D9488]`}>
+                                <p className={`text-lg font-bold text-[#6096B4]`}>
                                   {team.points}
                                 </p>
                                 <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -1203,7 +1203,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowGameForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.sportsLeague.scheduleGame2', 'Schedule Game')}
@@ -1234,7 +1234,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           >
                             <option value="">{t('tools.sportsLeague.selectHomeTeam', 'Select home team...')}</option>
                             {leagueTeams.map(team => (
@@ -1253,7 +1253,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           >
                             <option value="">{t('tools.sportsLeague.selectAwayTeam', 'Select away team...')}</option>
                             {leagueTeams.map(team => (
@@ -1273,7 +1273,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <div>
@@ -1288,7 +1288,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <div>
@@ -1304,7 +1304,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <div>
@@ -1320,7 +1320,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                       </div>
@@ -1335,7 +1335,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                         </button>
                         <button
                           onClick={addGame}
-                          className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                          className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                         >
                           <Save className="w-4 h-4 inline mr-2" />
                           {t('tools.sportsLeague.scheduleGame3', 'Schedule Game')}
@@ -1503,7 +1503,7 @@ export const SportsLeagueTool: React.FC<SportsLeagueToolProps> = ({
                             }`}>
                               {team.goalsFor - team.goalsAgainst > 0 ? '+' : ''}{team.goalsFor - team.goalsAgainst}
                             </td>
-                            <td className={`text-center py-3 px-4 font-bold text-[#0D9488]`}>
+                            <td className={`text-center py-3 px-4 font-bold text-[#6096B4]`}>
                               {team.points}
                             </td>
                           </tr>

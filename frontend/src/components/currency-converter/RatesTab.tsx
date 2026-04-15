@@ -25,7 +25,7 @@ const popularCurrencies = [
   { code: 'EUR', name: 'Euro', color: 'bg-gradient-to-br from-emerald-500 to-emerald-600' },
   { code: 'JPY', name: 'Japanese Yen', color: 'bg-gradient-to-br from-orange-500 to-orange-600' },
   { code: 'GBP', name: 'British Pound', color: 'bg-gradient-to-br from-purple-500 to-purple-600' },
-  { code: 'AUD', name: 'Australian Dollar', color: 'bg-gradient-to-br from-teal-500 to-teal-600' },
+  { code: 'AUD', name: 'Australian Dollar', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'CAD', name: 'Canadian Dollar', color: 'bg-gradient-to-br from-red-500 to-red-600' },
   { code: 'CHF', name: 'Swiss Franc', color: 'bg-gradient-to-br from-indigo-500 to-indigo-600' },
   { code: 'CNY', name: 'Chinese Yuan', color: 'bg-gradient-to-br from-pink-500 to-pink-600' },
@@ -117,7 +117,7 @@ const RatesTab: React.FC = () => {
       <div className="flex justify-center items-center h-96">
         <div className="text-center">
           <div className="p-4 bg-white/10 backdrop-blur-xl rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center border border-white/20">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-400"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-400"></div>
           </div>
           <p className="text-white/60">Loading exchange rates...</p>
         </div>
@@ -132,7 +132,7 @@ const RatesTab: React.FC = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <div className="p-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg">
                 <Icon path={mdiBank} size={1.2} className="text-white" />
               </div>
               Exchange Rates
@@ -142,7 +142,7 @@ const RatesTab: React.FC = () => {
             </p>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-teal-300">{rates ? Object.keys(rates).length : 0}</div>
+            <div className="text-2xl font-bold text-primary-300">{rates ? Object.keys(rates).length : 0}</div>
             <div className="text-xs text-white/60">Currency Pairs</div>
             <div className="inline-block bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-2 py-1 text-xs text-white/80 mt-1">
               <Icon path={mdiClockOutline} size={0.4} className="mr-1 inline" />
@@ -156,7 +156,7 @@ const RatesTab: React.FC = () => {
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-white">Popular Exchange Rates</h3>
-            <div className="inline-block bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-400/30 rounded-full px-3 py-1 text-xs text-white/80">
+            <div className="inline-block bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-400/30 rounded-full px-3 py-1 text-xs text-white/80">
               <Icon path={mdiTrendingUp} size={0.5} className="inline mr-1" />
               30-Day Trends
             </div>
@@ -171,7 +171,7 @@ const RatesTab: React.FC = () => {
               <SelectTrigger id="base-currency" className="h-12 rounded-lg bg-white/10 border-white/20 text-white">
                 <SelectValue placeholder="Select currency" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border-primary-400/30">
                 {popularCurrencies.map(currency => (
                   <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                     <div className="flex items-center gap-2">
@@ -192,7 +192,7 @@ const RatesTab: React.FC = () => {
               const currencyInfo = popularCurrencies.find(c => c.code === currency);
 
               return (
-                <div key={currency} className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:shadow-lg hover:shadow-teal-500/10 transition-all hover:scale-105 duration-200 p-4">
+                <div key={currency} className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:shadow-lg hover:shadow-primary-500/10 transition-all hover:scale-105 duration-200 p-4">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <div className={`w-8 h-8 rounded-full ${currencyInfo?.color || 'bg-gray-500'} flex items-center justify-center shadow-sm`}>
@@ -212,7 +212,7 @@ const RatesTab: React.FC = () => {
                   <div className="space-y-3">
                     <div>
                       <p className="text-sm text-white/60 mb-1">Exchange Rate</p>
-                      <p className="text-xl font-bold text-teal-300">{data.rate.toFixed(4)}</p>
+                      <p className="text-xl font-bold text-primary-300">{data.rate.toFixed(4)}</p>
                       <p className="text-xs text-white/60">1 {baseCurrency} = {data.rate.toFixed(4)} {currency}</p>
                     </div>
 
@@ -252,7 +252,7 @@ const RatesTab: React.FC = () => {
                   <SelectTrigger id="from-currency-user" className="h-12 rounded-lg bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select currency" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {popularCurrencies.map(currency => (
                       <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                         <div className="flex items-center gap-2">
@@ -274,7 +274,7 @@ const RatesTab: React.FC = () => {
                   <SelectTrigger id="to-currency-user" className="h-12 rounded-lg bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select currency" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {popularCurrencies.map(currency => (
                       <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                         <div className="flex items-center gap-2">
@@ -289,7 +289,7 @@ const RatesTab: React.FC = () => {
               </div>
               <Button
                 onClick={handleAddRate}
-                className="h-12 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2"
+                className="h-12 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2"
                 disabled={!fromCurrency || !toCurrency || fromCurrency === toCurrency}
               >
                 <Icon path={mdiPlusCircle} size={0.8} />
@@ -305,7 +305,7 @@ const RatesTab: React.FC = () => {
                   const toCurrencyInfo = popularCurrencies.find(c => c.code === rate.to);
 
                   return (
-                    <div key={index} className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border border-teal-400/30 rounded-xl hover:shadow-md transition-all duration-200 p-4">
+                    <div key={index} className="bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-400/30 rounded-xl hover:shadow-md transition-all duration-200 p-4">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
                           <div className="flex items-center gap-1">
@@ -326,7 +326,7 @@ const RatesTab: React.FC = () => {
 
                       <div>
                         <p className="text-sm text-white/60 mb-1">Exchange Rate</p>
-                        <p className="text-xl font-bold text-teal-300">{rate.rate.toFixed(4)}</p>
+                        <p className="text-xl font-bold text-primary-300">{rate.rate.toFixed(4)}</p>
                         <p className="text-xs text-white/60">1 {rate.from} = {rate.rate.toFixed(4)} {rate.to}</p>
                       </div>
                     </div>

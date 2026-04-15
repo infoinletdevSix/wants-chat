@@ -302,7 +302,7 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
           <div className="p-2 bg-black/10 dark:bg-white/10 rounded-lg">
             <Twitter className="w-5 h-5 text-black dark:text-white" />
@@ -311,7 +311,7 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aITwitterThread.aiTwitterXThreadGenerator', 'AI Twitter/X Thread Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aITwitterThread.createViralTwitterThreadsThat', 'Create viral Twitter threads that engage your audience')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aITwitterThread.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -331,14 +331,14 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
                 onClick={() => setThreadType(type.value)}
                 className={`p-3 rounded-xl text-left transition-all ${
                   threadType === type.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                 }`}
               >
                 <div className="font-medium text-sm">{type.label}</div>
-                <div className={`text-xs ${threadType === type.value ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{type.desc}</div>
+                <div className={`text-xs ${threadType === type.value ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{type.desc}</div>
               </button>
             ))}
           </div>
@@ -353,7 +353,7 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
               value={formData.topic}
               onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
               placeholder={t('tools.aITwitterThread.eGProductivityStartupsWriting', 'e.g., productivity, startups, writing')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -364,7 +364,7 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
               value={formData.mainPoint}
               onChange={(e) => setFormData({ ...formData, mainPoint: e.target.value })}
               placeholder={t('tools.aITwitterThread.eGConsistencyBeatsTalent', 'e.g., Consistency beats talent')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
         </div>
@@ -377,21 +377,21 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
             value={formData.point1}
             onChange={(e) => setFormData({ ...formData, point1: e.target.value })}
             placeholder={t('tools.aITwitterThread.firstKeyPoint', 'First key point')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
           <input
             type="text"
             value={formData.point2}
             onChange={(e) => setFormData({ ...formData, point2: e.target.value })}
             placeholder={t('tools.aITwitterThread.secondKeyPoint', 'Second key point')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
           <input
             type="text"
             value={formData.point3}
             onChange={(e) => setFormData({ ...formData, point3: e.target.value })}
             placeholder={t('tools.aITwitterThread.thirdKeyPoint', 'Third key point')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
         </div>
 
@@ -404,7 +404,7 @@ export const AITwitterThreadTool: React.FC<AITwitterThreadToolProps> = ({ uiConf
             max="15"
             value={tweetCount}
             onChange={(e) => setTweetCount(parseInt(e.target.value))}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary-500"
           />
         </div>
 

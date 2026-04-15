@@ -469,7 +469,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -485,11 +485,11 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
         tableBg: 'bg-gray-50',
       },
       professional: {
-        header: 'bg-[#0D9488]',
+        header: 'bg-[#6096B4]',
         headerText: 'text-white',
-        accent: 'text-[#0D9488]',
-        border: 'border-[#0D9488]',
-        tableBg: 'bg-teal-50',
+        accent: 'text-[#6096B4]',
+        border: 'border-[#6096B4]',
+        tableBg: 'bg-primary-50',
       },
       modern: {
         header: 'bg-gradient-to-r from-purple-600 to-blue-600',
@@ -651,7 +651,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const labelClass = `block text-sm font-medium mb-1.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -683,9 +683,9 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
         <div className="max-w-7xl mx-auto">
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.invoiceGenerator.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.invoiceGenerator.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
             </div>
           )}
 
@@ -693,8 +693,8 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
           <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6 mb-6`}>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-lg">
-                  <FileText className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-lg">
+                  <FileText className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -758,7 +758,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                   onClick={() => setShowPreview(!showPreview)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
                     showPreview
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -769,7 +769,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handlePrint}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                 >
                   <Printer className="w-4 h-4" />
                   {t('tools.invoiceGenerator.print', 'Print')}
@@ -825,7 +825,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                             <div className="flex gap-2">
                               <button
                                 onClick={() => handleLoadInvoice(invoice)}
-                                className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                                className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                                 title={t('tools.invoiceGenerator.loadInvoice', 'Load Invoice')}
                               >
                                 <Download className="w-4 h-4" />
@@ -855,7 +855,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
               {/* Business Info */}
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6`}>
                 <div className="flex items-center gap-3 mb-4">
-                  <Building2 className="w-5 h-5 text-[#0D9488]" />
+                  <Building2 className="w-5 h-5 text-[#6096B4]" />
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.invoiceGenerator.businessInformation', 'Business Information')}
                   </h2>
@@ -881,7 +881,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                   ) : (
                     <label
                       className={`flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed ${
-                        isDark ? t('tools.invoiceGenerator.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]') : t('tools.invoiceGenerator.borderGray300HoverBorder', 'border-gray-300 hover:border-[#0D9488]')
+                        isDark ? t('tools.invoiceGenerator.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]') : t('tools.invoiceGenerator.borderGray300HoverBorder', 'border-gray-300 hover:border-[#6096B4]')
                       } rounded-xl cursor-pointer transition-colors`}
                     >
                       <Image className="w-5 h-5 text-gray-400" />
@@ -991,7 +991,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6`}>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <User className="w-5 h-5 text-[#0D9488]" />
+                    <User className="w-5 h-5 text-[#6096B4]" />
                     <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.invoiceGenerator.clientInformation', 'Client Information')}
                     </h2>
@@ -1055,7 +1055,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                       disabled={!clientInfo.name}
                       className={`flex items-center gap-1 px-3 py-1.5 text-sm rounded-lg transition-colors ${
                         clientInfo.name
-                          ? t('tools.invoiceGenerator.text0d9488HoverBg0d9488', 'text-[#0D9488] hover:bg-[#0D9488]/10') : 'text-gray-400 cursor-not-allowed'
+                          ? t('tools.invoiceGenerator.text0d9488HoverBg0d9488', 'text-[#6096B4] hover:bg-[#6096B4]/10') : 'text-gray-400 cursor-not-allowed'
                       }`}
                     >
                       <Save className="w-4 h-4" />
@@ -1161,7 +1161,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
               {/* Invoice Details */}
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6`}>
                 <div className="flex items-center gap-3 mb-4">
-                  <Calendar className="w-5 h-5 text-[#0D9488]" />
+                  <Calendar className="w-5 h-5 text-[#6096B4]" />
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.invoiceGenerator.invoiceDetails', 'Invoice Details')}
                   </h2>
@@ -1241,12 +1241,12 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6`}>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <Hash className="w-5 h-5 text-[#0D9488]" />
+                    <Hash className="w-5 h-5 text-[#6096B4]" />
                     <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.invoiceGenerator.lineItems', 'Line Items')}</h2>
                   </div>
                   <button
                     onClick={handleAddLineItem}
-                    className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                    className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.invoiceGenerator.addItem', 'Add Item')}
@@ -1362,7 +1362,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                         className={`flex justify-between items-center pt-3 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}
                       >
                         <span className={`text-lg font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.invoiceGenerator.grandTotal', 'Grand Total')}</span>
-                        <span className="text-lg font-bold text-[#0D9488]">{formatCurrency(grandTotal, currency)}</span>
+                        <span className="text-lg font-bold text-[#6096B4]">{formatCurrency(grandTotal, currency)}</span>
                       </div>
                     </div>
                   </div>
@@ -1372,7 +1372,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
               {/* Notes & Terms */}
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6`}>
                 <div className="flex items-center gap-3 mb-4">
-                  <FileText className="w-5 h-5 text-[#0D9488]" />
+                  <FileText className="w-5 h-5 text-[#6096B4]" />
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.invoiceGenerator.notesTerms', 'Notes & Terms')}</h2>
                 </div>
 
@@ -1403,7 +1403,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
               {/* Save Invoice Button */}
               <button
                 onClick={handleSaveInvoice}
-                className="w-full py-4 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#0F766E] hover:to-[#0D9488] text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+                className="w-full py-4 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#4C7F98] hover:to-[#6096B4] text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
               >
                 <Save className="w-5 h-5" />
                 {t('tools.invoiceGenerator.saveInvoice', 'Save Invoice')}
@@ -1420,7 +1420,7 @@ export const InvoiceGeneratorTool: React.FC<InvoiceGeneratorToolProps> = ({ uiCo
                       <div className="flex gap-2">
                         <button
                           onClick={handlePrint}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                         >
                           <Printer className="w-4 h-4" />
                           {t('tools.invoiceGenerator.print2', 'Print')}

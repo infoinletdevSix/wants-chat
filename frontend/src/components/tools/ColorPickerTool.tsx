@@ -45,7 +45,7 @@ const MATERIAL_PALETTE = [
 
 const TAILWIND_PALETTE = [
   '#EF4444', '#F59E0B', '#10B981', '#3B82F6', '#6366F1', '#8B5CF6',
-  '#EC4899', '#14B8A6', '#F97316', '#84CC16', '#06B6D4', '#A855F7',
+  '#EC4899', '#75AAC1', '#F97316', '#84CC16', '#06B6D4', '#A855F7',
   '#F43F5E', '#EAB308', '#22C55E', '#0EA5E9', '#7C3AED', '#D946EF',
 ];
 
@@ -57,7 +57,7 @@ const COLUMNS: ColumnConfig[] = [
 
 export const ColorPickerTool: React.FC<ColorPickerToolProps> = ({ uiConfig }) => {
   const { t } = useTranslation();
-  const [color, setColor] = useState('#0D9488');
+  const [color, setColor] = useState('#6096B4');
   const [colorFormats, setColorFormats] = useState<ColorFormat>({ hex: '', rgb: '', hsl: '' });
   const [recentColors, setRecentColors] = useState<string[]>([]);
   const [copiedFormat, setCopiedFormat] = useState<string | null>(null);
@@ -288,9 +288,9 @@ export const ColorPickerTool: React.FC<ColorPickerToolProps> = ({ uiConfig }) =>
       icon={Palette}
     >
       {isPrefilled && (
-        <div className="mb-4 p-3 rounded-lg flex items-center gap-2 bg-teal-900/20 border border-teal-800">
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className="text-sm text-teal-400">
+        <div className="mb-4 p-3 rounded-lg flex items-center gap-2 bg-primary-900/20 border border-primary-800">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-400">
             {t('tools.colorPicker.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -318,7 +318,7 @@ export const ColorPickerTool: React.FC<ColorPickerToolProps> = ({ uiConfig }) =>
             onClick={() => setUseCustomPicker(!useCustomPicker)}
             className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
               useCustomPicker
-                ? t('tools.colorPicker.bg0d9488TextWhite', 'bg-[#0D9488] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                ? t('tools.colorPicker.bg0d9488TextWhite', 'bg-[#6096B4] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
             }`}
           >
             <Sliders className="w-4 h-4" />
@@ -349,7 +349,7 @@ export const ColorPickerTool: React.FC<ColorPickerToolProps> = ({ uiConfig }) =>
                   setColor(value);
                 }
               }}
-              className="w-full px-4 py-3 rounded-lg border bg-gray-700 border-gray-600 text-white font-mono text-lg focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
+              className="w-full px-4 py-3 rounded-lg border bg-gray-700 border-gray-600 text-white font-mono text-lg focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent"
               placeholder="#000000"
             />
           </div>

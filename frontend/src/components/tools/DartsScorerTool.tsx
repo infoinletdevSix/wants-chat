@@ -582,7 +582,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
         <div className="max-w-4xl mx-auto">
           <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
             <div className="flex items-center justify-center h-64">
-              <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
             </div>
           </div>
         </div>
@@ -597,7 +597,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
           {/* Header */}
           <div className="flex items-center justify-between gap-3 mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Target className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -637,9 +637,9 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
 
           {/* Prefill indicator */}
           {isPrefilled && (
-            <div className="mb-6 flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.dartsScorer.settingsLoadedFromYourConversation', 'Settings loaded from your conversation')}</span>
+            <div className="mb-6 flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.dartsScorer.settingsLoadedFromYourConversation', 'Settings loaded from your conversation')}</span>
             </div>
           )}
 
@@ -667,7 +667,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                         onClick={() => setGameType(type)}
                         className={`py-3 px-4 rounded-lg font-bold text-lg transition-colors ${
                           gameType === type
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -723,7 +723,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                 {/* Start Game Button */}
                 <button
                   onClick={initializeGame}
-                  className="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Target className="w-5 h-5" />
                   {t('tools.dartsScorer.startGame', 'Start Game')}
@@ -764,7 +764,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
 
               <button
                 onClick={resetGame}
-                className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2 mx-auto"
+                className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2 mx-auto"
               >
                 <RotateCcw className="w-5 h-5" />
                 {t('tools.dartsScorer.newGame', 'New Game')}
@@ -779,7 +779,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                   <Card
                     key={player.id}
                     className={`${theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'} ${
-                      index === currentPlayerIndex ? 'ring-2 ring-[#0D9488]' : ''
+                      index === currentPlayerIndex ? 'ring-2 ring-[#6096B4]' : ''
                     }`}
                   >
                     <CardContent className="pt-4 text-center">
@@ -787,13 +787,13 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                         {player.name}
                       </div>
                       <div className={`text-4xl font-bold ${
-                        index === currentPlayerIndex ? 'text-[#0D9488]' : theme === 'dark' ? 'text-white' : 'text-gray-900'
+                        index === currentPlayerIndex ? 'text-[#6096B4]' : theme === 'dark' ? 'text-white' : 'text-gray-900'
                       }`}>
                         {player.score}
                       </div>
                       {index === currentPlayerIndex && (
                         <div className="mt-2">
-                          <ChevronRight className="w-5 h-5 inline-block text-[#0D9488] animate-pulse" />
+                          <ChevronRight className="w-5 h-5 inline-block text-[#6096B4] animate-pulse" />
                         </div>
                       )}
                     </CardContent>
@@ -822,7 +822,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                             key={dartIndex}
                             className={`flex-1 p-4 rounded-lg text-center ${
                               dart
-                                ? 'bg-[#0D9488] text-white cursor-pointer hover:bg-[#0F766E]'
+                                ? 'bg-[#6096B4] text-white cursor-pointer hover:bg-[#4C7F98]'
                                 : theme === 'dark'
                                 ? 'bg-gray-600 text-gray-400'
                                 : 'bg-gray-200 text-gray-500'
@@ -866,7 +866,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                             onClick={() => setSelectedSegment(segment)}
                             className={`py-2 px-1 rounded-lg font-medium text-sm transition-colors ${
                               selectedSegment === segment
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : theme === 'dark'
                                 ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -879,7 +879,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                           onClick={() => setSelectedSegment(25)}
                           className={`py-2 px-1 rounded-lg font-medium text-sm transition-colors ${
                             selectedSegment === 25
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                               ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -894,7 +894,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                           }}
                           className={`py-2 px-1 rounded-lg font-medium text-sm transition-colors ${
                             selectedSegment === 50
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                               ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -916,7 +916,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                             onClick={() => setSelectedMultiplier('single')}
                             className={`py-2 px-4 rounded-lg font-medium transition-colors ${
                               selectedMultiplier === 'single'
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : theme === 'dark'
                                 ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -928,7 +928,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                             onClick={() => setSelectedMultiplier('double')}
                             className={`py-2 px-4 rounded-lg font-medium transition-colors ${
                               selectedMultiplier === 'double'
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : theme === 'dark'
                                 ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -941,7 +941,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                               onClick={() => setSelectedMultiplier('triple')}
                               className={`py-2 px-4 rounded-lg font-medium transition-colors ${
                                 selectedMultiplier === 'triple'
-                                  ? 'bg-[#0D9488] text-white'
+                                  ? 'bg-[#6096B4] text-white'
                                   : theme === 'dark'
                                   ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -972,7 +972,7 @@ export const DartsScorerTool: React.FC<DartsScorerToolProps> = ({ uiConfig }) =>
                         disabled={currentDarts.length === 0}
                         className={`flex-1 font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 ${
                           currentDarts.length === 0
-                            ? 'bg-gray-400 cursor-not-allowed text-gray-600' : t('tools.dartsScorer.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                            ? 'bg-gray-400 cursor-not-allowed text-gray-600' : t('tools.dartsScorer.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                         }`}
                       >
                         <ChevronRight className="w-5 h-5" />

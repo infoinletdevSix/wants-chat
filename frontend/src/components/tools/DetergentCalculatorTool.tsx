@@ -187,9 +187,9 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Droplets className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Droplets className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.detergentCalculator.detergentCalculator', 'Detergent Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.detergentCalculator.getTheRightAmountFor', 'Get the right amount for your load')}</p>
@@ -199,9 +199,9 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.detergentCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.detergentCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -221,7 +221,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
                 onClick={() => setDetergentType(type.id as DetergentType)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   detergentType === type.id
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -247,7 +247,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
                 onClick={() => setLoadSize(size)}
                 className={`py-2 px-2 rounded-lg text-sm text-center ${
                   loadSize === size
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -274,7 +274,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
                 onClick={() => setSoilLevel(level)}
                 className={`py-2 px-2 rounded-lg text-sm text-center ${
                   soilLevel === level
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -302,7 +302,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
                 onClick={() => setWaterHardness(level)}
                 className={`py-2 px-2 rounded-lg text-sm text-center ${
                   waterHardness === level
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -325,7 +325,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
             </label>
             <button
               onClick={() => setIsHE(!isHE)}
-              className={`w-full py-2 rounded-lg ${isHE ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`w-full py-2 rounded-lg ${isHE ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {isHE ? t('tools.detergentCalculator.heHighEfficiency', 'HE (High Efficiency)') : t('tools.detergentCalculator.standard', 'Standard')}
             </button>
@@ -336,7 +336,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
             </label>
             <button
               onClick={() => setUsesColdWater(!usesColdWater)}
-              className={`w-full py-2 rounded-lg ${usesColdWater ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`w-full py-2 rounded-lg ${usesColdWater ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {usesColdWater ? t('tools.detergentCalculator.coldWater', 'Cold Water') : t('tools.detergentCalculator.warmHotWater', 'Warm/Hot Water')}
             </button>
@@ -344,9 +344,9 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
         </div>
 
         {/* Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.detergentCalculator.recommendedAmount', 'Recommended Amount')}</div>
-          <div className="text-4xl font-bold text-teal-500 my-2">
+          <div className="text-4xl font-bold text-primary-500 my-2">
             {calculations.displayAmount}
           </div>
           {calculations.altAmount && (
@@ -365,7 +365,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
             <div className="flex justify-center">
               <div className={`w-24 h-32 rounded-b-xl border-2 ${isDark ? 'border-gray-600' : 'border-gray-300'} relative overflow-hidden`}>
                 <div
-                  className="absolute bottom-0 left-0 right-0 bg-teal-500/50 transition-all duration-300"
+                  className="absolute bottom-0 left-0 right-0 bg-primary-500/50 transition-all duration-300"
                   style={{ height: `${calculations.fillLevel}%` }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -388,7 +388,7 @@ export const DetergentCalculatorTool: React.FC<DetergentCalculatorToolProps> = (
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.detergentCalculator.estCostYear', 'Est. Cost/Year')}</div>
-            <div className="text-2xl font-bold text-teal-500">
+            <div className="text-2xl font-bold text-primary-500">
               ${(calculations.costPerLoad * 4 * 52).toFixed(0)}
             </div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>

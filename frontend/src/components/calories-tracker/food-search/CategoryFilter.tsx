@@ -29,7 +29,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
           onClick={() => onCategoryChange(category.id)}
           className={`whitespace-nowrap ${
             selectedCategory === category.id
-              ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-transparent'
+              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent'
               : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'
           }`}
         >

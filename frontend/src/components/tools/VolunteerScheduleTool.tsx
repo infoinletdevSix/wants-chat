@@ -417,9 +417,9 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.volunteerSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.volunteerSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -427,7 +427,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -498,7 +498,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -535,7 +535,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
               </div>
               <button
                 onClick={() => { resetScheduleForm(); setEditingSchedule(null); setShowScheduleModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.volunteerSchedule.scheduleVolunteer', 'Schedule Volunteer')}
@@ -633,7 +633,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
               </div>
               <button
                 onClick={() => { resetVolunteerForm(); setEditingVolunteer(null); setShowVolunteerModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.volunteerSchedule.addVolunteer', 'Add Volunteer')}
@@ -717,7 +717,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
               </h2>
               <button
                 onClick={() => { resetPositionForm(); setEditingPosition(null); setShowPositionModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.volunteerSchedule.addPosition', 'Add Position')}
@@ -848,7 +848,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                     </select>
                     <button
                       onClick={handleAddRole}
-                      className="px-3 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                      className="px-3 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -869,7 +869,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                     id="volActive"
                     checked={volunteerForm.isActive !== false}
                     onChange={(e) => setVolunteerForm({ ...volunteerForm, isActive: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="volActive" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.volunteerSchedule.activeVolunteer', 'Active Volunteer')}
@@ -885,7 +885,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                 </button>
                 <button
                   onClick={handleSaveVolunteer}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingVolunteer ? t('tools.volunteerSchedule.saveChanges', 'Save Changes') : t('tools.volunteerSchedule.addVolunteer3', 'Add Volunteer')}
                 </button>
@@ -991,7 +991,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                 </button>
                 <button
                   onClick={handleSaveSchedule}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingSchedule ? t('tools.volunteerSchedule.saveChanges2', 'Save Changes') : t('tools.volunteerSchedule.schedule', 'Schedule')}
                 </button>
@@ -1066,7 +1066,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                     id="posActive"
                     checked={positionForm.isActive !== false}
                     onChange={(e) => setPositionForm({ ...positionForm, isActive: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="posActive" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.volunteerSchedule.activePosition', 'Active Position')}
@@ -1082,7 +1082,7 @@ export const VolunteerScheduleTool: React.FC<VolunteerScheduleToolProps> = ({ ui
                 </button>
                 <button
                   onClick={handleSavePosition}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingPosition ? t('tools.volunteerSchedule.saveChanges3', 'Save Changes') : t('tools.volunteerSchedule.addPosition3', 'Add Position')}
                 </button>

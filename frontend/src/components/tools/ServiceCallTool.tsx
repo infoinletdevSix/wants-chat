@@ -498,7 +498,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
           <ExportDropdown onExport={handleExport} />
           <button
             onClick={() => setShowNewCallForm(true)}
-            className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center gap-2"
+            className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('tools.serviceCall.newCall', 'New Call')}
@@ -582,7 +582,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -616,7 +616,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -626,7 +626,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.serviceCall.allStatuses', 'All Statuses')}</option>
                   {STATUSES.map((s) => (
@@ -642,7 +642,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.serviceCall.allTypes', 'All Types')}</option>
                   {SERVICE_TYPES.map((t) => (
@@ -720,7 +720,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             >
                               {STATUSES.map((s) => (
                                 <option key={s.status} value={s.status}>
@@ -767,7 +767,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                   <span>Customers ({customers.length})</span>
                   <button
                     onClick={() => setShowNewCustomerForm(true)}
-                    className="p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -781,7 +781,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       onClick={() => setSelectedCustomerId(customer.id)}
                       className={`p-3 rounded-lg cursor-pointer transition-colors ${
                         selectedCustomerId === customer.id
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 hover:bg-gray-600'
                           : 'bg-gray-100 hover:bg-gray-200'
@@ -1003,7 +1003,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.serviceCall.selectCustomer', 'Select Customer')}</option>
                     {customers.map((c) => (
@@ -1025,7 +1025,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {SERVICE_TYPES.map((t) => (
                         <option key={t.type} value={t.type}>
@@ -1045,7 +1045,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {PRIORITIES.map((p) => (
                         <option key={p.priority} value={p.priority}>
@@ -1067,7 +1067,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.serviceCall.describeTheIssue', 'Describe the issue...')}
                   />
                 </div>
@@ -1084,7 +1084,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1099,7 +1099,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1114,7 +1114,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.serviceCall.unassigned', 'Unassigned')}</option>
                     {technicians.filter((t) => t.available).map((t) => (
@@ -1136,7 +1136,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.serviceCall.additionalNotes', 'Additional notes...')}
                   />
                 </div>
@@ -1151,7 +1151,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                   </button>
                   <button
                     onClick={addServiceCall}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.serviceCall.createServiceCall', 'Create Service Call')}
                   </button>
@@ -1189,7 +1189,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1204,7 +1204,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1220,7 +1220,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1235,7 +1235,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-4">
@@ -1251,7 +1251,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1266,7 +1266,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1281,7 +1281,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1296,7 +1296,7 @@ export const ServiceCallTool: React.FC<ServiceCallToolProps> = ({
                   </button>
                   <button
                     onClick={addCustomer}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.serviceCall.addCustomer', 'Add Customer')}
                   </button>

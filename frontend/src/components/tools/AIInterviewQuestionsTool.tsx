@@ -187,16 +187,16 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Users className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Users className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aIInterviewQuestions.aiInterviewQuestionsGenerator', 'AI Interview Questions Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aIInterviewQuestions.generateTailoredInterviewQuestionsFor', 'Generate tailored interview questions for any role')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aIInterviewQuestions.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -215,7 +215,7 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
               value={formData.jobTitle}
               onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
               placeholder={t('tools.aIInterviewQuestions.eGSoftwareEngineer', 'e.g., Software Engineer')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -224,7 +224,7 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
             <select
               value={formData.industry}
               onChange={(e) => setFormData({ ...formData, industry: e.target.value as Industry })}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {industries.map((ind) => (
                 <option key={ind.value} value={ind.value}>{ind.label}</option>
@@ -243,7 +243,7 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
                 onClick={() => setFormData({ ...formData, experienceLevel: level.value })}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                   formData.experienceLevel === level.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -265,14 +265,14 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
                 onClick={() => toggleType(type.value)}
                 className={`p-3 rounded-xl text-left transition-all ${
                   selectedTypes.includes(type.value)
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                 }`}
               >
                 <div className="font-medium text-sm">{type.label}</div>
-                <div className={`text-xs ${selectedTypes.includes(type.value) ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{type.desc}</div>
+                <div className={`text-xs ${selectedTypes.includes(type.value) ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{type.desc}</div>
               </button>
             ))}
           </div>
@@ -287,7 +287,7 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
             max="15"
             value={questionCount}
             onChange={(e) => setQuestionCount(parseInt(e.target.value))}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary-500"
           />
         </div>
 
@@ -295,7 +295,7 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
         <button
           onClick={generateQuestions}
           disabled={selectedTypes.length === 0}
-          className="w-full py-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-teal-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Sparkles className="w-5 h-5" />
           {t('tools.aIInterviewQuestions.generateInterviewQuestions', 'Generate Interview Questions')}
@@ -305,7 +305,7 @@ export const AIInterviewQuestionsTool: React.FC<AIInterviewQuestionsToolProps> =
         {generatedQuestions.length > 0 && (
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <span className={`text-sm font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+              <span className={`text-sm font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 Generated Questions ({generatedQuestions.length})
               </span>
               <button

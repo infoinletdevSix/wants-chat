@@ -37,8 +37,8 @@ const Features: React.FC = () => {
       title: 'Knowledge Base',
       description: 'Build your personal wiki and note-taking system',
       link: null,
-      color: 'text-teal-500',
-      bgColor: 'bg-teal-50 dark:bg-purple-950/20',
+      color: 'text-primary-500',
+      bgColor: 'bg-primary-50 dark:bg-purple-950/20',
     },
     {
       icon: TrendingUp,
@@ -73,10 +73,10 @@ const Features: React.FC = () => {
   };
 
   return (
-    <section id="features" className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <section id="features" className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <div
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px] animate-pulse"
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px] animate-pulse"
         style={{
           animation: 'pulse 8s ease-in-out infinite',
         }}
@@ -111,7 +111,7 @@ const Features: React.FC = () => {
                 className={`
                   group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8
                   border border-white/20
-                  transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20
+                  transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/20
                   ${feature.link ? 'cursor-pointer hover:scale-105 hover:border-white/40' : 'hover:shadow-lg'}
                 `}
                 onClick={() => handleFeatureClick(feature.link)}
@@ -133,7 +133,7 @@ const Features: React.FC = () => {
 
                 {/* Action Button/Link */}
                 {feature.link ? (
-                  <div className="flex items-center text-teal-400 font-medium group-hover:gap-2 transition-all">
+                  <div className="flex items-center text-primary-400 font-medium group-hover:gap-2 transition-all">
                     <span>Explore</span>
                     <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -145,7 +145,7 @@ const Features: React.FC = () => {
 
                 {/* Hover Effect Overlay */}
                 {feature.link && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 )}
               </div>
             );
@@ -158,7 +158,7 @@ const Features: React.FC = () => {
             Ready to transform your life management?
           </p>
           <Link to="/login">
-            <Button size="lg" className="group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+            <Button size="lg" className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>

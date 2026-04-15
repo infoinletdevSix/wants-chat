@@ -89,7 +89,7 @@ export const SettingsSubmenu: React.FC = () => {
         theme === 'dark' ? 'border-[#2a2a2a]' : 'border-gray-200'
       )}>
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] flex items-center justify-center text-white text-lg font-bold">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] flex items-center justify-center text-white text-lg font-bold">
             {user?.name?.charAt(0)?.toUpperCase() || 'U'}
           </div>
           <div className="flex-1 min-w-0">
@@ -134,8 +134,8 @@ export const SettingsSubmenu: React.FC = () => {
                 "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all",
                 active
                   ? theme === 'dark'
-                    ? 'bg-[#0D9488]/10 text-[#0D9488]'
-                    : 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? 'bg-[#6096B4]/10 text-[#6096B4]'
+                    : 'bg-[#6096B4]/10 text-[#6096B4]'
                   : theme === 'dark'
                     ? 'text-gray-300 hover:bg-[#2a2a2a] hover:text-white'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
@@ -143,7 +143,7 @@ export const SettingsSubmenu: React.FC = () => {
             >
               <Icon className={cn(
                 "w-5 h-5 flex-shrink-0",
-                active && 'text-[#0D9488]'
+                active && 'text-[#6096B4]'
               )} />
               <span className="flex-1 font-medium">{item.label}</span>
 

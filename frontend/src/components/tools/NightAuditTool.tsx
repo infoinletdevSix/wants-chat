@@ -301,7 +301,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
     };
   }, [reports]);
 
-  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
   const getStatusColor = (status: AuditStatus) => {
@@ -378,9 +378,9 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
           </div>
         </div>
 
-        <div className={`p-4 rounded-xl ${isDark ? t('tools.nightAudit.bg0d948810', 'bg-[#0D9488]/10') : t('tools.nightAudit.bg0d94885', 'bg-[#0D9488]/5')}`}>
+        <div className={`p-4 rounded-xl ${isDark ? t('tools.nightAudit.bg0d948810', 'bg-[#6096B4]/10') : t('tools.nightAudit.bg0d94885', 'bg-[#6096B4]/5')}`}>
           <div className="grid grid-cols-4 gap-4 text-center">
-            <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.totalRevenue', 'Total Revenue')}</p><p className="text-xl font-bold text-[#0D9488]">${metrics.totalRevenue.toLocaleString()}</p></div>
+            <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.totalRevenue', 'Total Revenue')}</p><p className="text-xl font-bold text-[#6096B4]">${metrics.totalRevenue.toLocaleString()}</p></div>
             <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.occupancy', 'Occupancy')}</p><p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{metrics.occupancyRate}%</p></div>
             <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.adr', 'ADR')}</p><p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>${metrics.adr}</p></div>
             <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.revpar', 'RevPAR')}</p><p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>${metrics.revpar}</p></div>
@@ -417,7 +417,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl"><Moon className="w-6 h-6 text-[#0D9488]" /></div>
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl"><Moon className="w-6 h-6 text-[#6096B4]" /></div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.nightAudit.nightAudit', 'Night Audit')}</h1>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.dailyNightAuditReportsAnd', 'Daily night audit reports and reconciliation')}</p>
@@ -438,7 +438,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
           <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.totalReports', 'Total Reports')}</p><p className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.total}</p></div>
           <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.completed', 'Completed')}</p><p className="text-2xl font-bold text-green-500">{stats.completed}</p></div>
           <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.lastOccupancy', 'Last Occupancy')}</p><p className="text-2xl font-bold text-blue-500">{stats.avgOccupancy}%</p></div>
-          <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.lastRevenue', 'Last Revenue')}</p><p className="text-2xl font-bold text-[#0D9488]">${stats.avgRevenue.toLocaleString()}</p></div>
+          <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.nightAudit.lastRevenue', 'Last Revenue')}</p><p className="text-2xl font-bold text-[#6096B4]">${stats.avgRevenue.toLocaleString()}</p></div>
         </div>
 
         {/* Filters */}
@@ -453,7 +453,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
             <option value="">{t('tools.nightAudit.allStatuses', 'All Statuses')}</option>
             {AUDIT_STATUSES.map(s => (<option key={s.value} value={s.value}>{s.label}</option>))}
           </select>
-          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.nightAudit.newAudit', 'New Audit')}</button>
+          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.nightAudit.newAudit', 'New Audit')}</button>
         </div>
 
         {/* Forms */}
@@ -464,7 +464,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
               <button onClick={() => setShowForm(false)} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}><X className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} /></button>
             </div>
             {renderForm(newReport)}
-            <button onClick={handleAddReport} disabled={!newReport.auditedBy} className="mt-4 w-full py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.nightAudit.startAudit', 'Start Audit')}</button>
+            <button onClick={handleAddReport} disabled={!newReport.auditedBy} className="mt-4 w-full py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.nightAudit.startAudit', 'Start Audit')}</button>
           </div>
         )}
 
@@ -476,7 +476,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
             </div>
             {renderForm(editingReport, true)}
             <div className="flex gap-3 mt-4">
-              <button onClick={handleUpdateReport} className="flex-1 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.nightAudit.save', 'Save')}</button>
+              <button onClick={handleUpdateReport} className="flex-1 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.nightAudit.save', 'Save')}</button>
               <button onClick={() => setEditingReport(null)} className={`px-6 py-3 rounded-xl font-medium ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>{t('tools.nightAudit.cancel', 'Cancel')}</button>
             </div>
           </div>
@@ -493,7 +493,7 @@ export const NightAuditTool: React.FC<NightAuditToolProps> = ({ uiConfig }) => {
                     <span className={`text-xs px-2 py-1 rounded-full font-medium ${getStatusColor(report.status)}`}>{AUDIT_STATUSES.find(s => s.value === report.status)?.label}</span>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-3 text-sm">
-                    <div><p className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.nightAudit.revenue2', 'Revenue')}</p><p className="font-semibold text-[#0D9488]">${report.totalRevenue.toLocaleString()}</p></div>
+                    <div><p className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.nightAudit.revenue2', 'Revenue')}</p><p className="font-semibold text-[#6096B4]">${report.totalRevenue.toLocaleString()}</p></div>
                     <div><p className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.nightAudit.occupancy2', 'Occupancy')}</p><p className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{report.occupancyRate}%</p></div>
                     <div><p className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.nightAudit.adr2', 'ADR')}</p><p className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>${report.adr}</p></div>
                     <div><p className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.nightAudit.revpar2', 'RevPAR')}</p><p className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>${report.revpar}</p></div>

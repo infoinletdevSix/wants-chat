@@ -263,10 +263,10 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Home className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Home className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.choreWheel.choreWheel', 'Chore Wheel')}</h3>
@@ -277,9 +277,9 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="mx-6 mt-4 flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.choreWheel.settingsLoadedFromYourConversation', 'Settings loaded from your conversation')}</span>
+        <div className="mx-6 mt-4 flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.choreWheel.settingsLoadedFromYourConversation', 'Settings loaded from your conversation')}</span>
         </div>
       )}
 
@@ -298,7 +298,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
               isDark
                 ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-            } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            } focus:outline-none focus:ring-2 focus:ring-primary-500`}
           />
         </div>
 
@@ -319,14 +319,14 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
                 isDark
                   ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              } focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
             <button
               onClick={addPerson}
               disabled={!newPersonName.trim()}
               className={`px-4 py-3 rounded-lg font-medium transition-colors ${
                 newPersonName.trim()
-                  ? 'bg-teal-500 hover:bg-teal-600 text-white'
+                  ? 'bg-primary-500 hover:bg-primary-600 text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
@@ -371,7 +371,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
             </label>
             <button
               onClick={addDefaultChores}
-              className={`text-sm ${isDark ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'}`}
+              className={`text-sm ${isDark ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'}`}
             >
               {t('tools.choreWheel.addDefaults', '+ Add defaults')}
             </button>
@@ -387,7 +387,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
                 isDark
                   ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              } focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
             <select
               value={newChoreFrequency}
@@ -396,7 +396,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
                 isDark
                   ? 'bg-gray-800 border-gray-700 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              } focus:outline-none focus:ring-2 focus:ring-primary-500`}
             >
               <option value="daily">{t('tools.choreWheel.daily', 'Daily')}</option>
               <option value="weekly">{t('tools.choreWheel.weekly', 'Weekly')}</option>
@@ -408,7 +408,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
               disabled={!newChoreName.trim()}
               className={`px-4 py-3 rounded-lg font-medium transition-colors ${
                 newChoreName.trim()
-                  ? 'bg-teal-500 hover:bg-teal-600 text-white'
+                  ? 'bg-primary-500 hover:bg-primary-600 text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
@@ -471,7 +471,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
                 );
               })}
               <div className={`absolute inset-[25%] rounded-full ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-inner flex items-center justify-center`}>
-                <Home className={`w-8 h-8 ${isDark ? 'text-teal-400' : 'text-teal-500'}`} />
+                <Home className={`w-8 h-8 ${isDark ? 'text-primary-400' : 'text-primary-500'}`} />
               </div>
             </div>
           </div>
@@ -482,7 +482,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
           <button
             onClick={assignChores}
             disabled={people.length === 0 || chores.length === 0 || isSpinning}
-            className={`flex-1 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 ${
+            className={`flex-1 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-primary-500/30 flex items-center justify-center gap-2 ${
               people.length === 0 || chores.length === 0 || isSpinning ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
@@ -562,7 +562,7 @@ export const ChoreWheelTool: React.FC<ChoreWheelToolProps> = ({ uiConfig }) => {
                             key={assignment.choreId}
                             className={`flex items-center gap-2 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}
                           >
-                            <Check className="w-4 h-4 text-teal-500" />
+                            <Check className="w-4 h-4 text-primary-500" />
                             <span>{assignment.choreName}</span>
                             {chore && (
                               <span className={`text-xs px-1.5 py-0.5 rounded ${getFrequencyColor(chore.frequency)}`}>

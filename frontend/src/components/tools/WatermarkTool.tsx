@@ -356,9 +356,9 @@ export const WatermarkTool: React.FC<WatermarkToolProps> = ({ uiConfig }) => {
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.watermark.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.watermark.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
           </div>
         )}
 
@@ -582,7 +582,7 @@ export const WatermarkTool: React.FC<WatermarkToolProps> = ({ uiConfig }) => {
                 <button
                   onClick={handleSave}
                   disabled={!resultImage || isSaving}
-                  className="flex-1 py-3 px-6 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 py-3 px-6 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSaving ? (
                     <>

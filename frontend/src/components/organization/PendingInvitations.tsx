@@ -104,11 +104,11 @@ export function PendingInvitations({
   }
 
   return (
-    <Card className="border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-900/20">
+    <Card className="border-primary-200 dark:border-primary-800 bg-primary-50/50 dark:bg-primary-900/20">
       <CardHeader className="pb-3">
         <div className="flex items-center gap-2">
           <div className="relative">
-            <Bell className="w-5 h-5 text-teal-600" />
+            <Bell className="w-5 h-5 text-primary-600" />
             <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
               {invitations.length}
             </span>
@@ -127,7 +127,7 @@ export function PendingInvitations({
             className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700"
           >
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center flex-shrink-0">
                 <Building2 className="w-5 h-5 text-white" />
               </div>
               <div className="min-w-0">
@@ -165,7 +165,7 @@ export function PendingInvitations({
                 size="sm"
                 onClick={() => handleAccept(invitation.id)}
                 disabled={actionLoading === invitation.id}
-                className="bg-teal-600 hover:bg-teal-700"
+                className="bg-primary-600 hover:bg-primary-700"
               >
                 {actionLoading === invitation.id ? (
                   <Loader2 className="w-4 h-4 animate-spin" />

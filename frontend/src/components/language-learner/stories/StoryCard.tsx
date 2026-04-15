@@ -30,7 +30,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
 }) => {
   return (
     <Card
-      className="cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-500/50"
+      className="cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-500/50"
       onClick={() => onStoryClick(story)}
     >
       {/* Card Header with Thumbnail and Status */}
@@ -45,12 +45,12 @@ export const StoryCard: React.FC<StoryCardProps> = ({
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
-                  target.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-teal-500/10 to-cyan-500/20 flex items-center justify-center text-2xl">📖</div>';
+                  target.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center text-2xl">📖</div>';
                 }}
               />
             </div>
           ) : (
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500/10 to-cyan-500/20 flex items-center justify-center text-2xl">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center text-2xl">
               {story.thumbnail || '📖'}
             </div>
           )}
@@ -63,7 +63,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
 
         {/* Title and Author */}
         <div className="space-y-1">
-          <h3 className="text-lg font-bold text-white group-hover:text-teal-400 transition-colors line-clamp-2">
+          <h3 className="text-lg font-bold text-white group-hover:text-primary-400 transition-colors line-clamp-2">
             {story.title}
           </h3>
           <p className="text-sm text-white/60">
@@ -115,7 +115,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
         <div className="border-t border-white/20 pt-4">
           <Button
             size="sm"
-            className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0 font-medium"
+            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0 font-medium"
           >
             {story.completionRate > 0 ? (
               <>

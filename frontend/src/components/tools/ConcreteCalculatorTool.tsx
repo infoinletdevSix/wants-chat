@@ -490,7 +490,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -508,7 +508,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -526,7 +526,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -550,7 +550,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -568,7 +568,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -586,7 +586,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -606,7 +606,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                     onClick={() => updateDimension(id, 'columnShape', shape)}
                     className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                       dimensions.columnShape === shape
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -634,7 +634,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               ) : (
@@ -654,7 +654,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -672,7 +672,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </>
@@ -692,7 +692,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -717,7 +717,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -735,7 +735,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -753,7 +753,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -771,7 +771,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -791,7 +791,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Square className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>
@@ -874,7 +874,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                             onClick={() => updatePour(pour.id, { projectType: option.value })}
                             className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                               pour.projectType === option.value
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : theme === 'dark'
                                 ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -917,7 +917,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                     onClick={() => setMixType(option.value)}
                     className={`py-3 px-3 rounded-lg text-sm font-medium transition-colors text-left ${
                       mixType === option.value
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -944,7 +944,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                     onClick={() => setOveragePercent(option.value)}
                     className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                       overagePercent === option.value
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -960,7 +960,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
             <div className="flex gap-3">
               <button
                 onClick={calculate}
-                className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Calculator className="w-5 h-5" />
                 {t('tools.concreteCalculator.calculate', 'Calculate')}
@@ -982,8 +982,8 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
               <div className="space-y-4">
                 {/* Total Summary */}
                 {totalResults && (
-                  <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                    theme === 'dark' ? 'bg-gray-700' : t('tools.concreteCalculator.bg0d948810', 'bg-[#0D9488]/10')
+                  <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                    theme === 'dark' ? 'bg-gray-700' : t('tools.concreteCalculator.bg0d948810', 'bg-[#6096B4]/10')
                   }`}>
                     <h3 className={`text-lg font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.concreteCalculator.totalConcreteNeeded', 'Total Concrete Needed')}
@@ -993,7 +993,7 @@ export const ConcreteCalculatorTool: React.FC<ConcreteCalculatorToolProps> = ({ 
                         <div className={`text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           {t('tools.concreteCalculator.cubicYards2', 'Cubic Yards')}
                         </div>
-                        <div className="text-3xl font-bold text-[#0D9488]">
+                        <div className="text-3xl font-bold text-[#6096B4]">
                           {totalResults.cubicYardsWithOverage.toFixed(2)}
                         </div>
                         <div className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>

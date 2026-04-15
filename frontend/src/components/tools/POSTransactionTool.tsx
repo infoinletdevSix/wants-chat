@@ -435,9 +435,9 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.pOSTransaction.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.pOSTransaction.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -445,7 +445,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <ShoppingCart className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -489,7 +489,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -533,7 +533,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                     onClick={() => addToCart(product)}
                     className={`p-4 rounded-lg border text-left transition-all hover:shadow-md ${
                       theme === 'dark'
-                        ? t('tools.pOSTransaction.bgGray700BorderGray', 'bg-gray-700 border-gray-600 hover:border-[#0D9488]') : t('tools.pOSTransaction.bgGray50BorderGray', 'bg-gray-50 border-gray-200 hover:border-[#0D9488]')
+                        ? t('tools.pOSTransaction.bgGray700BorderGray', 'bg-gray-700 border-gray-600 hover:border-[#6096B4]') : t('tools.pOSTransaction.bgGray50BorderGray', 'bg-gray-50 border-gray-200 hover:border-[#6096B4]')
                     }`}
                   >
                     <div className="flex items-center gap-2 mb-2">
@@ -550,7 +550,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                     <p className={`text-xs mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                       SKU: {product.sku}
                     </p>
-                    <p className="text-[#0D9488] font-bold">{formatCurrency(product.price)}</p>
+                    <p className="text-[#6096B4] font-bold">{formatCurrency(product.price)}</p>
                     <p className={`text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
                       In Stock: {product.quantity}
                     </p>
@@ -677,7 +677,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                 )}
                 <div className={`flex justify-between text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   <span>{t('tools.pOSTransaction.total', 'Total')}</span>
-                  <span className="text-[#0D9488]">{formatCurrency(cartTotals.total)}</span>
+                  <span className="text-[#6096B4]">{formatCurrency(cartTotals.total)}</span>
                 </div>
               </div>
 
@@ -687,7 +687,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                 disabled={cart.length === 0}
                 className={`w-full py-3 rounded-lg font-medium transition-colors ${
                   cart.length === 0
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : t('tools.pOSTransaction.bg0d9488TextWhiteHover', 'bg-[#0D9488] text-white hover:bg-[#0B7B6F]')
+                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : t('tools.pOSTransaction.bg0d9488TextWhiteHover', 'bg-[#6096B4] text-white hover:bg-[#0B7B6F]')
                 }`}
               >
                 <CreditCard className="w-5 h-5 inline mr-2" />
@@ -907,7 +907,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
               </h2>
 
               <div className={`text-2xl font-bold text-center mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                Total: <span className="text-[#0D9488]">{formatCurrency(cartTotals.total)}</span>
+                Total: <span className="text-[#6096B4]">{formatCurrency(cartTotals.total)}</span>
               </div>
 
               {/* Payment Methods */}
@@ -918,16 +918,16 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                     onClick={() => setSelectedPayment(pm.method)}
                     className={`p-4 rounded-lg border flex flex-col items-center gap-2 transition-colors ${
                       selectedPayment === pm.method
-                        ? 'border-[#0D9488] bg-[#0D9488]/10'
+                        ? 'border-[#6096B4] bg-[#6096B4]/10'
                         : theme === 'dark'
                         ? 'border-gray-600 hover:border-gray-500'
                         : 'border-gray-300 hover:border-gray-400'
                     }`}
                   >
-                    <span className={selectedPayment === pm.method ? 'text-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
+                    <span className={selectedPayment === pm.method ? 'text-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
                       {pm.icon}
                     </span>
-                    <span className={`text-sm ${selectedPayment === pm.method ? 'text-[#0D9488]' : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+                    <span className={`text-sm ${selectedPayment === pm.method ? 'text-[#6096B4]' : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                       {pm.label}
                     </span>
                   </button>
@@ -974,7 +974,7 @@ export const POSTransactionTool: React.FC<POSTransactionToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={processTransaction}
-                  className="flex-1 py-3 rounded-lg font-medium bg-[#0D9488] text-white hover:bg-[#0B7B6F]"
+                  className="flex-1 py-3 rounded-lg font-medium bg-[#6096B4] text-white hover:bg-[#0B7B6F]"
                 >
                   <CheckCircle className="w-5 h-5 inline mr-2" />
                   {t('tools.pOSTransaction.complete', 'Complete')}

@@ -285,9 +285,9 @@ export const ObjectRemovalTool: React.FC<ObjectRemovalToolProps> = ({ uiConfig }
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs text-[#0D9488] font-medium">{t('tools.objectRemoval.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs text-[#6096B4] font-medium">{t('tools.objectRemoval.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -477,7 +477,7 @@ export const ObjectRemovalTool: React.FC<ObjectRemovalToolProps> = ({ uiConfig }
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex-1 py-3 px-6 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 py-3 px-6 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSaving ? (
                   <>

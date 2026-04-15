@@ -9,7 +9,7 @@ import { categories as allCategories, getAllApps, type App, type Category } from
 
 // Map category IDs to display names and colors for filter buttons
 const categoryDisplayConfig: Record<string, { name: string; color: string }> = {
-  'life-management': { name: 'Life', color: 'from-teal-500 to-cyan-500' },
+  'life-management': { name: 'Life', color: 'from-primary-500 to-cyan-500' },
   'ai-tools': { name: 'AI Tools', color: 'from-purple-500 to-indigo-500' },
   'productivity': { name: 'Productivity', color: 'from-amber-500 to-orange-500' },
   'developer-tools': { name: 'Dev Tools', color: 'from-blue-500 to-cyan-500' },
@@ -19,7 +19,7 @@ const categoryDisplayConfig: Record<string, { name: string; color: string }> = {
   'sensors-detection': { name: 'Sensors', color: 'from-indigo-500 to-purple-500' },
   'calculators-tools': { name: 'Calculators', color: 'from-yellow-500 to-amber-500' },
   'camera-utilities': { name: 'Camera', color: 'from-gray-500 to-slate-500' },
-  'home-life': { name: 'Home & Life', color: 'from-emerald-500 to-teal-500' },
+  'home-life': { name: 'Home & Life', color: 'from-emerald-500 to-primary-500' },
 };
 
 // Helper to get gradient color from hex color
@@ -32,10 +32,10 @@ const getGradientFromColor = (color?: string): string => {
     '#FF5722': 'from-orange-500 to-red-500',
     '#4CAF50': 'from-green-500 to-emerald-500',
     '#2196F3': 'from-blue-500 to-cyan-500',
-    '#4ECDC4': 'from-teal-500 to-cyan-500',
+    '#4ECDC4': 'from-primary-500 to-cyan-500',
     '#00BCD4': 'from-cyan-500 to-blue-500',
-    '#009688': 'from-teal-500 to-green-500',
-    '#00ACC1': 'from-cyan-500 to-teal-500',
+    '#009688': 'from-primary-500 to-green-500',
+    '#00ACC1': 'from-cyan-500 to-primary-500',
     '#7C4DFF': 'from-violet-500 to-purple-500',
     '#FF5252': 'from-red-500 to-pink-500',
     '#3F51B5': 'from-indigo-500 to-blue-500',
@@ -45,7 +45,7 @@ const getGradientFromColor = (color?: string): string => {
     '#FF4081': 'from-pink-500 to-rose-500',
     '#795548': 'from-amber-700 to-yellow-700',
     '#607D8B': 'from-slate-500 to-gray-500',
-    '#00897B': 'from-teal-600 to-green-600',
+    '#00897B': 'from-primary-600 to-green-600',
     '#1565C0': 'from-blue-600 to-indigo-600',
     '#FFB74D': 'from-amber-400 to-orange-400',
     '#5C6BC0': 'from-indigo-500 to-blue-500',
@@ -57,13 +57,13 @@ const getGradientFromColor = (color?: string): string => {
     '#7B1FA2': 'from-purple-600 to-pink-600',
     '#0288D1': 'from-blue-500 to-cyan-500',
     '#D32F2F': 'from-red-600 to-rose-600',
-    '#00796B': 'from-teal-600 to-green-600',
+    '#00796B': 'from-primary-600 to-green-600',
     '#42A5F5': 'from-blue-400 to-cyan-400',
     '#EF5350': 'from-red-500 to-rose-500',
     '#FFA726': 'from-orange-400 to-amber-400',
     '#43A047': 'from-green-500 to-emerald-500',
     '#8E24AA': 'from-purple-600 to-pink-600',
-    '#26A69A': 'from-teal-500 to-green-500',
+    '#26A69A': 'from-primary-500 to-green-500',
     '#FF7043': 'from-orange-500 to-red-500',
     '#1E88E5': 'from-blue-500 to-indigo-500',
     '#FFC107': 'from-yellow-500 to-amber-500',
@@ -153,9 +153,9 @@ const QuickAccessApps: React.FC = () => {
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8"
         >
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/20 backdrop-blur-sm border border-teal-500/30 mb-4">
-              <AutoAwesomeIcon className="h-4 w-4 text-teal-400" />
-              <span className="text-sm font-medium text-teal-400">Quick Access</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 mb-4">
+              <AutoAwesomeIcon className="h-4 w-4 text-primary-400" />
+              <span className="text-sm font-medium text-primary-400">Quick Access</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
               Your Selected Apps
@@ -176,7 +176,7 @@ const QuickAccessApps: React.FC = () => {
               onClick={() => setActiveCategory('All')}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === 'All'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-md shadow-teal-500/25'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-md shadow-primary-500/25'
                   : 'bg-white/10 text-white/70 border border-white/20 hover:bg-white/20 hover:text-white'
               }`}
             >
@@ -191,7 +191,7 @@ const QuickAccessApps: React.FC = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                     activeCategory === category.id
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-md shadow-teal-500/25'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-md shadow-primary-500/25'
                       : 'bg-white/10 text-white/70 border border-white/20 hover:bg-white/20 hover:text-white'
                   }`}
                 >
@@ -226,7 +226,7 @@ const QuickAccessApps: React.FC = () => {
               >
                 <div
                   className="group relative bg-white/10 backdrop-blur-xl rounded-2xl p-4 h-full
-                    border border-white/20 hover:bg-white/15 hover:border-white/30 hover:shadow-xl hover:shadow-teal-500/10
+                    border border-white/20 hover:bg-white/15 hover:border-white/30 hover:shadow-xl hover:shadow-primary-500/10
                     transition-all duration-300 cursor-pointer"
                   onClick={() => handleAppClick(app.link)}
                 >
@@ -248,7 +248,7 @@ const QuickAccessApps: React.FC = () => {
 
                   {/* Content */}
                   <div>
-                    <h3 className="font-bold text-sm mb-1 text-white group-hover:text-teal-400 transition-colors duration-300">
+                    <h3 className="font-bold text-sm mb-1 text-white group-hover:text-primary-400 transition-colors duration-300">
                       {app.name}
                     </h3>
                     <p className="text-xs text-white/60 leading-relaxed line-clamp-2">
@@ -257,8 +257,8 @@ const QuickAccessApps: React.FC = () => {
                   </div>
 
                   {/* Action Indicator */}
-                  <div className="absolute bottom-2 right-2 w-6 h-6 rounded-full bg-teal-500/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <ArrowForwardIcon className="h-3 w-3 text-teal-400" />
+                  <div className="absolute bottom-2 right-2 w-6 h-6 rounded-full bg-primary-500/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ArrowForwardIcon className="h-3 w-3 text-primary-400" />
                   </div>
                 </div>
               </motion.div>

@@ -505,8 +505,8 @@ export const PhotoShootPlannerTool = ({
       }`}
     >
       <div className="flex items-center gap-3">
-        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-          <Icon className="w-5 h-5 text-[#0D9488]" />
+        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+          <Icon className="w-5 h-5 text-[#6096B4]" />
         </div>
         <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
           {title}
@@ -524,19 +524,19 @@ export const PhotoShootPlannerTool = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const textareaClasses = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] resize-none`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] resize-none`;
 
   const selectClasses = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClasses = `block text-sm font-medium mb-2 ${
     theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
@@ -547,8 +547,8 @@ export const PhotoShootPlannerTool = ({
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Camera className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Camera className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -617,7 +617,7 @@ export const PhotoShootPlannerTool = ({
         </div>
         <div className="text-center">
           <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.photoShootPlanner.balanceDue', 'Balance Due')}</p>
-          <p className={`text-lg font-bold text-[#0D9488]`}>
+          <p className={`text-lg font-bold text-[#6096B4]`}>
             ${stats.balanceRemaining.toFixed(2)}
           </p>
         </div>
@@ -708,7 +708,7 @@ export const PhotoShootPlannerTool = ({
                         className="mt-1"
                       >
                         {shot.completed ? (
-                          <CheckSquare className="w-5 h-5 text-[#0D9488]" />
+                          <CheckSquare className="w-5 h-5 text-[#6096B4]" />
                         ) : (
                           <Square className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                         )}
@@ -740,7 +740,7 @@ export const PhotoShootPlannerTool = ({
                 ))}
                 <button
                   onClick={addShotListItem}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.photoShootPlanner.addShot', 'Add Shot')}
@@ -778,7 +778,7 @@ export const PhotoShootPlannerTool = ({
                             onClick={() => updateEquipmentItem(item.id, { checked: !item.checked })}
                           >
                             {item.checked ? (
-                              <CheckSquare className="w-5 h-5 text-[#0D9488]" />
+                              <CheckSquare className="w-5 h-5 text-[#6096B4]" />
                             ) : (
                               <Square className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                             )}
@@ -813,7 +813,7 @@ export const PhotoShootPlannerTool = ({
               })}
               <button
                 onClick={addEquipmentItem}
-                className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.photoShootPlanner.addEquipment', 'Add Equipment')}
@@ -921,7 +921,7 @@ export const PhotoShootPlannerTool = ({
                 ))}
                 <button
                   onClick={addTimelineEvent}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.photoShootPlanner.addEvent', 'Add Event')}
@@ -1024,7 +1024,7 @@ export const PhotoShootPlannerTool = ({
                 ))}
                 <button
                   onClick={addModel}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.photoShootPlanner.addModelSubject', 'Add Model/Subject')}
@@ -1127,7 +1127,7 @@ export const PhotoShootPlannerTool = ({
                 ))}
                 <button
                   onClick={addMoodBoardItem}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.photoShootPlanner.addInspiration', 'Add Inspiration')}
@@ -1243,7 +1243,7 @@ export const PhotoShootPlannerTool = ({
                       type="checkbox"
                       checked={data.depositPaid}
                       onChange={(e) => updateData('depositPaid', e.target.checked)}
-                      className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                     <span className="text-sm">{t('tools.photoShootPlanner.depositPaid', 'Deposit Paid')}</span>
                   </label>
@@ -1254,7 +1254,7 @@ export const PhotoShootPlannerTool = ({
                       type="checkbox"
                       checked={data.balancePaid}
                       onChange={(e) => updateData('balancePaid', e.target.checked)}
-                      className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                     <span className="text-sm">{t('tools.photoShootPlanner.balancePaid', 'Balance Paid')}</span>
                   </label>
@@ -1277,7 +1277,7 @@ export const PhotoShootPlannerTool = ({
                     </div>
                     <div>
                       <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}>{t('tools.photoShootPlanner.remaining', 'Remaining:')}</span>
-                      <span className="ml-2 font-medium text-[#0D9488]">
+                      <span className="ml-2 font-medium text-[#6096B4]">
                         ${stats.balanceRemaining.toFixed(2)}
                       </span>
                     </div>
@@ -1318,7 +1318,7 @@ export const PhotoShootPlannerTool = ({
                         onClick={() => updateDeliverable(item.id, { completed: !item.completed })}
                       >
                         {item.completed ? (
-                          <CheckSquare className="w-5 h-5 text-[#0D9488]" />
+                          <CheckSquare className="w-5 h-5 text-[#6096B4]" />
                         ) : (
                           <Square className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                         )}
@@ -1347,7 +1347,7 @@ export const PhotoShootPlannerTool = ({
                 ))}
                 <button
                   onClick={addDeliverable}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.photoShootPlanner.addDeliverable', 'Add Deliverable')}

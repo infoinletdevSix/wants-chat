@@ -81,7 +81,7 @@ export const SleepQualityChart: React.FC<SleepQualityChartProps> = ({
             </p>
           )}
           {duration && (
-            <p className="text-sm text-teal-400">
+            <p className="text-sm text-primary-400">
               Duration: <span className="font-semibold">{formatDuration(duration.value * 60)}</span>
             </p>
           )}
@@ -102,7 +102,7 @@ export const SleepQualityChart: React.FC<SleepQualityChartProps> = ({
               <span className="text-white/60">Quality</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
+              <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500" />
               <span className="text-white/60">Duration</span>
             </div>
           </div>
@@ -118,8 +118,8 @@ export const SleepQualityChart: React.FC<SleepQualityChartProps> = ({
                   <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0} />
                 </linearGradient>
                 <linearGradient id="durationGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#14b8a6" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#14b8a6" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#75AAC1" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#75AAC1" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
@@ -158,7 +158,7 @@ export const SleepQualityChart: React.FC<SleepQualityChartProps> = ({
                 yAxisId="duration"
                 type="monotone"
                 dataKey="durationHours"
-                stroke="#14b8a6"
+                stroke="#75AAC1"
                 strokeWidth={2}
                 fill="url(#durationGradient)"
               />

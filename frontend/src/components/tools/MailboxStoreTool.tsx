@@ -756,10 +756,10 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-teal-500`;
+  } focus:outline-none focus:ring-2 focus:ring-primary-500`;
 
   const buttonClass = `px-4 py-2 rounded-lg font-medium transition-colors`;
-  const primaryButtonClass = `${buttonClass} bg-teal-600 hover:bg-teal-700 text-white`;
+  const primaryButtonClass = `${buttonClass} bg-primary-600 hover:bg-primary-700 text-white`;
   const secondaryButtonClass = `${buttonClass} ${
     theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
   }`;
@@ -777,8 +777,8 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className={cardClass}>
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-100 dark:bg-teal-900 rounded-lg">
-              <Mail className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+            <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg">
+              <Mail className="w-5 h-5 text-primary-600 dark:text-primary-400" />
             </div>
             <div>
               <div className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -852,7 +852,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
               theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-100 hover:bg-gray-200'
             }`}
           >
-            <Plus className="w-5 h-5 text-teal-500" />
+            <Plus className="w-5 h-5 text-primary-500" />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>New Customer</span>
           </button>
           <button
@@ -1431,7 +1431,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
                 <td className="px-4 py-3">{payment.customerName}</td>
                 <td className="px-4 py-3">
                   <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    payment.type === 'rental' ? 'bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300' :
+                    payment.type === 'rental' ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300' :
                     payment.type === 'shipping' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
                     payment.type === 'notary' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300' :
                     'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
@@ -1474,7 +1474,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
               const total = Object.values(stats.revenueByService).reduce((sum, val) => sum + val, 0);
               const percentage = total > 0 ? (amount / total) * 100 : 0;
               const colors: Record<string, string> = {
-                rental: 'bg-teal-500',
+                rental: 'bg-primary-500',
                 shipping: 'bg-blue-500',
                 notary: 'bg-purple-500',
                 copyPrint: 'bg-cyan-500',
@@ -1737,7 +1737,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
       </div>
     );
   }
@@ -1748,7 +1748,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-teal-600 rounded-lg">
+            <div className="p-3 bg-primary-600 rounded-lg">
               <Mail className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -1794,9 +1794,9 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.mailboxStore.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.mailboxStore.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -1809,7 +1809,7 @@ export const MailboxStoreTool: React.FC<MailboxStoreToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-3 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'text-teal-600 border-b-2 border-teal-600'
+                    ? 'text-primary-600 border-b-2 border-primary-600'
                     : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >

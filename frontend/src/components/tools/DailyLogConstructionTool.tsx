@@ -513,9 +513,9 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.dailyLogConstruction.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.dailyLogConstruction.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -523,7 +523,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
         <div className={`${cardBg} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <ClipboardList className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -606,7 +606,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                 }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : `${textSecondary} hover:bg-gray-700`
                 }`}
               >
@@ -820,7 +820,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                   onClick={() => setActiveSection(id)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     activeSection === id
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : `${isDark ? 'bg-gray-700' : 'bg-gray-100'} ${textSecondary} hover:bg-gray-200 dark:hover:bg-gray-600`
                   }`}
                 >
@@ -913,7 +913,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                   </h3>
                   <button
                     onClick={addCrewMember}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0B7C72]"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#0B7C72]"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.dailyLogConstruction.addMember', 'Add Member')}
@@ -971,7 +971,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                   <h3 className={`text-lg font-semibold ${textPrimary}`}>{t('tools.dailyLogConstruction.equipment2', 'Equipment')}</h3>
                   <button
                     onClick={addEquipment}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0B7C72]"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#0B7C72]"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.dailyLogConstruction.addEquipment', 'Add Equipment')}
@@ -1049,7 +1049,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                   <h3 className={`text-lg font-semibold ${textPrimary}`}>{t('tools.dailyLogConstruction.workPerformed', 'Work Performed')}</h3>
                   <button
                     onClick={addWorkEntry}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0B7C72]"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#0B7C72]"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.dailyLogConstruction.addWorkEntry', 'Add Work Entry')}
@@ -1113,7 +1113,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                   <h3 className={`text-lg font-semibold ${textPrimary}`}>{t('tools.dailyLogConstruction.materialDeliveries', 'Material Deliveries')}</h3>
                   <button
                     onClick={addDelivery}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0B7C72]"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#0B7C72]"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.dailyLogConstruction.addDelivery', 'Add Delivery')}
@@ -1198,7 +1198,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
                   <h3 className={`text-lg font-semibold ${textPrimary}`}>{t('tools.dailyLogConstruction.safetyIncidents', 'Safety Incidents')}</h3>
                   <button
                     onClick={addIncident}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0B7C72]"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#0B7C72]"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.dailyLogConstruction.reportIncident', 'Report Incident')}
@@ -1356,7 +1356,7 @@ export const DailyLogConstructionTool: React.FC<DailyLogConstructionToolProps> =
             <div className="flex gap-4 mt-8">
               <button
                 onClick={saveLog}
-                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#0D9488] text-white font-medium hover:bg-[#0B7C72]"
+                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#6096B4] text-white font-medium hover:bg-[#0B7C72]"
               >
                 <Save className="w-5 h-5" />
                 {selectedLogId ? t('tools.dailyLogConstruction.updateLog', 'Update Log') : t('tools.dailyLogConstruction.saveLog', 'Save Log')}

@@ -97,7 +97,7 @@ const CurrencySection: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -105,7 +105,7 @@ const CurrencySection: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -123,7 +123,7 @@ const CurrencySection: React.FC = () => {
           variants={cardVariants}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <MonetizationOn className="h-4 w-4 text-teal-400" />
+            <MonetizationOn className="h-4 w-4 text-primary-400" />
             <span className="text-sm font-medium text-white">Quick Tools</span>
           </div>
 
@@ -148,7 +148,7 @@ const CurrencySection: React.FC = () => {
                   <p className="text-xs text-white/60 mt-0.5">Real-time exchange rates</p>
                 </div>
                 <motion.button
-                  className="text-xs text-teal-400 font-semibold flex items-center gap-1 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+                  className="text-xs text-primary-400 font-semibold flex items-center gap-1 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
                   onClick={() => {
                     if (!isAuthenticated) {
                       navigate('/login');
@@ -182,10 +182,10 @@ const CurrencySection: React.FC = () => {
                     />
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10">
                       <Select value={fromCurrency} onValueChange={setFromCurrency}>
-                        <SelectTrigger className="h-9 w-32 text-xs font-bold border-0 bg-teal-500/30 text-teal-300 rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
+                        <SelectTrigger className="h-9 w-32 text-xs font-bold border-0 bg-primary-500/30 text-primary-300 rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
                           <SelectValue />
                         </SelectTrigger>
-                        <SelectContent className="rounded-2xl border border-teal-400/30 shadow-2xl bg-teal-800/90 backdrop-blur-xl p-2 min-w-[280px]">
+                        <SelectContent className="rounded-2xl border border-primary-400/30 shadow-2xl bg-primary-800/90 backdrop-blur-xl p-2 min-w-[280px]">
                           <div className="text-xs font-semibold text-white/60 px-3 py-2 mb-1">
                             Select Currency
                           </div>
@@ -193,12 +193,12 @@ const CurrencySection: React.FC = () => {
                             <SelectItem
                               key={currency.code}
                               value={currency.code}
-                              className="rounded-xl my-1 cursor-pointer hover:bg-white/10 focus:bg-white/10 data-[state=checked]:bg-teal-500/20 transition-all text-white"
+                              className="rounded-xl my-1 cursor-pointer hover:bg-white/10 focus:bg-white/10 data-[state=checked]:bg-primary-500/20 transition-all text-white"
                             >
                               <div className="flex items-center justify-between gap-4 py-2">
                                 <span className="font-bold text-sm">{currency.code}</span>
                                 {fromCurrency === currency.code && (
-                                  <div className="w-2 h-2 rounded-full bg-teal-400"></div>
+                                  <div className="w-2 h-2 rounded-full bg-primary-400"></div>
                                 )}
                               </div>
                             </SelectItem>
@@ -219,7 +219,7 @@ const CurrencySection: React.FC = () => {
                     animate={{ rotate: isSwapping ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <Icon path={mdiSwapVertical} size={0.7} className="text-teal-400" />
+                    <Icon path={mdiSwapVertical} size={0.7} className="text-primary-400" />
                   </motion.button>
                 </div>
 
@@ -232,9 +232,9 @@ const CurrencySection: React.FC = () => {
                   <label className="text-xs font-semibold text-white/80 mb-1.5 block">
                     To
                   </label>
-                  <div className="relative bg-teal-500/10 backdrop-blur-sm rounded-lg p-3 shadow-sm border border-teal-500/30">
+                  <div className="relative bg-primary-500/10 backdrop-blur-sm rounded-lg p-3 shadow-sm border border-primary-500/30">
                     <motion.div
-                      className="text-xl font-bold text-teal-400 h-8 flex items-center"
+                      className="text-xl font-bold text-primary-400 h-8 flex items-center"
                       key={convertedAmount}
                       initial={{ scale: 1.1, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
@@ -244,10 +244,10 @@ const CurrencySection: React.FC = () => {
                     </motion.div>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10">
                       <Select value={toCurrency} onValueChange={setToCurrency}>
-                        <SelectTrigger className="h-9 w-32 text-xs font-bold border-0 bg-teal-500/30 text-teal-300 rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
+                        <SelectTrigger className="h-9 w-32 text-xs font-bold border-0 bg-primary-500/30 text-primary-300 rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
                           <SelectValue />
                         </SelectTrigger>
-                        <SelectContent className="rounded-2xl border border-teal-400/30 shadow-2xl bg-teal-800/90 backdrop-blur-xl p-2 min-w-[280px]">
+                        <SelectContent className="rounded-2xl border border-primary-400/30 shadow-2xl bg-primary-800/90 backdrop-blur-xl p-2 min-w-[280px]">
                           <div className="text-xs font-semibold text-white/60 px-3 py-2 mb-1">
                             Select Currency
                           </div>
@@ -255,12 +255,12 @@ const CurrencySection: React.FC = () => {
                             <SelectItem
                               key={currency.code}
                               value={currency.code}
-                              className="rounded-xl my-1 cursor-pointer hover:bg-white/10 focus:bg-white/10 data-[state=checked]:bg-teal-500/20 transition-all text-white"
+                              className="rounded-xl my-1 cursor-pointer hover:bg-white/10 focus:bg-white/10 data-[state=checked]:bg-primary-500/20 transition-all text-white"
                             >
                               <div className="flex items-center justify-between gap-4 py-2">
                                 <span className="font-bold text-sm">{currency.code}</span>
                                 {toCurrency === currency.code && (
-                                  <div className="w-2 h-2 rounded-full bg-teal-400"></div>
+                                  <div className="w-2 h-2 rounded-full bg-primary-400"></div>
                                 )}
                               </div>
                             </SelectItem>

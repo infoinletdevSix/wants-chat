@@ -81,7 +81,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
                 <SelectTrigger className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                   <SelectValue placeholder="Select cuisine type" />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border-primary-400/30">
                   <SelectItem value="Italian" className="text-white hover:bg-white/10 focus:bg-white/10">Italian</SelectItem>
                   <SelectItem value="Chinese" className="text-white hover:bg-white/10 focus:bg-white/10">Chinese</SelectItem>
                   <SelectItem value="Mexican" className="text-white hover:bg-white/10 focus:bg-white/10">Mexican</SelectItem>
@@ -257,7 +257,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
               <SelectTrigger className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border-primary-400/30">
                 <SelectItem value="Easy" className="text-white hover:bg-white/10 focus:bg-white/10">Easy</SelectItem>
                 <SelectItem value="Medium" className="text-white hover:bg-white/10 focus:bg-white/10">Medium</SelectItem>
                 <SelectItem value="Hard" className="text-white hover:bg-white/10 focus:bg-white/10">Hard</SelectItem>
@@ -284,7 +284,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
           <div className="space-y-4">
             {recipe.ingredients?.map((ingredient, index) => (
               <div key={index} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center text-sm font-semibold text-teal-400">
+                <div className="flex-shrink-0 w-10 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center text-sm font-semibold text-primary-400">
                   {index + 1}
                 </div>
                 <Input
@@ -327,7 +327,7 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({
           <div className="space-y-4">
             {recipe.instructions?.map((instruction, index) => (
               <div key={index} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 bg-teal-500/20 rounded-xl flex items-start justify-center text-sm font-semibold text-teal-400 pt-4">
+                <div className="flex-shrink-0 w-10 bg-primary-500/20 rounded-xl flex items-start justify-center text-sm font-semibold text-primary-400 pt-4">
                   {index + 1}
                 </div>
                 <Textarea

@@ -159,7 +159,7 @@ export const StopwatchTool = ({ uiConfig }: StopwatchToolProps) => {
   return (
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-[#0D9488] rounded-lg">
+        <div className="p-3 bg-[#6096B4] rounded-lg">
           <Clock className="w-6 h-6 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -187,7 +187,7 @@ export const StopwatchTool = ({ uiConfig }: StopwatchToolProps) => {
                 ? theme === 'dark'
                   ? 'bg-yellow-600 hover:bg-yellow-700 text-white'
                   : 'bg-yellow-500 hover:bg-yellow-600 text-white'
-                : 'bg-[#0D9488] hover:bg-[#0F766E] text-white'
+                : 'bg-[#6096B4] hover:bg-[#4C7F98] text-white'
             }`}
           >
             {isRunning ? (

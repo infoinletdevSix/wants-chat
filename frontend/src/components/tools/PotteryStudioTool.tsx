@@ -235,18 +235,18 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
 
-  const inputClass = `w-full p-3 rounded-lg border ${theme === 'dark' ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488]`;
+  const inputClass = `w-full p-3 rounded-lg border ${theme === 'dark' ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4]`;
   const cardClass = `p-4 rounded-lg ${theme === 'dark' ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <CircleDot className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.potteryStudio.potteryStudio', 'Pottery Studio')}</h2>
@@ -255,15 +255,15 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.potteryStudio.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.potteryStudio.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><Calendar className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><Calendar className="w-6 h-6 text-[#6096B4]" /></div>
           <div><p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.potteryStudio.classes', 'Classes')}</p>
             <p className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{classes.length}</p></div>
         </div>
@@ -282,7 +282,7 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
       <div className="flex gap-2 border-b border-gray-200 dark:border-gray-700">
         {(['classes', 'kiln'] as const).map(tab => (
           <button key={tab} onClick={() => { setActiveTab(tab); setShowForm(false); }}
-            className={`px-4 py-2 font-medium capitalize ${activeTab === tab ? 'text-[#0D9488] border-b-2 border-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+            className={`px-4 py-2 font-medium capitalize ${activeTab === tab ? 'text-[#6096B4] border-b-2 border-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
             {tab === 'kiln' ? t('tools.potteryStudio.kilnReservations', 'Kiln Reservations') : t('tools.potteryStudio.classes2', 'Classes')}
           </button>
         ))}
@@ -309,7 +309,7 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
             onImportJSON={handleImportJSON}
             theme={isDark ? 'dark' : 'light'}
           />
-          <button onClick={() => setShowForm(!showForm)} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+          <button onClick={() => setShowForm(!showForm)} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
             <Plus className="w-5 h-5" />Add
           </button>
         </div>
@@ -327,7 +327,7 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
             <input type="time" value={classForm.time} onChange={(e) => setClassForm({ ...classForm, time: e.target.value })} className={inputClass} />
             <input type="number" placeholder={t('tools.potteryStudio.maxStudents', 'Max Students')} value={classForm.maxStudents} onChange={(e) => setClassForm({ ...classForm, maxStudents: parseInt(e.target.value) })} className={inputClass} />
             <input type="number" placeholder={t('tools.potteryStudio.price', 'Price ($)')} value={classForm.price} onChange={(e) => setClassForm({ ...classForm, price: parseFloat(e.target.value) })} className={inputClass} />
-            <button onClick={addClass} disabled={!classForm.name || !classForm.date} className="px-4 py-3 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.potteryStudio.save', 'Save')}</button>
+            <button onClick={addClass} disabled={!classForm.name || !classForm.date} className="px-4 py-3 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.potteryStudio.save', 'Save')}</button>
           </div>
         </div>
       )}
@@ -340,7 +340,7 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
             <input type="time" value={kilnForm.time} onChange={(e) => setKilnForm({ ...kilnForm, time: e.target.value })} className={inputClass} />
             <input type="number" placeholder={t('tools.potteryStudio.durationHours', 'Duration (hours)')} value={kilnForm.duration} onChange={(e) => setKilnForm({ ...kilnForm, duration: parseInt(e.target.value) })} className={inputClass} />
             <input type="number" placeholder={t('tools.potteryStudio.pieces', 'Pieces')} value={kilnForm.pieces} onChange={(e) => setKilnForm({ ...kilnForm, pieces: parseInt(e.target.value) })} className={inputClass} />
-            <button onClick={addKilnReservation} disabled={!kilnForm.student || !kilnForm.date} className="px-4 py-3 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.potteryStudio.save2', 'Save')}</button>
+            <button onClick={addKilnReservation} disabled={!kilnForm.student || !kilnForm.date} className="px-4 py-3 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.potteryStudio.save2', 'Save')}</button>
           </div>
         </div>
       )}
@@ -356,7 +356,7 @@ export const PotteryStudioTool: React.FC<PotteryStudioToolProps> = ({ uiConfig }
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{c.enrolled}/{c.maxStudents} enrolled • ${c.price}</p>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => enrollStudent(c.id)} disabled={c.enrolled >= c.maxStudents} className="text-sm px-3 py-1 bg-[#0D9488] text-white rounded disabled:opacity-50">{t('tools.potteryStudio.enroll', 'Enroll')}</button>
+                  <button onClick={() => enrollStudent(c.id)} disabled={c.enrolled >= c.maxStudents} className="text-sm px-3 py-1 bg-[#6096B4] text-white rounded disabled:opacity-50">{t('tools.potteryStudio.enroll', 'Enroll')}</button>
                   <button onClick={() => deleteClass(c.id)} className="p-2 text-red-500 hover:bg-red-500/10 rounded-lg"><Trash2 className="w-4 h-4" /></button>
                 </div>
               </div>

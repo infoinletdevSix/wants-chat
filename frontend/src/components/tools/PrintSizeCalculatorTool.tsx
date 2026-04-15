@@ -156,9 +156,9 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
         border: isDark ? 'border-green-800' : 'border-green-200',
       },
       teal: {
-        bg: isDark ? 'bg-teal-900/30' : 'bg-teal-50',
-        text: 'text-teal-500',
-        border: isDark ? 'border-teal-800' : 'border-teal-200',
+        bg: isDark ? 'bg-primary-900/30' : 'bg-primary-50',
+        text: 'text-primary-500',
+        border: isDark ? 'border-primary-800' : 'border-primary-200',
       },
       yellow: {
         bg: isDark ? 'bg-yellow-900/30' : 'bg-yellow-50',
@@ -202,7 +202,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-teal-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-primary-500 flex items-center justify-center">
               <Printer className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -214,9 +214,9 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-teal-500/10 rounded-xl border border-teal-500/20">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.printSizeCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.printSizeCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
             </div>
           )}
 
@@ -240,7 +240,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                  } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   placeholder="6000"
                 />
               </div>
@@ -257,7 +257,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                  } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   placeholder="4000"
                 />
               </div>
@@ -272,7 +272,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                  } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                 >
                   <option value="150">150 DPI (Posters)</option>
                   <option value="200">200 DPI (Good Quality)</option>
@@ -293,7 +293,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
                   }}
                   className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                     imageWidth === res.width.toString() && imageHeight === res.height.toString()
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDarkMode
                       ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -308,9 +308,9 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
           {calculations && (
             <>
               {/* Results Summary */}
-              <div className={`p-6 rounded-xl mb-6 ${isDarkMode ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+              <div className={`p-6 rounded-xl mb-6 ${isDarkMode ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-teal-400' : 'text-teal-700'}`}>
+                  <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-primary-400' : 'text-primary-700'}`}>
                     Maximum Print Size at {targetDPI} DPI
                   </h3>
                   <div className="flex items-center gap-2">
@@ -338,7 +338,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                   <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
-                    <Image className="w-6 h-6 mx-auto mb-2 text-teal-500" />
+                    <Image className="w-6 h-6 mx-auto mb-2 text-primary-500" />
                     <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.printSizeCalculator.resolution', 'Resolution')}</p>
                     <p className={`text-lg font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {calculations.megapixels.toFixed(1)} MP
@@ -352,7 +352,7 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
                   </div>
                   <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} col-span-2`}>
                     <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.printSizeCalculator.maxPrintSize', 'Max Print Size')}</p>
-                    <p className="text-2xl font-bold text-teal-500">
+                    <p className="text-2xl font-bold text-primary-500">
                       {calculations.displayWidth.toFixed(2)} x {calculations.displayHeight.toFixed(2)} {unit}
                     </p>
                   </div>
@@ -417,8 +417,8 @@ const PrintSizeCalculatorTool: React.FC<PrintSizeCalculatorToolProps> = ({ uiCon
           )}
 
           {/* Info */}
-          <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-teal-50'} flex items-start gap-3`}>
-            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-teal-400' : 'text-teal-600'}`} />
+          <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-primary-50'} flex items-start gap-3`}>
+            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-primary-400' : 'text-primary-600'}`} />
             <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               <p className="font-medium mb-1">{t('tools.printSizeCalculator.printingTips', 'Printing Tips:')}</p>
               <ul className="space-y-1 list-disc list-inside">

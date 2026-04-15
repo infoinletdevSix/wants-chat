@@ -92,11 +92,11 @@ const WorkoutPlans: React.FC = () => {
               className={cn(
                 "p-4 rounded-xl border-2 transition-all text-center",
                 selectedDuration === duration.value
-                  ? "border-teal-400 bg-teal-500/20"
-                  : "border-white/20 hover:border-teal-400/50 bg-white/10 backdrop-blur-xl"
+                  ? "border-primary-400 bg-primary-500/20"
+                  : "border-white/20 hover:border-primary-400/50 bg-white/10 backdrop-blur-xl"
               )}
             >
-              <Calendar className="h-6 w-6 mx-auto mb-2 text-teal-400" />
+              <Calendar className="h-6 w-6 mx-auto mb-2 text-primary-400" />
               <div className="font-semibold text-white">{duration.label}</div>
               <div className="text-xs text-white/60 mt-1">
                 {duration.description}
@@ -121,7 +121,7 @@ const WorkoutPlans: React.FC = () => {
           {/* Duration-Filtered Workout Plans */}
           <div>
               <div className="flex items-center gap-2 mb-4">
-                <Calendar className="h-5 w-5 text-teal-400" />
+                <Calendar className="h-5 w-5 text-primary-400" />
                 <h2 className="text-xl font-semibold text-white">Available {selectedDuration}-Day {currentMode ? (currentMode.charAt(0).toUpperCase() + currentMode.slice(1)) : ''} Plans</h2>
               </div>
 
@@ -132,7 +132,7 @@ const WorkoutPlans: React.FC = () => {
                     <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-6 animate-pulse">
                       <div className="flex items-center justify-between mb-4">
                         <div className="w-12 h-12 bg-white/20 rounded-lg"></div>
-                        <div className="h-6 bg-teal-500/30 rounded-full w-20"></div>
+                        <div className="h-6 bg-primary-500/30 rounded-full w-20"></div>
                       </div>
                       <div className="h-6 bg-white/20 rounded w-3/4 mb-2"></div>
                       <div className="h-4 bg-white/10 rounded w-full mb-4"></div>
@@ -142,7 +142,7 @@ const WorkoutPlans: React.FC = () => {
                         <div className="h-4 bg-white/10 rounded w-3/4"></div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <div className="h-8 bg-teal-500/30 rounded w-24"></div>
+                        <div className="h-8 bg-primary-500/30 rounded w-24"></div>
                         <div className="w-5 h-5 bg-white/20 rounded"></div>
                       </div>
                     </div>
@@ -166,13 +166,13 @@ const WorkoutPlans: React.FC = () => {
                       className="group relative bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-6 hover:shadow-xl transition-all hover:scale-105 cursor-pointer"
                       onClick={() => navigate(createUrlWithMode(`/fitness/custom-plan/${plan.id}`))}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="relative">
                         <div className="flex items-center justify-between mb-4">
-                          <div className="p-3 rounded-lg bg-teal-500/20">
-                            <Icon path={mdiTrophy} size={1} className="text-teal-400" />
+                          <div className="p-3 rounded-lg bg-primary-500/20">
+                            <Icon path={mdiTrophy} size={1} className="text-primary-400" />
                           </div>
-                          <span className="text-xs bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full font-medium">
+                          <span className="text-xs bg-gradient-to-r from-primary-500 to-cyan-500 text-white px-3 py-1 rounded-full font-medium">
                             {selectedDuration} Days
                           </span>
                         </div>
@@ -183,11 +183,11 @@ const WorkoutPlans: React.FC = () => {
 
                         <div className="space-y-2 mb-4">
                           <div className="flex items-center gap-2 text-sm text-white/80">
-                            <Calendar className="h-4 w-4 text-teal-400" />
+                            <Calendar className="h-4 w-4 text-primary-400" />
                             <span>{plan.workouts.length} workouts over {plan.duration} days</span>
                           </div>
                           <div className="flex items-center gap-2 text-sm text-white/80">
-                            <Target className="h-4 w-4 text-teal-400" />
+                            <Target className="h-4 w-4 text-primary-400" />
                             <span>{plan.difficulty} • {plan.category}</span>
                           </div>
                           <div className="flex items-center gap-2 text-sm text-white/60">
@@ -200,12 +200,12 @@ const WorkoutPlans: React.FC = () => {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="text-white/60 group-hover:bg-gradient-to-r group-hover:from-teal-500 group-hover:to-cyan-500 group-hover:text-white"
+                            className="text-white/60 group-hover:bg-gradient-to-r group-hover:from-primary-500 group-hover:to-cyan-500 group-hover:text-white"
                           >
                             <Edit className="h-4 w-4 mr-1" />
                             View Plan
                           </Button>
-                          <ChevronRight className="h-5 w-5 text-white/40 group-hover:text-teal-400 group-hover:translate-x-1 transition-all" />
+                          <ChevronRight className="h-5 w-5 text-white/40 group-hover:text-primary-400 group-hover:translate-x-1 transition-all" />
                         </div>
                       </div>
                     </div>
@@ -214,7 +214,7 @@ const WorkoutPlans: React.FC = () => {
                 
                 {/* Create Custom Plan Card */}
                 <div
-                  className="group relative bg-white/5 backdrop-blur-xl rounded-2xl border-2 border-dashed border-white/30 p-6 hover:border-teal-400 transition-all cursor-pointer"
+                  className="group relative bg-white/5 backdrop-blur-xl rounded-2xl border-2 border-dashed border-white/30 p-6 hover:border-primary-400 transition-all cursor-pointer"
                   onClick={handleCreateCustom}
                 >
                   <div className="relative text-center">
@@ -236,7 +236,7 @@ const WorkoutPlans: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">What's Included</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-teal-400 mt-0.5" />
+                <Check className="h-5 w-5 text-primary-400 mt-0.5" />
                 <div>
                   <div className="font-medium text-white">Personalized Schedule</div>
                   <div className="text-sm text-white/60">
@@ -245,7 +245,7 @@ const WorkoutPlans: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-teal-400 mt-0.5" />
+                <Check className="h-5 w-5 text-primary-400 mt-0.5" />
                 <div>
                   <div className="font-medium text-white">Exercise Instructions</div>
                   <div className="text-sm text-white/60">
@@ -254,7 +254,7 @@ const WorkoutPlans: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-teal-400 mt-0.5" />
+                <Check className="h-5 w-5 text-primary-400 mt-0.5" />
                 <div>
                   <div className="font-medium text-white">Progress Tracking</div>
                   <div className="text-sm text-white/60">

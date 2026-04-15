@@ -546,14 +546,14 @@ Thank you for your business!
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]`;
 
   const labelClasses = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const tabClasses = (isActive: boolean) =>
     `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
       isActive
-        ? 'bg-[#0D9488] text-white'
+        ? 'bg-[#6096B4] text-white'
         : theme === 'dark'
         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -564,7 +564,7 @@ Thank you for your business!
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
             {t('tools.applianceRepair.loadingRepairJobs', 'Loading repair jobs...')}
           </p>
@@ -580,7 +580,7 @@ Thank you for your business!
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Wrench className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -632,7 +632,7 @@ Thank you for your business!
               </button>
               <button
                 onClick={handleNewJob}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.applianceRepair.newJob', 'New Job')}
@@ -642,8 +642,8 @@ Thank you for your business!
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="mt-4 p-3 bg-[#0D9488]/10 border border-[#0D9488]/20 rounded-lg flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
+            <div className="mt-4 p-3 bg-[#6096B4]/10 border border-[#6096B4]/20 rounded-lg flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
               <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 {t('tools.applianceRepair.fieldsHaveBeenPrefilledFrom', 'Fields have been prefilled from AI suggestions')}
               </span>
@@ -698,7 +698,7 @@ Thank you for your business!
                       onClick={() => handleSelectJob(job)}
                       className={`p-3 rounded-lg cursor-pointer transition-colors border ${
                         currentJob.id === job.id
-                          ? 'border-[#0D9488] bg-[#0D9488]/10'
+                          ? 'border-[#6096B4] bg-[#6096B4]/10'
                           : theme === 'dark'
                           ? 'border-gray-700 hover:bg-gray-700'
                           : 'border-gray-200 hover:bg-gray-100'
@@ -764,7 +764,7 @@ Thank you for your business!
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handleSaveJob}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                   >
                     <Save className="w-4 h-4" />
                     {t('tools.applianceRepair.saveJob', 'Save Job')}
@@ -816,7 +816,7 @@ Thank you for your business!
               {activeTab === 'customer' && (
                 <div className="space-y-4">
                   <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <User className="w-5 h-5 text-[#0D9488]" />
+                    <User className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.applianceRepair.customerInformation', 'Customer Information')}
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -896,7 +896,7 @@ Thank you for your business!
               {activeTab === 'appliance' && (
                 <div className="space-y-4">
                   <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <Package className="w-5 h-5 text-[#0D9488]" />
+                    <Package className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.applianceRepair.applianceDetails', 'Appliance Details')}
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -962,7 +962,7 @@ Thank you for your business!
               {activeTab === 'diagnosis' && (
                 <div className="space-y-4">
                   <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <ClipboardList className="w-5 h-5 text-[#0D9488]" />
+                    <ClipboardList className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.applianceRepair.problemDiagnosis', 'Problem & Diagnosis')}
                   </h2>
 
@@ -1030,7 +1030,7 @@ Thank you for your business!
                       }`}
                     >
                       <span className="flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4 text-[#0D9488]" />
+                        <AlertCircle className="w-4 h-4 text-[#6096B4]" />
                         {t('tools.applianceRepair.commonRepairCodesReference', 'Common Repair Codes Reference')}
                       </span>
                       {showRepairCodes ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -1045,7 +1045,7 @@ Thank you for your business!
                             }`}
                           >
                             <div className="flex items-center justify-between">
-                              <span className="font-mono font-bold text-[#0D9488]">{code.code}</span>
+                              <span className="font-mono font-bold text-[#6096B4]">{code.code}</span>
                               <span
                                 className={`text-xs px-2 py-0.5 rounded ${
                                   code.category === 'Major'
@@ -1074,12 +1074,12 @@ Thank you for your business!
                 <div className="space-y-4">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className={`text-lg font-semibold flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      <Settings className="w-5 h-5 text-[#0D9488]" />
+                      <Settings className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.applianceRepair.partsNeeded', 'Parts Needed')}
                     </h2>
                     <button
                       onClick={handleAddPart}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors text-sm"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors text-sm"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.applianceRepair.addPart', 'Add Part')}
@@ -1157,7 +1157,7 @@ Thank you for your business!
                                 type="checkbox"
                                 checked={part.ordered}
                                 onChange={(e) => handleUpdatePart(part.id, { ordered: e.target.checked })}
-                                className="w-4 h-4 text-[#0D9488] rounded"
+                                className="w-4 h-4 text-[#6096B4] rounded"
                               />
                               <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                                 {t('tools.applianceRepair.ordered', 'Ordered')}
@@ -1195,12 +1195,12 @@ Thank you for your business!
                           </div>
                         </div>
                       ))}
-                      <div className={`p-4 rounded-lg ${theme === 'dark' ? t('tools.applianceRepair.bg0d948820', 'bg-[#0D9488]/20') : t('tools.applianceRepair.bg0d948810', 'bg-[#0D9488]/10')}`}>
+                      <div className={`p-4 rounded-lg ${theme === 'dark' ? t('tools.applianceRepair.bg0d948820', 'bg-[#6096B4]/20') : t('tools.applianceRepair.bg0d948810', 'bg-[#6096B4]/10')}`}>
                         <div className="flex justify-between items-center">
                           <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                             {t('tools.applianceRepair.totalPartsCost', 'Total Parts Cost')}
                           </span>
-                          <span className="text-xl font-bold text-[#0D9488]">${pricing.partsTotal.toFixed(2)}</span>
+                          <span className="text-xl font-bold text-[#6096B4]">${pricing.partsTotal.toFixed(2)}</span>
                         </div>
                       </div>
                     </div>
@@ -1213,12 +1213,12 @@ Thank you for your business!
                 <div className="space-y-4">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className={`text-lg font-semibold flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      <Calendar className="w-5 h-5 text-[#0D9488]" />
+                      <Calendar className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.applianceRepair.serviceCallsScheduling', 'Service Calls & Scheduling')}
                     </h2>
                     <button
                       onClick={handleAddServiceCall}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors text-sm"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors text-sm"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.applianceRepair.scheduleCall', 'Schedule Call')}
@@ -1299,7 +1299,7 @@ Thank you for your business!
                                   type="checkbox"
                                   checked={call.completed}
                                   onChange={(e) => handleUpdateServiceCall(call.id, { completed: e.target.checked })}
-                                  className="w-4 h-4 text-[#0D9488] rounded"
+                                  className="w-4 h-4 text-[#6096B4] rounded"
                                 />
                                 <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                                   {t('tools.applianceRepair.completed', 'Completed')}
@@ -1325,7 +1325,7 @@ Thank you for your business!
                   {/* Follow-up Appointment */}
                   <div className={`mt-6 p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                     <h3 className={`font-medium mb-3 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      <RefreshCw className="w-4 h-4 text-[#0D9488]" />
+                      <RefreshCw className="w-4 h-4 text-[#6096B4]" />
                       {t('tools.applianceRepair.followUpAppointment', 'Follow-up Appointment')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1357,7 +1357,7 @@ Thank you for your business!
               {activeTab === 'pricing' && (
                 <div className="space-y-4">
                   <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <DollarSign className="w-5 h-5 text-[#0D9488]" />
+                    <DollarSign className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.applianceRepair.laborPricing', 'Labor & Pricing')}
                   </h2>
 
@@ -1474,7 +1474,7 @@ Thank you for your business!
                         <span className={`text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                           {t('tools.applianceRepair.total2', 'Total:')}
                         </span>
-                        <span className="text-2xl font-bold text-[#0D9488]">${pricing.total.toFixed(2)}</span>
+                        <span className="text-2xl font-bold text-[#6096B4]">${pricing.total.toFixed(2)}</span>
                       </div>
                     </div>
                   </div>
@@ -1485,7 +1485,7 @@ Thank you for your business!
               {activeTab === 'warranty' && (
                 <div className="space-y-4">
                   <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <Shield className="w-5 h-5 text-[#0D9488]" />
+                    <Shield className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.applianceRepair.warrantyVerification', 'Warranty Verification')}
                   </h2>
 
@@ -1575,13 +1575,13 @@ Thank you for your business!
                 <div className="space-y-4">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className={`text-lg font-semibold flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      <FileText className="w-5 h-5 text-[#0D9488]" />
+                      <FileText className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.applianceRepair.invoicePreview', 'Invoice Preview')}
                     </h2>
                     <div className="flex gap-2">
                       <button
                         onClick={generateInvoice}
-                        className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                       >
                         <Download className="w-4 h-4" />
                         {t('tools.applianceRepair.downloadInvoice', 'Download Invoice')}
@@ -1744,7 +1744,7 @@ Thank you for your business!
                           }`}
                         >
                           <span className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.applianceRepair.total', 'Total:')}</span>
-                          <span className="font-bold text-xl text-[#0D9488]">${pricing.total.toFixed(2)}</span>
+                          <span className="font-bold text-xl text-[#6096B4]">${pricing.total.toFixed(2)}</span>
                         </div>
                       </div>
                     </div>

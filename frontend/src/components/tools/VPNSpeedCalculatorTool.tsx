@@ -164,7 +164,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <Shield className="w-7 h-7 text-teal-500" />
+        <Shield className="w-7 h-7 text-primary-500" />
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
           {t('tools.vpnSpeedCalculator.title')}
         </h2>
@@ -173,9 +173,9 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.vpnSpeedCalculator.settingsLoaded')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.vpnSpeedCalculator.settingsLoaded')}</span>
           </div>
         )}
 
@@ -200,7 +200,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div>
@@ -218,7 +218,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div>
@@ -236,7 +236,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
           </div>
@@ -261,7 +261,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                   onClick={() => setProtocol(key)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
                     protocol === key
-                      ? 'bg-teal-500 text-white border-teal-500'
+                      ? 'bg-primary-500 text-white border-primary-500'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200'
@@ -286,7 +286,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                   onClick={() => setEncryption(key)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
                     encryption === key
-                      ? 'bg-teal-500 text-white border-teal-500'
+                      ? 'bg-primary-500 text-white border-primary-500'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200'
@@ -311,7 +311,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                   onClick={() => setServerLocation(key)}
                   className={`px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors border ${
                     serverLocation === key
-                      ? 'bg-teal-500 text-white border-teal-500'
+                      ? 'bg-primary-500 text-white border-primary-500'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200'
@@ -328,7 +328,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
         <button
           onClick={calculateVPNSpeed}
           disabled={isCalculating}
-          className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
+          className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
         >
           {isCalculating ? (
             <RefreshCw className="w-5 h-5 animate-spin" />
@@ -351,7 +351,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                 {/* Download Speed */}
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-2 mb-3">
-                    <Download className="w-5 h-5 text-teal-500" />
+                    <Download className="w-5 h-5 text-primary-500" />
                     <span className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.vpnSpeedCalculator.downloadLabel')}</span>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
@@ -372,7 +372,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                 {/* Upload Speed */}
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-2 mb-3">
-                    <Upload className="w-5 h-5 text-teal-500" />
+                    <Upload className="w-5 h-5 text-primary-500" />
                     <span className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.vpnSpeedCalculator.uploadLabel')}</span>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
@@ -393,7 +393,7 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
                 {/* Ping/Latency */}
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-2 mb-3">
-                    <Clock className="w-5 h-5 text-teal-500" />
+                    <Clock className="w-5 h-5 text-primary-500" />
                     <span className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.vpnSpeedCalculator.latency')}</span>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
@@ -416,15 +416,15 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
               <div className={`mt-4 p-3 rounded-lg ${isDark ? 'bg-gray-600/50' : 'bg-gray-100'}`}>
                 <div className="flex flex-wrap gap-4 text-sm">
                   <div className="flex items-center gap-1">
-                    <Wifi className="w-4 h-4 text-teal-500" />
+                    <Wifi className="w-4 h-4 text-primary-500" />
                     <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>{result.protocol}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Shield className="w-4 h-4 text-teal-500" />
+                    <Shield className="w-4 h-4 text-primary-500" />
                     <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>{result.encryption}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Globe className="w-4 h-4 text-teal-500" />
+                    <Globe className="w-4 h-4 text-primary-500" />
                     <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>~{result.serverDistance} km</span>
                   </div>
                 </div>
@@ -432,12 +432,12 @@ export const VPNSpeedCalculatorTool = ({ uiConfig }: VPNSpeedCalculatorToolProps
             </div>
 
             {/* Recommendations */}
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border border-teal-700/30' : 'bg-teal-50 border border-teal-200'}`}>
-              <h3 className={`text-sm font-semibold mb-3 flex items-center gap-2 ${isDark ? 'text-teal-300' : 'text-teal-800'}`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border border-primary-700/30' : 'bg-primary-50 border border-primary-200'}`}>
+              <h3 className={`text-sm font-semibold mb-3 flex items-center gap-2 ${isDark ? 'text-primary-300' : 'text-primary-800'}`}>
                 <Zap className="w-4 h-4" />
                 {t('tools.vpnSpeedCalculator.optimizationTips')}
               </h3>
-              <ul className={`space-y-2 ${isDark ? 'text-teal-200/80' : 'text-teal-700'}`}>
+              <ul className={`space-y-2 ${isDark ? 'text-primary-200/80' : 'text-primary-700'}`}>
                 {protocol !== 'wireguard' && (
                   <li className="flex items-start gap-2 text-sm">
                     <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />

@@ -242,10 +242,10 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
       <div className="max-w-2xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
           {/* Header */}
-          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <Droplets className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <Droplets className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -261,9 +261,9 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
           <div className="p-6 space-y-6">
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {t('tools.babyFeedingCalculator.dataLoadedFromYourConversation', 'Data loaded from your conversation')}
                 </span>
               </div>
@@ -285,7 +285,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                     onClick={() => setFeedingType(type.id as FeedingType)}
                     className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 ${
                       feedingType === type.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -315,7 +315,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -335,7 +335,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <select
                   value={weightUnit}
@@ -344,7 +344,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="kg">kg</option>
                   <option value="lb">lb</option>
@@ -356,13 +356,13 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
             {result && (
               <>
                 {/* Main Stats */}
-                <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+                <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center">
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.babyFeedingCalculator.dailyAmount', 'Daily Amount')}
                       </div>
-                      <div className="text-3xl font-bold text-[#0D9488]">
+                      <div className="text-3xl font-bold text-[#6096B4]">
                         {result.dailyAmount.oz} oz
                       </div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -373,7 +373,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.babyFeedingCalculator.perFeeding', 'Per Feeding')}
                       </div>
-                      <div className="text-3xl font-bold text-[#0D9488]">
+                      <div className="text-3xl font-bold text-[#6096B4]">
                         {result.perFeedingAmount.oz} oz
                       </div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -386,7 +386,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                 {/* Feeding Schedule */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                    <Baby className="w-5 h-5 mx-auto mb-1 text-[#0D9488]" />
+                    <Baby className="w-5 h-5 mx-auto mb-1 text-[#6096B4]" />
                     <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {result.feedingsPerDay}
                     </div>
@@ -395,7 +395,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                     </div>
                   </div>
                   <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                    <Clock className="w-5 h-5 mx-auto mb-1 text-[#0D9488]" />
+                    <Clock className="w-5 h-5 mx-auto mb-1 text-[#6096B4]" />
                     <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {result.feedingInterval.replace('Every ', '')}
                     </div>
@@ -413,7 +413,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
                   <ul className="space-y-2">
                     {result.guidelines.map((guideline, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="text-[#0D9488] mt-1">•</span>
+                        <span className="text-[#6096B4] mt-1">•</span>
                         <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                           {guideline}
                         </span>
@@ -424,7 +424,7 @@ export const BabyFeedingCalculatorTool: React.FC<BabyFeedingCalculatorToolProps>
 
                 {/* Age-Specific Tips */}
                 {result.ageSpecificTips.length > 0 && (
-                  <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-700' : 'bg-teal-50'}`}>
+                  <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-700' : 'bg-primary-50'}`}>
                     <h4 className={`font-medium mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.babyFeedingCalculator.ageSpecificTips', 'Age-Specific Tips')}
                     </h4>

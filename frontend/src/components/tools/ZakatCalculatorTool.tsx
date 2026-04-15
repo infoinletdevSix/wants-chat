@@ -173,7 +173,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
       <div className="max-w-3xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Coins className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -200,7 +200,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="USD">{t('tools.zakatCalculator.usd', 'USD ($)')}</option>
                   <option value="EUR">{t('tools.zakatCalculator.eurEuro', 'EUR (euro)')}</option>
@@ -225,7 +225,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -237,7 +237,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
                     onClick={() => setNisabMethod('gold')}
                     className={`flex-1 py-2 px-3 rounded-lg font-medium transition-colors ${
                       nisabMethod === 'gold'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-600 text-gray-300'
                         : 'bg-white text-gray-700'
@@ -249,7 +249,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
                     onClick={() => setNisabMethod('silver')}
                     className={`flex-1 py-2 px-3 rounded-lg font-medium transition-colors ${
                       nisabMethod === 'silver'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-600 text-gray-300'
                         : 'bg-white text-gray-700'
@@ -271,7 +271,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
               onClick={() => setActiveTab('assets')}
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                 activeTab === 'assets'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -283,7 +283,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
               onClick={() => setActiveTab('liabilities')}
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                 activeTab === 'liabilities'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -299,7 +299,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
               {assetFields.map((field) => (
                 <div key={field.key} className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
                   <div className="flex items-start gap-3">
-                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : t('tools.zakatCalculator.bg0d948810', 'bg-[#0D9488]/10')} text-[#0D9488]`}>
+                    <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : t('tools.zakatCalculator.bg0d948810', 'bg-[#6096B4]/10')} text-[#6096B4]`}>
                       {field.icon}
                     </div>
                     <div className="flex-1">
@@ -318,7 +318,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -347,7 +347,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               ))}
@@ -358,7 +358,7 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateZakat}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.zakatCalculator.calculateZakat', 'Calculate Zakat')}
@@ -380,15 +380,15 @@ export default function ZakatCalculatorTool({ uiConfig }: ZakatCalculatorToolPro
             <div className="space-y-4">
               {/* Main Result */}
               <div className={`p-6 rounded-lg border-l-4 ${
-                result.isZakatDue ? t('tools.zakatCalculator.border0d9488', 'border-[#0D9488]') : 'border-yellow-500'
-              } ${theme === 'dark' ? 'bg-gray-700' : t('tools.zakatCalculator.bg0d9488102', 'bg-[#0D9488]/10')}`}>
+                result.isZakatDue ? t('tools.zakatCalculator.border0d9488', 'border-[#6096B4]') : 'border-yellow-500'
+              } ${theme === 'dark' ? 'bg-gray-700' : t('tools.zakatCalculator.bg0d9488102', 'bg-[#6096B4]/10')}`}>
                 <div className="text-center">
                   {result.isZakatDue ? (
                     <>
                       <div className={`text-sm mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.zakatCalculator.yourZakatAmount', 'Your Zakat Amount')}
                       </div>
-                      <div className="text-4xl font-bold text-[#0D9488] mb-2">
+                      <div className="text-4xl font-bold text-[#6096B4] mb-2">
                         {formatCurrency(result.zakatAmount)}
                       </div>
                       <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>

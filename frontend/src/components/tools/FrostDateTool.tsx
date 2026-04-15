@@ -153,10 +153,10 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Snowflake className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Snowflake className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.frostDate.frostDateFinder', 'Frost Date Finder')}</h3>
@@ -172,7 +172,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
             onClick={() => setInputMode('location')}
             className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 ${
               inputMode === 'location'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -185,7 +185,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
             onClick={() => setInputMode('zone')}
             className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 ${
               inputMode === 'zone'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -203,7 +203,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
               <select
                 value={selectedState}
                 onChange={(e) => { setSelectedState(e.target.value); setSelectedCity(''); }}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
               >
                 <option value="">{t('tools.frostDate.selectState', 'Select state...')}</option>
                 {states.map(state => (
@@ -217,7 +217,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
                 disabled={!selectedState}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500 disabled:opacity-50`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500 disabled:opacity-50`}
               >
                 <option value="">{t('tools.frostDate.selectCity', 'Select city...')}</option>
                 {citiesInState.map(city => (
@@ -238,7 +238,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
                   onClick={() => setManualZone(zone)}
                   className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${
                     manualZone === zone
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -259,7 +259,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
             recommendation.color === 'red' ? isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200' :
             recommendation.color === 'blue' ? isDark ? 'bg-blue-900/20 border-blue-800' : 'bg-blue-50 border-blue-200' :
             recommendation.color === 'purple' ? isDark ? 'bg-purple-900/20 border-purple-800' : 'bg-purple-50 border-purple-200' :
-            recommendation.color === 'teal' ? isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200' :
+            recommendation.color === 'teal' ? isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200' :
             isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
           }`}>
             <div className="flex items-center gap-3">
@@ -269,7 +269,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
                 recommendation.color === 'red' ? 'bg-red-500 text-white' :
                 recommendation.color === 'blue' ? 'bg-blue-500 text-white' :
                 recommendation.color === 'purple' ? 'bg-purple-500 text-white' :
-                recommendation.color === 'teal' ? 'bg-teal-500 text-white' :
+                recommendation.color === 'teal' ? 'bg-primary-500 text-white' :
                 'bg-gray-500 text-white'
               }`}>
                 {recommendation.status}
@@ -283,7 +283,7 @@ export const FrostDateTool: React.FC<FrostDateToolProps> = ({ uiConfig }) => {
         {(selectedFrostData || zoneBasedData) && (
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Calendar className="w-4 h-4 text-teal-500" />
+              <Calendar className="w-4 h-4 text-primary-500" />
               Frost Dates {selectedFrostData ? `for ${selectedFrostData.city}, ${selectedFrostData.state}` : `(Zone ${manualZone})`}
             </h4>
 

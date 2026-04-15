@@ -80,7 +80,7 @@ export default function DocsTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               Document Tools
             </h1>
             <p className="text-gray-400">PDF manipulation and document conversion utilities</p>
@@ -88,11 +88,11 @@ export default function DocsTools() {
 
           <Tabs defaultValue="pdf" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="pdf" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="pdf" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <FileText className="w-4 h-4 mr-2" />
                 PDF Tools
               </TabsTrigger>
-              <TabsTrigger value="converter" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="converter" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Converter
               </TabsTrigger>
@@ -108,7 +108,7 @@ export default function DocsTools() {
                     <select
                       value={pdfOperation}
                       onChange={(e) => setPdfOperation(e.target.value)}
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     >
                       <option value="merge">Merge PDFs</option>
                       <option value="split">Split PDF</option>
@@ -147,7 +147,7 @@ export default function DocsTools() {
                   <button
                     onClick={processPdfTool}
                     disabled={!pdfFile}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Process PDF
                   </button>
@@ -192,7 +192,7 @@ export default function DocsTools() {
                     <select
                       value={docFormat}
                       onChange={(e) => setDocFormat(e.target.value)}
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     >
                       <option value="pdf">PDF</option>
                       <option value="docx">Word (DOCX)</option>
@@ -230,7 +230,7 @@ export default function DocsTools() {
                   <button
                     onClick={convertDocument}
                     disabled={!docFile}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Convert Document
                   </button>

@@ -211,13 +211,13 @@ const ShoppingLists: React.FC = () => {
                 >
                   ← Back
                 </button>
-                <ShoppingBag className="h-8 w-8 text-teal-400" />
+                <ShoppingBag className="h-8 w-8 text-primary-400" />
                 <div>
                   <h1 className="text-2xl font-bold text-white">Shopping Lists</h1>
                   <p className="text-sm text-white/60">Manage your grocery shopping</p>
                 </div>
               </div>
-              <Button onClick={() => navigate('/recipe-builder/shopping/new')} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+              <Button onClick={() => navigate('/recipe-builder/shopping/new')} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
                 <Plus className="h-4 w-4 mr-2" />
                 New List
               </Button>
@@ -228,7 +228,7 @@ const ShoppingLists: React.FC = () => {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {loading ? (
             <div className="flex justify-center items-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
             </div>
           ) : Array.isArray(shoppingLists) && shoppingLists.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -245,7 +245,7 @@ const ShoppingLists: React.FC = () => {
                         )}
                       </div>
                       {completion === 100 && (
-                        <Check className="h-5 w-5 text-teal-400 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-primary-400 flex-shrink-0" />
                       )}
                     </div>
                     <div className="space-y-3">
@@ -265,7 +265,7 @@ const ShoppingLists: React.FC = () => {
                       )}
                       <div>
                         <div className="w-full bg-white/10 rounded-full h-2">
-                          <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+                          <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
                                style={{width: `${completion}%`}}></div>
                         </div>
                       </div>
@@ -307,7 +307,7 @@ const ShoppingLists: React.FC = () => {
                 <p className="text-white/60 mb-6">
                   Create your first shopping list to start organizing your grocery trips
                 </p>
-                <Button onClick={() => navigate('/recipe-builder/shopping/new')} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+                <Button onClick={() => navigate('/recipe-builder/shopping/new')} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
                   <Plus className="h-4 w-4 mr-2" />
                   Create Your First List
                 </Button>
@@ -351,7 +351,7 @@ const ShoppingLists: React.FC = () => {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setCreateDialogOpen(false)} className="bg-transparent border-white/20 text-white hover:bg-white/10">Cancel</Button>
-            <Button onClick={handleCreateList} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">Create List</Button>
+            <Button onClick={handleCreateList} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">Create List</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -388,7 +388,7 @@ const ShoppingLists: React.FC = () => {
                   onChange={(e) => setNewItemCategory(e.target.value)}
                   className="w-32 bg-white/10 border-white/20 text-white placeholder:text-white/40"
                 />
-                <Button onClick={handleAddItem} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">Add</Button>
+                <Button onClick={handleAddItem} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">Add</Button>
               </div>
             </div>
 
@@ -401,7 +401,7 @@ const ShoppingLists: React.FC = () => {
                     <Checkbox
                       checked={item.completed || false}
                       onCheckedChange={() => item.id && handleToggleItem(item.id, item.completed)}
-                      className="border-white/40 data-[state=checked]:bg-teal-500 data-[state=checked]:border-teal-500"
+                      className="border-white/40 data-[state=checked]:bg-primary-500 data-[state=checked]:border-primary-500"
                     />
                     <div className="flex-1">
                       <span className={item.completed ? 'line-through text-white/40' : 'text-white'}>
@@ -439,7 +439,7 @@ const ShoppingLists: React.FC = () => {
                 <span className="text-white font-medium">{getCompletionPercentage(selectedListDetail)}%</span>
               </div>
               <div className="w-full bg-white/10 rounded-full h-3">
-                <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-3 rounded-full transition-all duration-300"
+                <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-3 rounded-full transition-all duration-300"
                      style={{width: `${getCompletionPercentage(selectedListDetail)}%`}}></div>
               </div>
             </div>

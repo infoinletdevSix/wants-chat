@@ -194,7 +194,7 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
                   variant="default"
                   onClick={handleSaveEdits}
                   disabled={isSaving}
-                  className="text-sm sm:text-base bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+                  className="text-sm sm:text-base bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
                   size="sm"
                 >
                   {isSaving ? (
@@ -215,7 +215,7 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
                   variant="default"
                   onClick={handleSavePlan}
                   disabled={isSaving}
-                  className="text-sm sm:text-base bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+                  className="text-sm sm:text-base bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
                   size="sm"
                 >
                   {isSaving ? (
@@ -243,8 +243,8 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
 
         {/* Show edit mode indicator */}
         {isEditMode && (
-          <div className="bg-teal-500/10 border border-teal-500/30 rounded-xl p-3 mb-4 mt-4">
-            <p className="text-sm text-teal-300">
+          <div className="bg-primary-500/10 border border-primary-500/30 rounded-xl p-3 mb-4 mt-4">
+            <p className="text-sm text-primary-300">
               Edit mode is active. You can add new activities or delete existing ones.
             </p>
           </div>
@@ -254,7 +254,7 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
       {/* Hotel Recommendations */}
       <div className="mb-6 sm:mb-8">
         <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 flex items-center gap-2 text-white">
-          <Hotel className="h-5 w-5 sm:h-6 sm:w-6 text-teal-400" />
+          <Hotel className="h-5 w-5 sm:h-6 sm:w-6 text-primary-400" />
           Recommended Hotels
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
@@ -267,7 +267,7 @@ const TravelPlanDetailPage: React.FC<TravelPlanDetailPageProps> = ({
       {/* Itinerary */}
       <div>
         <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 flex items-center gap-2 text-white">
-          <Map className="h-5 w-5 sm:h-6 sm:w-6 text-teal-400" />
+          <Map className="h-5 w-5 sm:h-6 sm:w-6 text-primary-400" />
           Daily Itinerary
         </h2>
 

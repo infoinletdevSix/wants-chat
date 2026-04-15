@@ -508,7 +508,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
 
   const labelClass = `block text-sm font-medium mb-1 ${
     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
@@ -516,7 +516,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
 
   const tabClass = (active: boolean) => `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
     active
-      ? 'bg-[#0D9488] text-white'
+      ? 'bg-[#6096B4] text-white'
       : theme === 'dark'
         ? 'text-gray-400 hover:bg-gray-700'
         : 'text-gray-600 hover:bg-gray-100'
@@ -527,9 +527,9 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.parentCommunication.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.parentCommunication.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -537,7 +537,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <MessageSquare className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -584,7 +584,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
               </button>
               <button
                 onClick={() => setShowComposeModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.parentCommunication.newMessage', 'New Message')}
@@ -692,7 +692,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
                 {messages.length === 0 && (
                   <button
                     onClick={() => setShowComposeModal(true)}
-                    className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                    className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                   >
                     {t('tools.parentCommunication.sendFirstMessage', 'Send First Message')}
                   </button>
@@ -797,7 +797,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
                             </p>
                           </div>
                           {message.parentResponse && (
-                            <div className={`mt-4 p-4 rounded-lg border-l-4 border-[#0D9488] ${theme === 'dark' ? 'bg-gray-700/30' : 'bg-green-50'}`}>
+                            <div className={`mt-4 p-4 rounded-lg border-l-4 border-[#6096B4] ${theme === 'dark' ? 'bg-gray-700/30' : 'bg-green-50'}`}>
                               <p className={`text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                                 {t('tools.parentCommunication.parentResponse', 'Parent Response:')}
                               </p>
@@ -820,7 +820,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
                                 });
                                 setShowComposeModal(true);
                               }}
-                              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                             >
                               <Reply className="w-4 h-4" />
                               {t('tools.parentCommunication.reply', 'Reply')}
@@ -850,7 +850,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
                 </p>
                 <button
                   onClick={() => setShowAnnouncementModal(true)}
-                  className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.parentCommunication.createAnnouncement', 'Create Announcement')}
                 </button>
@@ -1064,7 +1064,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
                 </button>
                 <button
                   onClick={sendMessage}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   <Send className="w-4 h-4" />
                   {t('tools.parentCommunication.sendMessage', 'Send Message')}
@@ -1193,7 +1193,7 @@ export const ParentCommunicationTool: React.FC<ParentCommunicationToolProps> = (
                 </button>
                 <button
                   onClick={publishAnnouncement}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   <Bell className="w-4 h-4" />
                   {t('tools.parentCommunication.publishAnnouncement', 'Publish Announcement')}

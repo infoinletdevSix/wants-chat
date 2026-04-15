@@ -455,7 +455,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClasses = `block text-sm font-medium mb-2 ${
     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
@@ -466,7 +466,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex items-center gap-3">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <span className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.mortgageComparison.loadingMortgageData', 'Loading mortgage data...')}</span>
         </div>
       </div>
@@ -478,9 +478,9 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.mortgageComparison.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.mortgageComparison.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -488,7 +488,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Scale className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -517,7 +517,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                   onClick={() => setViewMode('comparison')}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     viewMode === 'comparison'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -529,7 +529,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                   onClick={() => setViewMode('refinance')}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     viewMode === 'refinance'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -686,7 +686,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -705,7 +705,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -720,7 +720,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                         onClick={() => updateMortgage(mortgage.id, 'loanTermYears', years.toString())}
                         className={`py-1 px-2 text-xs rounded font-medium transition-colors ${
                           mortgage.loanTermYears === years.toString()
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -747,7 +747,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -763,7 +763,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -789,7 +789,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -869,11 +869,11 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                   </div>
 
                   <div className="space-y-3">
-                    <div className="text-center p-3 rounded-lg bg-[#0D9488]/10">
+                    <div className="text-center p-3 rounded-lg bg-[#6096B4]/10">
                       <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.mortgageComparison.monthlyPayment', 'Monthly Payment')}
                       </p>
-                      <p className="text-2xl font-bold text-[#0D9488]">
+                      <p className="text-2xl font-bold text-[#6096B4]">
                         {formatCurrencyDetailed(result.monthlyPayment)}
                       </p>
                     </div>
@@ -955,7 +955,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
             {breakEvenAnalysis.length > 0 && breakEvenAnalysis.some((b) => b.monthsToBreakEven > 0) && (
               <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
                 <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+                  <TrendingUp className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.mortgageComparison.breakEvenAnalysisForPoints', 'Break-Even Analysis for Points')}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1000,7 +1000,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
             {viewMode === 'refinance' && refinanceResult && results.length > 0 && (
               <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
                 <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <RefreshCw className="w-5 h-5 text-[#0D9488]" />
+                  <RefreshCw className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.mortgageComparison.refinanceComparison', 'Refinance Comparison')}
                 </h2>
                 <div className="overflow-x-auto">
@@ -1103,7 +1103,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
             {/* Visual Chart - Principal vs Interest */}
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
               <h2 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                <BarChart3 className="w-5 h-5 text-[#0D9488]" />
+                <BarChart3 className="w-5 h-5 text-[#6096B4]" />
                 {t('tools.mortgageComparison.principalVsInterestOverTime', 'Principal vs Interest Over Time')}
               </h2>
               <div className="space-y-6">
@@ -1186,7 +1186,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                       onClick={() => setShowYearlyView(false)}
                       className={`px-3 py-1 text-sm rounded-lg font-medium transition-colors ${
                         !showYearlyView
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1198,7 +1198,7 @@ export const MortgageComparisonTool: React.FC<MortgageComparisonToolProps> = ({ 
                       onClick={() => setShowYearlyView(true)}
                       className={`px-3 py-1 text-sm rounded-lg font-medium transition-colors ${
                         showYearlyView
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'

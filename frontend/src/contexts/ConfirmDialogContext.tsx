@@ -36,8 +36,8 @@ interface ConfirmState extends ConfirmOptions {
 
 const variantConfig: Record<ConfirmVariant, { icon: React.ReactNode; actionClass: string }> = {
   default: {
-    icon: <Info className="h-6 w-6 text-[#0D9488]" />,
-    actionClass: 'bg-gradient-to-r from-[#0D9488] to-[#14B8A6] hover:from-[#14B8A6] hover:to-[#0D9488] text-white border-0',
+    icon: <Info className="h-6 w-6 text-[#6096B4]" />,
+    actionClass: 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white border-0',
   },
   destructive: {
     icon: <Trash2 className="h-6 w-6 text-red-400" />,
@@ -48,12 +48,12 @@ const variantConfig: Record<ConfirmVariant, { icon: React.ReactNode; actionClass
     actionClass: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white border-0',
   },
   success: {
-    icon: <CheckCircle className="h-6 w-6 text-[#0D9488]" />,
-    actionClass: 'bg-gradient-to-r from-[#0D9488] to-[#14B8A6] hover:from-[#14B8A6] hover:to-[#0D9488] text-white border-0',
+    icon: <CheckCircle className="h-6 w-6 text-[#6096B4]" />,
+    actionClass: 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white border-0',
   },
   info: {
-    icon: <Info className="h-6 w-6 text-[#0D9488]" />,
-    actionClass: 'bg-gradient-to-r from-[#0D9488] to-[#14B8A6] hover:from-[#14B8A6] hover:to-[#0D9488] text-white border-0',
+    icon: <Info className="h-6 w-6 text-[#6096B4]" />,
+    actionClass: 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white border-0',
   },
 };
 

@@ -142,7 +142,7 @@ const HealthCaloriesSection: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -150,7 +150,7 @@ const HealthCaloriesSection: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -165,7 +165,7 @@ const HealthCaloriesSection: React.FC = () => {
         {/* Section Header */}
         <motion.div className="text-center mb-8 sm:mb-12" variants={cardVariants}>
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 sm:mb-6">
-            <Activity className="h-4 w-4 text-teal-400" />
+            <Activity className="h-4 w-4 text-primary-400" />
             <span className="text-xs sm:text-sm font-medium text-white">
               Track Your Wellness Journey
             </span>
@@ -225,7 +225,7 @@ const HealthCaloriesSection: React.FC = () => {
                       <span className="text-2xl">🧘‍♀️</span>
                       <span className="text-xs font-medium text-white/70">Meditation Sessions</span>
                     </div>
-                    <p className="text-3xl font-bold text-teal-400">{meditationCount.toLocaleString()}</p>
+                    <p className="text-3xl font-bold text-primary-400">{meditationCount.toLocaleString()}</p>
                     <p className="text-xs text-white/50 mt-1">Completed this week</p>
                   </motion.div>
 

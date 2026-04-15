@@ -498,15 +498,15 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
   // Styles
   const inputClass = `w-full px-3 py-2 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-teal-500'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-teal-500'
-  } focus:outline-none focus:ring-2 focus:ring-teal-500/20`;
+      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-primary-500'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-primary-500'
+  } focus:outline-none focus:ring-2 focus:ring-primary-500/20`;
 
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-teal-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-cyan-600 hover:from-primary-700 hover:to-cyan-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-primary-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -519,8 +519,8 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-xl">
-            <Scale className="w-8 h-8 text-teal-500" />
+          <div className="p-3 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl">
+            <Scale className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -572,12 +572,12 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-4">
-            <div className="p-3 bg-teal-500/10 rounded-lg">
-              <ClipboardList className="w-6 h-6 text-teal-500" />
+            <div className="p-3 bg-primary-500/10 rounded-lg">
+              <ClipboardList className="w-6 h-6 text-primary-500" />
             </div>
             <div>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.caseIntake.totalIntakes', 'Total Intakes')}</p>
-              <p className="text-2xl font-bold text-teal-500">{stats.total}</p>
+              <p className="text-2xl font-bold text-primary-500">{stats.total}</p>
             </div>
           </div>
         </div>
@@ -700,7 +700,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
           <div className="max-h-[600px] overflow-y-auto">
             {isLoading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin w-8 h-8 border-2 border-teal-500 border-t-transparent rounded-full mx-auto"></div>
+                <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full mx-auto"></div>
               </div>
             ) : filteredIntakes.length === 0 ? (
               <div className={`p-8 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -717,7 +717,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
                       onClick={() => setSelectedIntake(intake)}
                       className={`p-4 cursor-pointer transition-colors ${
                         selectedIntake?.id === intake.id
-                          ? 'bg-teal-500/10 border-l-4 border-teal-500'
+                          ? 'bg-primary-500/10 border-l-4 border-primary-500'
                           : theme === 'dark'
                           ? 'hover:bg-gray-700/50'
                           : 'hover:bg-gray-50'
@@ -726,7 +726,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <TypeIcon className="w-4 h-4 text-teal-500" />
+                            <TypeIcon className="w-4 h-4 text-primary-500" />
                           </div>
                           <div>
                             <p className="font-medium">{intake.clientName}</p>
@@ -1002,7 +1002,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
                         }}
                         className={`px-3 py-1 text-sm rounded-full border transition-all ${
                           selectedIntake.status === status.value
-                            ? getStatusColor(status.value) + ' ring-2 ring-offset-2 ring-teal-500'
+                            ? getStatusColor(status.value) + ' ring-2 ring-offset-2 ring-primary-500'
                             : theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 hover:bg-gray-600'
                             : 'bg-gray-100 border-gray-200 hover:bg-gray-200'
@@ -1053,7 +1053,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
               {/* Client Information */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <User className="w-4 h-4 text-teal-500" />
+                  <User className="w-4 h-4 text-primary-500" />
                   {t('tools.caseIntake.clientInformation', 'Client Information')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1102,7 +1102,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
               {/* Case Information */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <Briefcase className="w-4 h-4 text-teal-500" />
+                  <Briefcase className="w-4 h-4 text-primary-500" />
                   {t('tools.caseIntake.caseInformation', 'Case Information')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1209,7 +1209,7 @@ export const CaseIntakeTool: React.FC<CaseIntakeToolProps> = ({ uiConfig }) => {
               {/* Assignment & Financial */}
               <div>
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
-                  <DollarSign className="w-4 h-4 text-teal-500" />
+                  <DollarSign className="w-4 h-4 text-primary-500" />
                   {t('tools.caseIntake.assignmentFinancial', 'Assignment & Financial')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

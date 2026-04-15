@@ -212,7 +212,7 @@ const BlankCam: React.FC = () => {
                     disabled={!isActive}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all ${
                       showPreview
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : 'bg-slate-700 text-gray-300'
                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
@@ -225,7 +225,7 @@ const BlankCam: React.FC = () => {
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all ${
                       isMuted
                         ? 'bg-slate-700 text-gray-300'
-                        : 'bg-teal-500 text-white'
+                        : 'bg-primary-500 text-white'
                     }`}
                   >
                     {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
@@ -262,7 +262,7 @@ const BlankCam: React.FC = () => {
                       className={`px-6 py-3 rounded-xl font-medium transition-all ${
                         isRecording
                           ? 'bg-red-500 hover:bg-red-600 text-white'
-                          : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white'
+                          : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white'
                       }`}
                     >
                       {isRecording ? 'Stop Recording' : 'Record'}

@@ -261,7 +261,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -274,8 +274,8 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <ClipboardCheck className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <ClipboardCheck className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -300,7 +300,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
                 />
                 <button
                   onClick={() => setShowAddForm(true)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg flex items-center gap-2 hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg flex items-center gap-2 hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.foodSafetyChecklist.addItem', 'Add Item')}
@@ -357,7 +357,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
           </div>
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.foodSafetyChecklist.completion', 'Completion')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{stats.completionRate.toFixed(0)}%</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{stats.completionRate.toFixed(0)}%</div>
           </div>
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.foodSafetyChecklist.passRate', 'Pass Rate')}</div>
@@ -372,7 +372,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
           <CardContent className="py-4">
             <div className="flex flex-wrap gap-4 items-center">
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-[#0D9488]" />
+                <User className="w-5 h-5 text-[#6096B4]" />
                 <input
                   type="text"
                   value={inspectorName}
@@ -386,7 +386,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
                 />
               </div>
               <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-[#0D9488]" />
+                <Calendar className="w-5 h-5 text-[#6096B4]" />
                 <span className={isDark ? 'text-white' : 'text-gray-900'}>
                   {new Date().toLocaleDateString()}
                 </span>
@@ -437,7 +437,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
                 <p className="mb-4">{t('tools.foodSafetyChecklist.noChecklistItems', 'No checklist items')}</p>
                 <button
                   onClick={loadDefaultChecklist}
-                  className="px-6 py-3 bg-[#0D9488] text-white rounded-xl font-medium hover:bg-[#0D9488]/90"
+                  className="px-6 py-3 bg-[#6096B4] text-white rounded-xl font-medium hover:bg-[#6096B4]/90"
                 >
                   {t('tools.foodSafetyChecklist.loadDefaultFoodSafetyChecklist', 'Load Default Food Safety Checklist')}
                 </button>
@@ -452,7 +452,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-between">
                     <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                      <Shield className="w-5 h-5 text-[#0D9488]" />
+                      <Shield className="w-5 h-5 text-[#6096B4]" />
                       {category}
                       <span className={`text-sm font-normal ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                         ({items.filter((i) => i.status === 'pass').length}/{items.length} complete)
@@ -628,7 +628,7 @@ export const FoodSafetyChecklistTool: React.FC<FoodSafetyChecklistToolProps> = (
                   <button
                     onClick={handleAddItem}
                     disabled={!newItem.task}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2 disabled:opacity-50"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.foodSafetyChecklist.addItem2', 'Add Item')}

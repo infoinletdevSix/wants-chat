@@ -9,7 +9,7 @@ const HowItWorks: React.FC = () => {
       title: 'Sign Up',
       description: 'Create your free account in seconds with email or social login',
       icon: UserPlus,
-      color: 'from-teal-500 to-cyan-500'
+      color: 'from-primary-500 to-cyan-500'
     },
     {
       number: '2',
@@ -30,7 +30,7 @@ const HowItWorks: React.FC = () => {
       title: 'Track & Grow',
       description: 'Monitor progress and achieve your life objectives',
       icon: TrendingUp,
-      color: 'from-indigo-500 to-teal-500'
+      color: 'from-indigo-500 to-primary-500'
     }
   ];
 
@@ -58,10 +58,10 @@ const HowItWorks: React.FC = () => {
   };
 
   return (
-    <section id="how-it-works" className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <section id="how-it-works" className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, 80, 0],
           y: [0, -40, 0],
@@ -100,7 +100,7 @@ const HowItWorks: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <Layout className="h-4 w-4 text-teal-400" />
+            <Layout className="h-4 w-4 text-primary-400" />
             <span className="text-sm font-medium text-white">Simple Process</span>
           </div>
 
@@ -136,9 +136,9 @@ const HowItWorks: React.FC = () => {
                   </div>
                 )}
 
-                <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 h-full group-hover:shadow-xl group-hover:shadow-teal-500/20">
+                <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 h-full group-hover:shadow-xl group-hover:shadow-primary-500/20">
                   {/* Step Number */}
-                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {step.number}
                   </div>
 

@@ -258,7 +258,7 @@ export default function ProfilePage() {
             className={cn(
               'px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2',
               isEditing
-                ? 'bg-[#0D9488] text-white hover:bg-[#0F766E]'
+                ? 'bg-[#6096B4] text-white hover:bg-[#4C7F98]'
                 : theme === 'dark'
                   ? 'bg-[#1a1a1a] text-white hover:bg-[#2a2a2a] border border-[#2a2a2a]'
                   : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -296,7 +296,7 @@ export default function ProfilePage() {
                   <button
                     onClick={handleAvatarClick}
                     disabled={loading}
-                    className="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-[#0D9488] text-white flex items-center justify-center hover:bg-[#0F766E] transition-colors"
+                    className="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-[#6096B4] text-white flex items-center justify-center hover:bg-[#4C7F98] transition-colors"
                   >
                     <Camera className="w-4 h-4" />
                   </button>
@@ -329,7 +329,7 @@ export default function ProfilePage() {
                     theme === 'dark'
                       ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white disabled:text-gray-500'
                       : 'bg-gray-50 border border-gray-200 text-gray-900 disabled:text-gray-400',
-                    'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                    'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                   )}
                 />
               </div>
@@ -373,7 +373,7 @@ export default function ProfilePage() {
             className={cn(
               'flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-colors',
               activeTab === 'info'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
             )}
           >
@@ -385,7 +385,7 @@ export default function ProfilePage() {
             className={cn(
               'flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-colors',
               activeTab === 'security'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
             )}
           >
@@ -432,7 +432,7 @@ export default function ProfilePage() {
                     theme === 'dark'
                       ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white placeholder:text-gray-600 disabled:text-gray-500'
                       : 'bg-gray-50 border border-gray-200 text-gray-900 placeholder:text-gray-400 disabled:text-gray-400',
-                    'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                    'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                   )}
                 />
               </div>
@@ -456,7 +456,7 @@ export default function ProfilePage() {
                     theme === 'dark'
                       ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white placeholder:text-gray-600 disabled:text-gray-500'
                       : 'bg-gray-50 border border-gray-200 text-gray-900 placeholder:text-gray-400 disabled:text-gray-400',
-                    'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                    'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                   )}
                 />
               </div>
@@ -480,7 +480,7 @@ export default function ProfilePage() {
                     theme === 'dark'
                       ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white placeholder:text-gray-600 disabled:text-gray-500'
                       : 'bg-gray-50 border border-gray-200 text-gray-900 placeholder:text-gray-400 disabled:text-gray-400',
-                    'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                    'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                   )}
                 />
               </div>
@@ -579,7 +579,7 @@ export default function ProfilePage() {
                       Learn more:{' '}
                       <Link
                         to="/data-deletion"
-                        className="text-[#0D9488] hover:underline inline-flex items-center gap-1"
+                        className="text-[#6096B4] hover:underline inline-flex items-center gap-1"
                       >
                         Data Deletion Policy
                         <ExternalLink className="w-3 h-3" />
@@ -654,7 +654,7 @@ export default function ProfilePage() {
                       theme === 'dark'
                         ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white'
                         : 'bg-gray-50 border border-gray-200 text-gray-900',
-                      'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                      'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                     )}
                   />
                   <button
@@ -687,7 +687,7 @@ export default function ProfilePage() {
                       theme === 'dark'
                         ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white'
                         : 'bg-gray-50 border border-gray-200 text-gray-900',
-                      'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                      'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                     )}
                   />
                   <button
@@ -719,7 +719,7 @@ export default function ProfilePage() {
                     theme === 'dark'
                       ? 'bg-[#0a0a0a] border border-[#2a2a2a] text-white'
                       : 'bg-gray-50 border border-gray-200 text-gray-900',
-                    'focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50 focus:border-[#0D9488]'
+                    'focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50 focus:border-[#6096B4]'
                   )}
                 />
               </div>
@@ -740,7 +740,7 @@ export default function ProfilePage() {
               <button
                 onClick={handlePasswordChange}
                 disabled={loading}
-                className="flex-1 px-4 py-2 rounded-lg text-sm font-medium bg-[#0D9488] text-white hover:bg-[#0F766E] transition-colors flex items-center justify-center gap-2"
+                className="flex-1 px-4 py-2 rounded-lg text-sm font-medium bg-[#6096B4] text-white hover:bg-[#4C7F98] transition-colors flex items-center justify-center gap-2"
               >
                 {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                 {t('profile.passwordModal.submit')}

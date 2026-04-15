@@ -889,7 +889,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
             setEditingItem(null);
             setModalType('student');
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
         >
           <Plus className="w-4 h-4" />
           {t('tools.tutoringScheduler.addStudent', 'Add Student')}
@@ -939,7 +939,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                 {student.subjects.map((subject) => (
                   <span
                     key={subject}
-                    className="px-2 py-0.5 text-xs bg-[#0D9488]/20 text-[#0D9488] rounded"
+                    className="px-2 py-0.5 text-xs bg-[#6096B4]/20 text-[#6096B4] rounded"
                   >
                     {subject}
                   </span>
@@ -979,7 +979,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
             setEditingItem(null);
             setModalType('tutor');
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
         >
           <Plus className="w-4 h-4" />
           {t('tools.tutoringScheduler.addTutor', 'Add Tutor')}
@@ -1005,7 +1005,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                   >
                     {tutor.name}
                   </h4>
-                  <p className={`text-sm text-[#0D9488] font-medium`}>${tutor.hourlyRate}/hour</p>
+                  <p className={`text-sm text-[#6096B4] font-medium`}>${tutor.hourlyRate}/hour</p>
                 </div>
                 <div className="flex gap-2">
                   <button
@@ -1078,7 +1078,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
             setEditingItem(null);
             setModalType('session');
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
           disabled={students.length === 0 || tutors.length === 0}
         >
           <Plus className="w-4 h-4" />
@@ -1319,7 +1319,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
               key={idx}
               className={`p-2 rounded-lg min-h-[150px] ${
                 isToday
-                  ? 'bg-[#0D9488]/20 border border-[#0D9488]'
+                  ? 'bg-[#6096B4]/20 border border-[#6096B4]'
                   : theme === 'dark'
                   ? 'bg-gray-700'
                   : 'bg-gray-50'
@@ -1331,7 +1331,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                 </p>
                 <p
                   className={`font-bold ${
-                    isToday ? 'text-[#0D9488]' : theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    isToday ? 'text-[#6096B4]' : theme === 'dark' ? 'text-white' : 'text-gray-900'
                   }`}
                 >
                   {date.getDate()}
@@ -1346,7 +1346,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       key={session.id}
                       className={`p-1.5 rounded text-xs ${
                         session.status === 'cancelled'
-                          ? 'bg-red-500/20 text-red-500 line-through' : t('tools.tutoringScheduler.bg0d948820Text0d9488', 'bg-[#0D9488]/20 text-[#0D9488]')
+                          ? 'bg-red-500/20 text-red-500 line-through' : t('tools.tutoringScheduler.bg0d948820Text0d9488', 'bg-[#6096B4]/20 text-[#6096B4]')
                       }`}
                     >
                       <p className="font-medium truncate">{student?.name}</p>
@@ -1374,7 +1374,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
             setEditingItem(null);
             setModalType('package');
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
         >
           <Plus className="w-4 h-4" />
           {t('tools.tutoringScheduler.addPackage', 'Add Package')}
@@ -1414,7 +1414,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
               </div>
 
               <div className={`space-y-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                <p className="text-2xl font-bold text-[#0D9488]">${pkg.totalPrice}</p>
+                <p className="text-2xl font-bold text-[#6096B4]">${pkg.totalPrice}</p>
                 <p>{pkg.sessions} sessions</p>
                 <p>${pkg.pricePerSession}/session</p>
                 <p className="text-sm">Valid for {pkg.validDays} days</p>
@@ -1478,7 +1478,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.tutoringScheduler.studentName', 'Student name')}
                   />
                 </div>
@@ -1495,7 +1495,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.tutoringScheduler.selectGrade', 'Select grade')}</option>
                     {GRADES.map((grade) => (
@@ -1533,7 +1533,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       }}
                       className={`px-3 py-1 text-sm rounded-full transition-colors ${
                         studentForm.subjects?.includes(subject)
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1560,7 +1560,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.tutoringScheduler.studentEmailCom', 'student@email.com')}
                   />
                 </div>
@@ -1578,7 +1578,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.tutoringScheduler.phoneNumber', 'Phone number')}
                   />
                 </div>
@@ -1609,7 +1609,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       placeholder={t('tools.tutoringScheduler.parentName', 'Parent name')}
                     />
                   </div>
@@ -1629,7 +1629,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       placeholder={t('tools.tutoringScheduler.parentEmailCom', 'parent@email.com')}
                     />
                   </div>
@@ -1649,7 +1649,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       placeholder={t('tools.tutoringScheduler.phoneNumber2', 'Phone number')}
                     />
                   </div>
@@ -1669,7 +1669,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   rows={3}
                   placeholder={t('tools.tutoringScheduler.additionalNotesAboutTheStudent', 'Additional notes about the student...')}
                 />
@@ -1679,7 +1679,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                 <button
                   onClick={handleSaveStudent}
                   disabled={!studentForm.name || !studentForm.email}
-                  className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                  className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.tutoringScheduler.updateStudent', 'Update Student') : t('tools.tutoringScheduler.addStudent3', 'Add Student')}
                 </button>
@@ -1705,7 +1705,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.tutoringScheduler.tutorName', 'Tutor name')}
                   />
                 </div>
@@ -1725,7 +1725,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder="50"
                   />
                 </div>
@@ -1746,7 +1746,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.tutoringScheduler.tutorEmailCom', 'tutor@email.com')}
                   />
                 </div>
@@ -1764,7 +1764,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.tutoringScheduler.phoneNumber3', 'Phone number')}
                   />
                 </div>
@@ -1796,7 +1796,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       }}
                       className={`px-3 py-1 text-sm rounded-full transition-colors ${
                         tutorForm.subjects?.includes(subject)
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1821,7 +1821,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   rows={3}
                   placeholder={t('tools.tutoringScheduler.briefBioAboutTheTutor', 'Brief bio about the tutor...')}
                 />
@@ -1905,7 +1905,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                         ],
                       });
                     }}
-                    className="flex items-center gap-1 px-3 py-1 text-sm text-[#0D9488] hover:bg-[#0D9488]/10 rounded"
+                    className="flex items-center gap-1 px-3 py-1 text-sm text-[#6096B4] hover:bg-[#6096B4]/10 rounded"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.tutoringScheduler.addTimeSlot', 'Add Time Slot')}
@@ -1917,7 +1917,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                 <button
                   onClick={handleSaveTutor}
                   disabled={!tutorForm.name || !tutorForm.email}
-                  className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                  className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.tutoringScheduler.updateTutor', 'Update Tutor') : t('tools.tutoringScheduler.addTutor3', 'Add Tutor')}
                 </button>
@@ -1944,7 +1944,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.tutoringScheduler.selectStudent', 'Select student')}</option>
                     {students.map((s) => (
@@ -1974,7 +1974,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.tutoringScheduler.selectTutor', 'Select tutor')}</option>
                     {tutors.map((t) => (
@@ -2000,7 +2000,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.tutoringScheduler.selectSubject', 'Select subject')}</option>
                     {SUBJECTS.map((s) => (
@@ -2024,7 +2024,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -2044,7 +2044,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -2061,7 +2061,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -2079,7 +2079,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value={30}>30 minutes</option>
                     <option value={45}>45 minutes</option>
@@ -2109,7 +2109,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="online">{t('tools.tutoringScheduler.online', 'Online')}</option>
                     <option value="in-person">{t('tools.tutoringScheduler.inPerson', 'In-Person')}</option>
@@ -2130,7 +2130,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       placeholder={t('tools.tutoringScheduler.addressOrLocation', 'Address or location')}
                     />
                   </div>
@@ -2154,7 +2154,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder="50"
                   />
                 </div>
@@ -2176,7 +2176,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="pending">{t('tools.tutoringScheduler.pending', 'Pending')}</option>
                     <option value="paid">{t('tools.tutoringScheduler.paid', 'Paid')}</option>
@@ -2195,7 +2195,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                     onChange={(e) =>
                       setSessionForm({ ...sessionForm, isRecurring: e.target.checked })
                     }
-                    className="w-4 h-4 accent-[#0D9488]"
+                    className="w-4 h-4 accent-[#6096B4]"
                   />
                   <label
                     htmlFor="isRecurring"
@@ -2225,7 +2225,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="weekly">{t('tools.tutoringScheduler.weekly', 'Weekly')}</option>
                         <option value="biweekly">{t('tools.tutoringScheduler.biWeekly', 'Bi-weekly')}</option>
@@ -2248,7 +2248,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -2265,7 +2265,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                     onChange={(e) =>
                       setSessionForm({ ...sessionForm, reminderSet: e.target.checked })
                     }
-                    className="w-4 h-4 accent-[#0D9488]"
+                    className="w-4 h-4 accent-[#6096B4]"
                   />
                   <label
                     htmlFor="reminderSet"
@@ -2291,7 +2291,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value={15}>15 minutes</option>
                       <option value={30}>30 minutes</option>
@@ -2349,7 +2349,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <input
                     type="date"
@@ -2361,12 +2361,12 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <button
                     onClick={handleAddAssignment}
                     disabled={!assignmentForm.title || !assignmentForm.dueDate}
-                    className="flex items-center justify-center gap-1 px-3 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                    className="flex items-center justify-center gap-1 px-3 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.tutoringScheduler.add', 'Add')}
@@ -2378,7 +2378,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                 <button
                   onClick={handleSaveSession}
                   disabled={!sessionForm.studentId || !sessionForm.tutorId || !sessionForm.date}
-                  className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                  className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.tutoringScheduler.updateSession', 'Update Session') : t('tools.tutoringScheduler.bookSession3', 'Book Session')}
                 </button>
@@ -2403,7 +2403,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   placeholder={t('tools.tutoringScheduler.eGMonthlyPackageSemester', 'e.g., Monthly Package, Semester Deal')}
                 />
               </div>
@@ -2431,7 +2431,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder="10"
                   />
                 </div>
@@ -2457,7 +2457,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder="45"
                   />
                 </div>
@@ -2480,7 +2480,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder="450"
                   />
                 </div>
@@ -2500,7 +2500,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder="30"
                   />
                 </div>
@@ -2510,7 +2510,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                 <button
                   onClick={handleSavePackage}
                   disabled={!packageForm.name || !packageForm.sessions}
-                  className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                  className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.tutoringScheduler.updatePackage', 'Update Package') : t('tools.tutoringScheduler.addPackage3', 'Add Package')}
                 </button>
@@ -2534,7 +2534,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   rows={8}
                   placeholder={t('tools.tutoringScheduler.enterProgressNotesObservationsAreas', 'Enter progress notes, observations, areas of improvement, homework given, etc...')}
                 />
@@ -2543,7 +2543,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
               <div className="flex gap-3">
                 <button
                   onClick={handleSaveProgressNotes}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.tutoringScheduler.saveNotes', 'Save Notes')}
@@ -2570,7 +2570,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -2580,7 +2580,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <BookOpen className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -2627,7 +2627,7 @@ export const TutoringSchedulerTool = ({ uiConfig }: TutoringSchedulerToolProps) 
             onClick={() => setActiveTab(tab.id)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

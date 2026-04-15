@@ -472,9 +472,9 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.customerLoyalty.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.customerLoyalty.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -482,7 +482,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Award className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -526,7 +526,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -553,7 +553,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                 </h2>
                 <button
                   onClick={() => setShowMemberForm(true)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   <Plus className="w-4 h-4 inline mr-2" />
                   {t('tools.customerLoyalty.addMember', 'Add Member')}
@@ -600,7 +600,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                     onClick={() => setSelectedMember(member)}
                     className={`p-4 rounded-lg border cursor-pointer transition-all ${
                       selectedMember?.id === member.id
-                        ? 'border-[#0D9488] bg-[#0D9488]/10'
+                        ? 'border-[#6096B4] bg-[#6096B4]/10'
                         : theme === 'dark'
                         ? 'border-gray-700 hover:border-gray-600'
                         : 'border-gray-200 hover:border-gray-300'
@@ -621,7 +621,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                         </div>
                       </div>
                       <div className="text-right">
-                        <p className="text-[#0D9488] font-bold">{member.points.toLocaleString()} pts</p>
+                        <p className="text-[#6096B4] font-bold">{member.points.toLocaleString()} pts</p>
                         <span className={`text-xs px-2 py-0.5 rounded-full ${TIER_CONFIG[member.tier].bgColor} ${TIER_CONFIG[member.tier].color}`}>
                           {member.tier.toUpperCase()}
                         </span>
@@ -667,7 +667,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
 
                   <div className={`grid grid-cols-2 gap-4 mb-6 p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
                     <div className="text-center">
-                      <p className="text-2xl font-bold text-[#0D9488]">{selectedMember.points.toLocaleString()}</p>
+                      <p className="text-2xl font-bold text-[#6096B4]">{selectedMember.points.toLocaleString()}</p>
                       <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.customerLoyalty.availablePoints', 'Available Points')}</p>
                     </div>
                     <div className="text-center">
@@ -712,7 +712,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                   <div className="flex gap-2">
                     <button
                       onClick={() => setShowPointsModal(true)}
-                      className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                      className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                     >
                       <Plus className="w-4 h-4 inline mr-1" />
                       {t('tools.customerLoyalty.addPoints', 'Add Points')}
@@ -775,8 +775,8 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                     {reward.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#0D9488] font-bold">{reward.pointsCost.toLocaleString()} pts</span>
-                    <Gift className="w-5 h-5 text-[#0D9488]" />
+                    <span className="text-[#6096B4] font-bold">{reward.pointsCost.toLocaleString()} pts</span>
+                    <Gift className="w-5 h-5 text-[#6096B4]" />
                   </div>
                 </div>
               ))}
@@ -1063,7 +1063,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={addMember}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   {t('tools.customerLoyalty.addMember2', 'Add Member')}
                 </button>
@@ -1112,7 +1112,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                     <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.customerLoyalty.pointsToEarn', 'Points to earn:')}
                     </p>
-                    <p className="text-2xl font-bold text-[#0D9488]">
+                    <p className="text-2xl font-bold text-[#6096B4]">
                       +{Math.floor(pointsToAdd.orderAmount * POINTS_PER_DOLLAR * TIER_CONFIG[selectedMember.tier].multiplier).toLocaleString()} pts
                     </p>
                   </div>
@@ -1149,7 +1149,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={addPointsFromPurchase}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   {t('tools.customerLoyalty.addPoints2', 'Add Points')}
                 </button>
@@ -1167,7 +1167,7 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
               </h2>
 
               <p className={`mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                Available Points: <span className="text-[#0D9488] font-bold">{selectedMember.points.toLocaleString()}</span>
+                Available Points: <span className="text-[#6096B4] font-bold">{selectedMember.points.toLocaleString()}</span>
               </p>
 
               <div className="max-h-96 overflow-y-auto space-y-3">
@@ -1194,14 +1194,14 @@ export const CustomerLoyaltyTool: React.FC<CustomerLoyaltyToolProps> = ({ uiConf
                           <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                             {reward.description}
                           </p>
-                          <p className="text-[#0D9488] font-bold mt-1">{reward.pointsCost.toLocaleString()} pts</p>
+                          <p className="text-[#6096B4] font-bold mt-1">{reward.pointsCost.toLocaleString()} pts</p>
                         </div>
                         <button
                           onClick={() => { redeemReward(reward); setShowRedeemModal(false); }}
                           disabled={!canRedeem || !meetsTierRequirement}
                           className={`px-4 py-2 rounded-lg font-medium ${
                             canRedeem && meetsTierRequirement
-                              ? t('tools.customerLoyalty.bg0d9488TextWhiteHover', 'bg-[#0D9488] text-white hover:bg-[#0B7B6F]') : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                              ? t('tools.customerLoyalty.bg0d9488TextWhiteHover', 'bg-[#6096B4] text-white hover:bg-[#0B7B6F]') : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                           }`}
                         >
                           {t('tools.customerLoyalty.redeem2', 'Redeem')}

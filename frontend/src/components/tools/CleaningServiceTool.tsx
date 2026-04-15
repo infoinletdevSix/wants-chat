@@ -957,9 +957,9 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
     isDark
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
   const labelStyle = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
-  const buttonPrimary = 'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20';
+  const buttonPrimary = 'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20';
   const buttonSecondary = `px-4 py-2 rounded-lg font-medium transition-colors ${
     isDark ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
   }`;
@@ -979,7 +979,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
   if (isLoading) {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -990,7 +990,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Home className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -1022,7 +1022,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                 <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.cleaningService.totalClients', 'Total Clients')}</p>
                 <p className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.totalClients}</p>
               </div>
-              <Users className="w-8 h-8 text-[#0D9488]" />
+              <Users className="w-8 h-8 text-[#6096B4]" />
             </div>
           </div>
           <div className={`${cardStyle} p-4`}>
@@ -1073,7 +1073,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
               onClick={() => { setActiveTab(tab.id); resetForms(); setSearchTerm(''); }}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -1422,7 +1422,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                             }}
                             className={`px-3 py-1 rounded-full text-sm transition-colors ${
                               (propertyForm.specialAreas || []).includes(area)
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : isDark
                                   ? 'bg-gray-600 text-gray-300'
                                   : 'bg-gray-200 text-gray-700'
@@ -1525,7 +1525,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                           </div>
                           <div className="flex items-center gap-2">
                             <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
-                            <span className="text-[#0D9488] font-medium">
+                            <span className="text-[#6096B4] font-medium">
                               ${estimatedPrice.toFixed(2)}
                             </span>
                           </div>
@@ -1558,7 +1558,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                           </div>
                           <div className="w-full bg-gray-300 dark:bg-gray-500 rounded-full h-2">
                             <div
-                              className="bg-[#0D9488] h-2 rounded-full transition-all"
+                              className="bg-[#6096B4] h-2 rounded-full transition-all"
                               style={{ width: `${(completedTasks / totalTasks) * 100}%` }}
                             />
                           </div>
@@ -1581,7 +1581,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                                   type="checkbox"
                                   checked={item.completed}
                                   onChange={(e) => handleUpdateChecklist(property.id, item.id, e.target.checked)}
-                                  className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                                  className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                                 />
                                 <span className={`text-sm ${
                                   item.completed
@@ -1735,7 +1735,7 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                       <div
                         key={service.id}
                         className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'} ${
-                          isActive ? 'ring-2 ring-[#0D9488]' : ''
+                          isActive ? 'ring-2 ring-[#6096B4]' : ''
                         }`}
                       >
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -2251,8 +2251,8 @@ export const CleaningServiceTool = ({ uiConfig }: CleaningServiceToolProps) => {
                             <tr key={property.id} className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                               <td className="px-4 py-2 font-medium">{property.name}</td>
                               <td className="px-4 py-2">{client?.name || 'Unknown'}</td>
-                              <td className="px-4 py-2 text-[#0D9488] font-semibold">${standardPrice.toFixed(2)}</td>
-                              <td className="px-4 py-2 text-[#0D9488] font-semibold">${deepPrice.toFixed(2)}</td>
+                              <td className="px-4 py-2 text-[#6096B4] font-semibold">${standardPrice.toFixed(2)}</td>
+                              <td className="px-4 py-2 text-[#6096B4] font-semibold">${deepPrice.toFixed(2)}</td>
                             </tr>
                           );
                         })}

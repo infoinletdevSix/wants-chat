@@ -392,7 +392,7 @@ export const AudioExtractorTool: React.FC<AudioExtractorToolProps> = ({ uiConfig
               <button
                 onClick={handleExtractAudio}
                 disabled={isProcessing}
-                className="flex-1 py-3 px-6 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-green-500/20"
+                className="flex-1 py-3 px-6 bg-gradient-to-r from-green-500 to-primary-500 hover:from-green-600 hover:to-primary-600 text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-green-500/20"
               >
                 {isProcessing ? (
                   <>

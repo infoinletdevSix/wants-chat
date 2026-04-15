@@ -153,10 +153,10 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Beaker className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Beaker className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.fertilizerCalculator.fertilizerCalculator', 'Fertilizer Calculator')}</h3>
@@ -172,7 +172,7 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
             onClick={() => setCalculationType('byArea')}
             className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
               calculationType === 'byArea'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -184,7 +184,7 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
             onClick={() => setCalculationType('byNeed')}
             className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
               calculationType === 'byNeed'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -197,13 +197,13 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
         {/* Fertilizer Selection */}
         <div className="space-y-2">
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            <Beaker className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Beaker className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.fertilizerCalculator.selectFertilizer', 'Select Fertilizer')}
           </label>
           <select
             value={selectedFertilizer}
             onChange={(e) => setSelectedFertilizer(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
           >
             <option value="">{t('tools.fertilizerCalculator.chooseAFertilizer', 'Choose a fertilizer...')}</option>
             <optgroup label="Synthetic">
@@ -254,13 +254,13 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
         {calculationType === 'byNeed' && (
           <div className="space-y-2">
             <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              <Leaf className="w-4 h-4 inline mr-2 text-teal-500" />
+              <Leaf className="w-4 h-4 inline mr-2 text-primary-500" />
               {t('tools.fertilizerCalculator.selectCropOptional', 'Select Crop (optional)')}
             </label>
             <select
               value={selectedCrop}
               onChange={(e) => setSelectedCrop(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
             >
               <option value="">{t('tools.fertilizerCalculator.chooseACrop', 'Choose a crop...')}</option>
               {Object.entries(
@@ -282,7 +282,7 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
 
         {/* Crop Info */}
         {calculationType === 'byNeed' && selectedCropData && (
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <div className="flex items-center justify-between mb-2">
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{selectedCropData.name}</span>
               <span className={`font-bold ${getNeedColor(selectedCropData.nitrogenNeed)}`}>
@@ -290,7 +290,7 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
               </span>
             </div>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{selectedCropData.notes}</p>
-            <p className={`text-sm mt-2 ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+            <p className={`text-sm mt-2 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
               Recommended: {selectedCropData.nitrogenLbs} lbs N per 1,000 sq ft
             </p>
           </div>
@@ -316,7 +316,7 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
         {/* Area Input */}
         <div className="space-y-2">
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            <Scale className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Scale className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.fertilizerCalculator.areaToFertilize', 'Area to Fertilize')}
           </label>
           <div className="flex gap-2">
@@ -353,21 +353,21 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
         {selectedFertilizerData && calculations && (
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Calculator className="w-4 h-4 text-teal-500" />
+              <Calculator className="w-4 h-4 text-primary-500" />
               {t('tools.fertilizerCalculator.fertilizerNeeded', 'Fertilizer Needed')}
             </h4>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-              <div className="text-center p-3 rounded-lg bg-teal-500/10">
-                <div className="text-3xl font-bold text-teal-500">{calculations.fertilizerAmount}</div>
+              <div className="text-center p-3 rounded-lg bg-primary-500/10">
+                <div className="text-3xl font-bold text-primary-500">{calculations.fertilizerAmount}</div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>pounds</div>
               </div>
-              <div className="text-center p-3 rounded-lg bg-teal-500/10">
-                <div className="text-3xl font-bold text-teal-500">{calculations.fertilizerOz}</div>
+              <div className="text-center p-3 rounded-lg bg-primary-500/10">
+                <div className="text-3xl font-bold text-primary-500">{calculations.fertilizerOz}</div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>ounces</div>
               </div>
-              <div className="text-center p-3 rounded-lg bg-teal-500/10">
-                <div className="text-3xl font-bold text-teal-500">{calculations.fertilizerKg}</div>
+              <div className="text-center p-3 rounded-lg bg-primary-500/10">
+                <div className="text-3xl font-bold text-primary-500">{calculations.fertilizerKg}</div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>kilograms</div>
               </div>
             </div>
@@ -402,8 +402,8 @@ export const FertilizerCalculatorTool: React.FC<FertilizerCalculatorToolProps> =
             </div>
 
             <div className={`mt-4 flex items-center justify-between text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-              <span>50 lb bags needed: <strong className="text-teal-500">{calculations.bags50lb}</strong></span>
-              <span>Est. cost: <strong className="text-teal-500">${calculations.estimatedCost}</strong></span>
+              <span>50 lb bags needed: <strong className="text-primary-500">{calculations.bags50lb}</strong></span>
+              <span>Est. cost: <strong className="text-primary-500">${calculations.estimatedCost}</strong></span>
             </div>
           </div>
         )}

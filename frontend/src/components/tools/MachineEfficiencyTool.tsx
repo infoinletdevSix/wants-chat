@@ -108,10 +108,10 @@ Results:
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Cog className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Cog className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.machineEfficiency.machineEfficiencyCalculator', 'Machine Efficiency Calculator')}</h3>
@@ -124,7 +124,7 @@ Results:
         {/* Time Inputs */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Clock className="w-4 h-4 text-teal-500" />
+            <Clock className="w-4 h-4 text-primary-500" />
             {t('tools.machineEfficiency.timeMetricsMinutes', 'Time Metrics (minutes)')}
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -139,7 +139,7 @@ Results:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -153,7 +153,7 @@ Results:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -167,7 +167,7 @@ Results:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -181,7 +181,7 @@ Results:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
           </div>
@@ -200,7 +200,7 @@ Results:
               min="0"
               className={`w-full px-4 py-3 rounded-lg border ${
                 isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               placeholder={t('tools.machineEfficiency.maximumPossibleOutput', 'Maximum possible output')}
             />
           </div>
@@ -215,7 +215,7 @@ Results:
               min="0"
               className={`w-full px-4 py-3 rounded-lg border ${
                 isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               placeholder={t('tools.machineEfficiency.actualProduction', 'Actual production')}
             />
           </div>
@@ -223,18 +223,18 @@ Results:
 
         {/* Results */}
         {calculations && (
-          <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+          <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-teal-500" />
-                <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                <Zap className="w-5 h-5 text-primary-500" />
+                <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   {t('tools.machineEfficiency.efficiencyMetrics', 'Efficiency Metrics')}
                 </h4>
               </div>
               <button
                 onClick={handleCopy}
                 className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                  copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                  copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -284,7 +284,7 @@ Results:
               </div>
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <TrendingUp className="w-4 h-4 text-teal-500" />
+                  <TrendingUp className="w-4 h-4 text-primary-500" />
                   <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.machineEfficiency.availableTime', 'Available Time')}</span>
                 </div>
                 <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>

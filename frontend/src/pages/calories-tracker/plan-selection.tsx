@@ -318,7 +318,7 @@ const DietPlanSelection: React.FC = () => {
 
           <div className="space-y-4">
             <div className="w-full bg-white/10 rounded-full h-2">
-              <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full" style={{ width: '66.6%' }} />
+              <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: '66.6%' }} />
             </div>
 
             <div className="text-center">
@@ -334,12 +334,12 @@ const DietPlanSelection: React.FC = () => {
 
         {/* Your Daily Targets */}
         {onboardingData && (
-          <Card className="p-6 mb-8 bg-teal-500/20 border border-teal-400/30">
+          <Card className="p-6 mb-8 bg-primary-500/20 border border-primary-400/30">
             <div className="text-center space-y-4">
               <h2 className="text-lg font-semibold text-white">Your Daily Targets</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-teal-400">{onboardingData.dailyCalories}</p>
+                  <p className="text-2xl font-bold text-primary-400">{onboardingData.dailyCalories}</p>
                   <p className="text-sm text-white/60">Calories/day</p>
                 </div>
                 <div className="text-center">
@@ -363,8 +363,8 @@ const DietPlanSelection: React.FC = () => {
               className={`
                 p-6 cursor-pointer transition-all duration-200 border-2 bg-white/10 backdrop-blur-xl
                 ${selectedPlan === plan.id
-                  ? 'border-teal-400 shadow-lg'
-                  : 'border-white/20 hover:border-teal-400/50 hover:shadow-lg'
+                  ? 'border-primary-400 shadow-lg'
+                  : 'border-white/20 hover:border-primary-400/50 hover:shadow-lg'
                 }
               `}
               onClick={() => handlePlanSelect(plan.id)}
@@ -375,13 +375,13 @@ const DietPlanSelection: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <div className={`p-3 rounded-lg ${
                       selectedPlan === plan.id
-                        ? 'bg-teal-500/20'
+                        ? 'bg-primary-500/20'
                         : 'bg-white/10'
                     }`}>
                       <Icon
                         path={plan.icon}
                         size={1.5}
-                        className={selectedPlan === plan.id ? 'text-teal-400' : 'text-white/70'}
+                        className={selectedPlan === plan.id ? 'text-primary-400' : 'text-white/70'}
                       />
                     </div>
                     <div>
@@ -483,9 +483,9 @@ const DietPlanSelection: React.FC = () => {
 
                 {/* Selection Indicator */}
                 {selectedPlan === plan.id && (
-                  <div className="flex items-center justify-center gap-2 pt-2 border-t border-teal-400/30">
-                    <Icon path={mdiCheckCircle} size={0.8} className="text-teal-400" />
-                    <span className="text-sm font-medium text-teal-400">Selected</span>
+                  <div className="flex items-center justify-center gap-2 pt-2 border-t border-primary-400/30">
+                    <Icon path={mdiCheckCircle} size={0.8} className="text-primary-400" />
+                    <span className="text-sm font-medium text-primary-400">Selected</span>
                   </div>
                 )}
               </div>
@@ -494,7 +494,7 @@ const DietPlanSelection: React.FC = () => {
         </div>
 
         {/* Custom Plan Option */}
-        <Card className="p-6 mb-8 bg-white/5 backdrop-blur-xl border-2 border-dashed border-white/30 hover:border-teal-400/50 hover:shadow-lg transition-all duration-200 cursor-pointer" onClick={handleCustomize}>
+        <Card className="p-6 mb-8 bg-white/5 backdrop-blur-xl border-2 border-dashed border-white/30 hover:border-primary-400/50 hover:shadow-lg transition-all duration-200 cursor-pointer" onClick={handleCustomize}>
           <div className="text-center space-y-4">
             <Icon path={mdiInformation} size={2} className="text-white/60 mx-auto" />
             <div>
@@ -524,7 +524,7 @@ const DietPlanSelection: React.FC = () => {
           <Button
             onClick={handleContinue}
             disabled={!selectedPlan}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white disabled:opacity-50"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white disabled:opacity-50"
           >
             Continue
             <Icon path={mdiArrowRight} size={0.8} className="ml-2" />

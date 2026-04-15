@@ -385,7 +385,7 @@ export const AITikTokScriptTool: React.FC<AITikTokScriptToolProps> = ({ uiConfig
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aITikTokScript.aiTiktokScriptGenerator', 'AI TikTok Script Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aITikTokScript.createViralTiktokScriptsWith', 'Create viral TikTok scripts with timing cues')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aITikTokScript.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>

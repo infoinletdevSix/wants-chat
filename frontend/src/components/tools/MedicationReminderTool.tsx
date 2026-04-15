@@ -353,7 +353,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Pill className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -526,7 +526,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                     {!item.taken && (
                       <button
                         onClick={() => markAsTaken(item.med.id, item.timeIndex)}
-                        className="flex items-center gap-1 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm transition-colors"
+                        className="flex items-center gap-1 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm transition-colors"
                       >
                         <Check className="w-4 h-4" />
                         {t('tools.medicationReminder.take', 'Take')}
@@ -623,7 +623,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
               </CardTitle>
               <button
                 onClick={() => setShowAddForm(!showAddForm)}
-                className="flex items-center gap-1 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm transition-colors"
+                className="flex items-center gap-1 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.medicationReminder.addMedication', 'Add Medication')}
@@ -663,7 +663,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -683,7 +683,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -701,7 +701,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {FREQUENCY_OPTIONS.map((opt) => (
                         <option key={opt.value} value={opt.value}>
@@ -729,7 +729,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -755,7 +755,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                             theme === 'dark'
                               ? 'bg-gray-600 border-gray-500 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       ))}
                     </div>
@@ -769,7 +769,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                       type="checkbox"
                       checked={formData.withFood}
                       onChange={(e) => setFormData({ ...formData, withFood: e.target.checked })}
-                      className="w-4 h-4 rounded accent-[#0D9488]"
+                      className="w-4 h-4 rounded accent-[#6096B4]"
                     />
                     <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                       {t('tools.medicationReminder.takeWithFood', 'Take with food')}
@@ -782,7 +782,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                       onChange={(e) =>
                         setFormData({ ...formData, refillReminder: e.target.checked })
                       }
-                      className="w-4 h-4 rounded accent-[#0D9488]"
+                      className="w-4 h-4 rounded accent-[#6096B4]"
                     />
                     <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                       Enable refill reminders (
@@ -826,7 +826,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -834,7 +834,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={addMedication}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     {t('tools.medicationReminder.addMedication2', 'Add Medication')}
                   </button>
@@ -883,7 +883,7 @@ export const MedicationReminderTool = ({ uiConfig }: MedicationReminderToolProps
                           <div
                             className={`p-2 rounded-lg ${
                               daysRemaining <= med.refillThreshold
-                                ? 'bg-red-500' : t('tools.medicationReminder.bg0d9488', 'bg-[#0D9488]')
+                                ? 'bg-red-500' : t('tools.medicationReminder.bg0d9488', 'bg-[#6096B4]')
                             }`}
                           >
                             <Pill className="w-4 h-4 text-white" />

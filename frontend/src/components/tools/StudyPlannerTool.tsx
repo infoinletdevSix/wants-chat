@@ -95,7 +95,7 @@ type TabType = 'dashboard' | 'courses' | 'assignments' | 'study' | 'calendar' | 
 const STORAGE_KEY = 'study_planner_data';
 const DAYS_OF_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const COURSE_COLORS = [
-  '#0D9488', '#3B82F6', '#8B5CF6', '#EC4899', '#F59E0B', '#10B981', '#EF4444', '#6366F1'
+  '#6096B4', '#3B82F6', '#8B5CF6', '#EC4899', '#F59E0B', '#10B981', '#EF4444', '#6366F1'
 ];
 
 // Export column configuration for assignments data
@@ -661,7 +661,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
           onClick={() => setActiveTab(id as TabType)}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
             activeTab === id
-              ? 'bg-[#0D9488] text-white'
+              ? 'bg-[#6096B4] text-white'
               : isDark
               ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -687,8 +687,8 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <BookOpen className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <BookOpen className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.studyPlanner.activeCourses', 'Active Courses')}</p>
@@ -777,7 +777,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
           {/* Upcoming Assignments */}
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Bell className="w-5 h-5 text-[#0D9488]" />
+              <Bell className="w-5 h-5 text-[#6096B4]" />
               {t('tools.studyPlanner.upcomingThisWeek', 'Upcoming This Week')}
             </h3>
             {upcomingAssignments.length === 0 ? (
@@ -821,20 +821,20 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
           {/* Pomodoro Timer */}
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Timer className="w-5 h-5 text-[#0D9488]" />
+              <Timer className="w-5 h-5 text-[#6096B4]" />
               {t('tools.studyPlanner.pomodoroTimer', 'Pomodoro Timer')}
             </h3>
             <div className="text-center">
               <div className={`text-5xl font-mono font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {formatTime(pomodoroTime)}
               </div>
-              <p className={`mb-4 ${isBreak ? 'text-green-500' : t('tools.studyPlanner.text0d9488', 'text-[#0D9488]')}`}>
+              <p className={`mb-4 ${isBreak ? 'text-green-500' : t('tools.studyPlanner.text0d9488', 'text-[#6096B4]')}`}>
                 {isBreak ? t('tools.studyPlanner.breakTime', 'Break Time!') : t('tools.studyPlanner.focusTime', 'Focus Time')}
               </p>
               <div className="flex justify-center gap-3">
                 <button
                   onClick={() => setPomodoroActive(!pomodoroActive)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   {pomodoroActive ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                   {pomodoroActive ? t('tools.studyPlanner.pause', 'Pause') : t('tools.studyPlanner.start', 'Start')}
@@ -860,7 +860,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
         {/* Grade Overview */}
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
           <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+            <TrendingUp className="w-5 h-5 text-[#6096B4]" />
             {t('tools.studyPlanner.gradeOverview', 'Grade Overview')}
           </h3>
           {courses.length === 0 ? (
@@ -917,7 +917,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
             setCourseForm({ name: '', instructor: '', credits: 3, color: COURSE_COLORS[0], schedule: [] });
             setShowCourseModal(true);
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
         >
           <Plus className="w-4 h-4" />
           {t('tools.studyPlanner.addCourse', 'Add Course')}
@@ -1017,7 +1017,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
                 });
                 setShowAssignmentModal(true);
               }}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.studyPlanner.addAssignment', 'Add Assignment')}
@@ -1127,7 +1127,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
         </h3>
         <button
           onClick={() => setShowStudyModal(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
         >
           <Plus className="w-4 h-4" />
           {t('tools.studyPlanner.scheduleSession', 'Schedule Session')}
@@ -1202,7 +1202,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
                       ) : (
                         <button
                           onClick={() => startPomodoro(session.id)}
-                          className="text-xs px-2 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded-full hover:bg-[#0D9488]/20"
+                          className="text-xs px-2 py-1 bg-[#6096B4]/10 text-[#6096B4] rounded-full hover:bg-[#6096B4]/20"
                         >
                           {t('tools.studyPlanner.continue', 'Continue')}
                         </button>
@@ -1284,10 +1284,10 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
                   className={`min-h-[80px] p-2 border-t border-l ${
                     isDark ? 'border-gray-700' : 'border-gray-100'
                   } ${!isCurrentMonth ? (isDark ? 'bg-gray-900' : 'bg-gray-50') : ''} ${
-                    isToday ? 'ring-2 ring-[#0D9488] ring-inset' : ''
+                    isToday ? 'ring-2 ring-[#6096B4] ring-inset' : ''
                   } ${
                     selectedDate?.toDateString() === date.toDateString()
-                      ? isDark ? 'bg-gray-700' : t('tools.studyPlanner.bg0d948810', 'bg-[#0D9488]/10')
+                      ? isDark ? 'bg-gray-700' : t('tools.studyPlanner.bg0d948810', 'bg-[#6096B4]/10')
                       : ''
                   } hover:bg-opacity-50 transition-colors text-left`}
                 >
@@ -1296,7 +1296,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
                       !isCurrentMonth
                         ? isDark ? 'text-gray-600' : 'text-gray-400'
                         : isDark ? 'text-white' : 'text-gray-900'
-                    } ${isToday ? 'font-bold text-[#0D9488]' : ''}`}
+                    } ${isToday ? 'font-bold text-[#6096B4]' : ''}`}
                   >
                     {date.getDate()}
                   </span>
@@ -1362,7 +1362,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
                         key={s.id}
                         className={`p-2 rounded-lg ${isDark ? 'bg-gray-600' : 'bg-gray-50'} flex items-center gap-2`}
                       >
-                        <Clock className="w-4 h-4 text-[#0D9488]" />
+                        <Clock className="w-4 h-4 text-[#6096B4]" />
                         <span className={isDark ? 'text-white' : 'text-gray-900'}>
                           Study: {course?.name}
                         </span>
@@ -1407,7 +1407,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
             </button>
             <button
               onClick={() => setShowGradeModal(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.studyPlanner.addGrade', 'Add Grade')}
@@ -1618,7 +1618,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
                   key={color}
                   onClick={() => setCourseForm(prev => ({ ...prev, color }))}
                   className={`w-8 h-8 rounded-full transition-transform ${
-                    courseForm.color === color ? 'ring-2 ring-offset-2 ring-[#0D9488] scale-110' : ''
+                    courseForm.color === color ? 'ring-2 ring-offset-2 ring-[#6096B4] scale-110' : ''
                   }`}
                   style={{ backgroundColor: color }}
                 />
@@ -1633,7 +1633,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
               </label>
               <button
                 onClick={addScheduleItem}
-                className="text-sm text-[#0D9488] hover:text-[#0F766E]"
+                className="text-sm text-[#6096B4] hover:text-[#4C7F98]"
               >
                 {t('tools.studyPlanner.addTimeSlot', '+ Add Time Slot')}
               </button>
@@ -1696,7 +1696,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
             </button>
             <button
               onClick={handleSaveCourse}
-              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Check className="w-4 h-4" />
               {editingCourse ? t('tools.studyPlanner.update', 'Update') : t('tools.studyPlanner.add', 'Add')} Course
@@ -1875,7 +1875,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
             </button>
             <button
               onClick={handleSaveAssignment}
-              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Check className="w-4 h-4" />
               {editingAssignment ? t('tools.studyPlanner.update2', 'Update') : t('tools.studyPlanner.add2', 'Add')} Assignment
@@ -1976,7 +1976,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
             </button>
             <button
               onClick={handleSaveStudySession}
-              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Check className="w-4 h-4" />
               {t('tools.studyPlanner.schedule2', 'Schedule')}
@@ -2097,7 +2097,7 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
             </button>
             <button
               onClick={handleSaveGradeWeight}
-              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Check className="w-4 h-4" />
               {t('tools.studyPlanner.addGrade2', 'Add Grade')}
@@ -2111,11 +2111,11 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.studyPlanner.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.studyPlanner.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.studyPlanner.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.studyPlanner.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <GraduationCap className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <GraduationCap className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.studyPlanner.studyPlanner', 'Study Planner')}</h3>
@@ -2154,9 +2154,9 @@ export const StudyPlannerTool: React.FC<StudyPlannerToolProps> = ({ uiConfig }) 
 
       <div className="p-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.studyPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.studyPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 

@@ -60,7 +60,7 @@ const HealthSummary: React.FC<HealthSummaryProps> = ({
     <Card className="p-6 bg-white/5 border border-white/10">
       <div className="space-y-6">
         <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-          <Icon path={mdiHeartPulse} size={1} className="text-teal-400" />
+          <Icon path={mdiHeartPulse} size={1} className="text-primary-400" />
           Health Summary
         </h3>
 
@@ -114,11 +114,11 @@ const HealthSummary: React.FC<HealthSummaryProps> = ({
           <div className="space-y-3">
             {/* Weight Trend */}
             <div className="flex items-start gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-              <div className="p-2 bg-teal-500/20 rounded-full">
+              <div className="p-2 bg-primary-500/20 rounded-full">
                 <Icon
                   path={isWeightLoss ? mdiTrendingUp : mdiTrendingUp}
                   size={0.8}
-                  className={weightChange !== 0 ? 'text-teal-400' : 'text-white/40'}
+                  className={weightChange !== 0 ? 'text-primary-400' : 'text-white/40'}
                 />
               </div>
               <div className="flex-1">
@@ -139,8 +139,8 @@ const HealthSummary: React.FC<HealthSummaryProps> = ({
 
             {/* Calorie Tracking Insight */}
             <div className="flex items-start gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-              <div className="p-2 bg-teal-500/20 rounded-full">
-                <Icon path={mdiFire} size={0.8} className="text-teal-400" />
+              <div className="p-2 bg-primary-500/20 rounded-full">
+                <Icon path={mdiFire} size={0.8} className="text-primary-400" />
               </div>
               <div className="flex-1">
                 <p className="font-medium text-white">Average Daily Intake</p>
@@ -155,8 +155,8 @@ const HealthSummary: React.FC<HealthSummaryProps> = ({
 
             {/* BMI Insight */}
             <div className="flex items-start gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-              <div className="p-2 bg-teal-500/20 rounded-full">
-                <Icon path={mdiScaleBalance} size={0.8} className="text-teal-400" />
+              <div className="p-2 bg-primary-500/20 rounded-full">
+                <Icon path={mdiScaleBalance} size={0.8} className="text-primary-400" />
               </div>
               <div className="flex-1">
                 <p className="font-medium text-white">BMI Status</p>

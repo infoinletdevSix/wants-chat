@@ -440,7 +440,7 @@ export const CSSGradientTool: React.FC<CSSGradientToolProps> = ({ uiConfig }) =>
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className={`px-3 py-1 rounded-lg text-sm flex items-center gap-1 bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed`}
+                className={`px-3 py-1 rounded-lg text-sm flex items-center gap-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed`}
               >
                 {isSaving ? (
                   <>

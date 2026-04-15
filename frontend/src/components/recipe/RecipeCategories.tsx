@@ -109,7 +109,7 @@ export const RecipeCategories: React.FC<RecipeCategoriesProps> = ({ recipes: pro
       {loading && (
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500 mb-4"></div>
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mb-4"></div>
             <p className="text-white/60">Loading categories...</p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export const RecipeCategories: React.FC<RecipeCategoriesProps> = ({ recipes: pro
             return (
               <div
                 key={category.name}
-                className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-500/40 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-300 cursor-pointer group"
+                className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 cursor-pointer group"
                 onClick={() => onNavigate(`/recipe-builder/category/${encodeURIComponent(category.name)}`)}
               >
                 {/* Featured Image or Gradient Header */}
@@ -225,7 +225,7 @@ export const RecipeCategories: React.FC<RecipeCategoriesProps> = ({ recipes: pro
 
                   {/* View All Button */}
                   <div className="flex items-center justify-between pt-2">
-                    <span className="text-sm text-teal-400 font-semibold group-hover:underline flex items-center gap-1">
+                    <span className="text-sm text-primary-400 font-semibold group-hover:underline flex items-center gap-1">
                       View All
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </span>

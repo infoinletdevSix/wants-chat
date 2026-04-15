@@ -164,7 +164,7 @@ const CreateShoppingList: React.FC = () => {
               >
                 <ArrowLeft className="h-5 w-5" />
               </Button>
-              <ShoppingBag className="h-8 w-8 text-teal-400" />
+              <ShoppingBag className="h-8 w-8 text-primary-400" />
               <div>
                 <h1 className="text-2xl font-bold text-white">
                   Create Shopping List
@@ -235,14 +235,14 @@ const CreateShoppingList: React.FC = () => {
                       placeholder="Add tag and press Enter"
                       className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/40"
                     />
-                    <Button type="button" size="sm" onClick={handleAddTag} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+                    <Button type="button" size="sm" onClick={handleAddTag} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
                       Add
                     </Button>
                   </div>
                   {tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2">
                       {tags.map((tag, index) => (
-                        <Badge key={index} className="flex items-center gap-1 bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                        <Badge key={index} className="flex items-center gap-1 bg-primary-500/20 text-primary-300 border border-primary-500/30">
                           {tag}
                           <X
                             className="h-3 w-3 cursor-pointer hover:text-red-400"
@@ -292,7 +292,7 @@ const CreateShoppingList: React.FC = () => {
                     <SelectTrigger id="item-category" className="bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       {categoryOptions.map(category => (
                         <SelectItem key={category} value={category} className="text-white hover:bg-white/10 focus:bg-white/10">
                           {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -317,7 +317,7 @@ const CreateShoppingList: React.FC = () => {
                   />
                 </div>
                 <div className="flex items-end">
-                  <Button onClick={handleAddItem} className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+                  <Button onClick={handleAddItem} className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
                     <Plus className="h-4 w-4 mr-2" />
                     Add
                   </Button>
@@ -342,14 +342,14 @@ const CreateShoppingList: React.FC = () => {
               <GlassCard hover={false}>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-semibold text-white">Items ({items.length})</h2>
-                  <span className="text-lg font-bold text-teal-400">
+                  <span className="text-lg font-bold text-primary-400">
                     ${calculateTotal().toFixed(2)}
                   </span>
                 </div>
                 <div className="space-y-3">
                   {items.map((item, index) => (
                     <div key={index} className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg">
-                      <Package2 className="h-5 w-5 text-teal-400 flex-shrink-0" />
+                      <Package2 className="h-5 w-5 text-primary-400 flex-shrink-0" />
                       <div className="flex-1 grid grid-cols-1 md:grid-cols-4 gap-2">
                         <div>
                           <p className="font-medium text-white">{item.name}</p>
@@ -362,7 +362,7 @@ const CreateShoppingList: React.FC = () => {
                         </div>
                         <div>
                           {item.estimated_price && (
-                            <p className="text-sm font-medium text-teal-400">
+                            <p className="text-sm font-medium text-primary-400">
                               ${item.estimated_price.toFixed(2)}
                             </p>
                           )}
@@ -394,7 +394,7 @@ const CreateShoppingList: React.FC = () => {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <p className="text-sm text-white/60">
-                    {items.length} items • Estimated total: <span className="text-teal-400 font-medium">${calculateTotal().toFixed(2)}</span>
+                    {items.length} items • Estimated total: <span className="text-primary-400 font-medium">${calculateTotal().toFixed(2)}</span>
                   </p>
                 </div>
               </div>
@@ -410,7 +410,7 @@ const CreateShoppingList: React.FC = () => {
                 <Button
                   onClick={handleSubmit}
                   disabled={loading || !name.trim()}
-                  className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
                 >
                   {loading ? 'Creating...' : 'Create Shopping List'}
                 </Button>

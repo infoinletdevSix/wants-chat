@@ -176,10 +176,10 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
       <div className="max-w-2xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
           {/* Header */}
-          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <ArrowUp className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <ArrowUp className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -195,9 +195,9 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
           <div className="p-6 space-y-6">
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {t('tools.childHeightPredictor.dataLoadedFromYourConversation', 'Data loaded from your conversation')}
                 </span>
               </div>
@@ -252,7 +252,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                     onClick={() => setMethod(m.id as Method)}
                     className={`py-3 px-4 rounded-lg text-left transition-colors ${
                       method === m.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -277,7 +277,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                   onClick={() => setHeightUnit('cm')}
                   className={`py-2 rounded-lg font-medium transition-colors ${
                     heightUnit === 'cm'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -289,7 +289,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                   onClick={() => setHeightUnit('ft')}
                   className={`py-2 rounded-lg font-medium transition-colors ${
                     heightUnit === 'ft'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -318,7 +318,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="space-y-2">
@@ -336,7 +336,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -360,7 +360,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -381,7 +381,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 )}
@@ -398,11 +398,11 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
             {result && (
               <>
                 {/* Predicted Height */}
-                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.childHeightPredictor.predictedAdultHeight', 'Predicted Adult Height')}
                   </div>
-                  <div className="text-4xl font-bold text-[#0D9488] my-2">
+                  <div className="text-4xl font-bold text-[#6096B4] my-2">
                     {result.predictedHeight.cm} cm
                   </div>
                   <div className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -424,7 +424,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                         Confidence: {result.confidence}
                       </div>
                     </div>
-                    <TrendingUp className="w-8 h-8 text-[#0D9488]" />
+                    <TrendingUp className="w-8 h-8 text-[#6096B4]" />
                   </div>
                 </div>
 
@@ -436,11 +436,11 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                   <div className="relative h-8">
                     <div className={`absolute inset-0 rounded-full ${isDark ? 'bg-gray-600' : 'bg-gray-200'}`} />
                     <div
-                      className="absolute h-full rounded-full bg-gradient-to-r from-[#0D9488]/50 to-[#0D9488]"
+                      className="absolute h-full rounded-full bg-gradient-to-r from-[#6096B4]/50 to-[#6096B4]"
                       style={{ left: '20%', right: '20%' }}
                     />
                     <div
-                      className="absolute top-0 w-4 h-8 bg-[#0D9488] rounded-full shadow-lg"
+                      className="absolute top-0 w-4 h-8 bg-[#6096B4] rounded-full shadow-lg"
                       style={{ left: '50%', transform: 'translateX(-50%)' }}
                     />
                   </div>
@@ -448,7 +448,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                     <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                       {result.range.min} cm
                     </span>
-                    <span className="font-medium text-[#0D9488]">
+                    <span className="font-medium text-[#6096B4]">
                       {result.predictedHeight.cm} cm
                     </span>
                     <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>
@@ -465,7 +465,7 @@ export const ChildHeightPredictorTool: React.FC<ChildHeightPredictorToolProps> =
                   <div className="space-y-3">
                     {result.growthPhases.map((phase, index) => (
                       <div key={index} className="flex gap-3">
-                        <div className="w-2 bg-[#0D9488] rounded-full" />
+                        <div className="w-2 bg-[#6096B4] rounded-full" />
                         <div className="flex-1">
                           <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                             {phase.phase}

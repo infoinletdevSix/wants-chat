@@ -70,7 +70,7 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ value, onChange }) 
         className={cn(
           "flex items-center gap-3 px-4 py-3 rounded-xl border transition-all w-full",
           "bg-white/10 backdrop-blur-xl hover:bg-white/15",
-          isOpen ? "border-teal-400 ring-2 ring-teal-400/20" : "border-white/20"
+          isOpen ? "border-primary-400 ring-2 ring-primary-400/20" : "border-white/20"
         )}
       >
         <span className="text-2xl">{selectedCurrency?.flag}</span>
@@ -82,7 +82,7 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ value, onChange }) 
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 w-full mt-2 bg-teal-800/90 backdrop-blur-xl border border-teal-400/30 rounded-xl shadow-xl overflow-hidden">
+        <div className="absolute z-50 w-full mt-2 bg-primary-800/90 backdrop-blur-xl border border-primary-400/30 rounded-xl shadow-xl overflow-hidden">
           <div className="p-2 border-b border-white/20">
             <Input
               type="text"
@@ -105,7 +105,7 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ value, onChange }) 
                 }}
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 hover:bg-white/15 transition-colors",
-                  value === currency.code && "bg-teal-500/20"
+                  value === currency.code && "bg-primary-500/20"
                 )}
               >
                 <span className="text-xl">{currency.flag}</span>
@@ -114,7 +114,7 @@ const CurrencyDropdown: React.FC<CurrencyDropdownProps> = ({ value, onChange }) 
                   <div className="text-xs text-white/60">{currency.name}</div>
                 </div>
                 {value === currency.code && (
-                  <Check className="h-4 w-4 text-teal-400" />
+                  <Check className="h-4 w-4 text-primary-400" />
                 )}
               </button>
             ))}
@@ -256,7 +256,7 @@ const CurrencyConverter: React.FC = () => {
                 variant="outline"
                 size="icon"
                 onClick={handleSwap}
-                className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl shadow-md border-2 border-white/20 hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:text-white hover:border-teal-400 transition-all"
+                className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl shadow-md border-2 border-white/20 hover:bg-gradient-to-r hover:from-primary-500 hover:to-cyan-500 hover:text-white hover:border-primary-400 transition-all"
               >
                 <ArrowRightLeft className="h-5 w-5" />
               </Button>
@@ -290,7 +290,7 @@ const CurrencyConverter: React.FC = () => {
             </div>
 
             {/* To Amount */}
-            <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-xl p-4 border border-teal-400/30">
+            <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl p-4 border border-primary-400/30">
               <label className="block text-xs font-medium text-white/60 mb-2">Converted Amount</label>
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{toCurrencyData?.flag}</span>
@@ -299,7 +299,7 @@ const CurrencyConverter: React.FC = () => {
                     type="number"
                     value={toAmount}
                     onChange={(e) => handleToAmountChange(e.target.value)}
-                    className="h-12 text-2xl font-bold border-0 bg-transparent focus-visible:ring-0 px-0 text-teal-300"
+                    className="h-12 text-2xl font-bold border-0 bg-transparent focus-visible:ring-0 px-0 text-primary-300"
                     placeholder="0"
                   />
                   {loading && (
@@ -308,7 +308,7 @@ const CurrencyConverter: React.FC = () => {
                     </div>
                   )}
                 </div>
-                <span className="text-lg font-semibold text-teal-300">{toCurrency}</span>
+                <span className="text-lg font-semibold text-primary-300">{toCurrency}</span>
               </div>
             </div>
           </div>
@@ -326,7 +326,7 @@ const CurrencyConverter: React.FC = () => {
                   <span className="text-white/60">=</span>
                   <div className="flex items-center gap-1.5">
                     <span className="text-lg">{toCurrencyData?.flag}</span>
-                    <span className="font-bold text-teal-300">{rate.toFixed(4)} {toCurrency}</span>
+                    <span className="font-bold text-primary-300">{rate.toFixed(4)} {toCurrency}</span>
                   </div>
                 </div>
 
@@ -379,7 +379,7 @@ const CurrencyConverter: React.FC = () => {
                   onClick={() => handleFromAmountChange(amount.toString())}
                   className={cn(
                     "h-8 text-xs border border-white/20 bg-white/5 text-white/60 hover:bg-white/10 hover:text-white",
-                    fromAmount === amount.toString() && "bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-teal-400"
+                    fromAmount === amount.toString() && "bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-primary-400"
                   )}
                 >
                   {amount.toLocaleString()}

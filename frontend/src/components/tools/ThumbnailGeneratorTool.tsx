@@ -278,10 +278,10 @@ Optimized for ${aspectRatio.label} format.`;
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-teal-900/20' : t('tools.thumbnailGenerator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : t('tools.thumbnailGenerator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Image className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Image className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.thumbnailGenerator.aiThumbnailGenerator', 'AI Thumbnail Generator')}</h3>
@@ -292,9 +292,9 @@ Optimized for ${aspectRatio.label} format.`;
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{isEditFromGallery ? t('tools.thumbnailGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.thumbnailGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{isEditFromGallery ? t('tools.thumbnailGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.thumbnailGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -308,7 +308,7 @@ Optimized for ${aspectRatio.label} format.`;
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder={t('tools.thumbnailGenerator.eG10TipsTo', 'e.g., 10 Tips to Master AI in 2024')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -322,7 +322,7 @@ Optimized for ${aspectRatio.label} format.`;
             onChange={(e) => setDescription(e.target.value)}
             placeholder={t('tools.thumbnailGenerator.describeTheVisualElementsYou', 'Describe the visual elements you want in the thumbnail...')}
             rows={2}
-            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -333,7 +333,7 @@ Optimized for ${aspectRatio.label} format.`;
             <select
               value={style}
               onChange={(e) => setStyle(e.target.value)}
-              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {thumbnailStyles.map((s) => (
                 <option key={s.value} value={s.value}>
@@ -348,7 +348,7 @@ Optimized for ${aspectRatio.label} format.`;
             <select
               value={colorScheme}
               onChange={(e) => setColorScheme(e.target.value)}
-              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {colorSchemes.map((c) => (
                 <option key={c.value} value={c.value}>
@@ -369,7 +369,7 @@ Optimized for ${aspectRatio.label} format.`;
                 onClick={() => setAspectRatio(ar)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                   aspectRatio.value === ar.value
-                    ? 'bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white'
+                    ? 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -386,7 +386,7 @@ Optimized for ${aspectRatio.label} format.`;
           <button
             onClick={() => setIncludeText(!includeText)}
             className={`relative w-12 h-6 rounded-full transition-colors ${
-              includeText ? 'bg-[#0D9488]' : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
+              includeText ? 'bg-[#6096B4]' : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
             }`}
           >
             <span
@@ -411,7 +411,7 @@ Optimized for ${aspectRatio.label} format.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !title.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -484,7 +484,7 @@ Optimized for ${aspectRatio.label} format.`;
                       <button
                         onClick={() => handleSave(thumbnail.url, thumbnail.prompt)}
                         disabled={isSaving}
-                        className="p-2 bg-[#0D9488] rounded-lg hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                        className="p-2 bg-[#6096B4] rounded-lg hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                         title={t('tools.thumbnailGenerator.saveToGallery', 'Save to Gallery')}
                       >
                         {saveSuccess ? <CheckCircle className="w-5 h-5 text-white" /> : <Save className="w-5 h-5 text-white" />}

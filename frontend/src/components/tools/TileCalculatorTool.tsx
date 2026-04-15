@@ -165,9 +165,9 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Grid3X3 className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Grid3X3 className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tileCalculator.tileCalculator', 'Tile Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.tileCalculator.calculateTilesMaterialsCostsFor', 'Calculate tiles, materials & costs for your project')}</p>
@@ -186,13 +186,13 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
             <div className="flex gap-1">
               <button
                 onClick={() => setUnit('feet')}
-                className={`px-3 py-1 rounded text-xs ${unit === 'feet' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`px-3 py-1 rounded text-xs ${unit === 'feet' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {t('tools.tileCalculator.feet', 'Feet')}
               </button>
               <button
                 onClick={() => setUnit('meters')}
-                className={`px-3 py-1 rounded text-xs ${unit === 'meters' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`px-3 py-1 rounded text-xs ${unit === 'meters' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {t('tools.tileCalculator.meters', 'Meters')}
               </button>
@@ -232,7 +232,7 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
               <button
                 key={size}
                 onClick={() => setTileSize(size)}
-                className={`py-2 px-3 rounded-lg text-sm ${tileSize === size ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${tileSize === size ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {tileSizes[size].name}
               </button>
@@ -273,16 +273,16 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
               <button
                 key={p}
                 onClick={() => setPattern(p)}
-                className={`py-2 px-3 rounded-lg text-sm ${pattern === p ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${pattern === p ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {patterns[p].name}
               </button>
             ))}
           </div>
-          <div className={`p-3 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-3 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <div className="flex items-center justify-between">
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{patterns[pattern].description}</span>
-              <span className="text-teal-500 text-sm font-medium">+{patterns[pattern].wasteFactor}% waste</span>
+              <span className="text-primary-500 text-sm font-medium">+{patterns[pattern].wasteFactor}% waste</span>
             </div>
           </div>
         </div>
@@ -317,7 +317,7 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
                 <button
                   key={pct}
                   onClick={() => setWastePercentage(pct)}
-                  className={`flex-1 py-2 rounded-lg text-sm ${wastePercentage === pct ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`flex-1 py-2 rounded-lg text-sm ${wastePercentage === pct ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {pct}%
                 </button>
@@ -342,12 +342,12 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
         </div>
 
         {/* Results */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center gap-2 mb-3">
-            <Calculator className="w-4 h-4 text-teal-500" />
+            <Calculator className="w-4 h-4 text-primary-500" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tileCalculator.roomArea', 'Room Area')}</span>
           </div>
-          <div className="text-3xl font-bold text-teal-500">{calculations.roomAreaSqFt} sq ft</div>
+          <div className="text-3xl font-bold text-primary-500">{calculations.roomAreaSqFt} sq ft</div>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {calculations.roomAreaSqM} sq meters
           </div>
@@ -356,10 +356,10 @@ export const TileCalculatorTool: React.FC<TileCalculatorToolProps> = ({ uiConfig
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Grid3X3 className="w-4 h-4 text-teal-500" />
+              <Grid3X3 className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tileCalculator.tilesNeeded', 'Tiles Needed')}</span>
             </div>
-            <div className="text-3xl font-bold text-teal-500">{calculations.tilesNeeded}</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.tilesNeeded}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {calculations.tilesNeededBase} base + {calculations.extraTiles} extra ({calculations.totalWastePercent}% waste)
             </div>

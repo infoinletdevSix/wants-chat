@@ -99,7 +99,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
       ratingColor = 'text-green-500';
     } else if (effectiveCPM <= 5) {
       rating = 'Good';
-      ratingColor = 'text-teal-500';
+      ratingColor = 'text-primary-500';
     } else if (effectiveCPM <= 10) {
       rating = 'Average';
       ratingColor = 'text-yellow-500';
@@ -153,8 +153,8 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-purple-900/20' : 'bg-gradient-to-r from-white to-purple-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Calculator className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Calculator className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cPMCalculator.cpmCalculator', 'CPM Calculator')}</h3>
@@ -165,9 +165,9 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.cPMCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.cPMCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -179,21 +179,21 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => setCalculationMode('cpm')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'cpm' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'cpm' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.cPMCalculator.cpm', 'CPM')}</div>
               <div className="text-xs opacity-75">{t('tools.cPMCalculator.fromCostImpressions', 'From cost & impressions')}</div>
             </button>
             <button
               onClick={() => setCalculationMode('impressions')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'impressions' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'impressions' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.cPMCalculator.impressions', 'Impressions')}</div>
               <div className="text-xs opacity-75">{t('tools.cPMCalculator.fromBudgetCpm', 'From budget & CPM')}</div>
             </button>
             <button
               onClick={() => setCalculationMode('cost')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'cost' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'cost' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.cPMCalculator.cost', 'Cost')}</div>
               <div className="text-xs opacity-75">{t('tools.cPMCalculator.fromImpressionsCpm', 'From impressions & CPM')}</div>
@@ -215,7 +215,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
                   value={totalCost}
                   onChange={(e) => setTotalCost(e.target.value)}
                   placeholder="500"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -228,7 +228,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
                   value={impressions}
                   onChange={(e) => setImpressions(e.target.value)}
                   placeholder="100000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -246,7 +246,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
                   placeholder="1000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -260,7 +260,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
                   value={cpm}
                   onChange={(e) => setCpm(e.target.value)}
                   placeholder="5"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -278,7 +278,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
                   value={impressions}
                   onChange={(e) => setImpressions(e.target.value)}
                   placeholder="100000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -292,7 +292,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
                   value={cpm}
                   onChange={(e) => setCpm(e.target.value)}
                   placeholder="5"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -300,11 +300,11 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.cPMCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.cPMCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {calculationMode === 'cpm' ? 'Your CPM' : calculationMode === 'impressions' ? t('tools.cPMCalculator.projectedImpressions', 'Projected Impressions') : t('tools.cPMCalculator.estimatedCost', 'Estimated Cost')}
           </div>
-          <div className="text-5xl font-bold text-[#0D9488] my-2">
+          <div className="text-5xl font-bold text-[#6096B4] my-2">
             {calculationMode === 'cpm'
               ? formatCurrency(calculations.calculatedCPM)
               : calculationMode === 'impressions'
@@ -334,7 +334,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cPMCalculator.cpm2', 'CPM')}</div>
-            <div className="text-xl font-bold text-[#0D9488]">
+            <div className="text-xl font-bold text-[#6096B4]">
               {formatCurrency(calculations.calculatedCPM)}
             </div>
           </div>
@@ -361,7 +361,7 @@ export const CPMCalculatorTool: React.FC<CPMCalculatorToolProps> = ({ uiConfig }
             </div>
             <div className="text-center">
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>1M Impressions</div>
-              <div className="font-bold text-[#0D9488]">{formatCurrency(calculations.costPer1mImpressions)}</div>
+              <div className="font-bold text-[#6096B4]">{formatCurrency(calculations.costPer1mImpressions)}</div>
             </div>
           </div>
         </div>

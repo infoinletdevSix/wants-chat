@@ -12,7 +12,7 @@ export const VolumeControl: React.FC<VolumeControlProps> = ({ volume, onVolumeCh
     <Card className="p-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 min-w-0">
-          <Volume2 className="h-4 w-4 text-teal-400 flex-shrink-0" />
+          <Volume2 className="h-4 w-4 text-primary-400 flex-shrink-0" />
           <span className="text-sm font-medium">Volume</span>
         </div>
         <div className="flex items-center gap-3 flex-1 max-w-[180px] ml-4">
@@ -20,7 +20,7 @@ export const VolumeControl: React.FC<VolumeControlProps> = ({ volume, onVolumeCh
           <div className="relative flex-1">
             <div className="h-2 bg-secondary rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 transition-all duration-200 rounded-full"
+                className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 transition-all duration-200 rounded-full"
                 style={{ width: `${volume * 100}%` }}
               />
             </div>

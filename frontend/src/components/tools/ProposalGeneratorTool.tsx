@@ -611,9 +611,9 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
   // Input classes
   const inputClass = `w-full px-4 py-2.5 rounded-lg border transition-colors ${
     theme === 'dark'
-      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-[#0D9488]'
-      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-[#0D9488]'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`;
+      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-[#6096B4]'
+      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-[#6096B4]'
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`;
 
   const labelClass = `block text-sm font-medium mb-2 ${
     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
@@ -735,7 +735,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                       type="checkbox"
                       checked={deliverable.completed}
                       onChange={(e) => updateDeliverable(deliverable.id, 'completed', e.target.checked)}
-                      className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                   </div>
                   <div className="flex-1 space-y-3">
@@ -767,7 +767,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
               onClick={addDeliverable}
               className={`w-full py-3 border-2 border-dashed rounded-lg flex items-center justify-center gap-2 transition-colors ${
                 theme === 'dark'
-                  ? t('tools.proposalGenerator.borderGray600TextGray', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.proposalGenerator.borderGray300TextGray', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                  ? t('tools.proposalGenerator.borderGray600TextGray', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.proposalGenerator.borderGray300TextGray', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
               }`}
             >
               <Plus className="w-4 h-4" />
@@ -814,7 +814,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                     }`}
                   >
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0D9488] text-white flex items-center justify-center text-sm font-medium">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#6096B4] text-white flex items-center justify-center text-sm font-medium">
                         {index + 1}
                       </div>
                       <div className="flex-1 space-y-3">
@@ -865,7 +865,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                   onClick={addMilestone}
                   className={`w-full py-3 border-2 border-dashed rounded-lg flex items-center justify-center gap-2 transition-colors ${
                     theme === 'dark'
-                      ? t('tools.proposalGenerator.borderGray600TextGray2', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.proposalGenerator.borderGray300TextGray2', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                      ? t('tools.proposalGenerator.borderGray600TextGray2', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.proposalGenerator.borderGray300TextGray2', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
                   }`}
                 >
                   <Plus className="w-4 h-4" />
@@ -889,7 +889,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                     onClick={() => updateProposal('pricingModel', model)}
                     className={`p-3 rounded-lg border-2 transition-colors ${
                       currentProposal.pricingModel === model
-                        ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                        ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                         : theme === 'dark'
                         ? 'border-gray-600 text-gray-300 hover:border-gray-500'
                         : 'border-gray-300 text-gray-700 hover:border-gray-400'
@@ -962,7 +962,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                   onClick={addPricingItem}
                   className={`w-full py-3 border-2 border-dashed rounded-lg flex items-center justify-center gap-2 transition-colors ${
                     theme === 'dark'
-                      ? t('tools.proposalGenerator.borderGray600TextGray3', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.proposalGenerator.borderGray300TextGray3', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                      ? t('tools.proposalGenerator.borderGray600TextGray3', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.proposalGenerator.borderGray300TextGray3', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
                   }`}
                 >
                   <Plus className="w-4 h-4" />
@@ -1075,7 +1075,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                 )}
                 <div className="border-t pt-2 mt-2 flex justify-between text-lg font-bold">
                   <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{t('tools.proposalGenerator.total2', 'Total')}</span>
-                  <span className="text-[#0D9488]">${pricingTotals.total.toFixed(2)}</span>
+                  <span className="text-[#6096B4]">${pricingTotals.total.toFixed(2)}</span>
                 </div>
               </div>
             </div>
@@ -1176,7 +1176,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
               >
                 <div className="flex items-start justify-between mb-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    theme === 'dark' ? t('tools.proposalGenerator.bg0d948820Text0d9488', 'bg-[#0D9488]/20 text-[#0D9488]') : t('tools.proposalGenerator.bg0d948810Text0d9488', 'bg-[#0D9488]/10 text-[#0D9488]')
+                    theme === 'dark' ? t('tools.proposalGenerator.bg0d948820Text0d9488', 'bg-[#6096B4]/20 text-[#6096B4]') : t('tools.proposalGenerator.bg0d948810Text0d9488', 'bg-[#6096B4]/10 text-[#6096B4]')
                   }`}>
                     Case Study {index + 1}
                   </span>
@@ -1225,7 +1225,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
               onClick={addCaseStudy}
               className={`w-full py-3 border-2 border-dashed rounded-lg flex items-center justify-center gap-2 transition-colors ${
                 theme === 'dark'
-                  ? t('tools.proposalGenerator.borderGray600TextGray4', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.proposalGenerator.borderGray300TextGray4', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                  ? t('tools.proposalGenerator.borderGray600TextGray4', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.proposalGenerator.borderGray300TextGray4', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
               }`}
             >
               <Plus className="w-4 h-4" />
@@ -1330,7 +1330,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {(currentProposal.clientName || currentProposal.clientEmail) && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <User className="w-5 h-5 text-[#0D9488]" />
+            <User className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.clientInformation', 'Client Information')}
           </h2>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
@@ -1374,7 +1374,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {(currentProposal.projectScope || currentProposal.projectObjectives) && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <Target className="w-5 h-5 text-[#0D9488]" />
+            <Target className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.projectScopeObjectives', 'Project Scope & Objectives')}
           </h2>
           {currentProposal.projectScope && (
@@ -1400,7 +1400,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {currentProposal.deliverables.length > 0 && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <ListChecks className="w-5 h-5 text-[#0D9488]" />
+            <ListChecks className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.deliverables', 'Deliverables')}
           </h2>
           <div className="space-y-3">
@@ -1409,7 +1409,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                 theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
               }`}>
                 <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                  d.completed ? 'bg-green-500 text-white' : t('tools.proposalGenerator.bg0d9488TextWhite', 'bg-[#0D9488] text-white')
+                  d.completed ? 'bg-green-500 text-white' : t('tools.proposalGenerator.bg0d9488TextWhite', 'bg-[#6096B4] text-white')
                 }`}>
                   {d.completed ? <Check className="w-3 h-3" /> : index + 1}
                 </span>
@@ -1429,7 +1429,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {(currentProposal.startDate || currentProposal.milestones.length > 0) && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <Calendar className="w-5 h-5 text-[#0D9488]" />
+            <Calendar className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.timeline', 'Timeline')}
           </h2>
           {(currentProposal.startDate || currentProposal.endDate) && (
@@ -1454,7 +1454,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                 <div key={m.id} className={`flex items-center gap-4 p-3 rounded-lg ${
                   theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
                 }`}>
-                  <div className="w-8 h-8 rounded-full bg-[#0D9488] text-white flex items-center justify-center text-sm font-medium">
+                  <div className="w-8 h-8 rounded-full bg-[#6096B4] text-white flex items-center justify-center text-sm font-medium">
                     {index + 1}
                   </div>
                   <div className="flex-1">
@@ -1467,7 +1467,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                     {m.dueDate && (
                       <p className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{m.dueDate}</p>
                     )}
-                    <p className="text-sm text-[#0D9488] font-medium">{m.percentage}%</p>
+                    <p className="text-sm text-[#6096B4] font-medium">{m.percentage}%</p>
                   </div>
                 </div>
               ))}
@@ -1479,7 +1479,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {/* Pricing */}
       <section className="mb-8">
         <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          <DollarSign className="w-5 h-5 text-[#0D9488]" />
+          <DollarSign className="w-5 h-5 text-[#6096B4]" />
           {t('tools.proposalGenerator.pricing', 'Pricing')}
         </h2>
         <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
@@ -1544,7 +1544,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
               theme === 'dark' ? 'border-gray-600 text-white' : 'border-gray-200 text-gray-900'
             }`}>
               <span>{t('tools.proposalGenerator.total4', 'Total')}</span>
-              <span className="text-[#0D9488]">${pricingTotals.total.toFixed(2)}</span>
+              <span className="text-[#6096B4]">${pricingTotals.total.toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -1554,7 +1554,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {(currentProposal.paymentTerms || currentProposal.cancellationPolicy) && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <FileCheck className="w-5 h-5 text-[#0D9488]" />
+            <FileCheck className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.termsConditions', 'Terms & Conditions')}
           </h2>
           <div className={`space-y-3 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -1590,7 +1590,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {currentProposal.companyName && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <Building2 className="w-5 h-5 text-[#0D9488]" />
+            <Building2 className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.aboutUs', 'About Us')}
           </h2>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
@@ -1620,14 +1620,14 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {currentProposal.caseStudies.length > 0 && (
         <section className="mb-8">
           <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <Award className="w-5 h-5 text-[#0D9488]" />
+            <Award className="w-5 h-5 text-[#6096B4]" />
             {t('tools.proposalGenerator.caseStudies', 'Case Studies')}
           </h2>
           <div className="grid gap-4">
             {currentProposal.caseStudies.map((cs) => (
               <div key={cs.id} className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
                 <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{cs.title}</h3>
-                <p className={`text-sm ${theme === 'dark' ? t('tools.proposalGenerator.text0d9488', 'text-[#0D9488]') : t('tools.proposalGenerator.text0d94882', 'text-[#0D9488]')}`}>{cs.client}</p>
+                <p className={`text-sm ${theme === 'dark' ? t('tools.proposalGenerator.text0d9488', 'text-[#6096B4]') : t('tools.proposalGenerator.text0d94882', 'text-[#6096B4]')}`}>{cs.client}</p>
                 {cs.description && (
                   <p className={`text-sm mt-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{cs.description}</p>
                 )}
@@ -1645,7 +1645,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       {/* Signature */}
       <section className="mb-8">
         <h2 className={`text-xl font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          <PenTool className="w-5 h-5 text-[#0D9488]" />
+          <PenTool className="w-5 h-5 text-[#6096B4]" />
           {t('tools.proposalGenerator.signature', 'Signature')}
         </h2>
         <div className={`p-6 rounded-lg border-2 border-dashed text-center ${
@@ -1672,17 +1672,17 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
       <div className="max-w-7xl mx-auto p-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.proposalGenerator.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.proposalGenerator.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <FileText className="w-6 h-6 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <FileText className="w-6 h-6 text-[#6096B4]" />
             </div>
             <div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1720,7 +1720,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
             )}
             <button
               onClick={createNewProposal}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.proposalGenerator.newProposal', 'New Proposal')}
@@ -1752,7 +1752,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                           onClick={() => loadProposal(proposal)}
                           className={`p-3 rounded-lg cursor-pointer transition-colors ${
                             currentProposal.id === proposal.id
-                              ? 'bg-[#0D9488]/10 border border-[#0D9488]'
+                              ? 'bg-[#6096B4]/10 border border-[#6096B4]'
                               : theme === 'dark'
                               ? 'bg-gray-700 hover:bg-gray-600'
                               : 'bg-gray-50 hover:bg-gray-100'
@@ -1832,7 +1832,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                       onClick={() => setIsPreviewMode(!isPreviewMode)}
                       className={`flex items-center gap-2 px-4 py-2.5 rounded-lg transition-colors ${
                         isPreviewMode
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-200 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1858,7 +1858,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                       onClick={saveProposal}
                       className={`flex items-center gap-2 px-4 py-2.5 rounded-lg transition-colors ${
                         saveSuccess
-                          ? 'bg-green-500 text-white' : t('tools.proposalGenerator.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                          ? 'bg-green-500 text-white' : t('tools.proposalGenerator.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                       }`}
                     >
                       {saveSuccess ? <Check className="w-4 h-4" /> : <Save className="w-4 h-4" />}
@@ -1885,7 +1885,7 @@ export const ProposalGeneratorTool = ({ uiConfig }: ProposalGeneratorToolProps) 
                           onClick={() => setActiveSection(section.id)}
                           className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
                             activeSection === section.id
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                               ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

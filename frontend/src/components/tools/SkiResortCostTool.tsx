@@ -126,7 +126,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
   };
 
   const costBreakdown = [
-    { label: 'Lift Tickets', value: calculation.liftTicketsCost, icon: <Ticket className="w-4 h-4" />, color: 'text-teal-500' },
+    { label: 'Lift Tickets', value: calculation.liftTicketsCost, icon: <Ticket className="w-4 h-4" />, color: 'text-primary-500' },
     { label: 'Lodging', value: calculation.lodgingCost, icon: <Home className="w-4 h-4" />, color: 'text-blue-500' },
     { label: 'Equipment Rental', value: calculation.rentalCost, icon: <Mountain className="w-4 h-4" />, color: 'text-purple-500' },
     { label: 'Food & Drinks', value: calculation.foodCost, icon: <Utensils className="w-4 h-4" />, color: 'text-orange-500' },
@@ -137,9 +137,9 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Mountain className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Mountain className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.skiResortCost.skiTripCostCalculator', 'Ski Trip Cost Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.skiResortCost.estimateYourTotalSkiVacation', 'Estimate your total ski vacation budget')}</p>
@@ -159,7 +159,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
                 <button
                   key={n}
                   onClick={() => setGroupSize(n.toString())}
-                  className={`flex-1 py-2 rounded-lg text-sm ${parseInt(groupSize) === n ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`flex-1 py-2 rounded-lg text-sm ${parseInt(groupSize) === n ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {n}
                 </button>
@@ -183,7 +183,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
                 <button
                   key={n}
                   onClick={() => setDays(n.toString())}
-                  className={`flex-1 py-2 rounded-lg text-sm ${parseInt(days) === n ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`flex-1 py-2 rounded-lg text-sm ${parseInt(days) === n ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {n}
                 </button>
@@ -262,7 +262,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
                 onClick={() => setLodgingType(type)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   lodgingType === type
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -287,7 +287,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
                 onClick={() => setRentalOption(option)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   rentalOption === option
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -315,7 +315,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
                   onClick={() => setSkillLevel(level)}
                   className={`py-2 px-3 rounded-lg text-sm ${
                     skillLevel === level
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300'
                       : 'bg-gray-100 text-gray-700'
@@ -333,7 +333,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
                 type="checkbox"
                 checked={needLessons}
                 onChange={(e) => setNeedLessons(e.target.checked)}
-                className="w-5 h-5 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                className="w-5 h-5 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
               />
               <div>
                 <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -348,20 +348,20 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
         </div>
 
         {/* Total Cost */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {groupSize} {parseInt(groupSize) === 1 ? 'person' : 'people'} x {days} days
           </div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {formatCurrency(calculation.totalCost)}
           </div>
           <div className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.skiResortCost.totalEstimatedCost', 'total estimated cost')}</div>
           <div className="flex justify-center gap-6 mt-3">
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-              <span className="font-medium text-teal-500">{formatCurrency(calculation.costPerPerson)}</span> per person
+              <span className="font-medium text-primary-500">{formatCurrency(calculation.costPerPerson)}</span> per person
             </div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-              <span className="font-medium text-teal-500">{formatCurrency(calculation.costPerDay)}</span> per day
+              <span className="font-medium text-primary-500">{formatCurrency(calculation.costPerDay)}</span> per day
             </div>
           </div>
         </div>
@@ -383,7 +383,7 @@ export const SkiResortCostTool: React.FC<SkiResortCostToolProps> = ({
             ))}
             <div className={`pt-3 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'} flex items-center justify-between`}>
               <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.skiResortCost.total', 'Total')}</span>
-              <span className="font-bold text-teal-500 text-lg">{formatCurrency(calculation.totalCost)}</span>
+              <span className="font-bold text-primary-500 text-lg">{formatCurrency(calculation.totalCost)}</span>
             </div>
           </div>
         </div>

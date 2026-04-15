@@ -297,7 +297,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
       case 'cooldown':
         return '#3b82f6'; // blue
       case 'complete':
-        return '#0D9488'; // teal
+        return '#6096B4'; // teal
       default:
         return '#6b7280'; // gray
     }
@@ -398,7 +398,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -415,7 +415,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -432,7 +432,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -449,7 +449,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="col-span-2">
@@ -466,7 +466,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -545,7 +545,7 @@ export const IntervalTimerTool = ({ uiConfig }: IntervalTimerToolProps) => {
                   key={index}
                   className={`w-2.5 h-2.5 rounded-full transition-colors ${
                     index < currentRound
-                      ? 'bg-[#0D9488]'
+                      ? 'bg-[#6096B4]'
                       : index === currentRound - 1 && phase === 'work'
                       ? 'bg-green-500'
                       : theme === 'dark'

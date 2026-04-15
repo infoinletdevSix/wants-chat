@@ -562,7 +562,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                   }}
                   className={`px-3 py-1 rounded-full text-sm ${
                     formData.addOns.includes(addOn.id)
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-600 text-gray-300'
                       : 'bg-gray-200 text-gray-700'
@@ -592,7 +592,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
           >
             <Check className="w-4 h-4" />
             {vehicle ? t('tools.carWash.update', 'Update') : t('tools.carWash.addToQueue', 'Add to Queue')}
@@ -690,7 +690,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
           </div>
           <div className="flex items-center justify-between">
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.carWash.total', 'Total:')}</span>
-            <span className="font-bold text-[#0D9488]">${totalPrice}</span>
+            <span className="font-bold text-[#6096B4]">${totalPrice}</span>
           </div>
         </div>
 
@@ -845,7 +845,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
           >
             <Check className="w-4 h-4" /> Add Member
           </button>
@@ -992,7 +992,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
           >
             <Check className="w-4 h-4" /> Add Item
           </button>
@@ -1136,7 +1136,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
           >
             <Check className="w-4 h-4" /> Add Log
           </button>
@@ -1253,7 +1253,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
           >
             <Check className="w-4 h-4" /> Create Card
           </button>
@@ -1335,7 +1335,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={handleSubmit}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
           >
             <Check className="w-4 h-4" /> Add Employee
           </button>
@@ -1482,7 +1482,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.carWash.loadingCarWashData', 'Loading car wash data...')}</p>
         </div>
       </div>
@@ -1493,9 +1493,9 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.carWash.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.carWash.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -1503,7 +1503,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Droplets className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1595,7 +1595,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -1621,7 +1621,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                     setEditingVehicle(null);
                     setShowVehicleForm(true);
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" /> Add Vehicle
                 </button>
@@ -1680,7 +1680,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                         </span>
                       )}
                     </div>
-                    <div className="text-3xl font-bold text-[#0D9488] mb-2">${pkg.price}</div>
+                    <div className="text-3xl font-bold text-[#6096B4] mb-2">${pkg.price}</div>
                     <div className={`text-sm mb-3 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                       ~{pkg.duration} minutes
                     </div>
@@ -1711,7 +1711,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                       <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         {addOn.name}
                       </div>
-                      <div className="text-[#0D9488] font-bold">${addOn.price}</div>
+                      <div className="text-[#6096B4] font-bold">${addOn.price}</div>
                       <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                         +{addOn.duration} min
                       </div>
@@ -1731,7 +1731,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                 </h2>
                 <button
                   onClick={() => setShowMemberForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" /> Add Member
                 </button>
@@ -1804,7 +1804,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                 </h2>
                 <button
                   onClick={() => setShowEmployeeForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" /> Add Employee
                 </button>
@@ -1842,7 +1842,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.carWash.carsWashedToday', 'Cars Washed Today:')}</span>
-                      <span className="font-bold text-[#0D9488]">{emp.carsWashed}</span>
+                      <span className="font-bold text-[#6096B4]">{emp.carsWashed}</span>
                     </div>
                     <button
                       onClick={() => setEmployees(prev => prev.filter(e => e.id !== emp.id))}
@@ -1865,7 +1865,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                 </h2>
                 <button
                   onClick={() => setShowInventoryForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" /> Add Item
                 </button>
@@ -1943,7 +1943,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                 </h2>
                 <button
                   onClick={() => setShowMaintenanceForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" /> Add Log
                 </button>
@@ -1992,7 +1992,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                         <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                           By: {log.performedBy}
                         </span>
-                        <span className="text-[#0D9488] font-medium">
+                        <span className="text-[#6096B4] font-medium">
                           ${log.cost.toFixed(2)}
                         </span>
                         {log.nextDueDate && (
@@ -2017,7 +2017,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                 </h2>
                 <button
                   onClick={() => setShowCardForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" /> Create Card
                 </button>
@@ -2048,7 +2048,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                           {card.type === 'gift' ? (
                             <Gift className="w-5 h-5 text-purple-500" />
                           ) : (
-                            <CreditCard className="w-5 h-5 text-[#0D9488]" />
+                            <CreditCard className="w-5 h-5 text-[#6096B4]" />
                           )}
                           <span className={`font-mono font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                             {card.cardNumber}
@@ -2060,7 +2060,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                           {card.isActive ? t('tools.carWash.active2', 'Active') : t('tools.carWash.expired2', 'Expired')}
                         </span>
                       </div>
-                      <div className="text-2xl font-bold text-[#0D9488] mb-2">
+                      <div className="text-2xl font-bold text-[#6096B4] mb-2">
                         ${card.balance.toFixed(2)}
                         <span className={`text-sm ml-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                           / ${card.originalAmount.toFixed(2)}
@@ -2132,7 +2132,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                     {Object.entries(todayStats.revenueByService).map(([service, revenue]) => (
                       <div key={service} className="flex items-center justify-between">
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{service}</span>
-                        <span className="font-bold text-[#0D9488]">${revenue.toFixed(2)}</span>
+                        <span className="font-bold text-[#6096B4]">${revenue.toFixed(2)}</span>
                       </div>
                     ))}
                     <div className={`border-t pt-3 flex items-center justify-between ${
@@ -2152,7 +2152,7 @@ export const CarWashTool: React.FC<CarWashToolProps> = ({ uiConfig }) => {
                 </h3>
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-[#0D9488]">
+                    <div className="text-2xl font-bold text-[#6096B4]">
                       {members.filter(m => m.isActive).length}
                     </div>
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

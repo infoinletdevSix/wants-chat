@@ -130,10 +130,10 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Gift className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Gift className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bundleDiscountCalculator.bundleDiscountCalculator', 'Bundle Discount Calculator')}</h3>
@@ -144,9 +144,9 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.bundleDiscountCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.bundleDiscountCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -223,8 +223,8 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
           onClick={addItem}
           className={`w-full py-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-2 transition-colors ${
             isDark
-              ? 'border-gray-700 hover:border-teal-500 text-gray-400 hover:text-teal-500'
-              : 'border-gray-300 hover:border-teal-500 text-gray-500 hover:text-teal-500'
+              ? 'border-gray-700 hover:border-primary-500 text-gray-400 hover:text-primary-500'
+              : 'border-gray-300 hover:border-primary-500 text-gray-500 hover:text-primary-500'
           }`}
         >
           <Plus className="w-4 h-4" />
@@ -234,7 +234,7 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
         {/* Discount Settings */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <Tag className="w-4 h-4 text-teal-500" />
+            <Tag className="w-4 h-4 text-primary-500" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bundleDiscountCalculator.bundleDiscount', 'Bundle Discount')}</span>
           </div>
 
@@ -244,7 +244,7 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
                 type="radio"
                 checked={!useCustomPrice}
                 onChange={() => setUseCustomPrice(false)}
-                className="text-teal-500"
+                className="text-primary-500"
               />
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.bundleDiscountCalculator.percentageOff', 'Percentage off')}</span>
             </label>
@@ -253,7 +253,7 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
                 type="radio"
                 checked={useCustomPrice}
                 onChange={() => setUseCustomPrice(true)}
-                className="text-teal-500"
+                className="text-primary-500"
               />
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.bundleDiscountCalculator.setBundlePrice', 'Set bundle price')}</span>
             </label>
@@ -280,7 +280,7 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
                     onClick={() => setBundleDiscount(preset.value.toString())}
                     className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                       parseFloat(bundleDiscount) === preset.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -307,15 +307,15 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
         </div>
 
         {/* Results */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-between mb-4">
-            <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
               {t('tools.bundleDiscountCalculator.bundleSummary', 'Bundle Summary')}
             </h4>
             <button
               onClick={handleCopy}
               className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
               }`}
             >
               {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -342,10 +342,10 @@ Price Per Item: $${calculations.pricePerItem.toFixed(2)}`;
               </span>
             </div>
 
-            <div className={`pt-4 border-t ${isDark ? 'border-gray-700' : 'border-teal-200'}`}>
+            <div className={`pt-4 border-t ${isDark ? 'border-gray-700' : 'border-primary-200'}`}>
               <div className="flex justify-between items-center mb-2">
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bundleDiscountCalculator.bundlePrice', 'Bundle Price')}</span>
-                <span className={`text-3xl font-bold text-teal-500`}>
+                <span className={`text-3xl font-bold text-primary-500`}>
                   ${calculations.bundlePrice.toFixed(2)}
                 </span>
               </div>

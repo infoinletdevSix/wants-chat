@@ -465,9 +465,9 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.trainerBooking.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.trainerBooking.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -475,7 +475,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <User className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -531,7 +531,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -589,7 +589,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -599,7 +599,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.trainerBooking.allStatuses', 'All Statuses')}</option>
                   <option value="pending">{t('tools.trainerBooking.pending', 'Pending')}</option>
@@ -611,7 +611,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
               </div>
               <button
                 onClick={() => setShowBookingForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.trainerBooking.newBooking2', 'New Booking')}
@@ -642,7 +642,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.trainerBooking.selectTrainer', 'Select trainer...')}</option>
                         {trainers.filter(t => t.isActive).map(trainer => (
@@ -664,7 +664,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -679,7 +679,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -693,7 +693,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {SESSION_TYPES.map(session => (
                           <option key={session.type} value={session.type}>
@@ -714,7 +714,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -728,7 +728,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {TIME_SLOTS.map(time => (
                           <option key={time} value={time}>{formatTime(time)}</option>
@@ -748,7 +748,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -763,7 +763,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                     </button>
                     <button
                       onClick={addBooking}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                     >
                       <Save className="w-4 h-4 inline mr-2" />
                       {t('tools.trainerBooking.createBooking', 'Create Booking')}
@@ -819,7 +819,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                             </p>
                           </div>
                           <div className="text-right">
-                            <p className={`font-semibold text-[#0D9488]`}>
+                            <p className={`font-semibold text-[#6096B4]`}>
                               {formatCurrency(booking.price)}
                             </p>
                             <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -874,7 +874,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="all">{t('tools.trainerBooking.allSpecialties', 'All Specialties')}</option>
                 {SPECIALTIES.map(spec => (
@@ -913,7 +913,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                       {trainer.specialties.map(spec => (
                         <span
                           key={spec}
-                          className="px-2 py-1 rounded-full text-xs font-medium bg-[#0D9488] text-white"
+                          className="px-2 py-1 rounded-full text-xs font-medium bg-[#6096B4] text-white"
                         >
                           {getSpecialtyLabel(spec)}
                         </span>
@@ -954,7 +954,7 @@ export const TrainerBookingTool: React.FC<TrainerBookingToolProps> = ({ uiConfig
                         setShowBookingForm(true);
                         setActiveTab('bookings');
                       }}
-                      className="w-full px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                      className="w-full px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                     >
                       {t('tools.trainerBooking.bookSession', 'Book Session')}
                     </button>

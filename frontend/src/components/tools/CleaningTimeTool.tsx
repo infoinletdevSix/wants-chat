@@ -131,9 +131,9 @@ export const CleaningTimeTool: React.FC<CleaningTimeToolProps> = ({ uiConfig }) 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Clock className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Clock className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cleaningTime.cleaningTimeEstimator', 'Cleaning Time Estimator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.cleaningTime.estimateHowLongCleaningWill', 'Estimate how long cleaning will take')}</p>
@@ -143,9 +143,9 @@ export const CleaningTimeTool: React.FC<CleaningTimeToolProps> = ({ uiConfig }) 
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.cleaningTime.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.cleaningTime.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -161,7 +161,7 @@ export const CleaningTimeTool: React.FC<CleaningTimeToolProps> = ({ uiConfig }) 
                 onClick={() => setCleaningLevel(level)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   cleaningLevel === level
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -233,7 +233,7 @@ export const CleaningTimeTool: React.FC<CleaningTimeToolProps> = ({ uiConfig }) 
             </label>
             <button
               onClick={() => setHasClutter(!hasClutter)}
-              className={`w-full py-2 rounded-lg ${hasClutter ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`w-full py-2 rounded-lg ${hasClutter ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {hasClutter ? t('tools.cleaningTime.cluttered25', 'Cluttered (+25%)') : t('tools.cleaningTime.tidy', 'Tidy')}
             </button>
@@ -241,9 +241,9 @@ export const CleaningTimeTool: React.FC<CleaningTimeToolProps> = ({ uiConfig }) 
         </div>
 
         {/* Results */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cleaningTime.estimatedCleaningTime', 'Estimated Cleaning Time')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {calculations.timeFormatted}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -264,7 +264,7 @@ export const CleaningTimeTool: React.FC<CleaningTimeToolProps> = ({ uiConfig }) 
                   className={`flex items-center justify-between p-2 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-white'}`}
                 >
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-teal-500" />
+                    <CheckCircle className="w-4 h-4 text-primary-500" />
                     <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                       {room.name} {room.count > 1 ? `(x${room.count})` : ''}
                     </span>

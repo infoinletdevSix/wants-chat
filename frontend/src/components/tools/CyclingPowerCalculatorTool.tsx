@@ -723,7 +723,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
       <div className="max-w-4xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Bike className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -743,7 +743,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 onClick={() => setUnitSystem('metric')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                   unitSystem === 'metric'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -755,7 +755,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 onClick={() => setUnitSystem('imperial')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                   unitSystem === 'imperial'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -804,7 +804,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -820,7 +820,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -840,7 +840,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -856,7 +856,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -872,7 +872,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         onClick={() => setBikeType(type)}
                         className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors capitalize ${
                           bikeType === type
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -887,7 +887,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 <div className="flex gap-3">
                   <button
                     onClick={calculatePower}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <Calculator className="w-5 h-5" />
                     {t('tools.cyclingPowerCalculator.calculatePower', 'Calculate Power')}
@@ -905,15 +905,15 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 </div>
 
                 {powerResult && (
-                  <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                    theme === 'dark' ? 'bg-gray-700' : t('tools.cyclingPowerCalculator.bg0d948810', 'bg-[#0D9488]/10')
+                  <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                    theme === 'dark' ? 'bg-gray-700' : t('tools.cyclingPowerCalculator.bg0d948810', 'bg-[#6096B4]/10')
                   }`}>
                     <div className="flex justify-between items-start mb-6">
                       <div className="text-center flex-1">
                         <div className={`text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           {t('tools.cyclingPowerCalculator.estimatedPowerOutput', 'Estimated Power Output')}
                         </div>
-                        <div className="text-5xl font-bold text-[#0D9488]">
+                        <div className="text-5xl font-bold text-[#6096B4]">
                           {powerResult.powerWatts}W
                         </div>
                       </div>
@@ -988,7 +988,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         onClick={() => setTestType(test.value as typeof testType)}
                         className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
                           testType === test.value
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1014,7 +1014,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1030,7 +1030,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1038,7 +1038,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 <div className="flex gap-3">
                   <button
                     onClick={estimateFtp}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <Zap className="w-5 h-5" />
                     {t('tools.cyclingPowerCalculator.estimateFtp', 'Estimate FTP')}
@@ -1056,15 +1056,15 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 </div>
 
                 {ftpResult && (
-                  <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                    theme === 'dark' ? 'bg-gray-700' : t('tools.cyclingPowerCalculator.bg0d9488102', 'bg-[#0D9488]/10')
+                  <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                    theme === 'dark' ? 'bg-gray-700' : t('tools.cyclingPowerCalculator.bg0d9488102', 'bg-[#6096B4]/10')
                   }`}>
                     <div className="flex justify-between items-start mb-4">
                       <div className="text-center flex-1">
                         <div className={`text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           {t('tools.cyclingPowerCalculator.estimatedFtp', 'Estimated FTP')}
                         </div>
-                        <div className="text-5xl font-bold text-[#0D9488]">
+                        <div className="text-5xl font-bold text-[#6096B4]">
                           {ftpResult.ftp}W
                         </div>
                       </div>
@@ -1143,14 +1143,14 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
                 <div className="flex gap-3">
                   <button
                     onClick={calculateZones}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <TrendingUp className="w-5 h-5" />
                     {t('tools.cyclingPowerCalculator.calculateZones', 'Calculate Zones')}
@@ -1247,7 +1247,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1263,7 +1263,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1279,7 +1279,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {famousClimbs.map((climb, index) => (
                       <option key={index} value={index}>
@@ -1305,7 +1305,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1321,7 +1321,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1330,7 +1330,7 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 <div className="flex gap-3">
                   <button
                     onClick={calculateClimbTime}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <Mountain className="w-5 h-5" />
                     {t('tools.cyclingPowerCalculator.calculateTime', 'Calculate Time')}
@@ -1348,15 +1348,15 @@ export const CyclingPowerCalculatorTool: React.FC<CyclingPowerCalculatorToolProp
                 </div>
 
                 {climbResult && (
-                  <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                    theme === 'dark' ? 'bg-gray-700' : t('tools.cyclingPowerCalculator.bg0d9488103', 'bg-[#0D9488]/10')
+                  <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                    theme === 'dark' ? 'bg-gray-700' : t('tools.cyclingPowerCalculator.bg0d9488103', 'bg-[#6096B4]/10')
                   }`}>
                     <div className="flex justify-between items-start mb-6">
                       <div className="text-center flex-1">
                         <div className={`text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           {t('tools.cyclingPowerCalculator.estimatedClimbingTime', 'Estimated Climbing Time')}
                         </div>
-                        <div className="text-5xl font-bold text-[#0D9488]">
+                        <div className="text-5xl font-bold text-[#6096B4]">
                           {climbResult.timeFormatted}
                         </div>
                         <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>

@@ -885,9 +885,9 @@ export const PestControlTool = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = 'bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2';
+  const buttonPrimary = 'bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2';
   const buttonSecondary = `px-4 py-2 rounded-lg font-medium transition-colors ${
     theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
   }`;
@@ -949,7 +949,7 @@ export const PestControlTool = ({
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-6 px-4`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -961,7 +961,7 @@ export const PestControlTool = ({
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Bug className="w-8 h-8 text-white" />
             </div>
             <div>
@@ -1007,7 +1007,7 @@ export const PestControlTool = ({
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-white text-gray-600 hover:bg-gray-100'
@@ -1032,7 +1032,7 @@ export const PestControlTool = ({
                       {dashboardStats.scheduledToday}
                     </p>
                   </div>
-                  <Calendar className="w-8 h-8 text-[#0D9488]" />
+                  <Calendar className="w-8 h-8 text-[#6096B4]" />
                 </div>
               </div>
               <div className={cardClass + ' p-4'}>
@@ -1065,7 +1065,7 @@ export const PestControlTool = ({
                       ${dashboardStats.totalRevenue.toLocaleString()}
                     </p>
                   </div>
-                  <TrendingUp className="w-8 h-8 text-[#0D9488]" />
+                  <TrendingUp className="w-8 h-8 text-[#6096B4]" />
                 </div>
               </div>
             </div>
@@ -1356,9 +1356,9 @@ export const PestControlTool = ({
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                             {customer.propertyType === 'residential' ? (
-                              <Home className="w-5 h-5 text-[#0D9488]" />
+                              <Home className="w-5 h-5 text-[#6096B4]" />
                             ) : (
-                              <Wrench className="w-5 h-5 text-[#0D9488]" />
+                              <Wrench className="w-5 h-5 text-[#6096B4]" />
                             )}
                           </div>
                           <div>
@@ -1658,7 +1658,7 @@ export const PestControlTool = ({
                 <div key={product.id} className={cardClass + ' p-4'}>
                   <div className="flex justify-between items-start mb-3">
                     <div className="flex items-center gap-2">
-                      <FlaskConical className="w-5 h-5 text-[#0D9488]" />
+                      <FlaskConical className="w-5 h-5 text-[#6096B4]" />
                       <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {product.name}
                       </h4>
@@ -1802,7 +1802,7 @@ export const PestControlTool = ({
                       id="requiresTreatment"
                       checked={inspectionForm.requiresTreatment || false}
                       onChange={(e) => setInspectionForm({ ...inspectionForm, requiresTreatment: e.target.checked })}
-                      className="w-4 h-4 text-[#0D9488] rounded"
+                      className="w-4 h-4 text-[#6096B4] rounded"
                     />
                     <label htmlFor="requiresTreatment" className={labelClass + ' mb-0'}>
                       {t('tools.pestControl.requiresTreatment', 'Requires Treatment')}
@@ -1825,7 +1825,7 @@ export const PestControlTool = ({
                                   : current.filter(p => p !== pest.name)
                               });
                             }}
-                            className="w-3 h-3 text-[#0D9488] rounded"
+                            className="w-3 h-3 text-[#6096B4] rounded"
                           />
                           <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{pest.name}</span>
                         </label>
@@ -2034,7 +2034,7 @@ export const PestControlTool = ({
                       id="warrantyIncluded"
                       checked={agreementForm.warrantyIncluded || false}
                       onChange={(e) => setAgreementForm({ ...agreementForm, warrantyIncluded: e.target.checked })}
-                      className="w-4 h-4 text-[#0D9488] rounded"
+                      className="w-4 h-4 text-[#6096B4] rounded"
                     />
                     <label htmlFor="warrantyIncluded" className={labelClass + ' mb-0'}>
                       {t('tools.pestControl.includeWarrantyGuarantee', 'Include Warranty/Guarantee')}
@@ -2125,7 +2125,7 @@ export const PestControlTool = ({
                   {warranties.filter(w => w.status === 'active').map(warranty => (
                     <div key={warranty.id} className={cardClass + ' p-4'}>
                       <div className="flex items-center gap-2 mb-2">
-                        <Shield className="w-5 h-5 text-[#0D9488]" />
+                        <Shield className="w-5 h-5 text-[#6096B4]" />
                         <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                           {getCustomerName(warranty.customerId)}
                         </h4>

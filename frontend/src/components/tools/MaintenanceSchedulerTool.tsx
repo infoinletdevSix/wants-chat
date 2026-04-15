@@ -389,7 +389,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
         <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-cyan-500 to-primary-500 rounded-xl">
                 <Wrench className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -440,7 +440,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
               {/* New Task Button */}
               <button
                 onClick={openNewTask}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all shadow-lg shadow-cyan-500/20"
+                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all shadow-lg shadow-cyan-500/20"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.maintenanceScheduler.newTask', 'New Task')}
@@ -469,7 +469,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
           </div>
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.maintenanceScheduler.totalCost', 'Total Cost')}</p>
-            <p className="text-2xl font-bold text-teal-500">${stats.totalCost.toFixed(0)}</p>
+            <p className="text-2xl font-bold text-primary-500">${stats.totalCost.toFixed(0)}</p>
           </div>
         </div>
 
@@ -779,7 +779,7 @@ export const MaintenanceSchedulerTool: React.FC<MaintenanceSchedulerToolProps> =
                   <button
                     onClick={handleSave}
                     disabled={!formData.title || !formData.dueDate}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {editingTask ? t('tools.maintenanceScheduler.update', 'Update') : t('tools.maintenanceScheduler.create', 'Create')}
                   </button>

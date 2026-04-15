@@ -165,7 +165,7 @@ const SeriesDetail: React.FC = () => {
           <p className="text-white/60 mb-6">
             The requested meditation series could not be found.
           </p>
-          <Button onClick={() => navigate('/meditation/series')} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">Back to Series</Button>
+          <Button onClick={() => navigate('/meditation/series')} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Back to Series</Button>
         </div>
       </div>
     );
@@ -256,10 +256,10 @@ const SeriesDetail: React.FC = () => {
       {/* Series Overview */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Info */}
-        <Card className="lg:col-span-2 p-6 bg-teal-500/20 backdrop-blur-xl border border-teal-400/30">
+        <Card className="lg:col-span-2 p-6 bg-primary-500/20 backdrop-blur-xl border border-primary-400/30">
           <div className="flex items-start gap-6">
-            <div className="w-24 h-24 rounded-xl bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-              <Icon path={mdiMeditation} size={2} className="text-teal-400" />
+            <div className="w-24 h-24 rounded-xl bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+              <Icon path={mdiMeditation} size={2} className="text-primary-400" />
             </div>
 
             <div className="flex-1">
@@ -277,22 +277,22 @@ const SeriesDetail: React.FC = () => {
                     Enrolled
                   </Badge>
                 )}
-                {isStarted && <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">In Progress</Badge>}
+                {isStarted && <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">In Progress</Badge>}
               </div>
 
               <p className="text-white/60 mb-6 leading-relaxed">{series.description}</p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="flex items-center gap-2">
-                  <BookOpen className="h-4 w-4 text-teal-400" />
+                  <BookOpen className="h-4 w-4 text-primary-400" />
                   <span className="text-sm text-white/60">{series.sessions} sessions</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-teal-400" />
+                  <Clock className="h-4 w-4 text-primary-400" />
                   <span className="text-sm text-white/60">{series.totalDuration}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Target className="h-4 w-4 text-teal-400" />
+                  <Target className="h-4 w-4 text-primary-400" />
                   <span className="text-sm text-white/60">{series.difficulty}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -323,7 +323,7 @@ const SeriesDetail: React.FC = () => {
                     </span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full" style={{ width: `${progressPercentage}%` }} />
+                    <div className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full" style={{ width: `${progressPercentage}%` }} />
                   </div>
                 </div>
               )}
@@ -333,7 +333,7 @@ const SeriesDetail: React.FC = () => {
                   // Show enrollment button if not enrolled
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                     onClick={handleEnrollment}
                     disabled={isEnrolling}
                   >
@@ -353,7 +353,7 @@ const SeriesDetail: React.FC = () => {
                   // Show continue button if enrolled and started
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                     onClick={handleContinue}
                   >
                     <Play className="h-5 w-5 mr-2" />
@@ -363,7 +363,7 @@ const SeriesDetail: React.FC = () => {
                   // Show start button if enrolled but not started
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                     onClick={() => {
                       const firstSession = sessions[0];
                       handlePlaySession(firstSession?.id || 1, firstSession?.audioId);
@@ -394,8 +394,8 @@ const SeriesDetail: React.FC = () => {
         <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20">
           <h4 className="text-lg font-semibold text-white mb-4">Your Guide</h4>
           <div className="space-y-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-500/20 to-cyan-500/30 flex items-center justify-center">
-              <span className="text-lg font-bold text-teal-400">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/30 flex items-center justify-center">
+              <span className="text-lg font-bold text-primary-400">
                 {series.instructor
                   .split(' ')
                   .map((n: string) => n[0])
@@ -453,9 +453,9 @@ const SeriesDetail: React.FC = () => {
                     ? 'opacity-60 cursor-not-allowed bg-white/5 border border-white/10'
                     : `cursor-pointer hover:shadow-md ${
                         isCurrent
-                          ? 'ring-2 ring-teal-400 bg-teal-500/20 border border-teal-400/30'
+                          ? 'ring-2 ring-primary-400 bg-primary-500/20 border border-primary-400/30'
                           : isCompleted
-                          ? 'bg-teal-500/10 border border-teal-400/20'
+                          ? 'bg-primary-500/10 border border-primary-400/20'
                           : 'bg-white/10 border border-white/20 hover:bg-white/15'
                       }`
                 }`}
@@ -465,7 +465,7 @@ const SeriesDetail: React.FC = () => {
                   {/* Session Number/Status */}
                   <div className="flex-shrink-0">
                     {isCompleted ? (
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
                         <CheckCircle className="h-6 w-6 text-white" />
                       </div>
                     ) : isLocked ? (
@@ -476,7 +476,7 @@ const SeriesDetail: React.FC = () => {
                       <div
                         className={`w-12 h-12 rounded-full border-2 flex items-center justify-center ${
                           isCurrent
-                            ? 'border-teal-400 bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                            ? 'border-primary-400 bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                             : 'border-white/20 bg-white/10 text-white'
                         }`}
                       >
@@ -494,10 +494,10 @@ const SeriesDetail: React.FC = () => {
                     <div className="flex items-center gap-3 mb-2">
                       <h4 className="text-lg font-semibold text-white">{session.title}</h4>
                       {isCurrent && (
-                        <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs">Up Next</Badge>
+                        <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white text-xs">Up Next</Badge>
                       )}
                       {isCompleted && (
-                        <Badge className="bg-teal-500/20 text-teal-400 border border-teal-400/30 text-xs">Completed</Badge>
+                        <Badge className="bg-primary-500/20 text-primary-400 border border-primary-400/30 text-xs">Completed</Badge>
                       )}
                     </div>
                     <p className="text-white/60 mb-2">{session.description}</p>
@@ -509,7 +509,7 @@ const SeriesDetail: React.FC = () => {
                       <span>Day {session.day || index + 1}</span>
                       {session.audioId && (
                         <div className="flex items-center gap-1">
-                          <Headphones className="h-4 w-4 text-teal-400" />
+                          <Headphones className="h-4 w-4 text-primary-400" />
                           <span className="text-xs">Audio</span>
                         </div>
                       )}
@@ -522,7 +522,7 @@ const SeriesDetail: React.FC = () => {
                       <Button
                         variant={isCurrent ? 'default' : 'ghost'}
                         size="sm"
-                        className={isCurrent ? 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white' : 'text-white hover:bg-white/10'}
+                        className={isCurrent ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white' : 'text-white hover:bg-white/10'}
                         onClick={(e) => {
                           e.stopPropagation();
                           handlePlaySession(session.id, session.audioId);

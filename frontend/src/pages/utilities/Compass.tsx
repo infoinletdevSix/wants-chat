@@ -127,7 +127,7 @@ const Compass: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -139,7 +139,7 @@ const Compass: React.FC = () => {
         >
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 Digital Compass
               </h1>
               <p className="text-gray-400">
@@ -161,9 +161,9 @@ const Compass: React.FC = () => {
                 </CardContent>
               </Card>
             ) : !permissionGranted ? (
-              <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+              <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                 <CardContent className="p-6 text-center">
-                  <CompassIcon className="w-12 h-12 text-teal-400 mx-auto mb-4" />
+                  <CompassIcon className="w-12 h-12 text-primary-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">
                     Permission Required
                   </h3>
@@ -172,7 +172,7 @@ const Compass: React.FC = () => {
                   </p>
                   <Button
                     onClick={requestPermission}
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                   >
                     Grant Permission
                   </Button>
@@ -181,9 +181,9 @@ const Compass: React.FC = () => {
             ) : (
               <div className="space-y-6">
                 {/* Compass Card */}
-                <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-teal-400">
+                    <CardTitle className="flex items-center gap-2 text-primary-400">
                       <CompassIcon className="w-5 h-5" />
                       Compass
                     </CardTitle>
@@ -191,7 +191,7 @@ const Compass: React.FC = () => {
                   <CardContent>
                     <div className="relative w-full aspect-square max-w-md mx-auto">
                       {/* Compass Background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-teal-900/30 to-cyan-900/30 rounded-full border-4 border-teal-500/30" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-full border-4 border-primary-500/30" />
 
                       {/* Rotating Compass */}
                       <motion.div
@@ -222,7 +222,7 @@ const Compass: React.FC = () => {
                           >
                             <div
                               className={`w-0.5 mx-auto ${
-                                i % 3 === 0 ? 'h-6 bg-teal-400' : 'h-3 bg-teal-600'
+                                i % 3 === 0 ? 'h-6 bg-primary-400' : 'h-3 bg-primary-600'
                               }`}
                             />
                           </div>
@@ -231,7 +231,7 @@ const Compass: React.FC = () => {
 
                       {/* Center Needle */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <Navigation className="w-16 h-16 text-teal-400" style={{ transform: 'rotate(180deg)' }} />
+                        <Navigation className="w-16 h-16 text-primary-400" style={{ transform: 'rotate(180deg)' }} />
                       </div>
 
                       {/* Qibla Indicator */}
@@ -250,7 +250,7 @@ const Compass: React.FC = () => {
 
                     {/* Heading Display */}
                     <div className="text-center mt-6 space-y-2">
-                      <div className="text-5xl font-bold text-teal-400">
+                      <div className="text-5xl font-bold text-primary-400">
                         {Math.round(heading)}°
                       </div>
                       <div className="text-2xl text-gray-300">
@@ -261,9 +261,9 @@ const Compass: React.FC = () => {
                 </Card>
 
                 {/* Qibla Finder Card */}
-                <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-teal-400">
+                    <CardTitle className="flex items-center gap-2 text-primary-400">
                       <MapPin className="w-5 h-5" />
                       Qibla Direction
                     </CardTitle>
@@ -276,7 +276,7 @@ const Compass: React.FC = () => {
                         </p>
                         <Button
                           onClick={getUserLocation}
-                          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                         >
                           <MapPin className="w-4 h-4 mr-2" />
                           Find Qibla
@@ -284,7 +284,7 @@ const Compass: React.FC = () => {
                       </div>
                     ) : (
                       <div className="text-center space-y-4">
-                        <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 rounded-lg p-4 border border-teal-500/30">
+                        <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-lg p-4 border border-primary-500/30">
                           <p className="text-sm text-gray-400 mb-1">Qibla Direction</p>
                           <p className="text-3xl font-bold text-green-400">
                             {Math.round(qiblaDirection)}°

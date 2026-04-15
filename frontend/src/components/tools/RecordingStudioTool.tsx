@@ -124,7 +124,7 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
   const upcomingHours = bookings.filter(b => b.status !== 'completed').reduce((sum, b) => sum + b.duration, 0);
   const totalRevenue = bookings.filter(b => b.status === 'completed').reduce((sum, b) => sum + b.duration * b.hourlyRate, 0);
 
-  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488]`;
+  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4]`;
   const cardClass = `p-4 rounded-lg ${isDark ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
   const statusColors = {
@@ -137,7 +137,7 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -145,7 +145,7 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Mic className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.recordingStudio.recordingStudio', 'Recording Studio')}</h2>
@@ -154,15 +154,15 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.recordingStudio.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.recordingStudio.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><Calendar className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><Calendar className="w-6 h-6 text-[#6096B4]" /></div>
           <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.recordingStudio.bookings', 'Bookings')}</p>
             <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{totalBookings}</p></div>
         </div>
@@ -207,7 +207,7 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
           disabled={bookings.length === 0}
         />
         <button onClick={() => setShowForm(!showForm)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
           <Plus className="w-5 h-5" />New Booking
         </button>
       </div>
@@ -231,12 +231,12 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
             <label className="flex items-center gap-2 p-3">
               <input type="checkbox" checked={formData.engineer}
                 onChange={(e) => setFormData({ ...formData, engineer: e.target.checked })}
-                className="w-5 h-5 rounded text-[#0D9488]" />
+                className="w-5 h-5 rounded text-[#6096B4]" />
               <span className={isDark ? 'text-white' : 'text-gray-900'}>{t('tools.recordingStudio.includeEngineer25Hr', 'Include Engineer (+$25/hr)')}</span>
             </label>
           </div>
           <button onClick={addBooking} disabled={!formData.client || !formData.date}
-            className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.recordingStudio.saveBooking', 'Save Booking')}</button>
+            className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.recordingStudio.saveBooking', 'Save Booking')}</button>
         </div>
       )}
 
@@ -259,7 +259,7 @@ export const RecordingStudioTool: React.FC<RecordingStudioToolProps> = ({ uiConf
             <div className="flex items-center justify-between">
               <span className={`px-2 py-1 rounded text-xs font-medium ${statusColors[b.status]}`}>{b.status}</span>
               <div className="flex items-center gap-3">
-                <span className="font-bold text-[#0D9488]">
+                <span className="font-bold text-[#6096B4]">
                   ${b.duration * b.hourlyRate + (b.engineer ? b.duration * 25 : 0)}
                 </span>
                 <select value={b.status} onChange={(e) => updateStatus(b.id, e.target.value as Booking['status'])}

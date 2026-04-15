@@ -205,7 +205,7 @@ const defaultTherapists: Therapist[] = [
       thursday: [{ start: '09:00', end: '17:00' }],
       friday: [{ start: '09:00', end: '15:00' }],
     },
-    color: '#0D9488',
+    color: '#6096B4',
   },
   {
     id: '2',
@@ -938,9 +938,9 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
-  const buttonPrimaryClass = 'px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors flex items-center gap-2';
+  const buttonPrimaryClass = 'px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors flex items-center gap-2';
   const buttonSecondaryClass = `px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
     theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
   }`;
@@ -1128,7 +1128,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                 onClick={() => setFormData({ ...formData, conditions: toggleArrayItem(formData.conditions, condition) })}
                 className={`px-3 py-1 rounded-full text-sm transition-colors ${
                   formData.conditions.includes(condition)
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                 }`}
               >
@@ -1232,7 +1232,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
               type="checkbox"
               checked={formData.pregnant}
               onChange={(e) => setFormData({ ...formData, pregnant: e.target.checked })}
-              className="w-4 h-4 text-[#0D9488] rounded"
+              className="w-4 h-4 text-[#6096B4] rounded"
             />
             <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.massageTherapy.currentlyPregnant', 'Currently Pregnant')}</span>
           </label>
@@ -1330,7 +1330,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                   })}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     formData.preferences.preferredTechniques.includes(technique)
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                   }`}
                 >
@@ -1511,7 +1511,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                 type="checkbox"
                 checked={formData.isRecurring}
                 onChange={(e) => setFormData({ ...formData, isRecurring: e.target.checked })}
-                className="w-4 h-4 text-[#0D9488] rounded"
+                className="w-4 h-4 text-[#6096B4] rounded"
               />
               <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                 <Repeat className="w-4 h-4 inline mr-1" /> Set as Recurring Appointment
@@ -1600,7 +1600,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                 onClick={() => setNotes({ ...notes, areasWorked: toggleArrayItem(notes.areasWorked, area) })}
                 className={`px-3 py-1 rounded-full text-sm transition-colors ${
                   notes.areasWorked.includes(area)
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                 }`}
               >
@@ -1620,7 +1620,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                 onClick={() => setNotes({ ...notes, techniques: toggleArrayItem(notes.techniques, technique) })}
                 className={`px-3 py-1 rounded-full text-sm transition-colors ${
                   notes.techniques.includes(technique)
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                 }`}
               >
@@ -1720,7 +1720,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
               type="checkbox"
               checked={notes.followUpNeeded}
               onChange={(e) => setNotes({ ...notes, followUpNeeded: e.target.checked })}
-              className="w-4 h-4 text-[#0D9488] rounded"
+              className="w-4 h-4 text-[#6096B4] rounded"
             />
             <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.massageTherapy.followUpSessionRecommended', 'Follow-up Session Recommended')}</span>
           </label>
@@ -1783,7 +1783,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                   onClick={() => setFormData({ ...formData, name: pkg.name, totalSessions: pkg.sessions, price: pkg.price })}
                   className={`p-3 rounded-lg text-center transition-colors ${
                     formData.name === pkg.name
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                   }`}
                 >
@@ -1859,7 +1859,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                   onClick={() => setFormData({ ...formData, amount: amt })}
                   className={`px-4 py-2 rounded-lg transition-colors ${
                     formData.amount === amt
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                   }`}
                 >
@@ -2196,7 +2196,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                                 <div className="flex gap-2 mt-2">
                                   <button
                                     onClick={() => { setSelectedSession(session); setShowTreatmentNotes(true); }}
-                                    className="text-xs px-2 py-1 bg-[#0D9488] text-white rounded"
+                                    className="text-xs px-2 py-1 bg-[#6096B4] text-white rounded"
                                   >
                                     {t('tools.massageTherapy.complete', 'Complete')}
                                   </button>
@@ -2293,7 +2293,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                                   const tip = prompt('Enter tip amount:', session.tipAmount.toString());
                                   if (tip !== null) handleAddTip(session.id, parseFloat(tip) || 0);
                                 }}
-                                className="text-xs text-[#0D9488] hover:underline"
+                                className="text-xs text-[#6096B4] hover:underline"
                               >
                                 {t('tools.massageTherapy.edit', 'Edit')}
                               </button>
@@ -2304,7 +2304,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                           {session.treatmentNotes && (
                             <button
                               onClick={() => { setSelectedSession(session); setShowTreatmentNotes(true); }}
-                              className="text-xs text-[#0D9488] hover:underline"
+                              className="text-xs text-[#6096B4] hover:underline"
                             >
                               {t('tools.massageTherapy.viewNotes', 'View Notes')}
                             </button>
@@ -2364,7 +2364,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
                       <div
-                        className="bg-[#0D9488] h-2 rounded-full"
+                        className="bg-[#6096B4] h-2 rounded-full"
                         style={{ width: `${(pkg.sessionsUsed / pkg.totalSessions) * 100}%` }}
                       />
                     </div>
@@ -2560,7 +2560,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-6 px-4`}>
         <div className="max-w-7xl mx-auto flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -2573,7 +2573,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -2626,7 +2626,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
               <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.massageTherapy.monthlyRevenue', 'Monthly Revenue')}</div>
             </div>
             <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-              <div className={`text-2xl font-bold text-[#0D9488]`}>${stats.monthlyTips.toFixed(0)}</div>
+              <div className={`text-2xl font-bold text-[#6096B4]`}>${stats.monthlyTips.toFixed(0)}</div>
               <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.massageTherapy.monthlyTips', 'Monthly Tips')}</div>
             </div>
             <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
@@ -2655,7 +2655,7 @@ export const MassageTherapyTool = ({ uiConfig }: MassageTherapyToolProps) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488] bg-[#0D9488]/5'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4] bg-[#6096B4]/5'
                     : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >

@@ -75,7 +75,7 @@ const InternetSpeed: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -87,7 +87,7 @@ const InternetSpeed: React.FC = () => {
         >
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 Internet Speed Test
               </h1>
               <p className="text-gray-400">
@@ -95,9 +95,9 @@ const InternetSpeed: React.FC = () => {
               </p>
             </div>
 
-            <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+            <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-teal-400">
+                <CardTitle className="flex items-center gap-2 text-primary-400">
                   <Wifi className="w-5 h-5" />
                   Speed Test
                 </CardTitle>
@@ -112,10 +112,10 @@ const InternetSpeed: React.FC = () => {
                       animate={testPhase === 'download' ? { scale: [1, 1.05, 1] } : {}}
                       transition={{ duration: 0.5, repeat: testPhase === 'download' ? Infinity : 0 }}
                     >
-                      <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 rounded-2xl p-6 border border-teal-500/30">
+                      <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-2xl p-6 border border-primary-500/30">
                         <div className="flex items-center justify-between mb-4">
                           <span className="text-gray-400 text-sm">Download Speed</span>
-                          <ArrowDown className="w-5 h-5 text-teal-400" />
+                          <ArrowDown className="w-5 h-5 text-primary-400" />
                         </div>
                         <div className="relative w-40 h-40 mx-auto">
                           <svg className="w-full h-full transform -rotate-90">
@@ -136,7 +136,7 @@ const InternetSpeed: React.FC = () => {
                               strokeWidth="12"
                               fill="none"
                               strokeLinecap="round"
-                              className="text-teal-400"
+                              className="text-primary-400"
                               strokeDasharray={`${2 * Math.PI * 70}`}
                               strokeDashoffset={`${
                                 2 * Math.PI * 70 * (1 - (result?.download || 0) / 100)
@@ -214,9 +214,9 @@ const InternetSpeed: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       className="grid grid-cols-2 gap-4"
                     >
-                      <div className="bg-slate-700/30 rounded-lg p-4 border border-teal-500/20">
+                      <div className="bg-slate-700/30 rounded-lg p-4 border border-primary-500/20">
                         <div className="text-gray-400 text-sm mb-1">Ping</div>
-                        <div className="text-2xl font-bold text-teal-400">
+                        <div className="text-2xl font-bold text-primary-400">
                           {result.ping.toFixed(0)} ms
                         </div>
                       </div>
@@ -242,7 +242,7 @@ const InternetSpeed: React.FC = () => {
                       </div>
                       <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-teal-500 to-cyan-500"
+                          className="h-full bg-gradient-to-r from-primary-500 to-cyan-500"
                           style={{ width: `${progress}%` }}
                           transition={{ duration: 0.3 }}
                         />
@@ -254,7 +254,7 @@ const InternetSpeed: React.FC = () => {
                   <Button
                     onClick={startTest}
                     disabled={isTesting}
-                    className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold py-6 text-lg"
+                    className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-semibold py-6 text-lg"
                   >
                     {isTesting ? (
                       <>

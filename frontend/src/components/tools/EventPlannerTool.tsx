@@ -543,9 +543,9 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.eventPlanner.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.eventPlanner.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -553,7 +553,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -603,7 +603,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -662,7 +662,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
                 </select>
                 <button
                   onClick={() => setShowEventForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.eventPlanner.addEvent', 'Add Event')}
@@ -713,7 +713,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
                     <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
                         className={`h-full rounded-full ${
-                          event.spentAmount > event.budget ? 'bg-red-500' : t('tools.eventPlanner.bg0d9488', 'bg-[#0D9488]')
+                          event.spentAmount > event.budget ? 'bg-red-500' : t('tools.eventPlanner.bg0d9488', 'bg-[#6096B4]')
                         }`}
                         style={{ width: `${Math.min((event.spentAmount / event.budget) * 100, 100)}%` }}
                       />
@@ -782,7 +782,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
                     setNewTask(prev => ({ ...prev, eventId: selectedEventId }));
                     setShowTaskForm(true);
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.eventPlanner.addTask', 'Add Task')}
@@ -872,7 +872,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 shadow`}>
               <div className="flex items-center gap-3 mb-2">
-                <Calendar className="w-5 h-5 text-[#0D9488]" />
+                <Calendar className="w-5 h-5 text-[#6096B4]" />
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eventPlanner.totalEvents', 'Total Events')}</span>
               </div>
               <p className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1190,7 +1190,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
                   </button>
                   <button
                     onClick={editingEvent ? handleUpdateEvent : handleAddEvent}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingEvent ? t('tools.eventPlanner.saveChanges', 'Save Changes') : t('tools.eventPlanner.createEvent', 'Create Event')}
                   </button>
@@ -1369,7 +1369,7 @@ export const EventPlannerTool: React.FC<EventPlannerToolProps> = ({ uiConfig }) 
                   </button>
                   <button
                     onClick={editingTask ? handleUpdateTask : handleAddTask}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingTask ? t('tools.eventPlanner.saveChanges2', 'Save Changes') : t('tools.eventPlanner.addTask2', 'Add Task')}
                   </button>

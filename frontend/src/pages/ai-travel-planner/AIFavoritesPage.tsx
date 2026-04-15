@@ -85,7 +85,7 @@ const AIFavoritesPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
             <p className="text-white/60">Loading your favorite AI travel plans...</p>
           </div>
         </div>
@@ -111,8 +111,8 @@ const AIFavoritesPage: React.FC = () => {
 
       {favorites.length === 0 ? (
         <Card className="rounded-2xl p-12 text-center bg-white/10 backdrop-blur-xl border border-white/20">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30 flex items-center justify-center mx-auto mb-6">
-            <Star className="h-10 w-10 text-teal-400" />
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30 flex items-center justify-center mx-auto mb-6">
+            <Star className="h-10 w-10 text-primary-400" />
           </div>
           <h2 className="text-xl font-semibold text-white mb-2">
             No favorite plans yet
@@ -122,7 +122,7 @@ const AIFavoritesPage: React.FC = () => {
           </p>
           <Button
             onClick={() => navigate('/travel-planner')}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
           >
             View All Plans
           </Button>
@@ -133,14 +133,14 @@ const AIFavoritesPage: React.FC = () => {
             {favorites.map((plan) => (
               <Card
                 key={plan.id}
-                className="cursor-pointer rounded-2xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-500/50"
+                className="cursor-pointer rounded-2xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-500/50"
                 onClick={() => handleViewPlan(plan)}
               >
                 <div className="h-40 sm:h-48 relative overflow-hidden">
                   {plan.image ? (
                     <img src={plan.image} alt={plan.destination} className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20"></div>
+                    <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20"></div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
@@ -177,19 +177,19 @@ const AIFavoritesPage: React.FC = () => {
                 <CardContent className="p-4 sm:p-6">
                   <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center gap-2 text-white/70">
-                      <CalendarMonth className="h-3 w-3 sm:h-4 sm:w-4 text-teal-400 flex-shrink-0" />
+                      <CalendarMonth className="h-3 w-3 sm:h-4 sm:w-4 text-primary-400 flex-shrink-0" />
                       <span className="text-xs sm:text-sm">
                         {plan.duration} days • {plan.startDate}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-white/70">
-                      <AttachMoney className="h-3 w-3 sm:h-4 sm:w-4 text-teal-400 flex-shrink-0" />
+                      <AttachMoney className="h-3 w-3 sm:h-4 sm:w-4 text-primary-400 flex-shrink-0" />
                       <span className="text-xs sm:text-sm">
                         Budget: ${plan.budget} {plan.currency}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-white/70">
-                      <Hotel className="h-3 w-3 sm:h-4 sm:w-4 text-teal-400 flex-shrink-0" />
+                      <Hotel className="h-3 w-3 sm:h-4 sm:w-4 text-primary-400 flex-shrink-0" />
                       <span className="text-xs sm:text-sm">{plan.hotels.length} hotels</span>
                     </div>
                   </div>

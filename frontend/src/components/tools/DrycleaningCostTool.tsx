@@ -198,7 +198,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-teal-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-primary-500 flex items-center justify-center">
               <Shirt className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -210,9 +210,9 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-teal-500/10 rounded-xl border border-teal-500/20">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.drycleaningCost.itemsLoadedFromAiResponse', 'Items loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.drycleaningCost.itemsLoadedFromAiResponse', 'Items loaded from AI response')}</span>
             </div>
           )}
 
@@ -220,7 +220,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
           <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className={`flex items-center gap-2 text-sm font-medium mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                <MapPin className="w-4 h-4 text-teal-500" />
+                <MapPin className="w-4 h-4 text-primary-500" />
                 {t('tools.drycleaningCost.locationType', 'Location Type')}
               </label>
               <div className="flex gap-2">
@@ -234,7 +234,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                     onClick={() => setLocation(loc.value as typeof location)}
                     className={`flex-1 py-2 px-3 rounded-lg text-sm ${
                       location === loc.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDarkMode
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -256,7 +256,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                     type="checkbox"
                     checked={membership}
                     onChange={(e) => setMembership(e.target.checked)}
-                    className="rounded text-teal-500 focus:ring-teal-500"
+                    className="rounded text-primary-500 focus:ring-primary-500"
                   />
                   <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.drycleaningCost.memberDiscount10Off', 'Member Discount (10% off)')}
@@ -267,7 +267,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                     type="checkbox"
                     checked={bulkDiscount}
                     onChange={(e) => setBulkDiscount(e.target.checked)}
-                    className="rounded text-teal-500 focus:ring-teal-500"
+                    className="rounded text-primary-500 focus:ring-primary-500"
                   />
                   <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.drycleaningCost.bulkDiscount15Off5', 'Bulk Discount (15% off 5+ items)')}
@@ -300,7 +300,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                     >
                       <span>{garment.icon}</span>
                       <span>{garment.name}</span>
-                      <span className="text-teal-500">${garment.baseCost.toFixed(2)}</span>
+                      <span className="text-primary-500">${garment.baseCost.toFixed(2)}</span>
                       <Plus className="w-4 h-4" />
                     </button>
                   ))}
@@ -361,7 +361,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                               +
                             </button>
                           </div>
-                          <span className="font-bold text-teal-500 w-20 text-right">
+                          <span className="font-bold text-primary-500 w-20 text-right">
                             ${itemCost.toFixed(2)}
                           </span>
                           <button
@@ -386,7 +386,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                             onClick={() => updateItemOption(index, opt.key as keyof SelectedItem['options'], !item.options[opt.key as keyof SelectedItem['options']])}
                             className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-colors ${
                               item.options[opt.key as keyof SelectedItem['options']]
-                                ? 'bg-teal-500 text-white'
+                                ? 'bg-primary-500 text-white'
                                 : isDarkMode
                                 ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -406,8 +406,8 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
 
           {/* Cost Summary */}
           {selectedItems.length > 0 && (
-            <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
-              <h3 className={`text-lg font-semibold mb-4 ${isDarkMode ? 'text-teal-400' : 'text-teal-700'}`}>
+            <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
+              <h3 className={`text-lg font-semibold mb-4 ${isDarkMode ? 'text-primary-400' : 'text-primary-700'}`}>
                 <DollarSign className="w-5 h-5 inline mr-2" />
                 {t('tools.drycleaningCost.costEstimate', 'Cost Estimate')}
               </h3>
@@ -458,7 +458,7 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
                   <span className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.drycleaningCost.estimatedTotal', 'Estimated Total')}
                   </span>
-                  <span className="text-3xl font-bold text-teal-500">
+                  <span className="text-3xl font-bold text-primary-500">
                     ${calculations.finalTotal.toFixed(2)}
                   </span>
                 </div>
@@ -477,8 +477,8 @@ const DrycleaningCostTool: React.FC<DrycleaningCostToolProps> = ({ uiConfig }) =
           )}
 
           {/* Info */}
-          <div className={`mt-6 p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-teal-50'} flex items-start gap-3`}>
-            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-teal-400' : 'text-teal-600'}`} />
+          <div className={`mt-6 p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-primary-50'} flex items-start gap-3`}>
+            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-primary-400' : 'text-primary-600'}`} />
             <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               <p className="font-medium mb-1">{t('tools.drycleaningCost.pricingNotes', 'Pricing Notes:')}</p>
               <ul className="space-y-1 list-disc list-inside">

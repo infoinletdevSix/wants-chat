@@ -28,11 +28,11 @@ const GoalProgress: React.FC<GoalProgressProps> = ({
     <Card className="p-6 bg-white/5 border border-white/10">
       <div className="space-y-4">
         <div className="flex items-center gap-3">
-          <div className={`p-3 rounded-full ${isGoalReached ? 'bg-emerald-500/20' : 'bg-teal-500/20'}`}>
+          <div className={`p-3 rounded-full ${isGoalReached ? 'bg-emerald-500/20' : 'bg-primary-500/20'}`}>
             <Icon
               path={mdiTrendingDown}
               size={1}
-              className={isGoalReached ? 'text-emerald-400' : 'text-teal-400'}
+              className={isGoalReached ? 'text-emerald-400' : 'text-primary-400'}
             />
           </div>
           <div className="flex-1">
@@ -57,7 +57,7 @@ const GoalProgress: React.FC<GoalProgressProps> = ({
           </div>
           <Progress
             value={progress}
-            className={`h-3 bg-white/10 ${isGoalReached ? '[&>div]:bg-emerald-500' : '[&>div]:bg-gradient-to-r [&>div]:from-teal-500 [&>div]:to-cyan-500'}`}
+            className={`h-3 bg-white/10 ${isGoalReached ? '[&>div]:bg-emerald-500' : '[&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-cyan-500'}`}
           />
           {alreadyLost > 0 && (
             <p className="text-xs text-center text-white/60">
@@ -71,8 +71,8 @@ const GoalProgress: React.FC<GoalProgressProps> = ({
             <p className="text-2xl font-bold text-white">{startWeight.toFixed(1)}</p>
             <p className="text-xs text-white/60 font-medium">Start Weight</p>
           </div>
-          <div className="text-center p-3 bg-teal-500/10 rounded-lg border-2 border-teal-400/30">
-            <p className="text-2xl font-bold text-teal-400">{currentWeight.toFixed(1)}</p>
+          <div className="text-center p-3 bg-primary-500/10 rounded-lg border-2 border-primary-400/30">
+            <p className="text-2xl font-bold text-primary-400">{currentWeight.toFixed(1)}</p>
             <p className="text-xs text-white/60 font-medium">Current Weight</p>
           </div>
           <div className={`text-center p-3 rounded-lg ${isGoalReached ? 'bg-emerald-500/10 border-2 border-emerald-400/30' : 'bg-white/5 border border-white/10'}`}>

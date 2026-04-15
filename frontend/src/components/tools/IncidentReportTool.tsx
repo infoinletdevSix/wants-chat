@@ -339,9 +339,9 @@ export function IncidentReportTool({ uiConfig }: IncidentReportToolProps) {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.incidentReport.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.incidentReport.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -881,7 +881,7 @@ export function IncidentReportTool({ uiConfig }: IncidentReportToolProps) {
                     <button
                       type="button"
                       onClick={() => setShowWitnessForm(true)}
-                      className="text-sm text-[#0D9488] hover:underline"
+                      className="text-sm text-[#6096B4] hover:underline"
                     >
                       {t('tools.incidentReport.addWitness', '+ Add Witness')}
                     </button>
@@ -935,7 +935,7 @@ export function IncidentReportTool({ uiConfig }: IncidentReportToolProps) {
                       type="checkbox"
                       checked={newIncident.followUpRequired}
                       onChange={(e) => setNewIncident({ ...newIncident, followUpRequired: e.target.checked })}
-                      className="w-4 h-4 text-[#0D9488] rounded"
+                      className="w-4 h-4 text-[#6096B4] rounded"
                     />
                     <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                       {t('tools.incidentReport.followUpRequired2', 'Follow-up Required')}
@@ -1039,7 +1039,7 @@ export function IncidentReportTool({ uiConfig }: IncidentReportToolProps) {
                 </button>
                 <button
                   onClick={addWitness}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C]"
                 >
                   {t('tools.incidentReport.addWitness3', 'Add Witness')}
                 </button>

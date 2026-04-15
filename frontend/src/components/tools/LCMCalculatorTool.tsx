@@ -144,7 +144,7 @@ export default function LCMCalculatorTool({
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <X className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -169,7 +169,7 @@ export default function LCMCalculatorTool({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 {inputs.length > 2 && (
                   <button
@@ -206,7 +206,7 @@ export default function LCMCalculatorTool({
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculate}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.lCMCalculator.calculateLcm', 'Calculate LCM')}
@@ -225,15 +225,15 @@ export default function LCMCalculatorTool({
 
           {/* Result Display */}
           {result && (
-            <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-              theme === 'dark' ? 'bg-gray-700' : t('tools.lCMCalculator.bg0d948810', 'bg-[#0D9488]/10')
+            <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+              theme === 'dark' ? 'bg-gray-700' : t('tools.lCMCalculator.bg0d948810', 'bg-[#6096B4]/10')
             }`}>
               <div className="space-y-4">
                 <div className="text-center">
                   <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} mb-1`}>
                     LCM of {result.numbers.join(', ')}
                   </div>
-                  <div className="text-4xl font-bold text-[#0D9488]">
+                  <div className="text-4xl font-bold text-[#6096B4]">
                     {result.lcm.toLocaleString()}
                   </div>
                 </div>

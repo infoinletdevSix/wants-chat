@@ -158,7 +158,7 @@ export const LoremIpsumGeneratorTool = ({ uiConfig }: LoremIpsumGeneratorToolPro
             <label className={`block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               Number of Paragraphs: {paragraphs}
               {isPrefilled && (
-                <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#0D9488]">
+                <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#6096B4]">
                   <Sparkles className="w-3 h-3" />
                   {t('tools.loremIpsumGenerator.prefilledFromAi', 'Prefilled from AI')}
                 </span>
@@ -170,7 +170,7 @@ export const LoremIpsumGeneratorTool = ({ uiConfig }: LoremIpsumGeneratorToolPro
               max="20"
               value={paragraphs}
               onChange={(e) => setParagraphs(Number(e.target.value))}
-              className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+              className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
             />
             <div className="flex justify-between text-xs text-gray-500 mt-1">
               <span>1</span>
@@ -189,7 +189,7 @@ export const LoremIpsumGeneratorTool = ({ uiConfig }: LoremIpsumGeneratorToolPro
               max="200"
               value={wordsPerParagraph}
               onChange={(e) => setWordsPerParagraph(Number(e.target.value))}
-              className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+              className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
             />
             <div className="flex justify-between text-xs text-gray-500 mt-1">
               <span>10</span>
@@ -205,7 +205,7 @@ export const LoremIpsumGeneratorTool = ({ uiConfig }: LoremIpsumGeneratorToolPro
               type="checkbox"
               checked={startWithLorem}
               onChange={(e) => setStartWithLorem(e.target.checked)}
-              className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+              className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
               {t('tools.loremIpsumGenerator.startWithLoremIpsumDolor', 'Start with "Lorem ipsum dolor sit amet..."')}
@@ -217,7 +217,7 @@ export const LoremIpsumGeneratorTool = ({ uiConfig }: LoremIpsumGeneratorToolPro
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleGenerate}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <RefreshCw className="w-4 h-4" />
             {t('tools.loremIpsumGenerator.generateLoremIpsum', 'Generate Lorem Ipsum')}

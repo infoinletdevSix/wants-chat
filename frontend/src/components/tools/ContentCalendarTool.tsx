@@ -584,7 +584,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             min-h-[100px] p-2 border-b border-r transition-colors cursor-pointer
             ${isDark ? 'border-gray-700' : 'border-gray-200'}
             ${isCurrentMonth ? '' : 'invisible'}
-            ${isSelected ? (isDark ? 'bg-teal-900/30' : 'bg-teal-50') : ''}
+            ${isSelected ? (isDark ? 'bg-primary-900/30' : 'bg-primary-50') : ''}
             ${isCurrentMonth ? (isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-50') : ''}
           `}
         >
@@ -594,7 +594,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                 <span
                   className={`
                     w-7 h-7 flex items-center justify-center rounded-full text-sm font-medium
-                    ${isTodayDate ? 'bg-[#0D9488] text-white' : isDark ? 'text-white' : 'text-gray-900'}
+                    ${isTodayDate ? 'bg-[#6096B4] text-white' : isDark ? 'text-white' : 'text-gray-900'}
                   `}
                 >
                   {day}
@@ -721,7 +721,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Calendar className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -733,9 +733,9 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             </p>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs text-[#0D9488] font-medium">{t('tools.contentCalendar.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs text-[#6096B4] font-medium">{t('tools.contentCalendar.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -765,7 +765,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
           />
           <button
             onClick={() => openAddContentModal()}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <Plus className="w-5 h-5" />
             {t('tools.contentCalendar.addContent', 'Add Content')}
@@ -786,7 +786,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'text-gray-400 hover:text-white hover:bg-gray-600'
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -811,7 +811,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
         <select
@@ -821,7 +821,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             isDark
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-300 text-gray-900'
-          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
         >
           <option value="all">{t('tools.contentCalendar.allTypes', 'All Types')}</option>
           {CONTENT_TYPES.map((type) => (
@@ -835,7 +835,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             isDark
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-300 text-gray-900'
-          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
         >
           <option value="all">{t('tools.contentCalendar.allPlatforms', 'All Platforms')}</option>
           {PLATFORMS.map((platform) => (
@@ -849,7 +849,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             isDark
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-300 text-gray-900'
-          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
         >
           <option value="all">{t('tools.contentCalendar.allStatuses', 'All Statuses')}</option>
           {Object.entries(STATUS_CONFIG).map(([key, config]) => (
@@ -925,7 +925,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                 </h4>
                 <button
                   onClick={() => openAddContentModal(selectedDate)}
-                  className="flex items-center gap-1 px-3 py-1 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-1 px-3 py-1 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.contentCalendar.add', 'Add')}
@@ -953,7 +953,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
               <p>{t('tools.contentCalendar.noContentItemsFound', 'No content items found')}</p>
               <button
                 onClick={() => openAddContentModal()}
-                className="mt-3 text-[#0D9488] hover:underline"
+                className="mt-3 text-[#6096B4] hover:underline"
               >
                 {t('tools.contentCalendar.createYourFirstContentItem', 'Create your first content item')}
               </button>
@@ -972,7 +972,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
             </h3>
             <button
               onClick={openAddCampaignModal}
-              className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.contentCalendar.addCampaign', 'Add Campaign')}
@@ -984,7 +984,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
               <p>{t('tools.contentCalendar.noCampaignsYet', 'No campaigns yet')}</p>
               <button
                 onClick={openAddCampaignModal}
-                className="mt-3 text-[#0D9488] hover:underline"
+                className="mt-3 text-[#6096B4] hover:underline"
               >
                 {t('tools.contentCalendar.createYourFirstCampaign', 'Create your first campaign')}
               </button>
@@ -1153,7 +1153,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1171,7 +1171,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1188,7 +1188,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {CONTENT_TYPES.map((type) => (
                       <option key={type.value} value={type.value}>{type.label}</option>
@@ -1206,7 +1206,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {PLATFORMS.map((platform) => (
                       <option key={platform.value} value={platform.value}>{platform.label}</option>
@@ -1228,7 +1228,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       onClick={() => setContentForm({ ...contentForm, status: key as ContentStatus })}
                       className={`px-3 py-2 rounded-lg border text-sm font-medium transition-colors ${
                         contentForm.status === key
-                          ? `${config.bg} ${config.text} border-transparent ring-2 ring-[#0D9488]`
+                          ? `${config.bg} ${config.text} border-transparent ring-2 ring-[#6096B4]`
                           : isDark
                           ? 'border-gray-600 text-gray-300 hover:bg-gray-700'
                           : 'border-gray-300 text-gray-700 hover:bg-gray-100'
@@ -1254,7 +1254,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1269,7 +1269,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1289,7 +1289,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1303,7 +1303,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.contentCalendar.noCampaign', 'No Campaign')}</option>
                     {campaigns.map((campaign) => (
@@ -1327,7 +1327,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1346,7 +1346,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
               </button>
               <button
                 onClick={handleSaveContent}
-                className="flex-1 py-2 px-4 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex-1 py-2 px-4 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 {editingItem ? t('tools.contentCalendar.saveChanges', 'Save Changes') : t('tools.contentCalendar.addContent3', 'Add Content')}
               </button>
@@ -1386,7 +1386,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1404,7 +1404,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1420,7 +1420,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       type="button"
                       onClick={() => setCampaignForm({ ...campaignForm, color })}
                       className={`w-8 h-8 rounded-full transition-transform ${
-                        campaignForm.color === color ? 'ring-2 ring-offset-2 ring-[#0D9488] scale-110' : ''
+                        campaignForm.color === color ? 'ring-2 ring-offset-2 ring-[#6096B4] scale-110' : ''
                       }`}
                       style={{ backgroundColor: color }}
                     />
@@ -1442,7 +1442,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1457,7 +1457,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1477,7 +1477,7 @@ export const ContentCalendarTool: React.FC<ContentCalendarToolProps> = ({ uiConf
               </button>
               <button
                 onClick={handleSaveCampaign}
-                className="flex-1 py-2 px-4 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex-1 py-2 px-4 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 {editingCampaign ? t('tools.contentCalendar.saveChanges2', 'Save Changes') : t('tools.contentCalendar.addCampaign3', 'Add Campaign')}
               </button>

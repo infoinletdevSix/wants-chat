@@ -81,7 +81,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
 
   const categoryColors = [
     '#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6',
-    '#ec4899', '#14b8a6', '#f97316', '#84cc16', '#06b6d4'
+    '#ec4899', '#75AAC1', '#f97316', '#84cc16', '#06b6d4'
   ];
 
   const getBudgetStatus = (budget: Budget) => {
@@ -232,7 +232,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
         
         <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
           <DialogTrigger>
-            <Button className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+            <Button className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
               <Plus className="h-4 w-4 mr-2" />
               Create Budget
             </Button>
@@ -405,7 +405,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
                 </Button>
                 <Button
                   type="submit"
-                  className="flex-1 h-10 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                  className="flex-1 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                   disabled={!formData.name || !formData.totalBudget || formData.categories.length === 0}
                 >
                   {editingBudget ? 'Update Budget' : 'Create Budget'}
@@ -426,7 +426,7 @@ const BudgetManager: React.FC<BudgetManagerProps> = ({
           </p>
           <Button
             onClick={() => setIsCreateOpen(true)}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 rounded-xl"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 rounded-xl"
           >
             <Plus className="h-4 w-4 mr-2" />
             Create Your First Budget

@@ -117,7 +117,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
 
   const getCellColor = (plant: PlantData, monthIndex: number): string => {
     if (plant.indoorStart.includes(monthIndex)) return 'bg-purple-500';
-    if (plant.outdoorTransplant.includes(monthIndex)) return 'bg-teal-500';
+    if (plant.outdoorTransplant.includes(monthIndex)) return 'bg-primary-500';
     if (plant.directSow.includes(monthIndex)) return 'bg-blue-500';
     if (plant.harvest.includes(monthIndex)) return 'bg-amber-500';
     return isDark ? 'bg-gray-700' : 'bg-gray-100';
@@ -133,10 +133,10 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Calendar className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Calendar className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.plantingCalendar.plantingCalendar', 'Planting Calendar')}</h3>
@@ -150,13 +150,13 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              <ThermometerSun className="w-4 h-4 inline mr-2 text-teal-500" />
+              <ThermometerSun className="w-4 h-4 inline mr-2 text-primary-500" />
               {t('tools.plantingCalendar.selectYourZone', 'Select Your Zone')}
             </label>
             <select
               value={selectedZone}
               onChange={(e) => setSelectedZone(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
             >
               {zones.map(z => (
                 <option key={z.zone} value={z.zone}>Zone {z.zone} - {z.description}</option>
@@ -166,13 +166,13 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
 
           <div className="space-y-2">
             <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              <Leaf className="w-4 h-4 inline mr-2 text-teal-500" />
+              <Leaf className="w-4 h-4 inline mr-2 text-primary-500" />
               {t('tools.plantingCalendar.plantCategory', 'Plant Category')}
             </label>
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
             >
               <option value="all">{t('tools.plantingCalendar.allPlants', 'All Plants')}</option>
               <option value="vegetable">{t('tools.plantingCalendar.vegetables', 'Vegetables')}</option>
@@ -184,7 +184,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
         </div>
 
         {/* Zone Info */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
@@ -200,7 +200,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
                 </span>
               </div>
             </div>
-            <div className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-600'} font-medium`}>
+            <div className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-600'} font-medium`}>
               Growing Season: ~{(zoneData.firstFrostMonth - zoneData.lastFrostMonth + 1) * 30} days
             </div>
           </div>
@@ -222,7 +222,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.plantingCalendar.indoorStart', 'Indoor Start')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-teal-500 rounded flex items-center justify-center text-white text-xs font-bold">T</div>
+              <div className="w-6 h-6 bg-primary-500 rounded flex items-center justify-center text-white text-xs font-bold">T</div>
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.plantingCalendar.transplant', 'Transplant')}</span>
             </div>
             <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
                     key={month}
                     className={`text-center py-2 px-1 text-xs ${
                       idx === getCurrentMonth()
-                        ? 'bg-teal-500 text-white rounded-t'
+                        ? 'bg-primary-500 text-white rounded-t'
                         : isDark ? 'text-gray-400' : 'text-gray-600'
                     }`}
                   >
@@ -275,7 +275,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
                       <td key={monthIdx} className="p-1">
                         <div
                           className={`w-full h-6 rounded flex items-center justify-center text-xs font-bold text-white ${getCellColor(plant, monthIdx)} ${
-                            monthIdx === getCurrentMonth() ? 'ring-2 ring-teal-400' : ''
+                            monthIdx === getCurrentMonth() ? 'ring-2 ring-primary-400' : ''
                           }`}
                         >
                           {getCellLabel(plant, monthIdx)}
@@ -318,7 +318,7 @@ export const PlantingCalendarTool: React.FC<PlantingCalendarToolProps> = ({ uiCo
         {/* Current Month Recommendations */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Droplets className="w-4 h-4 text-teal-500" />
+            <Droplets className="w-4 h-4 text-primary-500" />
             What to Plant This Month ({fullMonths[getCurrentMonth()]})
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

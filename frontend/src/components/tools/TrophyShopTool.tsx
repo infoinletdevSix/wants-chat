@@ -698,15 +698,15 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
     isDark
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClasses = `w-full px-4 py-2 rounded-lg border ${
     isDark
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
-  const buttonPrimary = 'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20';
+  const buttonPrimary = 'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20';
 
   const buttonSecondary = `px-4 py-2 rounded-lg transition-colors font-medium ${
     isDark
@@ -719,7 +719,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -732,7 +732,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -759,9 +759,9 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                 size="sm"
               />
               {isPrefilled && (
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                  <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                  <span className="text-sm text-[#0D9488] font-medium">{t('tools.trophyShop.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                  <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                  <span className="text-sm text-[#6096B4] font-medium">{t('tools.trophyShop.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
                 </div>
               )}
             </div>
@@ -776,7 +776,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
               </div>
               <div className={`px-4 py-2 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.trophyShop.thisMonth', 'This Month')}</div>
-                <div className={`text-xl font-bold text-[#0D9488]`}>
+                <div className={`text-xl font-bold text-[#6096B4]`}>
                   {formatCurrency(analytics.thisMonthRevenue)}
                 </div>
               </div>
@@ -806,7 +806,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -837,7 +837,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <select
@@ -856,7 +856,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                       type="checkbox"
                       checked={showRushOnly}
                       onChange={(e) => setShowRushOnly(e.target.checked)}
-                      className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                     <Zap className="w-4 h-4 text-orange-500" />
                     {t('tools.trophyShop.rushOnly', 'Rush Only')}
@@ -1033,7 +1033,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                         type="checkbox"
                         checked={orderForm.isRush}
                         onChange={(e) => setOrderForm({ ...orderForm, isRush: e.target.checked })}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <Zap className="w-4 h-4 text-orange-500" />
                       {t('tools.trophyShop.rushOrder50', 'Rush Order (+50%)')}
@@ -1068,7 +1068,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                       )}
                       <div className="col-span-2 md:col-span-4 pt-2 border-t border-gray-600">
                         <span className={`font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.trophyShop.total', 'Total:')}</span>
-                        <span className="font-bold text-[#0D9488] text-lg">{formatCurrency(pricePreview.total)}</span>
+                        <span className="font-bold text-[#6096B4] text-lg">{formatCurrency(pricePreview.total)}</span>
                       </div>
                     </div>
                   </div>
@@ -1116,7 +1116,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                       <div className="flex flex-wrap gap-4 items-start justify-between">
                         <div className="flex gap-4 items-start">
                           <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <AwardIcon className="w-6 h-6 text-[#0D9488]" />
+                            <AwardIcon className="w-6 h-6 text-[#6096B4]" />
                           </div>
                           <div>
                             <div className="flex items-center gap-2 flex-wrap">
@@ -1153,7 +1153,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                           </div>
                         </div>
                         <div className="flex flex-col items-end gap-2">
-                          <div className="text-xl font-bold text-[#0D9488]">
+                          <div className="text-xl font-bold text-[#6096B4]">
                             {formatCurrency(order.totalPrice)}
                           </div>
                           <div className="flex gap-2">
@@ -1263,7 +1263,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                         type="checkbox"
                         checked={customerForm.isCorporate}
                         onChange={(e) => setCustomerForm({ ...customerForm, isCorporate: e.target.checked })}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <Building2 className="w-4 h-4" />
                       {t('tools.trophyShop.corporateAccount', 'Corporate Account')}
@@ -1365,7 +1365,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                       <span className={isDark ? 'text-gray-400' : 'text-gray-500'}>
                         {customerOrders.length} orders
                       </span>
-                      <span className="text-[#0D9488] font-medium">
+                      <span className="text-[#6096B4] font-medium">
                         {formatCurrency(totalSpent)}
                       </span>
                     </div>
@@ -1536,7 +1536,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                       <tr key={item.id} className={isLow ? (isDark ? 'bg-red-900/20' : 'bg-red-50') : ''}>
                         <td className={`px-4 py-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                           <div className="flex items-center gap-2">
-                            <Package className={`w-4 h-4 ${isLow ? 'text-red-500' : t('tools.trophyShop.text0d9488', 'text-[#0D9488]')}`} />
+                            <Package className={`w-4 h-4 ${isLow ? 'text-red-500' : t('tools.trophyShop.text0d9488', 'text-[#6096B4]')}`} />
                             <div>
                               <p className="font-medium">{item.name}</p>
                               <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{item.type}</p>
@@ -1582,7 +1582,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                               onClick={() => handleUpdateInventoryQuantity(item.id, 10)}
                               className={`p-1 rounded text-xs font-medium ${
                                 isDark
-                                  ? t('tools.trophyShop.hoverBgGray600Text', 'hover:bg-gray-600 text-[#0D9488]') : t('tools.trophyShop.hoverBgGray200Text', 'hover:bg-gray-200 text-[#0D9488]')
+                                  ? t('tools.trophyShop.hoverBgGray600Text', 'hover:bg-gray-600 text-[#6096B4]') : t('tools.trophyShop.hoverBgGray200Text', 'hover:bg-gray-200 text-[#6096B4]')
                               }`}
                             >
                               +10
@@ -1800,7 +1800,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                         </p>
                       </div>
                       <div className={`px-2 py-1 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                        <span className="text-[#0D9488] font-medium text-sm">{formatCurrency(totalRevenue)}</span>
+                        <span className="text-[#6096B4] font-medium text-sm">{formatCurrency(totalRevenue)}</span>
                       </div>
                     </div>
 
@@ -1823,7 +1823,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                               handleAddSeason(league.id, name, year);
                             }
                           }}
-                          className={`text-sm ${isDark ? t('tools.trophyShop.text0d9488HoverText2dd4bf', 'text-[#0D9488] hover:text-[#2DD4BF]') : t('tools.trophyShop.text0d9488HoverText0f766e', 'text-[#0D9488] hover:text-[#0F766E]')}`}
+                          className={`text-sm ${isDark ? t('tools.trophyShop.text0d9488HoverText2dd4bf', 'text-[#6096B4] hover:text-[#75AAC1]') : t('tools.trophyShop.text0d9488HoverText0f766e', 'text-[#6096B4] hover:text-[#4C7F98]')}`}
                         >
                           {t('tools.trophyShop.addSeason', '+ Add Season')}
                         </button>
@@ -1874,12 +1874,12 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4`}>
                 <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-lg bg-[#0D9488]/20">
-                    <DollarSign className="w-6 h-6 text-[#0D9488]" />
+                  <div className="p-3 rounded-lg bg-[#6096B4]/20">
+                    <DollarSign className="w-6 h-6 text-[#6096B4]" />
                   </div>
                   <div>
                     <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.trophyShop.totalRevenue', 'Total Revenue')}</p>
-                    <p className="text-2xl font-bold text-[#0D9488]">{formatCurrency(analytics.totalRevenue)}</p>
+                    <p className="text-2xl font-bold text-[#6096B4]">{formatCurrency(analytics.totalRevenue)}</p>
                   </div>
                 </div>
               </div>
@@ -1934,13 +1934,13 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                       className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}
                     >
                       <div className="flex items-center gap-3 mb-3">
-                        <Icon className="w-5 h-5 text-[#0D9488]" />
+                        <Icon className="w-5 h-5 text-[#6096B4]" />
                         <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                           {type.label}s
                         </span>
                       </div>
                       <div className="space-y-1">
-                        <p className="text-2xl font-bold text-[#0D9488]">
+                        <p className="text-2xl font-bold text-[#6096B4]">
                           {formatCurrency(data?.revenue || 0)}
                         </p>
                         <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -1967,7 +1967,7 @@ export const TrophyShopTool: React.FC<TrophyShopToolProps> = ({ uiConfig }) => {
                 </div>
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.trophyShop.revenue', 'Revenue')}</p>
-                  <p className="text-3xl font-bold text-[#0D9488]">
+                  <p className="text-3xl font-bold text-[#6096B4]">
                     {formatCurrency(analytics.thisMonthRevenue)}
                   </p>
                 </div>

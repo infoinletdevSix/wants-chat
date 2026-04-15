@@ -262,7 +262,7 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
           {/* Header */}
           <div className="flex items-center justify-between gap-3 mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Recycle className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -289,9 +289,9 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
           </div>
 
           {/* Ideal Ratio Info */}
-          <div className={`p-4 rounded-lg mb-6 ${theme === 'dark' ? 'bg-gray-700' : 'bg-green-50'} border-l-4 border-[#0D9488]`}>
+          <div className={`p-4 rounded-lg mb-6 ${theme === 'dark' ? 'bg-gray-700' : 'bg-green-50'} border-l-4 border-[#6096B4]`}>
             <div className="flex items-start gap-3">
-              <Leaf className={`w-5 h-5 mt-0.5 ${theme === 'dark' ? t('tools.compostRatio.text0d9488', 'text-[#0D9488]') : 'text-green-600'}`} />
+              <Leaf className={`w-5 h-5 mt-0.5 ${theme === 'dark' ? t('tools.compostRatio.text0d9488', 'text-[#6096B4]') : 'text-green-600'}`} />
               <div>
                 <p className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.compostRatio.idealCNRatio25', 'Ideal C:N Ratio: 25:1 to 35:1 (Target: 30:1)')}
@@ -316,7 +316,7 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.compostRatio.selectAMaterial', 'Select a material...')}</option>
                 <optgroup label="Green Materials (Nitrogen-rich)">
@@ -345,12 +345,12 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 onClick={addMaterial}
                 disabled={!selectedMaterial || !weight}
-                className="px-4 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.compostRatio.add', 'Add')}
@@ -499,7 +499,7 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
                 </div>
                 <div className={`p-3 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.compostRatio.targetRatio', 'Target Ratio')}</p>
-                  <p className={`text-xl font-bold text-[#0D9488]`}>30:1</p>
+                  <p className={`text-xl font-bold text-[#6096B4]`}>30:1</p>
                 </div>
               </div>
 
@@ -512,7 +512,7 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
                   <ul className={`space-y-1 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                     {suggestions.map((suggestion, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="text-[#0D9488]">*</span>
+                        <span className="text-[#6096B4]">*</span>
                         {suggestion}
                       </li>
                     ))}
@@ -608,31 +608,31 @@ export function CompostRatioTool({ uiConfig }: CompostRatioToolProps) {
             <div className={`mt-3 p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <ul className={`space-y-3 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">1.</span>
+                  <span className="text-[#6096B4] font-bold">1.</span>
                   <span><strong>{t('tools.compostRatio.balanceIsKey', 'Balance is key:')}</strong> {t('tools.compostRatio.aimForRoughly23', 'Aim for roughly 2-3 parts brown to 1 part green by volume (not weight).')}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">2.</span>
+                  <span className="text-[#6096B4] font-bold">2.</span>
                   <span><strong>{t('tools.compostRatio.moisture', 'Moisture:')}</strong> {t('tools.compostRatio.keepYourCompostAsMoist', 'Keep your compost as moist as a wrung-out sponge. Too dry slows decomposition, too wet causes odor.')}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">3.</span>
+                  <span className="text-[#6096B4] font-bold">3.</span>
                   <span><strong>{t('tools.compostRatio.aeration', 'Aeration:')}</strong> {t('tools.compostRatio.turnYourPileEvery1', 'Turn your pile every 1-2 weeks to introduce oxygen and speed up decomposition.')}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">4.</span>
+                  <span className="text-[#6096B4] font-bold">4.</span>
                   <span><strong>{t('tools.compostRatio.sizeMatters', 'Size matters:')}</strong> {t('tools.compostRatio.chopOrShredLargerMaterials', 'Chop or shred larger materials to increase surface area and speed breakdown.')}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">5.</span>
+                  <span className="text-[#6096B4] font-bold">5.</span>
                   <span><strong>{t('tools.compostRatio.avoid', 'Avoid:')}</strong> {t('tools.compostRatio.meatDairyDiseasedPlantsPet', 'Meat, dairy, diseased plants, pet waste, and treated wood - these can cause problems.')}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">6.</span>
+                  <span className="text-[#6096B4] font-bold">6.</span>
                   <span><strong>{t('tools.compostRatio.temperature', 'Temperature:')}</strong> {t('tools.compostRatio.aHotCompostPile130', 'A hot compost pile (130-160F) kills weed seeds and pathogens faster.')}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#0D9488] font-bold">7.</span>
+                  <span className="text-[#6096B4] font-bold">7.</span>
                   <span><strong>{t('tools.compostRatio.patience', 'Patience:')}</strong> {t('tools.compostRatio.finishedCompostTakes26', 'Finished compost takes 2-6 months depending on conditions and method.')}</span>
                 </li>
               </ul>

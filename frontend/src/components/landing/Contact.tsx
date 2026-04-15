@@ -81,10 +81,10 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <section id="contact" className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <div
-        className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px] animate-pulse"
+        className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px] animate-pulse"
         style={{
           animation: 'pulse 10s ease-in-out infinite',
         }}
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <SupportAgentIcon className="h-4 w-4 text-teal-400" />
+            <SupportAgentIcon className="h-4 w-4 text-primary-400" />
             <span className="text-sm font-medium text-white">Get In Touch</span>
           </div>
 
@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                     placeholder="John Doe"
                   />
                 </div>
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -168,14 +168,14 @@ const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                 >
-                  <option value="" className="bg-teal-800/90">Select a subject</option>
-                  <option value="general" className="bg-teal-800/90">General Inquiry</option>
-                  <option value="support" className="bg-teal-800/90">Technical Support</option>
-                  <option value="billing" className="bg-teal-800/90">Billing Question</option>
-                  <option value="partnership" className="bg-teal-800/90">Partnership</option>
-                  <option value="feedback" className="bg-teal-800/90">Feedback</option>
+                  <option value="" className="bg-primary-800/90">Select a subject</option>
+                  <option value="general" className="bg-primary-800/90">General Inquiry</option>
+                  <option value="support" className="bg-primary-800/90">Technical Support</option>
+                  <option value="billing" className="bg-primary-800/90">Billing Question</option>
+                  <option value="partnership" className="bg-primary-800/90">Partnership</option>
+                  <option value="feedback" className="bg-primary-800/90">Feedback</option>
                 </select>
               </div>
 
@@ -190,12 +190,12 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent resize-none"
+                  className="w-full px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent resize-none"
                   placeholder="Tell us how we can help..."
                 />
               </div>
 
-              <Button type="submit" className="w-full group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+              <Button type="submit" className="w-full group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
                 Send Message
                 <SendIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -217,8 +217,8 @@ const Contact: React.FC = () => {
                       href={info.link}
                       className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/10 transition-colors"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-5 w-5 text-teal-400" />
+                      <div className="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-5 w-5 text-primary-400" />
                       </div>
                       <div>
                         <p className="font-medium text-sm text-white">{info.title}</p>
@@ -247,7 +247,7 @@ const Contact: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="w-12 h-12 rounded-lg bg-white/10 hover:bg-teal-500 hover:text-white flex items-center justify-center transition-colors text-white"
+                      className="w-12 h-12 rounded-lg bg-white/10 hover:bg-primary-500 hover:text-white flex items-center justify-center transition-colors text-white"
                     >
                       <Icon className="h-5 w-5" />
                     </a>

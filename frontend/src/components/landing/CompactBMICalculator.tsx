@@ -125,7 +125,7 @@ const CompactBMICalculator: React.FC = () => {
     <Card className="p-4 h-full flex flex-col bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300">
       <div className="mb-3">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 bg-gradient-to-br from-[#47bdff] to-teal-500 rounded-lg">
+          <div className="p-1.5 bg-gradient-to-br from-[#47bdff] to-primary-500 rounded-lg">
             <Activity className="h-4 w-4 text-white" />
           </div>
           <h3 className="text-base font-bold text-white">BMI Calculator</h3>
@@ -139,7 +139,7 @@ const CompactBMICalculator: React.FC = () => {
           onClick={() => setUnit('metric')}
           className={`flex-1 h-10 text-sm font-bold transition-all rounded-lg ${
             unit === 'metric'
-              ? 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg'
+              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg'
               : 'bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/20 text-white/60'
           }`}
         >
@@ -150,7 +150,7 @@ const CompactBMICalculator: React.FC = () => {
           onClick={() => setUnit('imperial')}
           className={`flex-1 h-10 text-sm font-bold transition-all rounded-lg ${
             unit === 'imperial'
-              ? 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg'
+              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg'
               : 'bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/20 text-white/60'
           }`}
         >
@@ -189,7 +189,7 @@ const CompactBMICalculator: React.FC = () => {
       <Button
         onClick={calculateBMI}
         disabled={isCalculating || weight <= 0 || height <= 0}
-        className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all mb-3 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all mb-3 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isCalculating ? (
           <>
@@ -290,7 +290,7 @@ const CompactBMICalculator: React.FC = () => {
 
       {/* CTA Button - Moved to bottom */}
       <Button
-        className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
+        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
         onClick={() => navigate(isAuthenticated ? '/dashboard' : '/login')}
       >
         <span className="mr-2 text-xl">🚀</span>

@@ -91,7 +91,7 @@ const PhotoProgress: React.FC<PhotoProgressProps> = ({
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
               size="sm"
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
             >
               <Icon path={mdiCamera} size={0.8} className="mr-2" />
               Add Photo
@@ -175,7 +175,7 @@ const PhotoProgress: React.FC<PhotoProgressProps> = ({
               <SelectTrigger id="photo-type" className="w-full bg-white/10 border-white/20 text-white">
                 <SelectValue placeholder="Select photo type" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border-primary-400/30">
                 <SelectItem value="front" className="text-white hover:bg-white/10">Front View</SelectItem>
                 <SelectItem value="side" className="text-white hover:bg-white/10">Side View</SelectItem>
                 <SelectItem value="back" className="text-white hover:bg-white/10">Back View</SelectItem>
@@ -195,7 +195,7 @@ const PhotoProgress: React.FC<PhotoProgressProps> = ({
             <Button
               onClick={handleUpload}
               disabled={isUploading || !selectedFile}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
             >
               {isUploading ? 'Uploading...' : 'Upload'}
             </Button>

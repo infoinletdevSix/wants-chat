@@ -188,7 +188,7 @@ const VocabularyFlashcard: React.FC<VocabularyFlashcardProps> = ({
         >
           Previous Card
         </Button>
-        <Button onClick={nextCard} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+        <Button onClick={nextCard} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
           Next Card
         </Button>
       </div>

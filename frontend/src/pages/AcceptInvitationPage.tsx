@@ -269,7 +269,7 @@ export const AcceptInvitationPage: React.FC = () => {
           <Loader2
             className={cn(
               'h-12 w-12 animate-spin mx-auto mb-4',
-              theme === 'dark' ? 'text-teal-400' : 'text-teal-600'
+              theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
             )}
           />
           <p className={cn('text-sm', theme === 'dark' ? 'text-slate-400' : 'text-slate-600')}>
@@ -310,8 +310,8 @@ export const AcceptInvitationPage: React.FC = () => {
               'w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center',
               isAlreadyAccepted
                 ? theme === 'dark'
-                  ? 'bg-teal-500/20'
-                  : 'bg-teal-100'
+                  ? 'bg-primary-500/20'
+                  : 'bg-primary-100'
                 : isExpired
                 ? theme === 'dark'
                   ? 'bg-amber-500/20'
@@ -325,7 +325,7 @@ export const AcceptInvitationPage: React.FC = () => {
               <CheckCircle
                 className={cn(
                   'w-8 h-8',
-                  theme === 'dark' ? 'text-teal-400' : 'text-teal-600'
+                  theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
                 )}
               />
             ) : isExpired ? (
@@ -376,7 +376,7 @@ export const AcceptInvitationPage: React.FC = () => {
             )}
             <button
               onClick={() => navigate('/')}
-              className="px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
+              className="px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
             >
               Go to Home
             </button>
@@ -439,7 +439,7 @@ export const AcceptInvitationPage: React.FC = () => {
                 if (token) localStorage.setItem('pendingInvitation', token);
                 navigate(`/login?redirect=/invite/${token}`);
               }}
-              className="px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors flex items-center justify-center gap-2"
             >
               <LogIn className="w-5 h-5" />
               Switch Account
@@ -483,12 +483,12 @@ export const AcceptInvitationPage: React.FC = () => {
         )}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6 text-center">
+        <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6 text-center">
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
             <Mail className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-white mb-1">You're Invited!</h1>
-          <p className="text-teal-100">Join your team on Wants</p>
+          <p className="text-primary-100">Join your team on Wants</p>
         </div>
 
         {/* Content */}
@@ -504,7 +504,7 @@ export const AcceptInvitationPage: React.FC = () => {
               <div
                 className={cn(
                   'w-10 h-10 rounded-lg flex items-center justify-center',
-                  theme === 'dark' ? 'bg-teal-500/20' : 'bg-teal-100'
+                  theme === 'dark' ? 'bg-primary-500/20' : 'bg-primary-100'
                 )}
               >
                 {invitation?.organization_logo ? (
@@ -517,7 +517,7 @@ export const AcceptInvitationPage: React.FC = () => {
                   <Building2
                     className={cn(
                       'w-5 h-5',
-                      theme === 'dark' ? 'text-teal-400' : 'text-teal-600'
+                      theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
                     )}
                   />
                 )}
@@ -684,7 +684,7 @@ export const AcceptInvitationPage: React.FC = () => {
               onClick={handleAccept}
               disabled={accepting || declining}
               className={cn(
-                'flex-1 px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-all flex items-center justify-center gap-2',
+                'flex-1 px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-all flex items-center justify-center gap-2',
                 (accepting || declining) && 'opacity-50 cursor-not-allowed'
               )}
             >

@@ -369,9 +369,9 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.photoSession.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.photoSession.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -379,7 +379,7 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -450,7 +450,7 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`flex-1 px-4 py-3 text-sm font-medium capitalize ${
                   activeTab === tab
-                    ? 'border-b-2 border-[#0D9488] text-[#0D9488]'
+                    ? 'border-b-2 border-[#6096B4] text-[#6096B4]'
                     : theme === 'dark' ? 'text-gray-400 hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -467,7 +467,7 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <button
                     onClick={() => setShowSessionForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.photoSession.newSession', 'New Session')}
@@ -606,7 +606,7 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
                 <div className="flex justify-between mb-6">
                   <button
                     onClick={() => setShowClientForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.photoSession.addClient', 'Add Client')}
@@ -945,7 +945,7 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
                 </button>
                 <button
                   onClick={editingSession ? handleUpdateSession : handleAddSession}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {editingSession ? t('tools.photoSession.updateSession', 'Update Session') : t('tools.photoSession.createSession', 'Create Session')}
                 </button>
@@ -1046,7 +1046,7 @@ export const PhotoSessionTool: React.FC<PhotoSessionToolProps> = ({
                 </button>
                 <button
                   onClick={handleAddClient}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.photoSession.addClient2', 'Add Client')}
                 </button>

@@ -228,9 +228,9 @@ export const WifiQrGeneratorTool: React.FC<WifiQrGeneratorToolProps> = ({ uiConf
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.wiFiQRGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.wiFiQRGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -343,7 +343,7 @@ export const WifiQrGeneratorTool: React.FC<WifiQrGeneratorToolProps> = ({ uiConf
           <button
             onClick={handleSave}
             disabled={isSaving}
-            className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSaving ? (
               <>

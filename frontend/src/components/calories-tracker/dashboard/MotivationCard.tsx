@@ -41,7 +41,7 @@ const MotivationCard: React.FC<MotivationCardProps> = ({
         <Button
           size="sm"
           onClick={onLogFood}
-          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-primary-foreground"
+          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
         >
           Log Food
         </Button>

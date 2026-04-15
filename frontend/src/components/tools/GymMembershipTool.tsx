@@ -354,9 +354,9 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.gymMembership.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.gymMembership.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -364,7 +364,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Dumbbell className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -420,7 +420,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -478,7 +478,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -488,7 +488,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.gymMembership.allStatuses', 'All Statuses')}</option>
                   <option value="active">{t('tools.gymMembership.active', 'Active')}</option>
@@ -503,7 +503,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.gymMembership.allTypes', 'All Types')}</option>
                   {MEMBERSHIP_TYPES.map(type => (
@@ -513,7 +513,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
               </div>
               <button
                 onClick={() => setShowMemberForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.gymMembership.addMember', 'Add Member')}
@@ -548,7 +548,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -566,7 +566,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -584,7 +584,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -602,7 +602,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -619,7 +619,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {MEMBERSHIP_TYPES.map(type => (
                           <option key={type.type} value={type.type}>
@@ -643,7 +643,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div className="md:col-span-2">
@@ -661,7 +661,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -676,7 +676,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                     </button>
                     <button
                       onClick={editingMember ? updateMember : addMember}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                     >
                       <Save className="w-4 h-4 inline mr-2" />
                       {editingMember ? t('tools.gymMembership.update', 'Update') : t('tools.gymMembership.add', 'Add')} Member
@@ -859,7 +859,7 @@ export const GymMembershipTool: React.FC<GymMembershipToolProps> = ({ uiConfig }
                             Expires: {formatDate(member.endDate)}
                           </p>
                         </div>
-                        <button className="px-3 py-1 bg-[#0D9488] text-white text-sm rounded-lg hover:bg-[#0F766E]">
+                        <button className="px-3 py-1 bg-[#6096B4] text-white text-sm rounded-lg hover:bg-[#4C7F98]">
                           {t('tools.gymMembership.renew', 'Renew')}
                         </button>
                       </div>

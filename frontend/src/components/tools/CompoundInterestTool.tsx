@@ -120,9 +120,9 @@ export const CompoundInterestTool: React.FC<CompoundInterestToolProps> = ({ uiCo
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-6 py-3 bg-[#0D9488]/10 border-b border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.compoundInterest.prefilled', 'Values loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-6 py-3 bg-[#6096B4]/10 border-b border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.compoundInterest.prefilled', 'Values loaded from AI response')}</span>
         </div>
       )}
       {/* Header */}

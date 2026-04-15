@@ -210,7 +210,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
         <Card className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
           <CardHeader className="border-b border-white/10">
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <div className="p-2 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500">
+              <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500 to-cyan-500">
                 <UserCog className="h-5 w-5 text-white" />
               </div>
               {isEditMode ? 'Edit Your Medical Profile' : 'Complete Your Medical Profile'}
@@ -227,7 +227,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
               {/* Personal Information Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-4">
-                  <UserCog className="h-5 w-5 text-teal-400" />
+                  <UserCog className="h-5 w-5 text-primary-400" />
                   Personal Information
                 </h3>
 
@@ -327,7 +327,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
               {/* Medical & Emergency Information Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-4">
-                  <Phone className="h-5 w-5 text-teal-400" />
+                  <Phone className="h-5 w-5 text-primary-400" />
                   Medical & Emergency Information
                 </h3>
 
@@ -443,7 +443,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
             {/* Fitness Information Section */}
             <div className="space-y-4 pt-6 border-t border-white/10">
               <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-4">
-                <Activity className="h-5 w-5 text-teal-400" />
+                <Activity className="h-5 w-5 text-primary-400" />
                 Fitness Information
               </h3>
 
@@ -490,7 +490,7 @@ const PersonalMedicalInfoForm: React.FC = () => {
               )}
               <Button
                 onClick={handleSave}
-                className={`h-12 px-6 rounded-md font-medium bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white ${isEditMode ? 'ml-auto' : ''}`}
+                className={`h-12 px-6 rounded-md font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white ${isEditMode ? 'ml-auto' : ''}`}
                 disabled={createProfileMutation.loading || updateProfileMutation.loading}
               >
                 {(createProfileMutation.loading || updateProfileMutation.loading)
@@ -504,10 +504,10 @@ const PersonalMedicalInfoForm: React.FC = () => {
           </CardContent>
         </Card>
 
-        <div className="mt-8 p-5 bg-teal-500/10 border border-teal-500/30 rounded-xl">
+        <div className="mt-8 p-5 bg-primary-500/10 border border-primary-500/30 rounded-xl">
           <div className="flex gap-3">
             <div className="flex-shrink-0">
-              <Phone className="h-6 w-6 text-teal-400 mt-0.5" />
+              <Phone className="h-6 w-6 text-primary-400 mt-0.5" />
             </div>
             <div>
               <h4 className="text-sm font-semibold text-white">Why we need emergency contact</h4>

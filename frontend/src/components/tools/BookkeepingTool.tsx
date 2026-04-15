@@ -119,7 +119,7 @@ export const BookkeepingTool: React.FC<BookkeepingToolProps> = ({ uiConfig }) =>
 
   const inputClass = `w-full p-3 rounded-lg border ${
     isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:ring-2 focus:ring-[#6096B4]`;
 
   const cardClass = `p-4 rounded-lg ${isDark ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
@@ -127,7 +127,7 @@ export const BookkeepingTool: React.FC<BookkeepingToolProps> = ({ uiConfig }) =>
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -136,14 +136,14 @@ export const BookkeepingTool: React.FC<BookkeepingToolProps> = ({ uiConfig }) =>
     <div className="space-y-6">
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.bookkeeping.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.bookkeeping.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <BookOpen className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -171,7 +171,7 @@ export const BookkeepingTool: React.FC<BookkeepingToolProps> = ({ uiConfig }) =>
           </div>
         </div>
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><DollarSign className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><DollarSign className="w-6 h-6 text-[#6096B4]" /></div>
           <div>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.bookkeeping.balance', 'Balance')}</p>
             <p className={`text-xl font-bold ${balance >= 0 ? 'text-green-500' : 'text-red-500'}`}>${balance.toFixed(2)}</p>
@@ -213,7 +213,7 @@ export const BookkeepingTool: React.FC<BookkeepingToolProps> = ({ uiConfig }) =>
             theme={isDark ? 'dark' : 'light'}
           />
           <button onClick={() => setShowForm(!showForm)}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
             <Plus className="w-5 h-5" />Add Transaction
           </button>
         </div>
@@ -239,7 +239,7 @@ export const BookkeepingTool: React.FC<BookkeepingToolProps> = ({ uiConfig }) =>
               {categories[formData.type].map(c => <option key={c} value={c}>{c}</option>)}
             </select>
             <button onClick={addTransaction} disabled={!formData.description || !formData.amount}
-              className="px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">
+              className="px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">
               {t('tools.bookkeeping.save', 'Save')}
             </button>
           </div>

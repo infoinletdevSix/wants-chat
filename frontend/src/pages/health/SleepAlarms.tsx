@@ -247,7 +247,7 @@ const SleepAlarms: React.FC = () => {
               setEditingAlarm(null);
               setShowDialog(true);
             }}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add Alarm
@@ -322,7 +322,7 @@ const SleepAlarms: React.FC = () => {
                             {alarm.name || 'Smart Alarm'}
                           </h3>
                           {alarm.isSmartAlarm && (
-                            <Badge variant="secondary" className="text-xs bg-teal-500/20 text-teal-300">
+                            <Badge variant="secondary" className="text-xs bg-primary-500/20 text-primary-300">
                               <Settings2 className="w-3 h-3 mr-1" />
                               Smart
                             </Badge>
@@ -358,9 +358,9 @@ const SleepAlarms: React.FC = () => {
                         </div>
 
                         {alarm.optimalWakeTime && (
-                          <div className="mt-3 p-2 rounded-lg bg-teal-500/10 border border-teal-500/30 inline-flex items-center gap-2">
-                            <Clock className="w-4 h-4 text-teal-400" />
-                            <span className="text-sm text-teal-300">
+                          <div className="mt-3 p-2 rounded-lg bg-primary-500/10 border border-primary-500/30 inline-flex items-center gap-2">
+                            <Clock className="w-4 h-4 text-primary-400" />
+                            <span className="text-sm text-primary-300">
                               Optimal: <strong>{formatTime(alarm.optimalWakeTime)}</strong>
                             </span>
                           </div>
@@ -415,7 +415,7 @@ const SleepAlarms: React.FC = () => {
               </p>
               <Button
                 onClick={() => setShowDialog(true)}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create Your First Alarm
@@ -428,14 +428,14 @@ const SleepAlarms: React.FC = () => {
         <Card className="mt-6">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Settings2 className="w-5 h-5 text-teal-400" />
+              <Settings2 className="w-5 h-5 text-primary-400" />
               How Smart Alarms Work
             </CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-xs font-bold">
+                <span className="w-6 h-6 rounded-full bg-primary-500/20 text-primary-400 flex items-center justify-center text-xs font-bold">
                   1
                 </span>
                 <span>
@@ -443,7 +443,7 @@ const SleepAlarms: React.FC = () => {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-xs font-bold">
+                <span className="w-6 h-6 rounded-full bg-primary-500/20 text-primary-400 flex items-center justify-center text-xs font-bold">
                   2
                 </span>
                 <span>
@@ -451,7 +451,7 @@ const SleepAlarms: React.FC = () => {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-xs font-bold">
+                <span className="w-6 h-6 rounded-full bg-primary-500/20 text-primary-400 flex items-center justify-center text-xs font-bold">
                   3
                 </span>
                 <span>
@@ -464,7 +464,7 @@ const SleepAlarms: React.FC = () => {
 
         {/* Create/Edit Dialog */}
         <Dialog open={showDialog} onOpenChange={setShowDialog}>
-          <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto bg-teal-800/95 backdrop-blur-xl border-teal-400/30">
+          <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto bg-primary-800/95 backdrop-blur-xl border-primary-400/30">
             <DialogHeader>
               <DialogTitle className="text-white">
                 {editingAlarm ? 'Edit Alarm' : 'Create Smart Alarm'}
@@ -533,7 +533,7 @@ const SleepAlarms: React.FC = () => {
                   </Button>
                 )}
                 <Button
-                  className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500"
                   onClick={dismissAlarm}
                 >
                   <X className="w-4 h-4 mr-2" />

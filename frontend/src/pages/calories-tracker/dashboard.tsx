@@ -303,7 +303,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
           </div>
           <div className="flex gap-4">
             <div className="text-center">
-              <div className="text-2xl font-bold text-teal-400">{dailyStats.currentStreak}</div>
+              <div className="text-2xl font-bold text-primary-400">{dailyStats.currentStreak}</div>
               <div className="text-xs text-white/60">Day Streak</div>
             </div>
             <div className="text-center">
@@ -355,7 +355,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
         {/* Today's Nutrition - Most Important */}
         <GlassCard className="p-5 lg:col-span-1">
           <h3 className="text-lg font-semibold mb-4 text-white flex items-center gap-2">
-            <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
             Today's Nutrition
           </h3>
           
@@ -364,7 +364,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             <div>
               <div className="flex justify-between items-center mb-2">
                 <h4 className="text-xl font-bold text-white">Calories</h4>
-                <span className="text-sm font-medium text-teal-400">
+                <span className="text-sm font-medium text-primary-400">
                   {getRemainingCalories()} left
                 </span>
               </div>
@@ -388,7 +388,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
               <div className="mt-3">
                 <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 transition-all"
+                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 transition-all"
                     style={{
                       width: `${Math.min((dailyStats.caloriesConsumed / profile.targetCalories) * 100, 100)}%`
                     }}
@@ -422,7 +422,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-2 p-3 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-lg">
+            <div className="grid grid-cols-3 gap-2 p-3 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-lg">
               <div className="text-center">
                 <p className="text-lg font-bold text-white">{dailyStats.proteinConsumed}g</p>
                 <p className="text-xs text-white/60">Protein</p>
@@ -440,7 +440,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             {/* Action Buttons */}
             <div className="grid grid-cols-2 gap-2">
               <Button
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-10"
+                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-10"
                 onClick={() => navigate('/calories-tracker/food-search')}
               >
                 <Plus className="h-4 w-4 mr-1" />
@@ -615,7 +615,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
         <GlassCard className="p-4 cursor-pointer" onClick={() => setShowMealPlanGenerator(!showMealPlanGenerator)}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg">
                 <ChefHat className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -664,8 +664,8 @@ const CaloriesTrackerDashboard: React.FC = () => {
       <GlassCard className="p-4" gradient>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-lg">
-              <Target className="h-5 w-5 text-teal-400" />
+            <div className="p-2 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-lg">
+              <Target className="h-5 w-5 text-primary-400" />
             </div>
             <div>
               <h3 className="font-medium text-white">Keep Going!</h3>
@@ -678,7 +678,7 @@ const CaloriesTrackerDashboard: React.FC = () => {
             <Button variant="outline" size="sm" className="h-8 text-xs bg-white/10 border-white/20 text-white hover:bg-white/20" onClick={() => navigate('/calories-tracker/profile')}>
               Update Goals
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-8 text-xs" onClick={() => navigate('/calories-tracker/progress')}>
+            <Button size="sm" className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 text-xs" onClick={() => navigate('/calories-tracker/progress')}>
               View Progress
             </Button>
           </div>

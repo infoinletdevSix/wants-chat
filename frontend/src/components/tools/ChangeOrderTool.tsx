@@ -356,8 +356,8 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <FileEdit className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <FileEdit className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.changeOrder.changeOrderManagement', 'Change Order Management')}</h1>
@@ -424,13 +424,13 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
       <div className="flex gap-2 border-b border-gray-200">
         <button
           onClick={() => setActiveTab('list')}
-          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'list' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'list' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
         >
           {t('tools.changeOrder.allChangeOrders', 'All Change Orders')}
         </button>
         <button
           onClick={() => setActiveTab('create')}
-          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'create' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'create' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
         >
           {t('tools.changeOrder.newChangeOrder', 'New Change Order')}
         </button>
@@ -464,12 +464,12 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
                 <div className="p-4 cursor-pointer hover:bg-gray-50" onClick={() => setExpandedId(expandedId === co.id ? null : co.id)}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <FileEdit className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <FileEdit className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-bold text-teal-600">{co.coNumber}</span>
+                          <span className="font-bold text-primary-600">{co.coNumber}</span>
                           <h3 className="font-semibold text-gray-900">{co.title}</h3>
                         </div>
                         <p className="text-sm text-gray-500">{co.projectName}</p>
@@ -543,7 +543,7 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
                     <div className="flex gap-2">
                       <button
                         onClick={() => { setEditingCO(co); setActiveTab('edit'); }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.changeOrder.edit', 'Edit')}
@@ -592,7 +592,7 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
               <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
                 <FileEdit className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900">{t('tools.changeOrder.noChangeOrdersFound', 'No change orders found')}</h3>
-                <button onClick={() => setActiveTab('create')} className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+                <button onClick={() => setActiveTab('create')} className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
                   {t('tools.changeOrder.createChangeOrder', 'Create Change Order')}
                 </button>
               </div>
@@ -687,7 +687,7 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
               <h3 className="font-semibold text-gray-900">{t('tools.changeOrder.costBreakdown', 'Cost Breakdown')}</h3>
               <button
                 onClick={() => addLineItem(activeTab === 'edit' ? editingCO! : newCO, activeTab === 'edit' ? setEditingCO : setNewCO)}
-                className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.changeOrder.addItem', 'Add Item')}
@@ -787,7 +787,7 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
               <div className="border-t border-gray-300 pt-2 mt-2">
                 <div className="flex justify-between">
                   <span className="font-bold text-gray-900">{t('tools.changeOrder.totalChangeOrderAmount', 'Total Change Order Amount')}</span>
-                  <span className="font-bold text-xl text-teal-600">{formatCurrency(activeTab === 'edit' ? editingCO?.totalCost || 0 : newCO.totalCost || 0)}</span>
+                  <span className="font-bold text-xl text-primary-600">{formatCurrency(activeTab === 'edit' ? editingCO?.totalCost || 0 : newCO.totalCost || 0)}</span>
                 </div>
               </div>
             </div>
@@ -796,7 +796,7 @@ export const ChangeOrderTool: React.FC<ChangeOrderToolProps> = ({
           {/* Actions */}
           <div className="flex justify-end gap-3">
             <button onClick={() => { setActiveTab('list'); setEditingCO(null); }} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.changeOrder.cancel', 'Cancel')}</button>
-            <button onClick={activeTab === 'edit' ? handleUpdate : handleSave} className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+            <button onClick={activeTab === 'edit' ? handleUpdate : handleSave} className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
               <Save className="w-4 h-4" />
               {activeTab === 'edit' ? t('tools.changeOrder.update', 'Update') : t('tools.changeOrder.save', 'Save')} Change Order
             </button>

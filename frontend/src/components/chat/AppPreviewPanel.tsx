@@ -397,14 +397,14 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
               "w-20 h-20 rounded-2xl flex items-center justify-center",
               isDark ? 'bg-[#2a2a2a]' : 'bg-slate-100'
             )}>
-              <CategoryIcon className="w-10 h-10 text-[#0D9488]" />
+              <CategoryIcon className="w-10 h-10 text-[#6096B4]" />
             </div>
             {/* Spinning ring */}
             <div className="absolute -inset-2">
-              <div className="w-full h-full rounded-2xl border-2 border-[#0D9488]/30 border-t-[#0D9488] animate-spin" />
+              <div className="w-full h-full rounded-2xl border-2 border-[#6096B4]/30 border-t-[#6096B4] animate-spin" />
             </div>
             {/* Sparkle effects */}
-            <Sparkles className="absolute -top-2 -right-2 w-5 h-5 text-[#0D9488] animate-pulse" />
+            <Sparkles className="absolute -top-2 -right-2 w-5 h-5 text-[#6096B4] animate-pulse" />
           </div>
 
           {/* App name */}
@@ -422,7 +422,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
               isDark ? 'bg-[#2a2a2a]' : 'bg-slate-200'
             )}>
               <div
-                className="h-full bg-gradient-to-r from-[#0D9488] to-[#14B8A6] transition-all duration-500 ease-out"
+                className="h-full bg-gradient-to-r from-[#6096B4] to-[#75AAC1] transition-all duration-500 ease-out"
                 style={{ width: `${((buildStep + 1) / buildingStepKeys.length) * 100}%` }}
               />
             </div>
@@ -430,7 +430,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
 
           {/* Building step text */}
           <div className="flex items-center gap-2">
-            <Loader2 className="w-4 h-4 animate-spin text-[#0D9488]" />
+            <Loader2 className="w-4 h-4 animate-spin text-[#6096B4]" />
             <p className={cn(
               "text-sm",
               isDark ? 'text-slate-400' : 'text-slate-500'
@@ -447,7 +447,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-300",
                   index <= buildStep
-                    ? 'bg-[#0D9488]'
+                    ? 'bg-[#6096B4]'
                     : isDark ? 'bg-[#2a2a2a]' : 'bg-slate-200'
                 )}
               />
@@ -482,7 +482,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
               isDark ? 'bg-[#2a2a2a]' : 'bg-slate-100'
             )}
           >
-            <CategoryIcon className="w-4 h-4 text-[#0D9488]" />
+            <CategoryIcon className="w-4 h-4 text-[#6096B4]" />
           </div>
           <div className="min-w-0">
             <h3
@@ -560,7 +560,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
               className={cn(
                 "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors whitespace-nowrap",
                 activeTab === tab.id
-                  ? 'bg-[#0D9488]/10 text-[#0D9488]'
+                  ? 'bg-[#6096B4]/10 text-[#6096B4]'
                   : tab.disabled
                     ? isDark
                       ? 'text-slate-600 cursor-not-allowed'
@@ -632,7 +632,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
                 )}
               >
                 <div className="flex flex-col items-center gap-3">
-                  <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+                  <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
                   <p className={cn("text-sm", isDark ? 'text-slate-400' : 'text-slate-500')}>
                     {t('appPreview.loadingPreview')}
                   </p>
@@ -672,7 +672,7 @@ export const AppPreviewPanel: React.FC<AppPreviewPanelProps> = ({
                 )}
               >
                 <div className="flex flex-col items-center gap-3">
-                  <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+                  <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
                   <p className={cn("text-sm", isDark ? 'text-slate-400' : 'text-slate-500')}>
                     {t('appPreview.loadingApiDocs')}
                   </p>

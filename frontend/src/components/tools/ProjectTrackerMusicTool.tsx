@@ -285,14 +285,14 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
     complete: 'bg-green-500/20 text-green-400',
   };
 
-  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
   const cardClass = `p-4 rounded-xl border ${isDark ? 'bg-[#1a1a1a] border-[#333]' : 'bg-white border-gray-200'} shadow-sm`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -303,7 +303,7 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Music className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.projectTrackerMusic.musicProjectTracker', 'Music Project Tracker')}</h2>
@@ -312,9 +312,9 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.projectTrackerMusic.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.projectTrackerMusic.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
@@ -322,8 +322,8 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
       <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
         <div className={cardClass}>
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <FolderOpen className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <FolderOpen className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.projectTrackerMusic.total', 'Total')}</p>
@@ -443,7 +443,7 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
           />
           <button
             onClick={() => { setShowForm(!showForm); setEditingId(null); setFormData(emptyForm); }}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
           >
             <Plus className="w-5 h-5" />
             {t('tools.projectTrackerMusic.newProject', 'New Project')}
@@ -642,7 +642,7 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
               <button
                 onClick={addTrack}
                 disabled={!newTrack.name}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50"
               >
                 <Plus className="w-5 h-5" />
               </button>
@@ -681,7 +681,7 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
             <button
               onClick={saveProject}
               disabled={!formData.title || !formData.artist}
-              className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {editingId ? t('tools.projectTrackerMusic.updateProject', 'Update Project') : t('tools.projectTrackerMusic.saveProject', 'Save Project')}
             </button>
@@ -703,7 +703,7 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
             <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.projectTrackerMusic.noProjectsFound', 'No projects found')}</p>
             <button
               onClick={() => setShowForm(true)}
-              className="mt-4 text-[#0D9488] hover:underline"
+              className="mt-4 text-[#6096B4] hover:underline"
             >
               {t('tools.projectTrackerMusic.createYourFirstProject', 'Create your first project')}
             </button>
@@ -744,7 +744,7 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
                     </div>
                     <div className={`h-2 rounded-full ${isDark ? 'bg-[#252525]' : 'bg-gray-200'}`}>
                       <div
-                        className="h-full rounded-full bg-[#0D9488] transition-all"
+                        className="h-full rounded-full bg-[#6096B4] transition-all"
                         style={{ width: `${getProjectProgress(project)}%` }}
                       />
                     </div>
@@ -792,13 +792,13 @@ export const ProjectTrackerMusicTool: React.FC<ProjectTrackerMusicToolProps> = (
                     onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
                     className={`p-2 rounded-lg ${isDark ? 'hover:bg-[#252525]' : 'hover:bg-gray-100'}`}
                   >
-                    {selectedProject === project.id ? <Pause className="w-4 h-4 text-[#0D9488]" /> : <Play className="w-4 h-4 text-[#0D9488]" />}
+                    {selectedProject === project.id ? <Pause className="w-4 h-4 text-[#6096B4]" /> : <Play className="w-4 h-4 text-[#6096B4]" />}
                   </button>
                   <button
                     onClick={() => handleEdit(project)}
                     className={`p-2 rounded-lg ${isDark ? 'hover:bg-[#252525]' : 'hover:bg-gray-100'}`}
                   >
-                    <Edit2 className="w-4 h-4 text-[#0D9488]" />
+                    <Edit2 className="w-4 h-4 text-[#6096B4]" />
                   </button>
                   <button
                     onClick={() => deleteItem(project.id)}

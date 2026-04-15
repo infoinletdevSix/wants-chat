@@ -77,10 +77,10 @@ Total: $${calculations.total.toFixed(2)}`;
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Receipt className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Receipt className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.salesTaxCalculator.salesTaxCalculator', 'Sales Tax Calculator')}</h3>
@@ -91,9 +91,9 @@ Total: $${calculations.total.toFixed(2)}`;
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.salesTaxCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.salesTaxCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -147,7 +147,7 @@ Total: $${calculations.total.toFixed(2)}`;
                 onClick={() => setTaxRate(item.rate.toString())}
                 className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                   parseFloat(taxRate) === item.rate
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -160,15 +160,15 @@ Total: $${calculations.total.toFixed(2)}`;
         </div>
 
         {/* Results */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-between mb-4">
-            <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
               {t('tools.salesTaxCalculator.taxBreakdown', 'Tax Breakdown')}
             </h4>
             <button
               onClick={handleCopy}
               className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
               }`}
             >
               {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -187,14 +187,14 @@ Total: $${calculations.total.toFixed(2)}`;
               <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>
                 Tax ({calculations.taxRate}%)
               </span>
-              <span className={`text-lg font-medium text-teal-500`}>
+              <span className={`text-lg font-medium text-primary-500`}>
                 +${calculations.taxAmount.toFixed(2)}
               </span>
             </div>
-            <div className={`pt-4 border-t ${isDark ? 'border-gray-700' : 'border-teal-200'}`}>
+            <div className={`pt-4 border-t ${isDark ? 'border-gray-700' : 'border-primary-200'}`}>
               <div className="flex justify-between items-center">
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.salesTaxCalculator.total', 'Total')}</span>
-                <span className={`text-3xl font-bold text-teal-500`}>
+                <span className={`text-3xl font-bold text-primary-500`}>
                   ${calculations.total.toFixed(2)}
                 </span>
               </div>

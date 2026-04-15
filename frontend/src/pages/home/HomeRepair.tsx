@@ -22,7 +22,7 @@ const CATEGORIES = [
   { id: 'electrical', name: 'Electrical', icon: Zap, color: 'from-yellow-500 to-orange-500' },
   { id: 'carpentry', name: 'Carpentry', icon: Home, color: 'from-amber-500 to-orange-500' },
   { id: 'hvac', name: 'HVAC', icon: Wind, color: 'from-cyan-500 to-blue-500' },
-  { id: 'general', name: 'General', icon: Wrench, color: 'from-teal-500 to-cyan-500' },
+  { id: 'general', name: 'General', icon: Wrench, color: 'from-primary-500 to-cyan-500' },
 ];
 
 const HomeRepair: React.FC = () => {
@@ -154,7 +154,7 @@ const HomeRepair: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl mb-4">
             <Wrench className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">DIY Home Repair</h1>
@@ -171,12 +171,12 @@ const HomeRepair: React.FC = () => {
                 placeholder="Search repair guides..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-teal-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-teal-500"
+                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-primary-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-500"
               />
             </div>
             <button
               onClick={() => setShowAddModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-5 h-5" />
               Add Guide
@@ -189,7 +189,7 @@ const HomeRepair: React.FC = () => {
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-xl font-medium transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -223,7 +223,7 @@ const HomeRepair: React.FC = () => {
               <p className="text-gray-500">No repair guides found</p>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="mt-4 px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
               >
                 Create Your First Guide
               </button>
@@ -236,12 +236,12 @@ const HomeRepair: React.FC = () => {
               return (
                 <div
                   key={guide.id}
-                  className={`bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 p-6 hover:border-teal-500/50 transition-all ${
+                  className={`bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6 hover:border-primary-500/50 transition-all ${
                     guide.completed ? 'opacity-75' : ''
                   }`}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-teal-500 to-cyan-500'}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-primary-500 to-cyan-500'}`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex gap-2">
@@ -309,7 +309,7 @@ const HomeRepair: React.FC = () => {
                         </p>
                       ))}
                       {guide.steps.length > 2 && (
-                        <p className="text-sm text-teal-400">+{guide.steps.length - 2} more steps</p>
+                        <p className="text-sm text-primary-400">+{guide.steps.length - 2} more steps</p>
                       )}
                     </div>
                   </div>
@@ -328,7 +328,7 @@ const HomeRepair: React.FC = () => {
         {/* Add/Edit Modal */}
         {showAddModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <div className="bg-slate-800 rounded-2xl border border-teal-500/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-slate-800 rounded-2xl border border-primary-500/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
               <div className="p-6 border-b border-slate-700">
                 <h2 className="text-2xl font-bold text-white">
                   {editingGuide ? 'Edit Repair Guide' : 'Add Repair Guide'}
@@ -341,7 +341,7 @@ const HomeRepair: React.FC = () => {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     required
                   >
                     {CATEGORIES.map(cat => (
@@ -356,7 +356,7 @@ const HomeRepair: React.FC = () => {
                     type="text"
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     placeholder="e.g., Fix Leaky Faucet"
                     required
                   />
@@ -368,7 +368,7 @@ const HomeRepair: React.FC = () => {
                     <select
                       value={formData.difficulty}
                       onChange={(e) => setFormData({ ...formData, difficulty: e.target.value as any })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       required
                     >
                       <option value="Easy">Easy</option>
@@ -383,7 +383,7 @@ const HomeRepair: React.FC = () => {
                       type="text"
                       value={formData.estimatedTime}
                       onChange={(e) => setFormData({ ...formData, estimatedTime: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       placeholder="e.g., 30 mins"
                       required
                     />
@@ -396,7 +396,7 @@ const HomeRepair: React.FC = () => {
                     type="text"
                     value={formData.tools}
                     onChange={(e) => setFormData({ ...formData, tools: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     placeholder="e.g., Wrench, Screwdriver, Pliers"
                     required
                   />
@@ -407,7 +407,7 @@ const HomeRepair: React.FC = () => {
                   <textarea
                     value={formData.steps}
                     onChange={(e) => setFormData({ ...formData, steps: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500 min-h-[150px]"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500 min-h-[150px]"
                     placeholder="Enter each step on a new line..."
                     required
                   />
@@ -418,7 +418,7 @@ const HomeRepair: React.FC = () => {
                   <textarea
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     placeholder="Additional tips or warnings..."
                   />
                 </div>
@@ -433,7 +433,7 @@ const HomeRepair: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
                   >
                     {editingGuide ? 'Update Guide' : 'Add Guide'}
                   </button>

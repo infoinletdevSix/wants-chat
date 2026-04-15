@@ -15,8 +15,8 @@ const showcaseSlides = [
     description: 'Not just answers — Wants executes tasks, builds apps, analyzes data, and helps you get real work done.',
     icon: MessageSquare,
     features: ['Natural Conversations', 'Task Execution', 'Context Awareness', 'Multi-turn Memory'],
-    gradient: 'from-teal-500 via-cyan-500 to-blue-500',
-    bgGradient: 'from-slate-900 via-teal-900/50 to-slate-900',
+    gradient: 'from-primary-500 via-cyan-500 to-blue-500',
+    bgGradient: 'from-slate-900 via-primary-900/50 to-slate-900',
   },
   {
     id: 'app-builder',
@@ -35,7 +35,7 @@ const showcaseSlides = [
     description: 'Upload any data and get instant visualizations, SQL queries, and actionable insights.',
     icon: BarChart3,
     features: ['Auto Visualizations', 'SQL Generation', 'Pattern Detection', 'Export Reports'],
-    gradient: 'from-emerald-500 via-green-500 to-teal-500',
+    gradient: 'from-emerald-500 via-green-500 to-primary-500',
     bgGradient: 'from-slate-900 via-emerald-900/30 to-slate-900',
   },
   {
@@ -105,8 +105,8 @@ const showcaseSlides = [
     description: 'Automate complex workflows by chaining multiple actions together with natural language.',
     icon: Workflow,
     features: ['Multi-Step Chains', 'Conditional Logic', 'Scheduled Tasks', 'Integrations'],
-    gradient: 'from-teal-500 via-emerald-500 to-cyan-500',
-    bgGradient: 'from-slate-900 via-teal-900/30 to-slate-900',
+    gradient: 'from-primary-500 via-emerald-500 to-cyan-500',
+    bgGradient: 'from-slate-900 via-primary-900/30 to-slate-900',
   },
   {
     id: 'web',
@@ -115,7 +115,7 @@ const showcaseSlides = [
     description: 'Take screenshots, summarize web pages, extract data from URLs, and browse intelligently.',
     icon: Globe,
     features: ['Page Screenshots', 'Content Summarization', 'Data Extraction', 'Link Analysis'],
-    gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+    gradient: 'from-blue-500 via-cyan-500 to-primary-500',
     bgGradient: 'from-slate-900 via-blue-900/30 to-slate-900',
   },
 ];

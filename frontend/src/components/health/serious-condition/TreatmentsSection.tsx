@@ -32,10 +32,10 @@ const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
   };
 
   return (
-    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <div className="p-6 pb-2">
         <h3 className="flex items-center gap-3 text-xl font-bold text-white">
-          <LocalHospital className="h-6 w-6 text-teal-400" />
+          <LocalHospital className="h-6 w-6 text-primary-400" />
           Treatments
         </h3>
         <p className="text-base text-white/60 mt-1">
@@ -44,9 +44,9 @@ const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
       </div>
       <div className="p-6 pt-4 space-y-6">
         {/* Add Treatment Form */}
-        <div className="p-5 border-2 border-dashed border-teal-500/30 rounded-xl bg-teal-500/5">
+        <div className="p-5 border-2 border-dashed border-primary-500/30 rounded-xl bg-primary-500/5">
           <h4 className="text-sm font-semibold text-white/80 mb-4 flex items-center gap-2">
-            <Plus className="h-4 w-4 text-teal-400" />
+            <Plus className="h-4 w-4 text-primary-400" />
             Add New Treatment
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -59,7 +59,7 @@ const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
                   <SelectTrigger id="treatmentType" className="h-11 rounded-xl bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select treatment type" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {treatmentTypes.map(type => (
                       <SelectItem key={type} value={type} className="text-white hover:bg-white/10 focus:bg-white/10">{type}</SelectItem>
                     ))}
@@ -104,7 +104,7 @@ const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
                   <SelectTrigger id="treatmentFrequency" className="h-11 rounded-xl bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select frequency" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {frequencies.map(freq => (
                       <SelectItem key={freq} value={freq} className="text-white hover:bg-white/10 focus:bg-white/10">{freq}</SelectItem>
                     ))}
@@ -128,7 +128,7 @@ const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
               <Button
                 onClick={onAddTreatment}
                 disabled={!currentTreatment.type}
-                className="w-full h-11 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full h-11 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Treatment

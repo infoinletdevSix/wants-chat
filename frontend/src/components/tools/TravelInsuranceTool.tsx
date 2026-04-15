@@ -169,7 +169,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -183,9 +183,9 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.travelInsurance.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.travelInsurance.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -207,7 +207,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -224,7 +224,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -241,7 +241,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -263,7 +263,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                     onClick={() => setTripType(type.id as TripType)}
                     className={`py-2 px-3 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                       tripType === type.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -288,7 +288,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                     onClick={() => setAgeGroup(age)}
                     className={`py-2 px-3 rounded-lg text-sm transition-colors ${
                       ageGroup === age
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -316,14 +316,14 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                     onClick={() => setCoverageLevel(level.id as CoverageLevel)}
                     className={`p-4 rounded-lg text-left transition-colors ${
                       coverageLevel === level.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
                     <div className="font-medium">{level.name}</div>
-                    <div className={`text-sm ${coverageLevel === level.id ? 'text-teal-100' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <div className={`text-sm ${coverageLevel === level.id ? 'text-primary-100' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                       {level.desc}
                     </div>
                   </button>
@@ -341,7 +341,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                   type="checkbox"
                   checked={hasPreexisting}
                   onChange={(e) => setHasPreexisting(e.target.checked)}
-                  className="w-4 h-4 rounded text-[#0D9488]"
+                  className="w-4 h-4 rounded text-[#6096B4]"
                 />
                 <div>
                   <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -359,7 +359,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
                   type="checkbox"
                   checked={wantsCancelForAnyReason}
                   onChange={(e) => setWantsCancelForAnyReason(e.target.checked)}
-                  className="w-4 h-4 rounded text-[#0D9488]"
+                  className="w-4 h-4 rounded text-[#6096B4]"
                 />
                 <div>
                   <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -374,10 +374,10 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
             </div>
 
             {/* Premium Estimate */}
-            <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/30 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
+            <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/30 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
               <div className="text-center mb-4">
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.travelInsurance.estimatedPremium', 'Estimated Premium')}</div>
-                <div className="text-5xl font-bold text-[#0D9488] my-2">
+                <div className="text-5xl font-bold text-[#6096B4] my-2">
                   {formatCurrency(calculations.totalPremium)}
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -386,7 +386,7 @@ export const TravelInsuranceTool: React.FC<TravelInsuranceToolProps> = ({ uiConf
               </div>
 
               {(calculations.preexistingCost > 0 || calculations.cancelForAnyReasonCost > 0) && (
-                <div className={`pt-4 mt-4 border-t ${isDark ? 'border-teal-700' : 'border-teal-200'}`}>
+                <div className={`pt-4 mt-4 border-t ${isDark ? 'border-primary-700' : 'border-primary-200'}`}>
                   <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'} space-y-1`}>
                     <div className="flex justify-between">
                       <span>{t('tools.travelInsurance.basePremiumPerPerson', 'Base Premium (per person)')}</span>

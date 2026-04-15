@@ -359,9 +359,9 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.guardSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.guardSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -369,7 +369,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -417,7 +417,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 font-medium capitalize transition-colors ${
                   activeTab === tab
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : theme === 'dark'
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-600 hover:text-gray-800'
@@ -503,7 +503,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 </select>
                 <button
                   onClick={() => setShowShiftForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C] transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.guardSchedule.addShift', 'Add Shift')}
@@ -529,8 +529,8 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                       <div key={shift.id} className="p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-4">
-                            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                              <User className="w-5 h-5 text-[#0D9488]" />
+                            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                              <User className="w-5 h-5 text-[#6096B4]" />
                             </div>
                             <div>
                               <div className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -611,7 +611,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
               </h2>
               <button
                 onClick={() => setShowGuardForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.guardSchedule.addGuard', 'Add Guard')}
@@ -626,8 +626,8 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-[#0D9488]/10 rounded-full">
-                        <User className="w-5 h-5 text-[#0D9488]" />
+                      <div className="p-2 bg-[#6096B4]/10 rounded-full">
+                        <User className="w-5 h-5 text-[#6096B4]" />
                       </div>
                       <div>
                         <div className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -678,7 +678,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
               </h2>
               <button
                 onClick={() => setShowLocationForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.guardSchedule.addLocation', 'Add Location')}
@@ -693,8 +693,8 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-[#0D9488]/10 rounded-full">
-                        <Building2 className="w-5 h-5 text-[#0D9488]" />
+                      <div className="p-2 bg-[#6096B4]/10 rounded-full">
+                        <Building2 className="w-5 h-5 text-[#6096B4]" />
                       </div>
                       <div>
                         <div className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -835,7 +835,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 </button>
                 <button
                   onClick={addGuard}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C]"
                 >
                   {t('tools.guardSchedule.addGuard2', 'Add Guard')}
                 </button>
@@ -926,7 +926,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 </button>
                 <button
                   onClick={addLocation}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C]"
                 >
                   {t('tools.guardSchedule.addLocation2', 'Add Location')}
                 </button>
@@ -1052,7 +1052,7 @@ export function GuardScheduleTool({ uiConfig }: GuardScheduleToolProps) {
                 </button>
                 <button
                   onClick={addShift}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7C]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7C]"
                 >
                   {t('tools.guardSchedule.addShift2', 'Add Shift')}
                 </button>

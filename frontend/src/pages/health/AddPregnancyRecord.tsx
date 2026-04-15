@@ -355,7 +355,7 @@ const AddPregnancyRecord: React.FC = () => {
         {isEditMode && recordLoading && (
           <div className="flex justify-center items-center py-12">
             <div className="text-center">
-              <div className="animate-spin h-12 w-12 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+              <div className="animate-spin h-12 w-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"></div>
               <p className="text-white/60">Loading pregnancy record...</p>
             </div>
           </div>
@@ -408,10 +408,10 @@ const AddPregnancyRecord: React.FC = () => {
         {(!isEditMode || !recordLoading) && !recordError && (
           <>
             {/* Basic Information */}
-            <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+            <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <PregnantWoman className="h-6 w-6 text-teal-400" />
+              <PregnantWoman className="h-6 w-6 text-primary-400" />
               Basic Information
             </CardTitle>
             <CardDescription className="text-base text-white/60">
@@ -427,7 +427,7 @@ const AddPregnancyRecord: React.FC = () => {
                     <SelectTrigger id="recordType" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       {recordTypes.map(type => (
                         <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
                       ))}
@@ -438,7 +438,7 @@ const AddPregnancyRecord: React.FC = () => {
                 <div className="space-y-2">
                   <Label htmlFor="recordDate" className="text-sm font-semibold text-white/80">Record Date *</Label>
                   <div className="relative">
-                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-teal-400 z-10" />
+                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-primary-400 z-10" />
                     <Input
                       id="recordDate"
                       type="date"
@@ -469,7 +469,7 @@ const AddPregnancyRecord: React.FC = () => {
                   <div className="space-y-2">
                     <Label htmlFor="dueDate" className="text-sm font-semibold text-white/80">Due Date *</Label>
                     <div className="relative">
-                      <Calendar className="absolute left-3 top-3 h-5 w-5 text-teal-400 z-10" />
+                      <Calendar className="absolute left-3 top-3 h-5 w-5 text-primary-400 z-10" />
                       <Input
                         id="dueDate"
                         type="date"
@@ -498,7 +498,7 @@ const AddPregnancyRecord: React.FC = () => {
                 <div className="space-y-2">
                   <Label htmlFor="nextAppointment" className="text-sm font-semibold text-white/80">Next Appointment</Label>
                   <div className="relative">
-                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-teal-400 z-10" />
+                    <Calendar className="absolute left-3 top-3 h-5 w-5 text-primary-400 z-10" />
                     <Input
                       id="nextAppointment"
                       type="date"
@@ -515,10 +515,10 @@ const AddPregnancyRecord: React.FC = () => {
         </Card>
 
         {/* Vital Signs */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <MonitorHeart className="h-6 w-6 text-teal-400" />
+              <MonitorHeart className="h-6 w-6 text-primary-400" />
               Vital Signs & Measurements
             </CardTitle>
             <CardDescription className="text-base text-white/60">
@@ -529,7 +529,7 @@ const AddPregnancyRecord: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-4">
                 <h4 className="font-bold text-lg text-white flex items-center gap-2 mb-2">
-                  <Scale className="h-5 w-5 text-teal-400" />
+                  <Scale className="h-5 w-5 text-primary-400" />
                   Weight & Size
                 </h4>
                 <div className="space-y-2">
@@ -546,7 +546,7 @@ const AddPregnancyRecord: React.FC = () => {
                       <SelectTrigger className="w-20 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                         <SelectValue />
                       </SelectTrigger>
-                      <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                      <SelectContent className="bg-primary-800/90 border-primary-400/30">
                         <SelectItem value="kg">kg</SelectItem>
                         <SelectItem value="lbs">lbs</SelectItem>
                       </SelectContent>
@@ -569,7 +569,7 @@ const AddPregnancyRecord: React.FC = () => {
 
               <div className="space-y-4">
                 <h4 className="font-bold text-lg text-white flex items-center gap-2 mb-2">
-                  <MonitorHeart className="h-5 w-5 text-teal-400" />
+                  <MonitorHeart className="h-5 w-5 text-primary-400" />
                   Blood Pressure & Heart Rate
                 </h4>
                 <div className="space-y-2">
@@ -599,7 +599,7 @@ const AddPregnancyRecord: React.FC = () => {
                 <div className="space-y-2">
                   <Label htmlFor="babyHeartRate" className="text-sm font-semibold text-white/80">Baby Heart Rate</Label>
                   <div className="relative">
-                    <Heart className="absolute left-3 top-3 h-5 w-5 text-teal-400 z-10" />
+                    <Heart className="absolute left-3 top-3 h-5 w-5 text-primary-400 z-10" />
                     <Input
                       id="babyHeartRate"
                       value={formData.babyHeartRate}
@@ -615,7 +615,7 @@ const AddPregnancyRecord: React.FC = () => {
 
               <div className="space-y-4">
                 <h4 className="font-bold text-lg text-white flex items-center gap-2 mb-2">
-                  <ChildCare className="h-5 w-5 text-teal-400" />
+                  <ChildCare className="h-5 w-5 text-primary-400" />
                   Baby & Physical
                 </h4>
                 <div className="space-y-2">
@@ -624,7 +624,7 @@ const AddPregnancyRecord: React.FC = () => {
                     <SelectTrigger id="fetalMovement" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       {fetalMovementOptions.map(option => (
                         <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
                       ))}
@@ -637,7 +637,7 @@ const AddPregnancyRecord: React.FC = () => {
                     <SelectTrigger id="edema" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       {edemaOptions.map(option => (
                         <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
                       ))}
@@ -650,10 +650,10 @@ const AddPregnancyRecord: React.FC = () => {
         </Card>
 
         {/* Lab Tests */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <Pill className="h-6 w-6 text-teal-400" />
+              <Pill className="h-6 w-6 text-primary-400" />
               Lab Tests
             </CardTitle>
             <CardDescription className="text-base text-white/60">
@@ -668,7 +668,7 @@ const AddPregnancyRecord: React.FC = () => {
                   <SelectTrigger id="urineProtein" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {testResultOptions.map(option => (
                       <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
                     ))}
@@ -681,7 +681,7 @@ const AddPregnancyRecord: React.FC = () => {
                   <SelectTrigger id="urineGlucose" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {testResultOptions.map(option => (
                       <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
                     ))}
@@ -693,10 +693,10 @@ const AddPregnancyRecord: React.FC = () => {
         </Card>
 
         {/* Symptoms */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <AlertCircle className="h-6 w-6 text-teal-400" />
+              <AlertCircle className="h-6 w-6 text-primary-400" />
               Symptoms
             </CardTitle>
             <CardDescription className="text-base text-white/60">
@@ -712,7 +712,7 @@ const AddPregnancyRecord: React.FC = () => {
                 onKeyPress={(e) => e.key === 'Enter' && addSymptom()}
                 className="flex-1 h-12 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
-              <Button onClick={addSymptom} className="h-12 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+              <Button onClick={addSymptom} className="h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
@@ -742,7 +742,7 @@ const AddPregnancyRecord: React.FC = () => {
                 <h4 className="text-sm font-medium text-white">Current Symptoms:</h4>
                 <div className="flex flex-wrap gap-2">
                   {formData.symptoms.map(symptom => (
-                    <Badge key={symptom} className="flex items-center gap-1 bg-teal-500/20 text-teal-400 border-teal-500/30">
+                    <Badge key={symptom} className="flex items-center gap-1 bg-primary-500/20 text-primary-400 border-primary-500/30">
                       {symptom}
                       <button onClick={() => removeSymptom(symptom)} className="hover:text-red-400 transition-colors">
                         <Trash2 className="h-3 w-3" />
@@ -756,10 +756,10 @@ const AddPregnancyRecord: React.FC = () => {
         </Card>
 
         {/* Medications */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <Pill className="h-6 w-6 text-teal-400" />
+              <Pill className="h-6 w-6 text-primary-400" />
               Medications & Supplements
             </CardTitle>
             <CardDescription className="text-base text-white/60">
@@ -775,7 +775,7 @@ const AddPregnancyRecord: React.FC = () => {
                 onKeyPress={(e) => e.key === 'Enter' && addMedication()}
                 className="flex-1 h-12 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
-              <Button onClick={addMedication} className="h-12 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+              <Button onClick={addMedication} className="h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
@@ -795,7 +795,7 @@ const AddPregnancyRecord: React.FC = () => {
                     }
                   }}
                 >
-                  <Pill className="h-3 w-3 mr-1 text-teal-400" />
+                  <Pill className="h-3 w-3 mr-1 text-primary-400" />
                   {medication}
                 </Badge>
               ))}
@@ -806,8 +806,8 @@ const AddPregnancyRecord: React.FC = () => {
                 <h4 className="text-sm font-medium text-white">Current Medications:</h4>
                 <div className="flex flex-wrap gap-2">
                   {formData.medications.map(medication => (
-                    <Badge key={medication} className="flex items-center gap-1 bg-teal-500/20 text-teal-400 border-teal-500/30">
-                      <Pill className="h-3 w-3 text-teal-400" />
+                    <Badge key={medication} className="flex items-center gap-1 bg-primary-500/20 text-primary-400 border-primary-500/30">
+                      <Pill className="h-3 w-3 text-primary-400" />
                       {medication}
                       <button onClick={() => removeMedication(medication)} className="hover:text-red-400 transition-colors">
                         <Trash2 className="h-3 w-3" />
@@ -821,10 +821,10 @@ const AddPregnancyRecord: React.FC = () => {
         </Card>
 
         {/* Notes */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-              <Heart className="h-6 w-6 text-teal-400" />
+              <Heart className="h-6 w-6 text-primary-400" />
               Additional Notes
             </CardTitle>
             <CardDescription className="text-base text-white/60">
@@ -836,7 +836,7 @@ const AddPregnancyRecord: React.FC = () => {
               value={formData.notes}
               onChange={(e) => handleInputChange('notes', e.target.value)}
               placeholder="Enter any additional notes about your appointment, health status, or concerns..."
-              className="w-full px-4 py-3 border border-white/20 rounded-xl bg-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+              className="w-full px-4 py-3 border border-white/20 rounded-xl bg-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
               rows={5}
             />
           </CardContent>
@@ -853,7 +853,7 @@ const AddPregnancyRecord: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createPregnancyMutation.loading || updatePregnancyMutation.loading || (isEditMode && recordLoading)}
-            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {(createPregnancyMutation.loading || updatePregnancyMutation.loading) ? (
               <>
@@ -869,9 +869,9 @@ const AddPregnancyRecord: React.FC = () => {
           </Button>
         </div>
 
-            <div className="mt-8 p-5 bg-teal-500/10 border border-teal-500/20 rounded-xl">
+            <div className="mt-8 p-5 bg-primary-500/10 border border-primary-500/20 rounded-xl">
               <div className="flex gap-3">
-                <AlertCircle className="h-6 w-6 text-teal-400 mt-0.5" />
+                <AlertCircle className="h-6 w-6 text-primary-400 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">Important</h4>
                   <p className="text-sm text-white/70 mt-1">

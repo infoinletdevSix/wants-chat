@@ -239,11 +239,11 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Layers className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Layers className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aIFlashcardGenerator.aiFlashcardGenerator', 'AI Flashcard Generator')}</h3>
@@ -253,9 +253,9 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aIFlashcardGenerator.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aIFlashcardGenerator.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -274,7 +274,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
                 onChange={(e) => setTopic(e.target.value)}
                 placeholder={t('tools.aIFlashcardGenerator.enterTheTopicForYour', 'Enter the topic for your flashcards (e.g., \'Spanish vocabulary\', \'Biology cell structure\')...')}
                 rows={2}
-                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
               />
             </div>
 
@@ -290,7 +290,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
                     const selected = cardCounts.find(c => c.value === Number(e.target.value));
                     if (selected) setCardCount(selected);
                   }}
-                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
                 >
                   {cardCounts.map(c => (
                     <option key={c.value} value={c.value}>{c.label}</option>
@@ -308,7 +308,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
                     const selected = cardTypes.find(t => t.value === e.target.value);
                     if (selected) setCardType(selected);
                   }}
-                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+                  className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
                 >
                   {cardTypes.map(t => (
                     <option key={t.value} value={t.value}>{t.label}</option>
@@ -327,7 +327,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
                 onChange={(e) => setAdditionalContext(e.target.value)}
                 placeholder={t('tools.aIFlashcardGenerator.anySpecificTermsChaptersOr', 'Any specific terms, chapters, or focus areas...')}
                 rows={2}
-                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
               />
             </div>
 
@@ -342,7 +342,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
             <button
               onClick={handleGenerate}
               disabled={isGenerating || !topic.trim()}
-              className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+              className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
             >
               {isGenerating ? (
                 <>
@@ -365,7 +365,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
               <div className="flex items-center justify-between">
                 <button
                   onClick={() => setStudyMode(false)}
-                  className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-[#0D9488] transition-colors"
+                  className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-[#6096B4] transition-colors"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   {t('tools.aIFlashcardGenerator.backToOverview', 'Back to Overview')}
@@ -388,7 +388,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
                 >
                   {/* Front */}
                   <div
-                    className="absolute inset-0 bg-gradient-to-br from-[#0D9488] to-[#2DD4BF] rounded-2xl p-6 flex flex-col items-center justify-center backface-hidden"
+                    className="absolute inset-0 bg-gradient-to-br from-[#6096B4] to-[#75AAC1] rounded-2xl p-6 flex flex-col items-center justify-center backface-hidden"
                     style={{ backfaceVisibility: 'hidden' }}
                   >
                     <p className="text-white text-xl font-medium text-center">
@@ -399,7 +399,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
 
                   {/* Back */}
                   <div
-                    className="absolute inset-0 bg-white dark:bg-gray-900 border-2 border-[#0D9488] rounded-2xl p-6 flex flex-col items-center justify-center"
+                    className="absolute inset-0 bg-white dark:bg-gray-900 border-2 border-[#6096B4] rounded-2xl p-6 flex flex-col items-center justify-center"
                     style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                   >
                     <p className="text-gray-900 dark:text-white text-lg text-center">
@@ -445,7 +445,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
               {/* Progress Bar */}
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                 <div
-                  className="bg-[#0D9488] h-2 rounded-full transition-all"
+                  className="bg-[#6096B4] h-2 rounded-full transition-all"
                   style={{ width: `${((currentCardIndex + 1) / generatedSet.cards.length) * 100}%` }}
                 />
               </div>
@@ -464,7 +464,7 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setStudyMode(true)}
-                  className="flex items-center gap-2 px-4 py-2 text-sm bg-[#0D9488] hover:bg-[#0D9488]/90 text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-sm bg-[#6096B4] hover:bg-[#6096B4]/90 text-white rounded-lg transition-colors"
                 >
                   {t('tools.aIFlashcardGenerator.studyNow', 'Study Now')}
                 </button>
@@ -484,10 +484,10 @@ Create exactly ${cardCount.value} varied and educational flashcards. Return ONLY
               {generatedSet.cards.map((card, idx) => (
                 <div
                   key={card.id}
-                  className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-[#0D9488]/50 transition-colors"
+                  className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-[#6096B4]/50 transition-colors"
                 >
                   <div className="flex items-start justify-between mb-2">
-                    <span className="text-xs font-medium text-[#0D9488]">Card {idx + 1}</span>
+                    <span className="text-xs font-medium text-[#6096B4]">Card {idx + 1}</span>
                     {card.difficulty && (
                       <span className={`text-xs px-2 py-0.5 rounded-full ${getDifficultyColor(card.difficulty)}`}>
                         {card.difficulty}

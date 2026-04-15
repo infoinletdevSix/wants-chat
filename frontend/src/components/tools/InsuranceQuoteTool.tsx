@@ -886,9 +886,9 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.insuranceQuote.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.insuranceQuote.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -896,7 +896,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1005,7 +1005,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1060,7 +1060,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         onClick={() => setSelectedInsuranceType(type)}
                         className={`flex flex-col items-center gap-1 p-3 rounded-lg transition-colors ${
                           selectedInsuranceType === type
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1081,7 +1081,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                     <span>{t('tools.insuranceQuote.customer', 'Customer')}</span>
                     <button
                       onClick={() => setShowCustomerForm(true)}
-                      className="p-1 rounded bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                      className="p-1 rounded bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -1095,7 +1095,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.insuranceQuote.selectACustomer', 'Select a customer...')}</option>
                     {customers.map((customer) => (
@@ -1148,7 +1148,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         onChange={(e) =>
                           setCoverages((prev) => ({ ...prev, [option.id]: parseInt(e.target.value) }))
                         }
-                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
                       />
                       <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
                         {option.description}
@@ -1173,7 +1173,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         onClick={() => setSelectedDeductible(option.amount)}
                         className={`p-3 rounded-lg text-center transition-colors ${
                           selectedDeductible === option.amount
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1213,7 +1213,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                             updated[index].applicable = e.target.checked;
                             setSelectedDiscounts(updated);
                           }}
-                          className="w-4 h-4 accent-[#0D9488]"
+                          className="w-4 h-4 accent-[#6096B4]"
                         />
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                           {discount.name}
@@ -1233,7 +1233,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                 disabled={!selectedCustomerId}
                 className={`w-full py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors ${
                   selectedCustomerId
-                    ? t('tools.insuranceQuote.bg0d9488TextWhiteHover', 'bg-[#0D9488] text-white hover:bg-[#0F766E]') : 'bg-gray-400 text-gray-200 cursor-not-allowed'
+                    ? t('tools.insuranceQuote.bg0d9488TextWhiteHover', 'bg-[#6096B4] text-white hover:bg-[#4C7F98]') : 'bg-gray-400 text-gray-200 cursor-not-allowed'
                 }`}
               >
                 <RefreshCw className="w-5 h-5" />
@@ -1288,7 +1288,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                                   <td className="py-3 px-4">
                                     <div className="flex items-center gap-3">
                                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white ${
-                                        index === 0 ? t('tools.insuranceQuote.bg0d9488', 'bg-[#0D9488]') : 'bg-gray-500'
+                                        index === 0 ? t('tools.insuranceQuote.bg0d9488', 'bg-[#6096B4]') : 'bg-gray-500'
                                       }`}>
                                         {carrier?.logo}
                                       </div>
@@ -1302,7 +1302,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                                             {carrier?.rating}
                                           </span>
                                           {index === 0 && (
-                                            <span className="ml-2 text-xs bg-[#0D9488] text-white px-2 py-0.5 rounded">
+                                            <span className="ml-2 text-xs bg-[#6096B4] text-white px-2 py-0.5 rounded">
                                               {t('tools.insuranceQuote.bestValue', 'Best Value')}
                                             </span>
                                           )}
@@ -1449,7 +1449,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                                 {quote.carrierName}
                               </p>
-                              <p className={`text-xl font-bold ${theme === 'dark' ? t('tools.insuranceQuote.text0d9488', 'text-[#0D9488]') : t('tools.insuranceQuote.text0d94882', 'text-[#0D9488]')}`}>
+                              <p className={`text-xl font-bold ${theme === 'dark' ? t('tools.insuranceQuote.text0d9488', 'text-[#6096B4]') : t('tools.insuranceQuote.text0d94882', 'text-[#6096B4]')}`}>
                                 {formatCurrency(commission)}
                               </p>
                               <p className={`text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -1494,7 +1494,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <select
@@ -1504,7 +1504,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         >
                           <option value="all">{t('tools.insuranceQuote.allStatus', 'All Status')}</option>
                           <option value="pending">{t('tools.insuranceQuote.pending', 'Pending')}</option>
@@ -1574,7 +1574,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                     <span>Customers ({customers.length})</span>
                     <button
                       onClick={() => setShowCustomerForm(true)}
-                      className="p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                      className="p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -1588,7 +1588,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         onClick={() => setSelectedCustomerId(customer.id)}
                         className={`p-3 rounded-lg cursor-pointer transition-colors ${
                           selectedCustomerId === customer.id
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 hover:bg-gray-600'
                             : 'bg-gray-100 hover:bg-gray-200'
@@ -1774,7 +1774,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         </div>
                         <button
                           onClick={() => setShowCommunicationForm(true)}
-                          className="p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                          className="p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                         >
                           <Plus className="w-4 h-4" />
                         </button>
@@ -1956,8 +1956,8 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
               <Card className={theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
                 <CardContent className="py-6">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-[#0D9488]/20 rounded-lg">
-                      <Award className="w-6 h-6 text-[#0D9488]" />
+                    <div className="p-3 bg-[#6096B4]/20 rounded-lg">
+                      <Award className="w-6 h-6 text-[#6096B4]" />
                     </div>
                     <div>
                       <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.insuranceQuote.totalCommission', 'Total Commission')}</p>
@@ -2012,7 +2012,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                           {(COMMISSION_RATES[type] * 100).toFixed(0)}% rate
                         </p>
-                        <p className={`text-lg font-bold mt-1 ${theme === 'dark' ? t('tools.insuranceQuote.text0d94883', 'text-[#0D9488]') : t('tools.insuranceQuote.text0d94884', 'text-[#0D9488]')}`}>
+                        <p className={`text-lg font-bold mt-1 ${theme === 'dark' ? t('tools.insuranceQuote.text0d94883', 'text-[#6096B4]') : t('tools.insuranceQuote.text0d94884', 'text-[#6096B4]')}`}>
                           {formatCurrency(commission)}
                         </p>
                         <p className={`text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -2063,7 +2063,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                             </div>
                           </div>
                           <div className="text-right">
-                            <p className={`font-semibold ${theme === 'dark' ? t('tools.insuranceQuote.text0d94885', 'text-[#0D9488]') : t('tools.insuranceQuote.text0d94886', 'text-[#0D9488]')}`}>
+                            <p className={`font-semibold ${theme === 'dark' ? t('tools.insuranceQuote.text0d94885', 'text-[#6096B4]') : t('tools.insuranceQuote.text0d94886', 'text-[#6096B4]')}`}>
                               {formatCurrency(opp.potentialPremium)}/yr
                             </p>
                             <p className={`text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -2114,7 +2114,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2129,7 +2129,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2144,7 +2144,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2159,7 +2159,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2174,7 +2174,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2189,7 +2189,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div className="col-span-2">
@@ -2204,7 +2204,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2219,7 +2219,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2234,7 +2234,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2249,7 +2249,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2264,7 +2264,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2281,7 +2281,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2295,7 +2295,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="single">{t('tools.insuranceQuote.single', 'Single')}</option>
                       <option value="married">{t('tools.insuranceQuote.married', 'Married')}</option>
@@ -2316,7 +2316,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -2324,7 +2324,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                 <div className="flex gap-3 mt-6">
                   <button
                     onClick={addCustomer}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     {t('tools.insuranceQuote.addCustomer', 'Add Customer')}
                   </button>
@@ -2373,7 +2373,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="note">{t('tools.insuranceQuote.note', 'Note')}</option>
                       <option value="email">{t('tools.insuranceQuote.email3', 'Email')}</option>
@@ -2393,7 +2393,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -2408,7 +2408,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -2416,7 +2416,7 @@ export const InsuranceQuoteTool: React.FC<InsuranceQuoteToolProps> = ({ uiConfig
                 <div className="flex gap-3 mt-6">
                   <button
                     onClick={addCommunication}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     {t('tools.insuranceQuote.addLog', 'Add Log')}
                   </button>

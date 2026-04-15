@@ -183,14 +183,14 @@ Please provide a clear, concise summary that captures the essence of the content
   return (
     <div className={`rounded-xl shadow-sm border overflow-hidden ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+      <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
         <div className="flex items-center space-x-3">
           <div className="bg-white/20 p-3 rounded-lg">
             <FileText className="w-6 h-6 text-white" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-white">{t('tools.articleSummarizer.articleSummarizer', 'Article Summarizer')}</h2>
-            <p className="text-teal-50 text-sm mt-1">{t('tools.articleSummarizer.aiPoweredTextSummarizationWith', 'AI-powered text summarization with custom focus areas')}</p>
+            <p className="text-primary-50 text-sm mt-1">{t('tools.articleSummarizer.aiPoweredTextSummarizationWith', 'AI-powered text summarization with custom focus areas')}</p>
             {isPrefilled && (
               <div className="flex items-center gap-1 mt-1 text-xs text-white/80">
                 <Sparkles className="w-3 h-3" />
@@ -214,7 +214,7 @@ Please provide a clear, concise summary that captures the essence of the content
               onChange={(e) => setInputText(e.target.value)}
               placeholder={t('tools.articleSummarizer.pasteYourArticleDocumentOr', 'Paste your article, document, or any long text here...')}
               rows={10}
-              className={`w-full px-4 py-3 rounded-lg border font-mono text-sm resize-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+              className={`w-full px-4 py-3 rounded-lg border font-mono text-sm resize-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
@@ -234,7 +234,7 @@ Please provide a clear, concise summary that captures the essence of the content
               <select
                 value={summaryLength}
                 onChange={(e) => setSummaryLength(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+                className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-gray-100'
                     : 'bg-white border-gray-300 text-gray-900'
@@ -255,7 +255,7 @@ Please provide a clear, concise summary that captures the essence of the content
               <select
                 value={focusArea}
                 onChange={(e) => setFocusArea(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+                className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-gray-100'
                     : 'bg-white border-gray-300 text-gray-900'
@@ -275,7 +275,7 @@ Please provide a clear, concise summary that captures the essence of the content
             <button
               onClick={handleGenerate}
               disabled={isGenerating || !inputText.trim()}
-              className="flex-1 bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+              className="flex-1 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
             >
               {isGenerating ? (
                 <>
@@ -346,7 +346,7 @@ Please provide a clear, concise summary that captures the essence of the content
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="flex items-center space-x-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
+                  className="flex items-center space-x-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
                 >
                   {isSaving ? (
                     <>
@@ -372,19 +372,19 @@ Please provide a clear, concise summary that captures the essence of the content
             {/* Statistics */}
             <div className={`grid grid-cols-3 gap-4 pt-4 border-t ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
               <div className="text-center">
-                <div className={`text-2xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                <div className={`text-2xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                   {result.originalWordCount}
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.articleSummarizer.originalWords', 'Original Words')}</div>
               </div>
               <div className="text-center">
-                <div className={`text-2xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                <div className={`text-2xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                   {result.summaryWordCount}
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.articleSummarizer.summaryWords', 'Summary Words')}</div>
               </div>
               <div className="text-center">
-                <div className={`text-2xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                <div className={`text-2xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                   {Math.round((result.summaryWordCount / result.originalWordCount) * 100)}%
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.articleSummarizer.compression', 'Compression')}</div>

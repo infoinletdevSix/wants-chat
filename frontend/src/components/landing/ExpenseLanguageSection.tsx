@@ -202,7 +202,7 @@ const ExpenseLanguageSection: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -210,7 +210,7 @@ const ExpenseLanguageSection: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -225,7 +225,7 @@ const ExpenseLanguageSection: React.FC = () => {
         {/* Section Header */}
         <motion.div className="text-center mb-8 sm:mb-12" variants={cardVariants}>
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 sm:mb-6">
-            <Activity className="h-4 w-4 text-teal-400" />
+            <Activity className="h-4 w-4 text-primary-400" />
             <span className="text-xs sm:text-sm font-medium text-white">
               Manage Your Life Smarter
             </span>
@@ -233,7 +233,7 @@ const ExpenseLanguageSection: React.FC = () => {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">
             <span className="text-white">Finance & Learning</span>
-            <span className="text-teal-400"> Combined</span>
+            <span className="text-primary-400"> Combined</span>
           </h2>
 
           <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto px-4">
@@ -413,7 +413,7 @@ const ExpenseLanguageSection: React.FC = () => {
                         { flag: '🇪🇸', name: 'Spanish', color: 'bg-blue-500/20 border-blue-500/30' },
                         { flag: '🇫🇷', name: 'French', color: 'bg-red-500/20 border-red-500/30' },
                         { flag: '🇩🇪', name: 'German', color: 'bg-yellow-500/20 border-yellow-500/30' },
-                        { flag: '🇯🇵', name: 'Japanese', color: 'bg-teal-500/20 border-teal-500/30' },
+                        { flag: '🇯🇵', name: 'Japanese', color: 'bg-primary-500/20 border-primary-500/30' },
                         { flag: '🇮🇹', name: 'Italian', color: 'bg-green-500/20 border-green-500/30' },
                         { flag: '🇰🇷', name: 'Korean', color: 'bg-orange-500/20 border-orange-500/30' },
                         { flag: '🇨🇳', name: 'Chinese', color: 'bg-pink-500/20 border-pink-500/30' },
@@ -488,7 +488,7 @@ const ExpenseLanguageSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <Button
-                  className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all mt-auto"
+                  className="w-full bg-gradient-to-r from-primary-600 to-indigo-600 text-white py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all mt-auto"
                   onClick={() => {
                     if (!isAuthenticated) {
                       navigate('/login');
@@ -531,7 +531,7 @@ const ExpenseLanguageSection: React.FC = () => {
                 </Button>
                 <Button
                   size="lg"
-                  className="bg-teal-500/10 border border-teal-400 text-teal-400 hover:scale-105 transition-all duration-200"
+                  className="bg-primary-500/10 border border-primary-400 text-primary-400 hover:scale-105 transition-all duration-200"
                   onClick={() => {
                     if (!isAuthenticated) {
                       navigate('/login');

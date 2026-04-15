@@ -378,10 +378,10 @@ const AddVitalRecord: React.FC = () => {
         />
 
         {/* Date and Time */}
-        <GlassCard hover={false} className="mt-8 mb-8 border-l-4 border-teal-500">
+        <GlassCard hover={false} className="mt-8 mb-8 border-l-4 border-primary-500">
           <div className="mb-6">
             <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-              <Calendar className="h-5 w-5 text-teal-400" />
+              <Calendar className="h-5 w-5 text-primary-400" />
               Recording Information
             </h3>
             <p className="text-sm text-white/60 mt-1">When and where were these measurements taken?</p>
@@ -517,7 +517,7 @@ const AddVitalRecord: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createVitalRecordMutation.loading}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
           >
             {createVitalRecordMutation.loading ? (
               <>

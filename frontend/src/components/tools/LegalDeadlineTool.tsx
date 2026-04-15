@@ -261,14 +261,14 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
       <div className="max-w-5xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">{t('tools.legalDeadline.legalDeadlineCalculator', 'Legal Deadline Calculator')}</h1>
-                <p className="text-teal-100 text-sm mt-1">{t('tools.legalDeadline.calculateAndTrackCourtDeadlines', 'Calculate and track court deadlines with precision')}</p>
+                <p className="text-primary-100 text-sm mt-1">{t('tools.legalDeadline.calculateAndTrackCourtDeadlines', 'Calculate and track court deadlines with precision')}</p>
               </div>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                   placeholder={t('tools.legalDeadline.smithVJones', 'Smith v. Jones')}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 />
               </div>
               <div>
@@ -301,7 +301,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                   placeholder={t('tools.legalDeadline.2024Cv12345', '2024-CV-12345')}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 />
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                     placeholder={t('tools.legalDeadline.eGAnswerToComplaint', 'e.g., Answer to Complaint')}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -335,7 +335,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                     onChange={(e) => handleTypeChange(e.target.value as DeadlineType)}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     {DEADLINE_TYPES.map((type) => (
                       <option key={type.value} value={type.value}>{type.label}</option>
@@ -352,7 +352,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                     onChange={(e) => setCurrentDeadline(prev => ({ ...prev, jurisdiction: e.target.value as JurisdictionType }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     <option value="federal">{t('tools.legalDeadline.federal', 'Federal')}</option>
                     <option value="state">{t('tools.legalDeadline.state', 'State')}</option>
@@ -370,7 +370,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                     onChange={(e) => setCurrentDeadline(prev => ({ ...prev, baseDate: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -385,7 +385,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                     onChange={(e) => setCurrentDeadline(prev => ({ ...prev, daysToAdd: parseInt(e.target.value) || 0 }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -398,7 +398,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                     onChange={(e) => setCurrentDeadline(prev => ({ ...prev, priority: e.target.value as 'high' | 'medium' | 'low' }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     <option value="high">{t('tools.legalDeadline.high', 'High')}</option>
                     <option value="medium">{t('tools.legalDeadline.medium', 'Medium')}</option>
@@ -414,7 +414,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                       type="checkbox"
                       checked={currentDeadline.excludeWeekends}
                       onChange={(e) => setCurrentDeadline(prev => ({ ...prev, excludeWeekends: e.target.checked }))}
-                      className="w-4 h-4 text-teal-600 rounded focus:ring-teal-500"
+                      className="w-4 h-4 text-primary-600 rounded focus:ring-primary-500"
                     />
                     <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.legalDeadline.excludeWeekends', 'Exclude Weekends')}</span>
                   </label>
@@ -423,17 +423,17 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                       type="checkbox"
                       checked={currentDeadline.excludeHolidays}
                       onChange={(e) => setCurrentDeadline(prev => ({ ...prev, excludeHolidays: e.target.checked }))}
-                      className="w-4 h-4 text-teal-600 rounded focus:ring-teal-500"
+                      className="w-4 h-4 text-primary-600 rounded focus:ring-primary-500"
                     />
                     <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.legalDeadline.excludeFederalHolidays', 'Exclude Federal Holidays')}</span>
                   </label>
                 </div>
 
                 {previewDate && (
-                  <div className={`p-3 rounded-lg ${isDark ? 'bg-teal-900/30' : 'bg-teal-50'} border border-teal-200 dark:border-teal-700`}>
+                  <div className={`p-3 rounded-lg ${isDark ? 'bg-primary-900/30' : 'bg-primary-50'} border border-primary-200 dark:border-primary-700`}>
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-teal-600" />
-                      <span className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                      <Calendar className="w-4 h-4 text-primary-600" />
+                      <span className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                         Calculated Deadline: {new Date(previewDate).toLocaleDateString('en-US', {
                           weekday: 'long',
                           year: 'numeric',
@@ -457,14 +457,14 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                   rows={2}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 />
               </div>
 
               <div className="mt-4 flex gap-3">
                 <button
                   onClick={addDeadline}
-                  className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.legalDeadline.addDeadline', 'Add Deadline')}
@@ -521,7 +521,7 @@ export default function LegalDeadlineTool({ uiConfig }: LegalDeadlineToolProps) 
                   </h3>
                   <button
                     onClick={exportDeadlines}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm transition-colors"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm transition-colors"
                   >
                     <Download className="w-4 h-4" />
                     {t('tools.legalDeadline.export', 'Export')}

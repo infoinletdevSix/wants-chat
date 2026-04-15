@@ -423,7 +423,7 @@ const AddPrescription: React.FC = () => {
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Header Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             {isEditMode ? 'Edit Prescription' : 'Add New Prescription'}
           </h1>
@@ -461,10 +461,10 @@ const AddPrescription: React.FC = () => {
         )}
 
         {/* Prescription Information */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <PrescriptionIcon className="h-5 w-5 text-teal-400" />
+              <PrescriptionIcon className="h-5 w-5 text-primary-400" />
               Prescription Information
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -475,8 +475,8 @@ const AddPrescription: React.FC = () => {
             {/* Upload Section */}
             <div className="border-2 border-dashed border-white/20 rounded-2xl p-8">
               <div className="text-center">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-teal-500/20">
-                  <Upload className="h-8 w-8 text-teal-400" />
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-primary-500/20">
+                  <Upload className="h-8 w-8 text-primary-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Upload Prescription Photo
@@ -497,8 +497,8 @@ const AddPrescription: React.FC = () => {
                   </div>
                 </Label>
                 {uploadedFile && (
-                  <div className="mt-4 flex items-center justify-center gap-3 p-3 bg-teal-500/10 rounded-xl">
-                    <FileText className="h-5 w-5 text-teal-400" />
+                  <div className="mt-4 flex items-center justify-center gap-3 p-3 bg-primary-500/10 rounded-xl">
+                    <FileText className="h-5 w-5 text-primary-400" />
                     <span className="text-sm font-medium text-white">{uploadedFile.name}</span>
                     <Button
                       variant="ghost"
@@ -641,12 +641,12 @@ const AddPrescription: React.FC = () => {
         </Card>
 
         {/* Medications Section */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader className="pb-4">
             <div className="flex justify-between items-center">
               <div>
                 <CardTitle className="flex items-center gap-2 text-white">
-                  <Pill className="h-5 w-5 text-teal-400" />
+                  <Pill className="h-5 w-5 text-primary-400" />
                   Medications
                 </CardTitle>
                 <CardDescription className="text-white/60">
@@ -655,7 +655,7 @@ const AddPrescription: React.FC = () => {
               </div>
               <Button
                 onClick={addMedication}
-                className="h-12 px-6 rounded-xl text-white font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                className="h-12 px-6 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
               >
                 <Plus className="h-5 w-5 mr-2" />
                 Add Medication
@@ -668,8 +668,8 @@ const AddPrescription: React.FC = () => {
                 <div className="p-6 space-y-6">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-teal-500/20">
-                        <Pill className="h-6 w-6 text-teal-400" />
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary-500/20">
+                        <Pill className="h-6 w-6 text-primary-400" />
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-white">
@@ -723,7 +723,7 @@ const AddPrescription: React.FC = () => {
                         >
                           <SelectValue placeholder="Select frequency" />
                         </SelectTrigger>
-                        <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                        <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                           {frequencyOptions.map(option => (
                             <SelectItem key={option} value={option} className="text-white hover:bg-white/10">{option}</SelectItem>
                           ))}
@@ -763,7 +763,7 @@ const AddPrescription: React.FC = () => {
                           <SelectTrigger id={`dosageUnit-${medication.id}`} className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                             <SelectValue />
                           </SelectTrigger>
-                          <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                          <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                             {dosageUnits.map(unit => (
                               <SelectItem key={unit} value={unit} className="text-white hover:bg-white/10">{unit}</SelectItem>
                             ))}
@@ -812,7 +812,7 @@ const AddPrescription: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="h-1 bg-gradient-to-r from-teal-500 to-cyan-500" />
+                <div className="h-1 bg-gradient-to-r from-primary-500 to-cyan-500" />
               </Card>
             ))}
           </CardContent>
@@ -829,7 +829,7 @@ const AddPrescription: React.FC = () => {
           </Button>
           <Button
             onClick={handleSubmit}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
             disabled={createPrescriptionMutation.loading}
           >
             {createPrescriptionMutation.loading ? (

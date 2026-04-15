@@ -247,7 +247,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
       <div className="max-w-6xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="p-3 bg-white/20 rounded-lg">
@@ -255,12 +255,12 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-white">{t('tools.billableHoursCalculator.billableHoursCalculator', 'Billable Hours Calculator')}</h1>
-                  <p className="text-teal-100 text-sm mt-1">{t('tools.billableHoursCalculator.trackTimeAndGenerateInvoices', 'Track time and generate invoices')}</p>
+                  <p className="text-primary-100 text-sm mt-1">{t('tools.billableHoursCalculator.trackTimeAndGenerateInvoices', 'Track time and generate invoices')}</p>
                 </div>
               </div>
               <div className="text-right text-white">
                 <div className="text-2xl font-bold">{formatCurrency(totals.totalAmount)}</div>
-                <div className="text-teal-100 text-sm">{totals.billableHours.toFixed(1)} billable hours</div>
+                <div className="text-primary-100 text-sm">{totals.billableHours.toFixed(1)} billable hours</div>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                   onChange={(e) => setDefaultRate(parseFloat(e.target.value) || 0)}
                   className={`w-28 px-3 py-1.5 rounded-lg border text-sm ${
                     isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 />
               </div>
               <div>
@@ -290,7 +290,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                   onChange={(e) => setBillingIncrement(parseFloat(e.target.value))}
                   className={`px-3 py-1.5 rounded-lg border text-sm ${
                     isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 >
                   {BILLING_INCREMENTS.map((inc) => (
                     <option key={inc.value} value={inc.value}>{inc.label}</option>
@@ -301,7 +301,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
               <button
                 onClick={exportTimesheet}
                 disabled={entries.length === 0}
-                className="flex items-center gap-2 px-4 py-1.5 bg-teal-600 hover:bg-teal-700 disabled:opacity-50 text-white rounded-lg text-sm transition-colors"
+                className="flex items-center gap-2 px-4 py-1.5 bg-primary-600 hover:bg-primary-700 disabled:opacity-50 text-white rounded-lg text-sm transition-colors"
               >
                 <Download className="w-4 h-4" />
                 {t('tools.billableHoursCalculator.exportCsv', 'Export CSV')}
@@ -323,7 +323,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setCurrentEntry(prev => ({ ...prev, date: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -339,7 +339,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     list="clients"
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <datalist id="clients">
                     {uniqueClients.map(client => (
@@ -359,7 +359,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     placeholder={t('tools.billableHoursCalculator.caseMatterName', 'Case/Matter name')}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -372,7 +372,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setCurrentEntry(prev => ({ ...prev, category: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     {TASK_CATEGORIES.map((cat) => (
                       <option key={cat} value={cat}>{cat}</option>
@@ -390,7 +390,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setCurrentEntry(prev => ({ ...prev, startTime: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -404,7 +404,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setCurrentEntry(prev => ({ ...prev, endTime: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -418,7 +418,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setCurrentEntry(prev => ({ ...prev, rate: parseFloat(e.target.value) || 0 }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -428,7 +428,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                       type="checkbox"
                       checked={currentEntry.billable}
                       onChange={(e) => setCurrentEntry(prev => ({ ...prev, billable: e.target.checked }))}
-                      className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                      className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                     />
                     <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.billableHoursCalculator.billable', 'Billable')}</span>
                   </label>
@@ -446,7 +446,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                   placeholder={t('tools.billableHoursCalculator.briefDescriptionOfWorkPerformed', 'Brief description of work performed...')}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 />
               </div>
 
@@ -457,14 +457,14 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                       <Calculator className="w-4 h-4" />
                       <span className="font-medium">{previewHours.toFixed(2)} hours</span>
                     </span>
-                    <span className="text-teal-600 font-medium">
+                    <span className="text-primary-600 font-medium">
                       = {formatCurrency(previewHours * (currentEntry.rate || 0))}
                     </span>
                   </div>
                 )}
                 <button
                   onClick={addEntry}
-                  className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.billableHoursCalculator.addEntry', 'Add Entry')}
@@ -480,7 +480,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                   onClick={() => setActiveView(view)}
                   className={`px-4 py-2 font-medium text-sm capitalize transition-colors ${
                     activeView === view
-                      ? 'text-teal-600 border-b-2 border-teal-600'
+                      ? 'text-primary-600 border-b-2 border-primary-600'
                       : isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -500,7 +500,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     placeholder={t('tools.billableHoursCalculator.filterByClient', 'Filter by client...')}
                     className={`px-3 py-2 rounded-lg border text-sm ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
                 <div className="flex items-center gap-2">
@@ -510,7 +510,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setFilterDateFrom(e.target.value)}
                     className={`px-3 py-2 rounded-lg border text-sm ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <span className={isDark ? 'text-gray-400' : 'text-gray-500'}>to</span>
                   <input
@@ -519,7 +519,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                     onChange={(e) => setFilterDateTo(e.target.value)}
                     className={`px-3 py-2 rounded-lg border text-sm ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
                 {(filterClient || filterDateFrom || filterDateTo) && (
@@ -586,7 +586,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                           <div className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                             {entry.hours.toFixed(2)} hrs
                           </div>
-                          <div className={`text-sm ${entry.billable ? 'text-teal-600' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                          <div className={`text-sm ${entry.billable ? 'text-primary-600' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                             {entry.billable ? formatCurrency(entry.hours * entry.rate) : '--'}
                           </div>
                           <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -598,7 +598,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                             onClick={() => toggleBillable(entry.id)}
                             className={`p-2 rounded-lg transition-colors ${
                               entry.billable
-                                ? 'text-teal-600 hover:bg-teal-100 dark:hover:bg-teal-900/30'
+                                ? 'text-primary-600 hover:bg-primary-100 dark:hover:bg-primary-900/30'
                                 : isDark ? 'text-gray-400 hover:bg-gray-600' : 'text-gray-400 hover:bg-gray-100'
                             }`}
                             title={entry.billable ? t('tools.billableHoursCalculator.markNonBillable', 'Mark non-billable') : t('tools.billableHoursCalculator.markBillable', 'Mark billable')}
@@ -637,7 +637,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                         <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                           {summary.client}
                         </h4>
-                        <div className="text-xl font-bold text-teal-600">
+                        <div className="text-xl font-bold text-primary-600">
                           {formatCurrency(summary.totalAmount)}
                         </div>
                       </div>
@@ -661,7 +661,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
 
                 {/* Totals */}
                 {clientSummaries.length > 0 && (
-                  <div className={`p-4 rounded-lg border-2 ${isDark ? 'bg-teal-900/20 border-teal-700' : 'bg-teal-50 border-teal-200'}`}>
+                  <div className={`p-4 rounded-lg border-2 ${isDark ? 'bg-primary-900/20 border-primary-700' : 'bg-primary-50 border-primary-200'}`}>
                     <div className="flex justify-between items-center">
                       <div>
                         <div className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.billableHoursCalculator.grandTotal', 'Grand Total')}</div>
@@ -669,7 +669,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                           {totals.billableHours.toFixed(2)} billable hours | {totals.nonBillableHours.toFixed(2)} non-billable
                         </div>
                       </div>
-                      <div className="text-2xl font-bold text-teal-600">
+                      <div className="text-2xl font-bold text-primary-600">
                         {formatCurrency(totals.totalAmount)}
                       </div>
                     </div>
@@ -737,7 +737,7 @@ export default function BillableHoursCalculatorTool({ uiConfig }: BillableHoursC
                 <div className={`mt-6 pt-4 border-t-2 ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
                   <div className="flex justify-between items-center">
                     <span className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.billableHoursCalculator.totalDue', 'Total Due:')}</span>
-                    <span className="text-2xl font-bold text-teal-600">{formatCurrency(totals.totalAmount)}</span>
+                    <span className="text-2xl font-bold text-primary-600">{formatCurrency(totals.totalAmount)}</span>
                   </div>
                 </div>
               </div>

@@ -297,7 +297,7 @@ const Medications: React.FC = () => {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h1 className="text-3xl font-bold text-white flex items-center gap-3">
-              <PillIcon className="h-8 w-8 text-teal-400" />
+              <PillIcon className="h-8 w-8 text-primary-400" />
               Medications
             </h1>
             <p className="text-white/60 mt-1">Manage your prescriptions and medications</p>
@@ -323,7 +323,7 @@ const Medications: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-primary-500 to-cyan-500">
                   <Plus className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Add Prescription</h3>
@@ -340,7 +340,7 @@ const Medications: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-emerald-500 to-teal-500">
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-emerald-500 to-primary-500">
                   <PillIcon className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Reminders</h3>
@@ -383,7 +383,7 @@ const Medications: React.FC = () => {
                     {prescriptions.filter(p => p.status === 'active').length}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500">
+                <div className="p-3 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500">
                   <PillIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -398,7 +398,7 @@ const Medications: React.FC = () => {
                     {prescriptions.filter(p => p.refillsRemaining && p.refillsRemaining > 0).length}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="p-3 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500">
                   <RefreshIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -439,7 +439,7 @@ const Medications: React.FC = () => {
               </Button>
               <Button
                 onClick={() => navigate('/health/add-prescription')}
-                className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+                className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Prescription
@@ -459,7 +459,7 @@ const Medications: React.FC = () => {
           {prescriptionsQuery.loading ? (
             <div className="flex justify-center items-center py-12">
               <div className="text-center">
-                <div className="animate-spin h-12 w-12 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+                <div className="animate-spin h-12 w-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"></div>
                 <p className="text-white/60">Loading medications...</p>
               </div>
             </div>
@@ -468,7 +468,7 @@ const Medications: React.FC = () => {
               <p className="text-red-400 mb-4">{String(prescriptionsQuery.error) || 'Failed to load prescriptions'}</p>
               <Button
                 onClick={() => prescriptionsQuery.refetch()}
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
               >
                 <RefreshIcon className="h-4 w-4 mr-2" />
                 Try Again
@@ -499,9 +499,9 @@ const Medications: React.FC = () => {
                   </div>
 
                   {/* Card Header with Gradient Background */}
-                  <div className="p-6 pb-4 bg-gradient-to-br from-teal-500/10 to-cyan-500/10">
+                  <div className="p-6 pb-4 bg-gradient-to-br from-primary-500/10 to-cyan-500/10">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500">
+                      <div className="p-3 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500">
                         <PillIcon className="h-6 w-6 text-white" />
                       </div>
                       <div className="flex-1 pr-12">
@@ -520,7 +520,7 @@ const Medications: React.FC = () => {
                     {/* Dosage Information */}
                     <div className="p-3 rounded-xl bg-white/5">
                       <div className="flex items-center gap-2 mb-2">
-                        <ScheduleIcon className="h-4 w-4 text-teal-400" />
+                        <ScheduleIcon className="h-4 w-4 text-primary-400" />
                         <p className="text-xs font-semibold text-white/80">Dosage Schedule</p>
                       </div>
                       <p className="text-sm text-white font-medium">
@@ -535,7 +535,7 @@ const Medications: React.FC = () => {
 
                     {/* Prescribed By */}
                     <div className="flex items-start gap-3">
-                      <UserIcon className="h-4 w-4 mt-0.5 flex-shrink-0 text-teal-400" />
+                      <UserIcon className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary-400" />
                       <div className="flex-1">
                         <p className="text-xs text-white/60">Prescribed by</p>
                         <p className="text-sm text-white font-medium">
@@ -546,7 +546,7 @@ const Medications: React.FC = () => {
 
                     {/* Start Date */}
                     <div className="flex items-start gap-3">
-                      <CalendarIcon className="h-4 w-4 mt-0.5 flex-shrink-0 text-teal-400" />
+                      <CalendarIcon className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary-400" />
                       <div className="flex-1">
                         <p className="text-xs text-white/60">Started</p>
                         <p className="text-sm text-white font-medium">
@@ -560,7 +560,7 @@ const Medications: React.FC = () => {
                     {/* Pharmacy */}
                     {prescription.pharmacy && (
                       <div className="flex items-start gap-3">
-                        <PharmacyIcon className="h-4 w-4 mt-0.5 flex-shrink-0 text-teal-400" />
+                        <PharmacyIcon className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary-400" />
                         <div className="flex-1">
                           <p className="text-xs text-white/60">Pharmacy</p>
                           <p className="text-sm text-white font-medium line-clamp-1">
@@ -573,15 +573,15 @@ const Medications: React.FC = () => {
                     {/* Refills Information */}
                     {prescription.refillsRemaining !== undefined && (
                       <div className="pt-3 border-t border-white/10">
-                        <div className="p-3 rounded-xl bg-teal-500/10">
+                        <div className="p-3 rounded-xl bg-primary-500/10">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-2">
-                              <RefreshIcon className="h-4 w-4 text-teal-400" />
-                              <p className="text-xs font-medium text-teal-400">
+                              <RefreshIcon className="h-4 w-4 text-primary-400" />
+                              <p className="text-xs font-medium text-primary-400">
                                 Refills Remaining
                               </p>
                             </div>
-                            <span className="text-lg font-bold text-teal-400">
+                            <span className="text-lg font-bold text-primary-400">
                               {prescription.refillsRemaining}
                             </span>
                           </div>
@@ -620,7 +620,7 @@ const Medications: React.FC = () => {
                         variant="outline"
                         size="sm"
                         onClick={() => editPrescription(prescription)}
-                        className="flex-1 rounded-xl border-2 border-teal-500/30 hover:border-teal-500 hover:bg-teal-500/10 text-teal-400"
+                        className="flex-1 rounded-xl border-2 border-primary-500/30 hover:border-primary-500 hover:bg-primary-500/10 text-primary-400"
                       >
                         <EditIcon className="h-4 w-4 mr-2" />
                         Edit
@@ -642,7 +642,7 @@ const Medications: React.FC = () => {
           ) : (
             <GlassCard hover={false} className="p-12 text-center">
               <div className="max-w-md mx-auto">
-                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-gradient-to-r from-primary-500 to-cyan-500">
                   <PillIcon className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -653,7 +653,7 @@ const Medications: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/health/add-prescription')}
-                  className="rounded-xl px-6 bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+                  className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Your First Prescription

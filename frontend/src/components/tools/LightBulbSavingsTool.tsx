@@ -118,7 +118,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
       onClick={onSelect}
       className={`p-4 rounded-lg border-2 transition-all ${
         isSelected
-          ? `border-[#0D9488] ${isDark ? 'bg-[#0D9488]/20' : 'bg-teal-50'}`
+          ? `border-[#6096B4] ${isDark ? 'bg-[#6096B4]/20' : 'bg-primary-50'}`
           : isDark
           ? 'border-gray-700 bg-gray-800 hover:border-gray-600'
           : 'border-gray-200 bg-white hover:border-gray-300'
@@ -155,8 +155,8 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
       {/* Header */}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-yellow-900/20' : 'bg-gradient-to-r from-white to-yellow-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Lightbulb className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Lightbulb className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.lightBulbSavings.lightBulbSavingsCalculator', 'Light Bulb Savings Calculator')}</h3>
@@ -214,7 +214,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
               value={numberOfBulbs}
               onChange={(e) => setNumberOfBulbs(e.target.value)}
               placeholder="10"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -227,7 +227,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
               value={hoursPerDay}
               onChange={(e) => setHoursPerDay(e.target.value)}
               placeholder="5"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -240,7 +240,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
               value={electricityRate}
               onChange={(e) => setElectricityRate(e.target.value)}
               placeholder="0.12"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -250,7 +250,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
             <select
               value={calculationPeriod}
               onChange={(e) => setCalculationPeriod(e.target.value as any)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             >
               <option value="yearly">1 Year</option>
               <option value="5year">5 Years</option>
@@ -260,20 +260,20 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
         </div>
 
         {/* Comparison Results */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.lightBulbSavings.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.lightBulbSavings.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <TrendingDown className="w-4 h-4 text-[#0D9488]" />
+            <TrendingDown className="w-4 h-4 text-[#6096B4]" />
             {calculations.periodYears} Year Savings Summary
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.lightBulbSavings.energySavings', 'Energy Savings')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.totalEnergySavings.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.totalEnergySavings.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.totalKwhSavings.toFixed(0)} kWh saved</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.lightBulbSavings.bulbSavings', 'Bulb Savings')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.totalBulbSavings.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.totalBulbSavings.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.lightBulbSavings.fewerReplacements', 'Fewer replacements')}</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
@@ -283,7 +283,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.lightBulbSavings.paybackPeriod', 'Payback Period')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{calculations.paybackMonths.toFixed(1)} mo</div>
+              <div className="text-xl font-bold text-[#6096B4]">{calculations.paybackMonths.toFixed(1)} mo</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>${calculations.initialInvestment} investment</div>
             </div>
           </div>
@@ -354,7 +354,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
         {/* Energy Reduction Visual */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Zap className="w-4 h-4 text-[#0D9488]" />
+            <Zap className="w-4 h-4 text-[#6096B4]" />
             {t('tools.lightBulbSavings.energyReduction', 'Energy Reduction')}
           </h4>
           <div className="space-y-2">
@@ -364,7 +364,7 @@ export const LightBulbSavingsTool: React.FC<LightBulbSavingsToolProps> = ({ uiCo
             </div>
             <div className={`h-4 rounded-full overflow-hidden ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
               <div
-                className="h-full bg-gradient-to-r from-[#0D9488] to-green-500 rounded-full transition-all"
+                className="h-full bg-gradient-to-r from-[#6096B4] to-green-500 rounded-full transition-all"
                 style={{ width: `${calculations.energyReduction}%` }}
               />
             </div>

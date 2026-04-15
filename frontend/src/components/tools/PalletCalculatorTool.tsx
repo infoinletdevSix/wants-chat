@@ -174,10 +174,10 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Layers className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Layers className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.palletCalculator.palletCalculator', 'Pallet Calculator')}</h3>
@@ -188,9 +188,9 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.palletCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.palletCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -198,13 +198,13 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('imperial')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.palletCalculator.imperialInLbs', 'Imperial (in/lbs)')}
           </button>
           <button
             onClick={() => setUnit('metric')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.palletCalculator.metricCmKg', 'Metric (cm/kg)')}
           </button>
@@ -220,7 +220,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
               <button
                 key={key}
                 onClick={() => setPalletType(key as PalletType)}
-                className={`py-2 px-2 rounded-lg text-xs transition-colors ${palletType === key ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-2 px-2 rounded-lg text-xs transition-colors ${palletType === key ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 {key === 'custom' ? 'Custom' : spec.name.split(' ')[0]}
               </button>
@@ -237,7 +237,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={customPalletLength}
                 onChange={(e) => setCustomPalletLength(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div className="space-y-1">
@@ -246,7 +246,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={customPalletWidth}
                 onChange={(e) => setCustomPalletWidth(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div className="space-y-1">
@@ -255,7 +255,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={maxPalletHeight}
                 onChange={(e) => setMaxPalletHeight(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div className="space-y-1">
@@ -264,7 +264,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={maxPalletWeight}
                 onChange={(e) => setMaxPalletWeight(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
           </div>
@@ -282,7 +282,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={cartonLength}
                 onChange={(e) => setCartonLength(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.palletCalculator.length', 'Length')}</span>
             </div>
@@ -291,7 +291,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={cartonWidth}
                 onChange={(e) => setCartonWidth(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.palletCalculator.width', 'Width')}</span>
             </div>
@@ -300,7 +300,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={cartonHeight}
                 onChange={(e) => setCartonHeight(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.palletCalculator.height', 'Height')}</span>
             </div>
@@ -309,7 +309,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
                 type="number"
                 value={cartonWeight}
                 onChange={(e) => setCartonWeight(e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Weight ({unit === 'imperial' ? 'lbs' : 'kg'})</span>
             </div>
@@ -323,7 +323,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
               type="checkbox"
               checked={overhang}
               onChange={(e) => setOverhang(e.target.checked)}
-              className="w-4 h-4 rounded text-teal-500"
+              className="w-4 h-4 rounded text-primary-500"
             />
             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.palletCalculator.allowOverhang', 'Allow Overhang')}</span>
           </label>
@@ -342,15 +342,15 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.palletCalculator.totalCartonsPerPallet', 'Total Cartons Per Pallet')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {calculations.totalCartons}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
             {calculations.cartonsPerLayer} per layer x {calculations.actualLayers} layers
           </div>
-          <div className={`text-xs mt-2 flex items-center justify-center gap-1 ${calculations.limitingFactor === 'weight' ? 'text-amber-500' : 'text-teal-500'}`}>
+          <div className={`text-xs mt-2 flex items-center justify-center gap-1 ${calculations.limitingFactor === 'weight' ? 'text-amber-500' : 'text-primary-500'}`}>
             <AlertTriangle className="w-3 h-3" />
             Limited by {calculations.limitingFactor}
           </div>
@@ -417,7 +417,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
         {/* Weight Info */}
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
-            <Scale className="w-5 h-5 mx-auto mb-2 text-teal-500" />
+            <Scale className="w-5 h-5 mx-auto mb-2 text-primary-500" />
             <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {calculations.totalWeight.toFixed(0)} lbs
             </div>
@@ -426,7 +426,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
             </div>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
-            <Maximize className="w-5 h-5 mx-auto mb-2 text-teal-500" />
+            <Maximize className="w-5 h-5 mx-auto mb-2 text-primary-500" />
             <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {calculations.wastedFloorSpace.toFixed(0)} in²
             </div>
@@ -438,7 +438,7 @@ export const PalletCalculatorTool: React.FC<PalletCalculatorToolProps> = ({ uiCo
 
         {/* Tips */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.palletCalculator.palletLoadingTips', 'Pallet Loading Tips')}</p>
             <ul className="space-y-1">

@@ -430,9 +430,9 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.orderFulfillment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.orderFulfillment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -440,7 +440,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Truck className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -508,7 +508,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -686,7 +686,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
                     onClick={() => setSelectedOrder(order)}
                     className={`p-4 rounded-lg border cursor-pointer transition-all ${
                       selectedOrder?.id === order.id
-                        ? 'border-[#0D9488] bg-[#0D9488]/10'
+                        ? 'border-[#6096B4] bg-[#6096B4]/10'
                         : theme === 'dark'
                         ? 'border-gray-700 hover:border-gray-600'
                         : 'border-gray-200 hover:border-gray-300'
@@ -768,7 +768,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
                         {item.quantityPicked < item.quantity && (
                           <button
                             onClick={() => markItemPicked(selectedOrder.id, item.id, 1)}
-                            className="w-full py-2 bg-[#0D9488] text-white rounded font-medium hover:bg-[#0B7B6F]"
+                            className="w-full py-2 bg-[#6096B4] text-white rounded font-medium hover:bg-[#0B7B6F]"
                           >
                             {t('tools.orderFulfillment.pickItem', 'Pick Item')}
                           </button>
@@ -848,7 +848,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
                   </div>
                   <button
                     onClick={() => { setSelectedOrder(order); setShowShipModal(true); }}
-                    className="w-full py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                    className="w-full py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                   >
                     <Truck className="w-4 h-4 inline mr-2" />
                     {t('tools.orderFulfillment.shipOrder', 'Ship Order')}
@@ -1129,7 +1129,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
                 {selectedOrder.status === 'packing' && (
                   <button
                     onClick={() => { setShowOrderDetails(false); setShowShipModal(true); }}
-                    className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                    className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                   >
                     <Truck className="w-4 h-4 inline mr-2" />
                     {t('tools.orderFulfillment.shipOrder2', 'Ship Order')}
@@ -1263,7 +1263,7 @@ export const OrderFulfillmentTool: React.FC<OrderFulfillmentToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={shipOrder}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   <Truck className="w-4 h-4 inline mr-2" />
                   {t('tools.orderFulfillment.shipOrder3', 'Ship Order')}

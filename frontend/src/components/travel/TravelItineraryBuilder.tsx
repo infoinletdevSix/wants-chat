@@ -98,7 +98,7 @@ const TravelItineraryBuilder: React.FC<TravelItineraryBuilderProps> = ({
       case 'cultural': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
       case 'shopping': return 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200';
       case 'entertainment': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
-      case 'relaxation': return 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200';
+      case 'relaxation': return 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
     }
   };

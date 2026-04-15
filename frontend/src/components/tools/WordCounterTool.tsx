@@ -115,7 +115,7 @@ Reading time: ${stats.readingTime} min
       }`}
     >
       <div className="flex items-center gap-2 mb-2">
-        <div className="text-[#0D9488]">{icon}</div>
+        <div className="text-[#6096B4]">{icon}</div>
         <div className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{label}</div>
       </div>
       <div className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -134,9 +134,9 @@ Reading time: ${stats.readingTime} min
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.wordCounter.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.wordCounter.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -153,7 +153,7 @@ Reading time: ${stats.readingTime} min
               theme === 'dark'
                 ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                 : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 

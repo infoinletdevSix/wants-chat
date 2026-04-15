@@ -591,7 +591,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
           {cartItems.length > 0 && (
             <button
               onClick={() => setActiveTab('cart')}
-              className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center gap-2 relative"
+              className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center gap-2 relative"
             >
               <ShoppingCart className="w-4 h-4" />
               Cart
@@ -680,7 +680,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -714,7 +714,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -724,7 +724,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.partsOrder.allStatuses', 'All Statuses')}</option>
                   {ORDER_STATUSES.map((s) => (
@@ -751,7 +751,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div className="flex items-start gap-4">
                           <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                            <Package className="w-5 h-5 text-[#0D9488]" />
+                            <Package className="w-5 h-5 text-[#6096B4]" />
                           </div>
                           <div>
                             <div className="flex items-center gap-2 mb-1">
@@ -805,7 +805,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             >
                               {ORDER_STATUSES.map((s) => (
                                 <option key={s.status} value={s.status}>
@@ -854,7 +854,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <select
@@ -864,7 +864,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="all">{t('tools.partsOrder.allCategories', 'All Categories')}</option>
                 {PART_CATEGORIES.map((c) => (
@@ -876,7 +876,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
             </div>
             <button
               onClick={() => setShowNewPartForm(true)}
-              className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center gap-2"
             >
               <Plus className="w-4 h-4" />
               {t('tools.partsOrder.addPart', 'Add Part')}
@@ -974,7 +974,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                     </div>
                     <button
                       onClick={() => addToCart(part.id)}
-                      className="w-full py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center justify-center gap-2"
+                      className="w-full py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center justify-center gap-2"
                     >
                       <ShoppingCart className="w-4 h-4" />
                       {t('tools.partsOrder.addToCart', 'Add to Cart')}
@@ -1003,7 +1003,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
           <div className="flex justify-end">
             <button
               onClick={() => setShowNewSupplierForm(true)}
-              className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center gap-2"
             >
               <Plus className="w-4 h-4" />
               {t('tools.partsOrder.addSupplier', 'Add Supplier')}
@@ -1145,7 +1145,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="">{t('tools.partsOrder.selectSupplier', 'Select Supplier')}</option>
                       {suppliers.map((s) => (
@@ -1166,7 +1166,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {PRIORITIES.map((p) => (
                         <option key={p.priority} value={p.priority}>
@@ -1188,7 +1188,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div className={`border-t pt-4 space-y-2 ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
@@ -1212,7 +1212,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                     </div>
                     <div className={`flex justify-between pt-2 border-t font-bold ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
                       <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{t('tools.partsOrder.total', 'Total:')}</span>
-                      <span className="text-[#0D9488]">{formatCurrency(cartTotals.total)}</span>
+                      <span className="text-[#6096B4]">{formatCurrency(cartTotals.total)}</span>
                     </div>
                   </div>
                   <button
@@ -1220,7 +1220,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                     disabled={cartItems.length === 0 || !selectedSupplierId}
                     className={`w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 ${
                       cartItems.length > 0 && selectedSupplierId
-                        ? t('tools.partsOrder.bg0d9488TextWhiteHover', 'bg-[#0D9488] text-white hover:bg-[#0F766E]') : 'bg-gray-400 text-gray-200 cursor-not-allowed'
+                        ? t('tools.partsOrder.bg0d9488TextWhiteHover', 'bg-[#6096B4] text-white hover:bg-[#4C7F98]') : 'bg-gray-400 text-gray-200 cursor-not-allowed'
                     }`}
                   >
                     <CheckCircle className="w-5 h-5" />
@@ -1260,7 +1260,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1274,7 +1274,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {PART_CATEGORIES.map((c) => (
                         <option key={c.category} value={c.category}>
@@ -1296,7 +1296,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-4">
@@ -1313,7 +1313,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1328,7 +1328,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1343,7 +1343,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1360,7 +1360,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="flex justify-end gap-3 pt-4">
@@ -1374,7 +1374,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={addPart}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.partsOrder.addPart2', 'Add Part')}
                   </button>
@@ -1411,7 +1411,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -1427,7 +1427,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1442,7 +1442,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1458,7 +1458,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -1474,7 +1474,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1489,7 +1489,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1504,7 +1504,7 @@ export const PartsOrderTool: React.FC<PartsOrderToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={addSupplier}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.partsOrder.addSupplier2', 'Add Supplier')}
                   </button>

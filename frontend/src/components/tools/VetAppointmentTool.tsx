@@ -360,7 +360,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -413,7 +413,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
                   onClick={() => setViewMode(mode as typeof viewMode)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     viewMode === mode
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -425,7 +425,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
             </div>
             <button
               onClick={() => setShowForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.vetAppointment.newAppointment', 'New Appointment')}
@@ -505,7 +505,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
                 </h2>
                 <button
                   onClick={() => setSelectedDate(new Date())}
-                  className="text-sm text-[#0D9488] hover:underline"
+                  className="text-sm text-[#6096B4] hover:underline"
                 >
                   {t('tools.vetAppointment.today2', 'Today')}
                 </button>
@@ -565,7 +565,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
                         key={i}
                         className={`text-center py-2 rounded ${
                           date.toDateString() === new Date().toDateString()
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'
                         }`}
                       >
@@ -628,7 +628,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <select
@@ -897,7 +897,7 @@ export const VetAppointmentTool: React.FC<VetAppointmentToolProps> = ({ uiConfig
 
                   <button
                     onClick={addAppointment}
-                    className="w-full py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+                    className="w-full py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
                   >
                     {editingAppointment ? t('tools.vetAppointment.updateAppointment', 'Update Appointment') : t('tools.vetAppointment.scheduleAppointment', 'Schedule Appointment')}
                   </button>

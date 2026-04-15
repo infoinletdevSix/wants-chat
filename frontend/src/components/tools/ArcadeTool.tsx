@@ -210,7 +210,7 @@ export const ArcadeTool: React.FC<ArcadeToolProps> = ({ uiConfig }) => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -219,9 +219,9 @@ export const ArcadeTool: React.FC<ArcadeToolProps> = ({ uiConfig }) => {
     <div className="space-y-6">
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">
             {isEditFromGallery ? t('tools.arcade.dataRestoredFromYourSaved', 'Data restored from your saved gallery') : t('tools.arcade.dataLoadedFromAiResponse', 'Data loaded from AI response')}
           </span>
         </div>
@@ -229,7 +229,7 @@ export const ArcadeTool: React.FC<ArcadeToolProps> = ({ uiConfig }) => {
 
       <div className="flex justify-between items-start mb-6">
         <div className="flex-1 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
             <Gamepad2 className="w-8 h-8 text-white" />
           </div>
           <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -277,7 +277,7 @@ export const ArcadeTool: React.FC<ArcadeToolProps> = ({ uiConfig }) => {
           </span>
         </div>
         <div className={`${cardClass} flex items-center gap-2`}>
-          <Trophy className="w-5 h-5 text-[#0D9488]" />
+          <Trophy className="w-5 h-5 text-[#6096B4]" />
           <span className={isDark ? 'text-white' : 'text-gray-900'}>
             High: {highScore}
           </span>
@@ -306,8 +306,8 @@ export const ArcadeTool: React.FC<ArcadeToolProps> = ({ uiConfig }) => {
               <div
                 key={i}
                 className={`w-5 h-5 rounded-sm ${
-                  isHead ? 'bg-[#0D9488]' :
-                  isSnake ? 'bg-[#14B8A6]' :
+                  isHead ? 'bg-[#6096B4]' :
+                  isSnake ? 'bg-[#75AAC1]' :
                   isFood ? 'bg-red-500' :
                   isDark ? 'bg-[#1a1a1a]' : 'bg-white'
                 }`}
@@ -327,7 +327,7 @@ export const ArcadeTool: React.FC<ArcadeToolProps> = ({ uiConfig }) => {
         <button
           onClick={() => setIsPaused(p => !p)}
           disabled={gameOver}
-          className="flex items-center gap-2 px-6 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50"
+          className="flex items-center gap-2 px-6 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50"
         >
           {isPaused ? <Play className="w-5 h-5" /> : <Pause className="w-5 h-5" />}
           {isPaused ? t('tools.arcade.play', 'Play') : t('tools.arcade.pause', 'Pause')}

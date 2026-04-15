@@ -74,7 +74,7 @@ const NFCScanner: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -89,14 +89,14 @@ const NFCScanner: React.FC = () => {
             <Nfc className="w-10 h-10 text-cyan-400" />
             NFC Scanner
           </h1>
-          <p className="text-teal-200">Scan and read NFC tags using Web NFC API</p>
+          <p className="text-primary-200">Scan and read NFC tags using Web NFC API</p>
         </motion.div>
 
         {/* Main Scanner Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
         >
           {/* Scanner Visual */}
           <div className="flex flex-col items-center mb-8">
@@ -111,7 +111,7 @@ const NFCScanner: React.FC = () => {
                     transition={{ duration: 1.5, repeat: Infinity }}
                   />
                   <motion.div
-                    className="absolute inset-0 rounded-full border-4 border-teal-400"
+                    className="absolute inset-0 rounded-full border-4 border-primary-400"
                     initial={{ scale: 0.8, opacity: 0.8 }}
                     animate={{ scale: 1.5, opacity: 0 }}
                     transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
@@ -129,10 +129,10 @@ const NFCScanner: React.FC = () => {
               <motion.div
                 className={`absolute inset-0 rounded-full flex items-center justify-center ${
                   isScanning
-                    ? 'bg-gradient-to-br from-cyan-500 to-teal-500'
+                    ? 'bg-gradient-to-br from-cyan-500 to-primary-500'
                     : nfcData
                     ? 'bg-gradient-to-br from-green-500 to-emerald-500'
-                    : 'bg-gradient-to-br from-teal-700 to-cyan-700'
+                    : 'bg-gradient-to-br from-primary-700 to-cyan-700'
                 } shadow-2xl`}
                 animate={{
                   scale: isScanning ? [1, 1.05, 1] : 1,
@@ -155,7 +155,7 @@ const NFCScanner: React.FC = () => {
 
               {/* Status Badge */}
               <motion.div
-                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-sm border border-teal-400/30"
+                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-sm border border-primary-400/30"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
@@ -173,7 +173,7 @@ const NFCScanner: React.FC = () => {
                 className={`px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                   isScanning
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                    : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
+                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
                 } shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
               >
                 {isScanning ? 'Stop Scanning' : 'Start Scanning'}
@@ -184,7 +184,7 @@ const NFCScanner: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   onClick={clearData}
-                  className="px-6 py-4 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-teal-400/30 transition-all"
+                  className="px-6 py-4 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-primary-400/30 transition-all"
                 >
                   Clear Data
                 </motion.button>
@@ -197,7 +197,7 @@ const NFCScanner: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20"
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary-400/20"
             >
               <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -206,26 +206,26 @@ const NFCScanner: React.FC = () => {
               <div className="space-y-3">
                 {nfcData.serialNumber && (
                   <div className="flex justify-between items-center">
-                    <span className="text-teal-200">Serial Number:</span>
+                    <span className="text-primary-200">Serial Number:</span>
                     <span className="text-white font-mono text-sm">{nfcData.serialNumber}</span>
                   </div>
                 )}
                 {nfcData.type && (
                   <div className="flex justify-between items-center">
-                    <span className="text-teal-200">Type:</span>
+                    <span className="text-primary-200">Type:</span>
                     <span className="text-white">{nfcData.type}</span>
                   </div>
                 )}
                 {nfcData.records && nfcData.records.length > 0 && (
                   <div>
-                    <span className="text-teal-200">Records:</span>
+                    <span className="text-primary-200">Records:</span>
                     <div className="mt-2 text-white text-sm">
                       {nfcData.records.length} record(s) found
                     </div>
                   </div>
                 )}
                 <div className="flex justify-between items-center">
-                  <span className="text-teal-200">Scanned:</span>
+                  <span className="text-primary-200">Scanned:</span>
                   <span className="text-white text-sm">
                     {new Date(nfcData.timestamp).toLocaleTimeString()}
                   </span>
@@ -299,28 +299,28 @@ const NFCScanner: React.FC = () => {
           transition={{ delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6"
         >
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 backdrop-blur-sm border border-teal-400/20 rounded-xl p-4">
+          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 backdrop-blur-sm border border-primary-400/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-2">
-              <Nfc className="w-5 h-5 text-teal-400" />
+              <Nfc className="w-5 h-5 text-primary-400" />
               <h3 className="text-white font-semibold">Read NFC Tags</h3>
             </div>
-            <p className="text-teal-200 text-sm">Scan and read data from NFC tags</p>
+            <p className="text-primary-200 text-sm">Scan and read data from NFC tags</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 backdrop-blur-sm border border-teal-400/20 rounded-xl p-4">
+          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 backdrop-blur-sm border border-primary-400/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-2">
               <Smartphone className="w-5 h-5 text-cyan-400" />
               <h3 className="text-white font-semibold">Mobile Only</h3>
             </div>
-            <p className="text-teal-200 text-sm">Requires Android device with NFC hardware</p>
+            <p className="text-primary-200 text-sm">Requires Android device with NFC hardware</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 backdrop-blur-sm border border-teal-400/20 rounded-xl p-4">
+          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 backdrop-blur-sm border border-primary-400/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-2">
-              <Info className="w-5 h-5 text-teal-400" />
+              <Info className="w-5 h-5 text-primary-400" />
               <h3 className="text-white font-semibold">Tag Information</h3>
             </div>
-            <p className="text-teal-200 text-sm">View serial number and tag data</p>
+            <p className="text-primary-200 text-sm">View serial number and tag data</p>
           </div>
         </motion.div>
 
@@ -335,7 +335,7 @@ const NFCScanner: React.FC = () => {
             <Info className="w-5 h-5 text-blue-400" />
             How to Use NFC Scanner
           </h3>
-          <div className="space-y-2 text-teal-200 text-sm">
+          <div className="space-y-2 text-primary-200 text-sm">
             <ol className="space-y-2 ml-4">
               <li className="flex items-start gap-2">
                 <span className="text-cyan-400 font-bold">1.</span>

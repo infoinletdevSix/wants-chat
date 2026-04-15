@@ -134,7 +134,7 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <Hash size={28} />
           </div>
           <div>
@@ -150,7 +150,7 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
         {/* Input Section */}
         <div className={`p-6 rounded-xl border mb-6 ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-4">
-            <Calendar size={20} className={isDark ? 'text-teal-400' : 'text-teal-600'} />
+            <Calendar size={20} className={isDark ? 'text-primary-400' : 'text-primary-600'} />
             <label className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {t('tools.luckyNumber.enterYourBirthDate', 'Enter Your Birth Date')}
             </label>
@@ -164,16 +164,16 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
               max={new Date().toISOString().split('T')[0]}
               className={`flex-1 px-4 py-3 rounded-xl border transition-colors ${
                 isDark
-                  ? 'bg-gray-700 border-gray-600 text-gray-100 focus:border-teal-500'
-                  : 'bg-white border-gray-300 text-gray-900 focus:border-teal-500'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500/20`}
+                  ? 'bg-gray-700 border-gray-600 text-gray-100 focus:border-primary-500'
+                  : 'bg-white border-gray-300 text-gray-900 focus:border-primary-500'
+              } focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
             />
             <button
               onClick={calculateLuckyNumbers}
               disabled={!birthDate}
               className={`px-6 py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 birthDate
-                  ? 'bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white shadow-lg hover:shadow-xl'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-lg hover:shadow-xl'
                   : isDark
                   ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
@@ -218,11 +218,11 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {/* Life Path Number */}
-                <div className={`p-4 rounded-xl text-center ${isDark ? 'bg-teal-900/30 border border-teal-700' : 'bg-teal-50 border border-teal-200'}`}>
-                  <div className={`text-4xl font-bold mb-2 ${isDark ? 'text-teal-300' : 'text-teal-600'}`}>
+                <div className={`p-4 rounded-xl text-center ${isDark ? 'bg-primary-900/30 border border-primary-700' : 'bg-primary-50 border border-primary-200'}`}>
+                  <div className={`text-4xl font-bold mb-2 ${isDark ? 'text-primary-300' : 'text-primary-600'}`}>
                     {luckyNumbers.primary}
                   </div>
-                  <div className={`text-xs font-medium ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+                  <div className={`text-xs font-medium ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
                     {t('tools.luckyNumber.lifePath', 'Life Path')}
                   </div>
                   {showInfo && (
@@ -290,8 +290,8 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
                     key={idx}
                     className={`w-14 h-14 flex items-center justify-center rounded-full text-xl font-bold ${
                       isDark
-                        ? 'bg-gradient-to-br from-teal-600 to-teal-800 text-white shadow-lg'
-                        : 'bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-lg'
+                        ? 'bg-gradient-to-br from-primary-600 to-primary-800 text-white shadow-lg'
+                        : 'bg-gradient-to-br from-primary-400 to-primary-600 text-white shadow-lg'
                     }`}
                   >
                     {num}
@@ -305,8 +305,8 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
 
             {/* Life Path Meaning */}
             {showInfo && (
-              <div className={`p-6 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-                <h3 className={`font-semibold mb-3 ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+              <div className={`p-6 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+                <h3 className={`font-semibold mb-3 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   Life Path {luckyNumbers.primary}: {getNumerologyInfo(luckyNumbers.primary).meaning}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -314,7 +314,7 @@ export const LuckyNumberTool: React.FC<LuckyNumberToolProps> = ({ uiConfig }) =>
                     <span
                       key={idx}
                       className={`px-3 py-1 rounded-full text-sm ${
-                        isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-700'
+                        isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-700'
                       }`}
                     >
                       {trait}

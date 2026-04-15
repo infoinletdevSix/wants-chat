@@ -164,8 +164,8 @@ Please provide a well-structured, professional ${selectedSection?.label} section
   return (
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-          <Briefcase className="w-6 h-6 text-[#0D9488]" />
+        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+          <Briefcase className="w-6 h-6 text-[#6096B4]" />
         </div>
         <div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -175,7 +175,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
             {t('tools.businessPlan.generateProfessionalBusinessPlanSections', 'Generate professional business plan sections with AI')}
           </p>
           {isPrefilled && (
-            <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+            <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
               <Sparkles className="w-3 h-3" />
               <span>{t('tools.businessPlan.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
             </div>
@@ -200,7 +200,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             />
           </div>
 
@@ -218,7 +218,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             />
           </div>
         </div>
@@ -235,7 +235,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
           >
             {sectionTypes.map((section) => (
               <option key={section.value} value={section.value}>
@@ -259,7 +259,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] resize-none`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] resize-none`}
           />
         </div>
 
@@ -277,7 +277,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
           />
         </div>
 
@@ -295,7 +295,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] resize-none`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] resize-none`}
           />
         </div>
 
@@ -318,7 +318,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
           <button
             onClick={handleGenerate}
             disabled={isGenerating || !businessName.trim() || !industry.trim()}
-            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#0D9488]/20"
+            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#6096B4]/20"
           >
             {isGenerating ? (
               <>
@@ -370,7 +370,7 @@ Please provide a well-structured, professional ${selectedSection?.label} section
                   disabled={isSaving}
                   className={`flex items-center gap-2 px-3 py-1 rounded-lg transition-colors text-sm ${
                     isSaving
-                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.businessPlan.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.businessPlan.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                   }`}
                 >
                   {isSaving ? (

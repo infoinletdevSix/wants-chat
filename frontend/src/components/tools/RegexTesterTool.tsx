@@ -226,9 +226,9 @@ export const RegexTesterTool: React.FC<RegexTesterToolProps> = ({ uiConfig }) =>
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.regexTester.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.regexTester.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
           </div>
         )}
 
@@ -247,7 +247,7 @@ export const RegexTesterTool: React.FC<RegexTesterToolProps> = ({ uiConfig }) =>
                 theme === 'dark'
                   ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                   : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <button
               onClick={handleCopyPattern}
@@ -273,7 +273,7 @@ export const RegexTesterTool: React.FC<RegexTesterToolProps> = ({ uiConfig }) =>
                 key={flag}
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg cursor-pointer transition-colors ${
                   enabled
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -322,7 +322,7 @@ export const RegexTesterTool: React.FC<RegexTesterToolProps> = ({ uiConfig }) =>
                 <button
                   key={example.name}
                   onClick={() => handleExampleSelect(example.pattern)}
-                  className={`w-full text-left px-4 py-2 hover:bg-[#0D9488]/20 transition-colors ${
+                  className={`w-full text-left px-4 py-2 hover:bg-[#6096B4]/20 transition-colors ${
                     theme === 'dark' ? 'text-white' : 'text-gray-900'
                   } first:rounded-t-lg last:rounded-b-lg`}
                 >
@@ -349,7 +349,7 @@ export const RegexTesterTool: React.FC<RegexTesterToolProps> = ({ uiConfig }) =>
               theme === 'dark'
                 ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                 : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -395,7 +395,7 @@ export const RegexTesterTool: React.FC<RegexTesterToolProps> = ({ uiConfig }) =>
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className={`px-2 py-1 rounded text-xs font-bold bg-[#0D9488] text-white`}>
+                    <span className={`px-2 py-1 rounded text-xs font-bold bg-[#6096B4] text-white`}>
                       #{i + 1}
                     </span>
                     <div className="flex-1">

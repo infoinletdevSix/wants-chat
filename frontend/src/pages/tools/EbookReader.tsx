@@ -155,7 +155,7 @@ const EbookReader: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -165,10 +165,10 @@ const EbookReader: React.FC = () => {
           <>
             <div className="text-center mb-8">
               <div className="flex items-center justify-center mb-4">
-                <BookOpen className="w-12 h-12 text-teal-400" />
+                <BookOpen className="w-12 h-12 text-primary-400" />
               </div>
               <h1 className="text-4xl font-bold text-white mb-2">E-Book Reader</h1>
-              <p className="text-teal-200">Your personal digital library</p>
+              <p className="text-primary-200">Your personal digital library</p>
             </div>
 
             {/* Upload button */}
@@ -182,7 +182,7 @@ const EbookReader: React.FC = () => {
               />
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full px-6 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+                className="w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
               >
                 <Upload className="w-5 h-5" />
                 Upload Book (TXT, PDF, EPUB)
@@ -192,9 +192,9 @@ const EbookReader: React.FC = () => {
             {/* Books grid */}
             {books.length === 0 ? (
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 text-center border border-white/20">
-                <BookOpen className="w-16 h-16 text-teal-400 mx-auto mb-4" />
+                <BookOpen className="w-16 h-16 text-primary-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">No books yet</h3>
-                <p className="text-teal-200 mb-6">Upload your first book to start reading</p>
+                <p className="text-primary-200 mb-6">Upload your first book to start reading</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -208,9 +208,9 @@ const EbookReader: React.FC = () => {
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-white mb-2">{book.title}</h3>
                         {book.author && (
-                          <p className="text-teal-300 text-sm mb-2">{book.author}</p>
+                          <p className="text-primary-300 text-sm mb-2">{book.author}</p>
                         )}
-                        <span className="inline-block px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-xs font-medium uppercase">
+                        <span className="inline-block px-3 py-1 bg-primary-500/30 text-primary-200 rounded-full text-xs font-medium uppercase">
                           {book.type}
                         </span>
                       </div>
@@ -218,20 +218,20 @@ const EbookReader: React.FC = () => {
 
                     <div className="space-y-2 mb-4">
                       <div className="flex justify-between text-sm">
-                        <span className="text-teal-300">Progress</span>
+                        <span className="text-primary-300">Progress</span>
                         <span className="text-white font-medium">
                           {Math.round((book.currentPage / book.totalPages) * 100)}%
                         </span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
                         <div
-                          className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full transition-all"
+                          className="bg-gradient-to-r from-primary-500 to-cyan-500 h-2 rounded-full transition-all"
                           style={{ width: `${(book.currentPage / book.totalPages) * 100}%` }}
                         />
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between text-sm text-teal-300">
+                    <div className="flex items-center justify-between text-sm text-primary-300">
                       <span>Page {book.currentPage + 1} of {book.totalPages}</span>
                       <button
                         onClick={(e) => {
@@ -325,7 +325,7 @@ const EbookReader: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {/* Font size */}
                   <div>
-                    <label className="block text-sm font-medium text-teal-300 mb-3">Font Size</label>
+                    <label className="block text-sm font-medium text-primary-300 mb-3">Font Size</label>
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => updateBookSettings({ fontSize: Math.max(12, selectedBook.fontSize - 2) })}
@@ -345,7 +345,7 @@ const EbookReader: React.FC = () => {
 
                   {/* Theme */}
                   <div>
-                    <label className="block text-sm font-medium text-teal-300 mb-3">Theme</label>
+                    <label className="block text-sm font-medium text-primary-300 mb-3">Theme</label>
                     <div className="flex gap-2">
                       <button
                         onClick={() => updateBookSettings({ theme: 'light' })}
@@ -384,14 +384,14 @@ const EbookReader: React.FC = () => {
 
                   {/* Jump to page */}
                   <div>
-                    <label className="block text-sm font-medium text-teal-300 mb-3">Jump to Page</label>
+                    <label className="block text-sm font-medium text-primary-300 mb-3">Jump to Page</label>
                     <input
                       type="number"
                       min="1"
                       max={selectedBook.totalPages}
                       value={selectedBook.currentPage + 1}
                       onChange={(e) => goToPage(parseInt(e.target.value) - 1)}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                     />
                   </div>
                 </div>
@@ -412,7 +412,7 @@ const EbookReader: React.FC = () => {
                 </div>
 
                 {selectedBook.bookmarks.length === 0 ? (
-                  <p className="text-teal-300 text-center py-8">No bookmarks yet</p>
+                  <p className="text-primary-300 text-center py-8">No bookmarks yet</p>
                 ) : (
                   <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
                     {selectedBook.bookmarks.sort((a, b) => a - b).map(page => (
@@ -422,7 +422,7 @@ const EbookReader: React.FC = () => {
                           goToPage(page);
                           setShowBookmarks(false);
                         }}
-                        className="px-4 py-3 bg-white/10 rounded-lg hover:bg-teal-500 transition-all text-white font-medium"
+                        className="px-4 py-3 bg-white/10 rounded-lg hover:bg-primary-500 transition-all text-white font-medium"
                       >
                         Page {page + 1}
                       </button>
@@ -450,7 +450,7 @@ const EbookReader: React.FC = () => {
               <button
                 onClick={() => goToPage(selectedBook.currentPage - 1)}
                 disabled={selectedBook.currentPage === 0}
-                className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
+                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
               >
                 <ChevronLeft className="w-5 h-5" />
                 Previous Page
@@ -458,7 +458,7 @@ const EbookReader: React.FC = () => {
               <button
                 onClick={() => goToPage(selectedBook.currentPage + 1)}
                 disabled={selectedBook.currentPage >= selectedBook.totalPages - 1}
-                className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
+                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"
               >
                 Next Page
                 <ChevronRight className="w-5 h-5" />

@@ -524,9 +524,9 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.consultantTime.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.consultantTime.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -534,7 +534,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Clock className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -621,13 +621,13 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                 </select>
               </div>
               <div className="flex items-center gap-4">
-                <span className={`text-2xl font-mono font-bold ${isTimerRunning ? 'text-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                <span className={`text-2xl font-mono font-bold ${isTimerRunning ? 'text-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                   {formatElapsedTime(elapsedTime)}
                 </span>
                 {!isTimerRunning ? (
                   <button
                     onClick={startTimer}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                   >
                     <Play className="w-4 h-4" />
                     {t('tools.consultantTime.start', 'Start')}
@@ -661,7 +661,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.consultantTime.invoiced', 'Invoiced')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(stats.totalRevenue)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(stats.totalRevenue)}</p>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.consultantTime.pending', 'Pending')}</p>
@@ -682,7 +682,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -748,7 +748,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
               </div>
               <button
                 onClick={() => setShowEntryForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.consultantTime.addEntry', 'Add Entry')}
@@ -823,7 +823,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                               {entry.hours.toFixed(1)}h
                             </p>
                             {entry.billable && (
-                              <p className="text-sm text-[#0D9488] font-medium">
+                              <p className="text-sm text-[#6096B4] font-medium">
                                 {formatCurrency(entry.totalAmount)}
                               </p>
                             )}
@@ -874,7 +874,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
               </h2>
               <button
                 onClick={() => setShowConsultantForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.consultantTime.addConsultant', 'Add Consultant')}
@@ -910,7 +910,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                     <div className={`text-sm space-y-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       <p>{formatCurrency(consultant.hourlyRate)}/hr</p>
                       <p>{consultantHours.toFixed(1)} hours logged</p>
-                      <p className="text-[#0D9488] font-medium">{formatCurrency(consultantRevenue)} revenue</p>
+                      <p className="text-[#6096B4] font-medium">{formatCurrency(consultantRevenue)} revenue</p>
                     </div>
                   </div>
                 );
@@ -928,7 +928,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
               </h2>
               <button
                 onClick={() => setShowProjectForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.consultantTime.addProject', 'Add Project')}
@@ -1015,7 +1015,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                         <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{consultant.name}</span>
                         <div className="text-right">
                           <p className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{hours.toFixed(1)}h</p>
-                          <p className="text-sm text-[#0D9488]">{formatCurrency(revenue)}</p>
+                          <p className="text-sm text-[#6096B4]">{formatCurrency(revenue)}</p>
                         </div>
                       </div>
                     );
@@ -1038,7 +1038,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                         </div>
                         <div className="text-right">
                           <p className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{hours.toFixed(1)}h</p>
-                          <p className="text-sm text-[#0D9488]">{formatCurrency(revenue)}</p>
+                          <p className="text-sm text-[#6096B4]">{formatCurrency(revenue)}</p>
                         </div>
                       </div>
                     );
@@ -1192,7 +1192,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                     type="checkbox"
                     checked={newEntry.billable}
                     onChange={(e) => setNewEntry({ ...newEntry, billable: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.consultantTime.billable', 'Billable')}</span>
                 </label>
@@ -1208,7 +1208,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={addTimeEntry}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.consultantTime.addEntry2', 'Add Entry')}
                 </button>
@@ -1284,7 +1284,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={addConsultant}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.consultantTime.addConsultant3', 'Add Consultant')}
                 </button>
@@ -1359,7 +1359,7 @@ export const ConsultantTimeTool: React.FC<ConsultantTimeToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={addProject}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.consultantTime.addProject3', 'Add Project')}
                 </button>

@@ -327,7 +327,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
           {/* Header */}
           <div className="flex items-center justify-between gap-3 mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Battery className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -350,9 +350,9 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.batteryLifeEstimator.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.batteryLifeEstimator.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
             </div>
           )}
 
@@ -376,7 +376,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                   onClick={() => setDeviceType(type)}
                   className={`flex flex-col items-center py-3 px-2 rounded-lg font-medium transition-colors ${
                     deviceType === type
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -428,7 +428,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -445,7 +445,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -463,7 +463,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                   onClick={() => toggleActivity(activity)}
                   className={`py-2 px-3 rounded-lg font-medium transition-colors text-left ${
                     selectedActivities.includes(activity)
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -507,7 +507,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                     <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>hrs</span>
                   </div>
@@ -532,7 +532,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <div className="flex gap-1">
                 {[5, 20, 45, 65, 100].map((watt) => (
@@ -541,7 +541,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                     onClick={() => setChargerWattage(watt.toString())}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       chargerWattage === watt.toString()
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -558,7 +558,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateBatteryLife}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Zap className="w-5 h-5" />
               {t('tools.batteryLifeEstimator.calculateBatteryLife', 'Calculate Battery Life')}
@@ -637,7 +637,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                         </div>
                         <div className={`w-full h-2 rounded-full ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'}`}>
                           <div
-                            className="h-2 rounded-full bg-[#0D9488] transition-all duration-500"
+                            className="h-2 rounded-full bg-[#6096B4] transition-all duration-500"
                             style={{ width: `${item.percentage}%` }}
                           />
                         </div>
@@ -648,11 +648,11 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
               )}
 
               {/* Charging Time */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.batteryLifeEstimator.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.batteryLifeEstimator.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <div className="flex items-center gap-3">
-                  <BatteryCharging className="w-8 h-8 text-[#0D9488]" />
+                  <BatteryCharging className="w-8 h-8 text-[#6096B4]" />
                   <div>
                     <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       Estimated Charging Time ({chargerWattage}W)
@@ -698,7 +698,7 @@ export const BatteryLifeEstimatorTool: React.FC<BatteryLifeEstimatorToolProps> =
                         theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                       }`}
                     >
-                      <span className="text-[#0D9488] mt-0.5">-</span>
+                      <span className="text-[#6096B4] mt-0.5">-</span>
                       {tip}
                     </li>
                   ))}

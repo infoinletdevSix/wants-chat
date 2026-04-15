@@ -522,13 +522,13 @@ Thank you for your business!
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClass = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`;
 
@@ -544,7 +544,7 @@ Thank you for your business!
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -554,8 +554,8 @@ Thank you for your business!
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Wrench className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Wrench className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -595,7 +595,7 @@ Thank you for your business!
           />
           <button
             onClick={createNewWorkOrder}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.plumbingService.newOrder', 'New Order')}
@@ -629,7 +629,7 @@ Thank you for your business!
                   key={order.id}
                   className={`p-3 rounded-lg cursor-pointer ${
                     currentOrder.id === order.id
-                      ? 'bg-[#0D9488]/20 border border-[#0D9488]'
+                      ? 'bg-[#6096B4]/20 border border-[#6096B4]'
                       : theme === 'dark' ? 'bg-gray-700 hover:bg-gray-650' : 'bg-gray-50 hover:bg-gray-100'
                   }`}
                   onClick={() => loadWorkOrder(order)}
@@ -684,7 +684,7 @@ Thank you for your business!
               onClick={() => toggleSection('customer')}
             >
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-[#0D9488]" />
+                <User className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.customerInformation', 'Customer Information')}
                 </span>
@@ -777,7 +777,7 @@ Thank you for your business!
               onClick={() => toggleSection('job')}
             >
               <div className="flex items-center gap-2">
-                <ClipboardList className="w-5 h-5 text-[#0D9488]" />
+                <ClipboardList className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.jobDetailsDispatch', 'Job Details & Dispatch')}
                 </span>
@@ -932,7 +932,7 @@ Thank you for your business!
               onClick={() => toggleSection('materials')}
             >
               <div className="flex items-center gap-2">
-                <Package className="w-5 h-5 text-[#0D9488]" />
+                <Package className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.materialsParts', 'Materials & Parts')}
                 </span>
@@ -999,7 +999,7 @@ Thank you for your business!
 
                 <button
                   onClick={addMaterial}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.plumbingService.addMaterialPart', 'Add Material/Part')}
@@ -1015,7 +1015,7 @@ Thank you for your business!
               onClick={() => toggleSection('labor')}
             >
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-[#0D9488]" />
+                <Clock className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.laborTimeTracking', 'Labor Time Tracking')}
                 </span>
@@ -1083,7 +1083,7 @@ Thank you for your business!
 
                 <button
                   onClick={addLabor}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.plumbingService.addLaborEntry', 'Add Labor Entry')}
@@ -1099,7 +1099,7 @@ Thank you for your business!
               onClick={() => toggleSection('photos')}
             >
               <div className="flex items-center gap-2">
-                <Camera className="w-5 h-5 text-[#0D9488]" />
+                <Camera className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.beforeAfterPhotos', 'Before/After Photos')}
                 </span>
@@ -1144,7 +1144,7 @@ Thank you for your business!
                       onClick={() => addPhoto('before')}
                       className={`flex items-center gap-2 px-4 py-2 border-2 border-dashed rounded-lg w-full justify-center ${
                         theme === 'dark'
-                          ? t('tools.plumbingService.borderGray600TextGray', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.plumbingService.borderGray300TextGray', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                          ? t('tools.plumbingService.borderGray600TextGray', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.plumbingService.borderGray300TextGray', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
                       }`}
                     >
                       <Plus className="w-4 h-4" />
@@ -1183,7 +1183,7 @@ Thank you for your business!
                       onClick={() => addPhoto('after')}
                       className={`flex items-center gap-2 px-4 py-2 border-2 border-dashed rounded-lg w-full justify-center ${
                         theme === 'dark'
-                          ? t('tools.plumbingService.borderGray600TextGray2', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.plumbingService.borderGray300TextGray2', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                          ? t('tools.plumbingService.borderGray600TextGray2', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.plumbingService.borderGray300TextGray2', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
                       }`}
                     >
                       <Plus className="w-4 h-4" />
@@ -1222,7 +1222,7 @@ Thank you for your business!
                     type="checkbox"
                     checked={currentOrder.isEmergency}
                     onChange={e => setCurrentOrder(prev => ({ ...prev, isEmergency: e.target.checked }))}
-                    className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                     {t('tools.plumbingService.thisIsAnEmergencyService', 'This is an emergency service call')}
@@ -1252,7 +1252,7 @@ Thank you for your business!
               onClick={() => toggleSection('warranty')}
             >
               <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-[#0D9488]" />
+                <Shield className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.warrantyInformation', 'Warranty Information')}
                 </span>
@@ -1336,7 +1336,7 @@ Thank you for your business!
               onClick={() => toggleSection('recurring')}
             >
               <div className="flex items-center gap-2">
-                <RefreshCw className="w-5 h-5 text-[#0D9488]" />
+                <RefreshCw className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.plumbingService.recurringServiceSchedule', 'Recurring Service Schedule')}
                 </span>
@@ -1359,7 +1359,7 @@ Thank you for your business!
                       ...prev,
                       recurringSchedule: { ...prev.recurringSchedule, enabled: e.target.checked }
                     }))}
-                    className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                     {t('tools.plumbingService.enableRecurringServiceSchedule', 'Enable recurring service schedule')}
@@ -1418,7 +1418,7 @@ Thank you for your business!
           {/* Estimate vs Actual Comparison */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              <DollarSign className="w-5 h-5 text-[#0D9488]" />
+              <DollarSign className="w-5 h-5 text-[#6096B4]" />
               {t('tools.plumbingService.costSummary', 'Cost Summary')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -1447,7 +1447,7 @@ Thank you for your business!
               </div>
               <div>
                 <label className={labelClass}>{t('tools.plumbingService.actualTotal', 'Actual Total')}</label>
-                <div className={`px-4 py-2 rounded-lg font-bold ${theme === 'dark' ? t('tools.plumbingService.bg0d948820Text2dd4bf', 'bg-[#0D9488]/20 text-[#2DD4BF]') : t('tools.plumbingService.bg0d948810Text0d9488', 'bg-[#0D9488]/10 text-[#0D9488]')}`}>
+                <div className={`px-4 py-2 rounded-lg font-bold ${theme === 'dark' ? t('tools.plumbingService.bg0d948820Text2dd4bf', 'bg-[#6096B4]/20 text-[#75AAC1]') : t('tools.plumbingService.bg0d948810Text0d9488', 'bg-[#6096B4]/10 text-[#6096B4]')}`}>
                   ${grandTotal.toFixed(2)}
                 </div>
               </div>
@@ -1482,7 +1482,7 @@ Thank you for your business!
           {/* Payment Section */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              <DollarSign className="w-5 h-5 text-[#0D9488]" />
+              <DollarSign className="w-5 h-5 text-[#6096B4]" />
               {t('tools.plumbingService.paymentInformation', 'Payment Information')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1521,7 +1521,7 @@ Thank you for your business!
                   type="checkbox"
                   checked={currentOrder.customerSignature}
                   onChange={e => setCurrentOrder(prev => ({ ...prev, customerSignature: e.target.checked }))}
-                  className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                  className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                 />
                 <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                   {t('tools.plumbingService.customerSignatureObtained', 'Customer signature obtained')}
@@ -1533,7 +1533,7 @@ Thank you for your business!
           {/* Notes Section */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+              <FileText className="w-5 h-5 text-[#6096B4]" />
               {t('tools.plumbingService.additionalNotes', 'Additional Notes')}
             </h3>
             <textarea
@@ -1549,7 +1549,7 @@ Thank you for your business!
           <div className="flex flex-wrap gap-3">
             <button
               onClick={saveWorkOrder}
-              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20"
+              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20"
             >
               <Save className="w-4 h-4" />
               {t('tools.plumbingService.saveWorkOrder', 'Save Work Order')}

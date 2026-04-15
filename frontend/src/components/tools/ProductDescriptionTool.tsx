@@ -248,10 +248,10 @@ Format: Write the product description directly, without any additional formattin
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-teal-900/20' : t('tools.productDescription.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : t('tools.productDescription.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <ShoppingBag className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <ShoppingBag className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.productDescription.aiProductDescriptionGenerator', 'AI Product Description Generator')}</h3>
@@ -263,9 +263,9 @@ Format: Write the product description directly, without any additional formattin
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">
               {isEditFromGallery
                 ? t('tools.productDescription.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.productDescription.productDetailsLoadedFromYour', 'Product details loaded from your conversation')}
             </span>
@@ -282,7 +282,7 @@ Format: Write the product description directly, without any additional formattin
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
             placeholder={t('tools.productDescription.eGPremiumWirelessHeadphones', 'e.g., Premium Wireless Headphones')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -296,7 +296,7 @@ Format: Write the product description directly, without any additional formattin
             value={productType}
             onChange={(e) => setProductType(e.target.value)}
             placeholder={t('tools.productDescription.eGElectronicsClothingHome', 'e.g., Electronics, Clothing, Home Decor')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -310,7 +310,7 @@ Format: Write the product description directly, without any additional formattin
             onChange={(e) => setKeyFeatures(e.target.value)}
             placeholder={t('tools.productDescription.listTheMainFeaturesBenefits', 'List the main features, benefits, and specifications...')}
             rows={3}
-            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -324,7 +324,7 @@ Format: Write the product description directly, without any additional formattin
             value={targetAudience}
             onChange={(e) => setTargetAudience(e.target.value)}
             placeholder={t('tools.productDescription.eGTechEnthusiastsBusy', 'e.g., Tech enthusiasts, Busy professionals')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -335,7 +335,7 @@ Format: Write the product description directly, without any additional formattin
             <select
               value={tone}
               onChange={(e) => setTone(e.target.value)}
-              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {tones.map((t) => (
                 <option key={t.value} value={t.value}>
@@ -350,7 +350,7 @@ Format: Write the product description directly, without any additional formattin
             <select
               value={platform}
               onChange={(e) => setPlatform(e.target.value)}
-              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {platforms.map((p) => (
                 <option key={p.value} value={p.value}>
@@ -371,7 +371,7 @@ Format: Write the product description directly, without any additional formattin
                 onClick={() => setLength(l.value)}
                 className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                   length === l.value
-                    ? 'bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white'
+                    ? 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -394,7 +394,7 @@ Format: Write the product description directly, without any additional formattin
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !productName.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -452,7 +452,7 @@ Format: Write the product description directly, without any additional formattin
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-teal-900/30 hover:bg-teal-900/50 text-teal-300' : 'bg-teal-50 hover:bg-teal-100 text-teal-700'} rounded-lg transition-colors text-sm disabled:opacity-50`}
+                  className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-primary-900/30 hover:bg-primary-900/50 text-primary-300' : 'bg-primary-50 hover:bg-primary-100 text-primary-700'} rounded-lg transition-colors text-sm disabled:opacity-50`}
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.productDescription.save', 'Save')}
@@ -463,7 +463,7 @@ Format: Write the product description directly, without any additional formattin
               value={currentDescription}
               onChange={(e) => setCurrentDescription(e.target.value)}
               rows={8}
-              className={`w-full p-4 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-gray-200' : 'border-gray-200 bg-gray-50 text-gray-700'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-y leading-relaxed`}
+              className={`w-full p-4 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-gray-200' : 'border-gray-200 bg-gray-50 text-gray-700'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-y leading-relaxed`}
               placeholder={t('tools.productDescription.generatedDescriptionWillAppearHere', 'Generated description will appear here...')}
             />
           </div>

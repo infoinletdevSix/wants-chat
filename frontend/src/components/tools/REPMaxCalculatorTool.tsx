@@ -274,7 +274,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -287,7 +287,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
           {/* Header */}
           <div className="flex items-center justify-between gap-3 mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Dumbbell className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -314,9 +314,9 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.rEPMaxCalculator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.rEPMaxCalculator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
             </div>
           )}
 
@@ -326,7 +326,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
               onClick={() => setActiveTab('calculator')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
                 activeTab === 'calculator'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -339,7 +339,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
               onClick={() => setActiveTab('history')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
                 activeTab === 'history'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -362,7 +362,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                     onClick={() => setUnit('lbs')}
                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                       unit === 'lbs'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -374,7 +374,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                     onClick={() => setUnit('kg')}
                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                       unit === 'kg'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -397,7 +397,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                       onClick={() => setLiftType(lift)}
                       className={`py-3 px-4 rounded-lg font-medium transition-colors text-left ${
                         liftType === lift
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -427,7 +427,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               )}
@@ -449,7 +449,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -467,7 +467,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -484,7 +484,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                       onClick={() => setReps(rep.toString())}
                       className={`py-2 px-4 rounded-lg font-medium transition-colors ${
                         reps === rep.toString()
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -500,7 +500,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
               <div className="flex gap-3 mb-6">
                 <button
                   onClick={calculate}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Calculator className="w-5 h-5" />
                   {t('tools.rEPMaxCalculator.calculate1rm', 'Calculate 1RM')}
@@ -522,15 +522,15 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                 <div className="space-y-4">
                   {/* Main Result */}
                   <div
-                    className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                      isDark ? 'bg-gray-700' : t('tools.rEPMaxCalculator.bg0d948810', 'bg-[#0D9488]/10')
+                    className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                      isDark ? 'bg-gray-700' : t('tools.rEPMaxCalculator.bg0d948810', 'bg-[#6096B4]/10')
                     }`}
                   >
                     <div className="text-center">
                       <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.rEPMaxCalculator.estimatedOneRepMaxAverage', 'Estimated One-Rep Max (Average)')}
                       </div>
-                      <div className="text-5xl font-bold text-[#0D9488] mb-2">
+                      <div className="text-5xl font-bold text-[#6096B4] mb-2">
                         {result.average} {unit}
                       </div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -607,7 +607,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                   {/* Progressive Overload Suggestions */}
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                     <h3 className={`font-semibold mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                      <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+                      <TrendingUp className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.rEPMaxCalculator.progressiveOverloadSuggestions', 'Progressive Overload Suggestions')}
                     </h3>
                     <div className="space-y-3">
@@ -623,7 +623,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                             {suggestion.description}
                           </div>
                           {suggestion.target && (
-                            <div className="text-sm text-[#0D9488] font-semibold mt-1">
+                            <div className="text-sm text-[#6096B4] font-semibold mt-1">
                               Target: {suggestion.target} {unit}
                             </div>
                           )}
@@ -700,31 +700,31 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                 <div className={`mt-2 p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <div className={`text-sm space-y-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">1.</span>
+                      <span className="text-[#6096B4] font-bold">1.</span>
                       {t('tools.rEPMaxCalculator.alwaysWarmUpThoroughlyBefore', 'Always warm up thoroughly before attempting heavy lifts')}
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">2.</span>
+                      <span className="text-[#6096B4] font-bold">2.</span>
                       {t('tools.rEPMaxCalculator.useASpotterWhenTesting', 'Use a spotter when testing true 1RM, especially for bench press and squat')}
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">3.</span>
+                      <span className="text-[#6096B4] font-bold">3.</span>
                       {t('tools.rEPMaxCalculator.donTAttempt1rmTests', 'Don\'t attempt 1RM tests too frequently - once every 4-8 weeks is sufficient')}
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">4.</span>
+                      <span className="text-[#6096B4] font-bold">4.</span>
                       {t('tools.rEPMaxCalculator.useSafetyBarsOrPins', 'Use safety bars or pins in a power rack when lifting alone')}
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">5.</span>
+                      <span className="text-[#6096B4] font-bold">5.</span>
                       {t('tools.rEPMaxCalculator.prioritizeProperFormOverWeight', 'Prioritize proper form over weight - bad form increases injury risk')}
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">6.</span>
+                      <span className="text-[#6096B4] font-bold">6.</span>
                       {t('tools.rEPMaxCalculator.listenToYourBodyStop', 'Listen to your body - stop if you feel pain or excessive strain')}
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">7.</span>
+                      <span className="text-[#6096B4] font-bold">7.</span>
                       {t('tools.rEPMaxCalculator.useEstimatesFrom35', 'Use estimates from 3-5 rep maxes for safer progression planning')}
                     </p>
                   </div>
@@ -782,7 +782,7 @@ export function REPMaxCalculatorTool({ uiConfig }: REPMaxCalculatorToolProps) {
                           </div>
                           <div className="text-right flex items-start gap-2">
                             <div>
-                              <div className="text-2xl font-bold text-[#0D9488]">
+                              <div className="text-2xl font-bold text-[#6096B4]">
                                 {entry.oneRepMax} {entry.unit}
                               </div>
                               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

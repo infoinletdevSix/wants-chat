@@ -213,7 +213,7 @@ const PracticePage: React.FC = () => {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="text-center">
-          <div className="animate-spin h-8 w-8 border-2 border-teal-400 border-t-transparent rounded-full mx-auto mb-4"></div>
+          <div className="animate-spin h-8 w-8 border-2 border-primary-400 border-t-transparent rounded-full mx-auto mb-4"></div>
           <p className="text-white/60">Loading exercises...</p>
         </div>
       </div>
@@ -297,7 +297,7 @@ const PracticePage: React.FC = () => {
             {/* Filters */}
             <GlassCard hover={false}>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
                   <Filter className="h-5 w-5 text-white" />
                 </div>
                 <span className="text-lg font-semibold text-white">Filter Exercises</span>
@@ -346,7 +346,7 @@ const PracticePage: React.FC = () => {
                 <p className="text-sm text-white/60">
                   Showing {exercises.length} exercises
                 </p>
-                <Button onClick={startPracticeSession} disabled={exercises.length === 0} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+                <Button onClick={startPracticeSession} disabled={exercises.length === 0} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
                   <Zap className="h-4 w-4 mr-2" />
                   Start Practice Session
                 </Button>
@@ -451,7 +451,7 @@ const PracticePage: React.FC = () => {
                   </div>
                   <div className="w-32 h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300"
+                      className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
                       style={{ width: `${((currentExerciseIndex + 1) / exercises.length) * 100}%` }}
                     />
                   </div>
@@ -532,7 +532,7 @@ const PracticePage: React.FC = () => {
                       size="lg"
                       onClick={handleAnswerSubmit}
                       disabled={!selectedAnswer || submitExerciseMutation.isPending}
-                      className="min-w-32 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                      className="min-w-32 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                     >
                       {submitExerciseMutation.isPending ? 'Checking...' : 'Check Answer'}
                     </Button>
@@ -540,7 +540,7 @@ const PracticePage: React.FC = () => {
                     <Button
                       size="lg"
                       onClick={handleContinue}
-                      className={isCorrect ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600' : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'}
+                      className={isCorrect ? 'bg-gradient-to-r from-emerald-500 to-primary-500 hover:from-emerald-600 hover:to-primary-600' : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'}
                     >
                       {currentExerciseIndex === exercises.length - 1 ? 'Finish Session' : 'Continue'}
                     </Button>

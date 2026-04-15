@@ -359,7 +359,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
         <Card className={theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardHeader>
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Sun className="w-6 h-6 text-white" />
               </div>
               <CardTitle className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>
@@ -369,9 +369,9 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
           </CardHeader>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mx-6 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.sunAngleCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mx-6 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.sunAngleCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -399,7 +399,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -419,7 +419,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -463,7 +463,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -479,7 +479,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -500,7 +500,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
             {/* Calculate Button */}
             <button
               onClick={calculateSun}
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+              className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
             >
               <Sun className="w-5 h-5" />
               {t('tools.sunAngleCalculator.calculateSunPosition', 'Calculate Sun Position')}
@@ -558,7 +558,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                 {/* Sun Times */}
                 <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <div className="flex items-center gap-2 mb-4">
-                    <Clock className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                    <Clock className={`w-5 h-5 ${theme === 'dark' ? 'text-primary-400' : 'text-primary-600'}`} />
                     <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.sunAngleCalculator.sunTimes', 'Sun Times')}
                     </h4>
@@ -642,7 +642,7 @@ export const SunAngleCalculatorTool: React.FC<SunAngleCalculatorToolProps> = ({ 
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div className="flex-1">

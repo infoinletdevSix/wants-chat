@@ -95,7 +95,7 @@ const WeightChart: React.FC<WeightChartProps> = ({
           <Button 
             onClick={onLogWeight}
             size="sm"
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-primary-foreground"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
           >
             <Icon path={mdiPlus} size={0.6} className="mr-1" />
             Log Weight

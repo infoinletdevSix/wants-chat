@@ -400,9 +400,9 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.prayerRequest.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.prayerRequest.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -410,7 +410,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -461,7 +461,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -566,7 +566,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
               </div>
               <button
                 onClick={() => { resetRequestForm(); setEditingRequest(null); setShowRequestModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.prayerRequest.newRequest', 'New Request')}
@@ -617,7 +617,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handlePrayedFor(request)}
-                        className="p-2 rounded-lg bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20"
+                        className="p-2 rounded-lg bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20"
                         title={t('tools.prayerRequest.iPrayedForThis', 'I prayed for this')}
                       >
                         <Heart className="w-4 h-4" />
@@ -673,7 +673,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
               </h2>
               <button
                 onClick={() => { resetTeamForm(); setEditingTeamMember(null); setShowTeamModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.prayerRequest.addMember', 'Add Member')}
@@ -747,7 +747,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                       id="anonymous"
                       checked={requestForm.isAnonymous || false}
                       onChange={(e) => setRequestForm({ ...requestForm, isAnonymous: e.target.checked })}
-                      className="rounded text-[#0D9488]"
+                      className="rounded text-[#6096B4]"
                     />
                     <label htmlFor="anonymous" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       {t('tools.prayerRequest.anonymous', 'Anonymous')}
@@ -759,7 +759,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                       id="confidential"
                       checked={requestForm.isConfidential || false}
                       onChange={(e) => setRequestForm({ ...requestForm, isConfidential: e.target.checked })}
-                      className="rounded text-[#0D9488]"
+                      className="rounded text-[#6096B4]"
                     />
                     <label htmlFor="confidential" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       {t('tools.prayerRequest.confidential', 'Confidential')}
@@ -875,7 +875,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleSaveRequest}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingRequest ? t('tools.prayerRequest.saveChanges', 'Save Changes') : t('tools.prayerRequest.submitRequest', 'Submit Request')}
                 </button>
@@ -930,7 +930,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                     id="teamActive"
                     checked={teamForm.isActive !== false}
                     onChange={(e) => setTeamForm({ ...teamForm, isActive: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="teamActive" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.prayerRequest.activeMember', 'Active Member')}
@@ -946,7 +946,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleSaveTeamMember}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingTeamMember ? t('tools.prayerRequest.saveChanges2', 'Save Changes') : t('tools.prayerRequest.addMember2', 'Add Member')}
                 </button>
@@ -992,7 +992,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                     id="markAnswered"
                     checked={updateForm.markAnswered}
                     onChange={(e) => setUpdateForm({ ...updateForm, markAnswered: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="markAnswered" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.prayerRequest.markAsAnsweredPrayer', 'Mark as Answered Prayer')}
@@ -1008,7 +1008,7 @@ export const PrayerRequestTool: React.FC<PrayerRequestToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleAddUpdate}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {t('tools.prayerRequest.addUpdate2', 'Add Update')}
                 </button>

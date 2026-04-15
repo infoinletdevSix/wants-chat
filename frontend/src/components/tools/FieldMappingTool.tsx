@@ -409,7 +409,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
   if (isLoading) {
     return (
       <div className={`flex items-center justify-center h-64 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500 mr-3"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mr-3"></div>
         {t('tools.fieldMapping.loadingFieldData', 'Loading field data...')}
       </div>
     );
@@ -420,8 +420,8 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-lg ${isDark ? 'bg-teal-500/20' : 'bg-teal-100'}`}>
-            <Map className="w-6 h-6 text-teal-500" />
+          <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+            <Map className="w-6 h-6 text-primary-500" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -452,7 +452,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
           />
           <button
             onClick={() => setShowAddForm(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.fieldMapping.addField', 'Add Field')}
@@ -527,7 +527,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors ${
               activeTab === tab.id
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                   ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-300'
@@ -553,7 +553,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                 isDark
                   ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500'
                   : 'bg-white border-gray-200 text-gray-900 placeholder-gray-400'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              } focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
 
@@ -564,7 +564,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
               isDark
                 ? 'bg-gray-800 border-gray-700 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            } focus:outline-none focus:ring-2 focus:ring-primary-500`}
           >
             <option value="all">{t('tools.fieldMapping.allStatus', 'All Status')}</option>
             <option value="active">{t('tools.fieldMapping.active', 'Active')}</option>
@@ -580,7 +580,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
               isDark
                 ? 'bg-gray-800 border-gray-700 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            } focus:outline-none focus:ring-2 focus:ring-primary-500`}
           >
             <option value="all">{t('tools.fieldMapping.allSoilTypes', 'All Soil Types')}</option>
             {Object.entries(soilTypeLabels).map(([value, label]) => (
@@ -608,7 +608,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                 <div className="flex items-start justify-between">
                   <div className="flex items-start gap-3">
                     <div className={`p-2 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-                      <Map className="w-5 h-5 text-teal-500" />
+                      <Map className="w-5 h-5 text-primary-500" />
                     </div>
                     <div>
                       <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -689,7 +689,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
             </p>
             <button
               onClick={() => setShowZoneForm(true)}
-              className="flex items-center gap-2 px-3 py-1.5 bg-teal-500 text-white rounded-lg hover:bg-teal-600 text-sm"
+              className="flex items-center gap-2 px-3 py-1.5 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm"
             >
               <Plus className="w-4 h-4" />
               {t('tools.fieldMapping.addZone2', 'Add Zone')}
@@ -750,7 +750,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
             </p>
             <button
               onClick={() => setShowBoundaryForm(true)}
-              className="flex items-center gap-2 px-3 py-1.5 bg-teal-500 text-white rounded-lg hover:bg-teal-600 text-sm"
+              className="flex items-center gap-2 px-3 py-1.5 bg-primary-500 text-white rounded-lg hover:bg-primary-600 text-sm"
             >
               <Plus className="w-4 h-4" />
               {t('tools.fieldMapping.addBoundary2', 'Add Boundary')}
@@ -899,7 +899,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder={t('tools.fieldMapping.eGNorthPasture', 'e.g., North Pasture')}
                   />
                 </div>
@@ -916,7 +916,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -933,7 +933,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   >
                     {Object.entries(soilTypeLabels).map(([value, label]) => (
                       <option key={value} value={value}>{label}</option>
@@ -951,7 +951,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   >
                     {Object.entries(terrainLabels).map(([value, label]) => (
                       <option key={value} value={value}>{label}</option>
@@ -972,7 +972,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   >
                     {Object.entries(irrigationLabels).map(([value, label]) => (
                       <option key={value} value={value}>{label}</option>
@@ -990,7 +990,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   >
                     <option value="planned">{t('tools.fieldMapping.planned2', 'Planned')}</option>
                     <option value="active">{t('tools.fieldMapping.active2', 'Active')}</option>
@@ -1013,7 +1013,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder="e.g., 40.7128, -74.0060"
                   />
                 </div>
@@ -1029,7 +1029,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -1049,7 +1049,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
                 <div>
@@ -1063,7 +1063,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   >
                     <option value="Full Sun">{t('tools.fieldMapping.fullSun', 'Full Sun')}</option>
                     <option value="Partial Sun">{t('tools.fieldMapping.partialSun', 'Partial Sun')}</option>
@@ -1086,7 +1086,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder={t('tools.fieldMapping.eGCorn', 'e.g., Corn')}
                   />
                 </div>
@@ -1102,7 +1102,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                    } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     placeholder={t('tools.fieldMapping.eGSoybeans', 'e.g., Soybeans')}
                   />
                 </div>
@@ -1120,7 +1120,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-200 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                  } focus:outline-none focus:ring-2 focus:ring-primary-500`}
                   placeholder={t('tools.fieldMapping.additionalNotesAboutThisField', 'Additional notes about this field...')}
                 />
               </div>
@@ -1137,7 +1137,7 @@ export function FieldMappingTool({ uiConfig }: FieldMappingToolProps) {
                 <button
                   onClick={handleAddField}
                   disabled={!newField.name.trim()}
-                  className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {t('tools.fieldMapping.addField2', 'Add Field')}
                 </button>
@@ -1288,7 +1288,7 @@ function ZoneForm({
             <button
               onClick={() => onSave(zone)}
               disabled={!zone.name.trim() || !zone.fieldId}
-              className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50"
+              className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
             >
               {t('tools.fieldMapping.addZone3', 'Add Zone')}
             </button>
@@ -1407,7 +1407,7 @@ function BoundaryForm({
             <button
               onClick={() => onSave(boundary)}
               disabled={!boundary.fieldId}
-              className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50"
+              className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
             >
               {t('tools.fieldMapping.addBoundary3', 'Add Boundary')}
             </button>

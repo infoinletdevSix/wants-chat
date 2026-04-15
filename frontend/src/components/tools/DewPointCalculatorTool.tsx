@@ -202,7 +202,7 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-6 md:p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Droplets className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -214,9 +214,9 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.dewPointCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.dewPointCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -227,7 +227,7 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                 onClick={() => setUnit('fahrenheit')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                   unit === 'fahrenheit'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDarkMode
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -239,7 +239,7 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                 onClick={() => setUnit('celsius')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                   unit === 'celsius'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDarkMode
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -267,7 +267,7 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -287,7 +287,7 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -302,12 +302,12 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                   className={`p-4 rounded-lg border ${isDarkMode ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <Droplets className="w-5 h-5 text-[#0D9488]" />
+                    <Droplets className="w-5 h-5 text-[#6096B4]" />
                     <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                       {t('tools.dewPointCalculator.dewPoint2', 'Dew Point')}
                     </span>
                   </div>
-                  <div className="text-3xl font-bold text-[#0D9488]">
+                  <div className="text-3xl font-bold text-[#6096B4]">
                     {formatTemperature(result.dewPoint)}
                   </div>
                 </div>
@@ -317,12 +317,12 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                   className={`p-4 rounded-lg border ${isDarkMode ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <Wind className="w-5 h-5 text-[#0D9488]" />
+                    <Wind className="w-5 h-5 text-[#6096B4]" />
                     <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                       {t('tools.dewPointCalculator.feelsLike', 'Feels Like')}
                     </span>
                   </div>
-                  <div className="text-3xl font-bold text-[#0D9488]">
+                  <div className="text-3xl font-bold text-[#6096B4]">
                     {formatTemperature(result.feelsLike)}
                   </div>
                 </div>
@@ -390,7 +390,7 @@ const DewPointCalculatorTool: React.FC<DewPointCalculatorToolProps> = ({ uiConfi
                 <ul className={`space-y-2 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   {getTips().map((tip, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-[#0D9488] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#6096B4] mt-0.5 flex-shrink-0" />
                       <span>{tip}</span>
                     </li>
                   ))}

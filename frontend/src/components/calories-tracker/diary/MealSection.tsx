@@ -89,14 +89,14 @@ const MealSection: React.FC<MealSectionProps> = ({
               <p className="text-sm text-white/60">
                 {mealTotals.calories} of {goalCalories} calories
               </p>
-              <Badge className={`text-xs ${caloriesProgress >= 90 ? "bg-teal-500/20 text-teal-400 border border-teal-500/30" : "bg-white/10 text-white/70 border border-white/20"}`}>
+              <Badge className={`text-xs ${caloriesProgress >= 90 ? "bg-primary-500/20 text-primary-400 border border-primary-500/30" : "bg-white/10 text-white/70 border border-white/20"}`}>
                 {Math.round(caloriesProgress)}%
               </Badge>
             </div>
           </div>
           </div>
 
-          <Button size="sm" onClick={onAddFood} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+          <Button size="sm" onClick={onAddFood} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
             <Icon path={mdiPlus} size={0.6} className="mr-1" />
             Add Food
           </Button>
@@ -111,7 +111,7 @@ const MealSection: React.FC<MealSectionProps> = ({
                     <div className="flex items-center gap-2">
                       <h4 className="font-medium text-white">{entry.name}</h4>
                       {entry.brand && (
-                        <Badge className="text-xs bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                        <Badge className="text-xs bg-primary-500/20 text-primary-400 border border-primary-500/30">
                           {entry.brand}
                         </Badge>
                       )}
@@ -149,7 +149,7 @@ const MealSection: React.FC<MealSectionProps> = ({
           <div className="text-center py-8 space-y-3">
             <div className="p-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg">
               <p className="text-white/60">No foods logged for {mealName.toLowerCase()}</p>
-              <Button className="mt-2 bg-transparent text-teal-400 hover:text-teal-300 hover:bg-transparent underline" onClick={onAddFood}>
+              <Button className="mt-2 bg-transparent text-primary-400 hover:text-primary-300 hover:bg-transparent underline" onClick={onAddFood}>
                 Add your first food
               </Button>
             </div>

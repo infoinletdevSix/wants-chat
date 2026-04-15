@@ -396,7 +396,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
             ${isDark ? 'border-gray-700' : 'border-gray-200'}
             ${isCurrentMonth ? '' : 'invisible'}
             ${isPast && !isTodayDate ? (isDark ? 'bg-gray-800/50' : 'bg-gray-50') : ''}
-            ${isSelected ? (isDark ? 'bg-teal-900/30' : 'bg-teal-50') : ''}
+            ${isSelected ? (isDark ? 'bg-primary-900/30' : 'bg-primary-50') : ''}
             ${isCurrentMonth && !isPast ? (isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100') : ''}
           `}
         >
@@ -405,7 +405,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
               <div
                 className={`
                   w-7 h-7 flex items-center justify-center rounded-full text-sm font-medium mb-1
-                  ${isTodayDate ? 'bg-[#0D9488] text-white' : ''}
+                  ${isTodayDate ? 'bg-[#6096B4] text-white' : ''}
                   ${isPast && !isTodayDate ? (isDark ? 'text-gray-500' : 'text-gray-400') : ''}
                   ${!isTodayDate && !isPast ? (isDark ? 'text-white' : 'text-gray-900') : ''}
                 `}
@@ -442,7 +442,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
     return (
       <div className={`max-w-6xl mx-auto p-4 md:p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -453,7 +453,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Calendar className="w-6 h-6 text-white" />
           </div>
           <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -462,9 +462,9 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
         </div>
         <div className="flex items-center gap-2">
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs text-[#0D9488] font-medium">{t('tools.eventScheduler.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs text-[#6096B4] font-medium">{t('tools.eventScheduler.prefilled', 'Prefilled')}</span>
             </div>
           )}
           <WidgetEmbedButton toolSlug="event-scheduler" toolName="Event Scheduler" />
@@ -506,7 +506,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
         <div className="relative">
@@ -518,7 +518,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="all">{t('tools.eventScheduler.allCategories', 'All Categories')}</option>
             {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
@@ -528,7 +528,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
         </div>
         <button
           onClick={() => openAddEventModal()}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
         >
           <Plus className="w-5 h-5" />
           {t('tools.eventScheduler.addEvent', 'Add Event')}
@@ -775,7 +775,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -793,7 +793,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -808,7 +808,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -825,7 +825,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value={15}>15 minutes</option>
                   <option value={30}>30 minutes</option>
@@ -879,7 +879,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {Object.entries(RECURRING_LABELS).map(([key, label]) => (
                     <option key={key} value={key}>{label}</option>
@@ -900,7 +900,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {Object.entries(REMINDER_LABELS).map(([key, label]) => (
                     <option key={key} value={key}>{label}</option>
@@ -922,7 +922,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -941,7 +941,7 @@ export const EventSchedulerTool: React.FC<EventSchedulerToolProps> = ({ uiConfig
               </button>
               <button
                 onClick={handleSaveEvent}
-                className="flex-1 py-2 px-4 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex-1 py-2 px-4 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 {editingEvent ? t('tools.eventScheduler.saveChanges', 'Save Changes') : t('tools.eventScheduler.addEvent4', 'Add Event')}
               </button>

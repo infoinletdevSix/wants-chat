@@ -148,10 +148,10 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Square className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Square className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.squareFootageCalculator.squareFootageCalculator', 'Square Footage Calculator')}</h3>
@@ -162,9 +162,9 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.squareFootageCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.squareFootageCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -186,7 +186,7 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
                   onClick={() => setUnit(u.value as any)}
                   className={`flex-1 py-2 rounded-lg font-medium transition-colors ${
                     unit === u.value
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -221,7 +221,7 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
             </h4>
             <button
               onClick={addRoom}
-              className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] text-white rounded-lg text-sm hover:bg-[#0D9488]/90"
+              className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] text-white rounded-lg text-sm hover:bg-[#6096B4]/90"
             >
               <Plus className="w-4 h-4" />
               {t('tools.squareFootageCalculator.addRoom', 'Add Room')}
@@ -324,7 +324,7 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
                 <div className="flex flex-col items-end gap-2">
                   <div className="text-right">
                     <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.squareFootageCalculator.area', 'Area')}</div>
-                    <div className="text-lg font-bold text-[#0D9488]">
+                    <div className="text-lg font-bold text-[#6096B4]">
                       {formatNumber(calculations.rooms[index]?.sqFt || 0)} sq ft
                     </div>
                   </div>
@@ -343,10 +343,10 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
         </div>
 
         {/* Total Summary */}
-        <div className={`p-6 rounded-xl ${isDark ? t('tools.squareFootageCalculator.bg0d948820Border0d9488', 'bg-[#0D9488]/20 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? t('tools.squareFootageCalculator.bg0d948820Border0d9488', 'bg-[#6096B4]/20 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <div className="text-center mb-4">
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.squareFootageCalculator.totalSquareFootage', 'Total Square Footage')}</div>
-            <div className="text-5xl font-bold text-[#0D9488]">
+            <div className="text-5xl font-bold text-[#6096B4]">
               {formatNumber(calculations.totalSqFt)} sq ft
             </div>
           </div>
@@ -367,7 +367,7 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
             {calculations.hasPrice && (
               <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.squareFootageCalculator.totalValue', 'Total Value')}</div>
-                <div className="text-lg font-bold text-[#0D9488]">
+                <div className="text-lg font-bold text-[#6096B4]">
                   {formatCurrency(calculations.totalCost)}
                 </div>
               </div>
@@ -393,7 +393,7 @@ export const SquareFootageCalculatorTool: React.FC<SquareFootageCalculatorToolPr
                 <div className="flex items-center gap-4">
                   <div className="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-[#0D9488] rounded-full"
+                      className="h-full bg-[#6096B4] rounded-full"
                       style={{ width: `${calculations.totalSqFt > 0 ? (room.sqFt / calculations.totalSqFt) * 100 : 0}%` }}
                     />
                   </div>

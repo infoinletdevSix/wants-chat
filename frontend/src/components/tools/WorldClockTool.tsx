@@ -308,7 +308,7 @@ export const WorldClockTool = ({ uiConfig }: WorldClockToolProps) => {
     return (
       <div className={`max-w-4xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -318,7 +318,7 @@ export const WorldClockTool = ({ uiConfig }: WorldClockToolProps) => {
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Globe className="w-6 h-6 text-white" />
           </div>
           <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -354,9 +354,9 @@ export const WorldClockTool = ({ uiConfig }: WorldClockToolProps) => {
 
       <div className="space-y-6">
         {/* Local Time */}
-        <div className={`p-6 rounded-lg ${isDark ? t('tools.worldClock.bgGradientToBrFrom', 'bg-gradient-to-br from-[#0D9488]/20 to-[#0D9488]/10 border border-[#0D9488]/30') : 'bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200'}`}>
+        <div className={`p-6 rounded-lg ${isDark ? t('tools.worldClock.bgGradientToBrFrom', 'bg-gradient-to-br from-[#6096B4]/20 to-[#6096B4]/10 border border-[#6096B4]/30') : 'bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <Clock className={`w-5 h-5 ${isDark ? t('tools.worldClock.text0d9488', 'text-[#0D9488]') : 'text-orange-600'}`} />
+            <Clock className={`w-5 h-5 ${isDark ? t('tools.worldClock.text0d9488', 'text-[#6096B4]') : 'text-orange-600'}`} />
             <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {t('tools.worldClock.localTime', 'Local Time')}
             </h3>
@@ -376,7 +376,7 @@ export const WorldClockTool = ({ uiConfig }: WorldClockToolProps) => {
         <div className="relative">
           <button
             onClick={() => setShowAddMenu(!showAddMenu)}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <Plus className="w-5 h-5" />
             {t('tools.worldClock.addCity', 'Add City')}

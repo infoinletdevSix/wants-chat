@@ -287,11 +287,11 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.avatarGenerator.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.avatarGenerator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.avatarGenerator.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.avatarGenerator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <UserCircle className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <UserCircle className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.avatarGenerator.avatarGenerator', 'Avatar Generator')}</h3>
@@ -315,8 +315,8 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="p-3 bg-[#0D9488]/10 border border-[#0D9488]/20 rounded-lg flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
+          <div className="p-3 bg-[#6096B4]/10 border border-[#6096B4]/20 rounded-lg flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {isEditFromGallery
                 ? t('tools.avatarGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.avatarGenerator.fieldsHaveBeenPrefilledFrom', 'Fields have been prefilled from AI suggestions')}
@@ -337,7 +337,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
                 const style = avatarStyles.find((s) => s.label === e.target.value);
                 if (style) setAvatarStyle(style);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {avatarStyles.map((style) => (
                 <option key={style.label} value={style.label}>
@@ -356,7 +356,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
                 const g = genderOptions.find((opt) => opt.label === e.target.value);
                 if (g) setGender(g);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {genderOptions.map((opt) => (
                 <option key={opt.label} value={opt.label}>
@@ -377,7 +377,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
             onChange={(e) => setFeatures(e.target.value)}
             placeholder={t('tools.avatarGenerator.describeFeaturesEGBlonde', 'Describe features (e.g., blonde hair, blue eyes, wearing glasses, casual outfit)')}
             rows={3}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -392,7 +392,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
                 const expr = expressions.find((ex) => ex.label === e.target.value);
                 if (expr) setExpression(expr);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {expressions.map((expr) => (
                 <option key={expr.label} value={expr.label}>
@@ -411,7 +411,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
                 const bg = backgroundStyles.find((b) => b.label === e.target.value);
                 if (bg) setBackground(bg);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {backgroundStyles.map((bg) => (
                 <option key={bg.label} value={bg.label}>
@@ -433,7 +433,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !features.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -493,7 +493,7 @@ const AvatarGeneratorTool: React.FC<AvatarGeneratorToolProps> = ({ uiConfig }) =
                     <button
                       onClick={() => handleSave(img.url, img.prompt)}
                       disabled={isSaving}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                       title={t('tools.avatarGenerator.saveToGallery', 'Save to Gallery')}
                     >
                       <Save className="w-5 h-5" />

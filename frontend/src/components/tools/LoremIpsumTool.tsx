@@ -165,9 +165,9 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.loremIpsum.countLoadedFromYourConversation', 'Count loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.loremIpsum.countLoadedFromYourConversation', 'Count loaded from your conversation')}</span>
           </div>
         )}
         {/* Options */}
@@ -248,7 +248,7 @@ export const LoremIpsumTool: React.FC<LoremIpsumToolProps> = ({ uiConfig }) => {
             className={`flex-1 py-3 rounded-xl font-medium flex items-center justify-center gap-2 transition-all ${
               copied
                 ? 'bg-green-500 text-white'
-                : 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-lg shadow-emerald-500/20'
+                : 'bg-gradient-to-r from-emerald-500 to-primary-500 hover:from-emerald-600 hover:to-primary-600 text-white shadow-lg shadow-emerald-500/20'
             }`}
           >
             {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}

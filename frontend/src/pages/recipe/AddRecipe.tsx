@@ -363,7 +363,7 @@ const AddRecipe: React.FC = () => {
           />
           <div className="flex items-center justify-center py-32">
             <div className="text-center">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500 mb-4"></div>
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mb-4"></div>
               <h2 className="text-xl font-semibold mb-2 text-white">Loading Recipe...</h2>
             </div>
           </div>
@@ -439,7 +439,7 @@ const AddRecipe: React.FC = () => {
               </Button>
               <Button
                 onClick={handleSaveRecipe}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6 flex-1"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6 flex-1"
                 disabled={!newRecipe.title?.trim() || createRecipe.loading}
               >
                 {createRecipe.loading ? (

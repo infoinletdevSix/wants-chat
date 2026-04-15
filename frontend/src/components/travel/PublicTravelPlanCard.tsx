@@ -58,7 +58,7 @@ const PublicTravelPlanCard: React.FC<PublicTravelPlanCardProps> = ({ plan, onCli
                 {plan.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-1 bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs rounded-full"
+                    className="px-2 py-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white text-xs rounded-full"
                   >
                     {tag}
                   </span>

@@ -67,10 +67,10 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
   };
 
   return (
-    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <div className="p-6 pb-2">
         <h3 className="flex items-center gap-3 text-xl font-bold text-white">
-          <MedicalInformation className="h-6 w-6 text-teal-400" />
+          <MedicalInformation className="h-6 w-6 text-primary-400" />
           Condition Information
         </h3>
         <p className="text-base text-white/60 mt-1">
@@ -108,8 +108,8 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                       onClick={() => handleInputChange('condition', condition)}
                       className={`text-xs px-2.5 py-1.5 rounded-lg border transition-all duration-200 ${
                         formData.condition === condition
-                          ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-transparent'
-                          : 'bg-white/5 border-white/20 text-white/60 hover:border-teal-500 hover:text-teal-400'
+                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent'
+                          : 'bg-white/5 border-white/20 text-white/60 hover:border-primary-500 hover:text-primary-400'
                       }`}
                     >
                       {condition}
@@ -155,7 +155,7 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                       </span>
                     </SelectValue>
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {severityOptions.map(option => (
                       <SelectItem key={option.value} value={option.value} className="text-white hover:bg-white/10 focus:bg-white/10">
                         <span className={`px-2 py-0.5 rounded-md text-xs font-medium ${getSeverityColor(option.value)}`}>
@@ -183,7 +183,7 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                       </span>
                     </SelectValue>
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {statusOptions.map(option => (
                       <SelectItem key={option.value} value={option.value} className="text-white hover:bg-white/10 focus:bg-white/10">
                         <span className={`px-2 py-0.5 rounded-md text-xs font-medium ${getStatusColor(option.value)}`}>
@@ -251,7 +251,7 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                   <button
                     type="button"
                     onClick={onEmergencyCountryDropdownToggle}
-                    className="w-full px-3 py-2.5 text-left border border-white/20 rounded-xl bg-white/10 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-teal-500 h-11 transition-colors"
+                    className="w-full px-3 py-2.5 text-left border border-white/20 rounded-xl bg-white/10 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary-500 h-11 transition-colors"
                   >
                     <div className="flex items-center gap-1.5">
                       <span className="text-base">{selectedEmergencyCountry?.flag}</span>
@@ -260,7 +260,7 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                   </button>
 
                   {emergencyCountryDropdownOpen && (
-                    <div className="absolute z-50 w-72 mt-1 bg-teal-800/90 border border-teal-400/30 rounded-xl shadow-xl max-h-64 overflow-hidden">
+                    <div className="absolute z-50 w-72 mt-1 bg-primary-800/90 border border-primary-400/30 rounded-xl shadow-xl max-h-64 overflow-hidden">
                       <div className="p-2 border-b border-white/10">
                         <Input
                           type="text"
@@ -335,13 +335,13 @@ const ConditionInformationSection: React.FC<ConditionInformationSectionProps> = 
                 Next Checkup
               </Label>
               <div className="relative">
-                <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-teal-400" />
+                <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary-400" />
                 <Input
                   id="nextCheckup"
                   type="date"
                   value={formData.next_checkup}
                   onChange={(e) => handleInputChange('next_checkup', e.target.value)}
-                  className="pl-11 h-11 rounded-xl bg-white/10 border-teal-500/30 text-white [&::-webkit-calendar-picker-indicator]:invert"
+                  className="pl-11 h-11 rounded-xl bg-white/10 border-primary-500/30 text-white [&::-webkit-calendar-picker-indicator]:invert"
                   min={new Date().toISOString().split('T')[0]}
                 />
               </div>

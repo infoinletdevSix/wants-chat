@@ -385,7 +385,7 @@ END:VEVENT
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -397,7 +397,7 @@ END:VEVENT
           <CardHeader>
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Sprout className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -459,7 +459,7 @@ END:VEVENT
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                   {t('tools.seedStarting.enterYourAreaSAverage', 'Enter your area\'s average last spring frost date')}
@@ -485,7 +485,7 @@ END:VEVENT
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <div className="flex gap-2 flex-wrap">
                     {CATEGORIES.map((category) => (
@@ -494,7 +494,7 @@ END:VEVENT
                         onClick={() => setSelectedCategory(category)}
                         className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                           selectedCategory === category
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -531,7 +531,7 @@ END:VEVENT
                           disabled={!lastFrostDate}
                           className={`p-2 rounded-lg transition-colors ${
                             !lastFrostDate
-                              ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : t('tools.seedStarting.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                              ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : t('tools.seedStarting.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                           }`}
                         >
                           <Plus className="w-4 h-4" />
@@ -552,7 +552,7 @@ END:VEVENT
                     <div className="flex items-center gap-2">
                       <button
                         onClick={exportToCalendar}
-                        className="flex items-center gap-2 px-3 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm transition-colors"
+                        className="flex items-center gap-2 px-3 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm transition-colors"
                       >
                         <Download className="w-4 h-4" />
                         {t('tools.seedStarting.exportCalendar', 'Export Calendar')}
@@ -600,8 +600,8 @@ END:VEVENT
                           )}
                         >
                           <div className="flex items-center gap-3">
-                            <div className="p-2 bg-[#0D9488]/20 rounded-lg">
-                              <Sprout className="w-4 h-4 text-[#0D9488]" />
+                            <div className="p-2 bg-[#6096B4]/20 rounded-lg">
+                              <Sprout className="w-4 h-4 text-[#6096B4]" />
                             </div>
                             <div>
                               <div className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>

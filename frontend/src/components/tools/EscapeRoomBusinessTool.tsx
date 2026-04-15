@@ -628,7 +628,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 placeholder={t('tools.escapeRoomBusiness.eGTheHauntedMansion', 'e.g., The Haunted Mansion')}
               />
             </div>
@@ -645,7 +645,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 placeholder={t('tools.escapeRoomBusiness.eGHorrorMysteryAdventure', 'e.g., Horror, Mystery, Adventure')}
               />
             </div>
@@ -661,7 +661,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="Easy">{t('tools.escapeRoomBusiness.easy', 'Easy')}</option>
                   <option value="Medium">{t('tools.escapeRoomBusiness.medium', 'Medium')}</option>
@@ -683,7 +683,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -702,7 +702,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -719,7 +719,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -737,7 +737,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="flex items-center gap-2">
@@ -746,7 +746,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                 id="isActive"
                 checked={formData.isActive !== false}
                 onChange={e => setFormData({ ...formData, isActive: e.target.checked })}
-                className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
               />
               <label htmlFor="isActive" className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.escapeRoomBusiness.roomIsActiveAndAvailable', 'Room is active and available for booking')}
@@ -764,7 +764,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
               </button>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                className="flex-1 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
               >
                 {editingRoom ? t('tools.escapeRoomBusiness.updateRoom', 'Update Room') : t('tools.escapeRoomBusiness.addRoom2', 'Add Room')}
               </button>
@@ -874,7 +874,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.escapeRoomBusiness.selectARoom', 'Select a room')}</option>
                 {rooms.filter(r => r.isActive).map(room => (
@@ -896,7 +896,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -911,7 +911,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.escapeRoomBusiness.selectTime', 'Select time')}</option>
                   {availableSlots.map(slot => (
@@ -937,7 +937,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -953,7 +953,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -970,7 +970,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -986,7 +986,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -996,7 +996,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                 id="isCorporate"
                 checked={formData.isCorporate || false}
                 onChange={e => setFormData({ ...formData, isCorporate: e.target.checked })}
-                className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
               />
               <label htmlFor="isCorporate" className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.escapeRoomBusiness.corporateBooking10Discount', 'Corporate Booking (10% discount)')}
@@ -1015,7 +1015,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             )}
@@ -1031,13 +1031,13 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <div className="flex items-center justify-between">
                 <span className={`font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>{t('tools.escapeRoomBusiness.totalPrice', 'Total Price:')}</span>
-                <span className="text-xl font-bold text-[#0D9488]">${calculatePrice().toFixed(2)}</span>
+                <span className="text-xl font-bold text-[#6096B4]">${calculatePrice().toFixed(2)}</span>
               </div>
               {formData.isCorporate && (
                 <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -1057,7 +1057,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
               </button>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                className="flex-1 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
               >
                 {editingBooking ? t('tools.escapeRoomBusiness.updateBooking', 'Update Booking') : t('tools.escapeRoomBusiness.createBooking', 'Create Booking')}
               </button>
@@ -1133,7 +1133,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -1150,7 +1150,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -1166,7 +1166,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1182,7 +1182,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                       id={`room-${room.id}`}
                       checked={formData.assignedRooms?.includes(room.id) || false}
                       onChange={() => toggleRoomAssignment(room.id)}
-                      className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                      className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                     />
                     <label htmlFor={`room-${room.id}`} className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                       {room.name}
@@ -1197,7 +1197,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                 id="staffActive"
                 checked={formData.isActive !== false}
                 onChange={e => setFormData({ ...formData, isActive: e.target.checked })}
-                className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
               />
               <label htmlFor="staffActive" className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.escapeRoomBusiness.currentlyActive', 'Currently active')}
@@ -1215,7 +1215,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
               </button>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                className="flex-1 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
               >
                 {editingStaff ? t('tools.escapeRoomBusiness.updateStaff', 'Update Staff') : t('tools.escapeRoomBusiness.addStaff', 'Add Staff')}
               </button>
@@ -1276,7 +1276,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {rooms.map(room => (
                   <option key={room.id} value={room.id}>{room.name}</option>
@@ -1296,7 +1296,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 placeholder={t('tools.escapeRoomBusiness.eGCipherLockUv', 'e.g., Cipher Lock, UV Light, Hidden Panel')}
               />
             </div>
@@ -1311,7 +1311,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="broken">{t('tools.escapeRoomBusiness.broken', 'Broken')}</option>
                 <option value="worn">{t('tools.escapeRoomBusiness.wornDamaged', 'Worn/Damaged')}</option>
@@ -1332,7 +1332,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="flex gap-3 pt-2">
@@ -1347,7 +1347,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
               </button>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                className="flex-1 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
               >
                 {t('tools.escapeRoomBusiness.reportIssue', 'Report Issue')}
               </button>
@@ -1416,7 +1416,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -1432,7 +1432,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -1446,7 +1446,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value={6}>6 months</option>
                 <option value={12}>12 months</option>
@@ -1465,7 +1465,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
               </button>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                className="flex-1 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
               >
                 {t('tools.escapeRoomBusiness.createCertificate', 'Create Certificate')}
               </button>
@@ -1485,7 +1485,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
         </h3>
         <button
           onClick={() => setShowRoomForm(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
         >
           <Plus className="w-4 h-4" />
           {t('tools.escapeRoomBusiness.addRoom', 'Add Room')}
@@ -1605,7 +1605,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
           />
           <button
             onClick={() => setShowBookingForm(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
           >
             <Plus className="w-4 h-4" />
             {t('tools.escapeRoomBusiness.newBooking', 'New Booking')}
@@ -1725,7 +1725,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                               } : r));
                             }
                           }}
-                          className="w-4 h-4 text-[#0D9488] rounded"
+                          className="w-4 h-4 text-[#6096B4] rounded"
                         />
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>
                           {t('tools.escapeRoomBusiness.successfulEscape', 'Successful escape')}
@@ -1736,7 +1736,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                           type="checkbox"
                           checked={booking.waiverSigned}
                           onChange={e => setBookings(bookings.map(b => b.id === booking.id ? { ...b, waiverSigned: e.target.checked } : b))}
-                          className="w-4 h-4 text-[#0D9488] rounded"
+                          className="w-4 h-4 text-[#6096B4] rounded"
                         />
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>
                           {t('tools.escapeRoomBusiness.waiverSigned', 'Waiver signed')}
@@ -1853,7 +1853,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
         </h3>
         <button
           onClick={() => setShowStaffForm(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
         >
           <Plus className="w-4 h-4" />
           {t('tools.escapeRoomBusiness.addGameMaster', 'Add Game Master')}
@@ -1894,7 +1894,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     {gm.assignedRooms.map(roomId => {
                       const room = rooms.find(r => r.id === roomId);
                       return room ? (
-                        <span key={roomId} className="px-2 py-0.5 text-xs bg-[#0D9488]/10 text-[#0D9488] rounded">
+                        <span key={roomId} className="px-2 py-0.5 text-xs bg-[#6096B4]/10 text-[#6096B4] rounded">
                           {room.name}
                         </span>
                       ) : null;
@@ -1991,7 +1991,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                   setNewTask('');
                 }
               }}
-              className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+              className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
             >
               {t('tools.escapeRoomBusiness.addTask', 'Add Task')}
             </button>
@@ -2021,7 +2021,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                           ci.roomId === room.id ? { ...ci, isCompleted: false } : ci
                         ));
                       }}
-                      className="text-xs text-[#0D9488] hover:underline"
+                      className="text-xs text-[#6096B4] hover:underline"
                     >
                       {t('tools.escapeRoomBusiness.resetAll', 'Reset All')}
                     </button>
@@ -2050,7 +2050,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                               ci.id === item.id ? { ...ci, isCompleted: e.target.checked } : ci
                             ));
                           }}
-                          className="w-4 h-4 text-[#0D9488] rounded"
+                          className="w-4 h-4 text-[#6096B4] rounded"
                         />
                         <span className={`flex-1 ${
                           item.isCompleted
@@ -2085,7 +2085,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
         </h3>
         <button
           onClick={() => setShowMaintenanceForm(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
         >
           <Plus className="w-4 h-4" />
           {t('tools.escapeRoomBusiness.reportIssue2', 'Report Issue')}
@@ -2281,7 +2281,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                     </div>
                     <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-full rounded-full bg-[#0D9488]"
+                        className="h-full rounded-full bg-[#6096B4]"
                         style={{ width: `${percentage}%` }}
                       />
                     </div>
@@ -2414,7 +2414,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
         </h3>
         <button
           onClick={() => setShowCertificateForm(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
         >
           <Plus className="w-4 h-4" />
           {t('tools.escapeRoomBusiness.createCertificate2', 'Create Certificate')}
@@ -2439,7 +2439,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                 <div>
                   <div className="flex items-center gap-2">
                     <code className={`px-2 py-1 rounded text-sm font-mono ${
-                      theme === 'dark' ? t('tools.escapeRoomBusiness.bgGray700Text0d9488', 'bg-gray-700 text-[#0D9488]') : t('tools.escapeRoomBusiness.bgGray100Text0d9488', 'bg-gray-100 text-[#0D9488]')
+                      theme === 'dark' ? t('tools.escapeRoomBusiness.bgGray700Text0d9488', 'bg-gray-700 text-[#6096B4]') : t('tools.escapeRoomBusiness.bgGray100Text0d9488', 'bg-gray-100 text-[#6096B4]')
                     }`}>
                       {cert.code}
                     </code>
@@ -2474,7 +2474,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                           c.id === cert.id ? { ...c, isRedeemed: true, redeemedDate: new Date().toISOString().split('T')[0], balance: 0 } : c
                         ));
                       }}
-                      className="text-xs text-[#0D9488] hover:underline mt-1"
+                      className="text-xs text-[#6096B4] hover:underline mt-1"
                     >
                       {t('tools.escapeRoomBusiness.markRedeemed', 'Mark Redeemed')}
                     </button>
@@ -2533,7 +2533,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
                             onClick={() => setBookings(bookings.map(b =>
                               b.id === booking.id ? { ...b, waiverSigned: true } : b
                             ))}
-                            className="text-xs px-2 py-1 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+                            className="text-xs px-2 py-1 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
                           >
                             {t('tools.escapeRoomBusiness.markSigned', 'Mark Signed')}
                           </button>
@@ -2608,7 +2608,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
     return (
       <div className={`max-w-6xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -2618,17 +2618,17 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
     <div className={`max-w-6xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.escapeRoomBusiness.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.escapeRoomBusiness.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Puzzle className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Puzzle className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -2673,7 +2673,7 @@ export const EscapeRoomBusinessTool = ({ uiConfig }: EscapeRoomBusinessToolProps
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-white dark:bg-gray-700 text-[#0D9488] shadow-sm'
+                  ? 'bg-white dark:bg-gray-700 text-[#6096B4] shadow-sm'
                   : theme === 'dark'
                   ? 'text-gray-400 hover:text-white'
                   : 'text-gray-600 hover:text-gray-900'

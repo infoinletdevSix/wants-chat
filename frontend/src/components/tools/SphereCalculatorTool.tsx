@@ -117,7 +117,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Globe className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -129,9 +129,9 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.sphereCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.sphereCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -147,7 +147,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                   onClick={() => setMode(m.key)}
                   className={`px-4 py-3 rounded-lg border transition-colors ${
                     mode === m.key
-                      ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                      ? 'bg-[#6096B4] text-white border-[#6096B4]'
                       : isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600'
                       : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -177,7 +177,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                 isDarkMode
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
               placeholder={t('tools.sphereCalculator.enterValue', 'Enter value')}
             />
           </div>
@@ -192,7 +192,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                 {/* Radius */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'radius' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'radius' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -208,7 +208,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                       {copied === 'radius' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.radius)}
                   </div>
                 </div>
@@ -216,7 +216,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                 {/* Diameter */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'diameter' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'diameter' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -232,7 +232,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                       {copied === 'diameter' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.diameter)}
                   </div>
                 </div>
@@ -240,7 +240,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                 {/* Volume */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'volume' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'volume' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -256,7 +256,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                       {copied === 'volume' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.volume)} <span className="text-sm opacity-75">units³</span>
                   </div>
                 </div>
@@ -264,7 +264,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                 {/* Surface Area */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'surfaceArea' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'surfaceArea' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -280,7 +280,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                       {copied === 'surfaceArea' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.surfaceArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -299,8 +299,8 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                   {/* Sphere gradient */}
                   <defs>
                     <radialGradient id="sphereGradient" cx="30%" cy="30%">
-                      <stop offset="0%" stopColor="#14b8a6" />
-                      <stop offset="100%" stopColor="#0D9488" />
+                      <stop offset="0%" stopColor="#75AAC1" />
+                      <stop offset="100%" stopColor="#6096B4" />
                     </radialGradient>
                   </defs>
                   {/* Sphere */}
@@ -310,7 +310,7 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                     r="80"
                     fill="url(#sphereGradient)"
                     opacity="0.3"
-                    stroke="#0D9488"
+                    stroke="#6096B4"
                     strokeWidth="2"
                   />
                   {/* Equator ellipse */}
@@ -320,14 +320,14 @@ const SphereCalculatorTool: React.FC<SphereCalculatorToolProps> = ({ uiConfig })
                     rx="80"
                     ry="25"
                     fill="none"
-                    stroke="#0D9488"
+                    stroke="#6096B4"
                     strokeWidth="1"
                     strokeDasharray="5,5"
                   />
                   {/* Radius line */}
-                  <line x1="100" y1="100" x2="180" y2="100" stroke="#0D9488" strokeWidth="2" />
+                  <line x1="100" y1="100" x2="180" y2="100" stroke="#6096B4" strokeWidth="2" />
                   {/* Center dot */}
-                  <circle cx="100" cy="100" r="4" fill="#0D9488" />
+                  <circle cx="100" cy="100" r="4" fill="#6096B4" />
                   {/* Radius label */}
                   <text x="140" y="95" fill={isDarkMode ? '#fff' : '#333'} fontSize="12" textAnchor="middle">
                     r = {formatNumber(results.radius).substring(0, 6)}

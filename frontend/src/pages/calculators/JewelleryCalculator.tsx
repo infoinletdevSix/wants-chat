@@ -86,7 +86,7 @@ const JewelleryCalculator: React.FC = () => {
       <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-500 p-6">
+          <div className="bg-gradient-to-r from-primary-500 to-cyan-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                 <Scale className="h-8 w-8 text-white" />
@@ -108,7 +108,7 @@ const JewelleryCalculator: React.FC = () => {
                   onClick={() => handleMetalChange(metal)}
                   className={`px-4 py-3 rounded-lg font-medium transition-all ${
                     state.metalType === metal
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
                       : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
                   }`}
                 >
@@ -130,7 +130,7 @@ const JewelleryCalculator: React.FC = () => {
                 value={state.weight}
                 onChange={(e) => setState({ ...state, weight: e.target.value })}
                 placeholder="Enter weight in grams"
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 step="0.01"
                 min="0"
               />
@@ -144,7 +144,7 @@ const JewelleryCalculator: React.FC = () => {
               <select
                 value={state.purity}
                 onChange={(e) => setState({ ...state, purity: e.target.value })}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent appearance-none cursor-pointer"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none cursor-pointer"
               >
                 {metalDefaults[state.metalType].purities.map((purity) => (
                   <option key={purity} value={purity} className="bg-slate-800">
@@ -167,7 +167,7 @@ const JewelleryCalculator: React.FC = () => {
                   value={state.pricePerGram}
                   onChange={(e) => setState({ ...state, pricePerGram: e.target.value })}
                   placeholder="Enter current market price"
-                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   step="0.01"
                   min="0"
                 />
@@ -176,12 +176,12 @@ const JewelleryCalculator: React.FC = () => {
           </div>
 
           {/* Results */}
-          <div className="p-6 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border-t border-white/10">
+          <div className="p-6 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border-t border-white/10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Pure Weight */}
               <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                 <div className="flex items-center gap-2 mb-2">
-                  <Scale className="h-5 w-5 text-teal-400" />
+                  <Scale className="h-5 w-5 text-primary-400" />
                   <p className="text-sm text-white/60">Pure Metal Weight</p>
                 </div>
                 <p className="text-2xl font-bold text-white">
@@ -190,9 +190,9 @@ const JewelleryCalculator: React.FC = () => {
               </div>
 
               {/* Total Value */}
-              <div className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-4 border border-teal-400/30">
+              <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-4 border border-primary-400/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <TrendingUp className="h-5 w-5 text-teal-400" />
+                  <TrendingUp className="h-5 w-5 text-primary-400" />
                   <p className="text-sm text-white/60">Estimated Value</p>
                 </div>
                 <p className="text-3xl font-bold text-white">

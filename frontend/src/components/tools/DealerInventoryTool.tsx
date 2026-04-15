@@ -772,9 +772,9 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.dealerInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.dealerInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -782,7 +782,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Building className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -840,7 +840,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -884,7 +884,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                           onChange={(e) => setSearchTerm(e.target.value)}
                           className={`w-full pl-10 pr-4 py-2 rounded-lg border ${
                             isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                          } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                          } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                         />
                       </div>
                     </div>
@@ -931,7 +931,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                     )}
                     <button
                       onClick={() => setShowVehicleForm(true)}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
                     >
                       <Plus className="w-5 h-5" />
                       {t('tools.dealerInventory.addVehicle', 'Add Vehicle')}
@@ -989,7 +989,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                         <div className="flex justify-between items-center mb-3">
                           <div>
                             <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dealerInventory.listPrice', 'List Price')}</p>
-                            <p className={`text-lg font-bold text-[#0D9488]`}>
+                            <p className={`text-lg font-bold text-[#6096B4]`}>
                               {formatCurrency(vehicle.listPrice)}
                             </p>
                           </div>
@@ -1049,7 +1049,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowLeadForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.dealerInventory.addLead', 'Add Lead')}
@@ -1144,7 +1144,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Car className="w-5 h-5 text-[#0D9488]" />
+                      <Car className="w-5 h-5 text-[#6096B4]" />
                       <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dealerInventory.totalInventory', 'Total Inventory')}</span>
                     </div>
                     <p className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1228,7 +1228,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                         <div className="flex-1">
                           <div className={`h-4 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                             <div
-                              className="h-full rounded-full bg-[#0D9488]"
+                              className="h-full rounded-full bg-[#6096B4]"
                               style={{ width: `${analytics.totalVehicles > 0 ? (item.count / analytics.totalVehicles) * 100 : 0}%` }}
                             />
                           </div>
@@ -1249,7 +1249,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowAppraisalForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.dealerInventory.newAppraisal', 'New Appraisal')}
@@ -1285,7 +1285,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                         <p>{appraisal.mileage.toLocaleString()} miles | {appraisal.condition} condition</p>
                         <p>Estimated: {formatCurrency(appraisal.estimatedValue)}</p>
                         {appraisal.finalOffer > 0 && (
-                          <p className="font-medium text-[#0D9488]">Offer: {formatCurrency(appraisal.finalOffer)}</p>
+                          <p className="font-medium text-[#6096B4]">Offer: {formatCurrency(appraisal.finalOffer)}</p>
                         )}
                       </div>
                     </div>
@@ -1340,7 +1340,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                               <td className={`px-4 py-3 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                                 {formatCurrency(sale.salePrice)}
                               </td>
-                              <td className={`px-4 py-3 font-medium text-[#0D9488]`}>
+                              <td className={`px-4 py-3 font-medium text-[#6096B4]`}>
                                 {formatCurrency(sale.totalPrice)}
                               </td>
                               <td className={`px-4 py-3 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -1672,7 +1672,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={handleSaveVehicle}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
                 >
                   {editingVehicle ? t('tools.dealerInventory.updateVehicle', 'Update Vehicle') : t('tools.dealerInventory.addVehicle2', 'Add Vehicle')}
                 </button>
@@ -1831,7 +1831,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={handleSaveLead}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
                 >
                   {editingLead ? t('tools.dealerInventory.updateLead', 'Update Lead') : t('tools.dealerInventory.addLead2', 'Add Lead')}
                 </button>
@@ -1993,7 +1993,7 @@ export const DealerInventoryTool: React.FC<DealerInventoryToolProps> = ({ uiConf
                 </button>
                 <button
                   onClick={handleSaveAppraisal}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
                 >
                   {t('tools.dealerInventory.createAppraisal', 'Create Appraisal')}
                 </button>

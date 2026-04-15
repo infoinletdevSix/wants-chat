@@ -157,7 +157,7 @@ export const AllModulesSection: React.FC = () => {
         'Community Features',
         'Post Analytics'
       ],
-      bgGradient: 'from-cyan-500/10 to-teal-500/10',
+      bgGradient: 'from-cyan-500/10 to-primary-500/10',
       route: '/changelog'
     }
   ];
@@ -173,7 +173,7 @@ export const AllModulesSection: React.FC = () => {
   const currentModule = modules[currentIndex];
 
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <motion.div
         className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px]"
@@ -189,7 +189,7 @@ export const AllModulesSection: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, 100, 0],
           y: [0, -50, 0],
@@ -215,7 +215,7 @@ export const AllModulesSection: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <div className="p-2 rounded-full bg-teal-500/30">
+            <div className="p-2 rounded-full bg-primary-500/30">
               <Icon path={mdiChartBar} size={1} color="white" />
             </div>
             <span className="text-sm font-semibold text-white">Complete Life Management</span>
@@ -280,7 +280,7 @@ export const AllModulesSection: React.FC = () => {
                     </div>
 
                     <Button
-                      className="w-fit group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                      className="w-fit group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                       onClick={() => window.location.href = `/products#${currentModule.id}`}
                     >
                       Explore {currentModule.title.split(' ')[0]}
@@ -355,7 +355,7 @@ export const AllModulesSection: React.FC = () => {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === currentIndex
-                    ? 'bg-teal-400 scale-125'
+                    ? 'bg-primary-400 scale-125'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
@@ -420,7 +420,7 @@ export const TravelPlannerSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <motion.div
         className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px]"
@@ -436,7 +436,7 @@ export const TravelPlannerSection: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, 80, 0],
           y: [0, -60, 0],
@@ -455,7 +455,7 @@ export const TravelPlannerSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <div className="p-2 rounded-full bg-teal-500/30">
+            <div className="p-2 rounded-full bg-primary-500/30">
               <Icon path={mdiAirplane} size={1} color="white" />
             </div>
             <span className="text-sm font-semibold text-white">AI Travel Planning</span>
@@ -556,7 +556,7 @@ export const TravelPlannerSection: React.FC = () => {
                     </div>
                     <div className="flex justify-between items-center p-2 bg-white/10 backdrop-blur-sm rounded border border-white/10">
                       <span className="text-xs text-white/60">Distance Traveled</span>
-                      <span className="text-sm font-bold text-teal-400">45 km</span>
+                      <span className="text-sm font-bold text-primary-400">45 km</span>
                     </div>
                     <div className="flex justify-between items-center p-2 bg-white/10 backdrop-blur-sm rounded border border-white/10">
                       <span className="text-xs text-white/60">Local Cuisine Tried</span>
@@ -581,7 +581,7 @@ export const TravelPlannerSection: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {upcomingPlans.map((plan, index) => (
-              <Card key={plan.id} className="p-6 bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-lg hover:shadow-teal-500/20 transition-all duration-300">
+              <Card key={plan.id} className="p-6 bg-white/10 backdrop-blur-sm border-white/20 hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-xl">{plan.image}</span>
@@ -671,7 +671,7 @@ export const TravelPlannerSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               onClick={() => window.location.href = '/travel-planner'}
             >
               Explore 3D Travel Globe

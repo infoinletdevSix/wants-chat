@@ -179,10 +179,10 @@ Please write a complete, well-structured essay with an introduction, body paragr
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <FileText className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <FileText className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.essayWriter.aiEssayWriter', 'AI Essay Writer')}</h3>
@@ -190,7 +190,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
               {t('tools.essayWriter.generateWellStructuredEssaysWith', 'Generate well-structured essays with AI')}
             </p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.essayWriter.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -210,7 +210,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.essayWriter.theImpactOfTechnologyOn', 'The Impact of Technology on Education')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -227,7 +227,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
                 const selected = essayTypes.find((t) => t.value === e.target.value);
                 if (selected) setEssayType(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {essayTypes.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -248,7 +248,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
                 const selected = lengthOptions.find((l) => l.value === e.target.value);
                 if (selected) setLength(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {lengthOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -269,7 +269,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
             onChange={(e) => setThesis(e.target.value)}
             placeholder={t('tools.essayWriter.enterYourMainArgumentOr', 'Enter your main argument or thesis statement...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -283,7 +283,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
             onChange={(e) => setAdditionalNotes(e.target.value)}
             placeholder={t('tools.essayWriter.anySpecificPointsSourcesOr', 'Any specific points, sources, or requirements to include...')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -298,7 +298,7 @@ Please write a complete, well-structured essay with an introduction, body paragr
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>

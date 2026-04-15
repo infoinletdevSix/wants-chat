@@ -138,10 +138,10 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Fuel className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Fuel className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.fleetFuelCost.fleetFuelCostCalculator', 'Fleet Fuel Cost Calculator')}</h3>
@@ -152,9 +152,9 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.fleetFuelCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.fleetFuelCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -162,13 +162,13 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('us')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'us' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'us' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.fleetFuelCost.usMpgGallons', 'US (MPG / Gallons)')}
           </button>
           <button
             onClick={() => setUnit('metric')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.fleetFuelCost.metricL100km', 'Metric (L/100km)')}
           </button>
@@ -185,7 +185,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
             step="0.01"
             value={fuelPrice}
             onChange={(e) => setFuelPrice(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
           />
         </div>
 
@@ -224,7 +224,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
             </label>
             <button
               onClick={addVehicle}
-              className="flex items-center gap-1 px-3 py-1 text-sm bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors"
+              className="flex items-center gap-1 px-3 py-1 text-sm bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.fleetFuelCost.addVehicle', 'Add Vehicle')}
@@ -257,7 +257,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
                       type="number"
                       value={vehicle.mpg}
                       onChange={(e) => updateVehicle(vehicle.id, 'mpg', e.target.value)}
-                      className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                      className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                       {unit === 'us' ? t('tools.fleetFuelCost.mpg', 'MPG') : t('tools.fleetFuelCost.l100km', 'L/100km')}
@@ -268,7 +268,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
                       type="number"
                       value={vehicle.dailyMiles}
                       onChange={(e) => updateVehicle(vehicle.id, 'dailyMiles', e.target.value)}
-                      className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                      className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                       Daily {unit === 'us' ? 'Miles' : 'KM'}
@@ -281,16 +281,16 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
                       max="7"
                       value={vehicle.daysPerWeek}
                       onChange={(e) => updateVehicle(vehicle.id, 'daysPerWeek', e.target.value)}
-                      className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                      className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.fleetFuelCost.daysWeek', 'Days/Week')}</span>
                   </div>
                 </div>
                 {calc && (
                   <div className={`flex gap-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                    <span>Daily: <span className="text-teal-500 font-medium">${calc.dailyCost.toFixed(2)}</span></span>
-                    <span>Weekly: <span className="text-teal-500 font-medium">${calc.weeklyCost.toFixed(2)}</span></span>
-                    <span>Monthly: <span className="text-teal-500 font-medium">${calc.monthlyCost.toFixed(2)}</span></span>
+                    <span>Daily: <span className="text-primary-500 font-medium">${calc.dailyCost.toFixed(2)}</span></span>
+                    <span>Weekly: <span className="text-primary-500 font-medium">${calc.weeklyCost.toFixed(2)}</span></span>
+                    <span>Monthly: <span className="text-primary-500 font-medium">${calc.monthlyCost.toFixed(2)}</span></span>
                   </div>
                 )}
               </div>
@@ -299,9 +299,9 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
         </div>
 
         {/* Fleet Totals */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.fleetFuelCost.annualFleetFuelCost', 'Annual Fleet Fuel Cost')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             ${calculations.totals.yearlyCost.toLocaleString('en-US', { maximumFractionDigits: 0 })}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -331,7 +331,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.fleetFuelCost.perMile', 'Per Mile')}</div>
-            <div className="text-xl font-bold text-teal-500">
+            <div className="text-xl font-bold text-primary-500">
               ${calculations.costPerMile.toFixed(3)}
             </div>
           </div>
@@ -352,7 +352,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
                 <div key={v.id} className="flex items-center gap-3">
                   <span className={`flex-1 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{v.name}</span>
                   <div className="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-teal-500 rounded-full" style={{ width: `${pct}%` }} />
+                    <div className="h-full bg-primary-500 rounded-full" style={{ width: `${pct}%` }} />
                   </div>
                   <span className={`text-sm font-medium w-24 text-right ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     ${v.yearlyCost.toLocaleString('en-US', { maximumFractionDigits: 0 })}
@@ -365,7 +365,7 @@ export const FleetFuelCostTool: React.FC<FleetFuelCostToolProps> = ({ uiConfig }
 
         {/* Tips */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.fleetFuelCost.fleetFuelSavingsTips', 'Fleet Fuel Savings Tips')}</p>
             <ul className="space-y-1 list-disc list-inside">

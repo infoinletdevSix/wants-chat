@@ -135,9 +135,9 @@ export const AnagramSolverTool = ({ uiConfig }: AnagramSolverToolProps) => {
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.anagramSolver.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.anagramSolver.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -153,7 +153,7 @@ export const AnagramSolverTool = ({ uiConfig }: AnagramSolverToolProps) => {
               max="8"
               value={minLength}
               onChange={(e) => setMinLength(Number(e.target.value))}
-              className="w-32 h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+              className="w-32 h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
             />
           </div>
           <label className="flex items-center gap-2 cursor-pointer">
@@ -161,7 +161,7 @@ export const AnagramSolverTool = ({ uiConfig }: AnagramSolverToolProps) => {
               type="checkbox"
               checked={showOnlyFullAnagrams}
               onChange={(e) => setShowOnlyFullAnagrams(e.target.checked)}
-              className="w-4 h-4 rounded accent-[#0D9488] cursor-pointer"
+              className="w-4 h-4 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.anagramSolver.onlyShowFullAnagramsSame', 'Only show full anagrams (same length)')}
@@ -185,7 +185,7 @@ export const AnagramSolverTool = ({ uiConfig }: AnagramSolverToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <button
               onClick={handleShuffle}
@@ -207,7 +207,7 @@ export const AnagramSolverTool = ({ uiConfig }: AnagramSolverToolProps) => {
           <button
             onClick={findAnagrams}
             disabled={!input.trim() || loading}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors"
           >
             {loading ? (
               <RefreshCw className="w-4 h-4 animate-spin" />
@@ -266,7 +266,7 @@ export const AnagramSolverTool = ({ uiConfig }: AnagramSolverToolProps) => {
                           key={index}
                           className={`px-3 py-1.5 rounded-lg text-sm font-mono ${
                             word.length === input.length
-                              ? 'bg-[#0D9488]/20 text-[#0D9488] border border-[#0D9488]'
+                              ? 'bg-[#6096B4]/20 text-[#6096B4] border border-[#6096B4]'
                               : theme === 'dark'
                               ? 'bg-gray-700 text-gray-200'
                               : 'bg-gray-100 text-gray-700'

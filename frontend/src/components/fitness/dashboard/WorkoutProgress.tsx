@@ -96,7 +96,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed': return 'text-emerald-400 bg-emerald-500/20';
-      case 'on-track': return 'text-teal-400 bg-teal-500/20';
+      case 'on-track': return 'text-primary-400 bg-primary-500/20';
       case 'urgent': return 'text-red-400 bg-red-500/20';
       case 'behind': return 'text-white/60 bg-white/10';
       default: return 'text-white/60 bg-white/10';
@@ -117,7 +117,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
           return (
             <div key={index} className="p-3 bg-white/5 border border-white/10 rounded-lg">
               <div className="flex items-center gap-2 mb-1">
-                <Icon className="h-4 w-4 text-teal-400" />
+                <Icon className="h-4 w-4 text-primary-400" />
                 <span className="text-xs text-white/60">{stat.label}</span>
               </div>
               <div className="flex items-center justify-between">
@@ -139,7 +139,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
       <div className="space-y-4 mb-6">
         <div className="flex items-center justify-between">
           <h4 className="text-sm font-medium text-white">Active Goals</h4>
-          <Button size="sm" className="h-7 text-xs bg-teal-500/10 border border-teal-400/30 text-teal-400 hover:bg-teal-500/20 hover:scale-105 transition-all duration-200">
+          <Button size="sm" className="h-7 text-xs bg-primary-500/10 border border-primary-400/30 text-primary-400 hover:bg-primary-500/20 hover:scale-105 transition-all duration-200">
             <Target className="h-3 w-3 mr-1" />
             Set New Goal
           </Button>
@@ -184,7 +184,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
               <div className="space-y-1">
                 <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300"
+                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -192,7 +192,7 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
                   <span className="text-white/60">{progress.toFixed(0)}% complete</span>
                   <span className={`font-medium ${
                     status === 'completed' ? 'text-emerald-400' :
-                    status === 'on-track' ? 'text-teal-400' :
+                    status === 'on-track' ? 'text-primary-400' :
                     status === 'urgent' ? 'text-red-400' :
                     'text-white/60'
                   }`}>
@@ -209,10 +209,10 @@ const WorkoutProgress: React.FC<WorkoutProgressProps> = ({
       </div>
 
       {/* Motivational Footer */}
-      <div className="p-4 bg-teal-500/10 rounded-lg border border-teal-500/20">
+      <div className="p-4 bg-primary-500/10 rounded-lg border border-primary-500/20">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <TrendingUp className="h-5 w-5 text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <TrendingUp className="h-5 w-5 text-primary-400" />
           </div>
           <div className="flex-1">
             <p className="text-sm font-medium text-white">Great Progress!</p>

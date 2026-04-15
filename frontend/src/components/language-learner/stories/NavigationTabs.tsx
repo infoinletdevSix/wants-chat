@@ -23,7 +23,7 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({
             onClick={() => onCategoryChange('discover')}
             className={`py-3 px-2 border-b-2 font-medium text-sm transition-colors ${
               activeCategory === 'discover' || (activeCategory !== 'my-stories' && activeCategory !== 'discover')
-                ? 'border-teal-400 text-teal-400'
+                ? 'border-primary-400 text-primary-400'
                 : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
             }`}
           >
@@ -33,7 +33,7 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({
             onClick={() => onCategoryChange('my-stories')}
             className={`py-3 px-2 border-b-2 font-medium text-sm transition-colors ${
               activeCategory === 'my-stories'
-                ? 'border-teal-400 text-teal-400'
+                ? 'border-primary-400 text-primary-400'
                 : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
             }`}
           >
@@ -42,7 +42,7 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({
         </div>
         <Button
           onClick={onAddStoryClick}
-          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
         >
           <Plus className="h-4 w-4 mr-2" />
           Add Story

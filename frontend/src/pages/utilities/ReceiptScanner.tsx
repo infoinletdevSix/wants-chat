@@ -75,7 +75,7 @@ const ReceiptScanner: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -87,7 +87,7 @@ const ReceiptScanner: React.FC = () => {
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 Receipt Scanner
               </h1>
               <p className="text-gray-400">
@@ -99,21 +99,21 @@ const ReceiptScanner: React.FC = () => {
               {/* Left Column - Scanner & List */}
               <div className="space-y-6">
                 {/* Scanner Card */}
-                <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-teal-400">
+                    <CardTitle className="flex items-center gap-2 text-primary-400">
                       <Camera className="w-5 h-5" />
                       Scan Receipt
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 rounded-2xl p-8 border-2 border-dashed border-teal-500/30 text-center">
-                      <FileText className="w-16 h-16 text-teal-400 mx-auto mb-4" />
+                    <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-2xl p-8 border-2 border-dashed border-primary-500/30 text-center">
+                      <FileText className="w-16 h-16 text-primary-400 mx-auto mb-4" />
                       <p className="text-white mb-4">Upload or capture receipt image</p>
                       <div className="flex gap-3 justify-center">
                         <Button
                           onClick={() => cameraInputRef.current?.click()}
-                          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                         >
                           <Camera className="w-4 h-4 mr-2" />
                           Take Photo
@@ -121,7 +121,7 @@ const ReceiptScanner: React.FC = () => {
                         <Button
                           onClick={() => fileInputRef.current?.click()}
                           variant="outline"
-                          className="border-teal-500/30 text-teal-400 hover:bg-teal-900/30"
+                          className="border-primary-500/30 text-primary-400 hover:bg-primary-900/30"
                         >
                           <Upload className="w-4 h-4 mr-2" />
                           Upload
@@ -149,7 +149,7 @@ const ReceiptScanner: React.FC = () => {
                         <motion.div
                           animate={{ rotate: 360 }}
                           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                          className="w-12 h-12 border-4 border-teal-400 border-t-transparent rounded-full mx-auto mb-4"
+                          className="w-12 h-12 border-4 border-primary-400 border-t-transparent rounded-full mx-auto mb-4"
                         />
                         <p className="text-gray-400">Processing receipt...</p>
                         <p className="text-sm text-gray-500 mt-1">Extracting data using OCR</p>
@@ -160,9 +160,9 @@ const ReceiptScanner: React.FC = () => {
 
                 {/* Receipts List */}
                 {scannedReceipts.length > 0 && (
-                  <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                  <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-teal-400">
+                      <CardTitle className="flex items-center gap-2 text-primary-400">
                         <FileText className="w-5 h-5" />
                         Scanned Receipts ({scannedReceipts.length})
                       </CardTitle>
@@ -177,14 +177,14 @@ const ReceiptScanner: React.FC = () => {
                             onClick={() => setSelectedReceipt(receipt)}
                             className={`w-full text-left p-4 rounded-lg border transition-all ${
                               selectedReceipt?.id === receipt.id
-                                ? 'bg-teal-900/30 border-teal-400'
-                                : 'bg-slate-700/30 border-teal-500/20 hover:border-teal-400/50'
+                                ? 'bg-primary-900/30 border-primary-400'
+                                : 'bg-slate-700/30 border-primary-500/20 hover:border-primary-400/50'
                             }`}
                           >
                             <div className="flex items-center justify-between">
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <Store className="w-4 h-4 text-teal-400" />
+                                  <Store className="w-4 h-4 text-primary-400" />
                                   <p className="font-semibold text-white truncate">
                                     {receipt.merchantName}
                                   </p>
@@ -230,16 +230,16 @@ const ReceiptScanner: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                     >
-                      <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                      <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                         <CardHeader>
-                          <CardTitle className="flex items-center gap-2 text-teal-400">
+                          <CardTitle className="flex items-center gap-2 text-primary-400">
                             <FileText className="w-5 h-5" />
                             Receipt Details
                           </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
                           {/* Receipt Image */}
-                          <div className="relative rounded-lg overflow-hidden border border-teal-500/30">
+                          <div className="relative rounded-lg overflow-hidden border border-primary-500/30">
                             <img
                               src={selectedReceipt.imageUrl}
                               alt="Receipt"
@@ -248,19 +248,19 @@ const ReceiptScanner: React.FC = () => {
                           </div>
 
                           {/* Merchant Info */}
-                          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 rounded-lg p-4 border border-teal-500/30">
+                          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-lg p-4 border border-primary-500/30">
                             <div className="grid grid-cols-2 gap-4">
                               <div>
                                 <p className="text-sm text-gray-400 mb-1">Merchant</p>
                                 <p className="font-semibold text-white flex items-center gap-2">
-                                  <Store className="w-4 h-4 text-teal-400" />
+                                  <Store className="w-4 h-4 text-primary-400" />
                                   {selectedReceipt.merchantName}
                                 </p>
                               </div>
                               <div>
                                 <p className="text-sm text-gray-400 mb-1">Date</p>
                                 <p className="font-semibold text-white flex items-center gap-2">
-                                  <Calendar className="w-4 h-4 text-teal-400" />
+                                  <Calendar className="w-4 h-4 text-primary-400" />
                                   {selectedReceipt.date}
                                 </p>
                               </div>
@@ -274,13 +274,13 @@ const ReceiptScanner: React.FC = () => {
                               {selectedReceipt.items.map((item, index) => (
                                 <div
                                   key={index}
-                                  className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg border border-teal-500/20"
+                                  className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg border border-primary-500/20"
                                 >
                                   <div className="flex-1">
                                     <p className="text-white font-medium">{item.name}</p>
                                     <p className="text-sm text-gray-400">Qty: {item.quantity}</p>
                                   </div>
-                                  <p className="text-teal-400 font-semibold">
+                                  <p className="text-primary-400 font-semibold">
                                     ${item.price.toFixed(2)}
                                   </p>
                                 </div>
@@ -289,13 +289,13 @@ const ReceiptScanner: React.FC = () => {
                           </div>
 
                           {/* Total */}
-                          <div className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-lg p-4 border border-teal-400">
+                          <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-lg p-4 border border-primary-400">
                             <div className="flex items-center justify-between">
                               <p className="text-white font-semibold text-lg flex items-center gap-2">
-                                <DollarSign className="w-5 h-5 text-teal-400" />
+                                <DollarSign className="w-5 h-5 text-primary-400" />
                                 Total
                               </p>
-                              <p className="text-2xl font-bold text-teal-400">
+                              <p className="text-2xl font-bold text-primary-400">
                                 ${selectedReceipt.total.toFixed(2)}
                               </p>
                             </div>
@@ -303,7 +303,7 @@ const ReceiptScanner: React.FC = () => {
 
                           {/* Actions */}
                           <div className="flex gap-3">
-                            <Button className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+                            <Button className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
                               <Check className="w-4 h-4 mr-2" />
                               Save to Expenses
                             </Button>
@@ -326,7 +326,7 @@ const ReceiptScanner: React.FC = () => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                     >
-                      <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl h-full">
+                      <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl h-full">
                         <CardContent className="flex items-center justify-center min-h-[500px]">
                           <div className="text-center">
                             <FileText className="w-16 h-16 text-gray-600 mx-auto mb-4" />

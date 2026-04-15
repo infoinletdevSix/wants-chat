@@ -685,7 +685,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={() => setActiveView('create')}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
           >
             <Plus className="w-4 h-4" />
             New Ticket
@@ -787,7 +787,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className={`w-full pl-10 pr-4 py-2 rounded-lg border ${
                 theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="flex gap-3">
@@ -796,7 +796,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
               onChange={(e) => setFilterStatus(e.target.value as Ticket['status'] | 'all')}
               className={`px-4 py-2 rounded-lg border ${
                 theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               <option value="all">{t('tools.iTSupport.allStatus', 'All Status')}</option>
               <option value="intake">{t('tools.iTSupport.intake', 'Intake')}</option>
@@ -812,7 +812,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
               onChange={(e) => setFilterPriority(e.target.value as Ticket['priority'] | 'all')}
               className={`px-4 py-2 rounded-lg border ${
                 theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               <option value="all">{t('tools.iTSupport.allPriority', 'All Priority')}</option>
               <option value="low">{t('tools.iTSupport.low', 'Low')}</option>
@@ -840,7 +840,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 onClick={() => setSelectedTicket(ticket)}
                 className={`p-4 rounded-lg cursor-pointer transition-all ${
                   theme === 'dark' ? 'bg-gray-800 hover:bg-gray-750' : 'bg-white hover:bg-gray-50'
-                } shadow ${selectedTicket?.id === ticket.id ? 'ring-2 ring-[#0D9488]' : ''}`}
+                } shadow ${selectedTicket?.id === ticket.id ? 'ring-2 ring-[#6096B4]' : ''}`}
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="flex items-start gap-4">
@@ -1162,7 +1162,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
             </h3>
             <button
               onClick={() => setShowAddNote(!showAddNote)}
-              className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+              className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
             >
               <Plus className="w-4 h-4" /> Add Note
             </button>
@@ -1186,7 +1186,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                     setShowAddNote(false);
                   }
                 }}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
               >
                 {t('tools.iTSupport.saveNote', 'Save Note')}
               </button>
@@ -1212,7 +1212,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
             </h3>
             <button
               onClick={() => setShowAddPart(!showAddPart)}
-              className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+              className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
             >
               <Plus className="w-4 h-4" /> Add Part
             </button>
@@ -1254,7 +1254,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                     setShowAddPart(false);
                   }
                 }}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
               >
                 {t('tools.iTSupport.add', 'Add')}
               </button>
@@ -1311,7 +1311,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
             </h3>
             <button
               onClick={() => setShowAddSession(!showAddSession)}
-              className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+              className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
             >
               <Plus className="w-4 h-4" /> Log Session
             </button>
@@ -1355,7 +1355,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                   setNewSession({ date: new Date(), duration: 30, tool: 'TeamViewer', notes: '', technicianId: technicians[0]?.id || '' });
                   setShowAddSession(false);
                 }}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
               >
                 {t('tools.iTSupport.add2', 'Add')}
               </button>
@@ -1382,7 +1382,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
         </div>
 
         {/* Pricing Summary */}
-        <div className={`mt-6 p-4 rounded-lg border-2 border-[#0D9488] ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
+        <div className={`mt-6 p-4 rounded-lg border-2 border-[#6096B4] ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
           <h3 className={`font-semibold mb-3 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             <DollarSign className="w-4 h-4" /> Pricing Summary
           </h3>
@@ -1431,7 +1431,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
             )}
             <div className={`flex justify-between pt-2 border-t text-lg font-bold ${theme === 'dark' ? 'border-gray-600 text-white' : 'border-gray-300 text-gray-900'}`}>
               <span>{t('tools.iTSupport.total', 'Total:')}</span>
-              <span className="text-[#0D9488]">${calculateTotalCost(selectedTicket).toFixed(2)}</span>
+              <span className="text-[#6096B4]">${calculateTotalCost(selectedTicket).toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -1533,7 +1533,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1551,7 +1551,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1569,7 +1569,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1587,7 +1587,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
           </div>
@@ -1613,7 +1613,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               >
                 <option value="desktop">{t('tools.iTSupport.desktop', 'Desktop')}</option>
                 <option value="laptop">{t('tools.iTSupport.laptop', 'Laptop')}</option>
@@ -1640,7 +1640,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1658,7 +1658,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1676,7 +1676,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1694,7 +1694,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1712,7 +1712,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
           </div>
@@ -1745,7 +1745,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                       },
                     })
                   }
-                  className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                  className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                 />
                 <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{item.label}</span>
               </label>
@@ -1769,7 +1769,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 rows={4}
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                 placeholder={t('tools.iTSupport.describeTheIssueInDetail', 'Describe the issue in detail...')}
               />
             </div>
@@ -1783,7 +1783,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                   onChange={(e) => setNewTicket({ ...newTicket, repairType: e.target.value as Ticket['repairType'] })}
                   className={`w-full px-4 py-2 rounded-lg border ${
                     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                 >
                   {Object.entries(repairTypeLabels).map(([value, label]) => (
                     <option key={value} value={value}>
@@ -1801,7 +1801,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                   onChange={(e) => setNewTicket({ ...newTicket, priority: e.target.value as Ticket['priority'] })}
                   className={`w-full px-4 py-2 rounded-lg border ${
                     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                 >
                   <option value="low">{t('tools.iTSupport.low2', 'Low')}</option>
                   <option value="medium">{t('tools.iTSupport.medium2', 'Medium')}</option>
@@ -1839,7 +1839,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }}
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               >
                 <option value="standard">{t('tools.iTSupport.standard24h72h', 'Standard (24h / 72h)')}</option>
                 <option value="priority">{t('tools.iTSupport.priority4h24h', 'Priority (4h / 24h)')}</option>
@@ -1861,7 +1861,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
             <div>
@@ -1879,7 +1879,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
           </div>
@@ -1905,7 +1905,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 }
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               >
                 <option value="hourly">{t('tools.iTSupport.hourlyRate', 'Hourly Rate')}</option>
                 <option value="flat">{t('tools.iTSupport.flatRate2', 'Flat Rate')}</option>
@@ -1927,7 +1927,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                   }
                   className={`w-full px-4 py-2 rounded-lg border ${
                     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                 />
               </div>
             ) : (
@@ -1946,7 +1946,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                   }
                   className={`w-full px-4 py-2 rounded-lg border ${
                     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                 />
               </div>
             )}
@@ -1967,7 +1967,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                 max="100"
                 className={`w-full px-4 py-2 rounded-lg border ${
                   theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
               />
             </div>
           </div>
@@ -1989,7 +1989,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                     warranty: { ...newTicket.warranty!, hasWarranty: e.target.checked },
                   })
                 }
-                className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
               />
               <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.iTSupport.deviceHasWarranty', 'Device has warranty')}</span>
             </label>
@@ -2009,7 +2009,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                     }
                     className={`w-full px-4 py-2 rounded-lg border ${
                       theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                   >
                     <option value="manufacturer">{t('tools.iTSupport.manufacturer', 'Manufacturer')}</option>
                     <option value="extended">{t('tools.iTSupport.extended', 'Extended')}</option>
@@ -2032,7 +2032,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                     placeholder={t('tools.iTSupport.eGPartsAndLabor', 'e.g., Parts and labor')}
                     className={`w-full px-4 py-2 rounded-lg border ${
                       theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:outline-none`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:outline-none`}
                   />
                 </div>
               </div>
@@ -2044,7 +2044,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
         <div className="flex gap-4 pt-4">
           <button
             onClick={createTicket}
-            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors"
           >
             <Save className="w-5 h-5" />
             {t('tools.iTSupport.createTicket', 'Create Ticket')}
@@ -2068,7 +2068,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
         {/* Header */}
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Wrench className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -2078,9 +2078,9 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.iTSupport.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.iTSupport.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
             </div>
           )}
 
@@ -2101,7 +2101,7 @@ export const ITSupportTool: React.FC<ITSupportToolProps> = ({ uiConfig }) => {
                   }}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeView === id
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'

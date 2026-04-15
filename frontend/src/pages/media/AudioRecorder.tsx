@@ -216,7 +216,7 @@ const AudioRecorder: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -251,7 +251,7 @@ const AudioRecorder: React.FC = () => {
                 {visualizerData.map((height, index) => (
                   <div
                     key={index}
-                    className="flex-1 bg-gradient-to-t from-cyan-500 to-teal-400 rounded-full transition-all duration-75"
+                    className="flex-1 bg-gradient-to-t from-cyan-500 to-primary-400 rounded-full transition-all duration-75"
                     style={{ height: `${isRecording && !isPaused ? height : 0}%` }}
                   />
                 ))}
@@ -266,7 +266,7 @@ const AudioRecorder: React.FC = () => {
                   </div>
                   <div className="w-full h-3 bg-black/20 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-cyan-500 to-teal-400 transition-all duration-100"
+                      className="h-full bg-gradient-to-r from-cyan-500 to-primary-400 transition-all duration-100"
                       style={{ width: `${audioLevel}%` }}
                     />
                   </div>
@@ -335,7 +335,7 @@ const AudioRecorder: React.FC = () => {
                         onClick={() => playRecording(recording)}
                         className={`p-4 rounded-full transition ${
                           currentPlayingId === recording.id
-                            ? 'bg-gradient-to-r from-cyan-500 to-teal-500 text-white'
+                            ? 'bg-gradient-to-r from-cyan-500 to-primary-500 text-white'
                             : 'bg-white/10 text-white hover:bg-white/20'
                         }`}
                       >
@@ -374,7 +374,7 @@ const AudioRecorder: React.FC = () => {
 
                     {currentPlayingId === recording.id && (
                       <div className="mt-3 h-1 bg-white/20 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-cyan-400 to-teal-400 w-1/3 animate-pulse" />
+                        <div className="h-full bg-gradient-to-r from-cyan-400 to-primary-400 w-1/3 animate-pulse" />
                       </div>
                     )}
                   </div>
@@ -404,8 +404,8 @@ const AudioRecorder: React.FC = () => {
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-cyan-500/30">
             <div className="flex items-center gap-3 mb-2">
-              <div className="p-3 bg-teal-500/20 rounded-xl">
-                <Download className="text-teal-400" size={24} />
+              <div className="p-3 bg-primary-500/20 rounded-xl">
+                <Download className="text-primary-400" size={24} />
               </div>
               <h3 className="text-white font-semibold">Easy Export</h3>
             </div>

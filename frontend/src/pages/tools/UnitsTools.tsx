@@ -137,7 +137,7 @@ export default function UnitsTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               Unit Converter
             </h1>
             <p className="text-gray-400">Convert between different units of measurement</p>
@@ -145,19 +145,19 @@ export default function UnitsTools() {
 
           <Tabs defaultValue="length" className="w-full">
             <TabsList className="grid w-full grid-cols-4 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="length" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="length" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Ruler className="w-4 h-4 mr-2" />
                 Length
               </TabsTrigger>
-              <TabsTrigger value="weight" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="weight" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Weight className="w-4 h-4 mr-2" />
                 Weight
               </TabsTrigger>
-              <TabsTrigger value="temperature" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="temperature" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Thermometer className="w-4 h-4 mr-2" />
                 Temperature
               </TabsTrigger>
-              <TabsTrigger value="time" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="time" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Clock className="w-4 h-4 mr-2" />
                 Time
               </TabsTrigger>
@@ -174,7 +174,7 @@ export default function UnitsTools() {
                       value={lengthValue}
                       onChange={(e) => setLengthValue(e.target.value)}
                       placeholder="Enter value"
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -182,7 +182,7 @@ export default function UnitsTools() {
                     <select
                       value={lengthFrom}
                       onChange={(e) => setLengthFrom(e.target.value)}
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     >
                       {Object.keys(lengthUnits).map((unit) => (
                         <option key={unit} value={unit}>
@@ -194,7 +194,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertLength}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -203,7 +203,7 @@ export default function UnitsTools() {
                     {Object.entries(lengthResults).map(([unit, value]) => (
                       <div key={unit} className="bg-gray-900/50 border border-gray-700 rounded-lg p-4">
                         <div className="text-sm text-gray-400 mb-1">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
-                        <div className="text-xl font-semibold text-teal-400">{formatNumber(value)}</div>
+                        <div className="text-xl font-semibold text-primary-400">{formatNumber(value)}</div>
                       </div>
                     ))}
                   </div>
@@ -222,7 +222,7 @@ export default function UnitsTools() {
                       value={weightValue}
                       onChange={(e) => setWeightValue(e.target.value)}
                       placeholder="Enter value"
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -230,7 +230,7 @@ export default function UnitsTools() {
                     <select
                       value={weightFrom}
                       onChange={(e) => setWeightFrom(e.target.value)}
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     >
                       {Object.keys(weightUnits).map((unit) => (
                         <option key={unit} value={unit}>
@@ -242,7 +242,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertWeight}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -251,7 +251,7 @@ export default function UnitsTools() {
                     {Object.entries(weightResults).map(([unit, value]) => (
                       <div key={unit} className="bg-gray-900/50 border border-gray-700 rounded-lg p-4">
                         <div className="text-sm text-gray-400 mb-1">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
-                        <div className="text-xl font-semibold text-teal-400">{formatNumber(value)}</div>
+                        <div className="text-xl font-semibold text-primary-400">{formatNumber(value)}</div>
                       </div>
                     ))}
                   </div>
@@ -270,7 +270,7 @@ export default function UnitsTools() {
                       value={tempValue}
                       onChange={(e) => setTempValue(e.target.value)}
                       placeholder="Enter value"
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -278,7 +278,7 @@ export default function UnitsTools() {
                     <select
                       value={tempFrom}
                       onChange={(e) => setTempFrom(e.target.value)}
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     >
                       <option value="celsius">Celsius</option>
                       <option value="fahrenheit">Fahrenheit</option>
@@ -288,7 +288,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertTemperature}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -297,7 +297,7 @@ export default function UnitsTools() {
                     {Object.entries(tempResults).map(([unit, value]) => (
                       <div key={unit} className="bg-gray-900/50 border border-gray-700 rounded-lg p-4">
                         <div className="text-sm text-gray-400 mb-1">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
-                        <div className="text-xl font-semibold text-teal-400">{formatNumber(value)}°</div>
+                        <div className="text-xl font-semibold text-primary-400">{formatNumber(value)}°</div>
                       </div>
                     ))}
                   </div>
@@ -316,7 +316,7 @@ export default function UnitsTools() {
                       value={timeValue}
                       onChange={(e) => setTimeValue(e.target.value)}
                       placeholder="Enter value"
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -324,7 +324,7 @@ export default function UnitsTools() {
                     <select
                       value={timeFrom}
                       onChange={(e) => setTimeFrom(e.target.value)}
-                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                      className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                     >
                       {Object.keys(timeUnits).map((unit) => (
                         <option key={unit} value={unit}>
@@ -336,7 +336,7 @@ export default function UnitsTools() {
                 </div>
                 <button
                   onClick={convertTime}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Convert
                 </button>
@@ -345,7 +345,7 @@ export default function UnitsTools() {
                     {Object.entries(timeResults).map(([unit, value]) => (
                       <div key={unit} className="bg-gray-900/50 border border-gray-700 rounded-lg p-4">
                         <div className="text-sm text-gray-400 mb-1">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
-                        <div className="text-xl font-semibold text-teal-400">{formatNumber(value)}</div>
+                        <div className="text-xl font-semibold text-primary-400">{formatNumber(value)}</div>
                       </div>
                     ))}
                   </div>

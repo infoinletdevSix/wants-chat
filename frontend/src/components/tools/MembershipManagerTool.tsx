@@ -587,7 +587,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
 
   const cardClass = `rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     isDark
@@ -613,7 +613,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-xl">
+          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
             <Dumbbell className="w-8 h-8 text-cyan-500" />
           </div>
           <div>
@@ -670,7 +670,7 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
                 onClick={() => { setActiveTab(tab.id as TabType); resetForms(); }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-cyan-600 to-teal-600 text-white shadow-sm'
+                    ? 'bg-gradient-to-r from-cyan-600 to-primary-600 text-white shadow-sm'
                     : isDark
                     ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -713,12 +713,12 @@ export const MembershipManagerTool: React.FC<MembershipManagerToolProps> = ({ ui
             </div>
             <div className={`${cardClass} p-4`}>
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-teal-500/10 rounded-lg">
-                  <DollarSign className="w-5 h-5 text-teal-500" />
+                <div className="p-2 bg-primary-500/10 rounded-lg">
+                  <DollarSign className="w-5 h-5 text-primary-500" />
                 </div>
                 <div>
                   <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.membershipManager.revenueMonth', 'Revenue (Month)')}</p>
-                  <p className="text-2xl font-bold text-teal-500">${stats.revenueThisMonth.toFixed(2)}</p>
+                  <p className="text-2xl font-bold text-primary-500">${stats.revenueThisMonth.toFixed(2)}</p>
                 </div>
               </div>
             </div>

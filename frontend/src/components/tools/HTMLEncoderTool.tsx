@@ -173,7 +173,7 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <Code className="w-7 h-7 text-teal-500" />
+        <Code className="w-7 h-7 text-primary-500" />
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
           {t('tools.hTMLEncoder.htmlEntityEncoderDecoder', 'HTML Entity Encoder/Decoder')}
         </h2>
@@ -182,9 +182,9 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.hTMLEncoder.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.hTMLEncoder.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -198,7 +198,7 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
               onClick={() => setEncodeMode('basic')}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
                 encodeMode === 'basic'
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -210,7 +210,7 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
               onClick={() => setEncodeMode('full')}
               className={`px-4 py-1.5 text-sm font-medium transition-colors ${
                 encodeMode === 'full'
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -237,7 +237,7 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+            } focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
         </div>
 
@@ -253,14 +253,14 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleEncode}
-            className="flex items-center gap-2 px-6 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors font-medium"
           >
             <ArrowRight className="w-4 h-4" />
             {t('tools.hTMLEncoder.encodeToHtml', 'Encode to HTML')}
           </button>
           <button
             onClick={handleDecode}
-            className="flex items-center gap-2 px-6 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('tools.hTMLEncoder.decodeFromHtml', 'Decode from HTML')}
@@ -357,7 +357,7 @@ export const HTMLEncoderTool = ({ uiConfig }: HTMLEncoderToolProps) => {
         </div>
 
         {/* Info Section */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-teal-50'}`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-primary-50'}`}>
           <h3 className={`text-sm font-semibold mb-2 ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
             {t('tools.hTMLEncoder.aboutHtmlEntities', 'About HTML Entities')}
           </h3>

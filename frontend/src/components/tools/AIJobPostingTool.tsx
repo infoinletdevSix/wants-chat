@@ -293,16 +293,16 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Briefcase className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Briefcase className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aIJobPosting.aiJobPostingGenerator', 'AI Job Posting Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aIJobPosting.createProfessionalJobPostingsThat', 'Create professional job postings that attract top talent')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aIJobPosting.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -321,7 +321,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
               value={formData.jobTitle}
               onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
               placeholder={t('tools.aIJobPosting.eGSeniorSoftwareEngineer', 'e.g., Senior Software Engineer')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -332,7 +332,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
               value={formData.company}
               onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               placeholder={t('tools.aIJobPosting.eGAcmeCorporation', 'e.g., Acme Corporation')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
         </div>
@@ -344,7 +344,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
             <select
               value={formData.industry}
               onChange={(e) => setFormData({ ...formData, industry: e.target.value as Industry })}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {industries.map((ind) => (
                 <option key={ind.value} value={ind.value}>{ind.label}</option>
@@ -357,7 +357,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
             <select
               value={formData.jobType}
               onChange={(e) => setFormData({ ...formData, jobType: e.target.value as JobType })}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {jobTypes.map((type) => (
                 <option key={type.value} value={type.value}>{type.label}</option>
@@ -370,7 +370,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
             <select
               value={formData.experienceLevel}
               onChange={(e) => setFormData({ ...formData, experienceLevel: e.target.value as ExperienceLevel })}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {experienceLevels.map((level) => (
                 <option key={level.value} value={level.value}>{level.label}</option>
@@ -388,7 +388,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
               placeholder={t('tools.aIJobPosting.eGNewYorkNy', 'e.g., New York, NY / Remote')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -399,7 +399,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
               value={formData.salaryRange}
               onChange={(e) => setFormData({ ...formData, salaryRange: e.target.value })}
               placeholder="e.g., $80,000 - $120,000"
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
         </div>
@@ -412,14 +412,14 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
             value={formData.skills}
             onChange={(e) => setFormData({ ...formData, skills: e.target.value })}
             placeholder={t('tools.aIJobPosting.eGJavascriptReactNode', 'e.g., JavaScript, React, Node.js, SQL')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
         </div>
 
         {/* Generate Button */}
         <button
           onClick={generateJobPosting}
-          className="w-full py-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-teal-500/20"
+          className="w-full py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/20"
         >
           <Sparkles className="w-5 h-5" />
           {t('tools.aIJobPosting.generateJobPosting', 'Generate Job Posting')}
@@ -429,7 +429,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
         {generatedPosting.length > 0 && (
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <span className={`text-sm font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+              <span className={`text-sm font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.aIJobPosting.generatedJobPosting', 'Generated Job Posting')}
               </span>
               <button
@@ -449,7 +449,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
 
             <div className={`rounded-xl border overflow-hidden ${isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}>
               {/* Job Header */}
-              <div className={`p-4 border-b ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-teal-50 border-gray-200'}`}>
+              <div className={`p-4 border-b ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-primary-50 border-gray-200'}`}>
                 <h4 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {formData.jobTitle || 'Job Title'}
                 </h4>
@@ -468,7 +468,7 @@ export const AIJobPostingTool: React.FC<AIJobPostingToolProps> = ({ uiConfig }) 
               <div className="p-4 space-y-6">
                 {generatedPosting.map((section, index) => (
                   <div key={index}>
-                    <h5 className={`font-semibold mb-2 ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+                    <h5 className={`font-semibold mb-2 ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
                       {section.title}
                     </h5>
                     <div className={`whitespace-pre-line text-sm leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>

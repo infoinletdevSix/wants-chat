@@ -388,9 +388,9 @@ export const SnowDayPredictorTool: React.FC<SnowDayPredictorToolProps> = ({
                 </CardDescription>
 
                 {isPrefilled && (
-                  <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                    <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                    <span className="text-sm text-[#0D9488] font-medium">{t('tools.snowDayPredictor.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+                  <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                    <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                    <span className="text-sm text-[#6096B4] font-medium">{t('tools.snowDayPredictor.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
                   </div>
                 )}
               </div>
@@ -609,7 +609,7 @@ export const SnowDayPredictorTool: React.FC<SnowDayPredictorToolProps> = ({
                 <div className="flex gap-3">
                   <button
                     onClick={handleShare}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2"
                   >
                     <Share2 className="w-5 h-5" />
                     {t('tools.snowDayPredictor.shareResult', 'Share Result')}

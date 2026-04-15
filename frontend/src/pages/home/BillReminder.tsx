@@ -21,7 +21,7 @@ interface Bill {
 const CATEGORIES = [
   { id: 'utilities', name: 'Utilities', color: 'from-blue-500 to-cyan-500' },
   { id: 'rent', name: 'Rent/Mortgage', color: 'from-purple-500 to-pink-500' },
-  { id: 'insurance', name: 'Insurance', color: 'from-emerald-500 to-teal-500' },
+  { id: 'insurance', name: 'Insurance', color: 'from-emerald-500 to-primary-500' },
   { id: 'subscription', name: 'Subscriptions', color: 'from-orange-500 to-red-500' },
   { id: 'loan', name: 'Loans', color: 'from-amber-500 to-yellow-500' },
   { id: 'other', name: 'Other', color: 'from-slate-500 to-gray-500' },
@@ -196,7 +196,7 @@ const BillReminder: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl mb-4">
             <Receipt className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Bill Reminder</h1>
@@ -205,13 +205,13 @@ const BillReminder: React.FC = () => {
 
         {/* Stats */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 p-6">
+          <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-400 text-sm mb-1">Total Pending</p>
                 <p className="text-3xl font-bold text-white">${totalAmount.toFixed(2)}</p>
               </div>
-              <DollarSign className="w-12 h-12 text-teal-400 opacity-50" />
+              <DollarSign className="w-12 h-12 text-primary-400 opacity-50" />
             </div>
           </div>
 
@@ -246,12 +246,12 @@ const BillReminder: React.FC = () => {
                 placeholder="Search bills..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-teal-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-teal-500"
+                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-primary-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-500"
               />
             </div>
             <button
               onClick={() => setShowAddModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2"
             >
               <Plus className="w-5 h-5" />
               Add Bill
@@ -265,7 +265,7 @@ const BillReminder: React.FC = () => {
                 onClick={() => setSelectedStatus('all')}
                 className={`px-4 py-2 rounded-xl font-medium transition-all ${
                   selectedStatus === 'all'
-                    ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                    ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-400 hover:text-white'
                 }`}
               >
@@ -309,7 +309,7 @@ const BillReminder: React.FC = () => {
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-xl font-medium transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -339,7 +339,7 @@ const BillReminder: React.FC = () => {
               <p className="text-gray-500">No bills found</p>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="mt-4 px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                className="mt-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
               >
                 Add Your First Bill
               </button>
@@ -352,14 +352,14 @@ const BillReminder: React.FC = () => {
               return (
                 <div
                   key={bill.id}
-                  className={`bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border p-6 hover:border-teal-500/50 transition-all ${
+                  className={`bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border p-6 hover:border-primary-500/50 transition-all ${
                     bill.status === 'overdue'
                       ? 'border-red-500/50'
-                      : 'border-teal-500/30'
+                      : 'border-primary-500/30'
                   }`}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-teal-500 to-cyan-500'}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category?.color || 'from-primary-500 to-cyan-500'}`}>
                       <Receipt className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex gap-2">
@@ -456,7 +456,7 @@ const BillReminder: React.FC = () => {
         {/* Add/Edit Modal */}
         {showAddModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <div className="bg-slate-800 rounded-2xl border border-teal-500/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-slate-800 rounded-2xl border border-primary-500/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
               <div className="p-6 border-b border-slate-700">
                 <h2 className="text-2xl font-bold text-white">
                   {editingBill ? 'Edit Bill' : 'Add Bill'}
@@ -470,7 +470,7 @@ const BillReminder: React.FC = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     placeholder="e.g., Electric Bill"
                     required
                   />
@@ -482,7 +482,7 @@ const BillReminder: React.FC = () => {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       required
                     >
                       {CATEGORIES.map(cat => (
@@ -498,7 +498,7 @@ const BillReminder: React.FC = () => {
                       step="0.01"
                       value={formData.amount}
                       onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       placeholder="0.00"
                       required
                     />
@@ -512,7 +512,7 @@ const BillReminder: React.FC = () => {
                       type="date"
                       value={formData.dueDate}
                       onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       required
                     />
                   </div>
@@ -522,7 +522,7 @@ const BillReminder: React.FC = () => {
                     <select
                       value={formData.frequency}
                       onChange={(e) => setFormData({ ...formData, frequency: e.target.value as any })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       required
                     >
                       <option value="one-time">One-time</option>
@@ -539,7 +539,7 @@ const BillReminder: React.FC = () => {
                     type="text"
                     value={formData.paymentMethod}
                     onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     placeholder="e.g., Credit Card, Bank Transfer"
                   />
                 </div>
@@ -550,7 +550,7 @@ const BillReminder: React.FC = () => {
                       type="checkbox"
                       checked={formData.autoPayEnabled}
                       onChange={(e) => setFormData({ ...formData, autoPayEnabled: e.target.checked })}
-                      className="w-5 h-5 rounded border-slate-600 bg-slate-700 text-teal-500 focus:ring-teal-500"
+                      className="w-5 h-5 rounded border-slate-600 bg-slate-700 text-primary-500 focus:ring-primary-500"
                     />
                     <span className="text-sm font-medium text-gray-300">Auto-pay enabled</span>
                   </label>
@@ -561,7 +561,7 @@ const BillReminder: React.FC = () => {
                   <textarea
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     placeholder="Additional notes..."
                   />
                 </div>
@@ -576,7 +576,7 @@ const BillReminder: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
                   >
                     {editingBill ? 'Update Bill' : 'Add Bill'}
                   </button>

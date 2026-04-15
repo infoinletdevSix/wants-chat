@@ -516,9 +516,9 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
             {t('tools.kanbanBoard.kanbanBoard', 'Kanban Board')}
           </h2>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs text-[#0D9488] font-medium">{t('tools.kanbanBoard.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs text-[#6096B4] font-medium">{t('tools.kanbanBoard.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -561,7 +561,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
             onClick={() => setShowArchived(!showArchived)}
             className={`p-2 rounded-lg transition-colors ${
               showArchived
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'hover:bg-gray-700 text-gray-300'
                 : 'hover:bg-gray-100 text-gray-600'
@@ -606,7 +606,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
               }
               className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
                 filterLabels.includes(label.id)
-                  ? t('tools.kanbanBoard.ring2RingOffset2', 'ring-2 ring-offset-2 ring-[#0D9488]') : 'opacity-60 hover:opacity-100'
+                  ? t('tools.kanbanBoard.ring2RingOffset2', 'ring-2 ring-offset-2 ring-[#6096B4]') : 'opacity-60 hover:opacity-100'
               }`}
               style={{
                 backgroundColor: label.color + '20',
@@ -666,7 +666,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                         onClick={() => setEditColumnColor(color)}
                         className={`w-5 h-5 rounded-full ${
                           editColumnColor === color
-                            ? 'ring-2 ring-offset-1 ring-[#0D9488]'
+                            ? 'ring-2 ring-offset-1 ring-[#6096B4]'
                             : ''
                         }`}
                         style={{ backgroundColor: color }}
@@ -676,7 +676,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                   <div className="flex gap-2">
                     <button
                       onClick={() => saveColumnEdit(column.id)}
-                      className="flex-1 py-1 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0F766E]"
+                      className="flex-1 py-1 bg-[#6096B4] text-white rounded text-sm hover:bg-[#4C7F98]"
                     >
                       {t('tools.kanbanBoard.save', 'Save')}
                     </button>
@@ -806,7 +806,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                               onClick={() => setEditCardPriority(p)}
                               className={`flex-1 py-1 rounded text-xs font-medium capitalize ${
                                 editCardPriority === p
-                                  ? 'ring-2 ring-offset-1 ring-[#0D9488]'
+                                  ? 'ring-2 ring-offset-1 ring-[#6096B4]'
                                   : ''
                               }`}
                               style={{
@@ -831,7 +831,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                               }
                               className={`px-2 py-0.5 rounded text-xs font-medium transition-all ${
                                 editCardLabels.includes(label.id)
-                                  ? t('tools.kanbanBoard.ring1RingOffset1', 'ring-1 ring-offset-1 ring-[#0D9488]') : 'opacity-50'
+                                  ? t('tools.kanbanBoard.ring1RingOffset1', 'ring-1 ring-offset-1 ring-[#6096B4]') : 'opacity-50'
                               }`}
                               style={{
                                 backgroundColor: label.color + '20',
@@ -855,7 +855,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                         <div className="flex gap-2">
                           <button
                             onClick={() => saveCardEdit(cardId)}
-                            className="flex-1 py-1 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0F766E]"
+                            className="flex-1 py-1 bg-[#6096B4] text-white rounded text-sm hover:bg-[#4C7F98]"
                           >
                             {t('tools.kanbanBoard.save2', 'Save')}
                           </button>
@@ -1065,7 +1065,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                         onClick={() => setNewCardPriority(p)}
                         className={`flex-1 py-1 rounded text-xs font-medium capitalize ${
                           newCardPriority === p
-                            ? 'ring-2 ring-offset-1 ring-[#0D9488]'
+                            ? 'ring-2 ring-offset-1 ring-[#6096B4]'
                             : ''
                         }`}
                         style={{
@@ -1090,7 +1090,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                         }
                         className={`px-2 py-0.5 rounded text-xs font-medium transition-all ${
                           newCardLabels.includes(label.id)
-                            ? t('tools.kanbanBoard.ring1RingOffset12', 'ring-1 ring-offset-1 ring-[#0D9488]') : 'opacity-50'
+                            ? t('tools.kanbanBoard.ring1RingOffset12', 'ring-1 ring-offset-1 ring-[#6096B4]') : 'opacity-50'
                         }`}
                         style={{
                           backgroundColor: label.color + '20',
@@ -1114,7 +1114,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                   <div className="flex gap-2">
                     <button
                       onClick={() => addCard(column.id)}
-                      className="flex-1 py-1 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0F766E]"
+                      className="flex-1 py-1 bg-[#6096B4] text-white rounded text-sm hover:bg-[#4C7F98]"
                     >
                       {t('tools.kanbanBoard.addCard', 'Add Card')}
                     </button>
@@ -1182,7 +1182,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
                   onClick={() => setNewColumnColor(color)}
                   className={`w-6 h-6 rounded-full ${
                     newColumnColor === color
-                      ? 'ring-2 ring-offset-2 ring-[#0D9488]'
+                      ? 'ring-2 ring-offset-2 ring-[#6096B4]'
                       : ''
                   }`}
                   style={{ backgroundColor: color }}
@@ -1192,7 +1192,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
             <div className="flex gap-2">
               <button
                 onClick={addColumn}
-                className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg text-sm hover:bg-[#0F766E]"
+                className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg text-sm hover:bg-[#4C7F98]"
               >
                 {t('tools.kanbanBoard.addColumn', 'Add Column')}
               </button>
@@ -1274,7 +1274,7 @@ export const KanbanBoardTool: React.FC<KanbanBoardToolProps> = ({ uiConfig }) =>
               />
               <button
                 onClick={addLabel}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
               >
                 {t('tools.kanbanBoard.add', 'Add')}
               </button>

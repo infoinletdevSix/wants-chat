@@ -55,7 +55,7 @@ export const RecipeSearchAndFilter: React.FC<RecipeSearchAndFilterProps> = ({
               <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-primary-400/30">
                 <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10">All Levels</SelectItem>
                 <SelectItem value="Easy" className="text-white hover:bg-white/10 focus:bg-white/10">Easy</SelectItem>
                 <SelectItem value="Medium" className="text-white hover:bg-white/10 focus:bg-white/10">Medium</SelectItem>
@@ -78,7 +78,7 @@ export const RecipeSearchAndFilter: React.FC<RecipeSearchAndFilterProps> = ({
               <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-primary-400/30">
                 <SelectItem value="rating" className="text-white hover:bg-white/10 focus:bg-white/10">Highest Rated</SelectItem>
                 <SelectItem value="time" className="text-white hover:bg-white/10 focus:bg-white/10">Cooking Time</SelectItem>
                 <SelectItem value="name" className="text-white hover:bg-white/10 focus:bg-white/10">Name A-Z</SelectItem>

@@ -98,13 +98,13 @@ const WeightBodyTracking: React.FC<WeightBodyTrackingProps> = ({
     <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <Icon path={mdiWeight} size={1} className="text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <Icon path={mdiWeight} size={1} className="text-primary-400" />
           </div>
           <h3 className="text-lg font-semibold text-white">Weight & Body Composition</h3>
         </div>
         {onAddPhoto && (
-          <Button size="sm" onClick={onAddPhoto} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+          <Button size="sm" onClick={onAddPhoto} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
             <Icon path={mdiCamera} size={0.7} className="mr-2" />
             Add Photo
           </Button>

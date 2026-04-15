@@ -370,7 +370,7 @@ const HabitCalendar: React.FC = () => {
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
-              <CalendarIcon className="h-6 w-6 text-teal-400" />
+              <CalendarIcon className="h-6 w-6 text-primary-400" />
               <span className="text-xl font-semibold text-white">Habit Calendar</span>
             </div>
             <div className="flex items-center gap-4">
@@ -590,18 +590,18 @@ const HabitCalendar: React.FC = () => {
                         onClick={() => setSelectedDate(day.date)}
                         className={`min-h-[100px] p-2 rounded-xl border cursor-pointer transition-all ${
                           day.isToday
-                            ? 'border-teal-400 bg-teal-500/20'
+                            ? 'border-primary-400 bg-primary-500/20'
                             : isSelected
-                            ? 'border-teal-400/50 bg-teal-500/10'
+                            ? 'border-primary-400/50 bg-primary-500/10'
                             : day.isCurrentMonth
-                            ? 'border-white/20 hover:border-teal-400/30 bg-white/5'
+                            ? 'border-white/20 hover:border-primary-400/30 bg-white/5'
                             : 'border-white/10 opacity-50 bg-white/5'
                         }`}
                       >
                         <div className="flex justify-between items-start mb-1">
                           <span className={`text-sm font-medium ${
                             day.isToday
-                              ? 'text-teal-300'
+                              ? 'text-primary-300'
                               : day.isCurrentMonth
                               ? 'text-white'
                               : 'text-white/40'
@@ -647,7 +647,7 @@ const HabitCalendar: React.FC = () => {
             <GlassCard>
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Event className="h-5 w-5 text-teal-400" />
+                  <Event className="h-5 w-5 text-primary-400" />
                   {selectedDate ? (
                     <>
                       {selectedDate.toLocaleDateString('en-US', {
@@ -726,7 +726,7 @@ const HabitCalendar: React.FC = () => {
             <GlassCard className="mt-6">
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-teal-400" />
+                  <TrendingUp className="h-5 w-5 text-primary-400" />
                   Monthly Overview
                 </h3>
               </div>

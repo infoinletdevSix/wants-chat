@@ -196,7 +196,7 @@ export function MembersList({
             >
               <div className="flex items-center gap-3 min-w-0">
                 {/* Avatar */}
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-medium">
                     {member.user?.fullName?.[0]?.toUpperCase() ||
                       member.user?.email?.[0]?.toUpperCase() ||

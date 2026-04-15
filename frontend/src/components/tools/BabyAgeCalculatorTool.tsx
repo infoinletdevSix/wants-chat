@@ -174,10 +174,10 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
       <div className="max-w-2xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
           {/* Header */}
-          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <Baby className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <Baby className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -193,9 +193,9 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
           <div className="p-6 space-y-6">
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {t('tools.babyAgeCalculator.dateLoadedFromYourConversation', 'Date loaded from your conversation')}
                 </span>
               </div>
@@ -215,7 +215,7 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -223,11 +223,11 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
             {ageBreakdown && (
               <>
                 {/* Primary Age Display */}
-                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.babyAgeCalculator.yourBabyIs', 'Your baby is')}
                   </div>
-                  <div className="text-3xl font-bold text-[#0D9488] my-2">
+                  <div className="text-3xl font-bold text-[#6096B4] my-2">
                     {ageBreakdown.ageInMonths}
                   </div>
                   {ageBreakdown.totalWeeks >= 12 && (
@@ -281,7 +281,7 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
                   </h4>
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
-                      <div className={`text-xl font-bold text-[#0D9488]`}>
+                      <div className={`text-xl font-bold text-[#6096B4]`}>
                         {ageBreakdown.totalDays.toLocaleString()}
                       </div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -289,7 +289,7 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
                       </div>
                     </div>
                     <div>
-                      <div className={`text-xl font-bold text-[#0D9488]`}>
+                      <div className={`text-xl font-bold text-[#6096B4]`}>
                         {ageBreakdown.totalWeeks.toLocaleString()}
                       </div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -297,7 +297,7 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
                       </div>
                     </div>
                     <div>
-                      <div className={`text-xl font-bold text-[#0D9488]`}>
+                      <div className={`text-xl font-bold text-[#6096B4]`}>
                         {ageBreakdown.totalMonths}
                       </div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -309,14 +309,14 @@ export const BabyAgeCalculatorTool: React.FC<BabyAgeCalculatorToolProps> = ({ ui
 
                 {/* Next Milestone */}
                 {ageBreakdown.nextMilestone && (
-                  <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-700' : 'bg-teal-50'}`}>
+                  <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-700' : 'bg-primary-50'}`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Calendar className="w-4 h-4 text-[#0D9488]" />
+                      <Calendar className="w-4 h-4 text-[#6096B4]" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.babyAgeCalculator.nextMilestone', 'Next Milestone')}
                       </span>
                     </div>
-                    <div className={`text-lg font-bold text-[#0D9488]`}>
+                    <div className={`text-lg font-bold text-[#6096B4]`}>
                       {ageBreakdown.nextMilestone.name}
                     </div>
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

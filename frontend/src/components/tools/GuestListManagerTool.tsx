@@ -111,7 +111,7 @@ const GROUP_CONFIG: Record<GuestGroup, { label: string; color: string }> = {
   friends: { label: 'Friends', color: 'text-blue-600 dark:text-blue-400' },
   work: { label: 'Work', color: 'text-green-600 dark:text-green-400' },
   school: { label: 'School', color: 'text-orange-600 dark:text-orange-400' },
-  neighbors: { label: 'Neighbors', color: 'text-teal-600 dark:text-teal-400' },
+  neighbors: { label: 'Neighbors', color: 'text-primary-600 dark:text-primary-400' },
   other: { label: 'Other', color: 'text-gray-600 dark:text-gray-400' }
 };
 
@@ -584,7 +584,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
           <CardHeader className="pb-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -612,7 +612,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => { setFormData(DEFAULT_FORM_DATA); setEditingId(null); setShowForm(true); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <UserPlus className="w-4 h-4" />
                   {t('tools.guestListManager.addGuest')}
@@ -669,7 +669,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.guestListManager.stats.plusOnes')}</div>
           </div>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
-            <div className="text-2xl font-bold text-[#0D9488]">{guestStats.totalAttending}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{guestStats.totalAttending}</div>
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.guestListManager.stats.totalAttending')}</div>
           </div>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
@@ -694,7 +694,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -731,7 +731,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       required
                     />
                   </div>
@@ -749,7 +749,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -766,7 +766,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -783,7 +783,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -799,7 +799,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {Object.entries(GROUP_CONFIG).map(([value, config]) => (
                         <option key={value} value={value}>{config.label}</option>
@@ -819,7 +819,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {Object.entries(RSVP_STATUS_CONFIG).map(([value, config]) => (
                         <option key={value} value={value}>{config.label}</option>
@@ -834,7 +834,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         type="checkbox"
                         checked={formData.plusOne}
                         onChange={(e) => setFormData(prev => ({ ...prev, plusOne: e.target.checked }))}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Has Plus One
@@ -856,7 +856,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div className="flex items-center">
@@ -865,7 +865,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                             type="checkbox"
                             checked={formData.plusOneConfirmed}
                             onChange={(e) => setFormData(prev => ({ ...prev, plusOneConfirmed: e.target.checked }))}
-                            className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                            className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                           />
                           <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                             Plus One Confirmed
@@ -887,7 +887,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {MEAL_OPTIONS.map(option => (
                         <option key={option.value} value={option.value}>{option.label}</option>
@@ -907,7 +907,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="">Not Assigned</option>
                       {tables.map(table => (
@@ -927,7 +927,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                           key={restriction}
                           className={`flex items-center gap-2 px-3 py-1 rounded-full cursor-pointer text-sm transition-colors ${
                             formData.dietaryRestrictions.includes(restriction)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -958,7 +958,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         type="checkbox"
                         checked={formData.giftReceived}
                         onChange={(e) => setFormData(prev => ({ ...prev, giftReceived: e.target.checked }))}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Gift Received
@@ -969,7 +969,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         type="checkbox"
                         checked={formData.thankYouSent}
                         onChange={(e) => setFormData(prev => ({ ...prev, thankYouSent: e.target.checked }))}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Thank You Sent
@@ -990,7 +990,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   )}
@@ -1008,7 +1008,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1028,7 +1028,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors flex items-center gap-2"
                   >
                     <Save className="w-4 h-4" />
                     {editingId ? t('tools.guestListManager.updateGuest') : t('tools.guestListManager.addGuest')}
@@ -1058,7 +1058,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1067,7 +1067,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                   onClick={() => setShowFilters(!showFilters)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
                     showFilters
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1107,7 +1107,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="all">All Groups</option>
                         {Object.entries(GROUP_CONFIG).map(([value, config]) => (
@@ -1126,7 +1126,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="all">All Statuses</option>
                         {Object.entries(RSVP_STATUS_CONFIG).map(([value, config]) => (
@@ -1146,7 +1146,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                             theme === 'dark'
                               ? 'bg-gray-600 border-gray-500 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         >
                           <option value="name">Name</option>
                           <option value="group">Group</option>
@@ -1489,7 +1489,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                               key={i}
                               className={`absolute w-4 h-4 rounded-full transform -translate-x-1/2 -translate-y-1/2 ${
                                 isOccupied
-                                  ? 'bg-[#0D9488]'
+                                  ? 'bg-[#6096B4]'
                                   : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
                               }`}
                               style={{ left: `${x}%`, top: `${y}%` }}
@@ -1532,7 +1532,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                           >
                             <option value="">+ Add guest</option>
                             {guests
@@ -1566,7 +1566,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                       >
                         {guest.name}
                         {guest.plusOne && guest.plusOneConfirmed && (
-                          <span className="text-xs text-[#0D9488]">+1</span>
+                          <span className="text-xs text-[#6096B4]">+1</span>
                         )}
                       </div>
                     ))
@@ -1672,7 +1672,7 @@ export function GuestListManagerTool({ uiConfig }: GuestListManagerToolProps) {
                             theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'
                           }`}>
                             <div
-                              className="h-full bg-[#0D9488]"
+                              className="h-full bg-[#6096B4]"
                               style={{ width: `${(count / guestStats.totalAttending) * 100}%` }}
                             />
                           </div>

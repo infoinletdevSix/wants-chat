@@ -407,7 +407,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
         <h3 className="text-lg font-semibold text-gray-900">Line Items</h3>
         <button
           onClick={() => addLineItem(estimate, setEstimate)}
-          className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm"
+          className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm"
         >
           <Plus className="w-4 h-4" />
           Add Item
@@ -529,8 +529,8 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <HardHat className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <HardHat className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.projectEstimate.projectEstimate', 'Project Estimate')}</h1>
@@ -605,7 +605,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
           onClick={() => setActiveTab('list')}
           className={`px-4 py-2 font-medium transition-colors ${
             activeTab === 'list'
-              ? 'text-teal-600 border-b-2 border-teal-600'
+              ? 'text-primary-600 border-b-2 border-primary-600'
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
@@ -615,7 +615,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
           onClick={() => setActiveTab('create')}
           className={`px-4 py-2 font-medium transition-colors ${
             activeTab === 'create'
-              ? 'text-teal-600 border-b-2 border-teal-600'
+              ? 'text-primary-600 border-b-2 border-primary-600'
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
@@ -635,13 +635,13 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                 placeholder={t('tools.projectEstimate.searchProjects', 'Search projects...')}
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
             <select
               value={filterStatus}
               onChange={e => setFilterStatus(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               <option value="all">{t('tools.projectEstimate.allStatus', 'All Status')}</option>
               <option value="draft">{t('tools.projectEstimate.draft', 'Draft')}</option>
@@ -666,8 +666,8 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <Building2 className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <Building2 className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{estimate.projectName}</h3>
@@ -718,7 +718,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                           setEditingEstimate(estimate);
                           setActiveTab('edit');
                         }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.projectEstimate.edit', 'Edit')}
@@ -750,7 +750,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                 <p className="text-gray-500 mt-1">{t('tools.projectEstimate.createYourFirstEstimateTo', 'Create your first estimate to get started')}</p>
                 <button
                   onClick={() => setActiveTab('create')}
-                  className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                  className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                 >
                   {t('tools.projectEstimate.createEstimate', 'Create Estimate')}
                 </button>
@@ -790,7 +790,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, projectName: e.target.value })
                     : setNewEstimate({ ...newEstimate, projectName: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 placeholder={t('tools.projectEstimate.enterProjectName', 'Enter project name')}
               />
             </div>
@@ -803,7 +803,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, projectType: e.target.value })
                     : setNewEstimate({ ...newEstimate, projectType: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               >
                 {PROJECT_TYPES.map(type => (
                   <option key={type} value={type}>{type}</option>
@@ -820,7 +820,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, clientName: e.target.value })
                     : setNewEstimate({ ...newEstimate, clientName: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 placeholder={t('tools.projectEstimate.enterClientName', 'Enter client name')}
               />
             </div>
@@ -834,7 +834,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, clientEmail: e.target.value })
                     : setNewEstimate({ ...newEstimate, clientEmail: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 placeholder={t('tools.projectEstimate.emailExampleCom', 'email@example.com')}
               />
             </div>
@@ -848,7 +848,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, estimateDate: e.target.value })
                     : setNewEstimate({ ...newEstimate, estimateDate: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -861,7 +861,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, validUntil: e.target.value })
                     : setNewEstimate({ ...newEstimate, validUntil: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div className="md:col-span-2">
@@ -874,7 +874,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     ? setEditingEstimate({ ...editingEstimate!, projectAddress: e.target.value })
                     : setNewEstimate({ ...newEstimate, projectAddress: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
                 placeholder={t('tools.projectEstimate.enterProjectAddress', 'Enter project address')}
               />
             </div>
@@ -901,7 +901,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     setNewEstimate(calculateTotals({ ...newEstimate, overheadPercent: value }));
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -917,7 +917,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     setNewEstimate(calculateTotals({ ...newEstimate, profitPercent: value }));
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -933,7 +933,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
                     setNewEstimate(calculateTotals({ ...newEstimate, contingencyPercent: value }));
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -991,7 +991,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
               <div className="border-t border-gray-300 pt-2 mt-2">
                 <div className="flex justify-between">
                   <span className="font-bold text-gray-900">{t('tools.projectEstimate.totalEstimate', 'Total Estimate')}</span>
-                  <span className="font-bold text-teal-600 text-xl">
+                  <span className="font-bold text-primary-600 text-xl">
                     {formatCurrency(
                       activeTab === 'edit'
                         ? editingEstimate?.totalEstimate || 0
@@ -1016,7 +1016,7 @@ export const ProjectEstimateTool: React.FC<ProjectEstimateToolProps> = ({
             </button>
             <button
               onClick={activeTab === 'edit' ? handleUpdateEstimate : handleSaveEstimate}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
               <Save className="w-4 h-4" />
               {activeTab === 'edit' ? t('tools.projectEstimate.updateEstimate', 'Update Estimate') : t('tools.projectEstimate.saveEstimate', 'Save Estimate')}

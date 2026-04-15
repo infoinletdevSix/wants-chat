@@ -247,7 +247,7 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
       objects: isDark ? 'bg-blue-900/30 text-blue-300 border-blue-700' : 'bg-blue-50 text-blue-700 border-blue-200',
       actions: isDark ? 'bg-purple-900/30 text-purple-300 border-purple-700' : 'bg-purple-50 text-purple-700 border-purple-200',
       emotions: isDark ? 'bg-red-900/30 text-red-300 border-red-700' : 'bg-red-50 text-red-700 border-red-200',
-      places: isDark ? 'bg-teal-900/30 text-teal-300 border-teal-700' : 'bg-teal-50 text-teal-700 border-teal-200',
+      places: isDark ? 'bg-primary-900/30 text-primary-300 border-primary-700' : 'bg-primary-50 text-primary-700 border-primary-200',
     };
     return colors[category] || colors.nature;
   };
@@ -270,7 +270,7 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <Moon size={28} />
           </div>
           <div>
@@ -294,9 +294,9 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
               placeholder={t('tools.dreamInterpreter.searchDreamSymbolsEG', 'Search dream symbols (e.g., water, flying, snake...)')}
               className={`w-full pl-12 pr-4 py-3 rounded-xl border transition-colors ${
                 isDark
-                  ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-500 focus:border-teal-500'
-                  : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-teal-500'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500/20`}
+                  ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-500 focus:border-primary-500'
+                  : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-primary-500'
+              } focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
             />
             {searchQuery && (
               <button
@@ -315,8 +315,8 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 selectedCategory === 'all'
                   ? isDark
-                    ? 'bg-teal-900/50 text-teal-300'
-                    : 'bg-teal-100 text-teal-700'
+                    ? 'bg-primary-900/50 text-primary-300'
+                    : 'bg-primary-100 text-primary-700'
                   : isDark
                   ? 'bg-gray-700 text-gray-400 hover:text-gray-200'
                   : 'bg-gray-100 text-gray-600 hover:text-gray-900'
@@ -331,8 +331,8 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
                   selectedCategory === cat
                     ? isDark
-                      ? 'bg-teal-900/50 text-teal-300'
-                      : 'bg-teal-100 text-teal-700'
+                      ? 'bg-primary-900/50 text-primary-300'
+                      : 'bg-primary-100 text-primary-700'
                     : isDark
                     ? 'bg-gray-700 text-gray-400 hover:text-gray-200'
                     : 'bg-gray-100 text-gray-600 hover:text-gray-900'
@@ -376,8 +376,8 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
               className={`p-4 rounded-xl border text-left transition-all hover:shadow-lg ${
                 selectedSymbol?.symbol === symbol.symbol
                   ? isDark
-                    ? 'bg-teal-900/30 border-teal-600'
-                    : 'bg-teal-50 border-teal-300'
+                    ? 'bg-primary-900/30 border-primary-600'
+                    : 'bg-primary-50 border-primary-300'
                   : isDark
                   ? 'bg-gray-800 border-gray-700 hover:bg-gray-700'
                   : 'bg-white border-gray-200 hover:bg-gray-50'
@@ -428,7 +428,7 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
             <div className={`w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className="sticky top-0 p-4 border-b flex items-center justify-between backdrop-blur-sm bg-inherit">
                 <div className="flex items-center gap-3">
-                  <BookOpen className={isDark ? 'text-teal-400' : 'text-teal-600'} size={24} />
+                  <BookOpen className={isDark ? 'text-primary-400' : 'text-primary-600'} size={24} />
                   <h2 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {selectedSymbol.symbol}
                   </h2>
@@ -462,8 +462,8 @@ export const DreamInterpreterTool: React.FC<DreamInterpreterToolProps> = ({ uiCo
                 </div>
 
                 {/* Main Meaning */}
-                <div className={`p-4 rounded-xl ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-                  <h3 className={`font-semibold mb-2 ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                <div className={`p-4 rounded-xl ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+                  <h3 className={`font-semibold mb-2 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                     {t('tools.dreamInterpreter.meaning', 'Meaning')}
                   </h3>
                   <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>

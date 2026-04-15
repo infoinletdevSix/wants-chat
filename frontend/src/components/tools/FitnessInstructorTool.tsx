@@ -857,9 +857,9 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
-  const buttonPrimary = 'bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
+  const buttonPrimary = 'bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
 
   const buttonSecondary = `${
     theme === 'dark'
@@ -876,7 +876,7 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -891,9 +891,9 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
 
             {/* Prefill Indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 mb-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">{t('tools.fitnessInstructor.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+              <div className="flex items-center gap-2 px-4 py-2 mb-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">{t('tools.fitnessInstructor.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
               </div>
             )}
 
@@ -952,7 +952,7 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
                 }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1238,7 +1238,7 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
                         type="checkbox"
                         checked={classForm.recurring ?? true}
                         onChange={(e) => setClassForm({ ...classForm, recurring: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded"
+                        className="w-4 h-4 text-[#6096B4] rounded"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                         {t('tools.fitnessInstructor.recurringWeekly', 'Recurring Weekly')}
@@ -1547,7 +1547,7 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
                       {session.status === 'completed' && !session.paid && (
                         <button
                           onClick={() => markSessionPaid(session.id)}
-                          className="px-3 py-1 text-sm bg-[#0D9488] text-white rounded hover:bg-[#0F766E]"
+                          className="px-3 py-1 text-sm bg-[#6096B4] text-white rounded hover:bg-[#4C7F98]"
                         >
                           {t('tools.fitnessInstructor.markPaid', 'Mark Paid')}
                         </button>
@@ -1898,7 +1898,7 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
                               ) : cert.type === 'first-aid' ? (
                                 <Shield className="w-5 h-5 text-blue-500" />
                               ) : (
-                                <Award className="w-5 h-5 text-[#0D9488]" />
+                                <Award className="w-5 h-5 text-[#6096B4]" />
                               )}
                               <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                                 {cert.name}
@@ -2164,7 +2164,7 @@ export const FitnessInstructorTool: React.FC<FitnessInstructorToolProps> = ({ ui
                       <div className="flex items-start justify-between">
                         <div>
                           <div className="flex items-center gap-2">
-                            <MapPin className="w-5 h-5 text-[#0D9488]" />
+                            <MapPin className="w-5 h-5 text-[#6096B4]" />
                             <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                               {location.name}
                             </h4>

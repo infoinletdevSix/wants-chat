@@ -36,7 +36,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({
         <div className="text-center py-8 text-white/60">
           <Icon path={mdiMagnify} size={2} className="mx-auto mb-2 opacity-50" />
           <p>No foods found</p>
-          <Button className="mt-2 text-teal-400 hover:text-teal-300 bg-transparent hover:bg-transparent" onClick={onCreateCustomFood}>
+          <Button className="mt-2 text-primary-400 hover:text-primary-300 bg-transparent hover:bg-transparent" onClick={onCreateCustomFood}>
             Create custom food
           </Button>
         </div>

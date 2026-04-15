@@ -156,7 +156,7 @@ const AlertsForm: React.FC<AlertsFormProps> = ({
     <div className="w-full">
       <div className="p-6 border-b border-white/20">
         <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-          <Bell className="h-5 w-5 text-teal-400" />
+          <Bell className="h-5 w-5 text-primary-400" />
           {mode === 'edit' ? 'Edit Exchange Rate Alert' : 'Create Exchange Rate Alert'}
         </h3>
       </div>
@@ -190,7 +190,7 @@ const AlertsForm: React.FC<AlertsFormProps> = ({
                 <SelectTrigger id="base-currency" className="bg-white/10 border-white/20 text-white">
                   <SelectValue placeholder="Select currency" />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border-primary-400/30">
                   {currencies.map((currency) => (
                     <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                       {currency.code} - {currency.name}
@@ -209,7 +209,7 @@ const AlertsForm: React.FC<AlertsFormProps> = ({
                 <SelectTrigger id="target-currency" className="bg-white/10 border-white/20 text-white">
                   <SelectValue placeholder="Select currency" />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border-primary-400/30">
                   {currencies.map((currency) => (
                     <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                       {currency.code} - {currency.name}
@@ -284,7 +284,7 @@ const AlertsForm: React.FC<AlertsFormProps> = ({
               <SelectTrigger id="frequency" className="bg-white/10 border-white/20 text-white">
                 <SelectValue placeholder="Select frequency" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border-primary-400/30">
                 <SelectItem value="once" className="text-white hover:bg-white/10">Once (Alert only once when condition is met)</SelectItem>
                 <SelectItem value="daily" className="text-white hover:bg-white/10">Daily (Check and alert daily)</SelectItem>
                 <SelectItem value="weekly" className="text-white hover:bg-white/10">Weekly (Check and alert weekly)</SelectItem>
@@ -357,7 +357,7 @@ const AlertsForm: React.FC<AlertsFormProps> = ({
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             disabled={(!formData.email_notification && !formData.push_notification) || isCreating || isUpdating}
           >
             {(isCreating || isUpdating) ? (

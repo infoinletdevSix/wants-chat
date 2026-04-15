@@ -49,7 +49,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({
               placeholder="Search destinations or tags..."
               value={filters.searchQuery}
               onChange={(e) => onFilterChange({ searchQuery: e.target.value })}
-              className="pl-9 sm:pl-10 h-10 sm:h-12 rounded-xl text-sm bg-white/5 border-white/20 text-white placeholder:text-white/40 focus:border-teal-500"
+              className="pl-9 sm:pl-10 h-10 sm:h-12 rounded-xl text-sm bg-white/5 border-white/20 text-white placeholder:text-white/40 focus:border-primary-500"
             />
           </div>
         </div>
@@ -71,7 +71,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({
               <SelectTrigger id="tag-filter" className="h-10 sm:h-12 rounded-xl text-sm bg-white/5 border-white/20 text-white">
                 <SelectValue placeholder="All tags" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-white/20">
+              <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-white/20">
                 <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10">All Tags</SelectItem>
                 {allTags.map((tag) => (
                   <SelectItem key={tag} value={tag} className="text-white hover:bg-white/10 focus:bg-white/10">
@@ -99,7 +99,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({
               <SelectTrigger id="favorites-filter" className="h-10 sm:h-12 rounded-xl text-sm bg-white/5 border-white/20 text-white">
                 <SelectValue placeholder="All plans" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-white/20">
+              <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-white/20">
                 <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10">All Plans</SelectItem>
                 <SelectItem value="favorites" className="text-white hover:bg-white/10 focus:bg-white/10">⭐ Favorites Only</SelectItem>
                 <SelectItem value="non-favorites" className="text-white hover:bg-white/10 focus:bg-white/10">Regular Plans</SelectItem>
@@ -124,7 +124,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({
               <SelectTrigger id="sort-by" className="h-10 sm:h-12 rounded-xl text-sm bg-white/5 border-white/20 text-white">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-white/20">
+              <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-white/20">
                 <SelectItem value="created" className="text-white hover:bg-white/10 focus:bg-white/10">Newest First</SelectItem>
                 <SelectItem value="destination" className="text-white hover:bg-white/10 focus:bg-white/10">Destination A-Z</SelectItem>
                 <SelectItem value="budget" className="text-white hover:bg-white/10 focus:bg-white/10">Highest Budget</SelectItem>

@@ -246,7 +246,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
     <Card className="p-5 bg-white/10 backdrop-blur-xl border border-white/20">
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2">
-          <Icon path={mdiScale} size={0.8} className="text-teal-400" />
+          <Icon path={mdiScale} size={0.8} className="text-primary-400" />
           <h3 className="font-semibold text-white">Fitness Metrics</h3>
         </div>
         
@@ -256,12 +256,12 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
             onClick={() => setIsEditing(true)}
             className="h-8 px-3 bg-white/10 border border-white/20 text-white hover:scale-105 transition-all duration-200"
           >
-            <Icon path={mdiPencil} size={0.6} className="mr-1 text-teal-400" />
+            <Icon path={mdiPencil} size={0.6} className="mr-1 text-primary-400" />
             Edit
           </Button>
         ) : (
           <div className="flex items-center gap-2">
-            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-8 px-3">
+            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 px-3">
               <Icon path={mdiCheck} size={0.6} className="mr-1" />
               Save
             </Button>
@@ -393,13 +393,13 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
               <div className="space-y-1">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-white/60">Progress</span>
-                  <span className="font-medium text-teal-400">
+                  <span className="font-medium text-primary-400">
                     {targetWeightDiff > 0 ? `-${Math.abs(targetWeightDiff).toFixed(1)}` : `+${Math.abs(targetWeightDiff).toFixed(1)}`}kg
                   </span>
                 </div>
                 <div className="h-1 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-500"
+                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
                     style={{ width: `${progressToTarget}%` }}
                   />
                 </div>
@@ -627,11 +627,11 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
       {/* Current Plan Section */}
       {currentPlan && (
         <div className="mt-5">
-          <div className="p-4 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-lg border border-teal-500/30">
+          <div className="p-4 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-lg border border-primary-500/30">
             {/* Plan Header */}
             <div className="flex items-center gap-3 mb-3">
-              <div className="p-2 rounded-lg bg-teal-500/20">
-                <Icon path={mdiDumbbell} size={0.8} className="text-teal-400" />
+              <div className="p-2 rounded-lg bg-primary-500/20">
+                <Icon path={mdiDumbbell} size={0.8} className="text-primary-400" />
               </div>
               <div className="flex-1">
                 <h4 className="font-semibold text-base text-white">{currentPlan.name}</h4>
@@ -642,10 +642,10 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
             {/* Plan Details & Progress in one row */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
               <div className="flex flex-wrap items-center gap-2">
-                <Badge className="bg-teal-500/20 text-teal-400 border border-teal-500/30 text-xs">
+                <Badge className="bg-primary-500/20 text-primary-400 border border-primary-500/30 text-xs">
                   {currentPlan.difficulty}
                 </Badge>
-                <Badge className="text-teal-400 border border-teal-500/30 bg-teal-500/10 text-xs">
+                <Badge className="text-primary-400 border border-primary-500/30 bg-primary-500/10 text-xs">
                   {currentPlan.duration} days
                 </Badge>
                 <Badge className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs">
@@ -653,7 +653,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
                 </Badge>
               </div>
               <div className="text-left sm:text-right">
-                <div className="text-sm font-medium text-teal-400">
+                <div className="text-sm font-medium text-primary-400">
                   {currentPlan.daysCompleted}/{currentPlan.totalDays}
                 </div>
                 <div className="text-xs text-white/60">
@@ -666,7 +666,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
             <div className="mb-4">
               <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
                   style={{ width: `${(currentPlan.daysCompleted / currentPlan.totalDays) * 100}%` }}
                 />
               </div>
@@ -693,7 +693,7 @@ const FitnessMetrics: React.FC<FitnessMetricsProps> = ({
                   <Button 
                     size="sm" 
                     onClick={onStartWorkout}
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-8 px-3"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 px-3"
                   >
                     <Icon path={mdiPlay} size={0.5} className="mr-1" />
                     Start

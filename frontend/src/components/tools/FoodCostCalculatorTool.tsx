@@ -220,7 +220,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -233,8 +233,8 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <Calculator className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <Calculator className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -325,7 +325,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardContent className="py-4">
             <div className="flex items-center gap-4 flex-wrap">
-              <Percent className="w-5 h-5 text-[#0D9488]" />
+              <Percent className="w-5 h-5 text-[#6096B4]" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.foodCostCalculator.targetFoodCost', 'Target Food Cost %:')}
               </span>
@@ -374,7 +374,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
                 onClick={() => setShowAddForm(!showAddForm)}
               >
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Plus className="w-5 h-5 text-[#0D9488]" />
+                  <Plus className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.foodCostCalculator.calculateFoodCost', 'Calculate Food Cost')}
                 </CardTitle>
                 {showAddForm ? (
@@ -527,7 +527,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
                       </div>
                       <div className="flex justify-between col-span-2 pt-2 border-t border-gray-300 dark:border-gray-600">
                         <span className={isDark ? 'text-gray-400' : 'text-gray-500'}>{t('tools.foodCostCalculator.suggestedPrice', 'Suggested Price:')}</span>
-                        <span className="text-[#0D9488] font-medium">
+                        <span className="text-[#6096B4] font-medium">
                           ${previewMetrics.suggestedPrice.toFixed(2)}
                         </span>
                       </div>
@@ -538,7 +538,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
                 <button
                   onClick={handleAddItem}
                   disabled={!newItem.itemName}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.foodCostCalculator.saveCalculation', 'Save Calculation')}
@@ -552,7 +552,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
             <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
               <CardHeader>
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Package className="w-5 h-5 text-[#0D9488]" />
+                  <Package className="w-5 h-5 text-[#6096B4]" />
                   Food Cost Items ({filteredItems.length})
                 </CardTitle>
               </CardHeader>
@@ -611,7 +611,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
                               </div>
                             </div>
                             {item.foodCostPercentage > item.targetFoodCost && (
-                              <div className="mt-2 text-xs text-[#0D9488]">
+                              <div className="mt-2 text-xs text-[#6096B4]">
                                 <TrendingUp className="w-3 h-3 inline mr-1" />
                                 Suggested price: ${item.suggestedPrice.toFixed(2)} to meet {item.targetFoodCost}% target
                               </div>
@@ -726,7 +726,7 @@ export const FoodCostCalculatorTool: React.FC<FoodCostCalculatorToolProps> = ({ 
                 <div className="flex gap-3">
                   <button
                     onClick={handleUpdateItem}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"
                   >
                     <Save className="w-5 h-5" />
                     {t('tools.foodCostCalculator.save', 'Save')}

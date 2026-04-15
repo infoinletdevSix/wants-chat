@@ -150,7 +150,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Egg className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -176,7 +176,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {years.map((y) => (
                   <option key={y} value={y}>{y}</option>
@@ -193,7 +193,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                   onClick={() => setCalendarType('western')}
                   className={`py-3 px-4 rounded-lg font-medium transition-colors ${
                     calendarType === 'western'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -209,7 +209,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                   onClick={() => setCalendarType('orthodox')}
                   className={`py-3 px-4 rounded-lg font-medium transition-colors ${
                     calendarType === 'orthodox'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -229,16 +229,16 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
           {easterDates && (
             <div className="space-y-4">
               {/* Main Easter Card */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.easterDateCalculator.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.easterDateCalculator.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Egg className="w-6 h-6 text-[#0D9488]" />
+                  <Egg className="w-6 h-6 text-[#6096B4]" />
                   <h2 className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     Easter Sunday {year}
                   </h2>
                 </div>
-                <div className="text-3xl font-bold text-[#0D9488] mb-2">
+                <div className="text-3xl font-bold text-[#6096B4] mb-2">
                   {formatDate(calendarType === 'western' ? easterDates.westernEaster : easterDates.orthodoxEaster)}
                 </div>
                 {year >= currentYear && (
@@ -260,7 +260,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`p-3 rounded-lg ${
-                    calendarType === 'western' ? 'ring-2 ring-[#0D9488]' : ''
+                    calendarType === 'western' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                     <div className={`text-xs mb-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.easterDateCalculator.westernEaster', 'Western Easter')}
@@ -270,7 +270,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                     </div>
                   </div>
                   <div className={`p-3 rounded-lg ${
-                    calendarType === 'orthodox' ? 'ring-2 ring-[#0D9488]' : ''
+                    calendarType === 'orthodox' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                     <div className={`text-xs mb-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.easterDateCalculator.orthodoxEaster', 'Orthodox Easter')}
@@ -315,7 +315,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                         }`}
                       >
                         <div className={`p-2 rounded-lg ${
-                          holiday.name === 'Easter Sunday' ? 'bg-[#0D9488] text-white' :
+                          holiday.name === 'Easter Sunday' ? 'bg-[#6096B4] text-white' :
                           theme === 'dark' ? 'bg-gray-500' : 'bg-gray-100'
                         }`}>
                           <Calendar className="w-4 h-4" />
@@ -331,7 +331,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                               </div>
                             </div>
                             <div className="text-right">
-                              <div className="text-[#0D9488] font-medium">
+                              <div className="text-[#6096B4] font-medium">
                                 {formatShortDate(holiday.date)}
                               </div>
                             </div>
@@ -359,7 +359,7 @@ export default function EasterDateCalculatorTool({ uiConfig }: EasterDateCalcula
                         onClick={() => setYear(y)}
                         className={`p-2 rounded-lg text-center transition-colors ${
                           y === year
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                             : 'bg-white text-gray-700 hover:bg-gray-200'

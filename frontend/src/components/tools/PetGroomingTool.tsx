@@ -814,16 +814,16 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClass = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const buttonPrimary =
-    'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20';
+    'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20';
 
   const buttonSecondary = `px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -840,7 +840,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
         <div className={`${cardClass} p-6 mb-6`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Scissors className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -951,14 +951,14 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                 <DollarSign className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                 <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.petGrooming.thisMonth', 'This Month')}</span>
               </div>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(revenueStats.thisMonthRevenue)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(revenueStats.thisMonthRevenue)}</p>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <div className="flex items-center gap-2 mb-1">
                 <TrendingUp className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                 <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.petGrooming.totalRevenue', 'Total Revenue')}</span>
               </div>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(revenueStats.totalRevenue)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(revenueStats.totalRevenue)}</p>
             </div>
           </div>
         </div>
@@ -978,7 +978,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1223,7 +1223,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
 
                       <div className="flex items-center gap-4">
                         <div className="text-right">
-                          <p className={`font-semibold text-[#0D9488]`}>{formatCurrency(appointment.estimatedPrice)}</p>
+                          <p className={`font-semibold text-[#6096B4]`}>{formatCurrency(appointment.estimatedPrice)}</p>
                           <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                             <Clock className="w-3 h-3 inline mr-1" />
                             {formatDuration(appointment.estimatedDuration)}
@@ -1298,7 +1298,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                         {service.description}
                       </p>
                     </div>
-                    <Sparkles className="w-5 h-5 text-[#0D9488]" />
+                    <Sparkles className="w-5 h-5 text-[#6096B4]" />
                   </div>
 
                   <div className="grid grid-cols-4 gap-2 mt-4">
@@ -1315,7 +1315,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                           <p className={`text-xs font-medium ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                             {size}
                           </p>
-                          <p className={`text-sm font-bold text-[#0D9488]`}>
+                          <p className={`text-sm font-bold text-[#6096B4]`}>
                             {formatCurrency(service[priceKey] as number)}
                           </p>
                           <p className={`text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -1403,21 +1403,21 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className={`${cardClass} p-4`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <DollarSign className="w-5 h-5 text-[#0D9488]" />
+                  <DollarSign className="w-5 h-5 text-[#6096B4]" />
                   <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.petGrooming.totalRevenue2', 'Total Revenue')}</span>
                 </div>
-                <p className={`text-3xl font-bold text-[#0D9488]`}>{formatCurrency(revenueStats.totalRevenue)}</p>
+                <p className={`text-3xl font-bold text-[#6096B4]`}>{formatCurrency(revenueStats.totalRevenue)}</p>
               </div>
               <div className={`${cardClass} p-4`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Calendar className="w-5 h-5 text-[#0D9488]" />
+                  <Calendar className="w-5 h-5 text-[#6096B4]" />
                   <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.petGrooming.thisMonth2', 'This Month')}</span>
                 </div>
-                <p className={`text-3xl font-bold text-[#0D9488]`}>{formatCurrency(revenueStats.thisMonthRevenue)}</p>
+                <p className={`text-3xl font-bold text-[#6096B4]`}>{formatCurrency(revenueStats.thisMonthRevenue)}</p>
               </div>
               <div className={`${cardClass} p-4`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Scissors className="w-5 h-5 text-[#0D9488]" />
+                  <Scissors className="w-5 h-5 text-[#6096B4]" />
                   <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.petGrooming.totalSessions', 'Total Sessions')}</span>
                 </div>
                 <p className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1437,7 +1437,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                   .map(([petName, revenue]) => (
                     <div key={petName} className="flex items-center justify-between">
                       <span className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{petName}</span>
-                      <span className="font-semibold text-[#0D9488]">{formatCurrency(revenue as number)}</span>
+                      <span className="font-semibold text-[#6096B4]">{formatCurrency(revenue as number)}</span>
                     </div>
                   ))}
                 {Object.keys(revenueStats.revenueByPet).length === 0 && (
@@ -1459,7 +1459,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                   .map(([clientName, revenue]) => (
                     <div key={clientName} className="flex items-center justify-between">
                       <span className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{clientName}</span>
-                      <span className="font-semibold text-[#0D9488]">{formatCurrency(revenue as number)}</span>
+                      <span className="font-semibold text-[#6096B4]">{formatCurrency(revenue as number)}</span>
                     </div>
                   ))}
                 {Object.keys(revenueStats.revenueByClient).length === 0 && (
@@ -1826,7 +1826,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                                 });
                               }
                             }}
-                            className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                            className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                           />
                           <span className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                             {service.name}
@@ -1888,7 +1888,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                             <Clock className="w-4 h-4 inline mr-1" />
                             {formatDuration(totalTime)}
                           </span>
-                          <span className="font-bold text-[#0D9488]">{formatCurrency(totalPrice)}</span>
+                          <span className="font-bold text-[#6096B4]">{formatCurrency(totalPrice)}</span>
                         </div>
                       );
                     })()}
@@ -2039,7 +2039,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                     <div className="p-4 pt-0">
                       <button
                         onClick={() => setShowVaccinationForm(true)}
-                        className={`mb-4 text-sm ${theme === 'dark' ? t('tools.petGrooming.text2dd4bf', 'text-[#2DD4BF]') : t('tools.petGrooming.text0d9488', 'text-[#0D9488]')} hover:underline flex items-center gap-1`}
+                        className={`mb-4 text-sm ${theme === 'dark' ? t('tools.petGrooming.text2dd4bf', 'text-[#75AAC1]') : t('tools.petGrooming.text0d9488', 'text-[#6096B4]')} hover:underline flex items-center gap-1`}
                       >
                         <Plus className="w-4 h-4" />
                         {t('tools.petGrooming.addVaccination', 'Add Vaccination')}
@@ -2100,7 +2100,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                     <div className="p-4 pt-0">
                       <button
                         onClick={() => setShowGroomingForm(true)}
-                        className={`mb-4 text-sm ${theme === 'dark' ? t('tools.petGrooming.text2dd4bf2', 'text-[#2DD4BF]') : t('tools.petGrooming.text0d94882', 'text-[#0D9488]')} hover:underline flex items-center gap-1`}
+                        className={`mb-4 text-sm ${theme === 'dark' ? t('tools.petGrooming.text2dd4bf2', 'text-[#75AAC1]') : t('tools.petGrooming.text0d94882', 'text-[#6096B4]')} hover:underline flex items-center gap-1`}
                       >
                         <Plus className="w-4 h-4" />
                         {t('tools.petGrooming.addGroomingSession', 'Add Grooming Session')}
@@ -2118,7 +2118,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                                   <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                                     {formatDate(session.date)}
                                   </span>
-                                  <span className="font-bold text-[#0D9488]">{formatCurrency(session.price)}</span>
+                                  <span className="font-bold text-[#6096B4]">{formatCurrency(session.price)}</span>
                                 </div>
                                 <div className="flex flex-wrap gap-1 mb-2">
                                   {session.services.map((serviceId, i) => {
@@ -2212,7 +2212,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                     <div className="p-4 pt-0">
                       <button
                         onClick={() => setShowNoteForm(true)}
-                        className={`mb-4 text-sm ${theme === 'dark' ? t('tools.petGrooming.text2dd4bf3', 'text-[#2DD4BF]') : t('tools.petGrooming.text0d94883', 'text-[#0D9488]')} hover:underline flex items-center gap-1`}
+                        className={`mb-4 text-sm ${theme === 'dark' ? t('tools.petGrooming.text2dd4bf3', 'text-[#75AAC1]') : t('tools.petGrooming.text0d94883', 'text-[#6096B4]')} hover:underline flex items-center gap-1`}
                       >
                         <Plus className="w-4 h-4" />
                         {t('tools.petGrooming.addNote', 'Add Note')}
@@ -2380,7 +2380,7 @@ export const PetGroomingTool: React.FC<PetGroomingToolProps> = ({
                                 });
                               }
                             }}
-                            className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                            className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                           />
                           <span className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                             {service.name}

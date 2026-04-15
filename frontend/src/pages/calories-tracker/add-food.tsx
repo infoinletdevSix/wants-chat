@@ -222,7 +222,7 @@ const AddFoodPage: React.FC = () => {
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
-              <Apple className="h-6 w-6 text-teal-400" />
+              <Apple className="h-6 w-6 text-primary-400" />
               <span className="text-xl font-semibold text-white">
                 Add Custom Food
               </span>
@@ -233,7 +233,7 @@ const AddFoodPage: React.FC = () => {
 
       <main className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/20 border border-teal-400/30">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/20 border border-primary-400/30">
           <h1 className="text-3xl font-bold text-white mb-2">
             Create Custom Food
           </h1>
@@ -259,10 +259,10 @@ const AddFoodPage: React.FC = () => {
         )}
 
         {/* Basic Information */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Apple className="h-5 w-5 text-teal-400" />
+              <Apple className="h-5 w-5 text-primary-400" />
               Basic Information
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -319,7 +319,7 @@ const AddFoodPage: React.FC = () => {
                       id="category"
                       value={foodData.category}
                       onChange={(e) => handleInputChange('category', e.target.value)}
-                      className="w-full h-12 pl-12 pr-4 rounded-xl border border-white/20 bg-white/10 text-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-0"
+                      className="w-full h-12 pl-12 pr-4 rounded-xl border border-white/20 bg-white/10 text-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-0"
                       style={{
                         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
                         backgroundRepeat: 'no-repeat',
@@ -328,7 +328,7 @@ const AddFoodPage: React.FC = () => {
                       }}
                     >
                       {categories.map(cat => (
-                        <option key={cat.id} value={cat.id} className="bg-teal-800/90 text-white">
+                        <option key={cat.id} value={cat.id} className="bg-primary-800/90 text-white">
                           {cat.name}
                         </option>
                       ))}
@@ -357,10 +357,10 @@ const AddFoodPage: React.FC = () => {
         </Card>
 
         {/* Serving Information */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Calculator className="h-5 w-5 text-teal-400" />
+              <Calculator className="h-5 w-5 text-primary-400" />
               Serving Information
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -396,7 +396,7 @@ const AddFoodPage: React.FC = () => {
                     id="servingUnit"
                     value={foodData.servingUnit}
                     onChange={(e) => handleInputChange('servingUnit', e.target.value)}
-                    className="w-full h-12 pl-12 pr-4 rounded-xl border border-white/20 bg-white/10 text-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-0"
+                    className="w-full h-12 pl-12 pr-4 rounded-xl border border-white/20 bg-white/10 text-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-0"
                     style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
                       backgroundRepeat: 'no-repeat',
@@ -405,7 +405,7 @@ const AddFoodPage: React.FC = () => {
                     }}
                   >
                     {servingUnits.map(unit => (
-                      <option key={unit.id} value={unit.id} className="bg-teal-800/90 text-white">
+                      <option key={unit.id} value={unit.id} className="bg-primary-800/90 text-white">
                         {unit.name}
                       </option>
                     ))}
@@ -417,10 +417,10 @@ const AddFoodPage: React.FC = () => {
         </Card>
 
         {/* Nutritional Information */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Flame className="h-5 w-5 text-teal-400" />
+              <Flame className="h-5 w-5 text-primary-400" />
               Nutritional Information
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -571,9 +571,9 @@ const AddFoodPage: React.FC = () => {
             </div>
 
             {/* Macro calculation help */}
-            <div className="p-4 bg-teal-500/10 border border-teal-400/30 rounded-xl">
+            <div className="p-4 bg-primary-500/10 border border-primary-400/30 rounded-xl">
               <div className="flex items-start gap-3">
-                <InfoIcon className="h-5 w-5 text-teal-400 mt-0.5" />
+                <InfoIcon className="h-5 w-5 text-primary-400 mt-0.5" />
                 <div>
                   <p className="text-sm text-white">
                     <strong>Calorie Calculation Guide:</strong>
@@ -600,7 +600,7 @@ const AddFoodPage: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="h-12 px-8 text-white font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50"
+            className="h-12 px-8 text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
           >
             {isSubmitting ? (
               <>

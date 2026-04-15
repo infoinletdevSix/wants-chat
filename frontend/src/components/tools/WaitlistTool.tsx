@@ -247,7 +247,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -260,8 +260,8 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <Users className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <Users className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -342,7 +342,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardContent className="py-4">
             <div className="flex items-center gap-4">
-              <Clock className="w-5 h-5 text-[#0D9488]" />
+              <Clock className="w-5 h-5 text-[#6096B4]" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.waitlist.averageWaitTime', 'Average Wait Time:')}</span>
               <input
                 type="number"
@@ -370,7 +370,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
                 onClick={() => setShowAddForm(!showAddForm)}
               >
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <UserPlus className="w-5 h-5 text-[#0D9488]" />
+                  <UserPlus className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.waitlist.addToWaitlist', 'Add to Waitlist')}
                 </CardTitle>
                 {showAddForm ? (
@@ -480,7 +480,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
                 <button
                   onClick={handleAddEntry}
                   disabled={!newEntry.guestName}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <UserPlus className="w-5 h-5" />
                   {t('tools.waitlist.addToWaitlist2', 'Add to Waitlist')}
@@ -495,7 +495,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
               <CardHeader>
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                    <Users className="w-5 h-5 text-[#0D9488]" />
+                    <Users className="w-5 h-5 text-[#6096B4]" />
                     Waitlist ({filteredWaitlist.length})
                   </CardTitle>
                   <div className="flex gap-2 flex-wrap">
@@ -505,7 +505,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
                         onClick={() => setSelectedStatus(status)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium capitalize ${
                           selectedStatus === status
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : isDark
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -541,7 +541,7 @@ export const WaitlistTool: React.FC<WaitlistToolProps> = ({ uiConfig }) => {
                               <div className="flex-1">
                                 <div className="flex items-center gap-3 mb-2">
                                   {entry.status === 'waiting' && position > 0 && (
-                                    <span className="w-8 h-8 flex items-center justify-center bg-[#0D9488] text-white rounded-full text-sm font-bold">
+                                    <span className="w-8 h-8 flex items-center justify-center bg-[#6096B4] text-white rounded-full text-sm font-bold">
                                       {position}
                                     </span>
                                   )}

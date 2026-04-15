@@ -152,11 +152,11 @@ export const ChecklistTool: React.FC<ChecklistToolProps> = ({ uiConfig }) => {
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <CheckSquare className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <CheckSquare className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.checklist.checklist', 'Checklist')}</h3>
@@ -178,9 +178,9 @@ export const ChecklistTool: React.FC<ChecklistToolProps> = ({ uiConfig }) => {
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.checklist.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -195,7 +195,7 @@ export const ChecklistTool: React.FC<ChecklistToolProps> = ({ uiConfig }) => {
               onClick={() => setActiveListId(list.id)}
               className={`px-3 py-1.5 text-sm rounded-lg transition-colors flex items-center gap-2 ${
                 activeListId === list.id
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -247,7 +247,7 @@ export const ChecklistTool: React.FC<ChecklistToolProps> = ({ uiConfig }) => {
                 </div>
                 <div className={`h-2 rounded-full ${isDark ? 'bg-gray-800' : 'bg-gray-200'}`}>
                   <div
-                    className="h-2 rounded-full bg-teal-500 transition-all duration-300"
+                    className="h-2 rounded-full bg-primary-500 transition-all duration-300"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -268,7 +268,7 @@ export const ChecklistTool: React.FC<ChecklistToolProps> = ({ uiConfig }) => {
               />
               <button
                 onClick={addItem}
-                className="px-4 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-lg transition-colors"
+                className="px-4 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors"
               >
                 <Plus className="w-5 h-5" />
               </button>
@@ -287,10 +287,10 @@ export const ChecklistTool: React.FC<ChecklistToolProps> = ({ uiConfig }) => {
                     onClick={() => toggleItem(item.id)}
                     className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ${
                       item.completed
-                        ? 'bg-teal-500 border-teal-500 text-white'
+                        ? 'bg-primary-500 border-primary-500 text-white'
                         : isDark
-                        ? 'border-gray-600 hover:border-teal-500'
-                        : 'border-gray-300 hover:border-teal-500'
+                        ? 'border-gray-600 hover:border-primary-500'
+                        : 'border-gray-300 hover:border-primary-500'
                     }`}
                   >
                     {item.completed && <Check className="w-4 h-4" />}

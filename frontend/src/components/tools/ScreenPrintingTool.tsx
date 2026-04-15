@@ -968,11 +968,11 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
     isDark
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
   const textClass = isDark ? 'text-white' : 'text-gray-900';
   const mutedTextClass = isDark ? 'text-gray-400' : 'text-gray-500';
-  const buttonPrimaryClass = 'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20';
+  const buttonPrimaryClass = 'flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20';
   const buttonSecondaryClass = `px-4 py-2 rounded-lg transition-colors font-medium ${
     isDark ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
   }`;
@@ -984,7 +984,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
       in_production: 'bg-yellow-500',
       quality_check: 'bg-purple-500',
       completed: 'bg-green-500',
-      shipped: 'bg-teal-500',
+      shipped: 'bg-primary-500',
       pending: 'bg-orange-500',
       submitted: 'bg-blue-500',
       approved: 'bg-green-500',
@@ -1005,7 +1005,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
     return (
       <div className={`max-w-7xl mx-auto p-6 ${isDark ? 'bg-gray-900' : 'bg-gray-50'} min-h-screen flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={mutedTextClass}>{t('tools.screenPrinting.loadingShopData', 'Loading shop data...')}</p>
         </div>
       </div>
@@ -1017,8 +1017,8 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Printer className="w-8 h-8 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Printer className="w-8 h-8 text-[#6096B4]" />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${textClass}`}>{t('tools.screenPrinting.screenPrintingShopManager', 'Screen Printing Shop Manager')}</h1>
@@ -1057,9 +1057,9 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.screenPrinting.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.screenPrinting.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
         </div>
       )}
 
@@ -1109,7 +1109,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'text-gray-300 hover:bg-gray-700'
                 : 'text-gray-600 hover:bg-gray-300'
@@ -1273,7 +1273,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
                                   setOrderForm(prev => ({ ...prev, garmentSize: sizes.filter(s => s !== size) }));
                                 }
                               }}
-                              className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                              className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                             />
                             <span className={`text-sm ${textClass}`}>{size}</span>
                           </label>
@@ -1437,7 +1437,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
                           type="checkbox"
                           checked={orderForm.isRushOrder || false}
                           onChange={(e) => setOrderForm(prev => ({ ...prev, isRushOrder: e.target.checked }))}
-                          className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <span className={`font-medium ${textClass}`}>{t('tools.screenPrinting.rushOrder', 'Rush Order')}</span>
                       </label>
@@ -1462,7 +1462,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
                         type="checkbox"
                         checked={orderForm.isReorder || false}
                         onChange={(e) => setOrderForm(prev => ({ ...prev, isReorder: e.target.checked }))}
-                        className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={`font-medium ${textClass}`}>{t('tools.screenPrinting.thisIsAReorder', 'This is a reorder')}</span>
                     </label>
@@ -1493,7 +1493,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
 
                   {/* Price Preview */}
                   {pricingTiers.length > 0 && (
-                    <div className={`p-4 rounded-lg ${isDark ? t('tools.screenPrinting.bg0d948820', 'bg-[#0D9488]/20') : t('tools.screenPrinting.bg0d948810', 'bg-[#0D9488]/10')}`}>
+                    <div className={`p-4 rounded-lg ${isDark ? t('tools.screenPrinting.bg0d948820', 'bg-[#6096B4]/20') : t('tools.screenPrinting.bg0d948810', 'bg-[#6096B4]/10')}`}>
                       <h3 className={`font-medium mb-2 ${textClass}`}>{t('tools.screenPrinting.priceEstimate', 'Price Estimate')}</h3>
                       {(() => {
                         const price = calculatePrice(
@@ -1513,7 +1513,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
                             </div>
                             <div>
                               <p className={mutedTextClass}>{t('tools.screenPrinting.total', 'Total')}</p>
-                              <p className={`text-lg font-bold text-[#0D9488]`}>{formatCurrency(price.total)}</p>
+                              <p className={`text-lg font-bold text-[#6096B4]`}>{formatCurrency(price.total)}</p>
                             </div>
                           </div>
                         );
@@ -1553,7 +1553,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
                   <div
                     key={order.id}
                     className={`${cardClass} p-4 cursor-pointer transition-all hover:shadow-lg ${
-                      selectedOrder?.id === order.id ? 'ring-2 ring-[#0D9488]' : ''
+                      selectedOrder?.id === order.id ? 'ring-2 ring-[#6096B4]' : ''
                     }`}
                     onClick={() => setSelectedOrder(order)}
                   >
@@ -1688,7 +1688,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
                               type="checkbox"
                               checked={item.checked}
                               onChange={(e) => handleUpdateQualityCheck(selectedOrder.id, item.id, e.target.checked)}
-                              className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                              className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                             />
                             <span className={`text-sm ${item.checked ? 'line-through ' + mutedTextClass : textClass}`}>
                               {item.item}
@@ -1731,7 +1731,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
               onClick={() => toggleSection('garments')}
             >
               <div className="flex items-center gap-2">
-                <Package className="w-5 h-5 text-[#0D9488]" />
+                <Package className="w-5 h-5 text-[#6096B4]" />
                 <h2 className={`text-lg font-bold ${textClass}`}>{t('tools.screenPrinting.blankGarmentInventory', 'Blank Garment Inventory')}</h2>
                 <span className={`text-sm ${mutedTextClass}`}>({garmentInventory.length} items)</span>
               </div>
@@ -1926,7 +1926,7 @@ export const ScreenPrintingTool: React.FC<ScreenPrintingToolProps> = ({
               onClick={() => toggleSection('inks')}
             >
               <div className="flex items-center gap-2">
-                <Droplets className="w-5 h-5 text-[#0D9488]" />
+                <Droplets className="w-5 h-5 text-[#6096B4]" />
                 <h2 className={`text-lg font-bold ${textClass}`}>{t('tools.screenPrinting.inkInventory', 'Ink Inventory')}</h2>
                 <span className={`text-sm ${mutedTextClass}`}>({inkInventory.length} items)</span>
               </div>

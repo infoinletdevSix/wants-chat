@@ -30,9 +30,9 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
   onAnalyzeWithAI
 }) => {
   const renderImageUpload = () => (
-    <div className="border-2 border-dashed border-teal-500/50 rounded-xl p-6 sm:p-8 bg-white/5">
+    <div className="border-2 border-dashed border-primary-500/50 rounded-xl p-6 sm:p-8 bg-white/5">
       <div className="text-center">
-        <Camera className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 text-teal-400/50" />
+        <Camera className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 text-primary-400/50" />
         <input
           type="file"
           ref={fileInputRef}
@@ -67,7 +67,7 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
             <Button
               onClick={onAnalyzeWithAI}
               disabled={isAnalyzing}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
               size="lg"
             >
               {isAnalyzing ? (
@@ -89,9 +89,9 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
   );
 
   const renderVideoUpload = () => (
-    <div className="border-2 border-dashed border-teal-500/50 rounded-xl p-6 sm:p-8 bg-white/5">
+    <div className="border-2 border-dashed border-primary-500/50 rounded-xl p-6 sm:p-8 bg-white/5">
       <div className="text-center">
-        <Video className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 text-teal-400/50" />
+        <Video className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 text-primary-400/50" />
         <input
           type="file"
           ref={fileInputRef}
@@ -117,7 +117,7 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
             <Button
               onClick={onAnalyzeWithAI}
               disabled={isAnalyzing}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
               size="lg"
             >
               {isAnalyzing ? (
@@ -153,7 +153,7 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
       <Button
         onClick={onAnalyzeWithAI}
         disabled={!videoUrl || isAnalyzing}
-        className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+        className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
         size="lg"
       >
         {isAnalyzing ? (
@@ -172,10 +172,10 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
   );
 
   return (
-    <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-teal-500">
+    <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-primary-500">
       <CardHeader>
         <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
-          <Sparkles className="h-6 w-6 text-teal-400" />
+          <Sparkles className="h-6 w-6 text-primary-400" />
           AI-Powered Recipe Analysis
         </CardTitle>
         <CardDescription className="text-base text-white/60">
@@ -188,12 +188,12 @@ export const AIUploadInterface: React.FC<AIUploadInterfaceProps> = ({
         {uploadMethod === 'url' && renderUrlInput()}
 
         {isAnalyzing && (
-          <div className="mt-6 p-4 bg-teal-500/10 border border-teal-500/20 rounded-lg">
-            <div className="flex items-center gap-3 text-teal-300">
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-teal-400"></div>
+          <div className="mt-6 p-4 bg-primary-500/10 border border-primary-500/20 rounded-lg">
+            <div className="flex items-center gap-3 text-primary-300">
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-400"></div>
               <span className="text-sm font-medium">AI is analyzing your content...</span>
             </div>
-            <p className="text-xs text-teal-400/80 mt-2">
+            <p className="text-xs text-primary-400/80 mt-2">
               This may take a few moments. We're identifying ingredients, steps, and cooking details.
             </p>
           </div>

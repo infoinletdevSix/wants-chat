@@ -35,7 +35,7 @@ const toolCards = [
   { name: 'PDF Tools', icon: FileText, color: 'from-red-500 to-orange-500' },
   { name: 'Audio Converter', icon: Music, color: 'from-cyan-500 to-blue-500' },
   { name: 'Video Compressor', icon: Video, color: 'from-purple-500 to-pink-500' },
-  { name: 'Code Generator', icon: Code2, color: 'from-emerald-500 to-teal-500' },
+  { name: 'Code Generator', icon: Code2, color: 'from-emerald-500 to-primary-500' },
   { name: 'Web Scraper', icon: Globe, color: 'from-blue-500 to-indigo-500' },
   { name: 'Time Zone Converter', icon: Clock, color: 'from-amber-500 to-yellow-500' },
 ];

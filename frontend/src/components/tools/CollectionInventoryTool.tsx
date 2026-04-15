@@ -570,7 +570,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Archive className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -613,9 +613,9 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
 
           {/* Prefill indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.collectionInventory.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.collectionInventory.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
             </div>
           )}
 
@@ -635,7 +635,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                 <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.collectionInventory.currentValue', 'Current Value')}</span>
               </div>
-              <div className="text-2xl font-bold text-[#0D9488]">
+              <div className="text-2xl font-bold text-[#6096B4]">
                 ${reportsData.totalCurrentValue.toLocaleString()}
               </div>
             </div>
@@ -678,7 +678,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : isDark
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-600 hover:text-gray-900'
@@ -709,7 +709,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -721,7 +721,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.collectionInventory.allCategories', 'All Categories')}</option>
                   {CATEGORIES.map((cat) => (
@@ -738,7 +738,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.collectionInventory.allConditions', 'All Conditions')}</option>
                   {CONDITIONS.map((cond) => (
@@ -758,7 +758,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <span className={isDark ? 'text-gray-400' : 'text-gray-500'}>-</span>
                   <input
@@ -770,7 +770,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -782,7 +782,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="name">{t('tools.collectionInventory.sortByName', 'Sort by Name')}</option>
                     <option value="value">{t('tools.collectionInventory.sortByValue', 'Sort by Value')}</option>
@@ -807,7 +807,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                     setEditingItem(null);
                     setShowItemModal(true);
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.collectionInventory.addItem', 'Add Item')}
@@ -919,7 +919,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                       <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
                         <div className="flex justify-between items-center">
                           <div>
-                            <div className="text-xl font-bold text-[#0D9488]">
+                            <div className="text-xl font-bold text-[#6096B4]">
                               ${item.currentValue.toLocaleString()}
                             </div>
                             {item.purchasePrice > 0 && !item.isWishlist && (
@@ -962,7 +962,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                   <h3 className={`text-sm font-medium mb-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.collectionInventory.totalCurrentValue', 'Total Current Value')}
                   </h3>
-                  <div className="text-3xl font-bold text-[#0D9488]">
+                  <div className="text-3xl font-bold text-[#6096B4]">
                     ${reportsData.totalCurrentValue.toLocaleString()}
                   </div>
                 </div>
@@ -1011,7 +1011,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                             </span>
                           </div>
                         </div>
-                        <span className="text-[#0D9488] font-bold">
+                        <span className="text-[#6096B4] font-bold">
                           ${item.currentValue.toLocaleString()}
                         </span>
                       </div>
@@ -1057,7 +1057,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
               {/* Insurance Documentation */}
               <div className={`p-4 rounded-lg border-2 border-dashed ${isDark ? 'border-gray-600' : 'border-gray-300'}`}>
                 <h3 className={`font-semibold mb-2 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Shield className="w-5 h-5 text-[#0D9488]" />
+                  <Shield className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.collectionInventory.insuranceDocumentation', 'Insurance Documentation')}
                 </h3>
                 <p className={`text-sm mb-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -1066,7 +1066,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                 <div className="flex gap-3">
                   <button
                     onClick={() => exportToCSV(collectionItems, COLLECTION_COLUMNS, { filename: 'collection-insurance' })}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                   >
                     <Download className="w-4 h-4" />
                     {t('tools.collectionInventory.exportCsv', 'Export CSV')}
@@ -1109,7 +1109,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         </span>
                         <div className="flex-1 h-4 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-[#0D9488]"
+                            className="h-full bg-[#6096B4]"
                             style={{ width: `${reportsData.totalCurrentValue > 0 ? (value / reportsData.totalCurrentValue) * 100 : 0}%` }}
                           />
                         </div>
@@ -1139,7 +1139,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         </span>
                         <div className="flex-1 h-4 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-[#0D9488]"
+                            className="h-full bg-[#6096B4]"
                             style={{ width: `${reportsData.totalCurrentValue > 0 ? (reportsData.valueByCondition[condition] / reportsData.totalCurrentValue) * 100 : 0}%` }}
                           />
                         </div>
@@ -1194,7 +1194,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                   </div>
                   <div className={`p-3 rounded ${isDark ? 'bg-gray-600' : 'bg-white'}`}>
                     <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.collectionInventory.avgItemValue', 'Avg. Item Value')}</p>
-                    <p className="text-xl font-bold text-[#0D9488]">
+                    <p className="text-xl font-bold text-[#6096B4]">
                       ${reportsData.totalItems > 0 ? Math.round(reportsData.totalCurrentValue / reportsData.totalItems).toLocaleString() : 0}
                     </p>
                   </div>
@@ -1246,7 +1246,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1264,7 +1264,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1280,7 +1280,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {CATEGORIES.map((cat) => (
                         <option key={cat.id} value={cat.id}>
@@ -1304,7 +1304,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1320,7 +1320,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {CONDITIONS.map((cond) => (
                         <option key={cond} value={cond}>
@@ -1342,7 +1342,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {RARITIES.map((rarity) => (
                         <option key={rarity} value={rarity}>
@@ -1368,7 +1368,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1388,7 +1388,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1408,7 +1408,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1425,7 +1425,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1443,7 +1443,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1461,7 +1461,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1479,7 +1479,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1497,7 +1497,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1509,7 +1509,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                           type="checkbox"
                           checked={itemForm.isWishlist || false}
                           onChange={(e) => setItemForm({ ...itemForm, isWishlist: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                          className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                         />
                         <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                           {t('tools.collectionInventory.addToWishlistItemNot', 'Add to wishlist (item not yet acquired)')}
@@ -1524,7 +1524,7 @@ export const CollectionInventoryTool: React.FC<CollectionInventoryToolProps> = (
                   <button
                     onClick={handleAddItem}
                     disabled={!itemForm.name}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     {editingItem ? t('tools.collectionInventory.updateItem', 'Update Item') : t('tools.collectionInventory.addItem2', 'Add Item')}
                   </button>

@@ -82,7 +82,7 @@ const MainFeatures: React.FC = () => {
       category: 'Mental Wellness',
       description: 'Mindfulness & stress relief with interactive meditation wheel, guided sessions, and series tracking.',
       icon: SelfImprovementIcon,
-      color: 'from-teal-500 to-pink-500',
+      color: 'from-primary-500 to-pink-500',
       route: '/meditation',
       status: 'Available',
       routes: 6, // meditation, series, session, profile, player
@@ -128,7 +128,7 @@ const MainFeatures: React.FC = () => {
       category: 'Finance & Management',
       description: 'Budget & financial management with expense tracking, analytics, CSV export, and comprehensive reporting.',
       icon: AccountBalanceWalletIcon,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-emerald-500 to-primary-500',
       route: '/expense-tracker',
       status: 'Available',
       routes: 2, // expense-tracker, add-expense
@@ -151,7 +151,7 @@ const MainFeatures: React.FC = () => {
       category: 'Travel & Planning',
       description: 'AI-powered trip planning with interactive 3D globe interface and smart itinerary generation.',
       icon: FlightTakeoffIcon,
-      color: 'from-indigo-500 to-teal-500',
+      color: 'from-indigo-500 to-primary-500',
       route: '/travel-planner',
       status: 'Available',
       routes: 2, // travel-planner, generate-travel-plan
@@ -243,7 +243,7 @@ const MainFeatures: React.FC = () => {
       category: 'Productivity Tools',
       description: 'Task and project management with priorities, due dates, and completion tracking.',
       icon: CheckBoxIcon,
-      color: 'from-cyan-500 to-teal-500',
+      color: 'from-cyan-500 to-primary-500',
       route: '/todo',
       status: 'Available',
       routes: 1,
@@ -353,7 +353,7 @@ const MainFeatures: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -361,7 +361,7 @@ const MainFeatures: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, 100, 0],
           y: [0, 50, 0],
@@ -397,13 +397,13 @@ const MainFeatures: React.FC = () => {
           variants={cardVariants}
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <AutoAwesomeIcon className="h-5 w-5 text-teal-400" />
+            <AutoAwesomeIcon className="h-5 w-5 text-primary-400" />
             <span className="text-sm font-semibold text-white">Complete Life Management Suite</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Everything You Need in
-            <span className="text-teal-400"> One Platform</span>
+            <span className="text-primary-400"> One Platform</span>
           </h2>
 
           <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed">
@@ -418,7 +418,7 @@ const MainFeatures: React.FC = () => {
               <span className="text-white/70"><strong>12 Apps</strong> Fully Operational</span>
             </div>
             <div className="flex items-center gap-2">
-              <PlayCircleIcon className="h-5 w-5 text-teal-400" />
+              <PlayCircleIcon className="h-5 w-5 text-primary-400" />
               <span className="text-white/70"><strong>Production-Ready</strong> Experience</span>
             </div>
           </div>
@@ -440,7 +440,7 @@ const MainFeatures: React.FC = () => {
               className="group"
             >
               <Card
-                className="p-8 h-full cursor-pointer relative overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/20"
+                className="p-8 h-full cursor-pointer relative overflow-hidden bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20"
                 onClick={() => handleFeatureClick(feature.id)}
               >
                 {/* Background Gradient Effect */}
@@ -460,10 +460,10 @@ const MainFeatures: React.FC = () => {
 
                 {/* Content */}
                 <div className="mb-6">
-                  <div className="text-xs text-teal-400 font-medium mb-2 uppercase tracking-wide">
+                  <div className="text-xs text-primary-400 font-medium mb-2 uppercase tracking-wide">
                     {feature.category}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-teal-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary-400 transition-colors duration-300">
                     {feature.title}
                   </h3>
                   <p className="text-white/70 text-sm leading-relaxed mb-4">
@@ -489,10 +489,10 @@ const MainFeatures: React.FC = () => {
 
                 {/* Action */}
                 <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/20">
-                  <span className="text-sm font-medium text-teal-400">
+                  <span className="text-sm font-medium text-primary-400">
                     Explore {feature.title.split(' ')[0]}
                   </span>
-                  <ArrowForwardIcon className="h-5 w-5 text-teal-400 group-hover:translate-x-2 transition-transform duration-300" />
+                  <ArrowForwardIcon className="h-5 w-5 text-primary-400 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
               </Card>
             </motion.div>

@@ -191,11 +191,11 @@ Format the script with clear timestamps and scene descriptions.`;
     }`}>
       {/* Header */}
       <div className={`px-6 py-4 border-b ${
-        isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.videoScript.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#0D9488]/5 border-gray-100')
+        isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.videoScript.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#6096B4]/5 border-gray-100')
       }`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Video className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Video className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -210,9 +210,9 @@ Format the script with clear timestamps and scene descriptions.`;
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.videoScript.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.videoScript.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -226,7 +226,7 @@ Format the script with clear timestamps and scene descriptions.`;
             <select
               value={videoType}
               onChange={(e) => setVideoType(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -248,7 +248,7 @@ Format the script with clear timestamps and scene descriptions.`;
             <select
               value={duration}
               onChange={(e) => setDuration(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -274,7 +274,7 @@ Format the script with clear timestamps and scene descriptions.`;
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.videoScript.eGHowToStart', 'e.g., How to start a successful podcast in 2025')}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
@@ -291,7 +291,7 @@ Format the script with clear timestamps and scene descriptions.`;
           <select
             value={tone}
             onChange={(e) => setTone(e.target.value)}
-            className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
@@ -320,7 +320,7 @@ Format the script with clear timestamps and scene descriptions.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -359,7 +359,7 @@ Format the script with clear timestamps and scene descriptions.`;
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#2DD4BF] transition-all flex items-center gap-2 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#75AAC1] transition-all flex items-center gap-2 disabled:opacity-50"
                 >
                   {isSaving ? (
                     <Loader2 className="w-4 h-4 animate-spin" />

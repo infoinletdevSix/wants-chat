@@ -50,7 +50,7 @@ const FeaturesPage: React.FC = () => {
       icon: SmartToyIcon,
       titleKey: 'features.page.coreFeatures.contextualTools.title',
       descriptionKey: 'features.page.coreFeatures.contextualTools.description',
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-emerald-500 to-primary-500',
     },
     {
       icon: BoltIcon,
@@ -95,7 +95,7 @@ const FeaturesPage: React.FC = () => {
         'features.page.toolCategories.examples.medicationTracker',
         'features.page.toolCategories.examples.symptomChecker',
       ],
-      color: 'from-emerald-500 to-teal-600',
+      color: 'from-emerald-500 to-primary-600',
     },
     {
       icon: GavelIcon,
@@ -271,7 +271,7 @@ const FeaturesPage: React.FC = () => {
             >
               <span className="text-white">{t('features.page.heroTitleLine1')}</span>
               <br />
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-primary-400 bg-clip-text text-transparent">
                 {t('features.page.heroTitleLine2')}
               </span>
             </motion.h1>
@@ -302,7 +302,7 @@ const FeaturesPage: React.FC = () => {
                 <div className="text-gray-500 text-sm">{t('features.page.stats.aiModels')}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-teal-400">100+</div>
+                <div className="text-4xl font-bold text-primary-400">100+</div>
                 <div className="text-gray-500 text-sm">{t('features.page.stats.integrations')}</div>
               </div>
               <div className="text-center">
@@ -416,7 +416,7 @@ const FeaturesPage: React.FC = () => {
       <section className="py-20 border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="bg-teal-500/20 text-teal-400 border-teal-500/30 mb-4">
+            <Badge className="bg-primary-500/20 text-primary-400 border-primary-500/30 mb-4">
               {t('features.page.toolCategories.badge')}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">

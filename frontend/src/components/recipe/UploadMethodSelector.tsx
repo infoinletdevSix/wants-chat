@@ -39,10 +39,10 @@ export const UploadMethodSelector: React.FC<UploadMethodSelectorProps> = ({
   ];
 
   return (
-    <div className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-teal-500 p-6">
+    <div className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-primary-500 p-6">
       <div className="mb-4">
         <h2 className="flex items-center gap-3 text-xl font-bold text-white">
-          <ChefHat className="h-6 w-6 text-teal-400" />
+          <ChefHat className="h-6 w-6 text-primary-400" />
           Recipe Input Method
         </h2>
         <p className="text-base text-white/60 mt-1">
@@ -56,7 +56,7 @@ export const UploadMethodSelector: React.FC<UploadMethodSelectorProps> = ({
             onClick={() => onUploadMethodChange(method.id)}
             className={`rounded-xl text-sm h-16 flex flex-col items-center justify-center gap-2 p-4 transition-all duration-200 ${
               uploadMethod === method.id
-                ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg'
+                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
                 : 'bg-white/5 border border-white/20 text-white/70 hover:bg-white/10 hover:text-white'
             }`}
           >

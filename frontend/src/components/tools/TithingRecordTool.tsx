@@ -428,9 +428,9 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.tithingRecord.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.tithingRecord.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -438,7 +438,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -489,7 +489,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -607,7 +607,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
               </div>
               <button
                 onClick={() => { resetContributionForm(); setEditingContribution(null); setShowContributionModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.tithingRecord.recordContribution', 'Record Contribution')}
@@ -685,7 +685,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
               </h2>
               <button
                 onClick={() => { resetContributorForm(); setEditingContributor(null); setShowContributorModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.tithingRecord.addContributor', 'Add Contributor')}
@@ -749,7 +749,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
               </h2>
               <button
                 onClick={() => { resetFundForm(); setEditingFund(null); setShowFundModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.tithingRecord.createFund', 'Create Fund')}
@@ -793,7 +793,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                       </div>
                       <div className={`h-2 rounded-full ${isDark ? 'bg-gray-600' : 'bg-gray-200'}`}>
                         <div
-                          className="h-2 rounded-full bg-[#0D9488]"
+                          className="h-2 rounded-full bg-[#6096B4]"
                           style={{ width: `${Math.min((fund.currentBalance / fund.goal) * 100, 100)}%` }}
                         />
                       </div>
@@ -892,7 +892,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                     id="anonymous"
                     checked={contributionForm.isAnonymous || false}
                     onChange={(e) => setContributionForm({ ...contributionForm, isAnonymous: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="anonymous" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.tithingRecord.anonymousContribution', 'Anonymous Contribution')}
@@ -1018,7 +1018,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                     id="receipt"
                     checked={contributionForm.receiptIssued || false}
                     onChange={(e) => setContributionForm({ ...contributionForm, receiptIssued: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="receipt" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.tithingRecord.receiptIssued', 'Receipt Issued')}
@@ -1034,7 +1034,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleSaveContribution}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingContribution ? t('tools.tithingRecord.saveChanges', 'Save Changes') : t('tools.tithingRecord.record', 'Record')}
                 </button>
@@ -1149,7 +1149,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleSaveContributor}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingContributor ? t('tools.tithingRecord.saveChanges2', 'Save Changes') : t('tools.tithingRecord.addContributor3', 'Add Contributor')}
                 </button>
@@ -1218,7 +1218,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                     id="fundActive"
                     checked={fundForm.isActive !== false}
                     onChange={(e) => setFundForm({ ...fundForm, isActive: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="fundActive" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.tithingRecord.activeFund', 'Active Fund')}
@@ -1234,7 +1234,7 @@ export const TithingRecordTool: React.FC<TithingRecordToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleSaveFund}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingFund ? t('tools.tithingRecord.saveChanges3', 'Save Changes') : t('tools.tithingRecord.createFund3', 'Create Fund')}
                 </button>

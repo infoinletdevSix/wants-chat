@@ -269,7 +269,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -282,8 +282,8 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <BookOpen className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <BookOpen className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -356,7 +356,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
           </div>
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.recipeCosting.avgTargetMargin', 'Avg Target Margin')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{stats.avgMargin.toFixed(0)}%</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{stats.avgMargin.toFixed(0)}%</div>
           </div>
         </div>
 
@@ -392,7 +392,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
                 onClick={() => setShowAddForm(!showAddForm)}
               >
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Plus className="w-5 h-5 text-[#0D9488]" />
+                  <Plus className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.recipeCosting.newRecipe', 'New Recipe')}
                 </CardTitle>
                 {showAddForm ? (
@@ -555,7 +555,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
                     <button
                       onClick={handleAddIngredient}
                       disabled={!newIngredient.name || !newIngredient.quantity}
-                      className="px-3 py-2 bg-[#0D9488] text-white rounded-lg disabled:opacity-50 flex items-center justify-center gap-2"
+                      className="px-3 py-2 bg-[#6096B4] text-white rounded-lg disabled:opacity-50 flex items-center justify-center gap-2"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.recipeCosting.add', 'Add')}
@@ -576,7 +576,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
                             {ing.quantity} {ing.unit} {ing.name}
                           </span>
                           <div className="flex items-center gap-2">
-                            <span className="text-[#0D9488] font-medium">${ing.totalCost.toFixed(2)}</span>
+                            <span className="text-[#6096B4] font-medium">${ing.totalCost.toFixed(2)}</span>
                             <button
                               onClick={() => handleRemoveIngredient(ing.id)}
                               className="text-red-500 hover:bg-red-100 dark:hover:bg-red-900/20 p-1 rounded"
@@ -631,7 +631,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
 
                 {/* Cost Preview */}
                 {previewCosts && (
-                  <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-gray-100'} border-2 border-[#0D9488]/30`}>
+                  <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-gray-100'} border-2 border-[#6096B4]/30`}>
                     <h4 className={`font-medium mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       <Calculator className="w-4 h-4 inline mr-2" />
                       {t('tools.recipeCosting.costSummary', 'Cost Summary')}
@@ -651,7 +651,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
                       </div>
                       <div>
                         <span className={isDark ? 'text-gray-400' : 'text-gray-500'}>{t('tools.recipeCosting.suggestedPrice', 'Suggested Price:')}</span>
-                        <div className="font-bold text-[#0D9488]">
+                        <div className="font-bold text-[#6096B4]">
                           ${previewCosts.suggestedPrice.toFixed(2)}
                         </div>
                       </div>
@@ -662,7 +662,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
                 <button
                   onClick={handleAddRecipe}
                   disabled={!newRecipe.name || !(newRecipe.ingredients?.length)}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <BookOpen className="w-5 h-5" />
                   {t('tools.recipeCosting.saveRecipe', 'Save Recipe')}
@@ -675,7 +675,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
           <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
             <CardHeader>
               <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <BookOpen className="w-5 h-5 text-[#0D9488]" />
+                <BookOpen className="w-5 h-5 text-[#6096B4]" />
                 Recipes ({filteredRecipes.length})
               </CardTitle>
             </CardHeader>
@@ -716,7 +716,7 @@ export const RecipeCostingTool: React.FC<RecipeCostingToolProps> = ({ uiConfig }
                               <span className={isDark ? 'text-gray-400' : 'text-gray-500'}>
                                 Cost: ${recipe.costPerServing.toFixed(2)}/serving
                               </span>
-                              <span className="text-[#0D9488] font-medium">
+                              <span className="text-[#6096B4] font-medium">
                                 Price: ${recipe.suggestedPrice.toFixed(2)}
                               </span>
                             </div>

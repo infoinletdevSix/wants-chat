@@ -359,7 +359,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Square className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -385,7 +385,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                     onClick={() => setInputMethod('perimeter')}
                     className={`py-2 px-4 rounded-lg font-medium transition-colors ${
                       inputMethod === 'perimeter'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -397,7 +397,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                     onClick={() => setInputMethod('dimensions')}
                     className={`py-2 px-4 rounded-lg font-medium transition-colors ${
                       inputMethod === 'dimensions'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -428,7 +428,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -448,7 +448,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -465,7 +465,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -483,7 +483,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                       onClick={() => handleStyleChange(key)}
                       className={`p-3 rounded-lg text-left transition-colors ${
                         fenceStyle === key
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -516,7 +516,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -535,7 +535,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -548,7 +548,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                   </label>
                   <button
                     onClick={addGate}
-                    className="flex items-center gap-1 text-sm text-[#0D9488] hover:text-[#0F766E] transition-colors"
+                    className="flex items-center gap-1 text-sm text-[#6096B4] hover:text-[#4C7F98] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.fenceCalculator.addGate', 'Add Gate')}
@@ -663,7 +663,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
               <div className="flex gap-3">
                 <button
                   onClick={calculateFence}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Calculator className="w-5 h-5" />
                   {t('tools.fenceCalculator.calculate', 'Calculate')}
@@ -709,7 +709,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                     {previewData.perimeter > 0 ? (
                       <div className="relative w-40 h-32">
                         {/* Top side */}
-                        <div className="absolute top-0 left-0 right-0 h-1 bg-[#0D9488] rounded flex items-center">
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-[#6096B4] rounded flex items-center">
                           {Array.from({ length: Math.min(Math.ceil(previewData.sections / 4), 8) }).map((_, i) => (
                             <div
                               key={`top-${i}`}
@@ -719,7 +719,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                           ))}
                         </div>
                         {/* Right side */}
-                        <div className="absolute top-0 right-0 w-1 h-full bg-[#0D9488] rounded flex flex-col items-center">
+                        <div className="absolute top-0 right-0 w-1 h-full bg-[#6096B4] rounded flex flex-col items-center">
                           {Array.from({ length: Math.min(Math.ceil(previewData.sections / 4), 6) }).map((_, i) => (
                             <div
                               key={`right-${i}`}
@@ -729,7 +729,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                           ))}
                         </div>
                         {/* Bottom side */}
-                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0D9488] rounded flex items-center">
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#6096B4] rounded flex items-center">
                           {Array.from({ length: Math.min(Math.ceil(previewData.sections / 4), 8) }).map((_, i) => (
                             <div
                               key={`bottom-${i}`}
@@ -739,7 +739,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                           ))}
                         </div>
                         {/* Left side */}
-                        <div className="absolute top-0 left-0 w-1 h-full bg-[#0D9488] rounded flex flex-col items-center">
+                        <div className="absolute top-0 left-0 w-1 h-full bg-[#6096B4] rounded flex flex-col items-center">
                           {Array.from({ length: Math.min(Math.ceil(previewData.sections / 4), 6) }).map((_, i) => (
                             <div
                               key={`left-${i}`}
@@ -762,7 +762,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                   </div>
                   <div className={`mt-3 text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} flex items-center justify-center gap-4`}>
                     <span className="flex items-center gap-1">
-                      <div className="w-3 h-3 bg-[#0D9488] rounded" /> Fence
+                      <div className="w-3 h-3 bg-[#6096B4] rounded" /> Fence
                     </span>
                     <span className="flex items-center gap-1">
                       <div className="w-3 h-3 bg-amber-600 rounded-full" /> Posts
@@ -780,14 +780,14 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
               {result && (
                 <>
                   {/* Summary */}
-                  <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                    theme === 'dark' ? 'bg-gray-700' : t('tools.fenceCalculator.bg0d948810', 'bg-[#0D9488]/10')
+                  <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                    theme === 'dark' ? 'bg-gray-700' : t('tools.fenceCalculator.bg0d948810', 'bg-[#6096B4]/10')
                   }`}>
                     <div className="text-center mb-4">
                       <div className={`text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.fenceCalculator.estimatedTotalCost', 'Estimated Total Cost')}
                       </div>
-                      <div className="text-4xl font-bold text-[#0D9488]">
+                      <div className="text-4xl font-bold text-[#6096B4]">
                         ${result.costs.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                       </div>
                     </div>
@@ -905,7 +905,7 @@ export const FenceCalculatorTool: React.FC<FenceCalculatorToolProps> = ({ uiConf
                       ))}
                       <div className={`border-t-2 pt-2 mt-2 flex justify-between ${theme === 'dark' ? 'border-gray-600' : 'border-gray-300'}`}>
                         <span className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.fenceCalculator.total', 'Total')}</span>
-                        <span className="font-bold text-[#0D9488] text-lg">${result.costs.total.toFixed(2)}</span>
+                        <span className="font-bold text-[#6096B4] text-lg">${result.costs.total.toFixed(2)}</span>
                       </div>
                     </div>
                   </div>

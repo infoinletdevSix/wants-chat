@@ -160,10 +160,10 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Droplets className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Droplets className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.irrigationCalculator.irrigationCalculator', 'Irrigation Calculator')}</h3>
@@ -176,13 +176,13 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
         {/* Plant Selection */}
         <div className="space-y-2">
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            <Leaf className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Leaf className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.irrigationCalculator.selectPlantType', 'Select Plant Type')}
           </label>
           <select
             value={selectedPlant}
             onChange={(e) => setSelectedPlant(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
           >
             <option value="">{t('tools.irrigationCalculator.chooseAPlantType', 'Choose a plant type...')}</option>
             {Object.entries(
@@ -203,7 +203,7 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
 
         {/* Plant Info */}
         {selectedPlantData && (
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <div className="flex items-center justify-between mb-2">
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{selectedPlantData.name}</span>
               <span className={`font-bold ${getWaterNeedColor(selectedPlantData.waterNeed)}`}>
@@ -236,7 +236,7 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
                 onClick={() => setSelectedSoil(soil.name)}
                 className={`py-2 px-2 rounded-lg text-xs font-medium transition-colors ${
                   selectedSoil === soil.name
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -267,7 +267,7 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
                 onClick={() => setIrrigationType(type.value as any)}
                 className={`py-2 px-3 rounded-lg text-sm transition-colors ${
                   irrigationType === type.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -338,7 +338,7 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
         {selectedPlantData && calculations && (
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Calculator className="w-4 h-4 text-teal-500" />
+              <Calculator className="w-4 h-4 text-primary-500" />
               {t('tools.irrigationCalculator.weeklyWaterRequirements', 'Weekly Water Requirements')}
             </h4>
 
@@ -347,8 +347,8 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
                 <div className="text-2xl font-bold text-blue-500">{calculations.netWaterNeed}"</div>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.irrigationCalculator.waterNeeded', 'water needed')}</div>
               </div>
-              <div className="text-center p-3 rounded-lg bg-teal-500/10">
-                <div className="text-2xl font-bold text-teal-500">{calculations.totalGallonsToApply}</div>
+              <div className="text-center p-3 rounded-lg bg-primary-500/10">
+                <div className="text-2xl font-bold text-primary-500">{calculations.totalGallonsToApply}</div>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.irrigationCalculator.gallonsWeek', 'gallons/week')}</div>
               </div>
               <div className="text-center p-3 rounded-lg bg-purple-500/10">
@@ -367,17 +367,17 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>
-                  Water: <strong className="text-teal-500">{calculations.inchesPerSession}"</strong>
+                  Water: <strong className="text-primary-500">{calculations.inchesPerSession}"</strong>
                 </div>
                 <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>
-                  Volume: <strong className="text-teal-500">{calculations.gallonsPerSession} gal</strong>
+                  Volume: <strong className="text-primary-500">{calculations.gallonsPerSession} gal</strong>
                 </div>
               </div>
             </div>
 
             <div className={`mt-4 p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
               <div className="flex items-center gap-2 mb-2">
-                <Clock className="w-4 h-4 text-teal-500" />
+                <Clock className="w-4 h-4 text-primary-500" />
                 <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.irrigationCalculator.recommendedSchedule', 'Recommended Schedule')}</span>
               </div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -396,25 +396,25 @@ export const IrrigationCalculatorTool: React.FC<IrrigationCalculatorToolProps> =
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div className={`p-3 rounded ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
-              <strong className="text-teal-500">{t('tools.irrigationCalculator.waterEarly', 'Water Early')}</strong>
+              <strong className="text-primary-500">{t('tools.irrigationCalculator.waterEarly', 'Water Early')}</strong>
               <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                 {t('tools.irrigationCalculator.waterInEarlyMorningTo', 'Water in early morning to reduce evaporation loss')}
               </p>
             </div>
             <div className={`p-3 rounded ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
-              <strong className="text-teal-500">{t('tools.irrigationCalculator.mulch', 'Mulch')}</strong>
+              <strong className="text-primary-500">{t('tools.irrigationCalculator.mulch', 'Mulch')}</strong>
               <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                 {t('tools.irrigationCalculator.24OfMulchReduces', '2-4" of mulch reduces evaporation by 25-50%')}
               </p>
             </div>
             <div className={`p-3 rounded ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
-              <strong className="text-teal-500">{t('tools.irrigationCalculator.deepWatering', 'Deep Watering')}</strong>
+              <strong className="text-primary-500">{t('tools.irrigationCalculator.deepWatering', 'Deep Watering')}</strong>
               <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                 {t('tools.irrigationCalculator.waterDeeplyButLessFrequently', 'Water deeply but less frequently to encourage deep roots')}
               </p>
             </div>
             <div className={`p-3 rounded ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
-              <strong className="text-teal-500">{t('tools.irrigationCalculator.checkSoil', 'Check Soil')}</strong>
+              <strong className="text-primary-500">{t('tools.irrigationCalculator.checkSoil', 'Check Soil')}</strong>
               <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>
                 {t('tools.irrigationCalculator.insertFinger2DeepWater', 'Insert finger 2" deep - water only if dry')}
               </p>

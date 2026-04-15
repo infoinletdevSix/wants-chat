@@ -164,7 +164,7 @@ const MeditationSession: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
           <h2 className="text-2xl font-bold mb-4 text-white">Loading meditation session...</h2>
           <p className="text-white/60">Preparing your meditation experience...</p>
         </div>
@@ -188,7 +188,7 @@ const MeditationSession: React.FC = () => {
             <Button variant="outline" onClick={() => navigate(-1)} className="border-white/20 text-white hover:bg-white/10">
               Go Back
             </Button>
-            <Button onClick={() => navigate('/meditation')} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+            <Button onClick={() => navigate('/meditation')} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
               Browse Meditations
             </Button>
           </div>
@@ -277,7 +277,7 @@ const MeditationSession: React.FC = () => {
               <Card className="p-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Icon path={mdiMeditation} size={0.8} className="text-teal-400" />
+                    <Icon path={mdiMeditation} size={0.8} className="text-primary-400" />
                     <span className="text-sm font-medium text-white">Focus Mode</span>
                   </div>
                   <Button variant="outline" size="sm" className="h-8">

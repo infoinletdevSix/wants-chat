@@ -56,7 +56,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'all' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('all')}
-            className={filterBy === 'all' ? 'h-8 bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'all' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             All
             <span className="ml-1.5 text-xs opacity-70">{counts.all}</span>
@@ -65,7 +65,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'todo' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('todo')}
-            className={filterBy === 'todo' ? 'h-8 bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'todo' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             <Circle className="h-3 w-3 mr-1.5" />
             To Do
@@ -75,7 +75,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'in_progress' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('in_progress')}
-            className={filterBy === 'in_progress' ? 'h-8 bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'in_progress' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             <Clock className="h-3 w-3 mr-1.5" />
             In Progress
@@ -85,7 +85,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onEditTask, onDeleteTask, on
             variant={filterBy === 'done' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => setFilterBy('done')}
-            className={filterBy === 'done' ? 'h-8 bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
+            className={filterBy === 'done' ? 'h-8 bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'h-8 text-white/60 hover:text-white hover:bg-white/10'}
           >
             <CheckCircle2 className="h-3 w-3 mr-1.5" />
             Done

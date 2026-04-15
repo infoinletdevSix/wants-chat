@@ -135,7 +135,7 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -149,9 +149,9 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.flightTime.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.flightTime.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -170,7 +170,7 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {AIRPORTS.map((airport) => (
                     <option key={airport.code} value={airport.code}>
@@ -183,7 +183,7 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
               <div className="flex justify-center">
                 <button
                   onClick={swapAirports}
-                  className="p-3 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                  className="p-3 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
                   title={t('tools.flightTime.swapAirports', 'Swap airports')}
                 >
                   <ArrowRight className="w-5 h-5" />
@@ -202,7 +202,7 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {AIRPORTS.map((airport) => (
                     <option key={airport.code} value={airport.code}>
@@ -228,7 +228,7 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <p className={`text-xs mt-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                 {t('tools.flightTime.typicalCruisingSpeed800950', 'Typical cruising speed: 800-950 km/h')}
@@ -239,11 +239,11 @@ export const FlightTimeTool: React.FC<FlightTimeToolProps> = ({ uiConfig }) => {
             {flightDetails && (
               <div className="space-y-4">
                 {/* Main Result */}
-                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/30 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
+                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/30 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-2`}>
                     {t('tools.flightTime.estimatedFlightDuration', 'Estimated Flight Duration')}
                   </div>
-                  <div className="text-5xl font-bold text-[#0D9488] mb-2">
+                  <div className="text-5xl font-bold text-[#6096B4] mb-2">
                     {flightDetails.hours}h {flightDetails.minutes}m
                   </div>
                   <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>

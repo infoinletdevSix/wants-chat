@@ -123,7 +123,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
   const getClassificationColor = (classification: string) => {
     switch (classification) {
       case 'excellent': return 'text-green-500';
-      case 'good': return 'text-teal-500';
+      case 'good': return 'text-primary-500';
       case 'average': return 'text-yellow-500';
       case 'poor': return 'text-red-500';
       default: return isDark ? 'text-gray-400' : 'text-gray-600';
@@ -133,7 +133,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
   const getClassificationBg = (classification: string) => {
     switch (classification) {
       case 'excellent': return isDark ? 'bg-green-500/10' : 'bg-green-50';
-      case 'good': return isDark ? 'bg-teal-500/10' : 'bg-teal-50';
+      case 'good': return isDark ? 'bg-primary-500/10' : 'bg-primary-50';
       case 'average': return isDark ? 'bg-yellow-500/10' : 'bg-yellow-50';
       case 'poor': return isDark ? 'bg-red-500/10' : 'bg-red-50';
       default: return isDark ? 'bg-gray-800' : 'bg-gray-50';
@@ -143,10 +143,10 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <RefreshCw className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <RefreshCw className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.inventoryTurnover.inventoryTurnoverCalculator', 'Inventory Turnover Calculator')}</h3>
@@ -162,7 +162,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
             onClick={() => setMode('cogs')}
             className={`flex-1 px-4 py-2 text-sm rounded-lg transition-colors ${
               mode === 'cogs'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -174,7 +174,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
             onClick={() => setMode('sales')}
             className={`flex-1 px-4 py-2 text-sm rounded-lg transition-colors ${
               mode === 'sales'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -198,7 +198,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
                 min="0"
                 className={`w-full px-4 py-3 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
 
@@ -214,7 +214,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
                   min="0"
                   className={`w-full px-4 py-3 rounded-lg border ${
                     isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
               <div className="space-y-2">
@@ -228,7 +228,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
                   min="0"
                   className={`w-full px-4 py-3 rounded-lg border ${
                     isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
             </div>
@@ -247,7 +247,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
                 min="0"
                 className={`w-full px-4 py-3 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -261,7 +261,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
                 min="0"
                 className={`w-full px-4 py-3 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
           </div>
@@ -281,24 +281,24 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
             placeholder={t('tools.inventoryTurnover.eG8ForRetail', 'e.g., 8 for retail')}
             className={`w-full px-4 py-3 rounded-lg border ${
               isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-            } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+            } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
         </div>
 
         {/* Results */}
         {calculations && (
-          <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+          <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-teal-500" />
-                <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                <TrendingUp className="w-5 h-5 text-primary-500" />
+                <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   {t('tools.inventoryTurnover.turnoverAnalysis', 'Turnover Analysis')}
                 </h4>
               </div>
               <button
                 onClick={handleCopy}
                 className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                  copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                  copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -309,7 +309,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
             {/* Main Turnover Display */}
             <div className={`p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} text-center mb-6`}>
               <div className={`text-sm font-medium mb-2 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.inventoryTurnover.inventoryTurnoverRatio', 'Inventory Turnover Ratio')}</div>
-              <div className="text-4xl font-bold text-teal-500">
+              <div className="text-4xl font-bold text-primary-500">
                 {calculations.turnoverRatio.toFixed(2)}x
               </div>
               <div className={`text-lg ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -353,7 +353,7 @@ ${calculations.benchmarkDiff !== null ? `vs Industry Benchmark: ${calculations.b
               </div>
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Package className="w-4 h-4 text-teal-500" />
+                  <Package className="w-4 h-4 text-primary-500" />
                   <span className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.inventoryTurnover.avgInventory', 'Avg Inventory')}</span>
                 </div>
                 <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>

@@ -370,7 +370,7 @@ export const MeterReadingTool: React.FC<MeterReadingToolProps> = ({ uiConfig }) 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Gauge className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -415,7 +415,7 @@ export const MeterReadingTool: React.FC<MeterReadingToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -496,7 +496,7 @@ export const MeterReadingTool: React.FC<MeterReadingToolProps> = ({ uiConfig }) 
               </div>
               <button
                 onClick={() => setShowReadingForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.meterReading.addReading', 'Add Reading')}
@@ -570,7 +570,7 @@ export const MeterReadingTool: React.FC<MeterReadingToolProps> = ({ uiConfig }) 
                   </button>
                   <button
                     onClick={addReading}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.meterReading.saveReading', 'Save Reading')}
                   </button>
@@ -654,7 +654,7 @@ export const MeterReadingTool: React.FC<MeterReadingToolProps> = ({ uiConfig }) 
               </h2>
               <button
                 onClick={() => setShowMeterForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.meterReading.addMeter', 'Add Meter')}
@@ -746,7 +746,7 @@ export const MeterReadingTool: React.FC<MeterReadingToolProps> = ({ uiConfig }) 
                   </button>
                   <button
                     onClick={addMeter}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.meterReading.addMeter2', 'Add Meter')}
                   </button>

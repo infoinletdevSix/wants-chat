@@ -382,7 +382,7 @@ export const KitchenOrderTool = ({ uiConfig }: KitchenOrderToolProps) => {
   if (isLoading) {
     return (
       <div className={`max-w-7xl mx-auto p-4 md:p-6 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} min-h-screen flex items-center justify-center`}>
-        <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
       </div>
     );
   }
@@ -391,16 +391,16 @@ export const KitchenOrderTool = ({ uiConfig }: KitchenOrderToolProps) => {
     <div className={`max-w-7xl mx-auto p-4 md:p-6 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} min-h-screen`}>
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.kitchenOrder.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.kitchenOrder.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className={`p-3 rounded-lg ${newOrderAlert ? 'animate-bounce bg-red-500' : 'bg-teal-600'}`}>
+          <div className={`p-3 rounded-lg ${newOrderAlert ? 'animate-bounce bg-red-500' : 'bg-primary-600'}`}>
             <ChefHat className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -432,7 +432,7 @@ export const KitchenOrderTool = ({ uiConfig }: KitchenOrderToolProps) => {
             onClick={() => setShowStats(!showStats)}
             className={`p-2 rounded-lg transition-colors ${
               showStats
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : theme === 'dark'
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-white hover:bg-gray-100 text-gray-700'
@@ -470,7 +470,7 @@ export const KitchenOrderTool = ({ uiConfig }: KitchenOrderToolProps) => {
           {/* Add Order Button */}
           <button
             onClick={addNewOrder}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
           >
             <Plus className="w-5 h-5" />
             <span className="hidden sm:inline">{t('tools.kitchenOrder.newOrder', 'New Order')}</span>
@@ -484,7 +484,7 @@ export const KitchenOrderTool = ({ uiConfig }: KitchenOrderToolProps) => {
           onClick={() => setSelectedStation('all')}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             selectedStation === 'all'
-              ? 'bg-teal-600 text-white'
+              ? 'bg-primary-600 text-white'
               : theme === 'dark'
               ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -498,7 +498,7 @@ export const KitchenOrderTool = ({ uiConfig }: KitchenOrderToolProps) => {
             onClick={() => setSelectedStation(station)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors capitalize ${
               selectedStation === station
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : theme === 'dark'
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -842,7 +842,7 @@ const OrderCard = ({
                 onClick={() => assignStation(order.id, station)}
                 className={`flex items-center gap-1 px-2 py-1 rounded text-xs capitalize transition-colors ${
                   order.assignedStation === station
-                    ? 'bg-teal-600 text-white'
+                    ? 'bg-primary-600 text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -861,7 +861,7 @@ const OrderCard = ({
         {nextStatus && (
           <button
             onClick={() => updateOrderStatus(order.id, nextStatus)}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
           >
             {getStatusIcon(nextStatus)}
             <span className="capitalize">{nextStatus.replace('-', ' ')}</span>

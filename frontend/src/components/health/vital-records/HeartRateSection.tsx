@@ -13,10 +13,10 @@ const HeartRateSection: React.FC<VitalFormFieldProps> = ({
   getStatusBadge
 }) => {
   return (
-    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-white">
-          <ActivityIcon className="h-5 w-5 text-teal-400" />
+          <ActivityIcon className="h-5 w-5 text-primary-400" />
           Heart Rate
         </CardTitle>
         <CardDescription className="text-white/60">
@@ -51,7 +51,7 @@ const HeartRateSection: React.FC<VitalFormFieldProps> = ({
               <SelectTrigger id="heartRhythm" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                 <SelectItem value="regular" className="text-white hover:bg-white/10">Regular</SelectItem>
                 <SelectItem value="irregular" className="text-white hover:bg-white/10">Irregular</SelectItem>
                 <SelectItem value="fast" className="text-white hover:bg-white/10">Fast (Tachycardia)</SelectItem>

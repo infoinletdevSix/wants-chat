@@ -109,7 +109,7 @@ export const ToolLaunchButton: React.FC<ToolLaunchButtonProps> = ({ uiConfig, on
   return (
     <button
       onClick={onClick}
-      className="group inline-flex items-center gap-2 mt-3 px-4 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#0D9488]/30 hover:scale-[1.02]"
+      className="group inline-flex items-center gap-2 mt-3 px-4 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#6096B4]/30 hover:scale-[1.02]"
     >
       <div className="p-1.5 bg-white/20 rounded-lg">
         <IconComponent className="w-4 h-4" />
@@ -128,7 +128,7 @@ export const ToolLaunchChip: React.FC<ToolLaunchButtonProps> = ({ uiConfig, onCl
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/20 hover:bg-[#0D9488]/30 text-[#0D9488] rounded-lg transition-all text-sm font-medium border border-[#0D9488]/30"
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/20 hover:bg-[#6096B4]/30 text-[#6096B4] rounded-lg transition-all text-sm font-medium border border-[#6096B4]/30"
     >
       <IconComponent className="w-3.5 h-3.5" />
       <span>{uiConfig.title}</span>

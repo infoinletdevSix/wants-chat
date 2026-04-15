@@ -441,14 +441,14 @@ For data protection inquiries, please include "Privacy" in the subject line.
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg">
                 <Lock className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">{t('tools.privacyPolicyGenerator.privacyPolicyGenerator', 'Privacy Policy Generator')}</h1>
-                <p className="text-teal-100 text-sm mt-1">{t('tools.privacyPolicyGenerator.createGdprAndCcpaCompliant', 'Create GDPR and CCPA compliant privacy policies')}</p>
+                <p className="text-primary-100 text-sm mt-1">{t('tools.privacyPolicyGenerator.createGdprAndCcpaCompliant', 'Create GDPR and CCPA compliant privacy policies')}</p>
               </div>
             </div>
           </div>
@@ -462,7 +462,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                   onClick={() => setActiveTab(tab)}
                   className={`px-4 py-2 font-medium text-sm capitalize transition-colors ${
                     activeTab === tab
-                      ? 'text-teal-600 border-b-2 border-teal-600'
+                      ? 'text-primary-600 border-b-2 border-primary-600'
                       : isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -486,7 +486,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       placeholder={t('tools.privacyPolicyGenerator.yourCompanyName', 'Your Company Name')}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                   <div>
@@ -498,7 +498,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       onChange={(e) => setPolicyData(prev => ({ ...prev, businessType: e.target.value as BusinessType }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     >
                       {BUSINESS_TYPES.map((type) => (
                         <option key={type.value} value={type.value}>{type.label}</option>
@@ -518,7 +518,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                     placeholder={t('tools.privacyPolicyGenerator.httpsWwwExampleCom', 'https://www.example.com')}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -534,7 +534,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       placeholder={t('tools.privacyPolicyGenerator.privacyExampleCom', 'privacy@example.com')}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                   <div>
@@ -547,7 +547,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       onChange={(e) => setPolicyData(prev => ({ ...prev, effectiveDate: e.target.value }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                 </div>
@@ -563,7 +563,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                     rows={2}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -576,7 +576,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                         type="checkbox"
                         checked={policyData.gdprCompliance}
                         onChange={(e) => setPolicyData(prev => ({ ...prev, gdprCompliance: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.privacyPolicyGenerator.gdprComplianceEu', 'GDPR Compliance (EU)')}</span>
                     </label>
@@ -585,7 +585,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                         type="checkbox"
                         checked={policyData.ccpaCompliance}
                         onChange={(e) => setPolicyData(prev => ({ ...prev, ccpaCompliance: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.privacyPolicyGenerator.ccpaComplianceCalifornia', 'CCPA Compliance (California)')}</span>
                     </label>
@@ -594,7 +594,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                         type="checkbox"
                         checked={policyData.cookiePolicy}
                         onChange={(e) => setPolicyData(prev => ({ ...prev, cookiePolicy: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.privacyPolicyGenerator.includeCookiePolicy', 'Include Cookie Policy')}</span>
                     </label>
@@ -603,7 +603,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                         type="checkbox"
                         checked={policyData.childrenData}
                         onChange={(e) => setPolicyData(prev => ({ ...prev, childrenData: e.target.checked }))}
-                        className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                        className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                       />
                       <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.privacyPolicyGenerator.childrenSDataCoppa', 'Children\'s Data (COPPA)')}</span>
                     </label>
@@ -637,7 +637,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                             ...prev,
                             dataCollected: { ...prev.dataCollected, [key]: e.target.checked }
                           }))}
-                          className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                          className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                         />
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{label}</span>
                       </label>
@@ -665,7 +665,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                             ...prev,
                             dataPurposes: { ...prev.dataPurposes, [key]: e.target.checked }
                           }))}
-                          className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                          className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                         />
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{label}</span>
                       </label>
@@ -682,7 +682,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                     onChange={(e) => setPolicyData(prev => ({ ...prev, dataRetention: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     <option value="6 months">6 months</option>
                     <option value="1 year">1 year</option>
@@ -704,7 +704,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       type="checkbox"
                       checked={policyData.thirdPartySharing}
                       onChange={(e) => setPolicyData(prev => ({ ...prev, thirdPartySharing: e.target.checked }))}
-                      className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                      className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                     />
                     <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.privacyPolicyGenerator.shareDataWithThirdParties', 'Share Data with Third Parties')}</span>
                   </label>
@@ -717,7 +717,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                             type="checkbox"
                             checked={policyData.thirdParties.includes(party)}
                             onChange={() => toggleThirdParty(party)}
-                            className="w-4 h-4 text-teal-600 rounded focus:ring-teal-500"
+                            className="w-4 h-4 text-primary-600 rounded focus:ring-primary-500"
                           />
                           <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{party}</span>
                         </label>
@@ -732,7 +732,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       type="checkbox"
                       checked={policyData.internationalTransfer}
                       onChange={(e) => setPolicyData(prev => ({ ...prev, internationalTransfer: e.target.checked }))}
-                      className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                      className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                     />
                     <div>
                       <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.privacyPolicyGenerator.internationalDataTransfers', 'International Data Transfers')}</span>
@@ -752,7 +752,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                     rows={3}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -780,7 +780,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                             ...prev,
                             userRights: { ...prev.userRights, [key]: e.target.checked }
                           }))}
-                          className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                          className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                         />
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{label}</span>
                       </label>
@@ -798,7 +798,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                       onChange={(e) => setPolicyData(prev => ({ ...prev, childrenAgeLimit: e.target.value }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     >
                       <option value="13">13 years (COPPA)</option>
                       <option value="16">16 years (GDPR)</option>
@@ -813,7 +813,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
             <div className="flex gap-3">
               <button
                 onClick={generatePolicy}
-                className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Lock className="w-5 h-5" />
                 {t('tools.privacyPolicyGenerator.generatePrivacyPolicy', 'Generate Privacy Policy')}
@@ -849,7 +849,7 @@ For data protection inquiries, please include "Privacy" in the subject line.
                     </button>
                     <button
                       onClick={downloadPolicy}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
                     >
                       <Download className="w-4 h-4" />
                       {t('tools.privacyPolicyGenerator.download', 'Download')}

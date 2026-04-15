@@ -590,7 +590,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
           <title>Grocery List</title>
           <style>
             body { font-family: Arial, sans-serif; padding: 20px; }
-            h1 { color: #0D9488; }
+            h1 { color: #6096B4; }
             h2 { color: #374151; border-bottom: 1px solid #E5E7EB; padding-bottom: 8px; margin-top: 20px; }
             ul { list-style-type: none; padding: 0; }
             li { padding: 4px 0; display: flex; align-items: center; }
@@ -669,7 +669,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Utensils className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -691,9 +691,9 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.mealPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.mealPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
             </div>
           )}
 
@@ -710,7 +710,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                 onClick={() => setActiveTab(id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                   activeTab === id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -844,7 +844,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 {savedRecipes.length > 0 && (
@@ -920,7 +920,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                             setShowRecipeModal(true);
                             setEditingMeal(recipe);
                           }}
-                          className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium"
+                          className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium"
                         >
                           <Plus className="w-4 h-4" />
                           {t('tools.mealPlanner.addToPlan', 'Add to Plan')}
@@ -945,7 +945,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
               <div className="flex flex-wrap gap-2 mb-4">
                 <button
                   onClick={printGroceryList}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium"
                 >
                   <Printer className="w-4 h-4" />
                   {t('tools.mealPlanner.printList', 'Print List')}
@@ -982,11 +982,11 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <button
                   onClick={addCustomGroceryItem}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   <Plus className="w-5 h-5" />
                 </button>
@@ -1016,7 +1016,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                               }
                               className={`w-6 h-6 rounded border-2 flex items-center justify-center ${
                                 item.checked
-                                  ? 'bg-[#0D9488] border-[#0D9488]'
+                                  ? 'bg-[#6096B4] border-[#6096B4]'
                                   : theme === 'dark'
                                     ? 'border-gray-500'
                                     : 'border-gray-300'
@@ -1199,7 +1199,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1215,7 +1215,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="homemade">{t('tools.mealPlanner.homemade', 'Homemade')}</option>
                   <option value="restaurant">{t('tools.mealPlanner.restaurant', 'Restaurant')}</option>
@@ -1237,7 +1237,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1252,7 +1252,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1271,7 +1271,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1308,7 +1308,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <input
                     type="text"
@@ -1319,7 +1319,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <input
                     type="text"
@@ -1330,7 +1330,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <select
                     value={newIngredient.section}
@@ -1339,7 +1339,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {STORE_SECTIONS.map((section) => (
                       <option key={section} value={section}>
@@ -1349,7 +1349,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                   </select>
                   <button
                     onClick={addIngredient}
-                    className="p-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="p-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-5 h-5" />
                   </button>
@@ -1387,9 +1387,9 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
-                  <button onClick={addTag} className="p-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg">
+                  <button onClick={addTag} className="p-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg">
                     <Plus className="w-5 h-5" />
                   </button>
                 </div>
@@ -1409,7 +1409,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1419,7 +1419,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
               <button
                 onClick={saveMeal}
                 disabled={!mealForm.name}
-                className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
               >
                 {editingMeal ? t('tools.mealPlanner.updateMeal', 'Update Meal') : t('tools.mealPlanner.addMeal2', 'Add Meal')}
               </button>
@@ -1480,7 +1480,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.mealPlanner.selectADay', 'Select a day...')}</option>
                   {weekDates.map((date, index) => (
@@ -1502,7 +1502,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.mealPlanner.selectAMeal', 'Select a meal...')}</option>
                   {MEAL_TYPES.map((type) => (
@@ -1522,7 +1522,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                   }
                 }}
                 disabled={!selectedDate || !selectedMealType}
-                className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 text-white font-medium py-2 px-4 rounded-lg transition-colors"
               >
                 {t('tools.mealPlanner.addToPlan2', 'Add to Plan')}
               </button>
@@ -1571,12 +1571,12 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <button
                   onClick={saveAsTemplate}
                   disabled={!templateName}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 text-white rounded-lg"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 text-white rounded-lg"
                 >
                   <Save className="w-5 h-5" />
                 </button>
@@ -1603,7 +1603,7 @@ export const MealPlannerTool: React.FC<MealPlannerToolProps> = ({ uiConfig }) =>
                       <div className="flex gap-2">
                         <button
                           onClick={() => loadTemplate(template)}
-                          className="p-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                          className="p-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                           title={t('tools.mealPlanner.loadTemplate', 'Load template')}
                         >
                           <Download className="w-4 h-4" />

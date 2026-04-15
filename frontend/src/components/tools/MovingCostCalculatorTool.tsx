@@ -149,10 +149,10 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Truck className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Truck className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.movingCostCalculator.movingCostCalculator', 'Moving Cost Calculator')}</h3>
@@ -163,9 +163,9 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.movingCostCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.movingCostCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -180,7 +180,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
               onClick={() => setMoveType('local')}
               className={`flex-1 py-3 rounded-lg font-medium transition-colors ${
                 moveType === 'local'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -190,7 +190,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
               onClick={() => setMoveType('longDistance')}
               className={`flex-1 py-3 rounded-lg font-medium transition-colors ${
                 moveType === 'longDistance'
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -246,7 +246,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
                 onClick={() => setMoveDate(opt.value as any)}
                 className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                   moveDate === opt.value
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -269,7 +269,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
                 type="checkbox"
                 checked={packingService}
                 onChange={(e) => setPackingService(e.target.checked)}
-                className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
               />
               <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                 Full Packing Service
@@ -299,7 +299,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
                   type="checkbox"
                   checked={specialItems[item.key as keyof typeof specialItems]}
                   onChange={(e) => setSpecialItems({ ...specialItems, [item.key]: e.target.checked })}
-                  className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                  className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                 />
                 <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {item.label}
@@ -347,10 +347,10 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
         </div>
 
         {/* Cost Summary */}
-        <div className={`p-6 rounded-xl ${isDark ? t('tools.movingCostCalculator.bg0d948820Border0d9488', 'bg-[#0D9488]/20 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? t('tools.movingCostCalculator.bg0d948820Border0d9488', 'bg-[#6096B4]/20 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <div className="text-center mb-4">
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.movingCostCalculator.estimatedMovingCost', 'Estimated Moving Cost')}</div>
-            <div className="text-4xl font-bold text-[#0D9488]">
+            <div className="text-4xl font-bold text-[#6096B4]">
               {formatCurrency(calculations.total)}
             </div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -393,7 +393,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
             )}
             <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.movingCostCalculator.total', 'Total')}</span>
-              <span className="font-bold text-[#0D9488]">{formatCurrency(calculations.total)}</span>
+              <span className="font-bold text-[#6096B4]">{formatCurrency(calculations.total)}</span>
             </div>
           </div>
         </div>
@@ -401,7 +401,7 @@ export const MovingCostCalculatorTool: React.FC<MovingCostCalculatorToolProps> =
         {/* Tip Guide */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <Users className="w-5 h-5 text-[#0D9488]" />
+            <Users className="w-5 h-5 text-[#6096B4]" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.movingCostCalculator.moverTipsOptional', 'Mover Tips (Optional)')}</h4>
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

@@ -125,7 +125,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
       ratingColor = 'text-green-500';
     } else if (rate >= 3) {
       rating = 'Good';
-      ratingColor = 'text-teal-500';
+      ratingColor = 'text-primary-500';
     } else if (rate >= 1) {
       rating = 'Average';
       ratingColor = 'text-yellow-500';
@@ -166,8 +166,8 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-pink-900/20' : 'bg-gradient-to-r from-white to-pink-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Instagram className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Instagram className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.instagramEngagement.instagramEngagementCalculator', 'Instagram Engagement Calculator')}</h3>
@@ -178,9 +178,9 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.instagramEngagement.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.instagramEngagement.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -188,13 +188,13 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
         <div className="flex gap-2">
           <button
             onClick={() => setEngagementType('basic')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${engagementType === 'basic' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${engagementType === 'basic' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.instagramEngagement.basicLikesComments', 'Basic (Likes + Comments)')}
           </button>
           <button
             onClick={() => setEngagementType('advanced')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${engagementType === 'advanced' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${engagementType === 'advanced' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.instagramEngagement.advancedAllMetrics', 'Advanced (All Metrics)')}
           </button>
@@ -212,7 +212,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
               value={followers}
               onChange={(e) => setFollowers(e.target.value)}
               placeholder="10000"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -225,7 +225,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
               value={likes}
               onChange={(e) => setLikes(e.target.value)}
               placeholder="500"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -238,7 +238,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
               value={comments}
               onChange={(e) => setComments(e.target.value)}
               placeholder="50"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           {engagementType === 'advanced' && (
@@ -253,7 +253,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
                   value={shares}
                   onChange={(e) => setShares(e.target.value)}
                   placeholder="20"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 />
               </div>
               <div className="space-y-2">
@@ -266,7 +266,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
                   value={saves}
                   onChange={(e) => setSaves(e.target.value)}
                   placeholder="30"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 />
               </div>
               <div className="space-y-2">
@@ -279,7 +279,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
                   value={reach}
                   onChange={(e) => setReach(e.target.value)}
                   placeholder="5000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 />
               </div>
               <div className="space-y-2">
@@ -291,7 +291,7 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
                   value={impressions}
                   onChange={(e) => setImpressions(e.target.value)}
                   placeholder="8000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 />
               </div>
             </>
@@ -299,9 +299,9 @@ export const InstagramEngagementTool: React.FC<InstagramEngagementToolProps> = (
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.instagramEngagement.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.instagramEngagement.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.instagramEngagement.engagementRate', 'Engagement Rate')}</div>
-          <div className="text-5xl font-bold text-[#0D9488] my-2">
+          <div className="text-5xl font-bold text-[#6096B4] my-2">
             {(engagementType === 'basic' ? calculations.basicEngagement : calculations.advancedEngagement).toFixed(2)}%
           </div>
           <div className={`text-sm font-medium ${calculations.ratingColor}`}>

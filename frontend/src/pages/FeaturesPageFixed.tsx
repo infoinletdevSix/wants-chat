@@ -150,7 +150,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available', 
       routes: 5,
       icon: SelfImprovementIcon,
-      color: 'from-teal-500 to-pink-500',
+      color: 'from-primary-500 to-pink-500',
       route: '/meditation',
       tagline: 'Interactive meditation wheel with 150+ guided sessions',
       description: 'Unique circular wheel interface with 150+ guided meditations across categories like Sleep, SOS, Commute, and Work. Features breathing exercises, sleep stories, ambient sounds, and streak tracking.',
@@ -234,7 +234,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 2,
       icon: AccountBalanceWalletIcon,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-emerald-500 to-primary-500',
       route: '/expense-tracker',
       tagline: 'Smart expense tracking with visual analytics',
       description: 'Financial management platform with expense categorization, payment method tracking, monthly budget limits, visual analytics with charts, advanced search/filtering, and CSV export for tax reporting.',
@@ -276,7 +276,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 2,
       icon: FlightTakeoffIcon,
-      color: 'from-indigo-500 to-teal-500',
+      color: 'from-indigo-500 to-primary-500',
       route: '/travel-planner',
       tagline: '3D interactive globe with AI-powered travel planning',
       description: 'Revolutionary travel planner with 3D interactive globe, AI-generated itineraries, hotel recommendations, categorized activity planning, real-time budget tracking, and comprehensive trip history management.',
@@ -463,7 +463,7 @@ const FeaturesPageFixed: React.FC = () => {
       status: 'Available',
       routes: 1,
       icon: CheckBoxIcon,
-      color: 'from-cyan-500 to-teal-500',
+      color: 'from-cyan-500 to-primary-500',
       route: '/todo',
       tagline: 'Task and project management made simple',
       description: 'Comprehensive task management with priorities, due dates, categories, and completion tracking with analytics.',
@@ -573,7 +573,7 @@ const FeaturesPageFixed: React.FC = () => {
                 <span className="text-gray-600 dark:text-gray-300"><strong>5 Products</strong> Coming Soon</span>
               </div>
               <div className="flex items-center gap-2">
-                <TrendingUpIcon className="h-5 w-5 text-teal-500" />
+                <TrendingUpIcon className="h-5 w-5 text-primary-500" />
                 <span className="text-gray-600 dark:text-gray-300"><strong>80+ Routes</strong> & Features</span>
               </div>
               <div className="flex items-center gap-2">
@@ -687,7 +687,7 @@ const FeaturesPageFixed: React.FC = () => {
                         {product.status === 'Available' ? (
                           <Button
                             size="lg"
-                            className="group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                            className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                             onClick={() => {
                               if (isAuthenticated) {
                                 navigate(product.route);

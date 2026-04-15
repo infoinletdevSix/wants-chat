@@ -63,7 +63,7 @@ const Pedometer: React.FC = () => {
   const maxWeeklySteps = Math.max(...weeklyData.map(d => d.steps), dailyGoal);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -78,14 +78,14 @@ const Pedometer: React.FC = () => {
             <Activity className="w-10 h-10 text-cyan-400" />
             Pedometer
           </h1>
-          <p className="text-teal-200">Track your daily steps and reach your fitness goals</p>
+          <p className="text-primary-200">Track your daily steps and reach your fitness goals</p>
         </motion.div>
 
         {/* Main Stats Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 mb-6 shadow-2xl"
+          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 mb-6 shadow-2xl"
         >
           <div className="flex flex-col items-center mb-6">
             {/* Circular Progress */}
@@ -113,15 +113,15 @@ const Pedometer: React.FC = () => {
                 />
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#14b8a6" />
+                    <stop offset="0%" stopColor="#75AAC1" />
                     <stop offset="100%" stopColor="#06b6d4" />
                   </linearGradient>
                 </defs>
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <div className="text-6xl font-bold text-white mb-2">{steps.toLocaleString()}</div>
-                <div className="text-teal-200 text-lg">steps</div>
-                <div className="text-teal-400 text-sm mt-1">{progress.toFixed(0)}% of goal</div>
+                <div className="text-primary-200 text-lg">steps</div>
+                <div className="text-primary-400 text-sm mt-1">{progress.toFixed(0)}% of goal</div>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ const Pedometer: React.FC = () => {
               className={`px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                 isTracking
                   ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                  : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
+                  : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
               } shadow-lg hover:shadow-xl transform hover:scale-105`}
             >
               {isTracking ? 'Stop Tracking' : 'Start Tracking'}
@@ -140,31 +140,31 @@ const Pedometer: React.FC = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
               <div className="flex items-center gap-3 mb-2">
-                <Target className="w-5 h-5 text-teal-400" />
-                <span className="text-teal-200 text-sm">Daily Goal</span>
+                <Target className="w-5 h-5 text-primary-400" />
+                <span className="text-primary-200 text-sm">Daily Goal</span>
               </div>
               <div className="text-3xl font-bold text-white">{dailyGoal.toLocaleString()}</div>
-              <div className="text-teal-400 text-xs mt-1">steps</div>
+              <div className="text-primary-400 text-xs mt-1">steps</div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
               <div className="flex items-center gap-3 mb-2">
                 <Flame className="w-5 h-5 text-orange-400" />
-                <span className="text-teal-200 text-sm">Calories Burned</span>
+                <span className="text-primary-200 text-sm">Calories Burned</span>
               </div>
               <div className="text-3xl font-bold text-white">{calories}</div>
-              <div className="text-teal-400 text-xs mt-1">kcal</div>
+              <div className="text-primary-400 text-xs mt-1">kcal</div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
               <div className="flex items-center gap-3 mb-2">
                 <TrendingUp className="w-5 h-5 text-cyan-400" />
-                <span className="text-teal-200 text-sm">Distance</span>
+                <span className="text-primary-200 text-sm">Distance</span>
               </div>
               <div className="text-3xl font-bold text-white">{distance}</div>
-              <div className="text-teal-400 text-xs mt-1">km</div>
+              <div className="text-primary-400 text-xs mt-1">km</div>
             </div>
           </div>
         </motion.div>
@@ -174,7 +174,7 @@ const Pedometer: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl"
+          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
         >
           <div className="flex items-center gap-3 mb-6">
             <Calendar className="w-6 h-6 text-cyan-400" />
@@ -191,8 +191,8 @@ const Pedometer: React.FC = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className={`w-full rounded-t-lg ${
                       day.steps >= dailyGoal
-                        ? 'bg-gradient-to-t from-teal-500 to-cyan-400'
-                        : 'bg-gradient-to-t from-teal-700 to-cyan-600'
+                        ? 'bg-gradient-to-t from-primary-500 to-cyan-400'
+                        : 'bg-gradient-to-t from-primary-700 to-cyan-600'
                     } relative group cursor-pointer hover:opacity-80 transition-opacity`}
                   >
                     <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
@@ -200,14 +200,14 @@ const Pedometer: React.FC = () => {
                     </div>
                   </motion.div>
                 </div>
-                <div className="text-teal-200 text-sm font-medium">{day.day}</div>
+                <div className="text-primary-200 text-sm font-medium">{day.day}</div>
               </div>
             ))}
           </div>
 
           {/* Goal Line */}
-          <div className="relative mt-4 pt-4 border-t border-teal-400/20">
-            <div className="flex items-center justify-between text-sm text-teal-300">
+          <div className="relative mt-4 pt-4 border-t border-primary-400/20">
+            <div className="flex items-center justify-between text-sm text-primary-300">
               <span>Goal: {dailyGoal.toLocaleString()} steps</span>
               <span>Avg: {Math.round(weeklyData.reduce((acc, d) => acc + d.steps, 0) / 7).toLocaleString()} steps</span>
             </div>

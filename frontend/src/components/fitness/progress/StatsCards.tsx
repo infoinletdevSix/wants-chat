@@ -34,8 +34,8 @@ const StatsCards: React.FC<StatsCardsProps> = ({ stats, loading }) => {
       title: 'Current Weight',
       value: `${stats?.currentWeight?.toFixed(1) ?? '0.0'} kg`,
       icon: mdiWeight,
-      iconBg: 'bg-teal-500/20',
-      iconColor: 'text-teal-400'
+      iconBg: 'bg-primary-500/20',
+      iconColor: 'text-primary-400'
     },
     {
       title: 'BMI Index',

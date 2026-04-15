@@ -272,9 +272,9 @@ export const HashGeneratorTool = ({
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.hashGenerator.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.hashGenerator.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
           </div>
         )}
 
@@ -294,7 +294,7 @@ export const HashGeneratorTool = ({
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
           />
         </div>
 
@@ -311,7 +311,7 @@ export const HashGeneratorTool = ({
           <button
             onClick={handleGenerate}
             disabled={loading}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Hash className="w-4 h-4" />
             {loading ? t('tools.hashGenerator.generating', 'Generating...') : t('tools.hashGenerator.generateHashes', 'Generate Hashes')}

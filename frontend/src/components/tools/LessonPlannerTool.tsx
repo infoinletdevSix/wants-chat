@@ -576,9 +576,9 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.lessonPlanner.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.lessonPlanner.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -586,7 +586,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <BookMarked className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -680,7 +680,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
               <div className="flex flex-wrap gap-2">
                 {todaysLessons.map(item => (
                   <div key={item.id} className={`px-3 py-1.5 rounded-lg ${isDark ? 'bg-gray-600' : 'bg-white'} flex items-center gap-2`}>
-                    <Clock className="w-3 h-3 text-[#0D9488]" />
+                    <Clock className="w-3 h-3 text-[#6096B4]" />
                     <span className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {formatTime(item.startTime)} - {item.plan?.title || 'Unknown'}
                     </span>
@@ -705,7 +705,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id as ActiveTab)}
                 className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : isDark
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-500 hover:text-gray-700'
@@ -764,7 +764,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                   </select>
                   <button
                     onClick={() => setShowPlanForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.lessonPlanner.newLessonPlan', 'New Lesson Plan')}
@@ -935,7 +935,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                       <p>{t('tools.lessonPlanner.noLessonPlansFound', 'No lesson plans found')}</p>
                       <button
                         onClick={() => setShowPlanForm(true)}
-                        className="mt-4 text-[#0D9488] hover:underline"
+                        className="mt-4 text-[#6096B4] hover:underline"
                       >
                         {t('tools.lessonPlanner.createYourFirstLessonPlan', 'Create your first lesson plan')}
                       </button>
@@ -975,7 +975,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                       </div>
                       <button
                         onClick={() => handleCreateFromTemplate(template)}
-                        className="w-full py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                        className="w-full py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                       >
                         {t('tools.lessonPlanner.useTemplate', 'Use Template')}
                       </button>
@@ -1141,7 +1141,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                   ))}
                   <button
                     onClick={() => addArrayField('objectives')}
-                    className="text-[#0D9488] text-sm hover:underline"
+                    className="text-[#6096B4] text-sm hover:underline"
                   >
                     {t('tools.lessonPlanner.addObjective', '+ Add Objective')}
                   </button>
@@ -1169,7 +1169,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                   ))}
                   <button
                     onClick={() => addArrayField('materials')}
-                    className="text-[#0D9488] text-sm hover:underline"
+                    className="text-[#6096B4] text-sm hover:underline"
                   >
                     {t('tools.lessonPlanner.addMaterial', '+ Add Material')}
                   </button>
@@ -1212,7 +1212,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                   </div>
                   <button
                     onClick={() => setShowActivityForm(true)}
-                    className="text-[#0D9488] text-sm hover:underline"
+                    className="text-[#6096B4] text-sm hover:underline"
                   >
                     {t('tools.lessonPlanner.addActivity', '+ Add Activity')}
                   </button>
@@ -1288,7 +1288,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleSavePlan}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {editingPlan ? t('tools.lessonPlanner.updateLessonPlan', 'Update Lesson Plan') : t('tools.lessonPlanner.createLessonPlan', 'Create Lesson Plan')}
                 </button>
@@ -1363,7 +1363,7 @@ export const LessonPlannerTool: React.FC<LessonPlannerToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleAddActivity}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {editingActivityIndex !== null ? t('tools.lessonPlanner.updateActivity', 'Update Activity') : t('tools.lessonPlanner.addActivity3', 'Add Activity')}
                 </button>

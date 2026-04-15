@@ -746,7 +746,7 @@ Generated on: ${new Date().toLocaleString()}
       }`}
     >
       <div className="flex items-center gap-3">
-        <Icon className="w-5 h-5 text-[#0D9488]" />
+        <Icon className="w-5 h-5 text-[#6096B4]" />
         <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{title}</span>
         {count !== undefined && (
           <span className={`text-xs px-2 py-0.5 rounded-full ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'}`}>
@@ -766,18 +766,18 @@ Generated on: ${new Date().toLocaleString()}
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const selectClass = `px-3 py-2 rounded-lg border ${
     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   // Show loading state
   if (isLoading) {
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="max-w-6xl mx-auto flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -788,9 +788,9 @@ Generated on: ${new Date().toLocaleString()}
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.constructionBid.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.constructionBid.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -799,7 +799,7 @@ Generated on: ${new Date().toLocaleString()}
           <CardHeader>
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -835,7 +835,7 @@ Generated on: ${new Date().toLocaleString()}
                 />
                 <button
                   onClick={exportBidSummary}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                   title={t('tools.constructionBid.exportDetailedTextSummary', 'Export detailed text summary')}
                 >
                   <FileText className="w-4 h-4" />
@@ -1028,19 +1028,19 @@ Generated on: ${new Date().toLocaleString()}
                       </div>
                     </div>
                     <div className={`mt-2 text-right text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Subtotal: <span className="font-semibold text-[#0D9488]">{formatCurrency(item.hours * item.rate * item.workers)}</span>
+                      Subtotal: <span className="font-semibold text-[#6096B4]">{formatCurrency(item.hours * item.rate * item.workers)}</span>
                     </div>
                   </div>
                 ))}
                 <button
                   onClick={addLaborItem}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.constructionBid.addLaborItem', 'Add Labor Item')}
                 </button>
                 <div className={`text-right font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  Total Labor: <span className="text-[#0D9488]">{formatCurrency(calculations.laborTotal)}</span>
+                  Total Labor: <span className="text-[#6096B4]">{formatCurrency(calculations.laborTotal)}</span>
                 </div>
               </div>
             )}
@@ -1139,19 +1139,19 @@ Generated on: ${new Date().toLocaleString()}
                       />
                     </div>
                     <div className={`mt-2 text-right text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Subtotal: <span className="font-semibold text-[#0D9488]">{formatCurrency(item.quantity * item.unitCost)}</span>
+                      Subtotal: <span className="font-semibold text-[#6096B4]">{formatCurrency(item.quantity * item.unitCost)}</span>
                     </div>
                   </div>
                 ))}
                 <button
                   onClick={addMaterialItem}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.constructionBid.addMaterial', 'Add Material')}
                 </button>
                 <div className={`text-right font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  Total Materials: <span className="text-[#0D9488]">{formatCurrency(calculations.materialsTotal)}</span>
+                  Total Materials: <span className="text-[#6096B4]">{formatCurrency(calculations.materialsTotal)}</span>
                 </div>
               </div>
             )}
@@ -1222,19 +1222,19 @@ Generated on: ${new Date().toLocaleString()}
                       </div>
                     </div>
                     <div className={`mt-2 text-right text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Subtotal: <span className="font-semibold text-[#0D9488]">{formatCurrency(item.rentalDays * item.dailyRate)}</span>
+                      Subtotal: <span className="font-semibold text-[#6096B4]">{formatCurrency(item.rentalDays * item.dailyRate)}</span>
                     </div>
                   </div>
                 ))}
                 <button
                   onClick={addEquipmentItem}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.constructionBid.addEquipment', 'Add Equipment')}
                 </button>
                 <div className={`text-right font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  Total Equipment: <span className="text-[#0D9488]">{formatCurrency(calculations.equipmentTotal)}</span>
+                  Total Equipment: <span className="text-[#6096B4]">{formatCurrency(calculations.equipmentTotal)}</span>
                 </div>
               </div>
             )}
@@ -1321,13 +1321,13 @@ Generated on: ${new Date().toLocaleString()}
                 ))}
                 <button
                   onClick={addSubcontractorQuote}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.constructionBid.addSubcontractorQuote', 'Add Subcontractor Quote')}
                 </button>
                 <div className={`text-right font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  Total (Accepted): <span className="text-[#0D9488]">{formatCurrency(calculations.subcontractorTotal)}</span>
+                  Total (Accepted): <span className="text-[#6096B4]">{formatCurrency(calculations.subcontractorTotal)}</span>
                 </div>
               </div>
             )}
@@ -1352,7 +1352,7 @@ Generated on: ${new Date().toLocaleString()}
                         max="30"
                         value={overheadPercent}
                         onChange={(e) => setOverheadPercent(parseInt(e.target.value))}
-                        className="flex-1 accent-[#0D9488]"
+                        className="flex-1 accent-[#6096B4]"
                       />
                       <span className={`w-16 text-center font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {overheadPercent}%
@@ -1373,7 +1373,7 @@ Generated on: ${new Date().toLocaleString()}
                         max="40"
                         value={profitMargin}
                         onChange={(e) => setProfitMargin(parseInt(e.target.value))}
-                        className="flex-1 accent-[#0D9488]"
+                        className="flex-1 accent-[#6096B4]"
                       />
                       <span className={`w-16 text-center font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {profitMargin}%
@@ -1394,7 +1394,7 @@ Generated on: ${new Date().toLocaleString()}
                         max="20"
                         value={contingencyPercent}
                         onChange={(e) => setContingencyPercent(parseInt(e.target.value))}
-                        className="flex-1 accent-[#0D9488]"
+                        className="flex-1 accent-[#6096B4]"
                       />
                       <span className={`w-16 text-center font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {contingencyPercent}%
@@ -1498,7 +1498,7 @@ Generated on: ${new Date().toLocaleString()}
                 ))}
                 <button
                   onClick={addCompetitorBid}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.constructionBid.addCompetitorBid', 'Add Competitor Bid')}
@@ -1568,16 +1568,16 @@ Generated on: ${new Date().toLocaleString()}
                         {formatCurrency(calculations.contingencyAmount)}
                       </span>
                     </div>
-                    <div className={`border-t-2 ${theme === 'dark' ? t('tools.constructionBid.border0d9488', 'border-[#0D9488]') : t('tools.constructionBid.border0d94882', 'border-[#0D9488]')} pt-4 mt-4`}>
+                    <div className={`border-t-2 ${theme === 'dark' ? t('tools.constructionBid.border0d9488', 'border-[#6096B4]') : t('tools.constructionBid.border0d94882', 'border-[#6096B4]')} pt-4 mt-4`}>
                       <div className="flex justify-between items-center">
                         <span className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                           {t('tools.constructionBid.totalBid', 'TOTAL BID:')}
                         </span>
                         <div className="flex items-center gap-2">
-                          <span className="text-3xl font-bold text-[#0D9488]">{formatCurrency(calculations.totalBid)}</span>
+                          <span className="text-3xl font-bold text-[#6096B4]">{formatCurrency(calculations.totalBid)}</span>
                           <button
                             onClick={copyBidTotal}
-                            className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded transition-colors"
+                            className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded transition-colors"
                             title={t('tools.constructionBid.copyToClipboard', 'Copy to clipboard')}
                           >
                             <Copy className="w-5 h-5" />
@@ -1643,8 +1643,8 @@ Generated on: ${new Date().toLocaleString()}
                     <div className="text-2xl font-bold text-yellow-500">{bidStats.pending}</div>
                     <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.constructionBid.pending2', 'Pending')}</div>
                   </div>
-                  <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? t('tools.constructionBid.bg0d948830', 'bg-[#0D9488]/30') : t('tools.constructionBid.bg0d948810', 'bg-[#0D9488]/10')}`}>
-                    <div className="text-2xl font-bold text-[#0D9488]">{bidStats.winRate.toFixed(1)}%</div>
+                  <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? t('tools.constructionBid.bg0d948830', 'bg-[#6096B4]/30') : t('tools.constructionBid.bg0d948810', 'bg-[#6096B4]/10')}`}>
+                    <div className="text-2xl font-bold text-[#6096B4]">{bidStats.winRate.toFixed(1)}%</div>
                     <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.constructionBid.winRate', 'Win Rate')}</div>
                   </div>
                 </div>
@@ -1653,7 +1653,7 @@ Generated on: ${new Date().toLocaleString()}
                   <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     Total Value of Won Bids:{' '}
                   </span>
-                  <span className="font-bold text-[#0D9488]">{formatCurrency(bidStats.totalValue)}</span>
+                  <span className="font-bold text-[#6096B4]">{formatCurrency(bidStats.totalValue)}</span>
                 </div>
 
                 {/* Bid Records List */}
@@ -1744,7 +1744,7 @@ Generated on: ${new Date().toLocaleString()}
 
       {/* Validation Toast */}
       {validationMessage && (
-        <div className="fixed bottom-4 right-4 px-4 py-3 bg-[#0D9488] text-white rounded-lg shadow-lg z-50">
+        <div className="fixed bottom-4 right-4 px-4 py-3 bg-[#6096B4] text-white rounded-lg shadow-lg z-50">
           {validationMessage}
         </div>
       )}

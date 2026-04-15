@@ -78,8 +78,8 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
     return (
       <div className="flex items-center justify-center h-96">
         <div className="text-center">
-          <div className="p-4 bg-teal-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-400"></div>
+          <div className="p-4 bg-primary-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-400"></div>
           </div>
           <p className="text-white/60">Loading alert dashboard...</p>
         </div>
@@ -90,11 +90,11 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
   return (
     <div className="space-y-6">
       {/* Welcome Header */}
-      <div className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 p-6 rounded-xl border border-teal-400/30">
+      <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 p-6 rounded-xl border border-primary-400/30">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <div className="p-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg">
                 <Icon path={mdiBellOutline} size={1.2} className="text-white" />
               </div>
               Currency Alerts
@@ -104,7 +104,7 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
             </p>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-teal-300">{stats.active}</div>
+            <div className="text-2xl font-bold text-primary-300">{stats.active}</div>
             <div className="text-xs text-white/60">Active Alerts</div>
             <div className="inline-block bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-2 py-1 text-xs text-white/80 mt-1">
               <Icon path={mdiClockOutline} size={0.4} className="mr-1 inline" />
@@ -174,7 +174,7 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
         <div className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
           <div className="p-6 border-b border-white/20">
             <div className="flex items-center gap-2">
-              <Icon path={mdiEarth} size={0.8} className="text-teal-400" />
+              <Icon path={mdiEarth} size={0.8} className="text-primary-400" />
               <h3 className="text-lg font-semibold text-white">Currency Pair Distribution</h3>
             </div>
           </div>
@@ -194,13 +194,13 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
                   .map(([pair, count]) => (
                     <div key={pair} className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
                       <div className="flex items-center gap-2">
-                        <Icon path={mdiCurrencyUsd} size={0.6} className="text-teal-400" />
+                        <Icon path={mdiCurrencyUsd} size={0.6} className="text-primary-400" />
                         <span className="font-mono text-sm font-medium text-white">{pair}</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-24 bg-white/20 rounded-full h-2">
                           <div
-                            className="bg-teal-400 h-2 rounded-full"
+                            className="bg-primary-400 h-2 rounded-full"
                             style={{ width: `${(count / stats.total) * 100}%` }}
                           />
                         </div>
@@ -218,7 +218,7 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
         <div className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
           <div className="p-6 border-b border-white/20">
             <div className="flex items-center gap-2">
-              <Icon path={mdiAlertCircleOutline} size={0.8} className="text-teal-400" />
+              <Icon path={mdiAlertCircleOutline} size={0.8} className="text-primary-400" />
               <h3 className="text-lg font-semibold text-white">Alert Types</h3>
             </div>
           </div>
@@ -271,7 +271,7 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
       <div className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
         <div className="p-6 border-b border-white/20">
           <div className="flex items-center gap-2">
-            <Icon path={mdiClockOutline} size={0.8} className="text-teal-400" />
+            <Icon path={mdiClockOutline} size={0.8} className="text-primary-400" />
             <h3 className="text-lg font-semibold text-white">Quick Actions</h3>
           </div>
         </div>
@@ -279,10 +279,10 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <button
               onClick={onCreateNew}
-              className="group h-32 border-2 border-dashed border-white/20 rounded-lg hover:border-teal-400 hover:bg-teal-500/10 transition-all duration-200 flex flex-col items-center justify-center gap-3"
+              className="group h-32 border-2 border-dashed border-white/20 rounded-lg hover:border-primary-400 hover:bg-primary-500/10 transition-all duration-200 flex flex-col items-center justify-center gap-3"
             >
-              <div className="p-3 bg-teal-500/20 rounded-full group-hover:bg-teal-500/30 transition-colors">
-                <Icon path={mdiPlusCircleOutline} size={1.2} className="text-teal-400" />
+              <div className="p-3 bg-primary-500/20 rounded-full group-hover:bg-primary-500/30 transition-colors">
+                <Icon path={mdiPlusCircleOutline} size={1.2} className="text-primary-400" />
               </div>
               <span className="text-sm font-medium text-white">Create New Alert</span>
             </button>
@@ -314,10 +314,10 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
 
       {/* Getting Started Guide */}
       {stats.total === 0 && (
-        <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-xl border border-teal-400/30">
+        <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-xl border border-primary-400/30">
           <div className="p-8">
             <div className="text-center mb-6">
-              <div className="p-4 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+              <div className="p-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                 <Icon path={mdiBell} size={2} className="text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Getting Started with Alerts</h3>
@@ -353,7 +353,7 @@ const AlertDashboard: React.FC<AlertDashboardProps> = ({ onCreateNew }) => {
             <div className="text-center">
               <Button
                 onClick={onCreateNew}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 h-12 px-8 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 h-12 px-8 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
               >
                 <Icon path={mdiPlusCircleOutline} size={0.8} />
                 Create Your First Alert

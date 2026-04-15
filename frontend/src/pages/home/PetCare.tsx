@@ -46,7 +46,7 @@ const PET_TYPES = [
   { id: 'dog', name: 'Dog', icon: Dog, color: 'from-amber-500 to-orange-500' },
   { id: 'cat', name: 'Cat', icon: Cat, color: 'from-purple-500 to-pink-500' },
   { id: 'bird', name: 'Bird', icon: Bird, color: 'from-blue-500 to-cyan-500' },
-  { id: 'fish', name: 'Fish', icon: Fish, color: 'from-cyan-500 to-teal-500' },
+  { id: 'fish', name: 'Fish', icon: Fish, color: 'from-cyan-500 to-primary-500' },
 ];
 
 const PetCare: React.FC = () => {
@@ -217,7 +217,7 @@ const PetCare: React.FC = () => {
 
   const getPetColor = (type: string) => {
     const petType = PET_TYPES.find(t => t.id === type);
-    return petType?.color || 'from-teal-500 to-cyan-500';
+    return petType?.color || 'from-primary-500 to-cyan-500';
   };
 
   const selectedPetVets = selectedPet ? vetVisits.filter(v => v.petId === selectedPet.id) : [];
@@ -269,7 +269,7 @@ const PetCare: React.FC = () => {
               disabled={!selectedPet}
               className={`flex-1 px-6 py-3 rounded-xl font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
                 activeTab === 'meds'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                   : 'bg-slate-800/50 text-gray-400 hover:text-white'
               }`}
             >
@@ -464,7 +464,7 @@ const PetCare: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setShowAddMedModal(true)}
-                  className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all flex items-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   Add Medication
@@ -481,14 +481,14 @@ const PetCare: React.FC = () => {
                   selectedPetMeds.map(med => (
                     <div
                       key={med.id}
-                      className={`bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 p-6 ${
+                      className={`bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6 ${
                         !med.active ? 'opacity-60' : ''
                       }`}
                     >
                       <div className="flex justify-between items-start mb-4">
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
-                            <Pill className="w-5 h-5 text-teal-400" />
+                            <Pill className="w-5 h-5 text-primary-400" />
                             <h3 className="text-lg font-semibold text-white">{med.name}</h3>
                             {med.active && (
                               <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
@@ -754,7 +754,7 @@ const PetCare: React.FC = () => {
         {/* Add Medication Modal */}
         {showAddMedModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <div className="bg-slate-800 rounded-2xl border border-teal-500/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-slate-800 rounded-2xl border border-primary-500/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
               <div className="p-6 border-b border-slate-700">
                 <h2 className="text-2xl font-bold text-white">Add Medication</h2>
               </div>
@@ -766,7 +766,7 @@ const PetCare: React.FC = () => {
                     type="text"
                     value={medForm.name}
                     onChange={(e) => setMedForm({ ...medForm, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     required
                   />
                 </div>
@@ -778,7 +778,7 @@ const PetCare: React.FC = () => {
                       type="text"
                       value={medForm.dosage}
                       onChange={(e) => setMedForm({ ...medForm, dosage: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       placeholder="e.g., 10mg"
                       required
                     />
@@ -790,7 +790,7 @@ const PetCare: React.FC = () => {
                       type="text"
                       value={medForm.frequency}
                       onChange={(e) => setMedForm({ ...medForm, frequency: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       placeholder="e.g., Twice daily"
                       required
                     />
@@ -804,7 +804,7 @@ const PetCare: React.FC = () => {
                       type="date"
                       value={medForm.startDate}
                       onChange={(e) => setMedForm({ ...medForm, startDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                       required
                     />
                   </div>
@@ -815,7 +815,7 @@ const PetCare: React.FC = () => {
                       type="date"
                       value={medForm.endDate}
                       onChange={(e) => setMedForm({ ...medForm, endDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                     />
                   </div>
                 </div>
@@ -825,7 +825,7 @@ const PetCare: React.FC = () => {
                   <textarea
                     value={medForm.notes}
                     onChange={(e) => setMedForm({ ...medForm, notes: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:outline-none focus:border-primary-500"
                   />
                 </div>
 
@@ -839,7 +839,7 @@ const PetCare: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
                   >
                     Add Medication
                   </button>

@@ -64,9 +64,9 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner':
-        return 'bg-teal-500/20 text-teal-400 border-teal-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'Intermediate':
-        return 'bg-teal-500/20 text-teal-400 border-teal-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'Advanced':
         return 'bg-red-500/20 text-red-400 border-red-500/30';
       default:
@@ -85,10 +85,10 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'strength': return 'text-teal-400';
+      case 'strength': return 'text-primary-400';
       case 'cardio': return 'text-red-400';
       case 'flexibility': return 'text-purple-400';
-      case 'mixed': return 'text-teal-400';
+      case 'mixed': return 'text-primary-400';
       default: return 'text-white/60';
     }
   };
@@ -159,8 +159,8 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
       {/* Header with Filter and Create Button */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <Icon path={mdiDumbbell} size={1} className="text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <Icon path={mdiDumbbell} size={1} className="text-primary-400" />
           </div>
           <h3 className="text-lg font-semibold">My Workout Plans</h3>
         </div>
@@ -184,7 +184,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
           </Select>
           
           {/* Create New Plan */}
-          <Button onClick={onCreatePlan} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+          <Button onClick={onCreatePlan} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
             <Icon path={mdiPlus} size={0.7} className="mr-2" />
             New Plan
           </Button>
@@ -227,11 +227,11 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
               <Badge variant="outline" className={getDifficultyColor(plan.difficulty)}>
                 {plan.difficulty}
               </Badge>
-              <Badge className="text-teal-400 border border-teal-500/20 bg-teal-500/10">
+              <Badge className="text-primary-400 border border-primary-500/20 bg-primary-500/10">
                 {plan.duration} days
               </Badge>
               {plan.isCompleted && (
-                <Badge className="bg-teal-500/20 text-teal-400 border border-teal-500/20">
+                <Badge className="bg-primary-500/20 text-primary-400 border border-primary-500/20">
                   <Icon path={mdiCheckCircle} size={0.6} className="mr-1" />
                   Complete
                 </Badge>
@@ -291,7 +291,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
                 <Button 
                   size="sm" 
                   onClick={() => onStartWorkout?.(plan.id)}
-                  className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                  className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                 >
                   <Icon path={mdiPlay} size={0.7} className="mr-1" />
                   Start
@@ -301,7 +301,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
               <Button
                 size="sm"
                 onClick={() => onViewPlan?.(plan.id)}
-                className="bg-white/10 border border-white/20 text-teal-400 hover:bg-teal-500/20 hover:border-teal-500/30"
+                className="bg-white/10 border border-white/20 text-primary-400 hover:bg-primary-500/20 hover:border-primary-500/30"
               >
                 <Icon path={mdiEye} size={0.7} className="mr-1" />
                 View
@@ -334,8 +334,8 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
       {/* Empty State */}
       {filteredPlans.length === 0 && (
         <Card className="p-12 text-center bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg">
-          <div className="p-4 bg-teal-500/20 rounded-full w-fit mx-auto mb-4">
-            <Icon path={mdiDumbbell} size={2} className="text-teal-400/60" />
+          <div className="p-4 bg-primary-500/20 rounded-full w-fit mx-auto mb-4">
+            <Icon path={mdiDumbbell} size={2} className="text-primary-400/60" />
           </div>
           <h3 className="text-lg font-semibold mb-2">No workout plans found</h3>
           <p className="text-white/60 mb-6">
@@ -345,7 +345,7 @@ const WorkoutPlansGrid: React.FC<WorkoutPlansGridProps> = ({
             }
           </p>
           {filter === 'all' && (
-            <Button onClick={onCreatePlan} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+            <Button onClick={onCreatePlan} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
               <Icon path={mdiPlus} size={0.7} className="mr-2" />
               Create Your First Plan
             </Button>

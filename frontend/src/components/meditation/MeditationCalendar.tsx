@@ -101,10 +101,10 @@ export const MeditationCalendar: React.FC<MeditationCalendarProps> = ({
     <Card className="p-4 sm:p-6 bg-white/10 backdrop-blur-xl border border-white/20 col-span-full">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold flex items-center gap-2 text-white">
-          <Icon path={mdiCalendarMonth} size={0.8} className="text-teal-400" />
+          <Icon path={mdiCalendarMonth} size={0.8} className="text-primary-400" />
           Meditation History
           {sessionsLoading && (
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-teal-400 ml-2"></div>
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-400 ml-2"></div>
           )}
         </h3>
         <div className="flex items-center gap-2">
@@ -175,13 +175,13 @@ export const MeditationCalendar: React.FC<MeditationCalendarProps> = ({
                   ${
                     isFuture
                       ? 'cursor-not-allowed opacity-40 border-white/10 bg-white/5'
-                      : 'cursor-pointer hover:border-teal-500/30'
+                      : 'cursor-pointer hover:border-primary-500/30'
                   }
                   ${
                     !isFuture && isSelected
-                      ? 'border-teal-500 bg-teal-500/20 shadow-md'
+                      ? 'border-primary-500 bg-primary-500/20 shadow-md'
                       : !isFuture && isToday
-                      ? 'border-teal-500/50 bg-teal-500/10'
+                      ? 'border-primary-500/50 bg-primary-500/10'
                       : !isFuture
                       ? 'border-white/20'
                       : ''
@@ -233,11 +233,11 @@ export const MeditationCalendar: React.FC<MeditationCalendarProps> = ({
 
       {/* Selected Day Details */}
       {selectedDate && (
-        <div className="mt-8 p-6 bg-white/5 backdrop-blur-xl rounded-xl border border-teal-500/20 shadow-lg">
+        <div className="mt-8 p-6 bg-white/5 backdrop-blur-xl rounded-xl border border-primary-500/20 shadow-lg">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-teal-500/20 rounded-lg">
-                <Icon path={mdiCalendarMonth} size={1} className="text-teal-400" />
+              <div className="p-2 bg-primary-500/20 rounded-lg">
+                <Icon path={mdiCalendarMonth} size={1} className="text-primary-400" />
               </div>
               <div>
                 <h4 className="font-bold text-xl text-white">
@@ -298,7 +298,7 @@ export const MeditationCalendar: React.FC<MeditationCalendarProps> = ({
                   <div key={idx} className="p-3 bg-white/5 rounded-lg border border-white/10">
                     <div className="flex items-center justify-between mb-2">
                       <h5 className="font-medium text-sm text-white">{session.type}</h5>
-                      <Badge className="text-xs bg-teal-500/20 text-teal-400 border-teal-500/30">
+                      <Badge className="text-xs bg-primary-500/20 text-primary-400 border-primary-500/30">
                         {session.duration} min
                       </Badge>
                     </div>

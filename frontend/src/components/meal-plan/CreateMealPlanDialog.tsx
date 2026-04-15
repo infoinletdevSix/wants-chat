@@ -215,7 +215,7 @@ export const CreateMealPlanDialog: React.FC<CreateMealPlanDialogProps> = ({
                   <Button
                     onClick={handleCreateQuickPlan}
                     disabled={createMealPlan.loading}
-                    className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+                    className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
                   >
                     {createMealPlan.loading ? 'Creating...' : 'Create Meal Plan'}
                   </Button>

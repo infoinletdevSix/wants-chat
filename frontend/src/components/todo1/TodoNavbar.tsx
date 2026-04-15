@@ -19,7 +19,7 @@ const TodoNavbar: React.FC<TodoNavbarProps> = ({ theme, toggleTheme }) => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <Check className="h-6 w-6 text-teal-400" />
+            <Check className="h-6 w-6 text-primary-400" />
             <span className="text-xl font-semibold text-white">
               Todo List
             </span>

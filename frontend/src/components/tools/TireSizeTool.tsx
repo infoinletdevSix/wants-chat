@@ -130,9 +130,9 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Circle className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Circle className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tireSize.tireSizeCalculator', 'Tire Size Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.tireSize.compareTireSizesAndCheck', 'Compare tire sizes and check compatibility')}</p>
@@ -142,9 +142,9 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.tireSize.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.tireSize.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -198,7 +198,7 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
               className={`p-2 rounded-lg ${isDark ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'}`}
               title={t('tools.tireSize.swapSizes', 'Swap sizes')}
             >
-              <RefreshCw className="w-5 h-5 text-teal-500" />
+              <RefreshCw className="w-5 h-5 text-primary-500" />
             </button>
           </div>
 
@@ -247,22 +247,22 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
         {/* Compatibility Status */}
         <div className={`p-4 rounded-xl border ${
           calculations.isAcceptable
-            ? isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'
+            ? isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'
             : isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200'
         }`}>
           <div className="flex items-center gap-3">
             <div className={`p-2 rounded-full ${
-              calculations.isAcceptable ? 'bg-teal-500/20' : 'bg-red-500/20'
+              calculations.isAcceptable ? 'bg-primary-500/20' : 'bg-red-500/20'
             }`}>
               {calculations.isAcceptable ? (
-                <Circle className="w-5 h-5 text-teal-500" />
+                <Circle className="w-5 h-5 text-primary-500" />
               ) : (
                 <Circle className="w-5 h-5 text-red-500" />
               )}
             </div>
             <div>
               <div className={`font-semibold ${
-                calculations.isAcceptable ? 'text-teal-500' : 'text-red-500'
+                calculations.isAcceptable ? 'text-primary-500' : 'text-red-500'
               }`}>
                 {calculations.isAcceptable ? t('tools.tireSize.compatibleSize', 'Compatible Size') : t('tools.tireSize.mayNotBeCompatible', 'May Not Be Compatible')}
               </div>
@@ -295,7 +295,7 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
                   <td className="py-2">{t('tools.tireSize.overallDiameter', 'Overall Diameter')}</td>
                   <td className="text-right py-2">{calculations.original.overallDiameterInch.toFixed(1)}"</td>
                   <td className="text-right py-2">{calculations.newTire.overallDiameterInch.toFixed(1)}"</td>
-                  <td className={`text-right py-2 ${calculations.diameterDiff > 0 ? 'text-teal-500' : calculations.diameterDiff < 0 ? 'text-red-500' : ''}`}>
+                  <td className={`text-right py-2 ${calculations.diameterDiff > 0 ? 'text-primary-500' : calculations.diameterDiff < 0 ? 'text-red-500' : ''}`}>
                     {calculations.diameterDiff >= 0 ? '+' : ''}{(calculations.diameterDiff / 25.4).toFixed(2)}"
                   </td>
                 </tr>
@@ -311,7 +311,7 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
                   <td className="py-2">{t('tools.tireSize.width', 'Width')}</td>
                   <td className="text-right py-2">{calculations.original.widthInches.toFixed(1)}"</td>
                   <td className="text-right py-2">{calculations.newTire.widthInches.toFixed(1)}"</td>
-                  <td className={`text-right py-2 ${calculations.widthDiff > 0 ? 'text-teal-500' : calculations.widthDiff < 0 ? 'text-red-500' : ''}`}>
+                  <td className={`text-right py-2 ${calculations.widthDiff > 0 ? 'text-primary-500' : calculations.widthDiff < 0 ? 'text-red-500' : ''}`}>
                     {calculations.widthDiff >= 0 ? '+' : ''}{(calculations.widthDiff / 25.4).toFixed(2)}"
                   </td>
                 </tr>
@@ -360,7 +360,7 @@ export const TireSizeTool: React.FC<TireSizeToolProps> = ({ uiConfig }) => {
                   <tr key={row.displayed} className={`border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                     <td className="py-2">{row.displayed} mph</td>
                     <td className="text-right py-2 font-medium">{row.actual.toFixed(1)} mph</td>
-                    <td className={`text-right py-2 ${row.diff > 0 ? 'text-teal-500' : row.diff < 0 ? 'text-red-500' : ''}`}>
+                    <td className={`text-right py-2 ${row.diff > 0 ? 'text-primary-500' : row.diff < 0 ? 'text-red-500' : ''}`}>
                       {row.diff >= 0 ? '+' : ''}{row.diff.toFixed(1)} mph
                     </td>
                   </tr>

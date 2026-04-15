@@ -225,9 +225,9 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Film className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Film className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.moviePicker.randomMoviePicker', 'Random Movie Picker')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.moviePicker.letFateDecideYourMovie', 'Let fate decide your movie night')}</p>
@@ -248,7 +248,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
                 onClick={() => toggleGenre(genre.id)}
                 className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${
                   selectedGenres.has(genre.id)
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -273,7 +273,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
                 onClick={() => setSelectedEra(era.id)}
                 className={`px-3 py-2 rounded-lg text-sm ${
                   selectedEra === era.id
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -298,7 +298,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
               step="0.5"
               value={minRating}
               onChange={(e) => setMinRating(parseFloat(e.target.value))}
-              className="w-full accent-teal-500"
+              className="w-full accent-primary-500"
             />
           </div>
           <div className="space-y-2">
@@ -312,7 +312,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
               step="15"
               value={maxDuration}
               onChange={(e) => setMaxDuration(parseInt(e.target.value))}
-              className="w-full accent-teal-500"
+              className="w-full accent-primary-500"
             />
           </div>
         </div>
@@ -331,7 +331,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
             className={`flex-1 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 ${
               filteredMovies.length === 0
                 ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
-                : 'bg-teal-500 text-white hover:bg-teal-600'
+                : 'bg-primary-500 text-white hover:bg-primary-600'
             } ${isSpinning ? 'animate-pulse' : ''}`}
           >
             {isSpinning ? (
@@ -345,7 +345,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
 
         {/* Picked Movie Result */}
         {pickedMovie && (
-          <div className={`p-6 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'}`}>
+          <div className={`p-6 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'}`}>
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-center gap-3">
                 <span className="text-3xl">{getGenreEmoji(pickedMovie.genre)}</span>
@@ -382,7 +382,7 @@ export const MoviePickerTool: React.FC<MoviePickerToolProps> = ({ uiConfig }) =>
                 <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{pickedMovie.rating}</span>
               </div>
               <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4 text-teal-500" />
+                <Clock className="w-4 h-4 text-primary-500" />
                 <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{pickedMovie.duration} min</span>
               </div>
               <span className={`px-2 py-1 rounded-full text-xs capitalize ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}>

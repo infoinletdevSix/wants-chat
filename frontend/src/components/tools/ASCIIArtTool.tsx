@@ -310,9 +310,9 @@ export const ASCIIArtTool = ({ uiConfig }: ASCIIArtToolProps) => {
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.aSCIIArt.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.aSCIIArt.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -328,7 +328,7 @@ export const ASCIIArtTool = ({ uiConfig }: ASCIIArtToolProps) => {
                 onClick={() => setFontStyle(font.value)}
                 className={`px-4 py-2 rounded-lg border-2 transition-all ${
                   fontStyle === font.value
-                    ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                    ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                     : theme === 'dark'
                     ? 'border-gray-600 hover:border-gray-500 text-gray-300'
                     : 'border-gray-200 hover:border-gray-300 text-gray-700'
@@ -356,7 +356,7 @@ export const ASCIIArtTool = ({ uiConfig }: ASCIIArtToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <button
               onClick={handleClear}

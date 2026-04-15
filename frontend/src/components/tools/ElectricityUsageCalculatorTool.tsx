@@ -139,10 +139,10 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Zap className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Zap className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.electricityUsageCalculator.electricityUsageCalculator', 'Electricity Usage Calculator')}</h3>
@@ -164,7 +164,7 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
             value={electricityRate}
             onChange={(e) => setElectricityRate(e.target.value)}
             placeholder="0.12"
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
           />
           <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
             {t('tools.electricityUsageCalculator.usAverage012Kwh', 'US average: $0.12/kWh (check your utility bill for exact rate)')}
@@ -177,7 +177,7 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.electricityUsageCalculator.yourAppliances', 'Your Appliances')}</h4>
             <button
               onClick={() => setShowAddAppliance(!showAddAppliance)}
-              className="flex items-center gap-1 px-3 py-1.5 bg-[#0D9488] text-white text-sm rounded-lg hover:bg-[#0F766E] transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 bg-[#6096B4] text-white text-sm rounded-lg hover:bg-[#4C7F98] transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.electricityUsageCalculator.addAppliance', 'Add Appliance')}
@@ -198,7 +198,7 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
                       onClick={() => addPresetAppliance(preset)}
                       className={`px-2 py-1 text-xs rounded-full ${
                         selectedPreset === preset.name
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -255,7 +255,7 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
 
               <button
                 onClick={addAppliance}
-                className="w-full py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="w-full py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 {t('tools.electricityUsageCalculator.addToList', 'Add to List')}
               </button>
@@ -324,25 +324,25 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
         </div>
 
         {/* Summary Results */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.electricityUsageCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.electricityUsageCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Calculator className="w-4 h-4 text-[#0D9488]" />
+            <Calculator className="w-4 h-4 text-[#6096B4]" />
             {t('tools.electricityUsageCalculator.usageSummary', 'Usage Summary')}
           </h4>
           <div className="grid grid-cols-3 gap-4">
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.electricityUsageCalculator.daily', 'Daily')}</div>
-              <div className="text-2xl font-bold text-[#0D9488]">{calculations.daily.kwh.toFixed(1)} kWh</div>
+              <div className="text-2xl font-bold text-[#6096B4]">{calculations.daily.kwh.toFixed(1)} kWh</div>
               <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>${calculations.daily.cost.toFixed(2)}</div>
             </div>
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.electricityUsageCalculator.monthly', 'Monthly')}</div>
-              <div className="text-2xl font-bold text-[#0D9488]">{calculations.monthly.kwh.toFixed(0)} kWh</div>
+              <div className="text-2xl font-bold text-[#6096B4]">{calculations.monthly.kwh.toFixed(0)} kWh</div>
               <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>${calculations.monthly.cost.toFixed(2)}</div>
             </div>
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.electricityUsageCalculator.yearly', 'Yearly')}</div>
-              <div className="text-2xl font-bold text-[#0D9488]">{calculations.yearly.kwh.toFixed(0)} kWh</div>
+              <div className="text-2xl font-bold text-[#6096B4]">{calculations.yearly.kwh.toFixed(0)} kWh</div>
               <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>${calculations.yearly.cost.toFixed(2)}</div>
             </div>
           </div>
@@ -367,7 +367,7 @@ export const ElectricityUsageCalculatorTool: React.FC<ElectricityUsageCalculator
                     </div>
                     <div className={`h-2 rounded-full overflow-hidden ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-full bg-[#0D9488] rounded-full transition-all"
+                        className="h-full bg-[#6096B4] rounded-full transition-all"
                         style={{ width: `${percentage}%` }}
                       />
                     </div>

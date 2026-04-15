@@ -310,7 +310,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
     };
   }, [vips]);
 
-  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
   const getLevelColor = (level: VIPLevel) => {
@@ -423,7 +423,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
                 onClick={() => toggleAmenity(amenity, isEditing)}
                 className={`px-3 py-1.5 rounded-full text-sm transition-colors ${
                   (vip.specialAmenities || []).includes(amenity)
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -448,7 +448,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl"><Crown className="w-6 h-6 text-[#0D9488]" /></div>
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl"><Crown className="w-6 h-6 text-[#6096B4]" /></div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.vIPGuest.vipGuestManagement', 'VIP Guest Management')}</h1>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.vIPGuest.manageVipGuestProfilesAnd', 'Manage VIP guest profiles and preferences')}</p>
@@ -488,7 +488,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
             <option value="">{t('tools.vIPGuest.allStatuses', 'All Statuses')}</option>
             {GUEST_STATUSES.map(s => (<option key={s.value} value={s.value}>{s.label}</option>))}
           </select>
-          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.vIPGuest.addVip', 'Add VIP')}</button>
+          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.vIPGuest.addVip', 'Add VIP')}</button>
         </div>
 
         {/* Forms */}
@@ -499,7 +499,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
               <button onClick={() => setShowForm(false)} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}><X className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} /></button>
             </div>
             {renderForm(newVIP)}
-            <button onClick={handleAddVIP} disabled={!newVIP.guestName} className="mt-4 w-full py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.vIPGuest.addVipGuest2', 'Add VIP Guest')}</button>
+            <button onClick={handleAddVIP} disabled={!newVIP.guestName} className="mt-4 w-full py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.vIPGuest.addVipGuest2', 'Add VIP Guest')}</button>
           </div>
         )}
 
@@ -511,7 +511,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
             </div>
             {renderForm(editingVIP, true)}
             <div className="flex gap-3 mt-4">
-              <button onClick={handleUpdateVIP} className="flex-1 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.vIPGuest.save', 'Save')}</button>
+              <button onClick={handleUpdateVIP} className="flex-1 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.vIPGuest.save', 'Save')}</button>
               <button onClick={() => setEditingVIP(null)} className={`px-6 py-3 rounded-xl font-medium ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>{t('tools.vIPGuest.cancel', 'Cancel')}</button>
             </div>
           </div>
@@ -532,7 +532,7 @@ export const VIPGuestTool: React.FC<VIPGuestToolProps> = ({ uiConfig }) => {
                     {vip.company && <div className="flex items-center gap-2"><User className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{vip.title} at {vip.company}</span></div>}
                     {vip.roomNumber && <div className="flex items-center gap-2"><Bed className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className={isDark ? 'text-gray-300' : 'text-gray-700'}>Room {vip.roomNumber}</span></div>}
                     <div className="flex items-center gap-2"><Star className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{vip.totalStays} stays</span></div>
-                    <div className="flex items-center gap-2"><Gift className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className="text-[#0D9488] font-medium">${vip.totalSpent.toLocaleString()}</span></div>
+                    <div className="flex items-center gap-2"><Gift className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className="text-[#6096B4] font-medium">${vip.totalSpent.toLocaleString()}</span></div>
                   </div>
                   {vip.specialAmenities.length > 0 && (
                     <div className="flex flex-wrap gap-1 mt-2">

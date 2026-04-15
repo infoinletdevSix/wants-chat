@@ -172,7 +172,7 @@ const PhotoGallery: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -199,7 +199,7 @@ const PhotoGallery: React.FC = () => {
           <div className="flex gap-3">
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-2xl hover:from-cyan-600 hover:to-teal-600 transition shadow-lg flex items-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-2xl hover:from-cyan-600 hover:to-primary-600 transition shadow-lg flex items-center gap-2"
             >
               <Upload size={20} />
               Upload
@@ -241,7 +241,7 @@ const PhotoGallery: React.FC = () => {
                     onClick={() => setSelectedFolder(folder.name)}
                     className={`w-full text-left px-4 py-3 rounded-xl transition ${
                       selectedFolder === folder.name
-                        ? 'bg-gradient-to-r from-cyan-500/30 to-teal-500/30 border border-cyan-400 text-white'
+                        ? 'bg-gradient-to-r from-cyan-500/30 to-primary-500/30 border border-cyan-400 text-white'
                         : 'bg-white/5 hover:bg-white/10 text-gray-300'
                     }`}
                   >
@@ -398,7 +398,7 @@ const PhotoGallery: React.FC = () => {
               </button>
               <button
                 onClick={createFolder}
-                className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-2xl hover:from-cyan-600 hover:to-teal-600 transition"
+                className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-2xl hover:from-cyan-600 hover:to-primary-600 transition"
               >
                 Create
               </button>

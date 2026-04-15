@@ -54,7 +54,7 @@ const MoneyManagement: React.FC = () => {
 
   // Process expense categories for pie chart
   const expenseCategories = useMemo(() => {
-    const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#6B7280', '#EC4899', '#14B8A6'];
+    const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#6B7280', '#EC4899', '#75AAC1'];
 
     if (categoriesData?.data && Array.isArray(categoriesData.data)) {
       return categoriesData.data.map((cat: any, index: number) => ({

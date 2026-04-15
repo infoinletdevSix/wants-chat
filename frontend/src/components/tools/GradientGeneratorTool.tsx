@@ -129,7 +129,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
   const [gradientType, setGradientType] = useState<GradientType>('linear');
   const [angle, setAngle] = useState(90);
   const [colorStops, setColorStops] = useState<ColorStop[]>([
-    { id: '1', color: '#0D9488', position: 0 },
+    { id: '1', color: '#6096B4', position: 0 },
     { id: '2', color: '#1a1a1a', position: 100 },
   ]);
   const [copied, setCopied] = useState(false);
@@ -307,7 +307,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
               onClick={() => setGradientType('linear')}
               className={`flex-1 px-4 py-3 rounded-lg transition-colors font-medium ${
                 gradientType === 'linear'
-                  ? t('tools.gradientGenerator.bg0d9488TextWhite', 'bg-[#0D9488] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  ? t('tools.gradientGenerator.bg0d9488TextWhite', 'bg-[#6096B4] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               }`}
             >
               {t('tools.gradientGenerator.linear', 'Linear')}
@@ -316,7 +316,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
               onClick={() => setGradientType('radial')}
               className={`flex-1 px-4 py-3 rounded-lg transition-colors font-medium ${
                 gradientType === 'radial'
-                  ? t('tools.gradientGenerator.bg0d9488TextWhite2', 'bg-[#0D9488] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  ? t('tools.gradientGenerator.bg0d9488TextWhite2', 'bg-[#6096B4] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               }`}
             >
               {t('tools.gradientGenerator.radial', 'Radial')}
@@ -331,7 +331,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
               <label className="block text-sm font-medium text-gray-200">
                 {t('tools.gradientGenerator.direction', 'Direction')}
               </label>
-              <span className="text-[#0D9488] font-semibold text-lg">{angle}°</span>
+              <span className="text-[#6096B4] font-semibold text-lg">{angle}°</span>
             </div>
             <input
               type="range"
@@ -339,7 +339,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
               max="360"
               value={angle}
               onChange={(e) => setAngle(Number(e.target.value))}
-              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
             />
             <div className="flex justify-between text-xs text-gray-400 mt-2">
               <span>0° (Right)</span>
@@ -358,7 +358,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
             </label>
             <button
               onClick={addColorStop}
-              className="flex items-center gap-2 px-3 py-1 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors text-sm"
+              className="flex items-center gap-2 px-3 py-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors text-sm"
             >
               <Plus className="w-4 h-4" />
               {t('tools.gradientGenerator.addStop', 'Add Stop')}
@@ -383,7 +383,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
                       type="text"
                       value={stop.color}
                       onChange={(e) => updateColorStop(stop.id, 'color', e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white font-mono focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
+                      className="w-full px-3 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white font-mono focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -397,7 +397,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
                     onChange={(e) =>
                       updateColorStop(stop.id, 'position', Number(e.target.value))
                     }
-                    className="w-full px-3 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white text-center focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
+                    className="w-full px-3 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white text-center focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent"
                   />
                   <p className="text-xs text-gray-400 text-center mt-1">{t('tools.gradientGenerator.position', 'Position %')}</p>
                 </div>
@@ -443,7 +443,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
             onClick={copyToClipboard}
             className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-colors font-medium ${
               copied
-                ? 'bg-green-600 text-white' : t('tools.gradientGenerator.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                ? 'bg-green-600 text-white' : t('tools.gradientGenerator.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
             }`}
           >
             {copied ? (
@@ -470,7 +470,7 @@ export const GradientGeneratorTool: React.FC<GradientGeneratorToolProps> = ({
               <button
                 key={preset.name}
                 onClick={() => applyPreset(preset)}
-                className="group relative h-20 rounded-lg overflow-hidden border-2 border-gray-600 hover:border-[#0D9488] transition-colors"
+                className="group relative h-20 rounded-lg overflow-hidden border-2 border-gray-600 hover:border-[#6096B4] transition-colors"
                 style={{
                   background:
                     preset.type === 'linear'

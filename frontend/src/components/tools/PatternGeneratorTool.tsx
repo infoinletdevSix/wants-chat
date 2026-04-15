@@ -317,7 +317,7 @@ Style: ${typeLabel} pattern design, clean execution.`;
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="flex items-center gap-2 px-3 py-2 bg-[#0D9488] hover:bg-[#0D9488]/90 text-white rounded-lg text-sm disabled:opacity-50"
+                  className="flex items-center gap-2 px-3 py-2 bg-[#6096B4] hover:bg-[#6096B4]/90 text-white rounded-lg text-sm disabled:opacity-50"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.patternGenerator.save', 'Save')}

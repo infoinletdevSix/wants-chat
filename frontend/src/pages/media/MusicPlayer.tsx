@@ -220,7 +220,7 @@ const MusicPlayer: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -246,7 +246,7 @@ const MusicPlayer: React.FC = () => {
                   <div className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <button
                       onClick={togglePlay}
-                      className="p-6 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-2xl transform scale-110"
+                      className="p-6 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white shadow-2xl transform scale-110"
                     >
                       {isPlaying ? <Pause size={48} /> : <Play size={48} />}
                     </button>
@@ -277,7 +277,7 @@ const MusicPlayer: React.FC = () => {
                 {visualizerData.map((height, index) => (
                   <div
                     key={index}
-                    className="w-full bg-gradient-to-t from-cyan-500 to-teal-400 rounded-full transition-all duration-100"
+                    className="w-full bg-gradient-to-t from-cyan-500 to-primary-400 rounded-full transition-all duration-100"
                     style={{ height: `${height}%` }}
                   />
                 ))}
@@ -320,7 +320,7 @@ const MusicPlayer: React.FC = () => {
                   </button>
                   <button
                     onClick={togglePlay}
-                    className="p-5 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600 transition shadow-lg"
+                    className="p-5 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white hover:from-cyan-600 hover:to-primary-600 transition shadow-lg"
                   >
                     {isPlaying ? <Pause size={36} /> : <Play size={36} />}
                   </button>
@@ -396,7 +396,7 @@ const MusicPlayer: React.FC = () => {
                     onClick={() => playSong(song)}
                     className={`p-3 rounded-xl cursor-pointer transition ${
                       currentSong.id === song.id
-                        ? 'bg-gradient-to-r from-cyan-500/30 to-teal-500/30 border border-cyan-400'
+                        ? 'bg-gradient-to-r from-cyan-500/30 to-primary-500/30 border border-cyan-400'
                         : 'bg-white/5 hover:bg-white/10 border border-transparent'
                     }`}
                   >

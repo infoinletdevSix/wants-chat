@@ -576,9 +576,9 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.staffAssignment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.staffAssignment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -586,7 +586,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -645,7 +645,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.staffAssignment.estLaborCost', 'Est. Labor Cost')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(stats.totalEstimatedPay)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(stats.totalEstimatedPay)}</p>
             </div>
           </div>
 
@@ -661,7 +661,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -702,7 +702,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
               </div>
               <button
                 onClick={() => setShowAssignmentForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.staffAssignment.newAssignment', 'New Assignment')}
@@ -797,7 +797,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                       {assignmentForm.staffId && assignmentForm.shiftStart && assignmentForm.shiftEnd && (
                         <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                           <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.staffAssignment.estimatedPay', 'Estimated Pay')}</p>
-                          <p className="text-lg font-bold text-[#0D9488]">
+                          <p className="text-lg font-bold text-[#6096B4]">
                             {formatCurrency(calculateAssignmentPay(assignmentForm.staffId, assignmentForm.shiftStart, assignmentForm.shiftEnd).pay)}
                           </p>
                         </div>
@@ -808,7 +808,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                       <button onClick={resetAssignmentForm} className={`px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}>
                         {t('tools.staffAssignment.cancel', 'Cancel')}
                       </button>
-                      <button onClick={saveAssignment} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90">
+                      <button onClick={saveAssignment} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90">
                         <Save className="w-4 h-4" />
                         {editingAssignment ? t('tools.staffAssignment.update', 'Update') : t('tools.staffAssignment.create', 'Create')}
                       </button>
@@ -857,7 +857,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                           <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                             {assignment.shiftStart} - {assignment.shiftEnd}
                           </p>
-                          <p className="font-semibold text-[#0D9488]">{formatCurrency(assignment.estimatedPay)}</p>
+                          <p className="font-semibold text-[#6096B4]">{formatCurrency(assignment.estimatedPay)}</p>
                         </div>
                         <div className="flex gap-1">
                           {assignment.status === 'scheduled' && (
@@ -922,7 +922,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
               </div>
               <button
                 onClick={() => setShowStaffForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <UserPlus className="w-4 h-4" />
                 {t('tools.staffAssignment.addStaff', 'Add Staff')}
@@ -1055,7 +1055,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                             placeholder={t('tools.staffAssignment.addCertification', 'Add certification...')}
                             className={`flex-1 px-4 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'}`}
                           />
-                          <button onClick={addCertification} className="px-4 py-2 bg-[#0D9488] text-white rounded-lg">
+                          <button onClick={addCertification} className="px-4 py-2 bg-[#6096B4] text-white rounded-lg">
                             <Plus className="w-4 h-4" />
                           </button>
                         </div>
@@ -1078,7 +1078,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                             type="checkbox"
                             checked={staffForm.isActive}
                             onChange={(e) => setStaffForm({ ...staffForm, isActive: e.target.checked })}
-                            className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                            className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                           />
                           <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.staffAssignment.active', 'Active')}</span>
                         </label>
@@ -1089,7 +1089,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                       <button onClick={resetStaffForm} className={`px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}>
                         {t('tools.staffAssignment.cancel2', 'Cancel')}
                       </button>
-                      <button onClick={saveStaff} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90">
+                      <button onClick={saveStaff} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90">
                         <Save className="w-4 h-4" />
                         {editingStaff ? t('tools.staffAssignment.update2', 'Update') : t('tools.staffAssignment.addStaff2', 'Add Staff')}
                       </button>
@@ -1154,7 +1154,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
               <h2 className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.staffAssignment.events', 'Events')}</h2>
               <button
                 onClick={() => setShowEventForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.staffAssignment.addEvent', 'Add Event')}
@@ -1230,7 +1230,7 @@ export const StaffAssignmentTool: React.FC<StaffAssignmentToolProps> = ({
                       <button onClick={resetEventForm} className={`px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}>
                         {t('tools.staffAssignment.cancel3', 'Cancel')}
                       </button>
-                      <button onClick={saveEvent} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90">
+                      <button onClick={saveEvent} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90">
                         <Save className="w-4 h-4" />
                         {editingEvent ? t('tools.staffAssignment.update3', 'Update') : t('tools.staffAssignment.addEvent3', 'Add Event')}
                       </button>

@@ -675,7 +675,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Truck className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -689,9 +689,9 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
             </div>
             <div className="flex items-center gap-3">
               {isPrefilled && (
-                <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-                  <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-                  <span className="text-xs text-[#0D9488] font-medium">{t('tools.movingCompany.prefilled', 'Prefilled')}</span>
+                <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+                  <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+                  <span className="text-xs text-[#6096B4] font-medium">{t('tools.movingCompany.prefilled', 'Prefilled')}</span>
                 </div>
               )}
               <WidgetEmbedButton toolSlug="moving-company" toolName="Moving Company" />
@@ -738,7 +738,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.movingCompany.revenue', 'Revenue')}</div>
-              <div className="text-2xl font-bold text-[#0D9488]">${stats.totalRevenue.toLocaleString()}</div>
+              <div className="text-2xl font-bold text-[#6096B4]">${stats.totalRevenue.toLocaleString()}</div>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.movingCompany.avgRating', 'Avg Rating')}</div>
@@ -760,7 +760,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                   activeTab === tab.id
-                    ? 'border-[#0D9488] text-[#0D9488]'
+                    ? 'border-[#6096B4] text-[#6096B4]'
                     : `border-transparent ${theme === 'dark' ? 'text-gray-400 hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
                 }`}
               >
@@ -780,7 +780,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                   </h2>
                   <button
                     onClick={() => setShowJobForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.movingCompany.newJob', 'New Job')}
@@ -816,7 +816,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <input
                               type="tel"
@@ -827,7 +827,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <input
                               type="email"
@@ -838,7 +838,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                           </div>
                         </div>
@@ -858,7 +858,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <input
                               type="text"
@@ -869,7 +869,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <div className="flex gap-2">
                               <input
@@ -881,7 +881,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   theme === 'dark'
                                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                               <input
                                 type="text"
@@ -892,7 +892,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   theme === 'dark'
                                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                             </div>
                           </div>
@@ -913,7 +913,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <input
                               type="text"
@@ -924,7 +924,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <div className="flex gap-2">
                               <input
@@ -936,7 +936,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   theme === 'dark'
                                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                               <input
                                 type="text"
@@ -947,7 +947,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   theme === 'dark'
                                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                             </div>
                           </div>
@@ -967,7 +967,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <input
                               type="time"
@@ -977,7 +977,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                           </div>
                         </div>
@@ -990,7 +990,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                             </h4>
                             <button
                               onClick={() => setShowInventoryForm(true)}
-                              className="flex items-center gap-1 px-3 py-1 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                              className="flex items-center gap-1 px-3 py-1 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                             >
                               <Plus className="w-3 h-3" /> Add Item
                             </button>
@@ -1008,7 +1008,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                                 <input
                                   type="number"
@@ -1020,7 +1020,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                                 <select
                                   value={inventoryForm.room}
@@ -1029,7 +1029,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white'
                                       : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   {defaultRooms.map(room => (
                                     <option key={room} value={room}>{room}</option>
@@ -1047,7 +1047,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                                 <input
                                   type="text"
@@ -1058,14 +1058,14 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                                 <label className="flex items-center gap-2">
                                   <input
                                     type="checkbox"
                                     checked={inventoryForm.fragile}
                                     onChange={(e) => setInventoryForm(prev => ({ ...prev, fragile: e.target.checked }))}
-                                    className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                                    className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                                   />
                                   <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.movingCompany.fragile', 'Fragile')}</span>
                                 </label>
@@ -1073,7 +1073,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                               <div className="flex gap-2">
                                 <button
                                   onClick={addInventoryItem}
-                                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                                 >
                                   {t('tools.movingCompany.add', 'Add')}
                                 </button>
@@ -1135,7 +1135,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 key={crew.id}
                                 className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer ${
                                   (jobForm.assignedCrew || []).includes(crew.id)
-                                    ? 'bg-[#0D9488]/20 border-[#0D9488]'
+                                    ? 'bg-[#6096B4]/20 border-[#6096B4]'
                                     : theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
                                 } border`}
                               >
@@ -1155,7 +1155,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                       }));
                                     }
                                   }}
-                                  className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                                  className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                                 />
                                 <div>
                                   <div className={`text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1181,7 +1181,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 key={vehicle.id}
                                 className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer ${
                                   (jobForm.assignedVehicles || []).includes(vehicle.id)
-                                    ? 'bg-[#0D9488]/20 border-[#0D9488]'
+                                    ? 'bg-[#6096B4]/20 border-[#6096B4]'
                                     : theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
                                 } border`}
                               >
@@ -1201,7 +1201,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                       }));
                                     }
                                   }}
-                                  className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                                  className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                                 />
                                 <div>
                                   <div className={`text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1227,7 +1227,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 key={type}
                                 className={`flex items-start gap-3 p-3 rounded-lg cursor-pointer ${
                                   jobForm.insuranceType === type
-                                    ? 'bg-[#0D9488]/20 border-[#0D9488]'
+                                    ? 'bg-[#6096B4]/20 border-[#6096B4]'
                                     : theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
                                 } border`}
                               >
@@ -1236,7 +1236,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   name="insurance"
                                   checked={jobForm.insuranceType === type}
                                   onChange={() => setJobForm(prev => ({ ...prev, insuranceType: type as Job['insuranceType'] }))}
-                                  className="mt-1 w-4 h-4 text-[#0D9488] focus:ring-[#0D9488]"
+                                  className="mt-1 w-4 h-4 text-[#6096B4] focus:ring-[#6096B4]"
                                 />
                                 <div>
                                   <div className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1258,7 +1258,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   theme === 'dark'
                                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                             )}
                           </div>
@@ -1277,7 +1277,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             >
                               <option value="">{t('tools.movingCompany.noStorageNeeded', 'No storage needed')}</option>
                               {storageUnits.filter(u => u.available).map((unit) => (
@@ -1297,7 +1297,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-700 border-gray-600 text-white'
                                       : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                                 <input
                                   type="date"
@@ -1308,7 +1308,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                     theme === 'dark'
                                       ? 'bg-gray-700 border-gray-600 text-white'
                                       : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                             )}
@@ -1329,7 +1329,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                               theme === 'dark'
                                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
                           />
                         </div>
 
@@ -1377,7 +1377,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   )}
                                   <div className="border-t pt-2 mt-2 flex justify-between font-bold">
                                     <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{t('tools.movingCompany.total', 'Total:')}</span>
-                                    <span className="text-[#0D9488]">${pricing.totalPrice.toFixed(2)}</span>
+                                    <span className="text-[#6096B4]">${pricing.totalPrice.toFixed(2)}</span>
                                   </div>
                                 </div>
                               );
@@ -1397,7 +1397,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                         </button>
                         <button
                           onClick={saveJob}
-                          className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                          className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                         >
                           <Save className="w-4 h-4" />
                           {editingJob ? t('tools.movingCompany.updateJob', 'Update Job') : t('tools.movingCompany.createJob', 'Create Job')}
@@ -1565,7 +1565,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                               type="checkbox"
                                               checked={item.completed}
                                               onChange={() => toggleChecklistItem(job.id, item.id)}
-                                              className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                                              className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                                             />
                                             <span className={`text-sm ${item.completed ? 'line-through opacity-50' : ''} ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                                               {item.task}
@@ -1605,7 +1605,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                 </div>
                                 <div>
                                   <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.movingCompany.total2', 'Total')}</div>
-                                  <div className="font-bold text-[#0D9488]">${job.totalPrice.toFixed(2)}</div>
+                                  <div className="font-bold text-[#6096B4]">${job.totalPrice.toFixed(2)}</div>
                                 </div>
                               </div>
                             </div>
@@ -1619,7 +1619,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               >
                                 <option value="scheduled">{t('tools.movingCompany.scheduled2', 'Scheduled')}</option>
                                 <option value="in_progress">{t('tools.movingCompany.inProgress2', 'In Progress')}</option>
@@ -2027,7 +2027,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.movingCompany.howWasYourExperience', 'How was your experience?')}
                   />
                 </div>
@@ -2036,7 +2036,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                     type="checkbox"
                     checked={surveyForm.wouldRecommend}
                     onChange={(e) => setSurveyForm(prev => ({ ...prev, wouldRecommend: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.movingCompany.wouldRecommendToOthers', 'Would recommend to others')}</span>
                 </label>
@@ -2052,7 +2052,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={() => addSurvey(selectedJobId)}
-                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                 >
                   {t('tools.movingCompany.submitSurvey', 'Submit Survey')}
                 </button>
@@ -2081,7 +2081,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.movingCompany.whatWasDamaged', 'What was damaged?')}
                   />
                 </div>
@@ -2097,7 +2097,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.movingCompany.describeTheDamage', 'Describe the damage...')}
                   />
                 </div>
@@ -2113,7 +2113,7 @@ export const MovingCompanyTool: React.FC<MovingCompanyToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.movingCompany.valueOfItem', 'Value of item')}
                   />
                 </div>

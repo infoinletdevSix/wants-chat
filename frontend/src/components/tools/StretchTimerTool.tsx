@@ -691,7 +691,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                     </button>
                     <button
                       onClick={() => startRoutine(routine)}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
                     >
                       <Play className="w-4 h-4" />
                       {t('tools.stretchTimer.start', 'Start')}
@@ -782,7 +782,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -798,7 +798,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="flex gap-3">
@@ -816,7 +816,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="flex-1">
@@ -832,7 +832,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -841,7 +841,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
               disabled={!newStretch.name.trim()}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 newStretch.name.trim()
-                  ? 'bg-[#0D9488] hover:bg-[#0F766E] text-white'
+                  ? 'bg-[#6096B4] hover:bg-[#4C7F98] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
@@ -895,7 +895,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
           {customRoutine.stretches.length > 0 && (
             <button
               onClick={() => startRoutine(customRoutine)}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <Play className="w-5 h-5" />
               Start Custom Routine ({customRoutine.duration} min)
@@ -952,7 +952,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                   key={muscle}
                   className={`px-3 py-1 text-xs rounded-full ${
                     theme === 'dark'
-                      ? t('tools.stretchTimer.bg0d948820Text5eead4', 'bg-[#0D9488]/20 text-[#5EEAD4]') : t('tools.stretchTimer.bg0d948810Text0d9488', 'bg-[#0D9488]/10 text-[#0D9488]')
+                      ? t('tools.stretchTimer.bg0d948820Text5eead4', 'bg-[#6096B4]/20 text-[#93BFCF]') : t('tools.stretchTimer.bg0d948810Text0d9488', 'bg-[#6096B4]/10 text-[#6096B4]')
                   }`}
                 >
                   {muscle}
@@ -966,13 +966,13 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
             }`}>
               {/* Progress bar at top */}
               <div
-                className="absolute top-0 left-0 h-1 bg-[#0D9488] transition-all duration-1000"
+                className="absolute top-0 left-0 h-1 bg-[#6096B4] transition-all duration-1000"
                 style={{ width: `${getProgress()}%` }}
               />
 
               <div className={`text-7xl font-mono font-bold mb-2 ${
                 remainingSeconds <= 5
-                  ? 'text-[#0D9488] animate-pulse'
+                  ? 'text-[#6096B4] animate-pulse'
                   : theme === 'dark' ? 'text-white' : 'text-gray-900'
               }`}>
                 {formatTime(remainingSeconds)}
@@ -988,7 +988,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
                 onClick={togglePause}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-colors font-medium ${
                   isPaused
-                    ? t('tools.stretchTimer.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white') : 'bg-yellow-500 hover:bg-yellow-600 text-white'
+                    ? t('tools.stretchTimer.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white') : 'bg-yellow-500 hover:bg-yellow-600 text-white'
                 }`}
               >
                 {isPaused ? (
@@ -1070,7 +1070,7 @@ export const StretchTimerTool = ({ uiConfig }: StretchTimerToolProps) => {
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-[#0D9488] rounded-lg">
+        <div className="p-3 bg-[#6096B4] rounded-lg">
           {viewMode === 'active' ? (
             <Activity className="w-6 h-6 text-white" />
           ) : (

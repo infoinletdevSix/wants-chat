@@ -396,7 +396,7 @@ export const PetBoardingTool: React.FC<PetBoardingToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Home className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -452,7 +452,7 @@ export const PetBoardingTool: React.FC<PetBoardingToolProps> = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -477,7 +477,7 @@ export const PetBoardingTool: React.FC<PetBoardingToolProps> = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <select
@@ -496,7 +496,7 @@ export const PetBoardingTool: React.FC<PetBoardingToolProps> = ({
             </select>
             <button
               onClick={() => setShowForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.petBoarding.newReservation', 'New Reservation')}
@@ -971,7 +971,7 @@ export const PetBoardingTool: React.FC<PetBoardingToolProps> = ({
 
                   <button
                     onClick={addReservation}
-                    className="w-full py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors font-medium"
+                    className="w-full py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors font-medium"
                   >
                     {editingReservation ? t('tools.petBoarding.updateReservation', 'Update Reservation') : t('tools.petBoarding.createReservation', 'Create Reservation')}
                   </button>

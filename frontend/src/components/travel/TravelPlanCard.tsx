@@ -138,7 +138,7 @@ const TravelPlanCard: React.FC<TravelPlanCardProps> = ({ plan, onClick, classNam
               </div>
               <div className="w-full bg-white/10 rounded-full h-2">
                 <div
-                  className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full h-2 transition-all duration-300"
+                  className="bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full h-2 transition-all duration-300"
                   style={{
                     width: `${Math.min((plan.budget.spent / plan.budget.total) * 100, 100)}%`
                   }}

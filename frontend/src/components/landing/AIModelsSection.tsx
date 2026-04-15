@@ -32,7 +32,7 @@ const aiModels: AIModel[] = [
     provider: 'OpenAI',
     bestFor: 'All-rounder',
     bestForIcon: Sparkles,
-    gradient: 'from-emerald-500 to-teal-500',
+    gradient: 'from-emerald-500 to-primary-500',
     providerColor: 'text-emerald-400',
   },
   {
@@ -48,7 +48,7 @@ const aiModels: AIModel[] = [
     provider: 'OpenAI',
     bestFor: 'Fast & cheap',
     bestForIcon: Zap,
-    gradient: 'from-teal-500 to-cyan-500',
+    gradient: 'from-primary-500 to-cyan-500',
     providerColor: 'text-emerald-400',
   },
   {
@@ -56,7 +56,7 @@ const aiModels: AIModel[] = [
     provider: 'OpenAI',
     bestFor: 'Reasoning',
     bestForIcon: Calculator,
-    gradient: 'from-emerald-600 to-teal-600',
+    gradient: 'from-emerald-600 to-primary-600',
     providerColor: 'text-emerald-400',
   },
   {
@@ -244,7 +244,7 @@ const aiModels: AIModel[] = [
     provider: 'OpenAI',
     bestFor: 'Transcription',
     bestForIcon: MessageSquare,
-    gradient: 'from-teal-600 to-emerald-600',
+    gradient: 'from-primary-600 to-emerald-600',
     providerColor: 'text-emerald-400',
   },
 ];

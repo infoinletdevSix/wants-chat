@@ -678,8 +678,8 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
   }, [customers, searchTerm]);
 
   // Input styles
-  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
-  const selectClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
+  const selectClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
   const cardClass = `${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl border shadow-sm`;
 
@@ -770,7 +770,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                         </div>
                       </div>
                       {apt.isMobile && (
-                        <div className="flex items-center gap-1 text-[#0D9488]">
+                        <div className="flex items-center gap-1 text-[#6096B4]">
                           <Truck className="w-4 h-4" />
                           <span className="text-xs">{t('tools.autoDetailing.mobile', 'Mobile')}</span>
                         </div>
@@ -787,7 +787,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <button
           onClick={() => { setShowAppointmentForm(true); setActiveTab('appointments'); }}
-          className="p-4 rounded-xl bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+          className="p-4 rounded-xl bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
         >
           <Plus className="w-5 h-5" />
           {t('tools.autoDetailing.newAppointment', 'New Appointment')}
@@ -832,7 +832,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
         </div>
         <button
           onClick={() => setShowAppointmentForm(true)}
-          className="px-4 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center gap-2 hover:opacity-90 transition-opacity"
+          className="px-4 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center gap-2 hover:opacity-90 transition-opacity"
         >
           <Plus className="w-5 h-5" />
           {t('tools.autoDetailing.newAppointment2', 'New Appointment')}
@@ -903,12 +903,12 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{apt.time}</p>
                         </div>
                         <div className="text-right">
-                          <p className="font-medium text-[#0D9488]">{formatCurrency(apt.totalPrice - apt.discountApplied)}</p>
+                          <p className="font-medium text-[#6096B4]">{formatCurrency(apt.totalPrice - apt.discountApplied)}</p>
                           {apt.discountApplied > 0 && (
                             <p className="text-xs text-green-600">-{formatCurrency(apt.discountApplied)} discount</p>
                           )}
                         </div>
-                        {apt.isMobile && <Truck className="w-5 h-5 text-[#0D9488]" />}
+                        {apt.isMobile && <Truck className="w-5 h-5 text-[#6096B4]" />}
                         {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                       </div>
                     </div>
@@ -921,7 +921,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                              <Clock className="w-5 h-5 text-[#0D9488]" />
+                              <Clock className="w-5 h-5 text-[#6096B4]" />
                               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                                 Time: {formatTime(elapsed)}
                               </span>
@@ -968,7 +968,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                                   type="checkbox"
                                   checked={apt.completedChecklist.includes(item)}
                                   onChange={() => handleToggleChecklist(apt.id, item)}
-                                  className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                                  className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                                 />
                                 <span className={`text-sm ${apt.completedChecklist.includes(item) ? 'line-through text-gray-400' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                                   {item}
@@ -996,7 +996,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                       {/* Mobile Location */}
                       {apt.isMobile && apt.location && (
                         <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'} flex items-center gap-2`}>
-                          <MapPin className="w-4 h-4 text-[#0D9488]" />
+                          <MapPin className="w-4 h-4 text-[#6096B4]" />
                           <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{apt.location}</span>
                         </div>
                       )}
@@ -1060,7 +1060,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
         </div>
         <button
           onClick={() => setShowCustomerForm(true)}
-          className="px-4 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center gap-2 hover:opacity-90 transition-opacity"
+          className="px-4 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center gap-2 hover:opacity-90 transition-opacity"
         >
           <Plus className="w-5 h-5" />
           {t('tools.autoDetailing.addCustomer2', 'Add Customer')}
@@ -1135,7 +1135,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                     <div className="flex items-center gap-2">
                       <div className="text-right mr-4">
                         <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{customer.totalVisits} visits</p>
-                        <p className="font-medium text-[#0D9488]">{formatCurrency(customer.totalSpent)}</p>
+                        <p className="font-medium text-[#6096B4]">{formatCurrency(customer.totalSpent)}</p>
                       </div>
                       <button
                         onClick={() => { setEditingCustomer(customer); setShowCustomerForm(true); }}
@@ -1158,7 +1158,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                       <h4 className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.autoDetailing.vehicles', 'Vehicles')}</h4>
                       <button
                         onClick={() => { setSelectedCustomerId(customer.id); setShowVehicleForm(true); }}
-                        className="text-[#0D9488] text-sm flex items-center gap-1 hover:underline"
+                        className="text-[#6096B4] text-sm flex items-center gap-1 hover:underline"
                       >
                         <Plus className="w-3 h-3" /> Add Vehicle
                       </button>
@@ -1170,7 +1170,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                         {customerVehicles.map(vehicle => (
                           <div key={vehicle.id} className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'} flex items-center justify-between`}>
                             <div className="flex items-center gap-2">
-                              <Car className="w-4 h-4 text-[#0D9488]" />
+                              <Car className="w-4 h-4 text-[#6096B4]" />
                               <div>
                                 <p className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                                   {vehicle.year} {vehicle.make} {vehicle.model}
@@ -1232,7 +1232,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                 <div className="space-y-1">
                   {pkg.checklist.slice(0, 4).map((item, idx) => (
                     <div key={idx} className={`flex items-center gap-2 text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                      <CheckSquare className="w-3 h-3 text-[#0D9488]" />
+                      <CheckSquare className="w-3 h-3 text-[#6096B4]" />
                       {item}
                     </div>
                   ))}
@@ -1271,10 +1271,10 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
             <div key={addon.id} className={`${cardClass} p-4`}>
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#0D9488]" />
+                  <Sparkles className="w-4 h-4 text-[#6096B4]" />
                   <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{addon.name}</h4>
                 </div>
-                <span className="font-bold text-[#0D9488]">{formatCurrency(addon.price)}</span>
+                <span className="font-bold text-[#6096B4]">{formatCurrency(addon.price)}</span>
               </div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'} mb-2`}>{addon.description}</p>
               <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{formatTime(addon.estimatedTime)}</p>
@@ -1289,19 +1289,19 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
         <div className={`${cardClass} p-4`}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'} text-center`}>
-              <Percent className="w-8 h-8 mx-auto mb-2 text-[#0D9488]" />
+              <Percent className="w-8 h-8 mx-auto mb-2 text-[#6096B4]" />
               <p className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>3+ Visits</p>
-              <p className="text-2xl font-bold text-[#0D9488]">5% Off</p>
+              <p className="text-2xl font-bold text-[#6096B4]">5% Off</p>
             </div>
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'} text-center`}>
-              <Percent className="w-8 h-8 mx-auto mb-2 text-[#0D9488]" />
+              <Percent className="w-8 h-8 mx-auto mb-2 text-[#6096B4]" />
               <p className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>5+ Visits</p>
-              <p className="text-2xl font-bold text-[#0D9488]">10% Off</p>
+              <p className="text-2xl font-bold text-[#6096B4]">10% Off</p>
             </div>
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'} text-center`}>
-              <Percent className="w-8 h-8 mx-auto mb-2 text-[#0D9488]" />
+              <Percent className="w-8 h-8 mx-auto mb-2 text-[#6096B4]" />
               <p className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>10+ Visits</p>
-              <p className="text-2xl font-bold text-[#0D9488]">15% Off</p>
+              <p className="text-2xl font-bold text-[#6096B4]">15% Off</p>
             </div>
           </div>
         </div>
@@ -1435,11 +1435,11 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{pkg.name}</span>
-                      <span className="text-[#0D9488] font-medium">{formatCurrency(pkg.revenue)}</span>
+                      <span className="text-[#6096B4] font-medium">{formatCurrency(pkg.revenue)}</span>
                     </div>
                     <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-2 rounded-full bg-gradient-to-r from-[#0D9488] to-[#2DD4BF]"
+                        className="h-2 rounded-full bg-gradient-to-r from-[#6096B4] to-[#75AAC1]"
                         style={{ width: `${thisMonthRevenue > 0 ? (pkg.revenue / thisMonthRevenue) * 100 : 0}%` }}
                       />
                     </div>
@@ -1475,7 +1475,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{customer.name}</span>
                     </div>
                     <div className="text-right">
-                      <p className="font-medium text-[#0D9488]">{formatCurrency(customer.totalSpent)}</p>
+                      <p className="font-medium text-[#6096B4]">{formatCurrency(customer.totalSpent)}</p>
                       <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{customer.totalVisits} visits</p>
                     </div>
                   </div>
@@ -1590,7 +1590,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
     return (
       <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} p-8`}>
         <div className="flex items-center justify-center gap-3">
-          <Loader2 className="w-6 h-6 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-6 h-6 animate-spin text-[#6096B4]" />
           <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>{t('tools.autoDetailing.loadingAutoDetailingData', 'Loading auto detailing data...')}</span>
         </div>
       </div>
@@ -1600,11 +1600,11 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.autoDetailing.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.autoDetailing.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.autoDetailing.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.autoDetailing.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Car className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Car className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.autoDetailing.autoDetailingBusinessManager', 'Auto Detailing Business Manager')}</h3>
@@ -1646,7 +1646,7 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2 transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                     ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -1661,9 +1661,9 @@ export const AutoDetailingTool: React.FC<AutoDetailingToolProps> = ({ uiConfig }
 
       {/* Prefilled indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mx-4 mt-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.autoDetailing.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mx-4 mt-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.autoDetailing.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
         </div>
       )}
 
@@ -1768,7 +1768,7 @@ const CustomerForm: React.FC<CustomerFormProps> = ({ customer, onSave, onCancel,
         <button
           onClick={() => onSave(formData)}
           disabled={!formData.name}
-          className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 flex items-center gap-2"
         >
           <Save className="w-4 h-4" />
           {t('tools.autoDetailing.save', 'Save')}
@@ -1916,7 +1916,7 @@ const VehicleForm: React.FC<VehicleFormProps> = ({ vehicle, onSave, onCancel, is
         <button
           onClick={() => onSave(formData)}
           disabled={!formData.year || !formData.make || !formData.model}
-          className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 flex items-center gap-2"
         >
           <Save className="w-4 h-4" />
           {t('tools.autoDetailing.save2', 'Save')}
@@ -2045,7 +2045,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
               type="checkbox"
               checked={formData.isMobile}
               onChange={(e) => setFormData({ ...formData, isMobile: e.target.checked })}
-              className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+              className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
             />
             <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.autoDetailing.mobileService', 'Mobile Service')}</span>
           </label>
@@ -2073,7 +2073,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
               key={addon.id}
               className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer border ${
                 formData.addOnIds.includes(addon.id)
-                  ? 'border-[#0D9488] bg-[#0D9488]/10'
+                  ? 'border-[#6096B4] bg-[#6096B4]/10'
                   : isDark ? 'border-gray-600' : 'border-gray-200'
               }`}
             >
@@ -2081,11 +2081,11 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
                 type="checkbox"
                 checked={formData.addOnIds.includes(addon.id)}
                 onChange={() => toggleAddOn(addon.id)}
-                className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
               />
               <div className="flex-1 min-w-0">
                 <p className={`text-sm font-medium truncate ${isDark ? 'text-white' : 'text-gray-900'}`}>{addon.name}</p>
-                <p className="text-xs text-[#0D9488]">${addon.price}</p>
+                <p className="text-xs text-[#6096B4]">${addon.price}</p>
               </div>
             </label>
           ))}
@@ -2113,7 +2113,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
         <button
           onClick={() => onSave(formData)}
           disabled={!formData.customerId || !formData.vehicleId || !formData.packageId || !formData.date || !formData.time}
-          className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 flex items-center gap-2"
         >
           <Save className="w-4 h-4" />
           {appointment ? t('tools.autoDetailing.update', 'Update') : t('tools.autoDetailing.create', 'Create')} Appointment

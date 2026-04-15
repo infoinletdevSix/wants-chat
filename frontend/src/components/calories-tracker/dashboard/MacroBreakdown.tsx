@@ -80,8 +80,8 @@ const MacroBreakdown: React.FC<MacroBreakdownProps> = ({
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/20 rounded-lg">
-              <PieChart className="h-6 w-6 text-teal-400" />
+            <div className="p-2 bg-primary-500/20 rounded-lg">
+              <PieChart className="h-6 w-6 text-primary-400" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white">Macronutrients</h3>

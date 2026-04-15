@@ -126,7 +126,7 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
 
   const inputClass = `w-full p-3 rounded-lg border ${
     isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:ring-2 focus:ring-[#6096B4]`;
 
   const cardClass = `p-4 rounded-lg ${isDark ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
@@ -141,7 +141,7 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -149,7 +149,7 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Music className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -162,15 +162,15 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.musicVenue.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.musicVenue.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><Calendar className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><Calendar className="w-6 h-6 text-[#6096B4]" /></div>
           <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.musicVenue.totalEvents', 'Total Events')}</p>
             <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{events.length}</p></div>
         </div>
@@ -211,7 +211,7 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
           theme={isDark ? 'dark' : 'light'}
         />
         <button onClick={() => setShowForm(!showForm)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
           <Plus className="w-5 h-5" />Add Event
         </button>
       </div>
@@ -232,7 +232,7 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
               onChange={(e) => setFormData({ ...formData, capacity: parseInt(e.target.value) })} className={inputClass} />
           </div>
           <button onClick={handleAddEvent} disabled={!formData.artist || !formData.date}
-            className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">{t('tools.musicVenue.saveEvent', 'Save Event')}</button>
+            className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">{t('tools.musicVenue.saveEvent', 'Save Event')}</button>
         </div>
       )}
 
@@ -257,15 +257,15 @@ export const MusicVenueTool: React.FC<MusicVenueToolProps> = ({ uiConfig }) => {
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-[#0D9488]">${e.ticketPrice}</span>
+                <span className="font-bold text-[#6096B4]">${e.ticketPrice}</span>
                 <button onClick={() => sellTickets(e.id, 10)} disabled={e.ticketsSold >= e.capacity}
-                  className="text-sm px-3 py-1 bg-[#0D9488] text-white rounded hover:bg-[#0B8276] disabled:opacity-50">
+                  className="text-sm px-3 py-1 bg-[#6096B4] text-white rounded hover:bg-[#0B8276] disabled:opacity-50">
                   {t('tools.musicVenue.10Tickets', '+10 Tickets')}
                 </button>
               </div>
             </div>
             <div className="mt-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-              <div className="bg-[#0D9488] h-2 rounded-full" style={{ width: `${(e.ticketsSold / e.capacity) * 100}%` }} />
+              <div className="bg-[#6096B4] h-2 rounded-full" style={{ width: `${(e.ticketsSold / e.capacity) * 100}%` }} />
             </div>
           </div>
         ))}

@@ -97,10 +97,10 @@ export const HomeEquityCalculatorTool: React.FC<HomeEquityCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Home className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Home className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.homeEquityCalculator.homeEquityCalculator', 'Home Equity Calculator')}</h3>
@@ -111,9 +111,9 @@ export const HomeEquityCalculatorTool: React.FC<HomeEquityCalculatorToolProps> =
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.homeEquityCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.homeEquityCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -205,13 +205,13 @@ export const HomeEquityCalculatorTool: React.FC<HomeEquityCalculatorToolProps> =
         </div>
 
         {/* Current Equity Summary */}
-        <div className={`p-6 rounded-xl ${calculations.isPositiveEquity ? (isDark ? t('tools.homeEquityCalculator.bg0d948820Border0d9488', 'bg-[#0D9488]/20 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
+        <div className={`p-6 rounded-xl ${calculations.isPositiveEquity ? (isDark ? t('tools.homeEquityCalculator.bg0d948820Border0d9488', 'bg-[#6096B4]/20 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
           <div className="text-center mb-4">
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.homeEquityCalculator.yourCurrentHomeEquity', 'Your Current Home Equity')}</div>
-            <div className={`text-4xl font-bold ${calculations.isPositiveEquity ? t('tools.homeEquityCalculator.text0d9488', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-4xl font-bold ${calculations.isPositiveEquity ? t('tools.homeEquityCalculator.text0d9488', 'text-[#6096B4]') : 'text-red-500'}`}>
               {formatCurrency(calculations.currentEquity)}
             </div>
-            <div className={`text-lg ${calculations.isPositiveEquity ? t('tools.homeEquityCalculator.text0d94882', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-lg ${calculations.isPositiveEquity ? t('tools.homeEquityCalculator.text0d94882', 'text-[#6096B4]') : 'text-red-500'}`}>
               {calculations.equityPercentage.toFixed(1)}% equity
             </div>
           </div>
@@ -221,7 +221,7 @@ export const HomeEquityCalculatorTool: React.FC<HomeEquityCalculatorToolProps> =
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.homeEquityCalculator.loanToValueLtv', 'Loan-to-Value (LTV)')}</div>
-            <div className={`text-2xl font-bold ${calculations.ltvRatio > 80 ? 'text-amber-500' : t('tools.homeEquityCalculator.text0d94883', 'text-[#0D9488]')}`}>
+            <div className={`text-2xl font-bold ${calculations.ltvRatio > 80 ? 'text-amber-500' : t('tools.homeEquityCalculator.text0d94883', 'text-[#6096B4]')}`}>
               {calculations.ltvRatio.toFixed(1)}%
             </div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -239,17 +239,17 @@ export const HomeEquityCalculatorTool: React.FC<HomeEquityCalculatorToolProps> =
         {/* Borrowable Equity */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <PiggyBank className="w-5 h-5 text-[#0D9488]" />
+            <PiggyBank className="w-5 h-5 text-[#6096B4]" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.homeEquityCalculator.borrowableEquity', 'Borrowable Equity')}</h4>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.homeEquityCalculator.at80Ltv', 'At 80% LTV')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{formatCurrency(calculations.maxBorrowableAt80)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">{formatCurrency(calculations.maxBorrowableAt80)}</div>
             </div>
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.homeEquityCalculator.at85Ltv', 'At 85% LTV')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{formatCurrency(calculations.maxBorrowableAt85)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">{formatCurrency(calculations.maxBorrowableAt85)}</div>
             </div>
           </div>
         </div>
@@ -275,7 +275,7 @@ export const HomeEquityCalculatorTool: React.FC<HomeEquityCalculatorToolProps> =
                     <td className="py-2">{row.year === 0 ? 'Now' : `Year ${row.year}`}</td>
                     <td className="text-right py-2">{formatCurrency(row.homeValue)}</td>
                     <td className="text-right py-2">{formatCurrency(row.mortgage)}</td>
-                    <td className="text-right py-2 text-[#0D9488] font-medium">{formatCurrency(row.equity)}</td>
+                    <td className="text-right py-2 text-[#6096B4] font-medium">{formatCurrency(row.equity)}</td>
                   </tr>
                 ))}
               </tbody>

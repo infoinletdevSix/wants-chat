@@ -248,11 +248,11 @@ Make the story immersive and emotionally resonant.`;
     }`}>
       {/* Header */}
       <div className={`px-6 py-4 border-b ${
-        isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gradient-to-r from-white to-[#0D9488]/5 border-gray-100'
+        isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gradient-to-r from-white to-[#6096B4]/5 border-gray-100'
       }`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <BookOpen className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <BookOpen className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -262,7 +262,7 @@ Make the story immersive and emotionally resonant.`;
               {t('tools.storyGenerator.description')}
             </p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>
                   {isEditFromGallery
@@ -286,7 +286,7 @@ Make the story immersive and emotionally resonant.`;
             <select
               value={genre}
               onChange={(e) => setGenre(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -308,7 +308,7 @@ Make the story immersive and emotionally resonant.`;
             <select
               value={storyLength}
               onChange={(e) => setStoryLength(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -334,7 +334,7 @@ Make the story immersive and emotionally resonant.`;
             value={character}
             onChange={(e) => setCharacter(e.target.value)}
             placeholder={t('tools.storyGenerator.mainCharacterPlaceholder')}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
@@ -353,7 +353,7 @@ Make the story immersive and emotionally resonant.`;
             value={setting}
             onChange={(e) => setSetting(e.target.value)}
             placeholder={t('tools.storyGenerator.settingPlaceholder')}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
@@ -371,7 +371,7 @@ Make the story immersive and emotionally resonant.`;
             onChange={(e) => setPlotElements(e.target.value)}
             placeholder={t('tools.storyGenerator.plotElementsPlaceholder')}
             rows={2}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none ${
+            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
@@ -387,7 +387,7 @@ Make the story immersive and emotionally resonant.`;
           <select
             value={writingStyle}
             onChange={(e) => setWritingStyle(e.target.value)}
-            className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
@@ -416,7 +416,7 @@ Make the story immersive and emotionally resonant.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !character.trim() || !setting.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -464,7 +464,7 @@ Make the story immersive and emotionally resonant.`;
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#2DD4BF] transition-all flex items-center gap-2 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#75AAC1] transition-all flex items-center gap-2 disabled:opacity-50"
                 >
                   {isSaving ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -479,7 +479,7 @@ Make the story immersive and emotionally resonant.`;
               value={generatedStory}
               onChange={(e) => setGeneratedStory(e.target.value)}
               rows={15}
-              className={`w-full p-4 border rounded-xl leading-relaxed focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all resize-y ${
+              className={`w-full p-4 border rounded-xl leading-relaxed focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none transition-all resize-y ${
                 isDark
                   ? 'bg-gray-900 border-gray-700 text-gray-300'
                   : 'bg-gray-50 border-gray-200 text-gray-800'

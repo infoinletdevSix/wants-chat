@@ -84,9 +84,9 @@ export const Base64Tool = ({ uiConfig }: Base64ToolProps) => {
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.base64.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.base64.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
           </div>
         )}
 
@@ -106,7 +106,7 @@ export const Base64Tool = ({ uiConfig }: Base64ToolProps) => {
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
           />
         </div>
 
@@ -122,14 +122,14 @@ export const Base64Tool = ({ uiConfig }: Base64ToolProps) => {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleEncode}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <ArrowRight className="w-4 h-4" />
             {t('tools.base64.encodeToBase64', 'Encode to Base64')}
           </button>
           <button
             onClick={handleDecode}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('tools.base64.decodeFromBase64', 'Decode from Base64')}

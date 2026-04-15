@@ -547,7 +547,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
   if (isLoading) {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -559,7 +559,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 print:shadow-none`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg print:bg-gray-200">
+              <div className="p-3 bg-[#6096B4] rounded-lg print:bg-gray-200">
                 <Receipt className="w-6 h-6 text-white print:text-gray-800" />
               </div>
               <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -618,7 +618,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -635,7 +635,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {STATUSES.map(s => (
                     <option key={s} value={s}>
@@ -663,7 +663,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -682,7 +682,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -702,7 +702,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -722,7 +722,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -747,7 +747,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -762,7 +762,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {CATEGORIES.map(cat => (
                   <option key={cat} value={cat}>
@@ -789,7 +789,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -805,7 +805,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {PAYMENT_METHODS.map(pm => (
                   <option key={pm} value={pm}>
@@ -828,7 +828,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -845,7 +845,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -853,7 +853,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
           <div className="flex gap-3">
             <button
               onClick={handleAddExpense}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               {editingExpenseId ? <Edit2 className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
               {editingExpenseId ? t('tools.expenseReport.updateExpense', 'Update Expense') : t('tools.expenseReport.addExpense2', 'Add Expense')}
@@ -886,7 +886,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
               <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 Expenses ({expenses.length})
               </h2>
-              <div className={`text-lg font-bold ${isDark ? t('tools.expenseReport.text0d9488', 'text-[#0D9488]') : t('tools.expenseReport.text0d94882', 'text-[#0D9488]')}`}>
+              <div className={`text-lg font-bold ${isDark ? t('tools.expenseReport.text0d9488', 'text-[#6096B4]') : t('tools.expenseReport.text0d94882', 'text-[#6096B4]')}`}>
                 Running Total: ${grandTotal.toFixed(2)}
               </div>
             </div>
@@ -1023,11 +1023,11 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
               <div className="space-y-4">
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.expenseReport.totalExpenses', 'Total Expenses')}</div>
-                  <div className="text-3xl font-bold text-[#0D9488]">{expenses.length}</div>
+                  <div className="text-3xl font-bold text-[#6096B4]">{expenses.length}</div>
                 </div>
-                <div className={`p-4 rounded-lg border-2 border-[#0D9488] ${isDark ? 'bg-gray-700' : t('tools.expenseReport.bg0d948810', 'bg-[#0D9488]/10')}`}>
+                <div className={`p-4 rounded-lg border-2 border-[#6096B4] ${isDark ? 'bg-gray-700' : t('tools.expenseReport.bg0d948810', 'bg-[#6096B4]/10')}`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.expenseReport.grandTotal', 'Grand Total')}</div>
-                  <div className="text-4xl font-bold text-[#0D9488]">${grandTotal.toFixed(2)}</div>
+                  <div className="text-4xl font-bold text-[#6096B4]">${grandTotal.toFixed(2)}</div>
                 </div>
 
                 {/* Text-based pie chart representation */}
@@ -1074,7 +1074,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             <button
               onClick={handleSaveReport}
-              className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Save className="w-5 h-5" />
               {t('tools.expenseReport.saveDraft', 'Save Draft')}
@@ -1155,7 +1155,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                       key={report.id}
                       className={`p-4 rounded-lg border ${
                         currentReportId === report.id
-                          ? 'border-[#0D9488] bg-[#0D9488]/10'
+                          ? 'border-[#6096B4] bg-[#6096B4]/10'
                           : isDark
                           ? 'border-gray-700 bg-gray-700/50'
                           : 'border-gray-200 bg-gray-50'
@@ -1174,7 +1174,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                               {report.status}
                             </span>
                             {currentReportId === report.id && (
-                              <span className="px-2 py-0.5 rounded text-xs font-medium bg-[#0D9488] text-white">
+                              <span className="px-2 py-0.5 rounded text-xs font-medium bg-[#6096B4] text-white">
                                 {t('tools.expenseReport.current', 'Current')}
                               </span>
                             )}
@@ -1186,7 +1186,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                             {' | '}
                             {report.expenses.length} expense{report.expenses.length !== 1 ? 's' : ''}
                             {' | '}
-                            <span className="font-medium text-[#0D9488]">${total.toFixed(2)}</span>
+                            <span className="font-medium text-[#6096B4]">${total.toFixed(2)}</span>
                           </div>
                           <div className={`text-xs mt-1 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                             Updated: {new Date(report.updatedAt).toLocaleString()}
@@ -1195,7 +1195,7 @@ export const ExpenseReportTool: React.FC<ExpenseReportToolProps> = ({ uiConfig, 
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => handleLoadReport(report)}
-                            className="px-3 py-1.5 rounded text-sm font-medium bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                            className="px-3 py-1.5 rounded text-sm font-medium bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
                           >
                             {t('tools.expenseReport.load', 'Load')}
                           </button>

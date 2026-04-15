@@ -437,7 +437,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
           </div>
         )}
         {apt.reminders && (
-          <div className={`mt-1 flex items-center gap-1 text-xs ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+          <div className={`mt-1 flex items-center gap-1 text-xs ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
             <Bell className="w-3 h-3" />
             {t('tools.appointmentScheduler.reminderSet', 'Reminder set')}
           </div>
@@ -470,7 +470,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
         <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-cyan-500 to-primary-500 rounded-xl">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -549,7 +549,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
               {/* New Appointment Button */}
               <button
                 onClick={() => openNewAppointment()}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all shadow-lg shadow-cyan-500/20"
+                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all shadow-lg shadow-cyan-500/20"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.appointmentScheduler.newAppointment', 'New Appointment')}
@@ -1078,7 +1078,7 @@ export const AppointmentSchedulerTool: React.FC<AppointmentSchedulerToolProps> =
                   <button
                     onClick={handleSave}
                     disabled={!formData.title || !formData.date || !formData.startTime || !formData.endTime}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Save className="w-4 h-4" />
                     {editingAppointment ? t('tools.appointmentScheduler.update', 'Update') : t('tools.appointmentScheduler.create', 'Create')}

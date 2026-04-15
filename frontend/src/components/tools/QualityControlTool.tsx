@@ -894,7 +894,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
   if (isLoading) {
     return (
       <div className={`min-h-screen flex items-center justify-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -915,7 +915,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
         <div className="flex flex-wrap gap-2">
@@ -926,7 +926,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="">{t('tools.qualityControl.allResults', 'All Results')}</option>
             <option value="pass">{t('tools.qualityControl.pass', 'Pass')}</option>
@@ -941,7 +941,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="">{t('tools.qualityControl.allProducts', 'All Products')}</option>
             {products.map(prod => (
@@ -957,7 +957,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
           <input
             type="date"
@@ -968,7 +968,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
       </div>
@@ -984,7 +984,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                 resetInspectionForm();
                 setShowInspectionModal(true);
               }}
-              className="mt-4 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+              className="mt-4 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
             >
               {t('tools.qualityControl.createFirstInspection', 'Create First Inspection')}
             </button>
@@ -1228,7 +1228,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
             resetProductForm();
             setShowProductModal(true);
           }}
-          className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
           {t('tools.qualityControl.addProduct', 'Add Product')}
@@ -1301,7 +1301,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className={`p-4 rounded-xl ${theme === 'dark' ? 'bg-gray-800/50 border border-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <ClipboardCheck className="w-5 h-5 text-[#0D9488]" />
+            <ClipboardCheck className="w-5 h-5 text-[#6096B4]" />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.qualityControl.totalInspections', 'Total Inspections')}</span>
           </div>
           <p className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{metrics.totalInspections}</p>
@@ -1393,8 +1393,8 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#0D9488]/20 rounded-xl">
-              <ClipboardCheck className="w-8 h-8 text-[#0D9488]" />
+            <div className="p-3 bg-[#6096B4]/20 rounded-xl">
+              <ClipboardCheck className="w-8 h-8 text-[#6096B4]" />
             </div>
             <div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.qualityControl.qualityControl', 'Quality Control')}</h1>
@@ -1430,7 +1430,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                 resetInspectionForm();
                 setShowInspectionModal(true);
               }}
-              className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg flex items-center gap-2 transition-colors"
+              className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg flex items-center gap-2 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.qualityControl.newInspection', 'New Inspection')}
@@ -1480,7 +1480,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-3 font-medium text-sm capitalize transition-colors ${
                 activeTab === tab
-                  ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                  ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                   : theme === 'dark'
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-600 hover:text-gray-900'
@@ -1527,7 +1527,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       list="products-list"
                     />
                     <datalist id="products-list">
@@ -1546,7 +1546,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1559,7 +1559,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1572,7 +1572,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1584,7 +1584,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                     <button
                       type="button"
                       onClick={addChecklistItem}
-                      className="text-sm text-[#0D9488] hover:text-[#0F766E]"
+                      className="text-sm text-[#6096B4] hover:text-[#4C7F98]"
                     >
                       {t('tools.qualityControl.addItem', '+ Add Item')}
                     </button>
@@ -1609,7 +1609,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                           />
                           <div className="flex gap-1">
                             <button
@@ -1644,7 +1644,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                             theme === 'dark'
                               ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                               : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                          } focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                         />
                       </div>
                     ))}
@@ -1660,7 +1660,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="pending_review">{t('tools.qualityControl.pendingReview3', 'Pending Review')}</option>
                     <option value="pass">{t('tools.qualityControl.pass2', 'Pass')}</option>
@@ -1679,7 +1679,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1696,7 +1696,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                   </button>
                   <button
                     onClick={handleSaveInspection}
-                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg flex items-center gap-2"
+                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg flex items-center gap-2"
                   >
                     <Save className="w-4 h-4" />
                     {editingInspection ? t('tools.qualityControl.update', 'Update') : t('tools.qualityControl.create', 'Create')} Inspection
@@ -1737,7 +1737,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1750,7 +1750,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1762,7 +1762,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="critical">{t('tools.qualityControl.critical', 'Critical')}</option>
                     <option value="major">{t('tools.qualityControl.major', 'Major')}</option>
@@ -1781,7 +1781,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="flex justify-end gap-3 pt-4">
@@ -1798,7 +1798,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                   </button>
                   <button
                     onClick={handleSaveDefect}
-                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     {t('tools.qualityControl.saveDefect', 'Save Defect')}
                   </button>
@@ -1837,7 +1837,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1850,7 +1850,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1863,7 +1863,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1876,7 +1876,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="flex justify-end gap-3 pt-4">
@@ -1892,7 +1892,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                   </button>
                   <button
                     onClick={handleSaveProduct}
-                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     {t('tools.qualityControl.saveProduct', 'Save Product')}
                   </button>
@@ -1933,7 +1933,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1946,7 +1946,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1959,7 +1959,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1972,7 +1972,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1984,7 +1984,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="open">{t('tools.qualityControl.open2', 'Open')}</option>
                     <option value="in_progress">{t('tools.qualityControl.inProgress2', 'In Progress')}</option>
@@ -2007,7 +2007,7 @@ export const QualityControlTool: React.FC<QualityControlToolProps> = ({ uiConfig
                   </button>
                   <button
                     onClick={handleSaveAction}
-                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     {t('tools.qualityControl.saveAction', 'Save Action')}
                   </button>

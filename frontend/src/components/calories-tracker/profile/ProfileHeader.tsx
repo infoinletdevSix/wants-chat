@@ -38,14 +38,14 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
     <Card className="p-6 bg-white/5 border border-white/10">
       <div className="flex items-center gap-6">
         <div className="relative">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border-2 border-teal-400/30 flex items-center justify-center overflow-hidden">
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border-2 border-primary-400/30 flex items-center justify-center overflow-hidden">
             {photo ? (
               <img src={photo} alt="Profile" className="w-full h-full object-cover" />
             ) : (
-              <Icon path={mdiAccount} size={2} className="text-teal-400" />
+              <Icon path={mdiAccount} size={2} className="text-primary-400" />
             )}
           </div>
-          <label htmlFor="photo-upload" className="absolute bottom-0 right-0 p-1.5 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full cursor-pointer hover:from-teal-600 hover:to-cyan-600 transition-colors">
+          <label htmlFor="photo-upload" className="absolute bottom-0 right-0 p-1.5 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full cursor-pointer hover:from-primary-600 hover:to-cyan-600 transition-colors">
             <Icon path={mdiCamera} size={0.6} className="text-white" />
             <input
               id="photo-upload"
@@ -72,7 +72,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               Member since {formatJoinDate(joinDate)}
             </Badge>
             {dietPlan && (
-              <Badge className="bg-teal-500/20 text-teal-400 border border-teal-500/30">
+              <Badge className="bg-primary-500/20 text-primary-400 border border-primary-500/30">
                 {dietPlan}
               </Badge>
             )}

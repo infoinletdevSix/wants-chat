@@ -30,7 +30,7 @@ export const PublicRecipeCard: React.FC<PublicRecipeCardProps> = ({ recipe }) =>
 
   return (
     <div
-      className="cursor-pointer rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-500/40 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-300 overflow-hidden group"
+      className="cursor-pointer rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 overflow-hidden group"
       onClick={() => navigate(`/recipe-builder/recipe/${recipe.id}`)}
     >
       <div className="h-48 relative overflow-hidden">
@@ -41,8 +41,8 @@ export const PublicRecipeCard: React.FC<PublicRecipeCardProps> = ({ recipe }) =>
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-teal-500/20 to-cyan-500/10 flex items-center justify-center">
-            <ChefHat className="h-16 w-16 text-teal-400" />
+          <div className="w-full h-full bg-gradient-to-br from-primary-500/20 to-cyan-500/10 flex items-center justify-center">
+            <ChefHat className="h-16 w-16 text-primary-400" />
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -107,7 +107,7 @@ export const PublicRecipeCard: React.FC<PublicRecipeCardProps> = ({ recipe }) =>
             {(recipe.tags || []).slice(0, 2).map(tag => (
               <Badge
                 key={tag}
-                className="text-xs px-2 py-1 bg-teal-500/20 text-teal-300 border border-teal-500/30"
+                className="text-xs px-2 py-1 bg-primary-500/20 text-primary-300 border border-primary-500/30"
               >
                 {tag}
               </Badge>

@@ -743,7 +743,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
       }}
       className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
         activeTab === id
-          ? 'bg-[#0D9488] text-white'
+          ? 'bg-[#6096B4] text-white'
           : theme === 'dark'
           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -775,7 +775,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
           theme === 'dark'
             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
       />
     </div>
   );
@@ -798,7 +798,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
           theme === 'dark'
             ? 'bg-gray-700 border-gray-600 text-white'
             : 'bg-white border-gray-300 text-gray-900'
-        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
       >
         <option value="">Select...</option>
         {options.map((opt) => (
@@ -830,7 +830,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
           theme === 'dark'
             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-        } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+        } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
       />
     </div>
   );
@@ -842,7 +842,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -939,9 +939,9 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.phoneRepair.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.phoneRepair.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
             </div>
           )}
 
@@ -998,7 +998,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <select
@@ -1008,7 +1008,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="all">{t('tools.phoneRepair.allStatus', 'All Status')}</option>
                     {repairStatuses.map((s) => (
@@ -1021,7 +1021,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     setShowForm(!showForm);
                     setRepairForm({});
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.phoneRepair.newRepair', 'New Repair')}
@@ -1051,7 +1051,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                             type="checkbox"
                             checked={repairForm.dataBackupAcknowledged || false}
                             onChange={(e) => setRepairForm({ ...repairForm, dataBackupAcknowledged: e.target.checked })}
-                            className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                            className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                           />
                           <span className={`text-sm font-medium ${theme === 'dark' ? 'text-yellow-200' : 'text-yellow-800'}`}>
                             {t('tools.phoneRepair.customerAcknowledgesDataBackupDisclaimer', 'Customer acknowledges data backup disclaimer')}
@@ -1161,7 +1161,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     <button
                       onClick={addRepairJob}
                       disabled={!repairForm.customerId || !repairForm.deviceMake || !repairForm.deviceModel}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.phoneRepair.createRepairTicket', 'Create Repair Ticket')}
@@ -1373,7 +1373,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                                         select.value = '';
                                       }
                                     }}
-                                    className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                                    className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                                   >
                                     {t('tools.phoneRepair.add', 'Add')}
                                   </button>
@@ -1521,7 +1521,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     setShowForm(!showForm);
                     setCustomerForm({});
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.phoneRepair.addCustomer', 'Add Customer')}
@@ -1546,7 +1546,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     <button
                       onClick={addCustomer}
                       disabled={!customerForm.name || !customerForm.phone}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.phoneRepair.saveCustomer', 'Save Customer')}
@@ -1611,7 +1611,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                           <div className="flex gap-2 mt-4">
                             <button
                               onClick={() => updateCustomer(customer.id)}
-                              className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                              className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                             >
                               {t('tools.phoneRepair.save', 'Save')}
                             </button>
@@ -1646,7 +1646,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     setShowForm(!showForm);
                     setPartForm({});
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.phoneRepair.addPart', 'Add Part')}
@@ -1687,7 +1687,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     <button
                       onClick={addPart}
                       disabled={!partForm.name || !partForm.sku}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.phoneRepair.savePart', 'Save Part')}
@@ -1773,7 +1773,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     setShowForm(!showForm);
                     setOrderForm({});
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.phoneRepair.newOrder', 'New Order')}
@@ -1799,7 +1799,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     <button
                       onClick={addPartOrder}
                       disabled={!orderForm.partId || !orderForm.quantity}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.phoneRepair.createOrder', 'Create Order')}
@@ -1871,7 +1871,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     setShowForm(!showForm);
                     setTradeInForm({});
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.phoneRepair.newTradeIn', 'New Trade-in')}
@@ -1903,7 +1903,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     <button
                       onClick={addTradeIn}
                       disabled={!tradeInForm.customerId || !tradeInForm.deviceMake || !tradeInForm.deviceModel}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.phoneRepair.createTradeIn', 'Create Trade-in')}
@@ -1989,7 +1989,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     setShowForm(!showForm);
                     setAccessoryForm({});
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.phoneRepair.addAccessory', 'Add Accessory')}
@@ -2021,7 +2021,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                     <button
                       onClick={addAccessory}
                       disabled={!accessoryForm.name || !accessoryForm.sku}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.phoneRepair.saveAccessory', 'Save Accessory')}
@@ -2073,7 +2073,7 @@ export const PhoneRepairTool: React.FC<PhoneRepairToolProps> = ({
                               disabled={acc.quantity === 0}
                               className={`px-3 py-1 rounded text-sm font-medium ${
                                 acc.quantity > 0
-                                  ? t('tools.phoneRepair.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white') : 'bg-gray-400 text-gray-200 cursor-not-allowed'
+                                  ? t('tools.phoneRepair.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white') : 'bg-gray-400 text-gray-200 cursor-not-allowed'
                               }`}
                             >
                               {t('tools.phoneRepair.sell2', 'Sell')}

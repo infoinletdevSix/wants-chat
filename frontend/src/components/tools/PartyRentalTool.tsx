@@ -844,7 +844,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
   const tabClass = (tab: string) =>
     `px-4 py-2 rounded-lg font-medium transition-all ${
       activeTab === tab
-        ? 'bg-[#0D9488] text-white'
+        ? 'bg-[#6096B4] text-white'
         : isDark
         ? 'text-gray-400 hover:text-white hover:bg-gray-700'
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -854,13 +854,13 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const selectClass = `w-full px-4 py-2.5 border ${
     isDark
       ? 'border-gray-600 bg-gray-700 text-white'
       : 'border-gray-200 bg-white text-gray-900'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const labelClass = `block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-1`;
 
@@ -870,7 +870,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
       <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${
         isDark ? 'border-gray-700' : 'border-gray-200'
       } flex items-center justify-center h-64`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -884,13 +884,13 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
       {/* Header */}
       <div
         className={`bg-gradient-to-r ${
-          isDark ? t('tools.partyRental.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.partyRental.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')
+          isDark ? t('tools.partyRental.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.partyRental.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')
         } px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}
       >
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <PartyPopper className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <PartyPopper className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -982,9 +982,9 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
       <div className="p-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.partyRental.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.partyRental.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
           </div>
         )}
 
@@ -1040,7 +1040,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                   });
                   setShowInventoryModal(true);
                 }}
-                className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0D9488]/90 transition-colors flex items-center gap-2"
+                className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#6096B4]/90 transition-colors flex items-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.partyRental.addItem', 'Add Item')}
@@ -1049,7 +1049,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
 
             {/* Season indicator */}
             <div className={`flex items-center gap-2 px-4 py-2 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-              {React.createElement(SEASON_ICONS[currentSeason], { className: 'w-4 h-4 text-[#0D9488]' })}
+              {React.createElement(SEASON_ICONS[currentSeason], { className: 'w-4 h-4 text-[#6096B4]' })}
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 Current Season: <span className="font-medium capitalize">{currentSeason}</span> - Prices shown reflect seasonal rates
               </span>
@@ -1070,7 +1070,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex items-center gap-2">
                         <div className={`p-2 rounded-lg ${isDark ? 'bg-gray-600' : 'bg-white'}`}>
-                          <CategoryIcon className="w-4 h-4 text-[#0D9488]" />
+                          <CategoryIcon className="w-4 h-4 text-[#6096B4]" />
                         </div>
                         <div>
                           <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1114,7 +1114,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                       </div>
                       <div>
                         <span className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.partyRental.price', 'Price:')}</span>
-                        <span className={`ml-1 font-medium text-[#0D9488]`}>
+                        <span className={`ml-1 font-medium text-[#6096B4]`}>
                           {formatCurrency(seasonPrice)}
                         </span>
                       </div>
@@ -1202,7 +1202,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                   });
                   setShowBookingModal(true);
                 }}
-                className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0D9488]/90 transition-colors flex items-center gap-2"
+                className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#6096B4]/90 transition-colors flex items-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.partyRental.newBooking', 'New Booking')}
@@ -1262,7 +1262,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                         </div>
                         <div className="flex items-center gap-1">
                           <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
-                          <span className={`font-medium text-[#0D9488]`}>
+                          <span className={`font-medium text-[#6096B4]`}>
                             {formatCurrency(booking.total)}
                           </span>
                         </div>
@@ -1467,7 +1467,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                               disabled={available <= 0}
                               className={`p-2 rounded-lg ${
                                 available <= 0
-                                  ? 'opacity-50 cursor-not-allowed bg-gray-300 dark:bg-gray-600' : t('tools.partyRental.bg0d9488HoverBg0d9488', 'bg-[#0D9488] hover:bg-[#0D9488]/80 text-white')
+                                  ? 'opacity-50 cursor-not-allowed bg-gray-300 dark:bg-gray-600' : t('tools.partyRental.bg0d9488HoverBg0d9488', 'bg-[#6096B4] hover:bg-[#6096B4]/80 text-white')
                               } transition-colors`}
                             >
                               <Plus className="w-4 h-4" />
@@ -1544,7 +1544,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                       <div className={`p-4 border-t ${isDark ? 'border-gray-600 bg-gray-700' : 'border-gray-200 bg-gray-100'}`}>
                         <div className="flex justify-between items-center text-lg font-medium">
                           <span className={isDark ? 'text-white' : 'text-gray-900'}>{t('tools.partyRental.total', 'Total')}</span>
-                          <span className="text-[#0D9488]">{formatCurrency(quoteTotal)}</span>
+                          <span className="text-[#6096B4]">{formatCurrency(quoteTotal)}</span>
                         </div>
                       </div>
                     </>
@@ -1573,7 +1573,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                         });
                         setShowBookingModal(true);
                       }}
-                      className="flex-1 px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0D9488]/90 transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#6096B4]/90 transition-colors flex items-center justify-center gap-2"
                     >
                       <Calendar className="w-4 h-4" />
                       {t('tools.partyRental.convertToBooking', 'Convert to Booking')}
@@ -1593,7 +1593,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                 {t('tools.partyRental.upcomingDeliveriesPickups', 'Upcoming Deliveries & Pickups')}
               </h4>
               <div className="flex items-center gap-2">
-                <Truck className="w-5 h-5 text-[#0D9488]" />
+                <Truck className="w-5 h-5 text-[#6096B4]" />
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                   {scheduleByDate.reduce((sum, [, bookings]) => sum + bookings.length, 0)} scheduled events
                 </span>
@@ -1610,7 +1610,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                 {scheduleByDate.map(([date, dayBookings]) => (
                   <div key={date}>
                     <div className={`flex items-center gap-2 mb-3 pb-2 border-b ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-                      <Calendar className="w-5 h-5 text-[#0D9488]" />
+                      <Calendar className="w-5 h-5 text-[#6096B4]" />
                       <h5 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         {formatDate(date)}
                       </h5>
@@ -1796,7 +1796,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                   </div>
 
                   <div className="flex items-center justify-between pt-3 border-t border-gray-600/30">
-                    <span className="text-lg font-bold text-[#0D9488]">
+                    <span className="text-lg font-bold text-[#6096B4]">
                       {formatCurrency(pkg.price)}
                     </span>
                     <button
@@ -1804,7 +1804,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                         applyPackageToQuote(pkg.id);
                         setActiveTab('quotes');
                       }}
-                      className="px-4 py-2 bg-[#0D9488] text-white text-sm rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+                      className="px-4 py-2 bg-[#6096B4] text-white text-sm rounded-lg hover:bg-[#6096B4]/90 transition-colors"
                     >
                       {t('tools.partyRental.usePackage', 'Use Package')}
                     </button>
@@ -2068,7 +2068,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
               </button>
               <button
                 onClick={handleSaveInventoryItem}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-xl hover:bg-[#0D9488]/90 transition-colors flex items-center gap-2"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-xl hover:bg-[#6096B4]/90 transition-colors flex items-center gap-2"
               >
                 <Save className="w-4 h-4" />
                 {editingItem ? t('tools.partyRental.saveChanges', 'Save Changes') : t('tools.partyRental.addItem2', 'Add Item')}
@@ -2240,7 +2240,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
                       key={member.id}
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg border cursor-pointer ${
                         newBooking.setupCrewAssigned?.includes(member.id)
-                          ? 'border-[#0D9488] bg-[#0D9488]/10'
+                          ? 'border-[#6096B4] bg-[#6096B4]/10'
                           : isDark
                           ? 'border-gray-600 bg-gray-700'
                           : 'border-gray-200 bg-gray-50'
@@ -2363,7 +2363,7 @@ export const PartyRentalTool: React.FC<PartyRentalToolProps> = ({ uiConfig }) =>
               </button>
               <button
                 onClick={handleSaveBooking}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-xl hover:bg-[#0D9488]/90 transition-colors flex items-center gap-2"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-xl hover:bg-[#6096B4]/90 transition-colors flex items-center gap-2"
               >
                 <Save className="w-4 h-4" />
                 {editingBooking ? t('tools.partyRental.saveChanges2', 'Save Changes') : t('tools.partyRental.createBooking', 'Create Booking')}

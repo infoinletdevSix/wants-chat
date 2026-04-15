@@ -66,7 +66,7 @@ const VibrationDetector: React.FC = () => {
   }, [isDetecting]);
 
   const getVibrationColor = (level: number) => {
-    if (level < 20) return 'from-teal-500 to-cyan-500';
+    if (level < 20) return 'from-primary-500 to-cyan-500';
     if (level < 40) return 'from-yellow-500 to-orange-500';
     if (level < 60) return 'from-orange-500 to-red-500';
     return 'from-red-500 to-pink-500';
@@ -89,7 +89,7 @@ const VibrationDetector: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -104,20 +104,20 @@ const VibrationDetector: React.FC = () => {
             <Vibrate className="w-10 h-10 text-cyan-400" />
             Vibration Detector
           </h1>
-          <p className="text-teal-200">Detect and measure device motion and vibrations</p>
+          <p className="text-primary-200">Detect and measure device motion and vibrations</p>
         </motion.div>
 
         {/* Main Detector Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
         >
           {/* Visual Indicator */}
           <div className="flex flex-col items-center mb-8">
             <div className="relative w-64 h-64 mb-6">
               {/* Outer Ring */}
-              <div className="absolute inset-0 rounded-full border-4 border-teal-400/20"></div>
+              <div className="absolute inset-0 rounded-full border-4 border-primary-400/20"></div>
 
               {/* Animated Vibration Rings */}
               <AnimatePresence>
@@ -161,7 +161,7 @@ const VibrationDetector: React.FC = () => {
               <motion.div
                 animate={{ rotate: isDetecting ? [0, 10, -10, 0] : 0 }}
                 transition={{ duration: 0.5, repeat: isDetecting ? Infinity : 0 }}
-                className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm rounded-full p-3 border border-teal-400/30"
+                className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm rounded-full p-3 border border-primary-400/30"
               >
                 <Vibrate className="w-6 h-6 text-cyan-400" />
               </motion.div>
@@ -177,7 +177,7 @@ const VibrationDetector: React.FC = () => {
                 className={`px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                   isDetecting
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                    : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
+                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
                 } shadow-lg hover:shadow-xl transform hover:scale-105`}
               >
                 {isDetecting ? 'Stop Detection' : 'Start Detection'}
@@ -188,7 +188,7 @@ const VibrationDetector: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   onClick={resetDetector}
-                  className="px-6 py-4 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-teal-400/30 transition-all"
+                  className="px-6 py-4 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-primary-400/30 transition-all"
                 >
                   Reset
                 </motion.button>
@@ -203,31 +203,31 @@ const VibrationDetector: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8"
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
-                <div className="text-teal-200 text-sm mb-1">X-Axis</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
+                <div className="text-primary-200 text-sm mb-1">X-Axis</div>
                 <div className="text-2xl font-bold text-white">{currentData.x.toFixed(2)}</div>
-                <div className="text-teal-400 text-xs">m/s²</div>
+                <div className="text-primary-400 text-xs">m/s²</div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
-                <div className="text-teal-200 text-sm mb-1">Y-Axis</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
+                <div className="text-primary-200 text-sm mb-1">Y-Axis</div>
                 <div className="text-2xl font-bold text-white">{currentData.y.toFixed(2)}</div>
-                <div className="text-teal-400 text-xs">m/s²</div>
+                <div className="text-primary-400 text-xs">m/s²</div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
-                <div className="text-teal-200 text-sm mb-1">Z-Axis</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
+                <div className="text-primary-200 text-sm mb-1">Z-Axis</div>
                 <div className="text-2xl font-bold text-white">{currentData.z.toFixed(2)}</div>
-                <div className="text-teal-400 text-xs">m/s²</div>
+                <div className="text-primary-400 text-xs">m/s²</div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center gap-2 mb-1">
                   <TrendingUp className="w-4 h-4 text-orange-400" />
-                  <span className="text-teal-200 text-sm">Max Level</span>
+                  <span className="text-primary-200 text-sm">Max Level</span>
                 </div>
                 <div className="text-2xl font-bold text-white">{maxVibration.toFixed(0)}</div>
-                <div className="text-teal-400 text-xs">peak</div>
+                <div className="text-primary-400 text-xs">peak</div>
               </div>
             </motion.div>
           )}
@@ -238,7 +238,7 @@ const VibrationDetector: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
           >
             <div className="flex items-center gap-3 mb-6">
               <Activity className="w-6 h-6 text-cyan-400" />
@@ -292,7 +292,7 @@ const VibrationDetector: React.FC = () => {
             <Activity className="w-5 h-5 text-blue-400" />
             How It Works
           </h3>
-          <div className="space-y-2 text-teal-200 text-sm">
+          <div className="space-y-2 text-primary-200 text-sm">
             <p>This detector uses your device's motion sensors to measure vibrations and movement:</p>
             <ul className="space-y-1 ml-4">
               <li>• <strong>X, Y, Z axes</strong> show acceleration in different directions</li>

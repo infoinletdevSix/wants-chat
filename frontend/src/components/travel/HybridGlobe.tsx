@@ -254,7 +254,7 @@ const HybridGlobe: React.FC<HybridGlobeProps> = ({
     <div ref={containerRef} className="relative rounded-xl overflow-hidden bg-transparent flex items-center justify-center w-full" style={{ height }}>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400" />
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400" />
           <div className="absolute mt-16 text-white/60 text-sm">
             Loading realistic Earth...
           </div>
@@ -291,7 +291,7 @@ const HybridGlobe: React.FC<HybridGlobeProps> = ({
           `}
 
           // Enhanced atmosphere
-          atmosphereColor="#14b8a6"
+          atmosphereColor="#75AAC1"
           atmosphereAltitude={0.15}
 
           // Enable interaction

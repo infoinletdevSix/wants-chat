@@ -804,7 +804,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Clock className="w-5 h-5 text-[#0D9488]" />
+            <Clock className="w-5 h-5 text-[#6096B4]" />
             {t('tools.legalBilling.activeTimer', 'Active Timer')}
           </CardTitle>
         </CardHeader>
@@ -833,7 +833,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.legalBilling.selectACase', 'Select a case...')}</option>
                 {cases
@@ -858,7 +858,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {Object.entries(TASK_TYPES).map(([key, value]) => (
                   <option key={key} value={key}>
@@ -880,7 +880,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {Object.entries(BILLING_RATES).map(([key, value]) => (
                   <option key={key} value={key}>
@@ -897,7 +897,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   checked={timerBillable}
                   onChange={(e) => setTimerBillable(e.target.checked)}
                   disabled={isTimerRunning}
-                  className="w-4 h-4 rounded accent-[#0D9488]"
+                  className="w-4 h-4 rounded accent-[#6096B4]"
                 />
                 <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.legalBilling.billable', 'Billable')}</span>
               </label>
@@ -917,7 +917,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -925,7 +925,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
             {!isTimerRunning ? (
               <button
                 onClick={startTimer}
-                className="flex items-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex items-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 <Play className="w-5 h-5" />
                 {t('tools.legalBilling.startTimer', 'Start Timer')}
@@ -971,7 +971,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
             className="w-full flex items-center justify-between"
           >
             <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Edit2 className="w-5 h-5 text-[#0D9488]" />
+              <Edit2 className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.manualTimeEntry', 'Manual Time Entry')}
             </CardTitle>
             {showManualEntry ? (
@@ -996,7 +996,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1011,7 +1011,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.legalBilling.selectACase2', 'Select a case...')}</option>
                   {cases.map((c) => (
@@ -1033,7 +1033,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {Object.entries(TASK_TYPES).map(([key, value]) => (
                     <option key={key} value={key}>
@@ -1057,7 +1057,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1076,7 +1076,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1091,7 +1091,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {Object.entries(BILLING_RATES).map(([key, value]) => (
                     <option key={key} value={key}>
@@ -1115,7 +1115,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -1125,14 +1125,14 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   type="checkbox"
                   checked={manualBillable}
                   onChange={(e) => setManualBillable(e.target.checked)}
-                  className="w-4 h-4 rounded accent-[#0D9488]"
+                  className="w-4 h-4 rounded accent-[#6096B4]"
                 />
                 <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.legalBilling.billable2', 'Billable')}</span>
               </label>
 
               <button
                 onClick={saveManualEntry}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.legalBilling.saveEntry', 'Save Entry')}
@@ -1147,7 +1147,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardHeader>
             <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+              <FileText className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.recentTimeEntries', 'Recent Time Entries')}
             </CardTitle>
           </CardHeader>
@@ -1199,7 +1199,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Filter className="w-5 h-5 text-[#0D9488]" />
+            <Filter className="w-5 h-5 text-[#6096B4]" />
             {t('tools.legalBilling.filters', 'Filters')}
           </CardTitle>
         </CardHeader>
@@ -1216,7 +1216,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.legalBilling.allCases', 'All Cases')}</option>
                 {cases.map((c) => (
@@ -1238,7 +1238,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -1253,7 +1253,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -1264,12 +1264,12 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Clock className="w-5 h-5 text-[#0D9488]" />
+            <Clock className="w-5 h-5 text-[#6096B4]" />
             Time Entries ({filteredTimeEntries.length})
           </CardTitle>
           <button
             onClick={exportToLEDES}
-            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
           >
             <Download className="w-4 h-4" />
             {t('tools.legalBilling.exportLedes', 'Export LEDES')}
@@ -1366,7 +1366,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
             className="w-full flex items-center justify-between"
           >
             <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Receipt className="w-5 h-5 text-[#0D9488]" />
+              <Receipt className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.addExpense', 'Add Expense')}
             </CardTitle>
             {showExpenseEntry ? (
@@ -1391,7 +1391,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1406,7 +1406,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.legalBilling.selectACase3', 'Select a case...')}</option>
                   {cases.map((c) => (
@@ -1428,7 +1428,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {Object.entries(EXPENSE_CATEGORIES).map(([key, value]) => (
                     <option key={key} value={key}>
@@ -1455,7 +1455,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1473,7 +1473,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1484,14 +1484,14 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   type="checkbox"
                   checked={expenseReimbursable}
                   onChange={(e) => setExpenseReimbursable(e.target.checked)}
-                  className="w-4 h-4 rounded accent-[#0D9488]"
+                  className="w-4 h-4 rounded accent-[#6096B4]"
                 />
                 <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.legalBilling.reimbursableToClient', 'Reimbursable to client')}</span>
               </label>
 
               <button
                 onClick={saveExpense}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.legalBilling.saveExpense', 'Save Expense')}
@@ -1505,7 +1505,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Receipt className="w-5 h-5 text-[#0D9488]" />
+            <Receipt className="w-5 h-5 text-[#6096B4]" />
             Expenses ({filteredExpenses.length})
           </CardTitle>
         </CardHeader>
@@ -1570,7 +1570,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <FileText className="w-5 h-5 text-[#0D9488]" />
+            <FileText className="w-5 h-5 text-[#6096B4]" />
             {t('tools.legalBilling.generateInvoice', 'Generate Invoice')}
           </CardTitle>
         </CardHeader>
@@ -1587,7 +1587,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.legalBilling.selectACase4', 'Select a case...')}</option>
                 {cases.map((c) => (
@@ -1599,7 +1599,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
             </div>
             <button
               onClick={generateInvoice}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
             >
               <PlusCircle className="w-4 h-4" />
               {t('tools.legalBilling.generateInvoice2', 'Generate Invoice')}
@@ -1612,7 +1612,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <FileText className="w-5 h-5 text-[#0D9488]" />
+            <FileText className="w-5 h-5 text-[#6096B4]" />
             Invoices ({invoices.length})
           </CardTitle>
         </CardHeader>
@@ -1798,7 +1798,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
               </button>
               <button
                 onClick={createInvoice}
-                className="flex-1 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex-1 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 {t('tools.legalBilling.createInvoice2', 'Create Invoice')}
               </button>
@@ -1819,7 +1819,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
             className="w-full flex items-center justify-between"
           >
             <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Wallet className="w-5 h-5 text-[#0D9488]" />
+              <Wallet className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.trustAccountTransaction', 'Trust Account Transaction')}
             </CardTitle>
             {showTrustModal ? (
@@ -1843,7 +1843,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.legalBilling.selectACase5', 'Select a case...')}</option>
                   {cases.map((c) => (
@@ -1865,7 +1865,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="deposit">{t('tools.legalBilling.depositRetainer', 'Deposit (Retainer)')}</option>
                   <option value="withdrawal">{t('tools.legalBilling.withdrawalPayment', 'Withdrawal (Payment)')}</option>
@@ -1889,7 +1889,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1907,7 +1907,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1925,14 +1925,14 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
             <div className="flex justify-end">
               <button
                 onClick={saveTrustTransaction}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.legalBilling.saveTransaction', 'Save Transaction')}
@@ -1946,7 +1946,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Building className="w-5 h-5 text-[#0D9488]" />
+            <Building className="w-5 h-5 text-[#6096B4]" />
             {t('tools.legalBilling.clientTrustAccounts', 'Client Trust Accounts')}
           </CardTitle>
         </CardHeader>
@@ -2022,7 +2022,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
         <CardHeader>
           <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <BarChart3 className="w-5 h-5 text-[#0D9488]" />
+            <BarChart3 className="w-5 h-5 text-[#6096B4]" />
             {t('tools.legalBilling.productivityReports', 'Productivity Reports')}
           </CardTitle>
         </CardHeader>
@@ -2034,7 +2034,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                 onClick={() => setReportPeriod(period)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   reportPeriod === period
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -2120,7 +2120,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardHeader>
             <CardTitle className={`flex items-center gap-2 text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Clock className="w-5 h-5 text-[#0D9488]" />
+              <Clock className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.billableVsNonBillable', 'Billable vs Non-Billable')}
             </CardTitle>
           </CardHeader>
@@ -2162,7 +2162,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardHeader>
             <CardTitle className={`flex items-center gap-2 text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Tag className="w-5 h-5 text-[#0D9488]" />
+              <Tag className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.hoursByTaskType', 'Hours by Task Type')}
             </CardTitle>
           </CardHeader>
@@ -2193,7 +2193,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardHeader>
             <CardTitle className={`flex items-center gap-2 text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <DollarSign className="w-5 h-5 text-[#0D9488]" />
+              <DollarSign className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.collectionsSummary', 'Collections Summary')}
             </CardTitle>
           </CardHeader>
@@ -2236,7 +2236,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
           <CardHeader>
             <CardTitle className={`flex items-center gap-2 text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+              <FileText className="w-5 h-5 text-[#6096B4]" />
               {t('tools.legalBilling.invoiceStatus', 'Invoice Status')}
             </CardTitle>
           </CardHeader>
@@ -2380,7 +2380,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="max-w-6xl mx-auto flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -2391,9 +2391,9 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
       <div className="max-w-6xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.legalBilling.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.legalBilling.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -2401,7 +2401,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -2447,7 +2447,7 @@ export const LegalBillingTool = ({ uiConfig }: LegalBillingToolProps) => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

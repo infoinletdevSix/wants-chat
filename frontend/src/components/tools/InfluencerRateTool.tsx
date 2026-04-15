@@ -431,8 +431,8 @@ ${aiAnalysis?.rateCardContent || ''}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-purple-900/20' : 'bg-gradient-to-r from-white to-purple-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Star className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Star className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.influencerRate.influencerRateCalculator', 'Influencer Rate Calculator')}</h3>
@@ -440,7 +440,7 @@ ${aiAnalysis?.rateCardContent || ''}
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1 text-xs text-[#0D9488]">
+            <div className="flex items-center gap-1 text-xs text-[#6096B4]">
               <Sparkles className="w-3 h-3" />
               <span>{t('tools.influencerRate.preFilled', 'Pre-filled')}</span>
             </div>
@@ -460,7 +460,7 @@ ${aiAnalysis?.rateCardContent || ''}
             onClick={() => setActiveTab(tab.id as any)}
             className={`flex-1 py-3 px-4 flex items-center justify-center gap-2 text-sm font-medium transition-colors ${
               activeTab === tab.id
-                ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                 : isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -487,7 +487,7 @@ ${aiAnalysis?.rateCardContent || ''}
                       setPlatform(p.value as Platform);
                       setContentType(contentTypes[p.value as Platform][0].value as ContentType);
                     }}
-                    className={`px-4 py-2 rounded-lg transition-colors ${platform === p.value ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                    className={`px-4 py-2 rounded-lg transition-colors ${platform === p.value ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                   >
                     {p.icon} {p.label}
                   </button>
@@ -507,7 +507,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   value={followers}
                   onChange={(e) => setFollowers(e.target.value)}
                   placeholder="50000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -521,7 +521,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   value={engagementRate}
                   onChange={(e) => setEngagementRate(e.target.value)}
                   placeholder="4"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -533,7 +533,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   value={avgViews}
                   onChange={(e) => setAvgViews(e.target.value)}
                   placeholder={t('tools.influencerRate.optional', 'Optional')}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -545,7 +545,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   value={avgLikes}
                   onChange={(e) => setAvgLikes(e.target.value)}
                   placeholder={t('tools.influencerRate.optional2', 'Optional')}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -559,7 +559,7 @@ ${aiAnalysis?.rateCardContent || ''}
                 <select
                   value={contentType}
                   onChange={(e) => setContentType(e.target.value as ContentType)}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {contentTypes[platform].map((ct) => (
                     <option key={ct.value} value={ct.value}>{ct.label}</option>
@@ -574,7 +574,7 @@ ${aiAnalysis?.rateCardContent || ''}
                 <select
                   value={niche}
                   onChange={(e) => setNiche(e.target.value)}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {niches.map((n) => (
                     <option key={n.value} value={n.value}>{n.label}</option>
@@ -590,7 +590,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   placeholder={t('tools.influencerRate.unitedStates', 'United States')}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -600,7 +600,7 @@ ${aiAnalysis?.rateCardContent || ''}
                 <select
                   value={audienceAge}
                   onChange={(e) => setAudienceAge(e.target.value)}
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="13-17">13-17 (Gen Alpha)</option>
                   <option value="18-24">18-24 (Gen Z)</option>
@@ -622,7 +622,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   <button
                     key={ct.value}
                     onClick={() => setCampaignType(ct.value as CampaignType)}
-                    className={`p-3 rounded-lg text-left transition-colors ${campaignType === ct.value ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                    className={`p-3 rounded-lg text-left transition-colors ${campaignType === ct.value ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                   >
                     <div className="text-sm font-medium">{ct.label}</div>
                     <div className={`text-xs ${campaignType === ct.value ? 'text-white/70' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{ct.desc}</div>
@@ -641,7 +641,7 @@ ${aiAnalysis?.rateCardContent || ''}
                 value={previousBrands}
                 onChange={(e) => setPreviousBrands(e.target.value)}
                 placeholder={t('tools.influencerRate.eGNikeSephoraSamsung', 'e.g., Nike, Sephora, Samsung')}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -654,7 +654,7 @@ ${aiAnalysis?.rateCardContent || ''}
                     type="checkbox"
                     checked={exclusivity}
                     onChange={(e) => setExclusivity(e.target.checked)}
-                    className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.influencerRate.exclusivity50NoCompetingBrand', 'Exclusivity (+50%) - No competing brand posts')}
@@ -665,7 +665,7 @@ ${aiAnalysis?.rateCardContent || ''}
                     type="checkbox"
                     checked={usageRights}
                     onChange={(e) => setUsageRights(e.target.checked)}
-                    className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.influencerRate.usageRights30BrandCan', 'Usage Rights (+30%) - Brand can repurpose content')}
@@ -676,7 +676,7 @@ ${aiAnalysis?.rateCardContent || ''}
                     type="checkbox"
                     checked={whitelisting}
                     onChange={(e) => setWhitelisting(e.target.checked)}
-                    className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.influencerRate.whitelisting40BrandRunsAds', 'Whitelisting (+40%) - Brand runs ads from your account')}
@@ -700,7 +700,7 @@ ${aiAnalysis?.rateCardContent || ''}
             </div>
 
             {/* Main Result */}
-            <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.influencerRate.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+            <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.influencerRate.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
               <div className="flex justify-between items-center mb-2">
                 <span className={`text-sm px-2 py-1 rounded ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}>
                   {calculations.tier} Influencer
@@ -710,7 +710,7 @@ ${aiAnalysis?.rateCardContent || ''}
                 </span>
               </div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.influencerRate.recommendedRate', 'Recommended Rate')}</div>
-              <div className="text-5xl font-bold text-[#0D9488] my-2">
+              <div className="text-5xl font-bold text-[#6096B4] my-2">
                 {formatCurrency(calculations.totalPrice)}
               </div>
               <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -730,9 +730,9 @@ ${aiAnalysis?.rateCardContent || ''}
                 </div>
                 <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>3 Stories + 1 Post</div>
               </div>
-              <div className={`p-4 rounded-lg border-2 border-[#0D9488] ${isDark ? t('tools.influencerRate.bg0d948810', 'bg-[#0D9488]/10') : 'bg-teal-50'}`}>
-                <div className="text-xs uppercase tracking-wide text-[#0D9488]">{t('tools.influencerRate.standardPackage', 'Standard Package')}</div>
-                <div className="text-2xl font-bold text-[#0D9488]">
+              <div className={`p-4 rounded-lg border-2 border-[#6096B4] ${isDark ? t('tools.influencerRate.bg0d948810', 'bg-[#6096B4]/10') : 'bg-primary-50'}`}>
+                <div className="text-xs uppercase tracking-wide text-[#6096B4]">{t('tools.influencerRate.standardPackage', 'Standard Package')}</div>
+                <div className="text-2xl font-bold text-[#6096B4]">
                   {formatCurrency(calculations.standardPackage)}
                 </div>
                 <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>5 Stories + 2 Posts + 1 Video</div>
@@ -756,7 +756,7 @@ ${aiAnalysis?.rateCardContent || ''}
             <button
               onClick={generateAIAnalysis}
               disabled={isAnalyzing}
-              className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+              className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {isAnalyzing ? (
                 <>
@@ -779,7 +779,7 @@ ${aiAnalysis?.rateCardContent || ''}
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.influencerRate.yourProfessionalRateCard', 'Your Professional Rate Card')}</h4>
               <button
                 onClick={copyRateCard}
-                className={`px-4 py-2 rounded-lg flex items-center gap-2 ${copied ? 'bg-green-500 text-white' : t('tools.influencerRate.bg0d9488TextWhiteHover', 'bg-[#0D9488] text-white hover:bg-[#0D9488]/90')}`}
+                className={`px-4 py-2 rounded-lg flex items-center gap-2 ${copied ? 'bg-green-500 text-white' : t('tools.influencerRate.bg0d9488TextWhiteHover', 'bg-[#6096B4] text-white hover:bg-[#6096B4]/90')}`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {copied ? t('tools.influencerRate.copied', 'Copied!') : t('tools.influencerRate.copyRateCard', 'Copy Rate Card')}
@@ -803,7 +803,7 @@ ${aiAnalysis?.rateCardContent || ''}
             ) : (
               <>
                 {/* AI Suggested Rate */}
-                <div className={`p-6 rounded-xl ${isDark ? t('tools.influencerRate.bg0d948810Border0d94882', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+                <div className={`p-6 rounded-xl ${isDark ? t('tools.influencerRate.bg0d948810Border0d94882', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
                   <h4 className={`font-medium mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.influencerRate.aiSuggestedMarketRate', 'AI-Suggested Market Rate')}</h4>
                   <div className="flex justify-between items-end">
                     <div className="text-center">
@@ -813,8 +813,8 @@ ${aiAnalysis?.rateCardContent || ''}
                       </div>
                     </div>
                     <div className="text-center">
-                      <div className="text-sm text-[#0D9488]">{t('tools.influencerRate.recommended', 'Recommended')}</div>
-                      <div className="text-4xl font-bold text-[#0D9488]">
+                      <div className="text-sm text-[#6096B4]">{t('tools.influencerRate.recommended', 'Recommended')}</div>
+                      <div className="text-4xl font-bold text-[#6096B4]">
                         ${aiAnalysis.suggestedRate.mid.toLocaleString()}
                       </div>
                     </div>
@@ -870,7 +870,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   <ul className="space-y-2">
                     {aiAnalysis.marketInsights.map((insight, i) => (
                       <li key={i} className={`text-sm flex items-start gap-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                        <span className="text-[#0D9488]">•</span>
+                        <span className="text-[#6096B4]">•</span>
                         {insight}
                       </li>
                     ))}
@@ -883,7 +883,7 @@ ${aiAnalysis?.rateCardContent || ''}
                   <ul className="space-y-2">
                     {aiAnalysis.negotiationTips.map((tip, i) => (
                       <li key={i} className={`text-sm flex items-start gap-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                        <span className="text-[#0D9488] font-bold">{i + 1}.</span>
+                        <span className="text-[#6096B4] font-bold">{i + 1}.</span>
                         {tip}
                       </li>
                     ))}
@@ -911,7 +911,7 @@ ${aiAnalysis?.rateCardContent || ''}
               ].map((t) => (
                 <div
                   key={t.tier}
-                  className={`p-2 rounded text-center ${calculations.tier === t.tier ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}
+                  className={`p-2 rounded text-center ${calculations.tier === t.tier ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}
                 >
                   <div className="font-medium text-sm">{t.tier}</div>
                   <div className="text-xs opacity-75">{t.range}</div>

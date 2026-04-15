@@ -634,16 +634,16 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
     <div className="space-y-4">
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">Data loaded from AI response</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">Data loaded from AI response</span>
         </div>
       )}
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Scale className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -698,7 +698,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
           </button>
           <button
             onClick={handleCreateCase}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors"
           >
             <Plus className="w-4 h-4" />
             New Case
@@ -732,7 +732,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <select
@@ -742,7 +742,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="all">All Status</option>
             <option value="open">Open</option>
@@ -756,7 +756,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="all">All Types</option>
             {CASE_TYPES.map((type) => (
@@ -774,7 +774,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
           <input
             type="date"
@@ -785,7 +785,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
       </div>
@@ -969,7 +969,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
@@ -1223,7 +1223,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                 </h3>
                 <button
                   onClick={handleAddDate}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm font-medium rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white text-sm font-medium rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.legalCaseManager.addDate', 'Add Date')}
@@ -1281,7 +1281,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                                 theme === 'dark'
                                   ? 'bg-gray-600 border-gray-500 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             >
                               <option value="filing">{t('tools.legalCaseManager.filing', 'Filing')}</option>
                               <option value="hearing">{t('tools.legalCaseManager.hearing', 'Hearing')}</option>
@@ -1299,7 +1299,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                                 theme === 'dark'
                                   ? 'bg-gray-600 border-gray-500 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                             <input
                               type="text"
@@ -1312,7 +1312,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                                 theme === 'dark'
                                   ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             />
                           </div>
                           <button
@@ -1339,7 +1339,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                 </h3>
                 <button
                   onClick={handleAddDocument}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm font-medium rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white text-sm font-medium rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.legalCaseManager.addDocument', 'Add Document')}
@@ -1402,7 +1402,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <label className="flex items-center gap-2 cursor-pointer">
                             <input
@@ -1411,7 +1411,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               onChange={(e) =>
                                 handleUpdateDocument(doc.id, { required: e.target.checked })
                               }
-                              className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                              className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                             />
                             <span
                               className={`text-sm ${
@@ -1432,7 +1432,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                         <button
@@ -1459,7 +1459,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                 </h3>
                 <button
                   onClick={handleAddTimeEntry}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm font-medium rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white text-sm font-medium rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.legalCaseManager.addEntry', 'Add Entry')}
@@ -1501,7 +1501,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white'
                                 : 'bg-white border-gray-300 text-gray-900'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="number"
@@ -1518,7 +1518,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
@@ -1531,7 +1531,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <label className="flex items-center gap-2 cursor-pointer">
                             <input
@@ -1540,7 +1540,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               onChange={(e) =>
                                 handleUpdateTimeEntry(entry.id, { billable: e.target.checked })
                               }
-                              className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                              className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                             />
                             <span
                               className={`text-sm ${
@@ -1652,7 +1652,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                 </h3>
                 <button
                   onClick={handleAddNote}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm font-medium rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white text-sm font-medium rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.legalCaseManager.addNote', 'Add Note')}
@@ -1746,7 +1746,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                               theme === 'dark'
                                 ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                       </div>
@@ -1885,7 +1885,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1908,7 +1908,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -2003,7 +2003,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -2023,7 +2023,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -2041,7 +2041,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {CASE_TYPES.map((type) => (
                     <option key={type} value={type}>
@@ -2066,7 +2066,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -2095,7 +2095,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="email"
@@ -2111,7 +2111,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="tel"
@@ -2127,7 +2127,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="text"
@@ -2143,7 +2143,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -2172,7 +2172,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="text"
@@ -2188,7 +2188,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="text"
@@ -2207,7 +2207,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -2231,7 +2231,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="text"
@@ -2242,7 +2242,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -2280,7 +2280,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -2306,7 +2306,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -2329,7 +2329,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     onChange={(e) =>
                       setEditingCase({ ...editingCase, conflictChecked: e.target.checked })
                     }
-                    className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                     {t('tools.legalCaseManager.conflictCheckCompleted', 'Conflict check completed')}
@@ -2346,7 +2346,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -2374,7 +2374,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
             </button>
             <button
               onClick={handleSaveCase}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors"
             >
               <Save className="w-4 h-4" />
               {t('tools.legalCaseManager.saveCase', 'Save Case')}
@@ -2439,7 +2439,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -2509,7 +2509,7 @@ export const LegalCaseManagerTool: React.FC<LegalCaseManagerToolProps> = ({ uiCo
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="max-w-7xl mx-auto flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );

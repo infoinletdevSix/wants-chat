@@ -287,7 +287,7 @@ const AddStory: React.FC = () => {
               >
                 <ArrowLeft className="h-5 w-5" />
               </Button>
-              <BookOpen className="h-6 w-6 text-teal-400" />
+              <BookOpen className="h-6 w-6 text-primary-400" />
               <span className="text-xl font-semibold text-white">
                 Add Your Story
               </span>
@@ -325,10 +325,10 @@ const AddStory: React.FC = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           {/* Left Column - Story Information */}
           <div className="xl:col-span-1">
-            <GlassCard className="mb-8 border-l-4 border-teal-500">
+            <GlassCard className="mb-8 border-l-4 border-primary-500">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-white">
-                  <Edit3 className="h-5 w-5 text-teal-400" />
+                  <Edit3 className="h-5 w-5 text-primary-400" />
                   Story Details
                 </CardTitle>
                 <CardDescription className="text-white/60">Basic information about your story</CardDescription>
@@ -352,7 +352,7 @@ const AddStory: React.FC = () => {
                     className={`mt-1 h-12 rounded-xl bg-white/5 text-white border-white/20 placeholder:text-white/40 ${
                       errors.title
                         ? 'border-red-500/50'
-                        : 'focus:border-teal-500 focus:ring-teal-500/20'
+                        : 'focus:border-primary-500 focus:ring-primary-500/20'
                     }`}
                   />
                   {errors.title && <p className="text-sm text-red-400 mt-1">{errors.title}</p>}
@@ -374,7 +374,7 @@ const AddStory: React.FC = () => {
                     className={`mt-1 h-12 rounded-xl bg-white/5 text-white border-white/20 placeholder:text-white/40 ${
                       errors.author
                         ? 'border-red-500/50'
-                        : 'focus:border-teal-500 focus:ring-teal-500/20'
+                        : 'focus:border-primary-500 focus:ring-primary-500/20'
                     }`}
                   />
                   {errors.author && <p className="text-sm text-red-400 mt-1">{errors.author}</p>}
@@ -391,10 +391,10 @@ const AddStory: React.FC = () => {
                     value={formData.level}
                     onValueChange={(value) => handleInputChange('level', value as Story['level'])}
                   >
-                    <SelectTrigger id="level" className="mt-1 h-12 rounded-xl bg-white/5 text-white border-white/20 focus:border-teal-500 focus:ring-teal-500/20">
+                    <SelectTrigger id="level" className="mt-1 h-12 rounded-xl bg-white/5 text-white border-white/20 focus:border-primary-500 focus:ring-primary-500/20">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-white/20">
+                    <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-white/20">
                       {levels.map((level) => (
                         <SelectItem
                           key={level.value}
@@ -424,10 +424,10 @@ const AddStory: React.FC = () => {
                       handleInputChange('category', value as Story['category'])
                     }
                   >
-                    <SelectTrigger id="category" className="mt-1 h-12 rounded-xl bg-white/5 text-white border-white/20 focus:border-teal-500 focus:ring-teal-500/20">
+                    <SelectTrigger id="category" className="mt-1 h-12 rounded-xl bg-white/5 text-white border-white/20 focus:border-primary-500 focus:ring-primary-500/20">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-white/20">
+                    <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-white/20">
                       {categories.map((category) => (
                         <SelectItem
                           key={category.value}
@@ -476,10 +476,10 @@ const AddStory: React.FC = () => {
 
           {/* Right Column - Story Content */}
           <div className="xl:col-span-2">
-            <GlassCard className="mb-8 border-l-4 border-teal-500">
+            <GlassCard className="mb-8 border-l-4 border-primary-500">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-white">
-                  <BookOpen className="h-5 w-5 text-teal-400" />
+                  <BookOpen className="h-5 w-5 text-primary-400" />
                   Story Content
                 </CardTitle>
                 <CardDescription className="text-white/60">
@@ -506,7 +506,7 @@ const AddStory: React.FC = () => {
                     className={`w-full mt-1 px-4 py-3 border-2 rounded-xl resize-none focus:outline-none focus:ring-3 bg-white/5 text-white placeholder:text-white/40 ${
                       errors.content
                         ? 'border-red-500/50 focus:ring-red-500/20'
-                        : 'border-white/20 focus:border-teal-500 hover:border-teal-500/60 focus:ring-teal-500/15'
+                        : 'border-white/20 focus:border-primary-500 hover:border-primary-500/60 focus:ring-primary-500/15'
                     }`}
                   />
                   {errors.content && <p className="text-sm text-red-400 mt-1">{errors.content}</p>}
@@ -533,7 +533,7 @@ const AddStory: React.FC = () => {
               !formData.content.trim() ||
               createStoryMutation.isPending
             }
-            className="h-12 px-8 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0 font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0 font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Save className="h-5 w-5 mr-2" />
             {createStoryMutation.isPending ? 'Saving...' : 'Save Story'}

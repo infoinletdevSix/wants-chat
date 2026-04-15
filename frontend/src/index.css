@@ -33,13 +33,13 @@ html {
     --destructive-foreground: 0 0% 100%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 175 84% 32%;
+    --ring: 201 33% 54%;
     --radius: 0.75rem;
 
-    /* Brand color - Teal/Cyan */
-    --brand: #0D9488;
-    --brand-light: #14B8A6;
-    --brand-dark: #0F766E;
+    /* Brand color — slate-blue (OSS edition) */
+    --brand: #6096B4;
+    --brand-light: #75AAC1;
+    --brand-dark: #4C7F98;
   }
 }
 

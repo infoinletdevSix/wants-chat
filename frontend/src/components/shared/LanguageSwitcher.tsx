@@ -94,7 +94,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 
   const baseButtonStyles = `
     flex items-center gap-2 transition-colors duration-200
-    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0D9488]
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6096B4]
   `;
 
   const variantStyles = {
@@ -150,7 +150,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                 hover:bg-gray-100 dark:hover:bg-[#3a3a3a] transition-colors duration-150
                 ${
                   language.code === currentLanguage.code
-                    ? 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? 'bg-[#6096B4]/10 text-[#6096B4]'
                     : 'text-gray-700 dark:text-gray-300'
                 }
               `}
@@ -161,7 +161,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                 <span className="block text-xs text-gray-500 dark:text-gray-400">{language.name}</span>
               </div>
               {language.code === currentLanguage.code && (
-                <Check className="w-4 h-4 text-[#0D9488]" />
+                <Check className="w-4 h-4 text-[#6096B4]" />
               )}
             </button>
           ))}

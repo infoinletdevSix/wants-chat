@@ -279,14 +279,14 @@ Provide only the translation, without any explanations or additional text.`;
   return (
     <div className={`rounded-xl shadow-sm border overflow-hidden ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+      <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
         <div className="flex items-center space-x-3">
           <div className="bg-white/20 p-3 rounded-lg">
             <Languages className="w-6 h-6 text-white" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-white">{t('tools.translator.aiTranslator', 'AI Translator')}</h2>
-            <p className="text-teal-50 text-sm mt-1">{t('tools.translator.translateTextBetween25Languages', 'Translate text between 25+ languages with AI precision')}</p>
+            <p className="text-primary-50 text-sm mt-1">{t('tools.translator.translateTextBetween25Languages', 'Translate text between 25+ languages with AI precision')}</p>
             {isPrefilled && (
               <div className="flex items-center gap-1 mt-1 text-xs text-white/80">
                 <Sparkles className="w-3 h-3" />
@@ -313,7 +313,7 @@ Provide only the translation, without any explanations or additional text.`;
               onClick={() => handleQuickTranslate(pair.from, pair.to)}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 sourceLanguage === pair.from && targetLanguage === pair.to
-                  ? 'bg-teal-600 text-white'
+                  ? 'bg-primary-600 text-white'
                   : isDark
                   ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -333,7 +333,7 @@ Provide only the translation, without any explanations or additional text.`;
             <select
               value={sourceLanguage}
               onChange={(e) => setSourceLanguage(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+              className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-gray-100'
                   : 'bg-white border-gray-300 text-gray-900'
@@ -371,7 +371,7 @@ Provide only the translation, without any explanations or additional text.`;
             <select
               value={targetLanguage}
               onChange={(e) => setTargetLanguage(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+              className={`w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-gray-100'
                   : 'bg-white border-gray-300 text-gray-900'
@@ -397,7 +397,7 @@ Provide only the translation, without any explanations or additional text.`;
               onChange={(e) => setInputText(e.target.value)}
               placeholder={t('tools.translator.enterTextToTranslate', 'Enter text to translate...')}
               rows={8}
-              className={`w-full px-4 py-3 rounded-lg border font-mono text-sm resize-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+              className={`w-full px-4 py-3 rounded-lg border font-mono text-sm resize-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
@@ -412,7 +412,7 @@ Provide only the translation, without any explanations or additional text.`;
               id="preserve-formatting"
               checked={preserveFormatting}
               onChange={(e) => setPreserveFormatting(e.target.checked)}
-              className="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
+              className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
             />
             <label htmlFor="preserve-formatting" className={`text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.translator.preserveOriginalFormattingAndLine', 'Preserve original formatting and line breaks')}
@@ -424,7 +424,7 @@ Provide only the translation, without any explanations or additional text.`;
             <button
               onClick={handleTranslate}
               disabled={isTranslating || !inputText.trim()}
-              className="flex-1 bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+              className="flex-1 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
             >
               {isTranslating ? (
                 <>
@@ -504,7 +504,7 @@ Provide only the translation, without any explanations or additional text.`;
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="flex items-center space-x-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
+                  className="flex items-center space-x-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
                 >
                   {isSaving ? (
                     <>
@@ -523,7 +523,7 @@ Provide only the translation, without any explanations or additional text.`;
 
             {/* Translation Display */}
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
-              <div className={`text-xs font-semibold mb-2 ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+              <div className={`text-xs font-semibold mb-2 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                 {result.sourceLanguage} → {result.targetLanguage}
               </div>
               <textarea
@@ -537,7 +537,7 @@ Provide only the translation, without any explanations or additional text.`;
 
             {/* Original Text Reference */}
             <details className={`${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-              <summary className="cursor-pointer text-sm font-medium hover:text-teal-600 transition-colors">
+              <summary className="cursor-pointer text-sm font-medium hover:text-primary-600 transition-colors">
                 {t('tools.translator.viewOriginalText', 'View original text')}
               </summary>
               <div className={`mt-3 p-4 rounded-lg text-sm ${isDark ? 'bg-gray-800' : 'bg-white'}`}>

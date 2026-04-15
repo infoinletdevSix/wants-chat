@@ -352,11 +352,11 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <GraduationCap className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <GraduationCap className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aILessonPlan.aiLessonPlanGenerator', 'AI Lesson Plan Generator')}</h3>
@@ -366,9 +366,9 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aILessonPlan.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aILessonPlan.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -385,7 +385,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.aILessonPlan.enterTheMainTopicFor', 'Enter the main topic for your lesson (e.g., \'Introduction to Fractions\', \'The Water Cycle\')...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -401,7 +401,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                 const selected = subjects.find(s => s.value === e.target.value);
                 if (selected) setSubject(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {subjects.map(s => (
                 <option key={s.value} value={s.value}>{s.label}</option>
@@ -419,7 +419,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                 const selected = gradeLevels.find(g => g.value === e.target.value);
                 if (selected) setGradeLevel(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {gradeLevels.map(g => (
                 <option key={g.value} value={g.value}>{g.label}</option>
@@ -437,7 +437,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                 const selected = durations.find(d => d.value === e.target.value);
                 if (selected) setDuration(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {durations.map(d => (
                 <option key={d.value} value={d.value}>{d.label}</option>
@@ -456,7 +456,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
             onChange={(e) => setObjectives(e.target.value)}
             placeholder={t('tools.aILessonPlan.whatShouldStudentsBeAble', 'What should students be able to do by the end of the lesson?...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -471,7 +471,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -514,7 +514,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
 
             <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
               {/* Header Info */}
-              <div className="p-4 bg-[#0D9488]/5 border-b border-gray-200 dark:border-gray-700">
+              <div className="p-4 bg-[#6096B4]/5 border-b border-gray-200 dark:border-gray-700">
                 <h5 className="font-semibold text-gray-900 dark:text-white text-lg mb-2">
                   {generatedPlan.title}
                 </h5>
@@ -543,7 +543,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                     className="w-full p-4 flex items-center justify-between hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
                     <span className="flex items-center gap-2 font-medium text-gray-900 dark:text-white">
-                      <Target className="w-4 h-4 text-[#0D9488]" />
+                      <Target className="w-4 h-4 text-[#6096B4]" />
                       {t('tools.aILessonPlan.learningObjectives', 'Learning Objectives')}
                     </span>
                     {expandedSections.objectives ? (
@@ -557,7 +557,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                       <ul className="space-y-2">
                         {generatedPlan.objectives.map((obj, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
-                            <span className="text-[#0D9488] font-medium">{idx + 1}.</span>
+                            <span className="text-[#6096B4] font-medium">{idx + 1}.</span>
                             {obj}
                           </li>
                         ))}
@@ -610,7 +610,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                       {/* Warm-up */}
                       <div className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs font-medium text-[#0D9488] uppercase">{t('tools.aILessonPlan.warmUp', 'Warm-up')}</span>
+                          <span className="text-xs font-medium text-[#6096B4] uppercase">{t('tools.aILessonPlan.warmUp', 'Warm-up')}</span>
                           <span className="text-xs text-gray-500">{generatedPlan.warmUp.duration}</span>
                         </div>
                         <h6 className="font-medium text-gray-900 dark:text-white">{generatedPlan.warmUp.name}</h6>
@@ -621,7 +621,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                       {generatedPlan.mainActivities.map((act, idx) => (
                         <div key={idx} className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
                           <div className="flex items-center justify-between mb-2">
-                            <span className="text-xs font-medium text-[#0D9488] uppercase">Activity {idx + 1}</span>
+                            <span className="text-xs font-medium text-[#6096B4] uppercase">Activity {idx + 1}</span>
                             <span className="text-xs text-gray-500">{act.duration}</span>
                           </div>
                           <h6 className="font-medium text-gray-900 dark:text-white">{act.name}</h6>
@@ -641,7 +641,7 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                       {/* Closure */}
                       <div className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs font-medium text-[#0D9488] uppercase">{t('tools.aILessonPlan.closure', 'Closure')}</span>
+                          <span className="text-xs font-medium text-[#6096B4] uppercase">{t('tools.aILessonPlan.closure', 'Closure')}</span>
                           <span className="text-xs text-gray-500">{generatedPlan.closure.duration}</span>
                         </div>
                         <h6 className="font-medium text-gray-900 dark:text-white">{generatedPlan.closure.name}</h6>
@@ -666,14 +666,14 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
                   </button>
                   {expandedSections.assessment && (
                     <div className="px-4 pb-4">
-                      <span className="text-xs font-medium text-[#0D9488] uppercase">{generatedPlan.assessment.type}</span>
+                      <span className="text-xs font-medium text-[#6096B4] uppercase">{generatedPlan.assessment.type}</span>
                       <p className="text-gray-700 dark:text-gray-300 mt-1">{generatedPlan.assessment.description}</p>
                       <div className="mt-2">
                         <span className="text-xs font-medium text-gray-500">{t('tools.aILessonPlan.criteria', 'Criteria:')}</span>
                         <ul className="mt-1 space-y-1">
                           {generatedPlan.assessment.criteria.map((c, idx) => (
                             <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
-                              <span className="w-1.5 h-1.5 bg-[#0D9488] rounded-full" />
+                              <span className="w-1.5 h-1.5 bg-[#6096B4] rounded-full" />
                               {c}
                             </li>
                           ))}
@@ -721,16 +721,16 @@ Create a well-structured lesson plan with 2-3 main activities. Return ONLY valid
 
               {/* Homework & Notes */}
               {(generatedPlan.homework || generatedPlan.notes) && (
-                <div className="p-4 bg-[#0D9488]/5 border-t border-gray-200 dark:border-gray-700 space-y-2">
+                <div className="p-4 bg-[#6096B4]/5 border-t border-gray-200 dark:border-gray-700 space-y-2">
                   {generatedPlan.homework && (
                     <div>
-                      <span className="text-xs font-medium text-[#0D9488] uppercase">{t('tools.aILessonPlan.homework', 'Homework')}</span>
+                      <span className="text-xs font-medium text-[#6096B4] uppercase">{t('tools.aILessonPlan.homework', 'Homework')}</span>
                       <p className="text-sm text-gray-700 dark:text-gray-300">{generatedPlan.homework}</p>
                     </div>
                   )}
                   {generatedPlan.notes && (
                     <div>
-                      <span className="text-xs font-medium text-[#0D9488] uppercase">{t('tools.aILessonPlan.teacherNotes', 'Teacher Notes')}</span>
+                      <span className="text-xs font-medium text-[#6096B4] uppercase">{t('tools.aILessonPlan.teacherNotes', 'Teacher Notes')}</span>
                       <p className="text-sm text-gray-700 dark:text-gray-300">{generatedPlan.notes}</p>
                     </div>
                   )}

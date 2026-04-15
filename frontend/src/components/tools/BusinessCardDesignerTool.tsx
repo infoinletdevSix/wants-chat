@@ -92,7 +92,7 @@ const colorSchemes = [
   { name: 'Vibrant Purple', primary: '#7c3aed', secondary: '#a78bfa', text: '#4c1d95', bg: '#faf5ff' },
   { name: 'Warm Orange', primary: '#ea580c', secondary: '#fb923c', text: '#7c2d12', bg: '#fffbeb' },
   { name: 'Rose Gold', primary: '#be185d', secondary: '#f472b6', text: '#831843', bg: '#fff1f2' },
-  { name: 'Ocean Teal', primary: '#0d9488', secondary: '#2dd4bf', text: '#134e4a', bg: '#f0fdfa' },
+  { name: 'Ocean Teal', primary: '#6096B4', secondary: '#75AAC1', text: '#2A566B', bg: '#F0F5F8' },
 ];
 
 // Template styles
@@ -768,13 +768,13 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
       {/* Header */}
       <div
         className={`bg-gradient-to-r ${
-          isDark ? t('tools.businessCardDesigner.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.businessCardDesigner.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')
+          isDark ? t('tools.businessCardDesigner.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.businessCardDesigner.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')
         } px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}
       >
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <CreditCard className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <CreditCard className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -812,9 +812,9 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.businessCardDesigner.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -845,7 +845,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       isDark
                         ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                         : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                    } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                    } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                   />
                 </div>
 
@@ -862,7 +862,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       isDark
                         ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                         : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                    } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                    } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                   />
                 </div>
 
@@ -886,7 +886,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                      } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                     />
                   </div>
                 </div>
@@ -911,7 +911,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                      } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                     />
                   </div>
                 </div>
@@ -936,7 +936,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                      } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                     />
                   </div>
                 </div>
@@ -961,7 +961,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                      } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                     />
                   </div>
                 </div>
@@ -986,7 +986,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                      } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                     />
                   </div>
                 </div>
@@ -1014,7 +1014,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                      } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
                     />
                   </div>
                   <div className="relative">
@@ -1033,7 +1033,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                      } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
                     />
                   </div>
                   <div className="relative">
@@ -1052,7 +1052,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                      } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
                     />
                   </div>
                   <div className="relative">
@@ -1071,7 +1071,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                           : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                      } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                      } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
                     />
                   </div>
                 </div>
@@ -1096,7 +1096,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       onClick={() => handleDesignOptionChange('template', key)}
                       className={`px-3 py-2 text-sm rounded-lg border transition-all ${
                         designOptions.template === key
-                          ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                          ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                           : isDark
                           ? 'border-gray-600 text-gray-300 hover:border-gray-500'
                           : 'border-gray-200 text-gray-700 hover:border-gray-300'
@@ -1120,7 +1120,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       onClick={() => handleColorSchemeChange(scheme.name)}
                       className={`relative h-10 rounded-lg border-2 transition-all ${
                         designOptions.colorScheme === scheme.name
-                          ? t('tools.businessCardDesigner.border0d9488Ring2Ring', 'border-[#0D9488] ring-2 ring-[#0D9488]/20') : 'border-transparent hover:border-gray-300'
+                          ? t('tools.businessCardDesigner.border0d9488Ring2Ring', 'border-[#6096B4] ring-2 ring-[#6096B4]/20') : 'border-transparent hover:border-gray-300'
                       }`}
                       style={{
                         background: `linear-gradient(135deg, ${scheme.primary} 50%, ${scheme.secondary} 50%)`,
@@ -1156,7 +1156,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white'
                           : 'border-gray-200 bg-white text-gray-900'
-                      } rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                      } rounded-lg focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1179,7 +1179,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white'
                           : 'border-gray-200 bg-white text-gray-900'
-                      } rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                      } rounded-lg focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1202,7 +1202,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         isDark
                           ? 'border-gray-600 bg-gray-700 text-white'
                           : 'border-gray-200 bg-white text-gray-900'
-                      } rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                      } rounded-lg focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1223,7 +1223,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       isDark
                         ? 'border-gray-600 bg-gray-700 text-white'
                         : 'border-gray-200 bg-white text-gray-900'
-                    } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                    } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
                   >
                     <option value="sans">{t('tools.businessCardDesigner.sansSerif', 'Sans-serif')}</option>
                     <option value="serif">{t('tools.businessCardDesigner.serif', 'Serif')}</option>
@@ -1242,7 +1242,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                         onClick={() => handleDesignOptionChange('textAlign', align)}
                         className={`flex-1 px-3 py-2 rounded-lg border transition-all ${
                           designOptions.textAlign === align
-                            ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                            ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                             : isDark
                             ? 'border-gray-600 text-gray-300 hover:border-gray-500'
                             : 'border-gray-200 text-gray-700 hover:border-gray-300'
@@ -1269,7 +1269,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       onClick={() => handleDesignOptionChange('borderStyle', style)}
                       className={`px-3 py-2 text-sm rounded-lg border capitalize transition-all ${
                         designOptions.borderStyle === style
-                          ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                          ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                           : isDark
                           ? 'border-gray-600 text-gray-300 hover:border-gray-500'
                           : 'border-gray-200 text-gray-700 hover:border-gray-300'
@@ -1304,7 +1304,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                   ) : (
                     <label
                       className={`flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed ${
-                        isDark ? t('tools.businessCardDesigner.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]') : t('tools.businessCardDesigner.borderGray300HoverBorder', 'border-gray-300 hover:border-[#0D9488]')
+                        isDark ? t('tools.businessCardDesigner.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]') : t('tools.businessCardDesigner.borderGray300HoverBorder', 'border-gray-300 hover:border-[#6096B4]')
                       } rounded-xl cursor-pointer transition-colors`}
                     >
                       <Upload className="w-5 h-5 text-gray-400" />
@@ -1329,7 +1329,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                     onClick={() => handleDesignOptionChange('showQrCode', !designOptions.showQrCode)}
                     className={`w-full px-4 py-3 rounded-xl border-2 border-dashed flex items-center justify-center gap-2 transition-all ${
                       designOptions.showQrCode
-                        ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                        ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                         : isDark
                         ? 'border-gray-600 text-gray-400 hover:border-gray-500'
                         : 'border-gray-300 text-gray-500 hover:border-gray-400'
@@ -1378,7 +1378,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-all"
+                  className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-all"
                 >
                   <Download size={18} />
                   {t('tools.businessCardDesigner.download', 'Download')}
@@ -1414,13 +1414,13 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                     isDark
                       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                  } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                  } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
                 />
                 <button
                   onClick={handleSaveDesign}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
                     saveSuccess
-                      ? 'bg-green-500 text-white' : t('tools.businessCardDesigner.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                      ? 'bg-green-500 text-white' : t('tools.businessCardDesigner.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                   }`}
                 >
                   {saveSuccess ? <Check size={18} /> : <Save size={18} />}
@@ -1454,7 +1454,7 @@ export const BusinessCardDesignerTool: React.FC<BusinessCardDesignerToolProps> =
                       <div className="flex gap-1">
                         <button
                           onClick={() => handleLoadDesign(design)}
-                          className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                          className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                           title={t('tools.businessCardDesigner.loadDesign', 'Load design')}
                         >
                           <Upload size={16} />

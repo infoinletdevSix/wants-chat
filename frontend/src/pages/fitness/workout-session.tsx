@@ -765,7 +765,7 @@ const WorkoutSession: React.FC = () => {
               {!isResting && (
                 <Button
                   onClick={completeSet}
-                  className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 h-12 text-lg"
+                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 h-12 text-lg"
                   disabled={isPaused || isUpdating}
                 >
                   <CheckCircle className="h-5 w-5 mr-2" />
@@ -926,7 +926,7 @@ const WorkoutSession: React.FC = () => {
               </p>
               <Button 
                 onClick={() => navigate('/fitness/dashboard')}
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
               >
                 OK
               </Button>

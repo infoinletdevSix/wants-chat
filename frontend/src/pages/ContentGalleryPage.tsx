@@ -434,7 +434,7 @@ const ContentGalleryPage: React.FC = () => {
                     className={cn(
                       "flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all",
                       mainTab === 'content'
-                        ? 'bg-[#0D9488] text-white shadow-sm'
+                        ? 'bg-[#6096B4] text-white shadow-sm'
                         : theme === 'dark'
                           ? 'text-gray-400 hover:text-white'
                           : 'text-gray-600 hover:text-gray-900'
@@ -448,7 +448,7 @@ const ContentGalleryPage: React.FC = () => {
                     className={cn(
                       "flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all",
                       mainTab === 'apps'
-                        ? 'bg-[#0D9488] text-white shadow-sm'
+                        ? 'bg-[#6096B4] text-white shadow-sm'
                         : theme === 'dark'
                           ? 'text-gray-400 hover:text-white'
                           : 'text-gray-600 hover:text-gray-900'
@@ -523,7 +523,7 @@ const ContentGalleryPage: React.FC = () => {
                 className={cn(
                   "p-2 rounded-lg transition-colors",
                   viewMode === 'grid'
-                    ? 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? 'bg-[#6096B4]/10 text-[#6096B4]'
                     : theme === 'dark'
                       ? 'hover:bg-[#2a2a2a] text-gray-400'
                       : 'hover:bg-gray-100 text-gray-600'
@@ -536,7 +536,7 @@ const ContentGalleryPage: React.FC = () => {
                 className={cn(
                   "p-2 rounded-lg transition-colors",
                   viewMode === 'list'
-                    ? 'bg-[#0D9488]/10 text-[#0D9488]'
+                    ? 'bg-[#6096B4]/10 text-[#6096B4]'
                     : theme === 'dark'
                       ? 'hover:bg-[#2a2a2a] text-gray-400'
                       : 'hover:bg-gray-100 text-gray-600'
@@ -565,7 +565,7 @@ const ContentGalleryPage: React.FC = () => {
                     className={cn(
                       "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap",
                       activeTab === tab.id
-                        ? 'bg-[#0D9488] text-white shadow-lg shadow-[#0D9488]/25'
+                        ? 'bg-[#6096B4] text-white shadow-lg shadow-[#6096B4]/25'
                         : theme === 'dark'
                           ? 'text-gray-400 hover:bg-[#2a2a2a] hover:text-white'
                           : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
@@ -608,7 +608,7 @@ const ContentGalleryPage: React.FC = () => {
                     className={cn(
                       "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap",
                       activeAppsTab === tab.id
-                        ? 'bg-[#0D9488] text-white shadow-lg shadow-[#0D9488]/25'
+                        ? 'bg-[#6096B4] text-white shadow-lg shadow-[#6096B4]/25'
                         : theme === 'dark'
                           ? 'text-gray-400 hover:bg-[#2a2a2a] hover:text-white'
                           : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
@@ -651,8 +651,8 @@ const ContentGalleryPage: React.FC = () => {
             className={cn(
               "w-full pl-10 pr-4 py-3 rounded-xl border outline-none transition-all",
               theme === 'dark'
-                ? 'bg-[#2a2a2a] border-[#3a3a3a] text-white placeholder:text-gray-500 focus:border-[#0D9488]'
-                : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0D9488] focus:ring-2 focus:ring-[#0D9488]/20'
+                ? 'bg-[#2a2a2a] border-[#3a3a3a] text-white placeholder:text-gray-500 focus:border-[#6096B4]'
+                : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#6096B4] focus:ring-2 focus:ring-[#6096B4]/20'
             )}
           />
         </div>
@@ -662,7 +662,7 @@ const ContentGalleryPage: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
-            <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+            <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           </div>
         ) : error ? (
           <div className={cn(
@@ -672,7 +672,7 @@ const ContentGalleryPage: React.FC = () => {
             <p>{error}</p>
             <button
               onClick={mainTab === 'content' ? loadContent : loadApps}
-              className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+              className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
             >
               Try Again
             </button>
@@ -691,7 +691,7 @@ const ContentGalleryPage: React.FC = () => {
               </p>
               <button
                 onClick={() => navigate('/chat')}
-                className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 Create an App
               </button>
@@ -1328,8 +1328,8 @@ const ContentGalleryPage: React.FC = () => {
                       className={cn(
                         "p-2 rounded-lg transition-colors",
                         theme === 'dark'
-                          ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-                          : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+                          ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+                          : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
                       )}
                       title="Edit in Tool"
                     >

@@ -459,13 +459,13 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
   const tabClass = (tab: TabType) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     activeTab === tab
-      ? 'bg-[#0D9488] text-white'
+      ? 'bg-[#6096B4] text-white'
       : isDark
       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -677,7 +677,7 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
         </select>
         <button
           onClick={() => setShowForm(true)}
-          className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2 transition-colors"
+          className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2 transition-colors"
         >
           <Plus className="w-5 h-5" />
           {t('tools.serviceTicket.newTicket', 'New Ticket')}
@@ -706,7 +706,7 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
             <button
               onClick={editingTicket ? handleUpdateTicket : handleAddTicket}
               disabled={!((editingTicket || newTicket).customerName && (editingTicket || newTicket).equipmentName)}
-              className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               <Save className="w-5 h-5" />
               {editingTicket ? t('tools.serviceTicket.updateTicket', 'Update Ticket') : t('tools.serviceTicket.createTicket', 'Create Ticket')}
@@ -775,7 +775,7 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
                   {ticket.actualCost > 0 && (
                     <div className="flex items-center gap-2">
                       <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
-                      <span className="text-[#0D9488] font-medium">
+                      <span className="text-[#6096B4] font-medium">
                         Actual: ${ticket.actualCost.toFixed(2)}
                       </span>
                     </div>
@@ -854,8 +854,8 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className={cardClass}>
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-              <AlertCircle className="w-6 h-6 text-[#0D9488]" />
+            <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+              <AlertCircle className="w-6 h-6 text-[#6096B4]" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.serviceTicket.totalTickets', 'Total Tickets')}</p>
@@ -997,9 +997,9 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.serviceTicket.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.serviceTicket.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -1007,8 +1007,8 @@ export const ServiceTicketTool: React.FC<ServiceTicketToolProps> = ({
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                <Wrench className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                <Wrench className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>

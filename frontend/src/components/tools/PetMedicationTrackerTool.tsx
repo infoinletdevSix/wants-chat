@@ -462,11 +462,11 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <PawPrint className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <PawPrint className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.petMedicationTracker.petMedicationTracker', 'Pet Medication Tracker')}</h3>
@@ -569,7 +569,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
             <button
               onClick={() => setSelectedPetId(null)}
               className={`px-3 py-1.5 rounded-lg text-sm ${
-                selectedPetId === null ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+                selectedPetId === null ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
               }`}
             >
               {t('tools.petMedicationTracker.allPets', 'All Pets')}
@@ -579,7 +579,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                 key={pet.id}
                 onClick={() => setSelectedPetId(pet.id)}
                 className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 ${
-                  selectedPetId === pet.id ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+                  selectedPetId === pet.id ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
                 }`}
               >
                 <span>{petTypeIcons[pet.type]}</span>
@@ -596,7 +596,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm whitespace-nowrap ${
-                activeTab === tab.id ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+                activeTab === tab.id ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
               }`}
             >
               {tab.icon}
@@ -611,7 +611,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
             {!showPetForm && (
               <button
                 onClick={() => setShowPetForm(true)}
-                className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.petMedicationTracker.addPet', 'Add Pet')}
@@ -684,7 +684,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                   >
                     {t('tools.petMedicationTracker.cancel', 'Cancel')}
                   </button>
-                  <button onClick={handleAddPet} className="px-4 py-2 rounded-lg bg-teal-500 text-white">
+                  <button onClick={handleAddPet} className="px-4 py-2 rounded-lg bg-primary-500 text-white">
                     {t('tools.petMedicationTracker.addPet2', 'Add Pet')}
                   </button>
                 </div>
@@ -734,7 +734,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                 {!showMedForm && (
                   <button
                     onClick={() => setShowMedForm(true)}
-                    className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                    className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.petMedicationTracker.addMedication2', 'Add Medication')}
@@ -839,7 +839,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       >
                         {t('tools.petMedicationTracker.cancel2', 'Cancel')}
                       </button>
-                      <button onClick={handleAddMedication} className="px-4 py-2 rounded-lg bg-teal-500 text-white">
+                      <button onClick={handleAddMedication} className="px-4 py-2 rounded-lg bg-primary-500 text-white">
                         {t('tools.petMedicationTracker.addMedication3', 'Add Medication')}
                       </button>
                     </div>
@@ -854,7 +854,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       <div key={med.id} className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-3">
-                            <Pill className="w-5 h-5 text-teal-500" />
+                            <Pill className="w-5 h-5 text-primary-500" />
                             <div>
                               <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{med.name}</h4>
                               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -913,7 +913,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                 {!showFleaForm && (
                   <button
                     onClick={() => setShowFleaForm(true)}
-                    className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                    className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.petMedicationTracker.addFleaTickTreatment2', 'Add Flea/Tick Treatment')}
@@ -975,7 +975,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       >
                         {t('tools.petMedicationTracker.cancel3', 'Cancel')}
                       </button>
-                      <button onClick={handleAddFleaTick} className="px-4 py-2 rounded-lg bg-teal-500 text-white">
+                      <button onClick={handleAddFleaTick} className="px-4 py-2 rounded-lg bg-primary-500 text-white">
                         {t('tools.petMedicationTracker.addTreatment', 'Add Treatment')}
                       </button>
                     </div>
@@ -991,7 +991,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       <div key={ft.id} className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-3">
-                            <Bug className="w-5 h-5 text-teal-500" />
+                            <Bug className="w-5 h-5 text-primary-500" />
                             <div>
                               <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{ft.productName}</h4>
                               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{pet?.name}</p>
@@ -1043,7 +1043,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                 {!showVaccForm && (
                   <button
                     onClick={() => setShowVaccForm(true)}
-                    className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                    className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.petMedicationTracker.addVaccination2', 'Add Vaccination')}
@@ -1105,7 +1105,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       >
                         {t('tools.petMedicationTracker.cancel4', 'Cancel')}
                       </button>
-                      <button onClick={handleAddVaccination} className="px-4 py-2 rounded-lg bg-teal-500 text-white">
+                      <button onClick={handleAddVaccination} className="px-4 py-2 rounded-lg bg-primary-500 text-white">
                         {t('tools.petMedicationTracker.addVaccination3', 'Add Vaccination')}
                       </button>
                     </div>
@@ -1121,7 +1121,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       <div key={vacc.id} className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-3">
-                            <Syringe className="w-5 h-5 text-teal-500" />
+                            <Syringe className="w-5 h-5 text-primary-500" />
                             <div>
                               <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{vacc.name}</h4>
                               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{pet?.name}</p>
@@ -1173,7 +1173,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                 {!showApptForm && (
                   <button
                     onClick={() => setShowApptForm(true)}
-                    className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                    className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.petMedicationTracker.addVetAppointment2', 'Add Vet Appointment')}
@@ -1255,7 +1255,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       >
                         {t('tools.petMedicationTracker.cancel5', 'Cancel')}
                       </button>
-                      <button onClick={handleAddAppointment} className="px-4 py-2 rounded-lg bg-teal-500 text-white">
+                      <button onClick={handleAddAppointment} className="px-4 py-2 rounded-lg bg-primary-500 text-white">
                         {t('tools.petMedicationTracker.addAppointment', 'Add Appointment')}
                       </button>
                     </div>
@@ -1271,7 +1271,7 @@ export const PetMedicationTrackerTool: React.FC<PetMedicationTrackerToolProps> =
                       <div key={appt.id} className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-3">
-                            <Stethoscope className="w-5 h-5 text-teal-500" />
+                            <Stethoscope className="w-5 h-5 text-primary-500" />
                             <div>
                               <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{appt.reason}</h4>
                               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

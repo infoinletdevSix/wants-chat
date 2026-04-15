@@ -81,7 +81,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
           </div>
           <div className="border-x border-white/10">
             <p className="text-sm text-white/60">Current</p>
-            <p className="text-xl font-bold text-teal-400">{currentWeight}</p>
+            <p className="text-xl font-bold text-primary-400">{currentWeight}</p>
             <p className="text-xs text-white/60">kg</p>
           </div>
           <div>
@@ -95,7 +95,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-sm text-white/60">Progress</span>
-            <span className="text-sm font-medium text-teal-400">
+            <span className="text-sm font-medium text-primary-400">
               {Math.round(progress)}%
             </span>
           </div>
@@ -197,7 +197,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
               Cancel
             </Button>
             <Button
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               onClick={async () => {
                 const weightValue = parseFloat(weight);
                 if (isNaN(weightValue) || weightValue < 30 || weightValue > 300) {

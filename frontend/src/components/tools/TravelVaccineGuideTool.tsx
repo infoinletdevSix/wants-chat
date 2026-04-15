@@ -291,9 +291,9 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Plane className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Plane className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.travelVaccineGuide.travelVaccineGuide', 'Travel Vaccine Guide')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.travelVaccineGuide.vaccinationRequirementsAndHealthTips', 'Vaccination requirements and health tips by destination')}</p>
@@ -304,9 +304,9 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.travelVaccineGuide.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.travelVaccineGuide.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
           </div>
         )}
 
@@ -320,7 +320,7 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
               <button
                 key={r}
                 onClick={() => setSelectedRegion(r)}
-                className={`py-2 px-3 rounded-lg text-sm ${selectedRegion === r ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${selectedRegion === r ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {regions[r].name}
               </button>
@@ -352,12 +352,12 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Syringe className="w-4 h-4 text-teal-500" />
+              <Syringe className="w-4 h-4 text-primary-500" />
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>Vaccinations for {config.name}</h4>
             </div>
             <button
               onClick={() => setShowAllVaccines(!showAllVaccines)}
-              className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-600'}`}
+              className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-600'}`}
             >
               {showAllVaccines ? t('tools.travelVaccineGuide.showRequiredOnly', 'Show Required Only') : t('tools.travelVaccineGuide.showAll', 'Show All')}
             </button>
@@ -369,7 +369,7 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
                 key={index}
                 className={`p-4 rounded-lg border ${
                   vaccine.required
-                    ? isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'
+                    ? isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'
                     : isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
                 }`}
               >
@@ -378,7 +378,7 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
                     <div className="flex items-center gap-2">
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{vaccine.name}</span>
                       {vaccine.required && (
-                        <span className="px-2 py-0.5 text-xs bg-teal-500 text-white rounded-full">{t('tools.travelVaccineGuide.required', 'Required')}</span>
+                        <span className="px-2 py-0.5 text-xs bg-primary-500 text-white rounded-full">{t('tools.travelVaccineGuide.required', 'Required')}</span>
                       )}
                       {'status' in vaccine && vaccine.status === 'urgent' && (
                         <AlertTriangle className="w-4 h-4 text-red-500" />
@@ -415,13 +415,13 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
         {/* Health Tips */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <Shield className="w-4 h-4 text-teal-500" />
+            <Shield className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>Health Tips for {config.name}</h4>
           </div>
           <ul className={`space-y-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {config.healthTips.map((tip, index) => (
               <li key={index} className="flex items-start gap-2 text-sm">
-                <span className="text-teal-500 mt-0.5">•</span>
+                <span className="text-primary-500 mt-0.5">•</span>
                 {tip}
               </li>
             ))}
@@ -431,13 +431,13 @@ export const TravelVaccineGuideTool: React.FC<TravelVaccineGuideToolProps> = ({ 
         {/* Document Requirements */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <FileText className="w-4 h-4 text-teal-500" />
+            <FileText className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.travelVaccineGuide.documentRequirements', 'Document Requirements')}</h4>
           </div>
           <ul className={`space-y-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {config.documents.map((doc, index) => (
               <li key={index} className="flex items-start gap-2 text-sm">
-                <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
                 {doc}
               </li>
             ))}

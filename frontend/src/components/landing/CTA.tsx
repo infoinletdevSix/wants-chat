@@ -6,10 +6,10 @@ import { Sparkles, ArrowRight, Calendar } from 'lucide-react';
 
 const CTA: React.FC = () => {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{
           x: [0, 50, 0],
           y: [0, -30, 0],
@@ -48,7 +48,7 @@ const CTA: React.FC = () => {
         >
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-            <Sparkles className="h-4 w-4 text-teal-400" />
+            <Sparkles className="h-4 w-4 text-primary-400" />
             <span className="text-sm font-medium text-white">Start Your Journey Today</span>
           </div>
 
@@ -68,7 +68,7 @@ const CTA: React.FC = () => {
             <Link to="/login">
               <Button
                 size="lg"
-                className="group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg shadow-teal-500/25"
+                className="group bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/25"
               >
                 Start Free Today
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

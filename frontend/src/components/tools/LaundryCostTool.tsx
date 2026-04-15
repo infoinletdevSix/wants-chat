@@ -142,9 +142,9 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Shirt className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Shirt className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.laundryCost.laundryCostCalculator', 'Laundry Cost Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.laundryCost.calculateYourLaundryExpenses', 'Calculate your laundry expenses')}</p>
@@ -154,9 +154,9 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.laundryCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.laundryCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -176,7 +176,7 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
                 onClick={() => setLocation(loc.id as WashLocation)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   location === loc.id
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -253,7 +253,7 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
                 </label>
                 <button
                   onClick={() => setUsesGasDryer(!usesGasDryer)}
-                  className={`w-full py-2 rounded-lg ${usesGasDryer ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                  className={`w-full py-2 rounded-lg ${usesGasDryer ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                 >
                   {usesGasDryer ? t('tools.laundryCost.gasDryer', 'Gas Dryer') : t('tools.laundryCost.electricDryer', 'Electric Dryer')}
                 </button>
@@ -322,9 +322,9 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
         )}
 
         {/* Results */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.laundryCost.annualLaundryCost', 'Annual Laundry Cost')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             ${calculations.yearly.toFixed(2)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -348,7 +348,7 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Per {location === 'dryClean' ? t('tools.laundryCost.item', 'Item') : t('tools.laundryCost.load', 'Load')}</div>
-            <div className="text-2xl font-bold text-teal-500">
+            <div className="text-2xl font-bold text-primary-500">
               ${calculations.perLoad.toFixed(2)}
             </div>
           </div>
@@ -379,13 +379,13 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.laundryCost.annualComparison', 'Annual Comparison')}</h4>
             <div className="grid grid-cols-2 gap-4">
-              <div className={`p-3 rounded-lg ${location === 'home' ? 'ring-2 ring-teal-500' : ''} ${isDark ? 'bg-gray-700/50' : 'bg-white'}`}>
+              <div className={`p-3 rounded-lg ${location === 'home' ? 'ring-2 ring-primary-500' : ''} ${isDark ? 'bg-gray-700/50' : 'bg-white'}`}>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.laundryCost.home', 'Home')}</div>
                 <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   ${calculations.comparison.home.toFixed(0)}/yr
                 </div>
               </div>
-              <div className={`p-3 rounded-lg ${location === 'laundromat' ? 'ring-2 ring-teal-500' : ''} ${isDark ? 'bg-gray-700/50' : 'bg-white'}`}>
+              <div className={`p-3 rounded-lg ${location === 'laundromat' ? 'ring-2 ring-primary-500' : ''} ${isDark ? 'bg-gray-700/50' : 'bg-white'}`}>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.laundryCost.laundromat', 'Laundromat')}</div>
                 <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   ${calculations.comparison.laundromat.toFixed(0)}/yr
@@ -394,7 +394,7 @@ export const LaundryCostTool: React.FC<LaundryCostToolProps> = ({
             </div>
             {calculations.comparison.savings > 0 && (
               <p className={`text-sm mt-3 text-center ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                Potential savings: <span className="text-teal-500 font-medium">${calculations.comparison.savings.toFixed(0)}/year</span>
+                Potential savings: <span className="text-primary-500 font-medium">${calculations.comparison.savings.toFixed(0)}/year</span>
               </p>
             )}
           </div>

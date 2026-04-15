@@ -151,7 +151,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
 
   const inputClass = `w-full p-3 rounded-lg border ${
     theme === 'dark' ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:ring-2 focus:ring-[#6096B4]`;
 
   const cardClass = `p-4 rounded-lg ${theme === 'dark' ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
@@ -159,7 +159,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -167,7 +167,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Palette className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -180,9 +180,9 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">
             {isEditFromGallery ? t('tools.artClass.dataRestoredFromYourSaved', 'Data restored from your saved gallery') : t('tools.artClass.prefilledFromAiResponse', 'Prefilled from AI response')}
           </span>
         </div>
@@ -213,7 +213,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
         />
         <button
           onClick={() => setShowForm(!showForm)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
         >
           <Plus className="w-5 h-5" />
           {t('tools.artClass.addClass', 'Add Class')}
@@ -246,7 +246,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
           </div>
           <div className="flex gap-2 mt-4">
             <button onClick={addClass} disabled={!formData.name || !formData.instructor}
-              className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">
+              className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">
               {t('tools.artClass.saveClass', 'Save Class')}
             </button>
             <button onClick={() => setShowForm(false)}
@@ -277,7 +277,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
                 <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-[#0D9488]" />
+                  <Users className="w-4 h-4 text-[#6096B4]" />
                   <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{c.enrolledStudents}/{c.maxStudents}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -294,7 +294,7 @@ export const ArtClassTool: React.FC<ArtClassToolProps> = ({ uiConfig }) => {
                 </div>
               </div>
               <button onClick={() => enrollStudent(c.id)} disabled={c.enrolledStudents >= c.maxStudents}
-                className="text-sm px-3 py-1 bg-[#0D9488] text-white rounded hover:bg-[#0B8276] disabled:opacity-50">
+                className="text-sm px-3 py-1 bg-[#6096B4] text-white rounded hover:bg-[#0B8276] disabled:opacity-50">
                 {t('tools.artClass.enrollStudent', 'Enroll Student')}
               </button>
             </div>

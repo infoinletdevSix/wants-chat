@@ -21,7 +21,7 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
   const getStatusColor = () => {
     if (percentage < 50) return 'text-orange-400';
     if (percentage >= 100) return 'text-emerald-400';
-    return 'text-teal-400';
+    return 'text-primary-400';
   };
 
   const getStatusMessage = () => {
@@ -53,7 +53,7 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
               key={index}
               className={`h-16 rounded-lg border-2 transition-all ${
                 index < current
-                  ? 'bg-gradient-to-b from-cyan-500 to-teal-500 border-cyan-400'
+                  ? 'bg-gradient-to-b from-cyan-500 to-primary-500 border-cyan-400'
                   : 'bg-white/10 backdrop-blur-xl border-white/20'
               }`}
             />
@@ -94,7 +94,7 @@ const WaterIntake: React.FC<WaterIntakeProps> = ({
           </Button>
           <Button
             size="sm"
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white"
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-primary-500 hover:from-cyan-600 hover:to-primary-600 text-white"
             onClick={() => onUpdate(Math.min(target, current + 1))}
             disabled={current >= target}
           >

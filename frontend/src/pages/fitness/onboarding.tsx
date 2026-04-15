@@ -79,7 +79,7 @@ const FitnessOnboarding: React.FC = () => {
       <div className="relative z-10 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
             Let's personalize your fitness journey
           </h1>
           <p className="text-white/60">

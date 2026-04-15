@@ -26,7 +26,7 @@ const integrationCategories = [
   {
     name: 'Communication',
     icon: MessageSquare,
-    color: 'from-emerald-500 to-teal-500',
+    color: 'from-emerald-500 to-primary-500',
     apps: [
       { name: 'Gmail', logo: 'G', desc: 'Email service' },
       { name: 'Microsoft Teams', logo: 'T', desc: 'Business communication' },
@@ -103,7 +103,7 @@ const integrationCategories = [
   {
     name: 'Scheduling',
     icon: Calendar,
-    color: 'from-teal-500 to-green-500',
+    color: 'from-primary-500 to-green-500',
     apps: [
       { name: 'Calendly', logo: 'C', desc: 'Meeting scheduling' },
       { name: 'Google Calendar', logo: 'G', desc: 'Time management' },
@@ -183,7 +183,7 @@ const IntegrationsPage: React.FC = () => {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-primary-400 bg-clip-text text-transparent">
                   {t('integrations.hero.title')}
                 </span>
               </h1>

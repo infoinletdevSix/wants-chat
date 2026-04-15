@@ -364,7 +364,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
         <h3 className="text-lg font-semibold text-gray-900">Materials</h3>
         <button
           onClick={() => addMaterialItem(takeoff, setTakeoff)}
-          className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm"
+          className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm"
         >
           <Plus className="w-4 h-4" />
           Add Material
@@ -457,7 +457,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     className="w-24 px-2 py-1 border border-gray-300 rounded text-sm text-right"
                   />
                 </td>
-                <td className="px-3 py-2 text-right font-medium text-teal-600">
+                <td className="px-3 py-2 text-right font-medium text-primary-600">
                   {formatCurrency(item.totalCost)}
                 </td>
                 <td className="px-3 py-2 text-center">
@@ -487,8 +487,8 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <Package className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <Package className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.materialTakeoff.materialTakeoff', 'Material Takeoff')}</h1>
@@ -563,7 +563,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
           onClick={() => setActiveTab('list')}
           className={`px-4 py-2 font-medium transition-colors ${
             activeTab === 'list'
-              ? 'text-teal-600 border-b-2 border-teal-600'
+              ? 'text-primary-600 border-b-2 border-primary-600'
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
@@ -573,7 +573,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
           onClick={() => setActiveTab('create')}
           className={`px-4 py-2 font-medium transition-colors ${
             activeTab === 'create'
-              ? 'text-teal-600 border-b-2 border-teal-600'
+              ? 'text-primary-600 border-b-2 border-primary-600'
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
@@ -592,13 +592,13 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                 placeholder={t('tools.materialTakeoff.searchTakeoffs', 'Search takeoffs...')}
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <select
               value={filterStatus}
               onChange={e => setFilterStatus(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
             >
               <option value="all">{t('tools.materialTakeoff.allStatus', 'All Status')}</option>
               {Object.entries(STATUS_CONFIG).map(([key, config]) => (
@@ -619,8 +619,8 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <Package className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <Package className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{takeoff.projectName}</h3>
@@ -671,7 +671,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                           setEditingTakeoff(takeoff);
                           setActiveTab('edit');
                         }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.materialTakeoff.edit', 'Edit')}
@@ -703,7 +703,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                 <p className="text-gray-500 mt-1">{t('tools.materialTakeoff.createYourFirstMaterialTakeoff', 'Create your first material takeoff')}</p>
                 <button
                   onClick={() => setActiveTab('create')}
-                  className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {t('tools.materialTakeoff.createTakeoff', 'Create Takeoff')}
                 </button>
@@ -742,7 +742,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     ? setEditingTakeoff({ ...editingTakeoff!, projectName: e.target.value })
                     : setNewTakeoff({ ...newTakeoff, projectName: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -755,7 +755,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     ? setEditingTakeoff({ ...editingTakeoff!, projectNumber: e.target.value })
                     : setNewTakeoff({ ...newTakeoff, projectNumber: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -768,7 +768,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     ? setEditingTakeoff({ ...editingTakeoff!, phase: e.target.value })
                     : setNewTakeoff({ ...newTakeoff, phase: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -781,7 +781,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     ? setEditingTakeoff({ ...editingTakeoff!, preparedBy: e.target.value })
                     : setNewTakeoff({ ...newTakeoff, preparedBy: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -794,7 +794,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     ? setEditingTakeoff({ ...editingTakeoff!, date: e.target.value })
                     : setNewTakeoff({ ...newTakeoff, date: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -806,7 +806,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     ? setEditingTakeoff({ ...editingTakeoff!, status: e.target.value as any })
                     : setNewTakeoff({ ...newTakeoff, status: e.target.value as any })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               >
                 {Object.entries(STATUS_CONFIG).map(([key, config]) => (
                   <option key={key} value={key}>{config.label}</option>
@@ -835,7 +835,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     setNewTakeoff(calculateTotals({ ...newTakeoff, taxPercent: value }));
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -851,7 +851,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
                     setNewTakeoff(calculateTotals({ ...newTakeoff, shippingCost: value }));
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -880,7 +880,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
               <div className="border-t border-gray-300 pt-2 mt-2">
                 <div className="flex justify-between">
                   <span className="font-bold text-gray-900">{t('tools.materialTakeoff.total', 'Total')}</span>
-                  <span className="font-bold text-teal-600 text-xl">
+                  <span className="font-bold text-primary-600 text-xl">
                     {formatCurrency(activeTab === 'edit' ? editingTakeoff?.totalCost || 0 : newTakeoff.totalCost || 0)}
                   </span>
                 </div>
@@ -901,7 +901,7 @@ export const MaterialTakeoffTool: React.FC<MaterialTakeoffToolProps> = ({ uiConf
             </button>
             <button
               onClick={activeTab === 'edit' ? handleUpdate : handleSave}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
             >
               <Save className="w-4 h-4" />
               {activeTab === 'edit' ? t('tools.materialTakeoff.update', 'Update') : t('tools.materialTakeoff.save', 'Save')} Takeoff

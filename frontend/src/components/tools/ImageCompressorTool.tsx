@@ -259,9 +259,9 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
       <div className="space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.imageCompressor.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.imageCompressor.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
           </div>
         )}
 
@@ -273,7 +273,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
             onDragLeave={handleDragLeave}
             className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
               isDragging
-                ? t('tools.imageCompressor.border0d9488Bg0d948810', 'border-[#0D9488] bg-[#0D9488]/10') : t('tools.imageCompressor.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]/50 bg-gray-800/50')
+                ? t('tools.imageCompressor.border0d9488Bg0d948810', 'border-[#6096B4] bg-[#6096B4]/10') : t('tools.imageCompressor.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]/50 bg-gray-800/50')
             }`}
             onClick={() => fileInputRef.current?.click()}
           >
@@ -316,7 +316,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
                 <label className="block text-sm font-medium text-gray-200">
                   {t('tools.imageCompressor.quality', 'Quality')}
                 </label>
-                <span className="text-[#0D9488] font-semibold text-lg">{quality}%</span>
+                <span className="text-[#6096B4] font-semibold text-lg">{quality}%</span>
               </div>
               <input
                 type="range"
@@ -324,7 +324,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
                 max="100"
                 value={quality}
                 onChange={(e) => setQuality(Number(e.target.value))}
-                className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
               />
               <div className="flex justify-between text-xs text-gray-400 mt-2">
                 <span>{t('tools.imageCompressor.lowerQualitySmallerFile', 'Lower quality (smaller file)')}</span>
@@ -342,7 +342,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
                   onClick={() => setFileType('image/jpeg')}
                   className={`flex-1 px-4 py-2 rounded-lg transition-colors ${
                     fileType === 'image/jpeg'
-                      ? t('tools.imageCompressor.bg0d9488TextWhite', 'bg-[#0D9488] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                      ? t('tools.imageCompressor.bg0d9488TextWhite', 'bg-[#6096B4] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                 >
                   {t('tools.imageCompressor.jpeg', 'JPEG')}
@@ -351,7 +351,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
                   onClick={() => setFileType('image/png')}
                   className={`flex-1 px-4 py-2 rounded-lg transition-colors ${
                     fileType === 'image/png'
-                      ? t('tools.imageCompressor.bg0d9488TextWhite2', 'bg-[#0D9488] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                      ? t('tools.imageCompressor.bg0d9488TextWhite2', 'bg-[#6096B4] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                 >
                   {t('tools.imageCompressor.png', 'PNG')}
@@ -363,7 +363,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
             <div className="flex gap-3">
               <button
                 onClick={compressImage}
-                className="flex-1 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                className="flex-1 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
               >
                 {t('tools.imageCompressor.compressImage', 'Compress Image')}
               </button>
@@ -441,7 +441,7 @@ export const ImageCompressorTool = ({ uiConfig }: ImageCompressorToolProps) => {
                   <button
                     onClick={handleSave}
                     disabled={isSaving}
-                    className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSaving ? (
                       <>

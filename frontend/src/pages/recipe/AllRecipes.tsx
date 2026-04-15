@@ -130,7 +130,7 @@ const AllRecipes: React.FC = () => {
               <Button
                 variant="outline"
                 onClick={() => setShowFilters(!showFilters)}
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-white/20 hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-white/20 hover:from-primary-600 hover:to-cyan-600"
               >
                 <Filter className="h-4 w-4 mr-2" />
                 {showFilters ? 'Hide Filters' : 'Show Filters'}
@@ -334,7 +334,7 @@ const AllRecipes: React.FC = () => {
                           variant={page === pageNum ? 'default' : 'outline'}
                           size="sm"
                           onClick={() => setPage(pageNum)}
-                          className={`rounded-xl min-w-[40px] ${page === pageNum ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
+                          className={`rounded-xl min-w-[40px] ${page === pageNum ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
                         >
                           {pageNum}
                         </Button>
@@ -364,7 +364,7 @@ const AllRecipes: React.FC = () => {
                 Try adjusting your filters or search criteria
               </p>
               {hasActiveFilters && (
-                <Button onClick={handleClearFilters} variant="outline" className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-white/20">
+                <Button onClick={handleClearFilters} variant="outline" className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-white/20">
                   Clear Filters
                 </Button>
               )}

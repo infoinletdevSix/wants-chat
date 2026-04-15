@@ -220,11 +220,11 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
   return (
     <div className={`rounded-xl shadow-sm border overflow-hidden ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <BookOpen className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <BookOpen className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.journal.journal', 'Journal')}</h3>
@@ -286,7 +286,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
 
           <button
             onClick={handleAddNew}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.journal.newEntry', 'New Entry')}
@@ -316,7 +316,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
       <div className="p-6">
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+            <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           </div>
         ) : sortedEntries.length === 0 ? (
           <div className={`text-center py-12 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -349,7 +349,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
 
                     <div className="flex items-center gap-3 flex-wrap">
                       <div className="flex items-center gap-1.5">
-                        <Calendar className="w-4 h-4 text-[#0D9488]" />
+                        <Calendar className="w-4 h-4 text-[#6096B4]" />
                         <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                           {new Date(entry.entry_date).toLocaleDateString()}
                         </span>
@@ -439,7 +439,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                   placeholder={t('tools.journal.entryTitle', 'Entry title...')}
-                  className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray', 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]') : t('tools.journal.bgWhiteBorderGray200', 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]')}`}
+                  className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray', 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]') : t('tools.journal.bgWhiteBorderGray200', 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]')}`}
                 />
               </div>
 
@@ -453,7 +453,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                   placeholder={t('tools.journal.writeYourThoughts', 'Write your thoughts...')}
                   rows={6}
-                  className={`w-full px-4 py-3 rounded-xl border outline-none resize-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray2', 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]') : t('tools.journal.bgWhiteBorderGray2002', 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]')}`}
+                  className={`w-full px-4 py-3 rounded-xl border outline-none resize-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray2', 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]') : t('tools.journal.bgWhiteBorderGray2002', 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]')}`}
                 />
               </div>
 
@@ -467,7 +467,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
                   <select
                     value={formData.mood}
                     onChange={(e) => setFormData({ ...formData, mood: e.target.value })}
-                    className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray3', 'bg-gray-700 border-gray-600 text-white focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]') : t('tools.journal.bgWhiteBorderGray2003', 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]')}`}
+                    className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray3', 'bg-gray-700 border-gray-600 text-white focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]') : t('tools.journal.bgWhiteBorderGray2003', 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]')}`}
                   >
                     {moodOptions.map((mood) => (
                       <option key={mood.value} value={mood.value}>
@@ -486,7 +486,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
                     type="date"
                     value={formData.entry_date}
                     onChange={(e) => setFormData({ ...formData, entry_date: e.target.value })}
-                    className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray4', 'bg-gray-700 border-gray-600 text-white focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]') : t('tools.journal.bgWhiteBorderGray2004', 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]')}`}
+                    className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray4', 'bg-gray-700 border-gray-600 text-white focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]') : t('tools.journal.bgWhiteBorderGray2004', 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]')}`}
                   />
                 </div>
               </div>
@@ -501,7 +501,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
                   value={formData.tags}
                   onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
                   placeholder={t('tools.journal.personalWorkHealth', 'personal, work, health...')}
-                  className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray5', 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]') : t('tools.journal.bgWhiteBorderGray2005', 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]')}`}
+                  className={`w-full px-4 py-2.5 rounded-xl border outline-none transition-colors ${isDark ? t('tools.journal.bgGray700BorderGray5', 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]') : t('tools.journal.bgWhiteBorderGray2005', 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]')}`}
                 />
               </div>
 
@@ -531,7 +531,7 @@ export const JournalTool: React.FC<JournalToolProps> = ({ uiConfig }) => {
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {saving ? (
                   <>

@@ -268,10 +268,10 @@ Please write a complete, engaging blog post with:
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Newspaper className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Newspaper className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.blogPostGenerator.aiBlogPostGenerator', 'AI Blog Post Generator')}</h3>
@@ -279,7 +279,7 @@ Please write a complete, engaging blog post with:
               {t('tools.blogPostGenerator.createSeoOptimizedBlogPosts', 'Create SEO-optimized blog posts with AI')}
             </p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{isEditFromGallery ? t('tools.blogPostGenerator.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.blogPostGenerator.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -299,7 +299,7 @@ Please write a complete, engaging blog post with:
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder={t('tools.blogPostGenerator.10TipsForBetterProductivity', '10 Tips for Better Productivity in Remote Work')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -316,7 +316,7 @@ Please write a complete, engaging blog post with:
                 const selected = writingStyles.find((s) => s.value === e.target.value);
                 if (selected) setWritingStyle(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {writingStyles.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -337,7 +337,7 @@ Please write a complete, engaging blog post with:
                 const selected = targetAudiences.find((a) => a.value === e.target.value);
                 if (selected) setTargetAudience(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {targetAudiences.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -358,7 +358,7 @@ Please write a complete, engaging blog post with:
             value={keywords}
             onChange={(e) => setKeywords(e.target.value)}
             placeholder={t('tools.blogPostGenerator.remoteWorkProductivityTimeManagement', 'remote work, productivity, time management')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
           <p className="text-xs text-gray-500 dark:text-gray-400">
             {t('tools.blogPostGenerator.separateKeywordsWithCommas', 'Separate keywords with commas')}
@@ -375,7 +375,7 @@ Please write a complete, engaging blog post with:
             value={seoFocus}
             onChange={(e) => setSeoFocus(e.target.value)}
             placeholder={t('tools.blogPostGenerator.remoteProductivityTips', 'remote productivity tips')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -389,7 +389,7 @@ Please write a complete, engaging blog post with:
             onChange={(e) => setAdditionalContext(e.target.value)}
             placeholder={t('tools.blogPostGenerator.anySpecificPointsExamplesOr', 'Any specific points, examples, or details you want to include...')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -404,7 +404,7 @@ Please write a complete, engaging blog post with:
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !title.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -462,7 +462,7 @@ Please write a complete, engaging blog post with:
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-teal-900/30 hover:bg-teal-900/50 text-teal-300' : 'bg-teal-50 hover:bg-teal-100 text-teal-700'} rounded-lg transition-colors text-sm disabled:opacity-50`}
+                  className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-primary-900/30 hover:bg-primary-900/50 text-primary-300' : 'bg-primary-50 hover:bg-primary-100 text-primary-700'} rounded-lg transition-colors text-sm disabled:opacity-50`}
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.blogPostGenerator.save', 'Save')}

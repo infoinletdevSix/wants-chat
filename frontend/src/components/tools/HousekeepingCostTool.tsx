@@ -228,9 +228,9 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Home className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Home className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.housekeepingCost.housekeepingCostEstimator', 'Housekeeping Cost Estimator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.housekeepingCost.estimateProfessionalCleaningServiceCosts', 'Estimate professional cleaning service costs')}</p>
@@ -240,9 +240,9 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.housekeepingCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.housekeepingCost.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -260,7 +260,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
                   onClick={() => setHomeSize(size)}
                   className={`py-2 px-2 rounded-lg text-xs text-center ${
                     homeSize === size
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300'
                       : 'bg-gray-100 text-gray-700'
@@ -326,7 +326,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
                 onClick={() => setCleaningType(type)}
                 className={`py-2 px-2 rounded-lg text-xs text-center ${
                   cleaningType === type
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -354,7 +354,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
                 onClick={() => setFrequency(freq)}
                 className={`py-3 px-2 rounded-lg text-sm flex flex-col items-center gap-0.5 ${
                   frequency === freq
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -362,7 +362,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
               >
                 <span className="font-medium">{frequencies[freq].name}</span>
                 {frequencies[freq].discount > 0 && (
-                  <span className={`text-xs ${frequency === freq ? 'text-white/80' : 'text-teal-500'}`}>
+                  <span className={`text-xs ${frequency === freq ? 'text-white/80' : 'text-primary-500'}`}>
                     {frequencies[freq].description}
                   </span>
                 )}
@@ -383,7 +383,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
                 onClick={() => setServiceType('company')}
                 className={`flex-1 py-2 rounded-lg text-sm ${
                   serviceType === 'company'
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -395,7 +395,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
                 onClick={() => setServiceType('individual')}
                 className={`flex-1 py-2 rounded-lg text-sm ${
                   serviceType === 'individual'
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -425,13 +425,13 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
         <div className="grid grid-cols-2 gap-4">
           <button
             onClick={() => setHasPets(!hasPets)}
-            className={`py-2 rounded-lg text-sm ${hasPets ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`py-2 rounded-lg text-sm ${hasPets ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.housekeepingCost.havePets20', 'Have Pets (+$20)')}
           </button>
           <button
             onClick={() => setExtraCluttered(!extraCluttered)}
-            className={`py-2 rounded-lg text-sm ${extraCluttered ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`py-2 rounded-lg text-sm ${extraCluttered ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             {t('tools.housekeepingCost.extraCluttered30', 'Extra Cluttered (+$30)')}
           </button>
@@ -449,7 +449,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
                 onClick={() => toggleAddOn(service.key)}
                 className={`px-3 py-1.5 rounded-lg text-xs ${
                   addOns[service.key as keyof typeof addOns]
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -462,9 +462,9 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
         </div>
 
         {/* Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.housekeepingCost.estimatedCostPerVisit', 'Estimated Cost Per Visit')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             ${calculations.pricePerVisit}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -489,7 +489,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
             </div>
             <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.housekeepingCost.annual', 'Annual')}</div>
-              <div className="text-2xl font-bold text-teal-500">
+              <div className="text-2xl font-bold text-primary-500">
                 ${calculations.yearlyTotal.toLocaleString()}
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -502,7 +502,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
         {/* Cost Breakdown */}
         <div className={`rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'} p-4`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Calculator className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Calculator className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.housekeepingCost.priceBreakdown', 'Price Breakdown')}
           </h4>
           <div className="space-y-2">
@@ -523,7 +523,7 @@ export const HousekeepingCostTool: React.FC<HousekeepingCostToolProps> = ({ uiCo
         {/* What's Included */}
         <div className={`rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'} p-4`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <CheckCircle className="w-4 h-4 inline mr-2 text-teal-500" />
+            <CheckCircle className="w-4 h-4 inline mr-2 text-primary-500" />
             Typically Included in {cleaningTypes[cleaningType].name}
           </h4>
           <div className={`text-sm grid grid-cols-2 gap-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>

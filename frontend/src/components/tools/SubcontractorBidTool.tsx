@@ -413,8 +413,8 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <Users className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <Users className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.subcontractorBid.subcontractorBidTracking', 'Subcontractor Bid Tracking')}</h1>
@@ -483,8 +483,8 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
         </div>
         <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-100 rounded-lg">
-              <TrendingUp className="w-5 h-5 text-teal-600" />
+            <div className="p-2 bg-primary-100 rounded-lg">
+              <TrendingUp className="w-5 h-5 text-primary-600" />
             </div>
             <div>
               <p className="text-sm text-gray-500">{t('tools.subcontractorBid.avgBid', 'Avg Bid')}</p>
@@ -499,7 +499,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
         <button
           onClick={() => setActiveTab('bids')}
           className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
-            activeTab === 'bids' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'bids' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.subcontractorBid.bids', 'Bids')}
@@ -507,7 +507,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
         <button
           onClick={() => setActiveTab('subcontractors')}
           className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
-            activeTab === 'subcontractors' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'subcontractors' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.subcontractorBid.subcontractors2', 'Subcontractors')}
@@ -515,7 +515,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
         <button
           onClick={() => setActiveTab('create-bid')}
           className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
-            activeTab === 'create-bid' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'create-bid' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.subcontractorBid.newBid', 'New Bid')}
@@ -523,7 +523,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
         <button
           onClick={() => setActiveTab('create-sub')}
           className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
-            activeTab === 'create-sub' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'create-sub' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.subcontractorBid.addSubcontractor2', 'Add Subcontractor')}
@@ -541,7 +541,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
                 placeholder={t('tools.subcontractorBid.searchBids', 'Search bids...')}
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <select
@@ -575,8 +575,8 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <Building2 className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <Building2 className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{bid.projectName}</h3>
@@ -634,7 +634,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
                           setEditingBid(bid);
                           setActiveTab('edit-bid');
                         }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.subcontractorBid.edit', 'Edit')}
@@ -666,7 +666,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
                 <p className="text-gray-500 mt-1">{t('tools.subcontractorBid.createANewBidInvitation', 'Create a new bid invitation')}</p>
                 <button
                   onClick={() => setActiveTab('create-bid')}
-                  className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {t('tools.subcontractorBid.createBid', 'Create Bid')}
                 </button>
@@ -749,7 +749,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
               <h3 className="text-lg font-medium text-gray-900">{t('tools.subcontractorBid.noSubcontractorsFound', 'No subcontractors found')}</h3>
               <button
                 onClick={() => setActiveTab('create-sub')}
-                className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
               >
                 {t('tools.subcontractorBid.addSubcontractor3', 'Add Subcontractor')}
               </button>
@@ -852,7 +852,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
             <button
               onClick={handleSaveBid}
               disabled={!newBid.subcontractorId}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50"
             >
               <Save className="w-4 h-4" />
               {t('tools.subcontractorBid.saveBid', 'Save Bid')}
@@ -925,7 +925,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
             </button>
             <button
               onClick={handleUpdateBid}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
             >
               <Save className="w-4 h-4" />
               {t('tools.subcontractorBid.updateBid', 'Update Bid')}
@@ -1012,7 +1012,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
                 id="prequalified"
                 checked={newSub.prequalified}
                 onChange={e => setNewSub({ ...newSub, prequalified: e.target.checked })}
-                className="w-4 h-4 text-teal-600 rounded"
+                className="w-4 h-4 text-primary-600 rounded"
               />
               <label htmlFor="prequalified" className="text-sm font-medium text-gray-700">{t('tools.subcontractorBid.prequalified', 'Prequalified')}</label>
             </div>
@@ -1027,7 +1027,7 @@ export const SubcontractorBidTool: React.FC<SubcontractorBidToolProps> = ({ uiCo
             </button>
             <button
               onClick={handleSaveSubcontractor}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
             >
               <Save className="w-4 h-4" />
               {t('tools.subcontractorBid.saveSubcontractor', 'Save Subcontractor')}

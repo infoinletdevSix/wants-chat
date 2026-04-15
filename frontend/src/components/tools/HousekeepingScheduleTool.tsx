@@ -282,7 +282,7 @@ export const HousekeepingScheduleTool: React.FC<HousekeepingScheduleToolProps> =
     };
   }, [tasks]);
 
-  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
   const getStatusColor = (status: TaskStatus) => {
@@ -366,7 +366,7 @@ export const HousekeepingScheduleTool: React.FC<HousekeepingScheduleToolProps> =
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl"><Sparkles className="w-6 h-6 text-[#0D9488]" /></div>
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl"><Sparkles className="w-6 h-6 text-[#6096B4]" /></div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.housekeepingSchedule.housekeepingSchedule', 'Housekeeping Schedule')}</h1>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.housekeepingSchedule.manageRoomCleaningAndMaintenance', 'Manage room cleaning and maintenance tasks')}</p>
@@ -403,7 +403,7 @@ export const HousekeepingScheduleTool: React.FC<HousekeepingScheduleToolProps> =
             <option value="">{t('tools.housekeepingSchedule.allStatuses', 'All Statuses')}</option>
             {TASK_STATUSES.map(s => (<option key={s.value} value={s.value}>{s.label}</option>))}
           </select>
-          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.housekeepingSchedule.newTask', 'New Task')}</button>
+          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.housekeepingSchedule.newTask', 'New Task')}</button>
         </div>
 
         {/* Forms */}
@@ -414,7 +414,7 @@ export const HousekeepingScheduleTool: React.FC<HousekeepingScheduleToolProps> =
               <button onClick={() => setShowForm(false)} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}><X className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} /></button>
             </div>
             {renderForm(newTask)}
-            <button onClick={handleAddTask} disabled={!newTask.roomNumber || !newTask.assignedTo} className="mt-4 w-full py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.housekeepingSchedule.addTask', 'Add Task')}</button>
+            <button onClick={handleAddTask} disabled={!newTask.roomNumber || !newTask.assignedTo} className="mt-4 w-full py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.housekeepingSchedule.addTask', 'Add Task')}</button>
           </div>
         )}
 
@@ -426,7 +426,7 @@ export const HousekeepingScheduleTool: React.FC<HousekeepingScheduleToolProps> =
             </div>
             {renderForm(editingTask, true)}
             <div className="flex gap-3 mt-4">
-              <button onClick={handleUpdateTask} className="flex-1 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.housekeepingSchedule.save', 'Save')}</button>
+              <button onClick={handleUpdateTask} className="flex-1 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.housekeepingSchedule.save', 'Save')}</button>
               <button onClick={() => setEditingTask(null)} className={`px-6 py-3 rounded-xl font-medium ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>{t('tools.housekeepingSchedule.cancel', 'Cancel')}</button>
             </div>
           </div>

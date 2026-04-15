@@ -493,9 +493,9 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.cateringQuote.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.cateringQuote.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -503,7 +503,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <UtensilsCrossed className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -563,7 +563,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cateringQuote.revenue', 'Revenue')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(stats.totalRevenue)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(stats.totalRevenue)}</p>
             </div>
           </div>
 
@@ -579,7 +579,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -609,7 +609,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -619,7 +619,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.cateringQuote.allStatus', 'All Status')}</option>
                   <option value="draft">{t('tools.cateringQuote.draft', 'Draft')}</option>
@@ -631,7 +631,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
               </div>
               <button
                 onClick={() => setShowQuoteForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.cateringQuote.newQuote', 'New Quote')}
@@ -807,7 +807,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                               >
                                 <div className="flex justify-between">
                                   <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{item.name}</span>
-                                  <span className="text-[#0D9488]">{formatCurrency(item.pricePerPerson)}/pp</span>
+                                  <span className="text-[#6096B4]">{formatCurrency(item.pricePerPerson)}/pp</span>
                                 </div>
                                 <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{item.category}</span>
                               </div>
@@ -851,7 +851,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                         </div>
                         <div className="flex justify-between font-bold text-lg border-t pt-2">
                           <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{t('tools.cateringQuote.total', 'Total')}</span>
-                          <span className="text-[#0D9488]">{formatCurrency(currentTotals.total)}</span>
+                          <span className="text-[#6096B4]">{formatCurrency(currentTotals.total)}</span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>{t('tools.cateringQuote.depositRequired50', 'Deposit Required (50%)')}</span>
@@ -890,7 +890,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                       </button>
                       <button
                         onClick={saveQuote}
-                        className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                        className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                       >
                         <Save className="w-4 h-4" />
                         {editingQuote ? t('tools.cateringQuote.updateQuote', 'Update Quote') : t('tools.cateringQuote.createQuote', 'Create Quote')}
@@ -971,7 +971,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                       <button onClick={() => { setShowClientForm(false); setClientErrors({}); }} className={`px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}>
                         {t('tools.cateringQuote.cancel2', 'Cancel')}
                       </button>
-                      <button onClick={saveClient} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90">
+                      <button onClick={saveClient} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90">
                         <Plus className="w-4 h-4" />
                         {t('tools.cateringQuote.addClient', 'Add Client')}
                       </button>
@@ -1013,7 +1013,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                         </div>
                         <div className="flex items-center gap-4">
                           <div className="text-right">
-                            <p className={`font-semibold text-[#0D9488]`}>{formatCurrency(quote.total)}</p>
+                            <p className={`font-semibold text-[#6096B4]`}>{formatCurrency(quote.total)}</p>
                             <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                               {formatDate(quote.eventDate)} | {quote.guestCount} guests
                             </p>
@@ -1115,7 +1115,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
               <h2 className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.cateringQuote.clients', 'Clients')}</h2>
               <button
                 onClick={() => setShowClientForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.cateringQuote.addClient2', 'Add Client')}
@@ -1164,7 +1164,7 @@ export const CateringQuoteTool: React.FC<CateringQuoteToolProps> = ({ uiConfig }
                     <div key={item.id} className={`p-4 border rounded-lg ${theme === 'dark' ? 'border-gray-600' : 'border-gray-200'}`}>
                       <div className="flex justify-between items-start mb-2">
                         <h4 className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{item.name}</h4>
-                        <span className="text-[#0D9488] font-semibold">{formatCurrency(item.pricePerPerson)}</span>
+                        <span className="text-[#6096B4] font-semibold">{formatCurrency(item.pricePerPerson)}</span>
                       </div>
                       <p className={`text-sm mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{item.description}</p>
                       {item.dietary.length > 0 && (

@@ -136,9 +136,9 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Gauge className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Gauge className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.speedometerError.speedometerErrorCalculator', 'Speedometer Error Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.speedometerError.calculateSpeedometerOdometerErrorFrom', 'Calculate speedometer/odometer error from tire changes')}</p>
@@ -148,9 +148,9 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.speedometerError.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.speedometerError.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -159,7 +159,7 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
           <button
             onClick={() => setMode('tire-size')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'tire-size' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'tire-size' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Circle className="w-4 h-4" /> Tire Size
@@ -167,7 +167,7 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
           <button
             onClick={() => setMode('diameter')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'diameter' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'diameter' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Calculator className="w-4 h-4" /> Diameter
@@ -279,11 +279,11 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
         <div className={`p-6 rounded-xl text-center ${
           calculations.isSignificant
             ? isDark ? 'bg-yellow-900/20 border-yellow-800' : 'bg-yellow-50 border-yellow-200'
-            : isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'
+            : isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'
         } border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.speedometerError.speedometerError', 'Speedometer Error')}</div>
           <div className={`text-4xl font-bold my-2 ${
-            calculations.isSignificant ? 'text-yellow-500' : 'text-teal-500'
+            calculations.isSignificant ? 'text-yellow-500' : 'text-primary-500'
           }`}>
             {calculations.errorPercent >= 0 ? '+' : ''}{calculations.errorPercent.toFixed(2)}%
           </div>
@@ -299,7 +299,7 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
         <div className="grid grid-cols-3 gap-4">
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.speedometerError.diameterChange', 'Diameter Change')}</div>
-            <div className={`text-xl font-bold ${calculations.diameterDiff > 0 ? 'text-teal-500' : calculations.diameterDiff < 0 ? 'text-red-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
+            <div className={`text-xl font-bold ${calculations.diameterDiff > 0 ? 'text-primary-500' : calculations.diameterDiff < 0 ? 'text-red-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
               {calculations.diameterDiff >= 0 ? '+' : ''}{calculations.diameterDiff.toFixed(2)}"
             </div>
           </div>
@@ -356,7 +356,7 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
                   <tr key={row.displayed} className={`border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                     <td className="py-2">{row.displayed} mph</td>
                     <td className="text-right py-2 font-medium">{row.actual.toFixed(1)} mph</td>
-                    <td className={`text-right py-2 ${row.difference > 0 ? 'text-teal-500' : row.difference < 0 ? 'text-red-500' : ''}`}>
+                    <td className={`text-right py-2 ${row.difference > 0 ? 'text-primary-500' : row.difference < 0 ? 'text-red-500' : ''}`}>
                       {row.difference >= 0 ? '+' : ''}{row.difference.toFixed(1)} mph
                     </td>
                   </tr>
@@ -386,7 +386,7 @@ export const SpeedometerErrorTool: React.FC<SpeedometerErrorToolProps> = ({
                   <tr key={row.displayed} className={`border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                     <td className="py-2">{row.displayed.toLocaleString()} mi</td>
                     <td className="text-right py-2 font-medium">{row.actual.toFixed(1)} mi</td>
-                    <td className={`text-right py-2 ${row.difference > 0 ? 'text-teal-500' : row.difference < 0 ? 'text-red-500' : ''}`}>
+                    <td className={`text-right py-2 ${row.difference > 0 ? 'text-primary-500' : row.difference < 0 ? 'text-red-500' : ''}`}>
                       {row.difference >= 0 ? '+' : ''}{row.difference.toFixed(1)} mi
                     </td>
                   </tr>

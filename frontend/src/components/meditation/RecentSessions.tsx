@@ -59,10 +59,10 @@ export const RecentSessions: React.FC<RecentSessionsProps> = ({
     <Card className="p-4 sm:p-6 bg-white/10 backdrop-blur-xl border border-white/20">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold flex items-center gap-2 text-white">
-          <Icon path={mdiChartLine} size={0.8} className="text-teal-400" />
+          <Icon path={mdiChartLine} size={0.8} className="text-primary-400" />
           Recent Sessions
           {sessionsLoading && (
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-teal-400 ml-2"></div>
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-400 ml-2"></div>
           )}
         </h3>
         <Button className="bg-white/10 border border-white/20 text-white hover:scale-105 transition-all duration-200" size="sm" onClick={() => navigate('/meditation/history')}>
@@ -93,7 +93,7 @@ export const RecentSessions: React.FC<RecentSessionsProps> = ({
                  onClick={() => navigate(`/meditation/session/${session.id}`)}>
               <div className="flex items-center justify-between mb-2">
                 <h4 className="font-medium text-sm text-white">{session.type}</h4>
-                <Badge className="text-xs bg-teal-500/20 text-teal-400 border-teal-500/30">
+                <Badge className="text-xs bg-primary-500/20 text-primary-400 border-primary-500/30">
                   {session.duration} min
                 </Badge>
               </div>
@@ -136,7 +136,7 @@ export const RecentSessions: React.FC<RecentSessionsProps> = ({
             <p>No recent sessions found</p>
             <Button
               size="sm"
-              className="mt-2 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="mt-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               onClick={() => navigate('/meditation')}
             >
               Start Your First Session

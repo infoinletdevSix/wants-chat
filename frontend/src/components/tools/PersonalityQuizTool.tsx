@@ -240,7 +240,7 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
       orange: isDark ? 'bg-orange-900/30 border-orange-700 text-orange-300' : 'bg-orange-50 border-orange-200 text-orange-700',
       blue: isDark ? 'bg-blue-900/30 border-blue-700 text-blue-300' : 'bg-blue-50 border-blue-200 text-blue-700',
       pink: isDark ? 'bg-pink-900/30 border-pink-700 text-pink-300' : 'bg-pink-50 border-pink-200 text-pink-700',
-      teal: isDark ? 'bg-teal-900/30 border-teal-700 text-teal-300' : 'bg-teal-50 border-teal-200 text-teal-700',
+      teal: isDark ? 'bg-primary-900/30 border-primary-700 text-primary-300' : 'bg-primary-50 border-primary-200 text-primary-700',
       red: isDark ? 'bg-red-900/30 border-red-700 text-red-300' : 'bg-red-50 border-red-200 text-red-700',
     };
     return colors[color] || colors.teal;
@@ -257,7 +257,7 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <Brain size={28} />
           </div>
           <div>
@@ -279,13 +279,13 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                   Question {currentQuestion + 1} of {questions.length}
                 </span>
-                <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                   {Math.round(((currentQuestion + 1) / questions.length) * 100)}%
                 </span>
               </div>
               <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-teal-500 to-teal-600 transition-all duration-500"
+                  className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-600 transition-all duration-500"
                   style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                 />
               </div>
@@ -302,8 +302,8 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
                 onClick={() => handleAnswer(questions[currentQuestion].optionA.trait)}
                 className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between group ${
                   isDark
-                    ? 'bg-gray-700 border-gray-600 hover:bg-teal-900/30 hover:border-teal-600'
-                    : 'bg-gray-50 border-gray-200 hover:bg-teal-50 hover:border-teal-300'
+                    ? 'bg-gray-700 border-gray-600 hover:bg-primary-900/30 hover:border-primary-600'
+                    : 'bg-gray-50 border-gray-200 hover:bg-primary-50 hover:border-primary-300'
                 }`}
               >
                 <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
@@ -312,7 +312,7 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
                 <ChevronRight
                   size={20}
                   className={`opacity-0 group-hover:opacity-100 transition-opacity ${
-                    isDark ? 'text-teal-400' : 'text-teal-600'
+                    isDark ? 'text-primary-400' : 'text-primary-600'
                   }`}
                 />
               </button>
@@ -320,8 +320,8 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
                 onClick={() => handleAnswer(questions[currentQuestion].optionB.trait)}
                 className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between group ${
                   isDark
-                    ? 'bg-gray-700 border-gray-600 hover:bg-teal-900/30 hover:border-teal-600'
-                    : 'bg-gray-50 border-gray-200 hover:bg-teal-50 hover:border-teal-300'
+                    ? 'bg-gray-700 border-gray-600 hover:bg-primary-900/30 hover:border-primary-600'
+                    : 'bg-gray-50 border-gray-200 hover:bg-primary-50 hover:border-primary-300'
                 }`}
               >
                 <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
@@ -330,7 +330,7 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
                 <ChevronRight
                   size={20}
                   className={`opacity-0 group-hover:opacity-100 transition-opacity ${
-                    isDark ? 'text-teal-400' : 'text-teal-600'
+                    isDark ? 'text-primary-400' : 'text-primary-600'
                   }`}
                 />
               </button>
@@ -343,11 +343,11 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
           <div className={`p-12 rounded-xl border text-center ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <div className="text-7xl mb-6 animate-pulse">🧠</div>
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="text-teal-500 animate-spin" size={24} />
+              <Sparkles className="text-primary-500 animate-spin" size={24} />
               <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.personalityQuiz.analyzingYourPersonality', 'Analyzing your personality...')}
               </span>
-              <Sparkles className="text-teal-500 animate-spin" size={24} />
+              <Sparkles className="text-primary-500 animate-spin" size={24} />
             </div>
           </div>
         )}
@@ -409,8 +409,8 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
             </div>
 
             {/* Career Paths */}
-            <div className={`p-4 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'}`}>
-              <h3 className={`font-semibold mb-3 ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <div className={`p-4 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'}`}>
+              <h3 className={`font-semibold mb-3 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.personalityQuiz.idealCareerPaths', 'Ideal Career Paths')}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -418,7 +418,7 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
                   <span
                     key={idx}
                     className={`px-3 py-1 rounded-full text-sm ${
-                      isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-700'
+                      isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-700'
                     }`}
                   >
                     {career}
@@ -471,7 +471,7 @@ export const PersonalityQuizTool: React.FC<PersonalityQuizToolProps> = ({
               </button>
               <button
                 onClick={shareResult}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700 transition-colors"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 transition-colors"
               >
                 <Share2 size={18} />
                 {t('tools.personalityQuiz.shareResult', 'Share Result')}

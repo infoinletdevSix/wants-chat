@@ -405,7 +405,7 @@ const MacronutrientCustomization: React.FC = () => {
                 
                 <div className="space-y-2">
                   <Button 
-                    className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-primary-foreground"
+                    className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
                     onClick={handleContinue}
                     disabled={!isValidBalance}
                   >
@@ -457,7 +457,7 @@ const MacronutrientCustomization: React.FC = () => {
           <Button
             onClick={handleContinue}
             disabled={!isValidBalance}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-primary-foreground"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground"
           >
             Start Tracking
             <Icon path={mdiArrowRight} size={0.8} className="ml-2" />

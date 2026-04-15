@@ -31,8 +31,8 @@ export const SessionInfo: React.FC<SessionInfoProps> = ({
     <>
       <Card className="p-6 mb-6">
         <div className="text-center">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-teal-500/20 to-cyan-500/30 mx-auto mb-4 flex items-center justify-center">
-            <Icon path={mdiMeditation} size={2} className="text-teal-400" />
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500/20 to-cyan-500/30 mx-auto mb-4 flex items-center justify-center">
+            <Icon path={mdiMeditation} size={2} className="text-primary-400" />
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">
             {title}
@@ -55,21 +55,21 @@ export const SessionInfo: React.FC<SessionInfoProps> = ({
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-teal-400" />
+              <Clock className="h-4 w-4 text-primary-400" />
               <span className="text-sm">Duration</span>
             </div>
             <Badge variant="secondary">{Math.floor(duration / 60)} minutes</Badge>
           </div>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Headphones className="h-4 w-4 text-teal-400" />
+              <Headphones className="h-4 w-4 text-primary-400" />
               <span className="text-sm">Audio Type</span>
             </div>
             <Badge variant="outline">Guided Meditation</Badge>
           </div>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Icon path={mdiVolumeHigh} size={0.8} className="text-teal-400" />
+              <Icon path={mdiVolumeHigh} size={0.8} className="text-primary-400" />
               <span className="text-sm">Background</span>
             </div>
             <Badge variant="outline">Nature Sounds</Badge>

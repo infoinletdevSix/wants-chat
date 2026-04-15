@@ -27,10 +27,10 @@ const MedicationsSection: React.FC<MedicationsSectionProps> = ({
   };
 
   return (
-    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <div className="p-6 pb-2">
         <h3 className="flex items-center gap-3 text-xl font-bold text-white">
-          <Pill className="h-6 w-6 text-teal-400" />
+          <Pill className="h-6 w-6 text-primary-400" />
           Medications
         </h3>
         <p className="text-base text-white/60 mt-1">
@@ -47,13 +47,13 @@ const MedicationsSection: React.FC<MedicationsSectionProps> = ({
               onChange={(e) => onCurrentMedicationChange(e.target.value)}
               placeholder="Enter medication name (e.g., Metformin 500mg)"
               onKeyPress={handleKeyPress}
-              className="pl-11 h-12 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-teal-500 focus:ring-teal-500"
+              className="pl-11 h-12 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-primary-500 focus:ring-primary-500"
             />
           </div>
           <Button
             onClick={onAddMedication}
             disabled={!currentMedication.trim()}
-            className="h-12 px-5 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-12 px-5 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Plus className="h-5 w-5 mr-1" />
             Add
@@ -75,10 +75,10 @@ const MedicationsSection: React.FC<MedicationsSectionProps> = ({
               {formData.medications.map((medication, index) => (
                 <div
                   key={medication}
-                  className="group flex items-center gap-2 px-4 py-2.5 bg-teal-500/10 border border-teal-500/20 rounded-xl hover:border-teal-500/40 transition-all duration-200"
+                  className="group flex items-center gap-2 px-4 py-2.5 bg-primary-500/10 border border-primary-500/20 rounded-xl hover:border-primary-500/40 transition-all duration-200"
                 >
-                  <div className="flex items-center justify-center w-7 h-7 bg-teal-500/20 rounded-lg">
-                    <Pill className="h-4 w-4 text-teal-400" />
+                  <div className="flex items-center justify-center w-7 h-7 bg-primary-500/20 rounded-lg">
+                    <Pill className="h-4 w-4 text-primary-400" />
                   </div>
                   <span className="text-sm font-medium text-white">
                     {medication}

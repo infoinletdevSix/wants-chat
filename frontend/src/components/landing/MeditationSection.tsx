@@ -142,7 +142,7 @@ const MeditationSection: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -150,7 +150,7 @@ const MeditationSection: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, 50, 0], y: [0, 30, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -168,13 +168,13 @@ const MeditationSection: React.FC = () => {
           variants={cardVariants}
         >
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4 sm:mb-6">
-            <SelfImprovementIcon className="h-4 w-4 text-teal-400" />
+            <SelfImprovementIcon className="h-4 w-4 text-primary-400" />
             <span className="text-xs sm:text-sm font-medium text-white">Health & Wellness</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">
             <span className="text-white">Mindfulness &</span>
-            <span className="text-teal-400"> Meditation</span>
+            <span className="text-primary-400"> Meditation</span>
           </h2>
 
           <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto px-4">
@@ -186,17 +186,17 @@ const MeditationSection: React.FC = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column - Meditation Series Carousel */}
           <motion.div variants={cardVariants} className="space-y-4">
-            <Card className="shadow-2xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-xl hover:shadow-teal-500/20 transition-all duration-300">
+            <Card className="shadow-2xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-xl hover:shadow-primary-500/20 transition-all duration-300">
               <div className="p-4 border-b border-white/20 bg-white/10 backdrop-blur-xl">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg shadow-md">
+                    <div className="p-1.5 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg shadow-md">
                       <SelfImprovementIcon className="h-4 w-4 text-white" />
                     </div>
                     <h3 className="text-base font-bold text-white">Meditation Series</h3>
                   </div>
                   <button
-                    className="text-xs text-teal-400 font-semibold flex items-center gap-1 hover:gap-2 transition-all cursor-pointer"
+                    className="text-xs text-primary-400 font-semibold flex items-center gap-1 hover:gap-2 transition-all cursor-pointer"
                     onClick={() => {
                       if (!isAuthenticated) {
                         navigate('/login');
@@ -224,7 +224,7 @@ const MeditationSection: React.FC = () => {
                           <div key={program.id} className="min-w-full p-4">
                             <div className="space-y-3">
                               {/* Program Image */}
-                              <div className="relative h-40 rounded-xl overflow-hidden shadow-xl border-2 border-teal-200 dark:border-teal-800 group">
+                              <div className="relative h-40 rounded-xl overflow-hidden shadow-xl border-2 border-primary-200 dark:border-primary-800 group">
                                 <img
                                   src={program.imageUrl || `https://source.unsplash.com/500x400/?meditation,${program.category || 'zen'}`}
                                   alt={program.name}
@@ -244,7 +244,7 @@ const MeditationSection: React.FC = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                 <div className="absolute top-2 right-2">
-                                  <span className="px-2 py-1 bg-gradient-to-r from-teal-500 to-pink-500 text-white rounded-full text-xs font-bold capitalize shadow-lg">
+                                  <span className="px-2 py-1 bg-gradient-to-r from-primary-500 to-pink-500 text-white rounded-full text-xs font-bold capitalize shadow-lg">
                                     {program.difficulty}
                                   </span>
                                 </div>
@@ -267,7 +267,7 @@ const MeditationSection: React.FC = () => {
                               {/* Stats */}
                               <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xl p-2 rounded-lg border border-white/20">
-                                  <PlayCircleOutlineIcon className="h-4 w-4 text-teal-400" />
+                                  <PlayCircleOutlineIcon className="h-4 w-4 text-primary-400" />
                                   <div>
                                     <p className="text-xs text-white/60">Sessions</p>
                                     <p className="font-bold text-sm text-white">{program.sessionsCount}</p>
@@ -285,7 +285,7 @@ const MeditationSection: React.FC = () => {
                               {/* Enroll Button */}
                               <Button
                                 onClick={() => navigate(isAuthenticated ? '/meditation/series' : '/login')}
-                                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white py-6 text-base font-semibold rounded-xl shadow-lg shadow-teal-500/25 hover:shadow-xl transition-all"
+                                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white py-6 text-base font-semibold rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all"
                               >
                                 <span className="mr-2 text-xl">🧘‍♀️</span>
                                 {isAuthenticated ? 'View Details' : 'Start Meditation'}
@@ -309,7 +309,7 @@ const MeditationSection: React.FC = () => {
                           }}
                           className={`h-2 transition-all ${
                             index === currentIndex
-                              ? 'w-8 bg-teal-500'
+                              ? 'w-8 bg-primary-500'
                               : 'w-2 bg-gray-300 dark:bg-gray-600'
                           } rounded-full`}
                         />
@@ -327,12 +327,12 @@ const MeditationSection: React.FC = () => {
             {/* Stats Cards */}
             {stats && (
               <div className="grid grid-cols-2 gap-3">
-                <Card className="p-3 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-xl hover:shadow-teal-500/20 transition-all duration-300 transform hover:scale-105">
+                <Card className="p-3 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 transform hover:scale-105">
                   <span className="text-2xl mb-1 block">📚</span>
                   <p className="text-xs font-semibold text-white/60 mb-0.5">Total Series</p>
-                  <p className="text-2xl font-bold text-teal-400">{stats.totalPrograms || 0}</p>
+                  <p className="text-2xl font-bold text-primary-400">{stats.totalPrograms || 0}</p>
                 </Card>
-                <Card className="p-3 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-xl hover:shadow-teal-500/20 transition-all duration-300 transform hover:scale-105">
+                <Card className="p-3 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 transform hover:scale-105">
                   <span className="text-2xl mb-1 block">⏱️</span>
                   <p className="text-xs font-semibold text-white/60 mb-0.5">Total Duration</p>
                   <p className="text-2xl font-bold text-cyan-400">

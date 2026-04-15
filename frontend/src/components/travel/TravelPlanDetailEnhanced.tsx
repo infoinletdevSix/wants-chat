@@ -152,14 +152,14 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
 
   const getCategoryIcon = (category: string) => {
     const icons: { [key: string]: React.ReactNode } = {
-      Activities: <TheaterComedy className="h-5 w-5 text-teal-400" />,
-      Accommodation: <Hotel className="h-5 w-5 text-teal-400" />,
-      Dining: <Restaurant className="h-5 w-5 text-teal-400" />,
-      Transportation: <LocalTaxi className="h-5 w-5 text-teal-400" />,
-      Shopping: <ShoppingBag className="h-5 w-5 text-teal-400" />,
-      Other: <Category className="h-5 w-5 text-teal-400" />
+      Activities: <TheaterComedy className="h-5 w-5 text-primary-400" />,
+      Accommodation: <Hotel className="h-5 w-5 text-primary-400" />,
+      Dining: <Restaurant className="h-5 w-5 text-primary-400" />,
+      Transportation: <LocalTaxi className="h-5 w-5 text-primary-400" />,
+      Shopping: <ShoppingBag className="h-5 w-5 text-primary-400" />,
+      Other: <Category className="h-5 w-5 text-primary-400" />
     };
-    return icons[category] || <Category className="h-5 w-5 text-teal-400" />;
+    return icons[category] || <Category className="h-5 w-5 text-primary-400" />;
   };
 
   const getCategoryColor = (category: string) => {
@@ -167,7 +167,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
       Activities: 'bg-sky-400',
       Accommodation: 'bg-blue-400',
       Dining: 'bg-cyan-400',
-      Transportation: 'bg-teal-400',
+      Transportation: 'bg-primary-400',
       Shopping: 'bg-indigo-400',
       Other: 'bg-slate-400'
     };
@@ -234,10 +234,10 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
     <div className="space-y-6">
       {/* Map Section */}
       <Card className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20">
-        <CardHeader className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10">
+        <CardHeader className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2 text-white">
-              <MapIcon className="h-6 w-6 text-teal-400" />
+              <MapIcon className="h-6 w-6 text-primary-400" />
               Travel Route Map
             </CardTitle>
             <div className="flex gap-2">
@@ -245,7 +245,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                 variant={mapView === 'route' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setMapView('route')}
-                className={`rounded-xl ${mapView === 'route' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
+                className={`rounded-xl ${mapView === 'route' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
               >
                 <Route className="h-4 w-4 mr-1" />
                 Full Route
@@ -254,7 +254,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                 variant={mapView === 'activities' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setMapView('activities')}
-                className={`rounded-xl ${mapView === 'activities' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
+                className={`rounded-xl ${mapView === 'activities' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
               >
                 <Layers className="h-4 w-4 mr-1" />
                 Daily Activities
@@ -280,7 +280,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                   {/* Show full route */}
                   <Polyline
                     positions={getRouteCoordinates()}
-                    color="#14b8a6"
+                    color="#75AAC1"
                     weight={3}
                     opacity={0.7}
                   />
@@ -361,7 +361,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
           <Card className="rounded-2xl lg:col-span-2 bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
-                <DollarSign className="h-6 w-6 text-teal-400" />
+                <DollarSign className="h-6 w-6 text-primary-400" />
                 Budget & Expense Overview
               </CardTitle>
             </CardHeader>
@@ -405,7 +405,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                     style={{
                       width: `${Math.min(100, expenseData.percentageUsed)}%`,
                       backgroundColor: expenseData.percentageUsed <= 80
-                        ? '#14b8a6'
+                        ? '#75AAC1'
                         : expenseData.percentageUsed <= 100
                         ? '#fbbf24'
                         : '#ef4444'
@@ -424,7 +424,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                 <div className="space-y-3">
                   {expenseData.categoryBreakdown.map((category) => (
                     <div key={category.category} className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-500/30 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-xl bg-primary-500/20 border border-primary-500/30 flex items-center justify-center">
                         {category.icon}
                       </div>
                       <div className="flex-1">
@@ -453,15 +453,15 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
-                <Info className="h-6 w-6 text-teal-400" />
+                <Info className="h-6 w-6 text-primary-400" />
                 Budget Insights
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Daily Average */}
-              <div className="bg-teal-500/20 rounded-xl p-4 border border-teal-500/30">
-                <p className="text-sm text-teal-300 mb-1">Daily Average Spend</p>
-                <p className="text-xl font-bold text-teal-400">
+              <div className="bg-primary-500/20 rounded-xl p-4 border border-primary-500/30">
+                <p className="text-sm text-primary-300 mb-1">Daily Average Spend</p>
+                <p className="text-xl font-bold text-primary-400">
                   ${expenseData.dailyAverage.toFixed(0)}/day
                 </p>
               </div>
@@ -525,7 +525,7 @@ const TravelPlanDetailEnhanced: React.FC<TravelPlanDetailEnhancedProps> = ({ pla
                         style={{
                           backgroundColor: i < Math.floor((100 - Math.min(100, expenseData.percentageUsed)) / 20) + 1
                             ? expenseData.percentageUsed <= 80
-                              ? '#14b8a6'
+                              ? '#75AAC1'
                               : expenseData.percentageUsed <= 100
                               ? '#fbbf24'
                               : '#ef4444'

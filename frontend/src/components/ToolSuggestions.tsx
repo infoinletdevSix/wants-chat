@@ -92,7 +92,7 @@ export const ToolSuggestions: React.FC<ToolSuggestionsProps> = ({
               className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm transition-all hover:scale-105 ${
                 isDark
                   ? 'bg-white/10 hover:bg-white/20 text-white'
-                  : 'bg-[#0D9488]/10 hover:bg-[#0D9488]/20 text-[#0D9488]'
+                  : 'bg-[#6096B4]/10 hover:bg-[#6096B4]/20 text-[#6096B4]'
               }`}
             >
               <ToolIcon className="w-4 h-4" />
@@ -108,11 +108,11 @@ export const ToolSuggestions: React.FC<ToolSuggestionsProps> = ({
     <div className={`rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-gray-700' : 'bg-white border-gray-200'}`}>
       {showTitle && (
         <div className={`flex items-center gap-2 px-4 py-3 border-b ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-          <Wrench className={`w-4 h-4 ${isDark ? 'text-[#0D9488]' : 'text-[#0D9488]'}`} />
+          <Wrench className={`w-4 h-4 ${isDark ? 'text-[#6096B4]' : 'text-[#6096B4]'}`} />
           <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
             {suggestionTitle}
           </span>
-          <span className={`text-xs px-2 py-0.5 rounded-full ${isDark ? 'bg-[#0D9488]/20 text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]'}`}>
+          <span className={`text-xs px-2 py-0.5 rounded-full ${isDark ? 'bg-[#6096B4]/20 text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]'}`}>
             {suggestions.length} tools
           </span>
         </div>
@@ -130,8 +130,8 @@ export const ToolSuggestions: React.FC<ToolSuggestionsProps> = ({
                   : 'hover:bg-gray-50'
               }`}
             >
-              <div className={`p-2 rounded-lg ${isDark ? 'bg-[#0D9488]/20' : 'bg-[#0D9488]/10'}`}>
-                <ToolIcon className="w-4 h-4 text-[#0D9488]" />
+              <div className={`p-2 rounded-lg ${isDark ? 'bg-[#6096B4]/20' : 'bg-[#6096B4]/10'}`}>
+                <ToolIcon className="w-4 h-4 text-[#6096B4]" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className={`text-sm font-medium truncate ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -200,8 +200,8 @@ export const ToolChip: React.FC<ToolChipProps> = ({
             ? 'bg-green-500/20 text-green-400 hover:bg-green-500/30 border border-green-500/30'
             : 'bg-green-500/10 text-green-600 hover:bg-green-500/20 border border-green-500/20'
           : isDark
-            ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-            : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+            ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+            : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
       }`}
     >
       <ToolIcon className="w-3 h-3" />
@@ -274,17 +274,17 @@ export const EnhancedToolChipCard: React.FC<EnhancedToolChipCardProps> = ({
             ? 'border-green-500/30 bg-green-500/5 hover:border-green-500/50 hover:bg-green-500/10'
             : 'border-green-500/20 bg-green-500/5 hover:border-green-500/40 hover:bg-green-500/10'
           : isDark
-            ? 'border-gray-700 bg-[#1a1a1a] hover:border-[#0D9488]/50 hover:bg-[#0D9488]/5'
-            : 'border-gray-200 bg-white hover:border-[#0D9488]/50 hover:bg-[#0D9488]/5'
+            ? 'border-gray-700 bg-[#1a1a1a] hover:border-[#6096B4]/50 hover:bg-[#6096B4]/5'
+            : 'border-gray-200 bg-white hover:border-[#6096B4]/50 hover:bg-[#6096B4]/5'
       }`}
     >
       <div className="flex items-center gap-2 w-full">
         <div className={`p-1.5 rounded-lg ${
           hasPrefill
             ? isDark ? 'bg-green-500/20' : 'bg-green-500/10'
-            : isDark ? 'bg-[#0D9488]/20' : 'bg-[#0D9488]/10'
+            : isDark ? 'bg-[#6096B4]/20' : 'bg-[#6096B4]/10'
         }`}>
-          <ToolIcon className={`w-4 h-4 ${hasPrefill ? 'text-green-500' : 'text-[#0D9488]'}`} />
+          <ToolIcon className={`w-4 h-4 ${hasPrefill ? 'text-green-500' : 'text-[#6096B4]'}`} />
         </div>
         <span className={`font-medium text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
           {title}
@@ -349,7 +349,7 @@ export const EnhancedToolChipCard: React.FC<EnhancedToolChipCardProps> = ({
             <div
               className={`h-full rounded-full transition-all duration-300 ${
                 readinessPercentage >= 80 ? 'bg-green-500' :
-                readinessPercentage >= 50 ? 'bg-yellow-500' : 'bg-[#0D9488]'
+                readinessPercentage >= 50 ? 'bg-yellow-500' : 'bg-[#6096B4]'
               }`}
               style={{ width: `${readinessPercentage}%` }}
             />
@@ -397,7 +397,7 @@ export const RelatedToolsPanel: React.FC<RelatedToolsPanelProps> = ({
   return (
     <div className={`border-t ${isDark ? 'border-gray-700 bg-[#0a0a0a]' : 'border-gray-200 bg-gray-50'} px-4 py-3`}>
       <div className="flex items-center gap-2 mb-2">
-        <Sparkles className="w-4 h-4 text-[#0D9488]" />
+        <Sparkles className="w-4 h-4 text-[#6096B4]" />
         <span className={`text-xs font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
           Related Tools
         </span>
@@ -415,7 +415,7 @@ export const RelatedToolsPanel: React.FC<RelatedToolsPanelProps> = ({
                   : 'bg-white hover:bg-gray-100 text-gray-700 border border-gray-200'
               }`}
             >
-              <ToolIcon className="w-4 h-4 text-[#0D9488]" />
+              <ToolIcon className="w-4 h-4 text-[#6096B4]" />
               <span>{suggestion.tool.title}</span>
             </button>
           );

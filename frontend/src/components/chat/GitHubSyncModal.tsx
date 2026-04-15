@@ -290,7 +290,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
               "p-2 rounded-lg",
               isDark ? 'bg-[#2a2a2a]' : 'bg-slate-100'
             )}>
-              <Github className="w-5 h-5 text-[#0D9488]" />
+              <Github className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={cn(
@@ -324,7 +324,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
         <div className="p-6 space-y-6">
           {connectionLoading ? (
             <div className="flex items-center justify-center py-12">
-              <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
             </div>
           ) : !connection ? (
             /* Not Connected State */
@@ -333,7 +333,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                 "w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center",
                 isDark ? 'bg-[#2a2a2a]' : 'bg-slate-100'
               )}>
-                <Github className="w-8 h-8 text-[#0D9488]" />
+                <Github className="w-8 h-8 text-[#6096B4]" />
               </div>
               <h4 className={cn(
                 "font-semibold mb-2",
@@ -349,7 +349,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
               </p>
               <button
                 onClick={handleConnect}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0B8276] text-white rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#0B8276] text-white rounded-lg font-medium transition-colors"
               >
                 <Github className="w-5 h-5" />
                 {t('githubSync.connectGithub')}
@@ -412,11 +412,11 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                 <div className={cn(
                   "p-4 rounded-lg border",
                   isDark
-                    ? 'bg-[#0D9488]/10 border-[#0D9488]/30'
-                    : 'bg-teal-50 border-teal-200'
+                    ? 'bg-[#6096B4]/10 border-[#6096B4]/30'
+                    : 'bg-primary-50 border-primary-200'
                 )}>
                   <div className="flex items-center gap-2 mb-2">
-                    <Link2 className="w-4 h-4 text-[#0D9488]" />
+                    <Link2 className="w-4 h-4 text-[#6096B4]" />
                     <span className={cn(
                       "text-sm font-medium",
                       isDark ? 'text-white' : 'text-slate-900'
@@ -426,14 +426,14 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                   </div>
                   <div className="flex flex-wrap gap-4 text-xs">
                     <div className="flex items-center gap-1">
-                      <GitBranch className="w-3.5 h-3.5 text-[#0D9488]" />
+                      <GitBranch className="w-3.5 h-3.5 text-[#6096B4]" />
                       <span className={isDark ? 'text-slate-300' : 'text-slate-600'}>
                         {appLink.branch}
                       </span>
                     </div>
                     {appLink.lastPushedAt && (
                       <div className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-[#0D9488]" />
+                        <Clock className="w-3.5 h-3.5 text-[#6096B4]" />
                         <span className={isDark ? 'text-slate-300' : 'text-slate-600'}>
                           {t('githubSync.lastPushed', { date: new Date(appLink.lastPushedAt).toLocaleDateString() })}
                         </span>
@@ -441,7 +441,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                     )}
                     {appLink.lastCommitSha && (
                       <div className="flex items-center gap-1">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488]" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#6096B4]" />
                         <span className={isDark ? 'text-slate-300' : 'text-slate-600'}>
                           {appLink.lastCommitSha.substring(0, 7)}
                         </span>
@@ -472,7 +472,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                       isDark
                         ? 'bg-[#0a0a0a] border-[#2a2a2a] text-white'
                         : 'bg-white border-slate-200 text-slate-900',
-                      "focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50"
+                      "focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50"
                     )}
                   >
                     <option value="">{t('githubSync.selectRepository')}</option>
@@ -487,7 +487,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                     className={cn(
                       "p-2 rounded-lg border transition-colors",
                       showCreateRepo
-                        ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                        ? 'bg-[#6096B4] text-white border-[#6096B4]'
                         : isDark
                           ? 'border-[#2a2a2a] hover:bg-[#2a2a2a] text-slate-400'
                           : 'border-slate-200 hover:bg-slate-100 text-slate-500'
@@ -528,7 +528,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                           isDark
                             ? 'bg-[#1a1a1a] border-[#2a2a2a] text-white placeholder:text-slate-500'
                             : 'bg-white border-slate-200 text-slate-900 placeholder:text-slate-400',
-                          "focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50"
+                          "focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50"
                         )}
                       />
                       <label className="flex items-center gap-2">
@@ -550,7 +550,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                         disabled={isCreatingRepo || !newRepoName.trim()}
                         className={cn(
                           "w-full py-2 rounded-lg text-sm font-medium transition-colors",
-                          "bg-[#0D9488] hover:bg-[#0B8276] text-white",
+                          "bg-[#6096B4] hover:bg-[#0B8276] text-white",
                           "disabled:opacity-50 disabled:cursor-not-allowed"
                         )}
                       >
@@ -589,7 +589,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                           isDark
                             ? 'bg-[#0a0a0a] border-[#2a2a2a] text-white placeholder:text-slate-500'
                             : 'bg-white border-slate-200 text-slate-900 placeholder:text-slate-400',
-                          "focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50"
+                          "focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50"
                         )}
                       />
                     </div>
@@ -610,7 +610,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                           isDark
                             ? 'bg-[#0a0a0a] border-[#2a2a2a] text-white placeholder:text-slate-500'
                             : 'bg-white border-slate-200 text-slate-900 placeholder:text-slate-400',
-                          "focus:outline-none focus:ring-2 focus:ring-[#0D9488]/50"
+                          "focus:outline-none focus:ring-2 focus:ring-[#6096B4]/50"
                         )}
                       />
                     </div>
@@ -623,7 +623,7 @@ export const GitHubSyncModal: React.FC<GitHubSyncModalProps> = ({
                       disabled={isPushing || isPulling}
                       className={cn(
                         "flex-1 flex items-center justify-center gap-2 py-3 rounded-lg font-medium transition-colors",
-                        "bg-[#0D9488] hover:bg-[#0B8276] text-white",
+                        "bg-[#6096B4] hover:bg-[#0B8276] text-white",
                         "disabled:opacity-50 disabled:cursor-not-allowed"
                       )}
                     >

@@ -89,12 +89,12 @@ const CategorySidebar: React.FC<CategorySidebarProps> = ({
             className={cn(
               "w-full flex items-center justify-between px-3 py-2.5 text-sm rounded-lg transition-colors",
               quickFilter === 'all'
-                ? "bg-teal-500/20 text-teal-300"
+                ? "bg-primary-500/20 text-primary-300"
                 : "text-white hover:bg-white/10"
             )}
           >
             <div className="flex items-center gap-3">
-              <Inbox className={cn("h-4 w-4", quickFilter === 'all' ? "text-teal-400" : "text-teal-400/70")} />
+              <Inbox className={cn("h-4 w-4", quickFilter === 'all' ? "text-primary-400" : "text-primary-400/70")} />
               <span>All Tasks</span>
             </div>
             {taskCounts.all > 0 && (
@@ -168,11 +168,11 @@ const CategorySidebar: React.FC<CategorySidebarProps> = ({
       <div className="flex-1 overflow-y-auto px-2">
         {loading ? (
           <div className="flex items-center justify-center py-8">
-            <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-teal-400" />
+            <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary-400" />
           </div>
         ) : categories.length === 0 ? (
           <div className="text-center py-8 px-4">
-            <FolderOpen className="h-10 w-10 mx-auto text-teal-400/60 mb-3" />
+            <FolderOpen className="h-10 w-10 mx-auto text-primary-400/60 mb-3" />
             <p className="text-sm text-white/80 mb-3">No categories yet</p>
             <Button variant="outline" size="sm" onClick={onAddCategory} className="border-white/30 text-white hover:bg-white/10">
               <Plus className="h-4 w-4 mr-1" />
@@ -187,7 +187,7 @@ const CategorySidebar: React.FC<CategorySidebarProps> = ({
                 className={cn(
                   "group flex items-center justify-between px-3 py-2.5 rounded-lg cursor-pointer transition-all",
                   selectedCategoryId === category.id && !quickFilter
-                    ? "bg-teal-500/20 text-teal-300"
+                    ? "bg-primary-500/20 text-primary-300"
                     : "hover:bg-white/10 text-white"
                 )}
                 onClick={() => handleCategorySelect(category.id)}
@@ -241,7 +241,7 @@ const CategorySidebar: React.FC<CategorySidebarProps> = ({
       <div className="p-3 border-t border-white/20">
         <Button
           onClick={onAddCategory}
-          className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+          className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
         >
           <Plus className="h-4 w-4 mr-2" />
           New Category

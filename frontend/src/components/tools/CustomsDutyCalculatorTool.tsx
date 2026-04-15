@@ -165,10 +165,10 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <FileText className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <FileText className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.customsDutyCalculator.customsDutyCalculator', 'Customs Duty Calculator')}</h3>
@@ -179,9 +179,9 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.customsDutyCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.customsDutyCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -195,7 +195,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
             <select
               value={originCountry}
               onChange={(e) => setOriginCountry(e.target.value as Country)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             >
               {Object.entries(countries).map(([code, info]) => (
                 <option key={code} value={code}>{info.name}</option>
@@ -210,7 +210,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
             <select
               value={destCountry}
               onChange={(e) => setDestCountry(e.target.value as Country)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             >
               {Object.entries(countries).map(([code, info]) => (
                 <option key={code} value={code}>{info.name}</option>
@@ -228,7 +228,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
           <select
             value={productCategory}
             onChange={(e) => setProductCategory(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
           >
             {Object.entries(productCategories).map(([key, cat]) => (
               <option key={key} value={key}>
@@ -250,14 +250,14 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
               value={hsCode}
               onChange={(e) => setHsCode(e.target.value)}
               placeholder={`e.g., ${calculations.category.hsCode}`}
-              className={`flex-1 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500' : 'bg-white border-gray-300 placeholder-gray-400'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`flex-1 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500' : 'bg-white border-gray-300 placeholder-gray-400'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
             <input
               type="number"
               value={customDutyRate}
               onChange={(e) => setCustomDutyRate(e.target.value)}
               placeholder={`Custom rate %`}
-              className={`w-32 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500' : 'bg-white border-gray-300 placeholder-gray-400'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-32 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500' : 'bg-white border-gray-300 placeholder-gray-400'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -276,7 +276,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
               type="number"
               value={productValue}
               onChange={(e) => setProductValue(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -288,7 +288,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
               min="1"
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
         </div>
@@ -302,7 +302,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
               type="number"
               value={shippingCost}
               onChange={(e) => setShippingCost(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -313,7 +313,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
               type="number"
               value={insuranceCost}
               onChange={(e) => setInsuranceCost(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
         </div>
@@ -330,9 +330,9 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
         )}
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.customsDutyCalculator.totalLandedCost', 'Total Landed Cost')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             ${calculations.landedCost.toFixed(2)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -390,8 +390,8 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
               </div>
             )}
             <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-              <span className="font-medium text-teal-500">{t('tools.customsDutyCalculator.totalCustomsCharges', 'Total Customs Charges')}</span>
-              <span className="font-medium text-teal-500">${calculations.totalCustomsCharges.toFixed(2)}</span>
+              <span className="font-medium text-primary-500">{t('tools.customsDutyCalculator.totalCustomsCharges', 'Total Customs Charges')}</span>
+              <span className="font-medium text-primary-500">${calculations.totalCustomsCharges.toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -412,7 +412,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.customsDutyCalculator.effectiveRate', 'Effective Rate')}</div>
-            <div className="text-xl font-bold text-teal-500">
+            <div className="text-xl font-bold text-primary-500">
               {calculations.effectiveTaxRate.toFixed(1)}%
             </div>
           </div>
@@ -429,7 +429,7 @@ export const CustomsDutyCalculatorTool: React.FC<CustomsDutyCalculatorToolProps>
 
         {/* Tips */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.customsDutyCalculator.reducingImportCosts', 'Reducing Import Costs')}</p>
             <ul className="space-y-1 list-disc list-inside">

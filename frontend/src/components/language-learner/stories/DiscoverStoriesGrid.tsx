@@ -39,7 +39,7 @@ export const DiscoverStoriesGrid: React.FC<DiscoverStoriesGridProps> = ({
   if (isLoadingStories) {
     return (
       <div className="flex flex-col items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mb-4"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mb-4"></div>
         <p className="text-white/60">Loading stories...</p>
       </div>
     );
@@ -96,7 +96,7 @@ export const DiscoverStoriesGrid: React.FC<DiscoverStoriesGridProps> = ({
             }}
             className={`text-sm ${
               activeCategory === category.id
-                ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                 : 'bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:text-white'
             }`}
           >

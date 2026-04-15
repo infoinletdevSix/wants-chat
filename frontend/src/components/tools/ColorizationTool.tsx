@@ -491,7 +491,7 @@ export const ColorizationTool: React.FC<ColorizationToolProps> = ({ uiConfig }) 
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex-1 py-3 px-6 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 py-3 px-6 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSaving ? (
                   <>

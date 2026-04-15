@@ -83,7 +83,7 @@ const MotherCare: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Greeting Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             Hello, Future Mom!
           </h1>
@@ -118,7 +118,7 @@ const MotherCare: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-gradient-to-r from-primary-500 to-cyan-500">
                   <CalendarDays className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Schedule Checkup</h3>
@@ -176,7 +176,7 @@ const MotherCare: React.FC = () => {
                     {pregnancyData?.data?.find(r => r.week)?.week || 0}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="p-3 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500">
                   <CalendarDays className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -206,7 +206,7 @@ const MotherCare: React.FC = () => {
                     {pregnancyData?.data?.reduce((total, r) => total + (r.medications?.length || 0), 0) || 0}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500">
+                <div className="p-3 rounded-full bg-gradient-to-r from-emerald-500 to-primary-500">
                   <Pill className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -223,7 +223,7 @@ const MotherCare: React.FC = () => {
             </div>
             <Button
               onClick={() => navigate('/health/add-pregnancy-record')}
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Record
@@ -233,7 +233,7 @@ const MotherCare: React.FC = () => {
           {pregnancyLoading ? (
             <div className="flex justify-center items-center py-12">
               <div className="text-center">
-                <div className="animate-spin h-12 w-12 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+                <div className="animate-spin h-12 w-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"></div>
                 <p className="text-white/60">Loading pregnancy records...</p>
               </div>
             </div>
@@ -242,7 +242,7 @@ const MotherCare: React.FC = () => {
               <p className="text-red-400 mb-4">{String(pregnancyError) || 'Failed to load pregnancy records'}</p>
               <Button
                 onClick={() => refetchPregnancy()}
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
               >
                 Try Again
               </Button>
@@ -303,7 +303,7 @@ const MotherCare: React.FC = () => {
                           {record.weight && (
                             <div className="flex items-center justify-between">
                               <span className="text-xs text-white/50 flex items-center gap-1">
-                                <WeightIcon className="h-3 w-3 text-teal-400" />
+                                <WeightIcon className="h-3 w-3 text-primary-400" />
                                 Weight
                               </span>
                               <span className="text-sm font-medium text-white">
@@ -314,7 +314,7 @@ const MotherCare: React.FC = () => {
                           {record.blood_pressure && (
                             <div className="flex items-center justify-between">
                               <span className="text-xs text-white/50 flex items-center gap-1">
-                                <BloodPressureIcon className="h-3 w-3 text-teal-400" />
+                                <BloodPressureIcon className="h-3 w-3 text-primary-400" />
                                 BP
                               </span>
                               <span className="text-sm font-medium text-white">
@@ -325,7 +325,7 @@ const MotherCare: React.FC = () => {
                           {(record.baby_heart_rate || record.babyHeartRate) && (
                             <div className="flex items-center justify-between">
                               <span className="text-xs text-white/50 flex items-center gap-1">
-                                <Heart className="h-3 w-3 text-teal-400" />
+                                <Heart className="h-3 w-3 text-primary-400" />
                                 Baby HR
                               </span>
                               <span className="text-sm font-medium text-white">
@@ -342,7 +342,7 @@ const MotherCare: React.FC = () => {
                     {record.symptoms && record.symptoms.length > 0 && (
                       <div className="pt-3 border-t border-white/10">
                         <div className="flex items-center gap-2 mb-2">
-                          <ScheduleIcon className="h-4 w-4 text-teal-400" />
+                          <ScheduleIcon className="h-4 w-4 text-primary-400" />
                           <p className="text-xs font-semibold text-white/80">Symptoms</p>
                         </div>
                         <div className="flex flex-wrap gap-1">
@@ -350,13 +350,13 @@ const MotherCare: React.FC = () => {
                             <Badge
                               key={idx}
                               variant="outline"
-                              className="text-xs rounded-full px-2 py-0.5 border-teal-500/30 text-teal-400"
+                              className="text-xs rounded-full px-2 py-0.5 border-primary-500/30 text-primary-400"
                             >
                               {symptom}
                             </Badge>
                           ))}
                           {record.symptoms.length > 3 && (
-                            <span className="text-xs text-teal-400">
+                            <span className="text-xs text-primary-400">
                               +{record.symptoms.length - 3}
                             </span>
                           )}
@@ -391,10 +391,10 @@ const MotherCare: React.FC = () => {
 
                     {/* Next Appointment */}
                     {record.next_appointment && (
-                      <div className="p-3 rounded-xl bg-teal-500/10">
+                      <div className="p-3 rounded-xl bg-primary-500/10">
                         <div className="flex items-center gap-2">
-                          <EventAvailableIcon className="h-4 w-4 text-teal-400" />
-                          <p className="text-xs font-medium text-teal-400">
+                          <EventAvailableIcon className="h-4 w-4 text-primary-400" />
+                          <p className="text-xs font-medium text-primary-400">
                             Next Appointment: {record.next_appointment}
                           </p>
                         </div>
@@ -419,7 +419,7 @@ const MotherCare: React.FC = () => {
                         variant="outline"
                         size="sm"
                         onClick={() => editPregnancyRecord(record)}
-                        className="flex-1 rounded-xl bg-transparent border-teal-500/30 text-teal-400 hover:bg-teal-500/10"
+                        className="flex-1 rounded-xl bg-transparent border-primary-500/30 text-primary-400 hover:bg-primary-500/10"
                       >
                         <EditIcon className="h-4 w-4 mr-2" />
                         Edit
@@ -446,8 +446,8 @@ const MotherCare: React.FC = () => {
           ) : (
             <GlassCard className="rounded-2xl p-12 text-center" hover={false}>
               <div className="max-w-md mx-auto">
-                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-teal-500/10">
-                  <PregnantWomanIcon className="h-10 w-10 text-teal-400" />
+                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-primary-500/10">
+                  <PregnantWomanIcon className="h-10 w-10 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   No Pregnancy Records Yet
@@ -457,7 +457,7 @@ const MotherCare: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/health/add-pregnancy-record')}
-                  className="rounded-xl px-6 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                  className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Your First Record

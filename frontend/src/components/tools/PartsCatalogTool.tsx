@@ -827,9 +827,9 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.partsCatalog.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.partsCatalog.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -837,7 +837,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -895,7 +895,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -934,7 +934,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                           onChange={(e) => setSearchTerm(e.target.value)}
                           className={`w-full pl-10 pr-4 py-2 rounded-lg border ${
                             isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                          } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                          } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                         />
                       </div>
                     </div>
@@ -963,7 +963,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                     </select>
                     <button
                       onClick={() => setShowPartForm(true)}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
                     >
                       <Plus className="w-5 h-5" />
                       {t('tools.partsCatalog.addPart', 'Add Part')}
@@ -1082,7 +1082,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowSupplierForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.partsCatalog.addSupplier', 'Add Supplier')}
@@ -1102,7 +1102,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                               {supplier.name}
                             </h3>
                             {supplier.isPreferred && (
-                              <span className="px-2 py-0.5 bg-[#0D9488] text-white text-xs rounded-full">
+                              <span className="px-2 py-0.5 bg-[#6096B4] text-white text-xs rounded-full">
                                 {t('tools.partsCatalog.preferred', 'Preferred')}
                               </span>
                             )}
@@ -1166,7 +1166,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Package className="w-5 h-5 text-[#0D9488]" />
+                      <Package className="w-5 h-5 text-[#6096B4]" />
                       <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.partsCatalog.totalParts', 'Total Parts')}</span>
                     </div>
                     <p className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1224,7 +1224,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                           </div>
                           <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                             <div
-                              className="h-full rounded-full bg-[#0D9488]"
+                              className="h-full rounded-full bg-[#6096B4]"
                               style={{ width: `${(value / analytics.totalValue) * 100}%` }}
                             />
                           </div>
@@ -1242,7 +1242,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowOrderForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.partsCatalog.newOrder', 'New Order')}
@@ -1552,7 +1552,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleSavePart}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
                 >
                   {editingPart ? t('tools.partsCatalog.updatePart', 'Update Part') : t('tools.partsCatalog.addPart2', 'Add Part')}
                 </button>
@@ -1681,7 +1681,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                     id="isPreferred"
                     checked={supplierForm.isPreferred}
                     onChange={(e) => setSupplierForm({ ...supplierForm, isPreferred: e.target.checked })}
-                    className="w-4 h-4 text-[#0D9488] rounded"
+                    className="w-4 h-4 text-[#6096B4] rounded"
                   />
                   <label htmlFor="isPreferred" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.partsCatalog.markAsPreferredSupplier', 'Mark as preferred supplier')}
@@ -1697,7 +1697,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleSaveSupplier}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
                 >
                   {editingSupplier ? t('tools.partsCatalog.updateSupplier', 'Update Supplier') : t('tools.partsCatalog.addSupplier2', 'Add Supplier')}
                 </button>
@@ -1795,7 +1795,7 @@ export const PartsCatalogTool: React.FC<PartsCatalogToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleSaveAdjustment}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]"
                 >
                   {t('tools.partsCatalog.applyAdjustment', 'Apply Adjustment')}
                 </button>

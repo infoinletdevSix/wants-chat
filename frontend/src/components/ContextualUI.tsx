@@ -3444,8 +3444,8 @@ export const ContextualUI: React.FC<ContextualUIProps> = ({ intent, onClose, onO
     // Show placeholder for unimplemented tools
     return (
       <div className="text-gray-700 text-center py-12">
-        <div className="w-16 h-16 mx-auto mb-4 bg-[#0D9488]/10 rounded-full flex items-center justify-center">
-          <ToolIconComponent className="w-8 h-8 text-[#0D9488]" />
+        <div className="w-16 h-16 mx-auto mb-4 bg-[#6096B4]/10 rounded-full flex items-center justify-center">
+          <ToolIconComponent className="w-8 h-8 text-[#6096B4]" />
         </div>
         <p className="text-xl font-semibold mb-2">{uiConfig.title}</p>
         <p className="text-gray-500">This tool is coming soon!</p>
@@ -3461,11 +3461,11 @@ export const ContextualUI: React.FC<ContextualUIProps> = ({ intent, onClose, onO
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm animate-fade-in">
       <div className="w-[95vw] max-w-[95vw] h-[95vh] max-h-[95vh] flex flex-col bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 animate-fade-in">
         {/* Header */}
-        <div className="flex-shrink-0 bg-gradient-to-r from-white to-[#0D9488]/5 border-b border-gray-200 px-6 py-4">
+        <div className="flex-shrink-0 bg-gradient-to-r from-white to-[#6096B4]/5 border-b border-gray-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-                <ToolIconComponent className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+                <ToolIconComponent className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">{getTranslatedTitle()}</h2>
@@ -3482,7 +3482,7 @@ export const ContextualUI: React.FC<ContextualUIProps> = ({ intent, onClose, onO
                 onClick={handlePin}
                 className={`p-2 rounded-lg transition-all ${
                   pinned
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : 'hover:bg-gray-100 text-gray-500 hover:text-gray-700'
                 }`}
                 title={pinned ? t('toolsModal.unpinTool') : t('toolsModal.pinToSidebar')}
@@ -3516,7 +3516,7 @@ export const ContextualUI: React.FC<ContextualUIProps> = ({ intent, onClose, onO
         )}
 
         {/* Decorative gradient border */}
-        <div className="flex-shrink-0 h-1 bg-gradient-to-r from-transparent via-[#0D9488] to-transparent opacity-30" />
+        <div className="flex-shrink-0 h-1 bg-gradient-to-r from-transparent via-[#6096B4] to-transparent opacity-30" />
       </div>
     </div>
   );
@@ -3548,7 +3548,7 @@ const RelatedToolsSection: React.FC<{
   return (
     <div className="flex-shrink-0 border-t border-gray-200 bg-gray-50 px-6 py-3">
       <div className="flex items-center gap-2 mb-2">
-        <Sparkles className="w-4 h-4 text-[#0D9488]" />
+        <Sparkles className="w-4 h-4 text-[#6096B4]" />
         <span className="text-xs font-medium text-gray-600">{t('toolsModal.relatedTools')}</span>
       </div>
       <div className="flex flex-wrap gap-2">
@@ -3560,7 +3560,7 @@ const RelatedToolsSection: React.FC<{
               onClick={() => handleToolClick(suggestion)}
               className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 transition-all hover:scale-105 hover:shadow-sm"
             >
-              <ToolIcon className="w-4 h-4 text-[#0D9488]" />
+              <ToolIcon className="w-4 h-4 text-[#6096B4]" />
               <span>{t(`toolComponents.${toolIdToKey(suggestion.tool.id)}.title`, { defaultValue: suggestion.tool.title })}</span>
               <ChevronRight className="w-3 h-3 text-gray-400" />
             </button>

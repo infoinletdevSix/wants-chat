@@ -34,8 +34,8 @@ const apps: AppCard[] = [
   { id: 'calories-tracker', name: 'Calories Tracker', description: 'Nutrition & meal tracking', icon: '🥗', category: 'Life Management', color: 'from-green-500 to-emerald-500' },
   { id: 'health-tracker', name: 'Health Tracker', description: 'Medical records & vitals', icon: '❤️', category: 'Life Management', color: 'from-red-500 to-pink-500' },
   { id: 'recipe-builder', name: 'Recipe Builder', description: 'Create & organize recipes', icon: '👨‍🍳', category: 'Life Management', color: 'from-amber-500 to-orange-500' },
-  { id: 'expense-tracker', name: 'Expense Tracker', description: 'Budget & financial management', icon: '💳', category: 'Life Management', color: 'from-emerald-500 to-teal-500' },
-  { id: 'currency-converter', name: 'Currency Converter', description: 'Real-time exchange rates', icon: '💱', category: 'Life Management', color: 'from-teal-500 to-cyan-500' },
+  { id: 'expense-tracker', name: 'Expense Tracker', description: 'Budget & financial management', icon: '💳', category: 'Life Management', color: 'from-emerald-500 to-primary-500' },
+  { id: 'currency-converter', name: 'Currency Converter', description: 'Real-time exchange rates', icon: '💱', category: 'Life Management', color: 'from-primary-500 to-cyan-500' },
   { id: 'travel-planner', name: 'Travel Planner', description: 'AI-powered trip planning', icon: '🗺️', category: 'Life Management', color: 'from-indigo-500 to-blue-500' },
   { id: 'language-learner', name: 'Language Learner', description: 'Interactive language learning', icon: '🌐', category: 'Life Management', color: 'from-yellow-500 to-orange-500' },
   { id: 'blog', name: 'Blog', description: 'Content & community platform', icon: '📝', category: 'Life Management', color: 'from-cyan-500 to-blue-500' },
@@ -52,18 +52,18 @@ const apps: AppCard[] = [
   { id: 'ai-social-captions', name: 'AI Social Captions', description: 'Create engaging captions', icon: '💬', category: 'AI Tools', color: 'from-pink-500 to-rose-500' },
   { id: 'ai-hashtag-generator', name: 'AI Hashtag Generator', description: 'Generate trending hashtags', icon: '#️⃣', category: 'AI Tools', color: 'from-rose-500 to-pink-500' },
   { id: 'ai-video-script', name: 'AI Video Script', description: 'Write video scripts', icon: '🎬', category: 'AI Tools', color: 'from-orange-500 to-red-500' },
-  { id: 'ai-meeting-notes', name: 'AI Meeting Notes', description: 'Organize meeting notes', icon: '📋', category: 'AI Tools', color: 'from-cyan-500 to-teal-500' },
+  { id: 'ai-meeting-notes', name: 'AI Meeting Notes', description: 'Organize meeting notes', icon: '📋', category: 'AI Tools', color: 'from-cyan-500 to-primary-500' },
   { id: 'ai-study-notes', name: 'AI Study Notes', description: 'Generate study materials', icon: '📚', category: 'AI Tools', color: 'from-green-500 to-emerald-500' },
   { id: 'ai-contract-analyzer', name: 'AI Contract Analyzer', description: 'Analyze legal contracts', icon: '⚖️', category: 'AI Tools', color: 'from-amber-600 to-yellow-600' },
   { id: 'ai-legal-document', name: 'AI Legal Document', description: 'Draft legal documents', icon: '📜', category: 'AI Tools', color: 'from-slate-500 to-gray-500' },
-  { id: 'ai-tax-calculator', name: 'AI Tax Calculator', description: 'Estimate your taxes', icon: '🧮', category: 'AI Tools', color: 'from-teal-500 to-green-500' },
+  { id: 'ai-tax-calculator', name: 'AI Tax Calculator', description: 'Estimate your taxes', icon: '🧮', category: 'AI Tools', color: 'from-primary-500 to-green-500' },
   { id: 'ai-investment-advisor', name: 'AI Investment Advisor', description: 'Get investment insights', icon: '📈', category: 'AI Tools', color: 'from-blue-600 to-indigo-600' },
 
   // Productivity (4 apps)
   { id: 'notes', name: 'Notes', description: 'Quick notes with tags & sync', icon: '🗒️', category: 'Productivity', color: 'from-yellow-500 to-amber-500' },
   { id: 'password-manager', name: 'Password Manager', description: 'Secure password storage', icon: '🔐', category: 'Productivity', color: 'from-indigo-500 to-blue-500', mobileOnly: true },
   { id: 'ebook-reader', name: 'E-Book Reader', description: 'Read EPUB & PDF books', icon: '📖', category: 'Productivity', color: 'from-amber-600 to-yellow-600' },
-  { id: 'billing-system', name: 'Billing System', description: 'Invoices & client management', icon: '🧾', category: 'Productivity', color: 'from-teal-500 to-green-500' },
+  { id: 'billing-system', name: 'Billing System', description: 'Invoices & client management', icon: '🧾', category: 'Productivity', color: 'from-primary-500 to-green-500' },
 
   // Developer Tools (7 apps) - Mobile Only
   { id: 'text-tools', name: 'Text Tools', description: 'JSON, CSV, Markdown tools', icon: '📝', category: 'Developer Tools', color: 'from-blue-500 to-indigo-500', mobileOnly: true },
@@ -72,7 +72,7 @@ const apps: AppCard[] = [
   { id: 'images-tools', name: 'Images Tools', description: 'Compress, resize, convert', icon: '🖼️', category: 'Developer Tools', color: 'from-purple-500 to-violet-500', mobileOnly: true },
   { id: 'qr-barcode', name: 'QR & Barcode', description: 'Generate & scan codes', icon: '📱', category: 'Developer Tools', color: 'from-cyan-500 to-blue-500', mobileOnly: true },
   { id: 'docs-tools', name: 'Docs Tools', description: 'PDF merge, split, convert', icon: '📄', category: 'Developer Tools', color: 'from-red-500 to-rose-500', mobileOnly: true },
-  { id: 'media-tools', name: 'Media Tools', description: 'Video & audio conversion', icon: '🎞️', category: 'Developer Tools', color: 'from-teal-500 to-cyan-500', mobileOnly: true },
+  { id: 'media-tools', name: 'Media Tools', description: 'Video & audio conversion', icon: '🎞️', category: 'Developer Tools', color: 'from-primary-500 to-cyan-500', mobileOnly: true },
 
   // Utilities (5 apps)
   { id: 'internet-speed', name: 'Internet Speed', description: 'Speed test & history', icon: '📶', category: 'Utilities', color: 'from-indigo-500 to-blue-500' },
@@ -83,14 +83,14 @@ const apps: AppCard[] = [
 
   // Media & Entertainment (5 apps) - Mobile Only
   { id: 'podcast-player', name: 'Podcast Player', description: 'Play podcasts from URLs', icon: '🎙️', category: 'Media & Entertainment', color: 'from-purple-500 to-violet-500', mobileOnly: true },
-  { id: 'photo-gallery', name: 'Photo Gallery', description: 'Browse device photos', icon: '🖼️', category: 'Media & Entertainment', color: 'from-teal-500 to-cyan-500', mobileOnly: true },
+  { id: 'photo-gallery', name: 'Photo Gallery', description: 'Browse device photos', icon: '🖼️', category: 'Media & Entertainment', color: 'from-primary-500 to-cyan-500', mobileOnly: true },
   { id: 'music-player', name: 'Music Player', description: 'Play local music files', icon: '🎵', category: 'Media & Entertainment', color: 'from-pink-500 to-rose-500', mobileOnly: true },
   { id: 'video-player', name: 'Video Player', description: 'Play local video files', icon: '🎬', category: 'Media & Entertainment', color: 'from-orange-500 to-red-500', mobileOnly: true },
   { id: 'audio-recorder', name: 'Audio Recorder', description: 'Record voice memos', icon: '🎤', category: 'Media & Entertainment', color: 'from-red-500 to-orange-500', mobileOnly: true },
 
   // Security & Privacy (3 apps) - Mobile Only
   { id: 'vpn', name: 'VPN', description: 'Secure VPN connection', icon: '🛡️', category: 'Security & Privacy', color: 'from-blue-500 to-indigo-500', mobileOnly: true },
-  { id: 'two-factor-auth', name: '2FA Authenticator', description: 'TOTP authentication codes', icon: '🔑', category: 'Security & Privacy', color: 'from-teal-500 to-green-500', mobileOnly: true },
+  { id: 'two-factor-auth', name: '2FA Authenticator', description: 'TOTP authentication codes', icon: '🔑', category: 'Security & Privacy', color: 'from-primary-500 to-green-500', mobileOnly: true },
   { id: 'ciphertext', name: 'Ciphertext', description: 'Encrypt & decrypt text', icon: '🔐', category: 'Security & Privacy', color: 'from-amber-600 to-yellow-600', mobileOnly: true },
 
   // Sensors & Detection (7 apps) - Mobile Only
@@ -115,7 +115,7 @@ const apps: AppCard[] = [
   // Home & Life (5 apps)
   { id: 'home-repair', name: 'Home Repair', description: 'Track home repairs & maintenance', icon: '🏠', category: 'Home & Life', color: 'from-amber-600 to-yellow-600' },
   { id: 'pet-care', name: 'Pet Care', description: 'Manage pet health & records', icon: '🐾', category: 'Home & Life', color: 'from-orange-400 to-amber-400' },
-  { id: 'bill-reminder', name: 'Bill Reminder', description: 'Track bills & payments', icon: '📅', category: 'Home & Life', color: 'from-teal-500 to-cyan-500' },
+  { id: 'bill-reminder', name: 'Bill Reminder', description: 'Track bills & payments', icon: '📅', category: 'Home & Life', color: 'from-primary-500 to-cyan-500' },
   { id: 'investment-tracker', name: 'Investment Tracker', description: 'Track investments & portfolio', icon: '📊', category: 'Home & Life', color: 'from-blue-500 to-indigo-500' },
   { id: 'event-reminder', name: 'Event Reminder', description: 'Never miss important events', icon: '🎉', category: 'Home & Life', color: 'from-purple-500 to-violet-500' },
 ];
@@ -230,7 +230,7 @@ const AppSettingsPage: React.FC = () => {
         <BackgroundEffects variant="subtle" />
         <Header />
         <div className="relative z-10 flex items-center justify-center min-h-[60vh]">
-          <Loader2 className="h-8 w-8 animate-spin text-teal-400" />
+          <Loader2 className="h-8 w-8 animate-spin text-primary-400" />
         </div>
       </div>
     );
@@ -268,7 +268,7 @@ const AppSettingsPage: React.FC = () => {
               <Button
                 onClick={handleSave}
                 disabled={!hasChanges || selectedApps.length === 0 || isSubmitting}
-                className="min-w-[100px] bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+                className="min-w-[100px] bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
               >
                 {isSubmitting ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
@@ -379,14 +379,14 @@ const AppSettingsPage: React.FC = () => {
                                 className={`
                                   relative p-4 rounded-xl cursor-pointer transition-all duration-200
                                   ${isSelected
-                                    ? 'bg-teal-500/20 border-2 border-teal-400'
+                                    ? 'bg-primary-500/20 border-2 border-primary-400'
                                     : 'bg-white/5 backdrop-blur-xl border-2 border-white/10 hover:border-white/20'
                                   }
                                 `}
                               >
                                 {/* Selection indicator */}
                                 {isSelected && (
-                                  <div className="absolute top-3 right-3 w-6 h-6 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center">
+                                  <div className="absolute top-3 right-3 w-6 h-6 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full flex items-center justify-center">
                                     <Check className="h-4 w-4 text-white" />
                                   </div>
                                 )}
@@ -407,7 +407,7 @@ const AppSettingsPage: React.FC = () => {
                                     {app.icon}
                                   </div>
                                   <div className="flex-1 min-w-0 pr-8">
-                                    <h3 className={`font-semibold ${isSelected ? 'text-teal-400' : 'text-white'}`}>
+                                    <h3 className={`font-semibold ${isSelected ? 'text-primary-400' : 'text-white'}`}>
                                       {app.name}
                                     </h3>
                                     <p className="text-sm text-white/60 mt-0.5">
@@ -446,7 +446,7 @@ const AppSettingsPage: React.FC = () => {
             <Button
               onClick={handleSave}
               disabled={!hasChanges || selectedApps.length === 0 || isSubmitting}
-              className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
               size="lg"
             >
               {isSubmitting ? (

@@ -202,7 +202,7 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Activity className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -214,9 +214,9 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.earthquakeMagnitude.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.earthquakeMagnitude.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -233,7 +233,7 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
                 step="0.1"
                 value={magnitude}
                 onChange={(e) => setMagnitude(parseFloat(e.target.value))}
-                className="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                className="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
               />
               <input
                 type="number"
@@ -251,7 +251,7 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -401,7 +401,7 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
                       isDarkMode
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <ArrowRight className={`w-5 h-5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
@@ -423,14 +423,14 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
                       isDarkMode
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
               <div className={`mt-4 p-3 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-100'}`}>
                 <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   A magnitude <strong>{energyComparison.larger.toFixed(1)}</strong> earthquake releases approximately{' '}
-                  <span className="text-[#0D9488] font-bold text-lg">{energyComparison.ratio.toFixed(1)}x</span>{' '}
+                  <span className="text-[#6096B4] font-bold text-lg">{energyComparison.ratio.toFixed(1)}x</span>{' '}
                   more energy than a magnitude <strong>{energyComparison.smaller.toFixed(1)}</strong> earthquake.
                 </p>
               </div>
@@ -463,7 +463,7 @@ export const EarthquakeMagnitudeTool: React.FC<EarthquakeMagnitudeToolProps> = (
                   className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-[#0D9488] flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-[#6096B4] flex items-center justify-center flex-shrink-0">
                       <span className="text-white font-bold text-sm">{idx + 1}</span>
                     </div>
                     <div>

@@ -159,7 +159,7 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
     return (
       <div className="relative max-w-4xl mx-auto">
         <div className="flex justify-center items-center py-16">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-teal-400"></div>
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary-400"></div>
         </div>
       </div>
     );
@@ -170,7 +170,7 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
     return (
       <div className="relative max-w-4xl mx-auto">
         <GlassCard className="text-center py-16">
-          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center">
+          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
             <FolderOpen className="h-10 w-10 text-white" />
           </div>
           <h2 className="text-xl font-semibold text-white mb-2">
@@ -204,7 +204,7 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
             <Button
               onClick={handleStartAddTask}
               disabled={loading}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Task
@@ -219,14 +219,14 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
             <div className="flex items-center gap-2 mb-4 pb-2 border-b border-white/20">
               {editingTaskId ? (
                 <>
-                  <Pencil className="h-4 w-4 text-teal-400" />
+                  <Pencil className="h-4 w-4 text-primary-400" />
                   <span className="text-sm font-medium text-white/60">
                     Editing Task
                   </span>
                 </>
               ) : (
                 <>
-                  <Plus className="h-4 w-4 text-teal-400" />
+                  <Plus className="h-4 w-4 text-primary-400" />
                   <span className="text-sm font-medium text-white/60">
                     New Task
                   </span>
@@ -241,7 +241,7 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
                 placeholder="What needs to be done?"
                 value={taskForm.title}
                 onChange={(e) => setTaskForm({ ...taskForm, title: e.target.value })}
-                className="text-lg font-medium border-0 border-b border-white/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-teal-400 bg-transparent text-white placeholder:text-white/40"
+                className="text-lg font-medium border-0 border-b border-white/20 rounded-none px-0 focus-visible:ring-0 focus-visible:border-primary-400 bg-transparent text-white placeholder:text-white/40"
                 autoFocus
               />
             </div>
@@ -350,7 +350,7 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
               <Button
                 onClick={handleSubmitForm}
                 disabled={!taskForm.title.trim()}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               >
                 {editingTaskId ? 'Update Task' : 'Create Task'}
               </Button>
@@ -400,17 +400,17 @@ const Todo1Page: React.FC<Todo1PageProps> = ({
 
         {loading ? (
           <div className="flex justify-center items-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-400"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
           </div>
         ) : tasks.length === 0 ? (
           <GlassCard className="text-center py-12">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
               <Plus className="h-8 w-8 text-white" />
             </div>
             <p className="text-white/60 mb-4">No tasks yet in this category</p>
             <Button
               onClick={handleStartAddTask}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             >
               Create your first task
             </Button>

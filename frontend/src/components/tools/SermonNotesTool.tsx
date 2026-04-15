@@ -407,9 +407,9 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.sermonNotes.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.sermonNotes.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -417,7 +417,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -488,7 +488,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -530,7 +530,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
               </div>
               <button
                 onClick={() => { resetSermonForm(); setEditingSermon(null); setShowSermonModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.sermonNotes.newSermon', 'New Sermon')}
@@ -633,7 +633,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
               </h2>
               <button
                 onClick={() => { resetSeriesForm(); setEditingSeries(null); setShowSeriesModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.sermonNotes.newSeries', 'New Series')}
@@ -845,7 +845,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                     />
                     <button
                       onClick={handleAddPoint}
-                      className="flex items-center gap-1 px-3 py-1 text-sm bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                      className="flex items-center gap-1 px-3 py-1 text-sm bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                     >
                       <Plus className="w-3 h-3" />
                       {t('tools.sermonNotes.addPoint', 'Add Point')}
@@ -888,7 +888,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                     />
                     <button
                       onClick={handleAddTag}
-                      className="px-3 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                      className="px-3 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -915,7 +915,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                 </button>
                 <button
                   onClick={handleSaveSermon}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingSermon ? t('tools.sermonNotes.saveChanges', 'Save Changes') : t('tools.sermonNotes.createSermon', 'Create Sermon')}
                 </button>
@@ -981,7 +981,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                     id="seriesActive"
                     checked={seriesForm.isActive !== false}
                     onChange={(e) => setSeriesForm({ ...seriesForm, isActive: e.target.checked })}
-                    className="rounded text-[#0D9488]"
+                    className="rounded text-[#6096B4]"
                   />
                   <label htmlFor="seriesActive" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.sermonNotes.activeSeries2', 'Active Series')}
@@ -997,7 +997,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                 </button>
                 <button
                   onClick={handleSaveSeries}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingSeries ? t('tools.sermonNotes.saveChanges2', 'Save Changes') : t('tools.sermonNotes.createSeries', 'Create Series')}
                 </button>
@@ -1040,7 +1040,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                             {index + 1}. {point.title}
                           </h5>
                           {point.scripture && (
-                            <p className={`text-sm text-[#0D9488] mt-1`}>{point.scripture}</p>
+                            <p className={`text-sm text-[#6096B4] mt-1`}>{point.scripture}</p>
                           )}
                           {point.content && (
                             <p className={`mt-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{point.content}</p>
@@ -1071,7 +1071,7 @@ export const SermonNotesTool: React.FC<SermonNotesToolProps> = ({
                     setViewingSermon(null);
                     setShowSermonModal(true);
                   }}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {t('tools.sermonNotes.editSermon', 'Edit Sermon')}
                 </button>

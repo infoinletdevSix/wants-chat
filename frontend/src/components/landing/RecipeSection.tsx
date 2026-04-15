@@ -182,7 +182,7 @@ const RecipeSection: React.FC = () => {
 
   return (
     <motion.section
-      className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -190,7 +190,7 @@ const RecipeSection: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -294,7 +294,7 @@ const RecipeSection: React.FC = () => {
                     animate="visible"
                   >
                     <Card
-                      className="overflow-hidden h-full flex flex-col cursor-pointer bg-white/10 backdrop-blur-xl border border-white/20 hover:shadow-xl hover:shadow-teal-500/20 transition-all duration-300"
+                      className="overflow-hidden h-full flex flex-col cursor-pointer bg-white/10 backdrop-blur-xl border border-white/20 hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300"
                       onClick={() => handleRecipeClick(recipe.id)}
                     >
                       {/* Recipe Image */}
@@ -451,7 +451,7 @@ const RecipeSection: React.FC = () => {
         >
           <Button
             size="lg"
-            className="group px-6 py-3 text-base font-medium bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl shadow-lg shadow-teal-500/25 hover:shadow-xl transition-all duration-200"
+            className="group px-6 py-3 text-base font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-200"
             onClick={() => navigate('/recipe-builder')}
           >
             <ChefHatIcon className="mr-2 h-5 w-5" />

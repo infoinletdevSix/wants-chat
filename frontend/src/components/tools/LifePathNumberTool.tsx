@@ -307,16 +307,16 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               {t('tools.lifePathNumber.lifePathNumberCalculator', 'Life Path Number Calculator')}
             </h1>
             {isPrefilled && (
-              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-                <span className="text-xs text-[#0D9488] font-medium">{t('tools.lifePathNumber.prefilled', 'Prefilled')}</span>
+              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+                <span className="text-xs text-[#6096B4] font-medium">{t('tools.lifePathNumber.prefilled', 'Prefilled')}</span>
               </div>
             )}
           </div>
@@ -338,7 +338,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.lifePathNumber.day', 'Day')}</option>
                   {days.map((d) => (
@@ -357,7 +357,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.lifePathNumber.month', 'Month')}</option>
                   {months.map((m) => (
@@ -380,7 +380,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -390,7 +390,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateLifePath}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.lifePathNumber.calculateLifePath', 'Calculate Life Path')}
@@ -411,11 +411,11 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
           {result && (
             <div className="space-y-4">
               {/* Main Number Display */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.lifePathNumber.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.lifePathNumber.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <div className="text-center mb-4">
-                  <div className="text-6xl font-bold text-[#0D9488] mb-2">
+                  <div className="text-6xl font-bold text-[#6096B4] mb-2">
                     {result.number}
                   </div>
                   {result.ismaster && (
@@ -448,7 +448,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
                         key={index}
                         className={`px-3 py-1 rounded-full text-sm ${
                           theme === 'dark'
-                            ? t('tools.lifePathNumber.bg0d948820Text0d9488', 'bg-[#0D9488]/20 text-[#0D9488]') : t('tools.lifePathNumber.bg0d948810Text0d9488', 'bg-[#0D9488]/10 text-[#0D9488]')
+                            ? t('tools.lifePathNumber.bg0d948820Text0d9488', 'bg-[#6096B4]/20 text-[#6096B4]') : t('tools.lifePathNumber.bg0d948810Text0d9488', 'bg-[#6096B4]/10 text-[#6096B4]')
                         }`}
                       >
                         {trait}
@@ -462,7 +462,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
               <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-3">
                   <CardTitle className={`text-lg flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <Users className="w-5 h-5 text-[#0D9488]" />
+                    <Users className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.lifePathNumber.compatibleLifePaths', 'Compatible Life Paths')}
                   </CardTitle>
                 </CardHeader>
@@ -544,7 +544,7 @@ export const LifePathNumberTool: React.FC<LifePathNumberToolProps> = ({ uiConfig
                           </span>
                           <span className={`ml-2 font-bold ${
                             index === result.calculationSteps.length - 1
-                              ? 'text-[#0D9488] text-lg'
+                              ? 'text-[#6096B4] text-lg'
                               : theme === 'dark' ? 'text-white' : 'text-gray-900'
                           }`}>
                             = {step.result}

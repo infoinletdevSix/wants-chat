@@ -99,7 +99,7 @@ const JOB_STATUSES: { status: JobStatus; label: string; color: string }[] = [
   { status: 'printing', label: 'Printing', color: 'bg-cyan-500' },
   { status: 'finishing', label: 'Finishing', color: 'bg-orange-500' },
   { status: 'completed', label: 'Completed', color: 'bg-green-500' },
-  { status: 'shipped', label: 'Shipped', color: 'bg-teal-500' },
+  { status: 'shipped', label: 'Shipped', color: 'bg-primary-500' },
   { status: 'cancelled', label: 'Cancelled', color: 'bg-red-500' },
 ];
 
@@ -421,9 +421,9 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.printJob.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.printJob.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -431,7 +431,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Printer className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -515,7 +515,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -545,7 +545,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   />
                 </div>
               </div>
@@ -579,7 +579,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
               </select>
               <button
                 onClick={() => setShowJobForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.printJob.newJob', 'New Job')}
@@ -635,7 +635,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
                             className={`p-1.5 rounded ${theme === 'dark' ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}
                             title={t('tools.printJob.viewDetails', 'View Details')}
                           >
-                            <Eye className="w-4 h-4 text-[#0D9488]" />
+                            <Eye className="w-4 h-4 text-[#6096B4]" />
                           </button>
                           <button
                             onClick={() => startEditJob(job)}
@@ -663,7 +663,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
                   <p>{t('tools.printJob.noPrintJobsFound', 'No print jobs found')}</p>
                   <button
                     onClick={() => setShowJobForm(true)}
-                    className="mt-4 text-[#0D9488] hover:underline"
+                    className="mt-4 text-[#6096B4] hover:underline"
                   >
                     {t('tools.printJob.createYourFirstJob', 'Create your first job')}
                   </button>
@@ -833,7 +833,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
                         onClick={() => toggleFinishing(option)}
                         className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                           (newJob.finishing || []).includes(option)
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -940,7 +940,7 @@ export const PrintJobTool: React.FC<PrintJobToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={editingJob ? updateJob : addJob}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingJob ? t('tools.printJob.updateJob', 'Update Job') : t('tools.printJob.createJob', 'Create Job')}
                   </button>

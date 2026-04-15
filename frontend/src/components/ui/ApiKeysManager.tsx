@@ -175,8 +175,8 @@ export function ApiKeysManager() {
       <div className={`px-6 py-4 border-b ${borderColor}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Key className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Key className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h2 className={`text-lg font-semibold ${textColor}`}>{t('apiKeys.cardTitle')}</h2>
@@ -185,7 +185,7 @@ export function ApiKeysManager() {
           </div>
           <button
             onClick={() => setShowCreateForm(true)}
-            className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 flex items-center gap-2"
+            className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('apiKeys.createButton')}
@@ -263,7 +263,7 @@ export function ApiKeysManager() {
                       onClick={() => toggleScope(scope)}
                       className={`px-3 py-1.5 rounded-lg text-sm border transition-all ${
                         scopes.includes(scope)
-                          ? 'border-teal-500 bg-teal-500/10 text-teal-600 dark:text-teal-400'
+                          ? 'border-primary-500 bg-primary-500/10 text-primary-600 dark:text-primary-400'
                           : `${borderColor} ${mutedColor}`
                       }`}
                     >
@@ -308,7 +308,7 @@ export function ApiKeysManager() {
                 <button
                   onClick={createApiKey}
                   disabled={creating || !newKeyName.trim()}
-                  className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50 flex items-center gap-2"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50 flex items-center gap-2"
                 >
                   {creating && <RefreshCw className="w-4 h-4 animate-spin" />}
                   {t('apiKeys.createKey')}
@@ -321,7 +321,7 @@ export function ApiKeysManager() {
         {/* Loading */}
         {loading && (
           <div className="flex items-center justify-center py-12">
-            <RefreshCw className="w-6 h-6 animate-spin text-teal-500" />
+            <RefreshCw className="w-6 h-6 animate-spin text-primary-500" />
             <span className={`ml-3 ${mutedColor}`}>{t('apiKeys.loading')}</span>
           </div>
         )}
@@ -457,7 +457,7 @@ export function ApiKeysManager() {
             href="/api-docs"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 text-sm text-teal-600 dark:text-teal-400 hover:underline`}
+            className={`flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:underline`}
           >
             <ExternalLink className="w-4 h-4" />
             {t('apiKeys.viewDocs')}

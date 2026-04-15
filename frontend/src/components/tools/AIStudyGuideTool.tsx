@@ -269,11 +269,11 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <BookOpen className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <BookOpen className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aIStudyGuide.aiStudyGuide', 'AI Study Guide')}</h3>
@@ -283,9 +283,9 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aIStudyGuide.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aIStudyGuide.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -302,7 +302,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.aIStudyGuide.enterTheTopicYouNeed', 'Enter the topic you need to study (e.g., \'Photosynthesis\', \'World War II\', \'Linear Algebra\')...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -318,7 +318,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
                 const selected = subjects.find(s => s.value === e.target.value);
                 if (selected) setSubject(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {subjects.map(s => (
                 <option key={s.value} value={s.value}>{s.label}</option>
@@ -336,7 +336,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
                 const selected = studyLevels.find(l => l.value === e.target.value);
                 if (selected) setStudyLevel(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {studyLevels.map(l => (
                 <option key={l.value} value={l.value}>{l.label}</option>
@@ -355,7 +355,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
             onChange={(e) => setFocusAreas(e.target.value)}
             placeholder={t('tools.aIStudyGuide.anySpecificTopicsChaptersOr', 'Any specific topics, chapters, or concepts you want to focus on...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -370,7 +370,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -413,8 +413,8 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
 
             <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
               {/* Title & Overview */}
-              <div className="p-4 bg-[#0D9488]/5 border-b border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-2 text-xs text-[#0D9488] font-medium mb-1">
+              <div className="p-4 bg-[#6096B4]/5 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-2 text-xs text-[#6096B4] font-medium mb-1">
                   {generatedGuide.subject}
                 </div>
                 <h5 className="font-semibold text-gray-900 dark:text-white text-lg">
@@ -427,11 +427,11 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
 
               {/* Learning Objectives */}
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                <h6 className="text-sm font-medium text-[#0D9488] mb-2">{t('tools.aIStudyGuide.learningObjectives', 'Learning Objectives')}</h6>
+                <h6 className="text-sm font-medium text-[#6096B4] mb-2">{t('tools.aIStudyGuide.learningObjectives', 'Learning Objectives')}</h6>
                 <ul className="space-y-1.5">
                   {generatedGuide.learningObjectives.map((obj, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                      <span className="text-[#0D9488] font-medium">{idx + 1}.</span>
+                      <span className="text-[#6096B4] font-medium">{idx + 1}.</span>
                       {obj}
                     </li>
                   ))}
@@ -446,7 +446,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
                     className="w-full p-4 flex items-center justify-between hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
                     <span className="font-medium text-gray-900 dark:text-white flex items-center gap-2">
-                      <span className="flex items-center justify-center w-6 h-6 bg-[#0D9488] text-white text-xs rounded">
+                      <span className="flex items-center justify-center w-6 h-6 bg-[#6096B4] text-white text-xs rounded">
                         {idx + 1}
                       </span>
                       {section.title}
@@ -462,7 +462,7 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
                     <div className="px-4 pb-4 space-y-4">
                       {/* Key Terms */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStudyGuide.keyTerms', 'Key Terms')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStudyGuide.keyTerms', 'Key Terms')}</h6>
                         <div className="grid gap-2">
                           {section.keyTerms.map((kt, ktIdx) => (
                             <div key={ktIdx} className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -475,11 +475,11 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
 
                       {/* Key Concepts */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStudyGuide.keyConcepts', 'Key Concepts')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStudyGuide.keyConcepts', 'Key Concepts')}</h6>
                         <ul className="space-y-1">
                           {section.concepts.map((c, cIdx) => (
                             <li key={cIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                              <span className="text-[#0D9488]">*</span>
+                              <span className="text-[#6096B4]">*</span>
                               {c}
                             </li>
                           ))}
@@ -488,11 +488,11 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
 
                       {/* Review Questions */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStudyGuide.reviewQuestions', 'Review Questions')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStudyGuide.reviewQuestions', 'Review Questions')}</h6>
                         <ol className="space-y-1.5">
                           {section.reviewQuestions.map((q, qIdx) => (
                             <li key={qIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                              <span className="text-[#0D9488] font-medium">Q{qIdx + 1}.</span>
+                              <span className="text-[#6096B4] font-medium">Q{qIdx + 1}.</span>
                               {q}
                             </li>
                           ))}
@@ -500,12 +500,12 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
                       </div>
 
                       {/* Study Tips */}
-                      <div className="bg-[#0D9488]/5 p-3 rounded-lg">
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStudyGuide.studyTips', 'Study Tips')}</h6>
+                      <div className="bg-[#6096B4]/5 p-3 rounded-lg">
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStudyGuide.studyTips', 'Study Tips')}</h6>
                         <ul className="space-y-1">
                           {section.tips.map((t, tIdx) => (
                             <li key={tIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                              <Sparkles className="w-3.5 h-3.5 text-[#0D9488] mt-0.5 flex-shrink-0" />
+                              <Sparkles className="w-3.5 h-3.5 text-[#6096B4] mt-0.5 flex-shrink-0" />
                               {t}
                             </li>
                           ))}
@@ -517,8 +517,8 @@ Include 3-4 sections with comprehensive content appropriate for the study level.
               ))}
 
               {/* Summary Notes */}
-              <div className="p-4 bg-[#0D9488]/5">
-                <h6 className="text-sm font-medium text-[#0D9488] mb-2">{t('tools.aIStudyGuide.summaryNotes', 'Summary Notes')}</h6>
+              <div className="p-4 bg-[#6096B4]/5">
+                <h6 className="text-sm font-medium text-[#6096B4] mb-2">{t('tools.aIStudyGuide.summaryNotes', 'Summary Notes')}</h6>
                 <p className="text-sm text-gray-700 dark:text-gray-300">{generatedGuide.summaryNotes}</p>
               </div>
             </div>

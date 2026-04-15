@@ -832,7 +832,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
         <button
           onClick={() => setShowGuestModal(true)}
           disabled={!selectedEventId}
-          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all shadow-lg shadow-cyan-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all shadow-lg shadow-cyan-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <UserPlus className="w-5 h-5" />
           {t('tools.eventGuestList.addGuest', 'Add Guest')}
@@ -1129,7 +1129,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                     className={`w-full py-2 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                       guest.checkedIn
                         ? 'bg-red-500/10 text-red-500 hover:bg-red-500/20'
-                        : 'bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600'
+                        : 'bg-gradient-to-r from-cyan-500 to-primary-500 text-white hover:from-cyan-600 hover:to-primary-600'
                     }`}
                   >
                     {guest.checkedIn ? (
@@ -1186,7 +1186,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
         <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-xl">
+              <div className="p-3 bg-gradient-to-br from-cyan-500 to-primary-500 rounded-xl">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1284,7 +1284,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
               onClick={() => setActiveTab(tab.id as TabType)}
               className={`flex-1 px-4 py-2.5 rounded-lg font-medium flex items-center justify-center gap-2 transition-all ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-lg shadow-cyan-500/20'
+                  ? 'bg-gradient-to-r from-cyan-500 to-primary-500 text-white shadow-lg shadow-cyan-500/20'
                   : isDark
                   ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-white'
@@ -1490,7 +1490,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                   <button
                     onClick={handleSaveEvent}
                     disabled={!eventFormData.name || !eventFormData.date}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Save className="w-4 h-4" />
                     {editingEvent ? t('tools.eventGuestList.update', 'Update') : t('tools.eventGuestList.create', 'Create')}
@@ -1777,7 +1777,7 @@ export const EventGuestListTool: React.FC<EventGuestListToolProps> = ({ uiConfig
                   <button
                     onClick={handleSaveGuest}
                     disabled={!guestFormData.name}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-teal-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-lg font-medium flex items-center gap-2 hover:from-cyan-600 hover:to-primary-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Save className="w-4 h-4" />
                     {editingGuest ? t('tools.eventGuestList.update2', 'Update') : t('tools.eventGuestList.add', 'Add')}

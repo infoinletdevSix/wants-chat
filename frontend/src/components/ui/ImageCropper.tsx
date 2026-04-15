@@ -197,7 +197,7 @@ export function ImageCropper({
                 step={0.05}
                 value={zoom}
                 onChange={(e) => setZoom(parseFloat(e.target.value))}
-                className="flex-1 h-2 bg-gray-200 dark:bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                className="flex-1 h-2 bg-gray-200 dark:bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-primary-500"
               />
               <ZoomIn className="w-4 h-4 text-gray-500 dark:text-gray-400" />
             </div>
@@ -212,7 +212,7 @@ export function ImageCropper({
                 step={1}
                 value={rotation}
                 onChange={(e) => setRotation(parseInt(e.target.value))}
-                className="flex-1 h-2 bg-gray-200 dark:bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                className="flex-1 h-2 bg-gray-200 dark:bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-primary-500"
               />
               <span className="text-xs text-gray-500 dark:text-gray-400 w-10 text-right">
                 {rotation}°
@@ -241,7 +241,7 @@ export function ImageCropper({
             <button
               onClick={handleSave}
               disabled={isProcessing}
-              className="px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Check className="w-4 h-4" />
               {isProcessing ? 'Processing...' : 'Apply'}

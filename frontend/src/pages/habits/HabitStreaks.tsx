@@ -362,7 +362,7 @@ const HabitStreaks: React.FC = () => {
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
-              <BarChart className="h-6 w-6 text-teal-400" />
+              <BarChart className="h-6 w-6 text-primary-400" />
               <span className="text-xl font-semibold text-white">
                 Habit Streaks & Analytics
               </span>
@@ -535,7 +535,7 @@ const HabitStreaks: React.FC = () => {
                   key={habit.id}
                   onClick={() => setSelectedHabit(habit)}
                   className={`cursor-pointer ${
-                    selectedHabit?.id === habit.id ? 'ring-2 ring-teal-400' : ''
+                    selectedHabit?.id === habit.id ? 'ring-2 ring-primary-400' : ''
                   }`}
                 >
                   <div className="flex items-center justify-between mb-3">
@@ -584,7 +584,7 @@ const HabitStreaks: React.FC = () => {
                 value={`${selectedHabit.best_streak || 0}`}
                 subtitle="days"
                 icon={<EmojiEvents className="h-8 w-8" />}
-                color="from-emerald-500 to-teal-500"
+                color="from-emerald-500 to-primary-500"
               />
 
               <StatCard
@@ -617,7 +617,7 @@ const HabitStreaks: React.FC = () => {
                     onClick={() => setTimeRange(range)}
                     className={`rounded-xl capitalize ${
                       timeRange === range
-                        ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-0'
+                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0'
                         : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:bg-white/20'
                     }`}
                   >
@@ -679,7 +679,7 @@ const HabitStreaks: React.FC = () => {
             <GlassCard className="mb-8">
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Award className="h-5 w-5 text-teal-400" />
+                  <Award className="h-5 w-5 text-primary-400" />
                   Achievements
                 </h3>
                 <p className="text-sm text-white/60 mt-1">Badges earned for this habit</p>
@@ -708,7 +708,7 @@ const HabitStreaks: React.FC = () => {
             <GlassCard>
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <CalendarMonth className="h-5 w-5 text-teal-400" />
+                  <CalendarMonth className="h-5 w-5 text-primary-400" />
                   Completion Heatmap
                 </h3>
                 <p className="text-sm text-white/60 mt-1">Visual representation of your habit consistency</p>

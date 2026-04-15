@@ -490,9 +490,9 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.contactLensOrder.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.contactLensOrder.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -500,7 +500,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Eye className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -641,7 +641,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -672,7 +672,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -683,7 +683,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.contactLensOrder.allStatuses', 'All Statuses')}</option>
                   {ORDER_STATUSES.map((status) => (
@@ -694,7 +694,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                 </select>
                 <button
                   onClick={() => setShowOrderForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.contactLensOrder.newOrder', 'New Order')}
@@ -766,7 +766,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             >
                               {ORDER_STATUSES.map((status) => (
                                 <option key={status.value} value={status.value}>
@@ -800,7 +800,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
               </h2>
               <button
                 onClick={() => setShowPatientForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.contactLensOrder.addPatient', 'Add Patient')}
@@ -823,8 +823,8 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                          <User className="w-5 h-5 text-[#0D9488]" />
+                        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                          <User className="w-5 h-5 text-[#6096B4]" />
                         </div>
                         <div>
                           <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -846,7 +846,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                             setSelectedPatientId(patient.id);
                             setShowOrderForm(true);
                           }}
-                          className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                          className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                         >
                           <Plus className="w-4 h-4" />
                         </button>
@@ -950,7 +950,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -965,7 +965,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -983,7 +983,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -998,7 +998,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1015,7 +1015,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1033,7 +1033,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                   </button>
                   <button
                     onClick={addPatient}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.contactLensOrder.addPatient3', 'Add Patient')}
                   </button>
@@ -1076,7 +1076,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="">{t('tools.contactLensOrder.selectAPatient', 'Select a patient...')}</option>
                       {patients.map((p) => (
@@ -1105,7 +1105,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.contactLensOrder.selectBrand', 'Select brand...')}</option>
                         {LENS_BRANDS.map((brand) => (
@@ -1131,7 +1131,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {LENS_TYPES.map((type) => (
                           <option key={type.value} value={type.value}>
@@ -1169,7 +1169,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1193,7 +1193,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1217,7 +1217,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1241,7 +1241,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                     </div>
@@ -1262,7 +1262,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1278,7 +1278,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1295,7 +1295,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1328,7 +1328,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.contactLensOrder.selectSupplier', 'Select supplier...')}</option>
                         {SUPPLIERS.map((supplier) => (
@@ -1344,7 +1344,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                         id="autoRefill"
                         checked={newOrder.isAutoRefill}
                         onChange={(e) => setNewOrder({ ...newOrder, isAutoRefill: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                        className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                       />
                       <label htmlFor="autoRefill" className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                         {t('tools.contactLensOrder.enableAutoRefill', 'Enable Auto-Refill')}
@@ -1364,7 +1364,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1385,7 +1385,7 @@ export const ContactLensOrderTool: React.FC<ContactLensOrderToolProps> = ({ uiCo
                   </button>
                   <button
                     onClick={addOrder}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.contactLensOrder.createOrder', 'Create Order')}
                   </button>

@@ -31,7 +31,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
         {/* Avatar with Photo Upload */}
         <div className="relative group">
-          <div className="w-20 h-20 rounded-full bg-teal-500/20 border-2 border-teal-500/30 overflow-hidden">
+          <div className="w-20 h-20 rounded-full bg-primary-500/20 border-2 border-primary-500/30 overflow-hidden">
             {profileImage || userData.profileImage ? (
               <img
                 src={profileImage || userData.profileImage}
@@ -40,7 +40,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center">
-                <Icon path={mdiMeditation} size={2} className="text-teal-400" />
+                <Icon path={mdiMeditation} size={2} className="text-primary-400" />
               </div>
             )}
           </div>
@@ -72,13 +72,13 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               size="sm"
               className="h-6 w-6 p-0 bg-transparent hover:bg-white/10"
             >
-              <Pencil className="h-4 w-4 text-teal-400" />
+              <Pencil className="h-4 w-4 text-primary-400" />
             </Button>
           </div>
 
           {/* Stats Row */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-sm">
-            <Badge className="px-2 py-1 text-xs bg-teal-500/20 text-teal-400 border-teal-500/30">
+            <Badge className="px-2 py-1 text-xs bg-primary-500/20 text-primary-400 border-primary-500/30">
               Level {userData.level}
             </Badge>
             <div className="flex items-center gap-1 text-white/60">
@@ -86,7 +86,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               <span>{userData.currentStreak} day streak</span>
             </div>
             <div className="flex items-center gap-1 text-white/60">
-              <Calendar className="h-4 w-4 text-teal-400" />
+              <Calendar className="h-4 w-4 text-primary-400" />
               <span>Since {userData.memberSince}</span>
             </div>
           </div>
@@ -95,11 +95,11 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
           <div className="space-y-1">
             <div className="flex items-center justify-between text-xs">
               <span className="text-white/60">Level Progress</span>
-              <span className="font-medium text-teal-400">{Math.round((userData.xp / userData.nextLevelXp) * 100)}%</span>
+              <span className="font-medium text-primary-400">{Math.round((userData.xp / userData.nextLevelXp) * 100)}%</span>
             </div>
             <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
                 style={{ width: `${(userData.xp / userData.nextLevelXp) * 100}%` }}
               />
             </div>

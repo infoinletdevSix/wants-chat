@@ -71,7 +71,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
       name: 'High Protein',
       description: 'Muscle building focus',
       icon: Beef,
-      iconColor: 'text-teal-400',
+      iconColor: 'text-primary-400',
       macros: { carbs: 30, protein: 40, fat: 30 }
     },
     {
@@ -191,8 +191,8 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
     <div className="space-y-6">
       <div className="text-center mb-8">
         <div className="flex justify-center mb-4">
-          <div className="p-3 bg-teal-500/20 rounded-full">
-            <Target className="h-8 w-8 text-teal-400" />
+          <div className="p-3 bg-primary-500/20 rounded-full">
+            <Target className="h-8 w-8 text-primary-400" />
           </div>
         </div>
         <h2 className="text-xl font-semibold text-white mb-2">
@@ -208,14 +208,14 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
         <Button
           size="sm"
           onClick={() => setCustomMode(false)}
-          className={`flex-1 ${!customMode ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
+          className={`flex-1 ${!customMode ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
         >
           Quick Presets
         </Button>
         <Button
           size="sm"
           onClick={() => setCustomMode(true)}
-          className={`flex-1 ${customMode ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
+          className={`flex-1 ${customMode ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'}`}
         >
           <Settings className="h-4 w-4 mr-1" />
           Custom
@@ -236,7 +236,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                   className={cn(
                     "p-4 cursor-pointer transition-all duration-300 border-2",
                     isSelected
-                      ? "bg-gradient-to-br from-teal-500/30 to-cyan-500/30 border-teal-400 shadow-xl shadow-teal-500/30 scale-[1.02]"
+                      ? "bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-xl shadow-primary-500/30 scale-[1.02]"
                       : "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
                   )}
                   onClick={() => applyPreset(plan)}
@@ -245,14 +245,14 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                     <div className="flex items-center gap-3">
                       <div className={cn(
                         "p-2 rounded-lg",
-                        isSelected ? "bg-teal-500/40" : "bg-white/10"
+                        isSelected ? "bg-primary-500/40" : "bg-white/10"
                       )}>
-                        <Icon className={cn("h-5 w-5", isSelected ? "text-teal-300" : plan.iconColor)} />
+                        <Icon className={cn("h-5 w-5", isSelected ? "text-primary-300" : plan.iconColor)} />
                       </div>
                       <div>
                         <h3 className={cn(
                           "font-semibold transition-colors",
-                          isSelected ? "text-teal-300" : "text-white"
+                          isSelected ? "text-primary-300" : "text-white"
                         )}>
                           {plan.name}
                         </h3>
@@ -279,8 +279,8 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
 
                     {isSelected && (
                       <div className="flex items-center gap-2 pt-2">
-                        <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-                        <span className="text-xs font-medium text-teal-400">Selected</span>
+                        <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+                        <span className="text-xs font-medium text-primary-400">Selected</span>
                       </div>
                     )}
                   </div>
@@ -317,7 +317,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                 >
                   <Minus className="h-3 w-3" />
                 </Button>
-                <Badge className="font-mono text-base px-3 py-1 bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                <Badge className="font-mono text-base px-3 py-1 bg-primary-500/20 text-primary-400 border border-primary-500/30">
                   {dailyCalories} cal
                 </Badge>
                 <Button
@@ -332,7 +332,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
 
             <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="absolute h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300 ease-out"
+                className="absolute h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300 ease-out"
                 style={{ width: `${((dailyCalories - 1200) / (4000 - 1200)) * 100}%` }}
               />
               <Input
@@ -371,7 +371,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label className="text-sm font-medium text-white flex items-center gap-2">
-                  <Beef className="h-4 w-4 text-teal-400" />
+                  <Beef className="h-4 w-4 text-primary-400" />
                   Protein
                 </Label>
                 <div className="flex items-center gap-2">
@@ -383,7 +383,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
                   >
                     <Minus className="h-3 w-3" />
                   </Button>
-                  <Badge className="font-mono min-w-[60px] text-center bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                  <Badge className="font-mono min-w-[60px] text-center bg-primary-500/20 text-primary-400 border border-primary-500/30">
                     {proteinPercentage}%
                   </Badge>
                   <Button
@@ -398,7 +398,7 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
               </div>
               <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="absolute h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300 ease-out"
+                  className="absolute h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300 ease-out"
                   style={{ width: `${(proteinPercentage / 70) * 100}%` }}
                 />
                 <Input
@@ -584,21 +584,21 @@ const DietPlanSelector: React.FC<DietPlanSelectorProps> = ({
 
           {/* Summary Card */}
           {isBalanced && (
-            <Card className="p-4 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/20">
+            <Card className="p-4 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
               <div className="space-y-3">
                 <h3 className="font-medium text-white flex items-center gap-2">
-                  <Calculator className="h-4 w-4 text-teal-400" />
+                  <Calculator className="h-4 w-4 text-primary-400" />
                   Your Custom Nutrition Plan
                 </h3>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <p className="text-xs text-white/60">Daily Calories</p>
-                    <p className="text-lg font-bold text-teal-400">{dailyCalories}</p>
+                    <p className="text-lg font-bold text-primary-400">{dailyCalories}</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs text-white/60">Protein</p>
-                    <p className="text-lg font-bold text-teal-400">{proteinGrams}g</p>
+                    <p className="text-lg font-bold text-primary-400">{proteinGrams}g</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs text-white/60">Carbs</p>

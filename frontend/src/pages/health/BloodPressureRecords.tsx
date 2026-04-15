@@ -162,7 +162,7 @@ const BloodPressureRecords: React.FC = () => {
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Greeting Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/20 border border-teal-400/30">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/20 border border-primary-400/30">
           <h1 className="text-3xl font-bold text-white mb-2">
             Blood Pressure Monitoring 💓
           </h1>
@@ -175,13 +175,13 @@ const BloodPressureRecords: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {/* Add Reading Card */}
           <Card
-            className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50"
+            className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50"
             onClick={() => navigate('/health/add-vital-record')}
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-teal-500/20">
-                  <Plus className="h-7 w-7 text-teal-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/20">
+                  <Plus className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Add Reading</h3>
                 <p className="text-white/60 text-sm">Record BP levels</p>
@@ -191,11 +191,11 @@ const BloodPressureRecords: React.FC = () => {
           </Card>
 
           {/* View Trends Card */}
-          <Card className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50">
+          <Card className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50">
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-teal-500/20">
-                  <TrendingUp className="h-7 w-7 text-teal-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/20">
+                  <TrendingUp className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">View Trends</h3>
                 <p className="text-white/60 text-sm">Analyze patterns</p>
@@ -205,11 +205,11 @@ const BloodPressureRecords: React.FC = () => {
           </Card>
 
           {/* Set Reminders Card */}
-          <Card className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50">
+          <Card className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50">
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-teal-500/20">
-                  <CalendarIcon className="h-7 w-7 text-teal-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/20">
+                  <CalendarIcon className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Set Reminders</h3>
                 <p className="text-white/60 text-sm">Check-up schedule</p>
@@ -229,8 +229,8 @@ const BloodPressureRecords: React.FC = () => {
                 </p>
                 <p className="text-sm font-medium text-white/60">Average BP</p>
               </div>
-              <div className="p-4 rounded-2xl bg-teal-500/20">
-                <MonitorHeartIcon className="h-8 w-8 text-teal-400" />
+              <div className="p-4 rounded-2xl bg-primary-500/20">
+                <MonitorHeartIcon className="h-8 w-8 text-primary-400" />
               </div>
             </div>
           </Card>
@@ -288,7 +288,7 @@ const BloodPressureRecords: React.FC = () => {
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                <ShowChartIcon className="h-5 w-5 text-teal-400" />
+                <ShowChartIcon className="h-5 w-5 text-primary-400" />
                 Blood Pressure Trends
               </CardTitle>
               <CardDescription className="text-sm text-white/60">Systolic and diastolic variations</CardDescription>
@@ -342,7 +342,7 @@ const BloodPressureRecords: React.FC = () => {
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                <TimelineIcon className="h-5 w-5 text-teal-400" />
+                <TimelineIcon className="h-5 w-5 text-primary-400" />
                 BP Correlation Analysis
               </CardTitle>
               <CardDescription className="text-sm text-white/60">Systolic vs Diastolic relationship</CardDescription>
@@ -366,7 +366,7 @@ const BloodPressureRecords: React.FC = () => {
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                <DonutLargeIcon className="h-5 w-5 text-teal-400" />
+                <DonutLargeIcon className="h-5 w-5 text-primary-400" />
                 Reading Distribution
               </CardTitle>
               <CardDescription className="text-sm text-white/60">Breakdown by BP categories</CardDescription>
@@ -412,7 +412,7 @@ const BloodPressureRecords: React.FC = () => {
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                <SpeedIcon className="h-5 w-5 text-teal-400" />
+                <SpeedIcon className="h-5 w-5 text-primary-400" />
                 Pulse Rate Analysis
               </CardTitle>
               <CardDescription className="text-sm text-white/60">Heart rate patterns over time</CardDescription>
@@ -445,7 +445,7 @@ const BloodPressureRecords: React.FC = () => {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-              <MonitorHeartIcon className="h-6 w-6 text-teal-400" />
+              <MonitorHeartIcon className="h-6 w-6 text-primary-400" />
               Recent Blood Pressure Readings
             </h2>
             <p className="text-sm text-white/60 mt-1">
@@ -454,7 +454,7 @@ const BloodPressureRecords: React.FC = () => {
           </div>
           <Button
             onClick={() => navigate('/health/add-vital-record')}
-            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
           >
             <Plus className="h-4 w-4 mr-2" />
             Add Reading
@@ -612,8 +612,8 @@ const BloodPressureRecords: React.FC = () => {
         ) : (
           <Card className="rounded-2xl p-12 text-center bg-white/10 backdrop-blur-xl border border-white/20">
             <div className="max-w-md mx-auto">
-              <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-teal-500/20">
-                <MonitorHeartIcon className="h-10 w-10 text-teal-400" />
+              <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-primary-500/20">
+                <MonitorHeartIcon className="h-10 w-10 text-primary-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
                 No Blood Pressure Readings Yet
@@ -623,7 +623,7 @@ const BloodPressureRecords: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/health/add-vital-record')}
-                className="rounded-xl px-6 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Your First Reading

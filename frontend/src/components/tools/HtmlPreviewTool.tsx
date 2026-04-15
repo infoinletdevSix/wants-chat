@@ -33,7 +33,7 @@ const EXAMPLE_HTML = `<!DOCTYPE html>
     }
     h1 { margin-top: 0; }
     button {
-      background: #0D9488;
+      background: #6096B4;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -42,7 +42,7 @@ const EXAMPLE_HTML = `<!DOCTYPE html>
       font-size: 16px;
     }
     button:hover {
-      background: #0F766E;
+      background: #4C7F98;
     }
   </style>
 </head>
@@ -108,9 +108,9 @@ export const HtmlPreviewTool: React.FC<HtmlPreviewToolProps> = ({ uiConfig }) =>
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.htmlPreview.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.htmlPreview.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
           </div>
         )}
 
@@ -118,7 +118,7 @@ export const HtmlPreviewTool: React.FC<HtmlPreviewToolProps> = ({ uiConfig }) =>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={loadExample}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors font-medium"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors font-medium"
           >
             <FileCode className="w-4 h-4" />
             {t('tools.htmlPreview.loadExample', 'Load Example')}
@@ -153,7 +153,7 @@ export const HtmlPreviewTool: React.FC<HtmlPreviewToolProps> = ({ uiConfig }) =>
                 theme === 'dark'
                   ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                   : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
             />
           </div>
 

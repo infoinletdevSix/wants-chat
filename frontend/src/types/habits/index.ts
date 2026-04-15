@@ -68,7 +68,7 @@ export const HABIT_COLORS = [
   '#ef4444', // Red
   '#f59e0b', // Amber
   '#ec4899', // Pink
-  '#14b8a6', // Teal
+  '#75AAC1', // Teal
   '#6366f1', // Indigo
   '#84cc16', // Lime
   '#f97316'  // Orange

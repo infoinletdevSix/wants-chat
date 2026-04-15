@@ -703,7 +703,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
       confirmed: isDark ? 'bg-green-900/30 text-green-400' : 'bg-green-100 text-green-800',
       'in-preparation': isDark ? 'bg-yellow-900/30 text-yellow-400' : 'bg-yellow-100 text-yellow-800',
       ready: isDark ? 'bg-purple-900/30 text-purple-400' : 'bg-purple-100 text-purple-800',
-      delivered: isDark ? 'bg-teal-900/30 text-teal-400' : 'bg-teal-100 text-teal-800',
+      delivered: isDark ? 'bg-primary-900/30 text-primary-400' : 'bg-primary-100 text-primary-800',
       completed: isDark ? 'bg-gray-700/50 text-gray-400' : 'bg-gray-100 text-gray-800',
       cancelled: isDark ? 'bg-red-900/30 text-red-400' : 'bg-red-100 text-red-800',
     };
@@ -729,9 +729,9 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.catering.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.catering.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -739,7 +739,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <ChefHat className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -811,7 +811,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -858,7 +858,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                 </select>
                 <button
                   onClick={() => setShowOrderForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.catering.newOrder', 'New Order')}
@@ -985,7 +985,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                 </select>
                 <button
                   onClick={() => setShowMenuForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.catering.addItem', 'Add Item')}
@@ -1086,7 +1086,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 shadow`}>
                 <div className="flex items-center gap-3 mb-2">
-                  <Package className="w-5 h-5 text-[#0D9488]" />
+                  <Package className="w-5 h-5 text-[#6096B4]" />
                   <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.catering.totalOrders', 'Total Orders')}</span>
                 </div>
                 <p className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1293,7 +1293,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                             onClick={() => toggleDietaryOption(option, !!editingMenuItem)}
                             className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
                               isSelected
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : isDark
                                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1338,7 +1338,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={editingMenuItem ? handleUpdateMenuItem : handleAddMenuItem}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingMenuItem ? t('tools.catering.saveChanges', 'Save Changes') : t('tools.catering.addItem2', 'Add Item')}
                   </button>
@@ -1593,7 +1593,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                                     setSelectedMenuItems(newMap);
                                     if (orderErrors.menuItems) setOrderErrors(prev => ({ ...prev, menuItems: '' }));
                                   }}
-                                  className="w-8 h-8 rounded flex items-center justify-center bg-[#0D9488] text-white"
+                                  className="w-8 h-8 rounded flex items-center justify-center bg-[#6096B4] text-white"
                                 >
                                   +
                                 </button>
@@ -1659,7 +1659,7 @@ export const CateringTool: React.FC<CateringToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={editingOrder ? handleUpdateOrder : handleAddOrder}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingOrder ? t('tools.catering.saveChanges2', 'Save Changes') : t('tools.catering.createOrder', 'Create Order')}
                   </button>

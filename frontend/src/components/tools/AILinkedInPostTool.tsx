@@ -321,7 +321,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
           <div className="p-2 bg-[#0A66C2]/10 rounded-lg">
             <Linkedin className="w-5 h-5 text-[#0A66C2]" />
@@ -330,7 +330,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aILinkedInPost.aiLinkedinPostGenerator', 'AI LinkedIn Post Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aILinkedInPost.createEngagingLinkedinPostsThat', 'Create engaging LinkedIn posts that drive engagement')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aILinkedInPost.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -347,7 +347,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
             <select
               value={postType}
               onChange={(e) => setPostType(e.target.value as PostType)}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {postTypes.map((type) => (
                 <option key={type.value} value={type.value}>{type.label}</option>
@@ -360,7 +360,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
             <select
               value={tone}
               onChange={(e) => setTone(e.target.value as Tone)}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {tones.map((t) => (
                 <option key={t.value} value={t.value}>{t.label}</option>
@@ -378,7 +378,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
               value={formData.topic}
               onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
               placeholder={t('tools.aILinkedInPost.eGLeadershipRemoteWork', 'e.g., Leadership, Remote Work, AI')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -389,7 +389,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
               value={formData.mainPoint}
               onChange={(e) => setFormData({ ...formData, mainPoint: e.target.value })}
               placeholder={t('tools.aILinkedInPost.eGTheKeyTo', 'e.g., The key to success is...')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
         </div>
@@ -402,21 +402,21 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
             value={formData.insight1}
             onChange={(e) => setFormData({ ...formData, insight1: e.target.value })}
             placeholder={t('tools.aILinkedInPost.firstKeyPoint', 'First key point')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
           <input
             type="text"
             value={formData.insight2}
             onChange={(e) => setFormData({ ...formData, insight2: e.target.value })}
             placeholder={t('tools.aILinkedInPost.secondKeyPoint', 'Second key point')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
           <input
             type="text"
             value={formData.insight3}
             onChange={(e) => setFormData({ ...formData, insight3: e.target.value })}
             placeholder={t('tools.aILinkedInPost.thirdKeyPoint', 'Third key point')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
         </div>
 
@@ -430,7 +430,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
             <button
               onClick={() => setIncludeHashtags(!includeHashtags)}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                includeHashtags ? 'bg-teal-500' : isDark ? 'bg-gray-600' : 'bg-gray-300'
+                includeHashtags ? 'bg-primary-500' : isDark ? 'bg-gray-600' : 'bg-gray-300'
               }`}
             >
               <span
@@ -444,7 +444,7 @@ export const AILinkedInPostTool: React.FC<AILinkedInPostToolProps> = ({ uiConfig
             <select
               value={selectedHashtagCategory}
               onChange={(e) => setSelectedHashtagCategory(e.target.value)}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {hashtagCategories.map((cat) => (
                 <option key={cat.value} value={cat.value}>{cat.label}</option>

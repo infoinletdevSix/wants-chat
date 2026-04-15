@@ -344,11 +344,11 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 px-6 py-4 border-b border-gray-100">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 px-6 py-4 border-b border-gray-100">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Video className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Video className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900">{t('tools.aIVideoGenerator.aiVideoGenerator', 'AI Video Generator')}</h3>
@@ -373,9 +373,9 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">
               {isEditFromGallery
                 ? t('tools.aIVideoGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.aIVideoGenerator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}
             </span>
@@ -392,7 +392,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
             onChange={(e) => setPrompt(e.target.value)}
             placeholder={t('tools.aIVideoGenerator.aDroneShotFlyingThrough', 'A drone shot flying through misty mountains at sunrise, revealing a hidden waterfall...')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 placeholder:text-gray-400"
           />
         </div>
 
@@ -407,7 +407,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
                 const style = videoStyles.find((s) => s.label === e.target.value);
                 if (style) setSelectedStyle(style);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 bg-white"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 bg-white"
             >
               {videoStyles.map((style) => (
                 <option key={style.label} value={style.label}>
@@ -426,7 +426,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
                 const aspect = aspectRatios.find((a) => a.label === e.target.value);
                 if (aspect) setSelectedAspect(aspect);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 bg-white"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 bg-white"
             >
               {aspectRatios.map((aspect) => (
                 <option key={aspect.label} value={aspect.label}>
@@ -447,7 +447,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
                 onClick={() => setSelectedDuration(dur)}
                 className={`flex-1 py-2.5 px-4 rounded-xl border transition-all ${
                   selectedDuration.value === dur.value
-                    ? t('tools.aIVideoGenerator.border0d9488Bg0d948810', 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488] font-medium') : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                    ? t('tools.aIVideoGenerator.border0d9488Bg0d948810', 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4] font-medium') : 'border-gray-200 text-gray-600 hover:border-gray-300'
                 }`}
               >
                 {dur.label}
@@ -459,7 +459,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
         {/* Advanced Settings Toggle */}
         <button
           onClick={() => setShowAdvanced(!showAdvanced)}
-          className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#0D9488] transition-colors"
+          className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#6096B4] transition-colors"
         >
           <Settings2 className="w-4 h-4" />
           {showAdvanced ? t('tools.aIVideoGenerator.hide', 'Hide') : t('tools.aIVideoGenerator.show', 'Show')} Advanced Settings
@@ -476,7 +476,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
                   onClick={() => setQuality('standard')}
                   className={`flex-1 py-2.5 px-4 rounded-xl border transition-all ${
                     quality === 'standard'
-                      ? t('tools.aIVideoGenerator.border0d9488Bg0d9488102', 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488] font-medium') : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                      ? t('tools.aIVideoGenerator.border0d9488Bg0d9488102', 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4] font-medium') : 'border-gray-200 text-gray-600 hover:border-gray-300'
                   }`}
                 >
                   {t('tools.aIVideoGenerator.standard', 'Standard')}
@@ -485,7 +485,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
                   onClick={() => setQuality('high')}
                   className={`flex-1 py-2.5 px-4 rounded-xl border transition-all ${
                     quality === 'high'
-                      ? t('tools.aIVideoGenerator.border0d9488Bg0d9488103', 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488] font-medium') : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                      ? t('tools.aIVideoGenerator.border0d9488Bg0d9488103', 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4] font-medium') : 'border-gray-200 text-gray-600 hover:border-gray-300'
                   }`}
                 >
                   {t('tools.aIVideoGenerator.highQuality', 'High Quality')}
@@ -506,7 +506,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !prompt.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -571,7 +571,7 @@ export const AIVideoGeneratorTool: React.FC<AIVideoGeneratorToolProps> = ({ uiCo
                     <button
                       onClick={() => handleSave(video.url, video.prompt)}
                       disabled={isSaving}
-                      className="p-2 bg-[#0D9488] rounded-lg text-white hover:bg-[#0D9488]/90 transition-colors shadow-lg disabled:opacity-50"
+                      className="p-2 bg-[#6096B4] rounded-lg text-white hover:bg-[#6096B4]/90 transition-colors shadow-lg disabled:opacity-50"
                       title={t('tools.aIVideoGenerator.saveToGallery', 'Save to Gallery')}
                     >
                       <Save className="w-4 h-4" />

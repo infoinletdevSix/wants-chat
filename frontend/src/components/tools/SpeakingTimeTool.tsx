@@ -132,9 +132,9 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.speakingTime.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.speakingTime.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -150,14 +150,14 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
                 onClick={() => { setPace(key as SpeakingPace); setUseCustomWpm(false); }}
                 className={`p-3 rounded-lg border-2 transition-all ${
                   pace === key && !useCustomWpm
-                    ? 'border-[#0D9488] bg-[#0D9488]/10'
+                    ? 'border-[#6096B4] bg-[#6096B4]/10'
                     : theme === 'dark'
                     ? 'border-gray-600 hover:border-gray-500'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
                 <div className="flex items-center gap-2 mb-1">
-                  <span className={pace === key && !useCustomWpm ? 'text-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}>
+                  <span className={pace === key && !useCustomWpm ? 'text-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}>
                     {value.icon}
                   </span>
                   <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -179,7 +179,7 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
               type="checkbox"
               checked={useCustomWpm}
               onChange={(e) => setUseCustomWpm(e.target.checked)}
-              className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+              className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
               {t('tools.speakingTime.useCustomWordsPerMinute', 'Use custom words per minute')}
@@ -193,7 +193,7 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
                 max="200"
                 value={customWpm}
                 onChange={(e) => setCustomWpm(Number(e.target.value))}
-                className="flex-1 h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                className="flex-1 h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
               />
               <span className={`min-w-[80px] text-center font-mono ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 {customWpm} WPM
@@ -208,7 +208,7 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
             type="checkbox"
             checked={includesPauses}
             onChange={(e) => setIncludesPauses(e.target.checked)}
-            className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+            className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
           />
           <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
             {t('tools.speakingTime.includeNaturalPausesBetweenSentences', 'Include natural pauses between sentences')}
@@ -228,16 +228,16 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
         {/* Main Result */}
         {wordCount > 0 && (
           <div className="space-y-4">
-            <div className={`p-6 rounded-lg border-2 border-[#0D9488] ${theme === 'dark' ? 'bg-gray-700' : 'bg-teal-50'}`}>
+            <div className={`p-6 rounded-lg border-2 border-[#6096B4] ${theme === 'dark' ? 'bg-gray-700' : 'bg-primary-50'}`}>
               <div className="flex items-center justify-center gap-3">
-                <Mic className="w-8 h-8 text-[#0D9488]" />
+                <Mic className="w-8 h-8 text-[#6096B4]" />
                 <span className={`text-4xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {formatTime(speakingTime)}
                 </span>
@@ -254,7 +254,7 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
                   key={item.pace}
                   className={`p-3 rounded-lg text-center ${
                     item.pace === pace && !useCustomWpm
-                      ? 'bg-[#0D9488]/20 border border-[#0D9488]'
+                      ? 'bg-[#6096B4]/20 border border-[#6096B4]'
                       : theme === 'dark'
                       ? 'bg-gray-700'
                       : 'bg-gray-50'
@@ -298,7 +298,7 @@ ${getTimeForAllPaces().map(p => `- ${p.label}: ${formatTime(p.time)}`).join('\n'
                 onClick={handleCopy}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   copied
-                    ? 'bg-green-500 text-white' : t('tools.speakingTime.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                    ? 'bg-green-500 text-white' : t('tools.speakingTime.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}

@@ -158,7 +158,7 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <User size={28} />
           </div>
           <div>
@@ -182,9 +182,9 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
               placeholder={t('tools.nameMeaning.searchForAName', 'Search for a name...')}
               className={`w-full pl-12 pr-4 py-3 rounded-xl border transition-colors ${
                 isDark
-                  ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-500 focus:border-teal-500'
-                  : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-teal-500'
-              } focus:outline-none focus:ring-2 focus:ring-teal-500/20`}
+                  ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-500 focus:border-primary-500'
+                  : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-primary-500'
+              } focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
             />
             {searchQuery && (
               <button
@@ -205,8 +205,8 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                   genderFilter === gender
                     ? isDark
-                      ? 'bg-teal-900/50 text-teal-300'
-                      : 'bg-teal-100 text-teal-700'
+                      ? 'bg-primary-900/50 text-primary-300'
+                      : 'bg-primary-100 text-primary-700'
                     : isDark
                     ? 'bg-gray-700 text-gray-400 hover:text-gray-200'
                     : 'bg-gray-100 text-gray-600 hover:text-gray-900'
@@ -250,8 +250,8 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
               className={`p-3 rounded-xl border text-left transition-all hover:shadow-md ${
                 selectedName?.name === name.name
                   ? isDark
-                    ? 'bg-teal-900/30 border-teal-600'
-                    : 'bg-teal-50 border-teal-300'
+                    ? 'bg-primary-900/30 border-primary-600'
+                    : 'bg-primary-50 border-primary-300'
                   : isDark
                   ? 'bg-gray-800 border-gray-700 hover:bg-gray-700'
                   : 'bg-white border-gray-200 hover:bg-gray-50'
@@ -300,7 +300,7 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
             <div className={`w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className="sticky top-0 p-4 border-b flex items-center justify-between backdrop-blur-sm bg-inherit">
                 <div className="flex items-center gap-3">
-                  <Sparkles className={isDark ? 'text-teal-400' : 'text-teal-600'} size={24} />
+                  <Sparkles className={isDark ? 'text-primary-400' : 'text-primary-600'} size={24} />
                   <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {selectedName.name}
                   </h2>
@@ -333,8 +333,8 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
                 </div>
 
                 {/* Meaning */}
-                <div className={`p-4 rounded-xl ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-                  <h3 className={`font-semibold mb-2 ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                <div className={`p-4 rounded-xl ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+                  <h3 className={`font-semibold mb-2 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                     {t('tools.nameMeaning.meaning', 'Meaning')}
                   </h3>
                   <p className={`text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -365,7 +365,7 @@ export const NameMeaningTool: React.FC<NameMeaningToolProps> = ({ uiConfig }) =>
                       <span
                         key={idx}
                         className={`px-3 py-1 rounded-full text-sm ${
-                          isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-700'
+                          isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-700'
                         }`}
                       >
                         {trait}

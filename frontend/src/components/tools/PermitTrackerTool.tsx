@@ -634,9 +634,9 @@ export const PermitTrackerTool: React.FC<PermitTrackerToolProps> = ({ uiConfig }
 
   // Styling classes
   const cardClass = `rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
-  const inputClass = `w-full px-4 py-2.5 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  const inputClass = `w-full px-4 py-2.5 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
   const labelClass = `block text-sm font-medium mb-1.5 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
-  const buttonPrimary = 'px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors flex items-center gap-2';
+  const buttonPrimary = 'px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors flex items-center gap-2';
   const buttonSecondary = `px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${isDark ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`;
 
   const getStatusBadge = (status: PermitStatus) => {
@@ -689,7 +689,7 @@ export const PermitTrackerTool: React.FC<PermitTrackerToolProps> = ({ uiConfig }
     return (
       <div className={`${isDark ? 'bg-gray-900' : 'bg-gray-50'} min-h-screen flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.permitTracker.loadingPermits', 'Loading permits...')}</p>
         </div>
       </div>
@@ -701,9 +701,9 @@ export const PermitTrackerTool: React.FC<PermitTrackerToolProps> = ({ uiConfig }
       <div className="max-w-7xl mx-auto p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.permitTracker.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.permitTracker.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -712,7 +712,7 @@ export const PermitTrackerTool: React.FC<PermitTrackerToolProps> = ({ uiConfig }
           <div className="p-6">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-gradient-to-br from-[#0D9488] to-[#0F766E] rounded-xl">
+                <div className="p-3 bg-gradient-to-br from-[#6096B4] to-[#4C7F98] rounded-xl">
                   <Building2 className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -830,7 +830,7 @@ export const PermitTrackerTool: React.FC<PermitTrackerToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab)}
                 className={`flex-1 px-4 py-3 text-sm font-medium capitalize transition-colors ${
                   activeTab === tab
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : isDark
                     ? 'text-gray-400 hover:text-gray-200'
                     : 'text-gray-500 hover:text-gray-700'

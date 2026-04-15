@@ -407,7 +407,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 isDark
                   ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                   : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-              } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -422,7 +422,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 isDark
                   ? 'border-gray-600 bg-gray-700 text-white'
                   : 'border-gray-200 bg-white text-gray-900'
-              } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {categories.map((cat) => (
                 <option key={cat.id} value={cat.id}>
@@ -446,7 +446,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
               isDark
                 ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                 : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-            } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -466,7 +466,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 isDark
                   ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                   : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-              } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -484,7 +484,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 isDark
                   ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                   : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-              } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -503,7 +503,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 isDark
                   ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                   : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-              } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
         </div>
@@ -516,7 +516,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
             </label>
             <button
               onClick={() => handleAddPriceTier(isEditing)}
-              className="text-sm text-[#0D9488] hover:text-[#0D9488]/80 flex items-center gap-1"
+              className="text-sm text-[#6096B4] hover:text-[#6096B4]/80 flex items-center gap-1"
             >
               <Plus className="w-4 h-4" /> Add Tier
             </button>
@@ -536,7 +536,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   isDark
                     ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                     : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
               />
               <input
                 type="number"
@@ -553,7 +553,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   isDark
                     ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                     : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-                } rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-sm`}
+                } rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-sm`}
               />
               <button
                 onClick={() => handleRemovePriceTier(index, isEditing)}
@@ -580,7 +580,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 isDark
                   ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
                   : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-              } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
             {item.imageUrl && (
               <div className="w-12 h-12 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
@@ -646,7 +646,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
             id={isEditing ? 'edit-special' : 'new-special'}
             checked={item.isSpecial || false}
             onChange={(e) => setItem({ isSpecial: e.target.checked })}
-            className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+            className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
           />
           <label
             htmlFor={isEditing ? 'edit-special' : 'new-special'}
@@ -676,11 +676,11 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
         container: 'font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100',
         header: 'text-center mb-8',
         title: 'text-5xl font-light tracking-wide text-gray-800 dark:text-gray-200',
-        category: 'text-xl font-semibold uppercase tracking-widest text-[#0D9488] mb-4',
+        category: 'text-xl font-semibold uppercase tracking-widest text-[#6096B4] mb-4',
         item: 'flex justify-between items-start mb-4 pb-4 border-b border-gray-100 dark:border-gray-800',
         itemName: 'font-medium text-gray-900 dark:text-gray-100',
         itemDesc: 'text-sm text-gray-500 dark:text-gray-400 mt-1',
-        price: 'font-semibold text-[#0D9488]',
+        price: 'font-semibold text-[#6096B4]',
       },
       casual: {
         container: 'font-sans bg-orange-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100',
@@ -724,7 +724,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                             <span className="text-xs px-1.5 py-0.5 bg-yellow-100 text-yellow-700 rounded">GF</span>
                           )}
                           {item.isSpecial && (
-                            <span className="text-xs px-1.5 py-0.5 bg-[#0D9488]/10 text-[#0D9488] rounded">{t('tools.menuBuilder.special', 'Special')}</span>
+                            <span className="text-xs px-1.5 py-0.5 bg-[#6096B4]/10 text-[#6096B4] rounded">{t('tools.menuBuilder.special', 'Special')}</span>
                           )}
                         </div>
                         {item.description && <p className={styles.itemDesc}>{item.description}</p>}
@@ -761,7 +761,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                     key={special.id}
                     className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}
                   >
-                    <div className="font-bold text-[#0D9488]">{special.dayOfWeek}</div>
+                    <div className="font-bold text-[#6096B4]">{special.dayOfWeek}</div>
                     <div className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       {menuItem?.name || special.description}
                     </div>
@@ -792,7 +792,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -802,9 +802,9 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.menuBuilder.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.menuBuilder.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -813,8 +813,8 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <UtensilsCrossed className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <UtensilsCrossed className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -841,7 +841,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   onClick={() => setShowPreview(!showPreview)}
                   className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
                     showPreview
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -854,7 +854,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   onClick={() => setShowCostAnalysis(!showCostAnalysis)}
                   className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
                     showCostAnalysis
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -898,7 +898,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
           <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
             <CardHeader>
               <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <DollarSign className="w-5 h-5 text-[#0D9488]" />
+                <DollarSign className="w-5 h-5 text-[#6096B4]" />
                 {t('tools.menuBuilder.costAnalysis2', 'Cost Analysis')}
               </CardTitle>
             </CardHeader>
@@ -924,7 +924,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 </div>
                 <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.menuBuilder.avgMarkup', 'Avg Markup')}</div>
-                  <div className={`text-2xl font-bold text-[#0D9488]`}>
+                  <div className={`text-2xl font-bold text-[#6096B4]`}>
                     {costAnalysis.averageMarkup.toFixed(1)}%
                   </div>
                 </div>
@@ -952,7 +952,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                           <td className={`py-2 px-3 text-right ${item.costPercentage > 35 ? 'text-red-500' : 'text-green-500'}`}>
                             {item.costPercentage.toFixed(1)}%
                           </td>
-                          <td className={`py-2 px-3 text-right text-[#0D9488]`}>{item.markup.toFixed(1)}%</td>
+                          <td className={`py-2 px-3 text-right text-[#6096B4]`}>{item.markup.toFixed(1)}%</td>
                           <td className={`py-2 px-3 text-right font-medium ${item.profit > 0 ? 'text-green-500' : 'text-red-500'}`}>
                             ${item.profit.toFixed(2)}
                           </td>
@@ -972,7 +972,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Eye className="w-5 h-5 text-[#0D9488]" />
+                  <Eye className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.menuBuilder.menuPreview', 'Menu Preview')}
                 </CardTitle>
                 <div className="flex gap-2">
@@ -982,7 +982,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                       onClick={() => setMenuStyle(style)}
                       className={`px-3 py-1.5 rounded-lg text-sm font-medium capitalize transition-colors ${
                         menuStyle === style
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1012,7 +1012,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   onClick={() => toggleSection('items')}
                 >
                   <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                    <Plus className="w-5 h-5 text-[#0D9488]" />
+                    <Plus className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.menuBuilder.addMenuItem', 'Add Menu Item')}
                   </CardTitle>
                   {expandedSections.items ? (
@@ -1028,7 +1028,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   <button
                     onClick={handleAddItem}
                     disabled={!newItem.name || !newItem.basePrice}
-                    className="mt-4 w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+                    className="mt-4 w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.menuBuilder.addItemToMenu', 'Add Item to Menu')}
@@ -1043,7 +1043,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                      <Edit2 className="w-5 h-5 text-[#0D9488]" />
+                      <Edit2 className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.menuBuilder.editMenuItem', 'Edit Menu Item')}
                     </CardTitle>
                     <button
@@ -1059,7 +1059,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   <div className="flex gap-3 mt-4">
                     <button
                       onClick={handleUpdateItem}
-                      className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+                      className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
                     >
                       <Save className="w-5 h-5" />
                       {t('tools.menuBuilder.saveChanges', 'Save Changes')}
@@ -1087,7 +1087,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                   onClick={() => toggleSection('specials')}
                 >
                   <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                    <Tag className="w-5 h-5 text-[#0D9488]" />
+                    <Tag className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.menuBuilder.dailySpecials2', 'Daily Specials')}
                   </CardTitle>
                   <div className="flex items-center gap-2">
@@ -1096,7 +1096,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                         e.stopPropagation();
                         handleAddSpecial();
                       }}
-                      className="text-sm text-[#0D9488] hover:text-[#0D9488]/80 flex items-center gap-1"
+                      className="text-sm text-[#6096B4] hover:text-[#6096B4]/80 flex items-center gap-1"
                     >
                       <Plus className="w-4 h-4" /> Add Special
                     </button>
@@ -1223,7 +1223,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                       onClick={() => setSelectedCategory(cat.id)}
                       className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                         selectedCategory === cat.id
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1246,7 +1246,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                         key={item.id}
                         className={`p-4 rounded-xl border ${
                           isDark ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'
-                        } ${item.isSpecial ? 'ring-2 ring-[#0D9488]/50' : ''}`}
+                        } ${item.isSpecial ? 'ring-2 ring-[#6096B4]/50' : ''}`}
                       >
                         <div className="flex items-start gap-3">
                           {item.imageUrl ? (
@@ -1270,7 +1270,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                                 {item.name}
                               </h4>
                               {item.isSpecial && (
-                                <span className="text-xs px-1.5 py-0.5 bg-[#0D9488]/10 text-[#0D9488] rounded">
+                                <span className="text-xs px-1.5 py-0.5 bg-[#6096B4]/10 text-[#6096B4] rounded">
                                   {t('tools.menuBuilder.special2', 'Special')}
                                 </span>
                               )}
@@ -1279,7 +1279,7 @@ export const MenuBuilderTool: React.FC<MenuBuilderToolProps> = ({ uiConfig }) =>
                               {item.description || 'No description'}
                             </p>
                             <div className="flex items-center gap-2 mt-1">
-                              <span className="text-[#0D9488] font-semibold">
+                              <span className="text-[#6096B4] font-semibold">
                                 ${item.basePrice.toFixed(2)}
                               </span>
                               {item.calories > 0 && (

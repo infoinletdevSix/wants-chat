@@ -108,14 +108,14 @@ const MegaDropdown: React.FC<MegaDropdownProps> = ({ className }) => {
       {/* Mega Dropdown Menu */}
       {isOpen && (
         <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-[100] animate-in fade-in slide-in-from-top-5 duration-200">
-          <div className="w-[900px] max-w-[calc(100vw-2rem)] bg-teal-800 backdrop-blur-xl border border-teal-400/30 rounded-xl shadow-2xl overflow-hidden">
+          <div className="w-[900px] max-w-[calc(100vw-2rem)] bg-primary-800 backdrop-blur-xl border border-primary-400/30 rounded-xl shadow-2xl overflow-hidden">
             <div className="flex">
               {/* Categories Sidebar */}
-              <div className="w-72 border-r border-teal-400/30 bg-teal-900/30 flex flex-col">
+              <div className="w-72 border-r border-primary-400/30 bg-primary-900/30 flex flex-col">
                 <div className="p-4 flex-1 overflow-y-auto max-h-[450px]">
                   <h3 className="font-semibold text-xs text-muted-foreground mb-3 uppercase tracking-wider flex items-center justify-between">
                     <span>Categories</span>
-                    <span className="text-teal-400">{selectedAppsCount}/{TOTAL_APPS_COUNT}</span>
+                    <span className="text-primary-400">{selectedAppsCount}/{TOTAL_APPS_COUNT}</span>
                   </h3>
                   <nav className="space-y-1">
                     {filteredCategories.map((category) => (
@@ -143,12 +143,12 @@ const MegaDropdown: React.FC<MegaDropdownProps> = ({ className }) => {
                 </div>
                 {/* Manage Apps Button */}
                 {isAuthenticated && (
-                  <div className="p-3 border-t border-teal-400/30 bg-teal-900/50">
+                  <div className="p-3 border-t border-primary-400/30 bg-primary-900/50">
                     <button
                       onClick={handleManageApps}
                       className={cn(
                         "w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium",
-                        "bg-teal-600 hover:bg-teal-500 text-white transition-colors"
+                        "bg-primary-600 hover:bg-primary-500 text-white transition-colors"
                       )}
                     >
                       <Settings2 className="h-4 w-4" />
@@ -180,7 +180,7 @@ const MegaDropdown: React.FC<MegaDropdownProps> = ({ className }) => {
                           className={cn(
                             "group flex items-start gap-3 p-3 rounded-lg cursor-pointer",
                             "border border-white/10 bg-white/5 hover:bg-white/10",
-                            "hover:border-teal-400/30 transition-all duration-200",
+                            "hover:border-primary-400/30 transition-all duration-200",
                             "hover:shadow-sm"
                           )}
                         >
@@ -188,17 +188,17 @@ const MegaDropdown: React.FC<MegaDropdownProps> = ({ className }) => {
                             {app.isAI ? (
                               <div className="relative">
                                 <span>{app.icon || '🤖'}</span>
-                                <Sparkles className="absolute -top-1 -right-1 h-3 w-3 text-teal-400" />
+                                <Sparkles className="absolute -top-1 -right-1 h-3 w-3 text-primary-400" />
                               </div>
                             ) : (
                               <span>{app.icon || '📱'}</span>
                             )}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-medium text-sm text-white group-hover:text-teal-400 transition-colors flex items-center gap-1">
+                            <h4 className="font-medium text-sm text-white group-hover:text-primary-400 transition-colors flex items-center gap-1">
                               {app.name}
                               {app.isAI && (
-                                <span className="text-xs bg-teal-500/20 text-teal-400 px-1.5 py-0.5 rounded">
+                                <span className="text-xs bg-primary-500/20 text-primary-400 px-1.5 py-0.5 rounded">
                                   AI
                                 </span>
                               )}

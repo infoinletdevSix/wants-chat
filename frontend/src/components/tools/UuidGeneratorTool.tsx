@@ -146,7 +146,7 @@ export const UuidGeneratorTool = ({ uiConfig }: UuidGeneratorToolProps) => {
           <div className="flex gap-3">
             <button
               onClick={handleGenerateSingle}
-              className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <Plus className="w-4 h-4" />
               {t('tools.uuidGenerator.generateSingle')}
@@ -171,12 +171,12 @@ export const UuidGeneratorTool = ({ uiConfig }: UuidGeneratorToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <button
               onClick={handleGenerateMultiple}
-              className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <RefreshCw className="w-4 h-4" />
               {t('tools.uuidGenerator.generateMultiple')}

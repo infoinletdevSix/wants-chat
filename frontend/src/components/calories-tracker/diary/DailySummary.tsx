@@ -31,7 +31,7 @@ const DailySummary: React.FC<DailySummaryProps> = ({ dailyTotals, dailyGoals }) 
           <Badge
             className={
               caloriesProgress >= 90 && caloriesProgress <= 110
-                ? "bg-teal-500/20 text-teal-400 border border-teal-500/30"
+                ? "bg-primary-500/20 text-primary-400 border border-primary-500/30"
                 : "bg-white/10 text-white/70 border border-white/20"
             }
           >

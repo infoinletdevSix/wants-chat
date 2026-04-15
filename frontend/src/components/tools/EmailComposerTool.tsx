@@ -204,11 +204,11 @@ Please write a complete email including greeting, body, and closing.`;
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Mail className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Mail className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.emailComposer.aiEmailComposer', 'AI Email Composer')}</h3>
@@ -218,9 +218,9 @@ Please write a complete email including greeting, body, and closing.`;
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.emailComposer.prefilledFromAi', 'Prefilled from AI')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.emailComposer.prefilledFromAi', 'Prefilled from AI')}</span>
             </div>
           )}
         </div>
@@ -237,7 +237,7 @@ Please write a complete email including greeting, body, and closing.`;
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             placeholder={t('tools.emailComposer.meetingFollowUpProjectUpdate', 'Meeting Follow-up, Project Update, etc.')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -254,7 +254,7 @@ Please write a complete email including greeting, body, and closing.`;
                 const selected = toneOptions.find((t) => t.value === e.target.value);
                 if (selected) setTone(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {toneOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -275,7 +275,7 @@ Please write a complete email including greeting, body, and closing.`;
                 const selected = recipientTypes.find((r) => r.value === e.target.value);
                 if (selected) setRecipientType(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {recipientTypes.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -296,7 +296,7 @@ Please write a complete email including greeting, body, and closing.`;
             onChange={(e) => setPurpose(e.target.value)}
             placeholder={t('tools.emailComposer.brieflyDescribeWhatThisEmail', 'Briefly describe what this email is about...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -310,7 +310,7 @@ Please write a complete email including greeting, body, and closing.`;
             onChange={(e) => setKeyPoints(e.target.value)}
             placeholder={t('tools.emailComposer.point110Point2', '- Point 1&#10;- Point 2&#10;- Point 3')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -325,7 +325,7 @@ Please write a complete email including greeting, body, and closing.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !subject.trim() || !purpose.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>

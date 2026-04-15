@@ -154,7 +154,7 @@ export const TravelAdapterTool: React.FC<TravelAdapterToolProps> = ({ uiConfig }
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Plug className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -168,9 +168,9 @@ export const TravelAdapterTool: React.FC<TravelAdapterToolProps> = ({ uiConfig }
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.travelAdapter.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.travelAdapter.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -189,7 +189,7 @@ export const TravelAdapterTool: React.FC<TravelAdapterToolProps> = ({ uiConfig }
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {COUNTRIES.map((country) => (
                     <option key={country.code} value={country.code}>
@@ -211,7 +211,7 @@ export const TravelAdapterTool: React.FC<TravelAdapterToolProps> = ({ uiConfig }
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {COUNTRIES.map((country) => (
                     <option key={country.code} value={country.code}>

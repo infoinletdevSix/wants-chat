@@ -197,7 +197,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
           } rounded-lg shadow-lg p-8`}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Layers className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -209,9 +209,9 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.combination.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.combination.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
             </div>
           )}
 
@@ -227,7 +227,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                   onClick={() => setCalculationType(type.key)}
                   className={`px-4 py-3 rounded-lg border transition-colors text-center ${
                     calculationType === type.key
-                      ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                      ? 'bg-[#6096B4] text-white border-[#6096B4]'
                       : isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600'
                       : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -256,7 +256,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                 placeholder={t('tools.combination.enterN', 'Enter n')}
               />
             </div>
@@ -274,7 +274,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                   placeholder={t('tools.combination.enterR', 'Enter r')}
                 />
               </div>
@@ -310,12 +310,12 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                         }`}
                       >
                         <div className="text-xs text-center opacity-50 mb-1">C({n},{idx})</div>
-                        <div className="text-center text-[#0D9488] font-bold">{val}</div>
+                        <div className="text-center text-[#6096B4] font-bold">{val}</div>
                       </div>
                     ))}
                   </div>
                   <div className={`mt-4 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Row sum: <span className="font-mono font-bold text-[#0D9488]">{results.sum}</span>
+                    Row sum: <span className="font-mono font-bold text-[#6096B4]">{results.sum}</span>
                     <span className="text-sm ml-2">(= 2^{n})</span>
                   </div>
                 </div>
@@ -329,7 +329,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                       </span>
                       <CopyButton value={results.result || ''} label="result" />
                     </div>
-                    <div className="font-mono text-2xl text-[#0D9488] font-bold break-all">
+                    <div className="font-mono text-2xl text-[#6096B4] font-bold break-all">
                       {formatLargeNumber(results.result || '')}
                     </div>
                     {(results.result || '').length > 20 && (
@@ -342,7 +342,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                   {/* Formula Explanation */}
                   <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Calculator className="w-4 h-4 text-[#0D9488]" />
+                      <Calculator className="w-4 h-4 text-[#6096B4]" />
                       <span className={`font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.combination.calculation', 'Calculation')}
                       </span>
@@ -402,7 +402,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
 
           {/* Comparison with Permutation */}
           {calculationType === 'nCr' && !results.error && results.result && (
-            <div className={`p-4 rounded-lg ${isDarkMode ? t('tools.combination.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border mb-6`}>
+            <div className={`p-4 rounded-lg ${isDarkMode ? t('tools.combination.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border mb-6`}>
               <h4 className={`font-medium mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.combination.combinationVsPermutation', 'Combination vs Permutation')}
               </h4>
@@ -411,7 +411,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                   <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                     C({n}, {r}) - Order doesn't matter
                   </div>
-                  <div className="font-mono text-lg text-[#0D9488] font-bold">
+                  <div className="font-mono text-lg text-[#6096B4] font-bold">
                     {formatLargeNumber(results.result)}
                   </div>
                 </div>
@@ -419,7 +419,7 @@ const CombinationTool: React.FC<CombinationToolProps> = ({ uiConfig }) => {
                   <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                     P({n}, {r}) - Order matters
                   </div>
-                  <div className="font-mono text-lg text-[#0D9488] font-bold">
+                  <div className="font-mono text-lg text-[#6096B4] font-bold">
                     {(() => {
                       const nVal = parseInt(n);
                       const rVal = parseInt(r);

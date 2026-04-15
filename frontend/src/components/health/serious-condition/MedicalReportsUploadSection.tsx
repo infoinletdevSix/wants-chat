@@ -29,10 +29,10 @@ const MedicalReportsUploadSection: React.FC<MedicalReportsUploadSectionProps> = 
   formatFileSize
 }) => {
   return (
-    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <div className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <div className="p-6 pb-2">
         <h3 className="flex items-center gap-3 text-xl font-bold text-white">
-          <CloudUpload className="h-6 w-6 text-teal-400" />
+          <CloudUpload className="h-6 w-6 text-primary-400" />
           Medical Reports
         </h3>
         <p className="text-base text-white/60 mt-1">
@@ -44,8 +44,8 @@ const MedicalReportsUploadSection: React.FC<MedicalReportsUploadSectionProps> = 
         <div
           className={`border-2 border-dashed rounded-xl p-8 text-center transition-all ${
             isDragging
-              ? 'border-teal-500 bg-teal-500/10'
-              : 'border-white/20 hover:border-teal-500/50 hover:bg-white/5'
+              ? 'border-primary-500 bg-primary-500/10'
+              : 'border-white/20 hover:border-primary-500/50 hover:bg-white/5'
           }`}
           onDragEnter={onDragEnter}
           onDragLeave={onDragLeave}
@@ -63,10 +63,10 @@ const MedicalReportsUploadSection: React.FC<MedicalReportsUploadSectionProps> = 
 
           <div className="flex flex-col items-center">
             <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
-              isDragging ? 'bg-teal-500/20' : 'bg-white/10'
+              isDragging ? 'bg-primary-500/20' : 'bg-white/10'
             }`}>
               <CloudUpload className={`h-8 w-8 ${
-                isDragging ? 'text-teal-400' : 'text-white/40'
+                isDragging ? 'text-primary-400' : 'text-white/40'
               }`} />
             </div>
 
@@ -104,7 +104,7 @@ const MedicalReportsUploadSection: React.FC<MedicalReportsUploadSectionProps> = 
               {reports.map((report) => (
                 <div
                   key={report.id}
-                  className="relative group border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-teal-500/30 transition-all"
+                  className="relative group border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-primary-500/30 transition-all"
                 >
                   {/* Preview */}
                   {report.file.type.startsWith('image/') ? (

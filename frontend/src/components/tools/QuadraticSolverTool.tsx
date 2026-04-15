@@ -138,7 +138,7 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Sigma className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -169,7 +169,7 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -186,7 +186,7 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -203,7 +203,7 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculate}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.quadraticSolver.solveEquation', 'Solve Equation')}
@@ -231,8 +231,8 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
 
           {/* Result Display */}
           {result && (
-            <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-              theme === 'dark' ? 'bg-gray-700' : t('tools.quadraticSolver.bg0d948810', 'bg-[#0D9488]/10')
+            <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+              theme === 'dark' ? 'bg-gray-700' : t('tools.quadraticSolver.bg0d948810', 'bg-[#6096B4]/10')
             }`}>
               <div className="space-y-4">
                 {/* Equation */}
@@ -258,12 +258,12 @@ export default function QuadraticSolverTool({ uiConfig }: QuadraticSolverToolPro
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <div className={`text-center p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                       <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>x1 =</div>
-                      <div className="text-2xl font-bold text-[#0D9488] font-mono">{result.roots?.x1}</div>
+                      <div className="text-2xl font-bold text-[#6096B4] font-mono">{result.roots?.x1}</div>
                     </div>
                     {result.rootType !== 'one_real' && (
                       <div className={`text-center p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                         <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>x2 =</div>
-                        <div className="text-2xl font-bold text-[#0D9488] font-mono">{result.roots?.x2}</div>
+                        <div className="text-2xl font-bold text-[#6096B4] font-mono">{result.roots?.x2}</div>
                       </div>
                     )}
                   </div>

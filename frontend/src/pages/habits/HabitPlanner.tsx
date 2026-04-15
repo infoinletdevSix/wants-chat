@@ -338,7 +338,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
               key={habit.id}
               onClick={() => setSelectedHabit(habit)}
               className={`cursor-pointer ${
-                selectedHabit?.id === habit.id ? 'ring-2 ring-teal-400' : ''
+                selectedHabit?.id === habit.id ? 'ring-2 ring-primary-400' : ''
               }`}
             >
               <div className="flex items-center justify-between mb-3">
@@ -450,7 +450,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
                   onClick={() => setTimeRange(range)}
                   className={`rounded-xl capitalize ${
                     timeRange === range
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-0'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0'
                       : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                   }`}
                 >
@@ -466,7 +466,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
             <Card className="rounded-xl bg-white/10 backdrop-blur-xl border border-white/20">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-white">
-                  <Timeline className="h-5 w-5 text-teal-400" />
+                  <Timeline className="h-5 w-5 text-primary-400" />
                   Completion Trend
                 </CardTitle>
                 <CardDescription className="text-white/60">
@@ -476,7 +476,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
               <CardContent>
                 {analyticsLoading ? (
                   <div className="flex justify-center items-center py-12">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-400"></div>
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
                   </div>
                 ) : getChartData() ? (
                   <Line
@@ -503,7 +503,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
             <Card className="rounded-xl bg-white/10 backdrop-blur-xl border border-white/20">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-white">
-                  <Assessment className="h-5 w-5 text-teal-400" />
+                  <Assessment className="h-5 w-5 text-primary-400" />
                   Activity Distribution
                 </CardTitle>
                 <CardDescription className="text-white/60">
@@ -513,7 +513,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
               <CardContent>
                 {analyticsLoading ? (
                   <div className="flex justify-center items-center py-12">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-400"></div>
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
                   </div>
                 ) : getActivityData() ? (
                   <Bar
@@ -540,7 +540,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
           <Card className="rounded-xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
-                <Award className="h-5 w-5 text-teal-400" />
+                <Award className="h-5 w-5 text-primary-400" />
                 Achievements
               </CardTitle>
               <CardDescription className="text-white/60">
@@ -571,7 +571,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
           <Card className="rounded-xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
-                <CalendarMonth className="h-5 w-5 text-teal-400" />
+                <CalendarMonth className="h-5 w-5 text-primary-400" />
                 Completion Heatmap
               </CardTitle>
               <CardDescription className="text-white/60">
@@ -581,7 +581,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
             <CardContent>
               {analyticsLoading ? (
                 <div className="flex justify-center items-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-400"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
                 </div>
               ) : (
                 <>
@@ -595,7 +595,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
                           key={index}
                           className={`aspect-square rounded ${
                             isCompleted
-                              ? 'bg-teal-500'
+                              ? 'bg-primary-500'
                               : 'bg-white/10'
                           }`}
                           title={`${date.toLocaleDateString()}: ${item.completions} completion(s)`}
@@ -606,7 +606,7 @@ const HabitStreaksContent: React.FC<{ habits: Habit[] }> = ({ habits }) => {
                   <div className="flex items-center justify-between mt-4">
                     <div className="flex items-center gap-4 text-xs text-white/60">
                       <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 bg-teal-500 rounded" />
+                        <div className="w-4 h-4 bg-primary-500 rounded" />
                         <span>Completed</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -828,18 +828,18 @@ const HabitCalendarContent: React.FC = () => {
                     onClick={() => setSelectedDate(day.date)}
                     className={`min-h-[100px] p-2 rounded-xl border cursor-pointer transition-all ${
                       day.isToday
-                        ? 'border-teal-400 bg-teal-500/20'
+                        ? 'border-primary-400 bg-primary-500/20'
                         : isSelected
-                        ? 'border-teal-400/50 bg-teal-500/10'
+                        ? 'border-primary-400/50 bg-primary-500/10'
                         : day.isCurrentMonth
-                        ? 'border-white/20 hover:border-teal-400/30 bg-white/5'
+                        ? 'border-white/20 hover:border-primary-400/30 bg-white/5'
                         : 'border-white/10 opacity-50 bg-white/5'
                     }`}
                   >
                     <div className="flex justify-between items-start mb-1">
                       <span className={`text-sm font-medium ${
                         day.isToday
-                          ? 'text-teal-300'
+                          ? 'text-primary-300'
                           : day.isCurrentMonth
                           ? 'text-white'
                           : 'text-white/40'
@@ -849,7 +849,7 @@ const HabitCalendarContent: React.FC = () => {
                       {day.habits.length > 0 && (
                         <Badge
                           variant={completionRate === 100 ? 'default' : 'secondary'}
-                          className={`text-xs h-5 ${completionRate === 100 ? 'bg-gradient-to-r from-teal-500 to-cyan-500' : 'bg-white/10 text-white/70'}`}
+                          className={`text-xs h-5 ${completionRate === 100 ? 'bg-gradient-to-r from-primary-500 to-cyan-500' : 'bg-white/10 text-white/70'}`}
                         >
                           {completionRate}%
                         </Badge>
@@ -885,7 +885,7 @@ const HabitCalendarContent: React.FC = () => {
         <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-white">
-              <Event className="h-5 w-5 text-teal-400" />
+              <Event className="h-5 w-5 text-primary-400" />
               {selectedDate ? (
                 <>
                   {selectedDate.toLocaleDateString('en-US', {
@@ -1143,7 +1143,7 @@ const HabitPlanner: React.FC = () => {
                 onClick={() => changeTab('dashboard')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors flex items-center gap-2 ${
                   activeTab === 'dashboard'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -1154,7 +1154,7 @@ const HabitPlanner: React.FC = () => {
                 onClick={() => changeTab('calendar')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors flex items-center gap-2 ${
                   activeTab === 'calendar'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -1165,7 +1165,7 @@ const HabitPlanner: React.FC = () => {
                 onClick={() => changeTab('streaks')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors flex items-center gap-2 ${
                   activeTab === 'streaks'
-                    ? 'border-teal-400 text-white'
+                    ? 'border-primary-400 text-white'
                     : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
                 }`}
               >
@@ -1175,7 +1175,7 @@ const HabitPlanner: React.FC = () => {
             </div>
             <Button
               onClick={() => navigate('/habit-planner/add')}
-              className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 border-0"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 border-0"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add New Habit
@@ -1188,7 +1188,7 @@ const HabitPlanner: React.FC = () => {
         {/* Loading State */}
         {loading && (
           <div className="flex justify-center items-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400"></div>
             <span className="ml-4 text-lg text-white">Loading habits...</span>
           </div>
         )}
@@ -1219,7 +1219,7 @@ const HabitPlanner: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/login')}
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               >
                 Go to Login
               </Button>
@@ -1232,7 +1232,7 @@ const HabitPlanner: React.FC = () => {
         {loading && (
           <div className="flex justify-center items-center py-12">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
               <p className="text-white/60">Loading habits...</p>
             </div>
           </div>
@@ -1264,7 +1264,7 @@ const HabitPlanner: React.FC = () => {
             title="Today's Progress"
             value={`${todayProgress}/${totalHabitsToday}`}
             icon={<Today className="h-6 w-6" />}
-            color="from-teal-500 to-cyan-500"
+            color="from-primary-500 to-cyan-500"
             subtitle={<Progress value={progressPercentage} className="mt-2 bg-white/20" />}
           />
 
@@ -1272,7 +1272,7 @@ const HabitPlanner: React.FC = () => {
             title="Active Habits"
             value={habits.length}
             icon={<CheckCircle className="h-6 w-6" />}
-            color="from-emerald-500 to-teal-500"
+            color="from-emerald-500 to-primary-500"
           />
 
           <StatCard
@@ -1319,7 +1319,7 @@ const HabitPlanner: React.FC = () => {
               onClick={() => setViewMode('grid')}
               className={`p-2.5 transition-colors ${
                 viewMode === 'grid'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                   : 'text-white/60 hover:text-white'
               }`}
               title="Grid view"
@@ -1330,7 +1330,7 @@ const HabitPlanner: React.FC = () => {
               onClick={() => setViewMode('list')}
               className={`p-2.5 transition-colors ${
                 viewMode === 'list'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                   : 'text-white/60 hover:text-white'
               }`}
               title="List view"
@@ -1355,7 +1355,7 @@ const HabitPlanner: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/habit-planner/add')}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Create Your First Habit
@@ -1418,7 +1418,7 @@ const HabitPlanner: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/habit-planner/add')}
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Create Your First Habit

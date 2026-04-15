@@ -169,7 +169,7 @@ const AddTreatment: React.FC = () => {
       <div className="min-h-screen relative flex items-center justify-center">
         <BackgroundEffects />
         <div className="text-center relative z-10">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
           <p className="text-white/60">Loading treatment data...</p>
         </div>
       </div>
@@ -233,10 +233,10 @@ const AddTreatment: React.FC = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Treatment Information Card */}
-          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
             <div className="p-6 pb-2">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <MedicalServices className="h-5 w-5 text-teal-400" />
+                <MedicalServices className="h-5 w-5 text-primary-400" />
                 Treatment Information
               </h3>
               <p className="text-white/60 mt-1">
@@ -272,7 +272,7 @@ const AddTreatment: React.FC = () => {
                     <SelectTrigger className="bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="Select treatment type" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="medication" className="text-white hover:bg-white/10 focus:bg-white/10">Medication</SelectItem>
                       <SelectItem value="therapy" className="text-white hover:bg-white/10 focus:bg-white/10">Therapy</SelectItem>
                       <SelectItem value="procedure" className="text-white hover:bg-white/10 focus:bg-white/10">Procedure</SelectItem>
@@ -299,7 +299,7 @@ const AddTreatment: React.FC = () => {
                     <SelectTrigger className="bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="Select frequency" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="once" className="text-white hover:bg-white/10 focus:bg-white/10">One Time</SelectItem>
                       <SelectItem value="daily" className="text-white hover:bg-white/10 focus:bg-white/10">Daily</SelectItem>
                       <SelectItem value="weekly" className="text-white hover:bg-white/10 focus:bg-white/10">Weekly</SelectItem>
@@ -321,7 +321,7 @@ const AddTreatment: React.FC = () => {
                     <SelectTrigger className="bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="Select priority" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="low" className="text-white hover:bg-white/10 focus:bg-white/10">Low</SelectItem>
                       <SelectItem value="medium" className="text-white hover:bg-white/10 focus:bg-white/10">Medium</SelectItem>
                       <SelectItem value="high" className="text-white hover:bg-white/10 focus:bg-white/10">High</SelectItem>
@@ -355,10 +355,10 @@ const AddTreatment: React.FC = () => {
           </div>
 
           {/* Schedule & Location Card */}
-          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
             <div className="p-6 pb-2">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <Schedule className="h-5 w-5 text-teal-400" />
+                <Schedule className="h-5 w-5 text-primary-400" />
                 Schedule & Location
               </h3>
               <p className="text-white/60 mt-1">
@@ -465,10 +465,10 @@ const AddTreatment: React.FC = () => {
           </div>
 
           {/* Instructions & Reminders Card */}
-          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
             <div className="p-6 pb-2">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <NotificationsActive className="h-5 w-5 text-teal-400" />
+                <NotificationsActive className="h-5 w-5 text-primary-400" />
                 Instructions & Reminders
               </h3>
               <p className="text-white/60 mt-1">
@@ -500,7 +500,7 @@ const AddTreatment: React.FC = () => {
                       id="reminder"
                       checked={formData.reminder}
                       onChange={(e) => updateField('reminder', e.target.checked)}
-                      className="h-4 w-4 text-teal-500 border-white/20 rounded focus:ring-teal-500 bg-white/10"
+                      className="h-4 w-4 text-primary-500 border-white/20 rounded focus:ring-primary-500 bg-white/10"
                     />
                     <label htmlFor="reminder" className="text-sm text-white/80">
                       Enable reminders for this treatment
@@ -520,7 +520,7 @@ const AddTreatment: React.FC = () => {
                       <SelectTrigger className="bg-white/10 border-white/20 text-white">
                         <SelectValue placeholder="Select reminder time" />
                       </SelectTrigger>
-                      <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                      <SelectContent className="bg-primary-800/90 border-primary-400/30">
                         <SelectItem value="0" className="text-white hover:bg-white/10 focus:bg-white/10">At time of treatment</SelectItem>
                         <SelectItem value="15" className="text-white hover:bg-white/10 focus:bg-white/10">15 minutes before</SelectItem>
                         <SelectItem value="30" className="text-white hover:bg-white/10 focus:bg-white/10">30 minutes before</SelectItem>
@@ -537,10 +537,10 @@ const AddTreatment: React.FC = () => {
           </div>
 
           {/* Additional Information Card */}
-          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+          <div className="rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
             <div className="p-6 pb-2">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <Description className="h-5 w-5 text-teal-400" />
+                <Description className="h-5 w-5 text-primary-400" />
                 Additional Information
               </h3>
               <p className="text-white/60 mt-1">
@@ -650,7 +650,7 @@ const AddTreatment: React.FC = () => {
             </Button>
             <Button
               type="submit"
-              className="min-w-[120px] bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               disabled={createTreatmentMutation.loading || updateTreatmentMutation.loading}
             >
               <Save className="h-4 w-4 mr-2" />

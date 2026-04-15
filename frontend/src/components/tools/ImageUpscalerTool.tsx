@@ -339,10 +339,10 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-gray-900' : t('tools.imageUpscaler.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-gray-900' : t('tools.imageUpscaler.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <ZoomIn className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <ZoomIn className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.imageUpscaler.imageUpscaler', 'Image Upscaler')}</h3>
@@ -354,9 +354,9 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.imageUpscaler.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.imageUpscaler.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
           </div>
         )}
 
@@ -369,9 +369,9 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
             onClick={() => fileInputRef.current?.click()}
             className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${
               isDragging
-                ? 'border-[#0D9488] bg-[#0D9488]/10'
+                ? 'border-[#6096B4] bg-[#6096B4]/10'
                 : isDark
-                ? t('tools.imageUpscaler.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]/50 bg-gray-800/50') : t('tools.imageUpscaler.borderGray300HoverBorder', 'border-gray-300 hover:border-[#0D9488]/50 bg-gray-50')
+                ? t('tools.imageUpscaler.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]/50 bg-gray-800/50') : t('tools.imageUpscaler.borderGray300HoverBorder', 'border-gray-300 hover:border-[#6096B4]/50 bg-gray-50')
             }`}
           >
             <Upload className={`w-12 h-12 mx-auto mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
@@ -425,7 +425,7 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
                     onClick={() => setOptions({ ...options, scale: option.value })}
                     className={`px-4 py-3 rounded-lg transition-all font-medium ${
                       options.scale === option.value
-                        ? 'bg-[#0D9488] text-white shadow-lg shadow-[#0D9488]/20'
+                        ? 'bg-[#6096B4] text-white shadow-lg shadow-[#6096B4]/20'
                         : isDark
                         ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -454,7 +454,7 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
                     onClick={() => setOptions({ ...options, quality: mode.value as any })}
                     className={`px-4 py-3 rounded-lg transition-all ${
                       options.quality === mode.value
-                        ? 'bg-[#0D9488] text-white shadow-lg shadow-[#0D9488]/20'
+                        ? 'bg-[#6096B4] text-white shadow-lg shadow-[#6096B4]/20'
                         : isDark
                         ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -474,7 +474,7 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
                 id="faceEnhancement"
                 checked={options.faceEnhancement}
                 onChange={(e) => setOptions({ ...options, faceEnhancement: e.target.checked })}
-                className="w-4 h-4 text-[#0D9488] bg-gray-100 border-gray-300 rounded focus:ring-[#0D9488] focus:ring-2"
+                className="w-4 h-4 text-[#6096B4] bg-gray-100 border-gray-300 rounded focus:ring-[#6096B4] focus:ring-2"
               />
               <label htmlFor="faceEnhancement" className={`text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.imageUpscaler.faceEnhancementRecommendedForPortraits', 'Face Enhancement (recommended for portraits)')}
@@ -509,7 +509,7 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
               <button
                 onClick={handleUpscale}
                 disabled={isUpscaling}
-                className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+                className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
               >
                 {isUpscaling ? (
                   <>
@@ -605,7 +605,7 @@ export const ImageUpscalerTool: React.FC<ImageUpscalerToolProps> = ({ uiConfig }
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex-1 py-3 px-6 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 py-3 px-6 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSaving ? (
                   <>

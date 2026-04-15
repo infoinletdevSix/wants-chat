@@ -412,7 +412,7 @@ const AddSeriousCondition: React.FC = () => {
         {isEditMode && conditionLoading && (
           <div className="flex justify-center items-center py-12">
             <div className="text-center">
-              <div className="animate-spin h-12 w-12 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+              <div className="animate-spin h-12 w-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"></div>
               <p className="text-white/60">Loading condition data...</p>
             </div>
           </div>
@@ -465,7 +465,7 @@ const AddSeriousCondition: React.FC = () => {
         {(!isEditMode || !conditionLoading) && !conditionError && (
           <>
         {/* Page Header */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-2xl md:text-3xl font-bold text-white">
             {isEditMode ? 'Edit Serious Condition' : 'Add Serious Condition'}
           </h1>
@@ -548,7 +548,7 @@ const AddSeriousCondition: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createSeriousConditionMutation.loading || updateSeriousConditionMutation.loading || (isEditMode && conditionLoading)}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 h-12 px-8 rounded-xl font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 h-12 px-8 rounded-xl font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
           >
             {(createSeriousConditionMutation.loading || updateSeriousConditionMutation.loading) ? (
               <>
@@ -564,9 +564,9 @@ const AddSeriousCondition: React.FC = () => {
           </Button>
         </div>
 
-        <div className="mt-8 p-5 bg-teal-500/10 border border-teal-500/20 rounded-xl">
+        <div className="mt-8 p-5 bg-primary-500/10 border border-primary-500/20 rounded-xl">
           <div className="flex gap-3">
-            <AlertCircle className="h-6 w-6 text-teal-400 mt-0.5" />
+            <AlertCircle className="h-6 w-6 text-primary-400 mt-0.5" />
             <div>
               <h4 className="text-sm font-semibold text-white">Important</h4>
               <p className="text-sm text-white/70 mt-1">

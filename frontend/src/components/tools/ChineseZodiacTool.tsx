@@ -278,7 +278,7 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Calendar className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -295,9 +295,9 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
           )}
 
           {isPrefilled && (
-            <div className={`mb-6 p-3 rounded-lg flex items-center gap-2 ${theme === 'dark' ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className={`text-sm ${theme === 'dark' ? 'text-teal-400' : 'text-teal-700'}`}>
+            <div className={`mb-6 p-3 rounded-lg flex items-center gap-2 ${theme === 'dark' ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className={`text-sm ${theme === 'dark' ? 'text-primary-400' : 'text-primary-700'}`}>
                 {t('tools.chineseZodiac.preFilledBasedOnYour', 'Pre-filled based on your request')}
               </span>
             </div>
@@ -319,7 +319,7 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -327,7 +327,7 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateZodiac}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Star className="w-5 h-5" />
               {t('tools.chineseZodiac.findMyZodiac', 'Find My Zodiac')}
@@ -412,7 +412,7 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
               {/* Personality Traits */}
               <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <div className="flex items-center gap-2 mb-3">
-                  <Star className="w-5 h-5 text-[#0D9488]" />
+                  <Star className="w-5 h-5 text-[#6096B4]" />
                   <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.chineseZodiac.personalityTraits', 'Personality Traits')}
                   </h3>
@@ -421,7 +421,7 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
                   {result.animal.personality.map((trait, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 rounded-full text-sm font-medium bg-[#0D9488]/20 text-[#0D9488]"
+                      className="px-3 py-1 rounded-full text-sm font-medium bg-[#6096B4]/20 text-[#6096B4]"
                     >
                       {trait}
                     </span>
@@ -526,7 +526,7 @@ export const ChineseZodiacTool: React.FC<ChineseZodiacToolProps> = ({ uiConfig }
                         key={index}
                         className={`px-3 py-1 rounded-lg text-sm font-medium ${
                           year === result.birthYear
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : year === getCurrentYear()
                             ? 'bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 border border-yellow-500'
                             : theme === 'dark'

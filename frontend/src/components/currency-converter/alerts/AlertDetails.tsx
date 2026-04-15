@@ -128,7 +128,7 @@ const AlertDetails: React.FC<AlertDetailsProps> = ({
           </div>
         </div>
         <div className="flex gap-2">
-          <Button onClick={handleTest} disabled={isTesting} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+          <Button onClick={handleTest} disabled={isTesting} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
             <PlayCircle className="h-4 w-4 mr-2" />
             Test Alert
           </Button>
@@ -147,7 +147,7 @@ const AlertDetails: React.FC<AlertDetailsProps> = ({
       <div className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
         <div className="p-6 border-b border-white/20">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-            <AlertCircle className="h-5 w-5 text-teal-400" />
+            <AlertCircle className="h-5 w-5 text-primary-400" />
             Alert Statistics
           </h3>
         </div>
@@ -165,7 +165,7 @@ const AlertDetails: React.FC<AlertDetailsProps> = ({
             </div>
             <div>
               <p className="text-sm text-white/60">Current Rate</p>
-              <p className="text-2xl font-bold text-teal-300">{currentRate?.toFixed(4) || 'N/A'}</p>
+              <p className="text-2xl font-bold text-primary-300">{currentRate?.toFixed(4) || 'N/A'}</p>
             </div>
             <div>
               <p className="text-sm text-white/60">Target</p>

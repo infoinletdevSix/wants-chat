@@ -45,7 +45,7 @@ const getFeatures = (t: any) => [
     icon: Shield,
     title: t('landing.featuresGrid.privacyFirst'),
     description: t('landing.featuresGrid.privacyFirstDesc'),
-    gradient: 'from-teal-500 to-cyan-500',
+    gradient: 'from-primary-500 to-cyan-500',
   },
 ];
 

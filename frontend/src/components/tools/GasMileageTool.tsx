@@ -208,9 +208,9 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Fuel className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Fuel className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.gasMileage.gasMileageCalculator', 'Gas Mileage Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.gasMileage.calculateAndTrackYourFuel', 'Calculate and track your fuel efficiency')}</p>
@@ -220,9 +220,9 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.gasMileage.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.gasMileage.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -231,7 +231,7 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
           <button
             onClick={() => setMode('quick')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'quick' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'quick' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Calculator className="w-4 h-4" /> Quick Calc
@@ -239,7 +239,7 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
           <button
             onClick={() => setMode('tracker')}
             className={`flex-1 py-2 rounded-lg font-medium flex items-center justify-center gap-2 ${
-              mode === 'tracker' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              mode === 'tracker' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <TrendingUp className="w-4 h-4" /> Fill-Up Tracker
@@ -250,7 +250,7 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
           <button
             onClick={() => setUnit('imperial')}
             className={`flex-1 py-2 rounded-lg text-sm ${
-              unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             {t('tools.gasMileage.mpgUs', 'MPG (US)')}
@@ -258,7 +258,7 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
           <button
             onClick={() => setUnit('metric')}
             className={`flex-1 py-2 rounded-lg text-sm ${
-              unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+              unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
             {t('tools.gasMileage.l100km', 'L/100km')}
@@ -310,15 +310,15 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
             </div>
 
             {/* Result */}
-            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+            <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.gasMileage.yourFuelEconomy', 'Your Fuel Economy')}</div>
-              <div className="text-5xl font-bold text-teal-500 my-2">
+              <div className="text-5xl font-bold text-primary-500 my-2">
                 {quickCalc.efficiency.toFixed(1)}
               </div>
               <div className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{quickCalc.efficiencyUnit}</div>
               <div className={`inline-block mt-2 px-3 py-1 rounded-full text-sm ${
                 quickCalc.rating === 'Excellent' ? 'bg-green-500/20 text-green-500' :
-                quickCalc.rating === 'Good' ? 'bg-teal-500/20 text-teal-500' :
+                quickCalc.rating === 'Good' ? 'bg-primary-500/20 text-primary-500' :
                 quickCalc.rating === 'Average' ? 'bg-yellow-500/20 text-yellow-500' :
                 quickCalc.rating === 'Below Average' ? 'bg-orange-500/20 text-orange-500' :
                 quickCalc.rating === 'Poor' ? 'bg-red-500/20 text-red-500' :
@@ -410,7 +410,7 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
                 <div className="flex items-end">
                   <button
                     onClick={addRecord}
-                    className="w-full py-2 bg-teal-500 text-white rounded-lg font-medium hover:bg-teal-600"
+                    className="w-full py-2 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600"
                   >
                     {t('tools.gasMileage.add', 'Add')}
                   </button>
@@ -424,9 +424,9 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
             {/* Statistics */}
             {trackerStats ? (
               <div className="grid grid-cols-2 gap-4">
-                <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+                <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.gasMileage.averageMpg', 'Average MPG')}</div>
-                  <div className="text-3xl font-bold text-teal-500">{trackerStats.avgMpg.toFixed(1)}</div>
+                  <div className="text-3xl font-bold text-primary-500">{trackerStats.avgMpg.toFixed(1)}</div>
                 </div>
                 <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.gasMileage.costPerMile', 'Cost per Mile')}</div>
@@ -466,7 +466,7 @@ export const GasMileageTool: React.FC<GasMileageToolProps> = ({ uiConfig }) => {
                         <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                           {record.odometer.toLocaleString()} mi
                           {record.mpg && (
-                            <span className="ml-2 text-teal-500">{record.mpg.toFixed(1)} MPG</span>
+                            <span className="ml-2 text-primary-500">{record.mpg.toFixed(1)} MPG</span>
                           )}
                         </div>
                         <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

@@ -79,7 +79,7 @@ const CaloriesTrackerLanding: React.FC = () => {
       icon: mdiWater,
       title: 'Hydration',
       description: 'Track daily water intake with visual progress indicators',
-      color: 'from-cyan-500/10 to-teal-500/10 border-cyan-200',
+      color: 'from-cyan-500/10 to-primary-500/10 border-cyan-200',
       iconColor: 'text-cyan-600'
     }
   ];
@@ -127,8 +127,8 @@ const CaloriesTrackerLanding: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-teal-500/20 rounded-2xl">
-              <Icon path={mdiFoodApple} size={3} className="text-teal-400" />
+            <div className="p-4 bg-primary-500/20 rounded-2xl">
+              <Icon path={mdiFoodApple} size={3} className="text-primary-400" />
             </div>
           </div>
 
@@ -162,7 +162,7 @@ const CaloriesTrackerLanding: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <Card key={index} className="p-6 text-center bg-white/10 backdrop-blur-xl border border-white/20 hover:shadow-lg transition-all duration-200">
-              <Icon path={stat.icon} size={1.5} className="text-teal-400 mx-auto mb-3" />
+              <Icon path={stat.icon} size={1.5} className="text-primary-400 mx-auto mb-3" />
               <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>
               <p className="text-sm text-white/60">{stat.label}</p>
             </Card>
@@ -184,15 +184,15 @@ const CaloriesTrackerLanding: React.FC = () => {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50 hover:shadow-lg transition-all duration-200 group cursor-pointer"
+                className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50 hover:shadow-lg transition-all duration-200 group cursor-pointer"
                 onClick={handleGetStarted}
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-white/10 rounded-lg">
-                      <Icon path={feature.icon} size={1.2} className="text-teal-400" />
+                      <Icon path={feature.icon} size={1.2} className="text-primary-400" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-primary-400 transition-colors">
                       {feature.title}
                     </h3>
                   </div>
@@ -221,11 +221,11 @@ const CaloriesTrackerLanding: React.FC = () => {
             {dietPlans.map((plan, index) => (
               <Card
                 key={index}
-                className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50 hover:shadow-lg transition-all duration-200 cursor-pointer group"
+                className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50 hover:shadow-lg transition-all duration-200 cursor-pointer group"
                 onClick={() => navigate('/calories-tracker/plan-selection')}
               >
                 <div className="space-y-3">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-primary-400 transition-colors">
                     {plan.name}
                   </h3>
                   <p className="text-sm text-white/60">
@@ -254,11 +254,11 @@ const CaloriesTrackerLanding: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <Card className="p-8 bg-teal-500/20 border border-teal-400/30 text-center">
+        <Card className="p-8 bg-primary-500/20 border border-primary-400/30 text-center">
           <div className="space-y-6">
             <div className="flex justify-center">
-              <div className="p-4 bg-teal-500/20 rounded-2xl">
-                <Icon path={mdiTrophy} size={2} className="text-teal-400" />
+              <div className="p-4 bg-primary-500/20 rounded-2xl">
+                <Icon path={mdiTrophy} size={2} className="text-primary-400" />
               </div>
             </div>
 
@@ -276,7 +276,7 @@ const CaloriesTrackerLanding: React.FC = () => {
               <Button
                 size="lg"
                 onClick={handleGetStarted}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               >
                 <Icon path={mdiFire} size={0.8} className="mr-2" />
                 Start Your Journey

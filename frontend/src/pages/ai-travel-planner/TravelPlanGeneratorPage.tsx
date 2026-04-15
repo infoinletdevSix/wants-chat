@@ -125,9 +125,9 @@ const TravelPlanGeneratorPage: React.FC = () => {
             <p className="text-white/60">Let AI create your perfect itinerary</p>
           </div>
         </div>
-        <div className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30">
-          <Sparkles className="h-5 w-5 text-teal-400" />
-          <span className="text-sm text-teal-300">Powered by AI</span>
+        <div className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+          <Sparkles className="h-5 w-5 text-primary-400" />
+          <span className="text-sm text-primary-300">Powered by AI</span>
         </div>
       </div>
 
@@ -135,7 +135,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
       <div className="mb-8 bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white flex items-center justify-center font-semibold">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white flex items-center justify-center font-semibold">
               1
             </div>
             <div className="ml-3">
@@ -145,7 +145,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
           </div>
           <div className="h-0.5 w-24 bg-white/20"></div>
           <div className="flex items-center">
-            <div className={`h-10 w-10 rounded-xl ${budget ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
+            <div className={`h-10 w-10 rounded-xl ${budget ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
               2
             </div>
             <div className="ml-3">
@@ -155,7 +155,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
           </div>
           <div className="h-0.5 w-24 bg-white/20"></div>
           <div className="flex items-center">
-            <div className={`h-10 w-10 rounded-xl ${duration ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
+            <div className={`h-10 w-10 rounded-xl ${duration ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/40'} flex items-center justify-center font-semibold`}>
               3
             </div>
             <div className="ml-3">
@@ -169,10 +169,10 @@ const TravelPlanGeneratorPage: React.FC = () => {
       {/* Form */}
       <div className="space-y-6">
         {/* Destination Selection */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-teal-500">
+        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-primary-500">
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-500/30 flex items-center justify-center mr-3">
-              <MapPin className="h-5 w-5 text-teal-400" />
+            <div className="w-10 h-10 rounded-xl bg-primary-500/20 border border-primary-500/30 flex items-center justify-center mr-3">
+              <MapPin className="h-5 w-5 text-primary-400" />
             </div>
             <h2 className="text-lg font-semibold text-white">Select Destination</h2>
           </div>
@@ -188,7 +188,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
               }}
               onFocus={() => setShowDestinations(true)}
               placeholder="Search or select a destination..."
-              className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
             <Search className="absolute right-3 top-3.5 h-5 w-5 text-white/40" />
           </div>
@@ -204,8 +204,8 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   }}
                   className={`p-3 rounded-xl border ${
                     destination === dest.name
-                      ? 'border-teal-500 bg-teal-500/20'
-                      : 'border-white/20 bg-white/5 hover:border-teal-500/50 hover:bg-white/10'
+                      ? 'border-primary-500 bg-primary-500/20'
+                      : 'border-white/20 bg-white/5 hover:border-primary-500/50 hover:bg-white/10'
                   } transition-all text-left`}
                 >
                   <div className="flex items-center">
@@ -222,7 +222,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
         </div>
 
         {/* Budget Input */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-teal-500">
+        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-primary-500">
           <div className="flex items-center mb-4">
             <div className="w-10 h-10 rounded-xl bg-green-500/20 border border-green-500/30 flex items-center justify-center mr-3">
               <DollarSign className="h-5 w-5 text-green-400" />
@@ -242,7 +242,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
                   placeholder="Enter your budget..."
-                  className="w-full pl-8 pr-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full pl-8 pr-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -255,7 +255,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   onClick={() => setBudget(amount)}
                   className={`px-4 py-2 rounded-xl ${
                     budget === amount
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                       : 'bg-white/10 text-white/70 hover:bg-white/20'
                   } transition-colors`}
                 >
@@ -267,7 +267,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
         </div>
 
         {/* Duration and Date Input */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-teal-500">
+        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-primary-500">
           <div className="flex items-center mb-4">
             <div className="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center mr-3">
               <Calendar className="h-5 w-5 text-blue-400" />
@@ -286,7 +286,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent [color-scheme:dark]"
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent [color-scheme:dark]"
                 />
               </div>
               <div>
@@ -300,7 +300,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   placeholder="How many days?"
                   min="1"
                   max="30"
-                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -319,7 +319,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
                   onClick={() => setDuration(option.days)}
                   className={`px-4 py-2 rounded-xl ${
                     duration === option.days
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                       : 'bg-white/10 text-white/70 hover:bg-white/20'
                   } transition-colors`}
                 >
@@ -330,8 +330,8 @@ const TravelPlanGeneratorPage: React.FC = () => {
 
             {/* Date Info Display */}
             {startDate && duration && (
-              <div className="bg-teal-500/10 border border-teal-500/30 rounded-xl p-4">
-                <div className="flex items-center text-teal-300">
+              <div className="bg-primary-500/10 border border-primary-500/30 rounded-xl p-4">
+                <div className="flex items-center text-primary-300">
                   <Calendar className="h-4 w-4 mr-2" />
                   <span className="text-sm font-medium">
                     Trip: {new Date(startDate).toLocaleDateString()} - {
@@ -345,7 +345,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
         </div>
 
         {/* Travel Style */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-teal-500">
+        <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 border-l-4 border-l-primary-500">
           <div className="flex items-center mb-4">
             <div className="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center mr-3">
               <TrendingUp className="h-5 w-5 text-purple-400" />
@@ -360,8 +360,8 @@ const TravelPlanGeneratorPage: React.FC = () => {
                 onClick={() => setTravelStyle(style.value as TravelPlanRequest['travelStyle'])}
                 className={`p-4 rounded-xl border ${
                   travelStyle === style.value
-                    ? 'border-teal-500 bg-teal-500/20'
-                    : 'border-white/20 bg-white/5 hover:border-teal-500/50 hover:bg-white/10'
+                    ? 'border-primary-500 bg-primary-500/20'
+                    : 'border-white/20 bg-white/5 hover:border-primary-500/50 hover:bg-white/10'
                 } transition-all text-center`}
               >
                 <span className="text-2xl block mb-2">{style.icon}</span>
@@ -377,7 +377,7 @@ const TravelPlanGeneratorPage: React.FC = () => {
           <button
             onClick={handleGeneratePlan}
             disabled={!destination || !budget || !duration || !startDate || isGenerating}
-            className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center space-x-3 shadow-lg shadow-teal-500/25"
+            className="px-8 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center space-x-3 shadow-lg shadow-primary-500/25"
           >
             {isGenerating ? (
               <>

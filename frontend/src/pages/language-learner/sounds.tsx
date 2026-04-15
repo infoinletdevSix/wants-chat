@@ -301,7 +301,7 @@ const SoundsPage: React.FC = () => {
             key={phoneme.id}
             className={`cursor-pointer transition-all duration-300 hover:scale-105 text-center ${
               selectedPhoneme?.id === phoneme.id
-                ? 'ring-2 ring-teal-500 bg-teal-500/10 border-teal-500/50 scale-105'
+                ? 'ring-2 ring-primary-500 bg-primary-500/10 border-primary-500/50 scale-105'
                 : ''
             } ${
               completedPhonemes.includes(phoneme.id)
@@ -356,7 +356,7 @@ const SoundsPage: React.FC = () => {
         {isLoading ? (
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center">
-              <Loader2 className="h-12 w-12 animate-spin text-teal-400 mx-auto mb-4" />
+              <Loader2 className="h-12 w-12 animate-spin text-primary-400 mx-auto mb-4" />
               <p className="text-white/60">Loading letters...</p>
             </div>
           </div>
@@ -366,9 +366,9 @@ const SoundsPage: React.FC = () => {
             <div className="lg:col-span-2 space-y-6">
               <Tabs value={activeTab} onValueChange={setActiveTab}>
                 <TabsList className="grid w-full grid-cols-3 bg-white/10 backdrop-blur-xl border border-white/20">
-                  <TabsTrigger value="vowels" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Vowels</TabsTrigger>
-                  <TabsTrigger value="consonants" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Consonants</TabsTrigger>
-                  <TabsTrigger value="practice" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Practice</TabsTrigger>
+                  <TabsTrigger value="vowels" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Vowels</TabsTrigger>
+                  <TabsTrigger value="consonants" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Consonants</TabsTrigger>
+                  <TabsTrigger value="practice" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Practice</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="vowels" className="space-y-4">
@@ -394,8 +394,8 @@ const SoundsPage: React.FC = () => {
               <TabsContent value="practice" className="space-y-4">
                 <Tabs value={practiceSubTab} onValueChange={setPracticeSubTab}>
                   <TabsList className="grid w-full grid-cols-2 bg-white/10 backdrop-blur-xl border border-white/20">
-                    <TabsTrigger value="minimal-pairs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Minimal Pairs</TabsTrigger>
-                    <TabsTrigger value="phonemes" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Phonemes</TabsTrigger>
+                    <TabsTrigger value="minimal-pairs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Minimal Pairs</TabsTrigger>
+                    <TabsTrigger value="phonemes" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Phonemes</TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="minimal-pairs" className="space-y-4 mt-4">
@@ -410,14 +410,14 @@ const SoundsPage: React.FC = () => {
                                   <span className="text-sm text-white/40 font-normal">vs</span>
                                   <span>{pair.pair[1]}</span>
                                 </div>
-                                <p className="text-sm text-teal-400 mt-1">
+                                <p className="text-sm text-primary-400 mt-1">
                                   {pair.description}
                                 </p>
                               </div>
                               <Button
                                 variant="outline"
                                 size="sm"
-                                className="border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:border-teal-500 transition-all duration-300 flex items-center gap-2"
+                                className="border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-primary-500 hover:to-cyan-500 hover:border-primary-500 transition-all duration-300 flex items-center gap-2"
                                 onClick={() => {
                                   // Play both words in the minimal pair
                                   handlePlayAudio(pair.pair[0]);
@@ -446,7 +446,7 @@ const SoundsPage: React.FC = () => {
                           key={phoneme.id}
                           className={`cursor-pointer transition-all duration-300 hover:scale-105 text-center ${
                             selectedPhoneme?.id === phoneme.id
-                              ? 'ring-2 ring-teal-500 bg-teal-500/10 border-teal-500/50 scale-105'
+                              ? 'ring-2 ring-primary-500 bg-primary-500/10 border-primary-500/50 scale-105'
                               : ''
                           }`}
                           hover={true}
@@ -474,7 +474,7 @@ const SoundsPage: React.FC = () => {
           <div className="space-y-6">
             <GlassCard className="sticky top-6" hover={false}>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500">
                   <Volume2 className="h-5 w-5 text-white" />
                 </div>
                 <span className="text-lg font-semibold text-white">Practice Session</span>
@@ -506,7 +506,7 @@ const SoundsPage: React.FC = () => {
                           size="lg"
                           onClick={() => handlePlayAudio(selectedPhoneme.symbol)}
                           disabled={isPlaying}
-                          className="w-full mb-4 h-16 text-lg font-semibold border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:border-teal-500 transition-all duration-300"
+                          className="w-full mb-4 h-16 text-lg font-semibold border-white/20 bg-white/5 text-white hover:bg-gradient-to-r hover:from-primary-500 hover:to-cyan-500 hover:border-primary-500 transition-all duration-300"
                         >
                           <Volume2 className={`h-6 w-6 mr-3 ${isPlaying ? 'animate-pulse' : ''}`} />
                           {isPlaying ? 'Playing...' : 'Listen to Sound'}
@@ -531,7 +531,7 @@ const SoundsPage: React.FC = () => {
                                 variant="ghost"
                                 size="sm"
                                 onClick={() => handlePlayAudio(example)}
-                                className="text-white/60 hover:text-teal-400 hover:bg-white/10 transition-all duration-200"
+                                className="text-white/60 hover:text-primary-400 hover:bg-white/10 transition-all duration-200"
                               >
                                 <Volume2 className="h-4 w-4" />
                               </Button>

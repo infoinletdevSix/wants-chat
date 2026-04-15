@@ -121,7 +121,7 @@ const ResistorCodes: React.FC = () => {
       <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-500 p-6">
+          <div className="bg-gradient-to-r from-primary-500 to-cyan-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                 <Zap className="h-8 w-8 text-white" />
@@ -143,7 +143,7 @@ const ResistorCodes: React.FC = () => {
                   onClick={() => setBandCount(count)}
                   className={`px-4 py-3 rounded-lg font-medium transition-all ${
                     bandCount === count
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg'
                       : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
                   }`}
                 >
@@ -210,7 +210,7 @@ const ResistorCodes: React.FC = () => {
               <select
                 value={bands.band1}
                 onChange={(e) => updateBand('band1', e.target.value)}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 {valueColors.map((color) => (
                   <option key={color} value={color} className="bg-slate-800">
@@ -226,7 +226,7 @@ const ResistorCodes: React.FC = () => {
               <select
                 value={bands.band2}
                 onChange={(e) => updateBand('band2', e.target.value)}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 {valueColors.map((color) => (
                   <option key={color} value={color} className="bg-slate-800">
@@ -243,7 +243,7 @@ const ResistorCodes: React.FC = () => {
                 <select
                   value={bands.band3}
                   onChange={(e) => updateBand('band3', e.target.value)}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   {valueColors.map((color) => (
                     <option key={color} value={color} className="bg-slate-800">
@@ -262,7 +262,7 @@ const ResistorCodes: React.FC = () => {
               <select
                 value={bandCount === 4 ? bands.band3 : bands.band4}
                 onChange={(e) => updateBand(bandCount === 4 ? 'band3' : 'band4', e.target.value)}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 {multiplierColors.map((color) => (
                   <option key={color} value={color} className="bg-slate-800">
@@ -280,7 +280,7 @@ const ResistorCodes: React.FC = () => {
               <select
                 value={bandCount === 4 ? bands.band4 : bands.band5}
                 onChange={(e) => updateBand(bandCount === 4 ? 'band4' : 'band5', e.target.value)}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 {toleranceColors.map((color) => (
                   <option key={color} value={color} className="bg-slate-800">
@@ -297,7 +297,7 @@ const ResistorCodes: React.FC = () => {
                 <select
                   value={bands.band6}
                   onChange={(e) => updateBand('band6', e.target.value)}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   {tempCoeffColors.map((color) => (
                     <option key={color} value={color} className="bg-slate-800">
@@ -310,10 +310,10 @@ const ResistorCodes: React.FC = () => {
           </div>
 
           {/* Results */}
-          <div className="p-6 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border-t border-white/10">
+          <div className="p-6 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border-t border-white/10">
             <div className="space-y-4">
               {/* Resistance Value */}
-              <div className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-6 border border-teal-400/30">
+              <div className="bg-gradient-to-r from-primary-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-6 border border-primary-400/30">
                 <p className="text-sm text-white/60 mb-2">Resistance Value</p>
                 <p className="text-4xl font-bold text-white">{formatResistance(resistance)}</p>
               </div>
@@ -334,7 +334,7 @@ const ResistorCodes: React.FC = () => {
 
               {/* Info */}
               <div className="flex items-start gap-2 p-3 bg-white/5 rounded-lg border border-white/10">
-                <Info className="h-4 w-4 text-teal-400 mt-0.5 flex-shrink-0" />
+                <Info className="h-4 w-4 text-primary-400 mt-0.5 flex-shrink-0" />
                 <p className="text-xs text-white/60">
                   Resistor color codes are standardized by EIA (Electronic Industries Alliance).
                   The bands are read from left to right, starting from the band closest to one end.

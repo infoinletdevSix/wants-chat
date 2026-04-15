@@ -226,7 +226,7 @@ export const RoomStatusTool: React.FC<RoomStatusToolProps> = ({
 
   const floors = useMemo(() => [...new Set(rooms.map(r => r.floor))].sort((a, b) => a - b), [rooms]);
 
-  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  const inputClass = `w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
   const getStatusColor = (status: RoomStatusType) => {
@@ -320,7 +320,7 @@ export const RoomStatusTool: React.FC<RoomStatusToolProps> = ({
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl"><DoorOpen className="w-6 h-6 text-[#0D9488]" /></div>
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl"><DoorOpen className="w-6 h-6 text-[#6096B4]" /></div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.roomStatus.roomStatus', 'Room Status')}</h1>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.roomStatus.realTimeRoomStatusTracker', 'Real-time room status tracker')}</p>
@@ -365,7 +365,7 @@ export const RoomStatusTool: React.FC<RoomStatusToolProps> = ({
             <option value="">{t('tools.roomStatus.allCleanStatus', 'All Clean Status')}</option>
             {CLEAN_STATUSES.map(s => (<option key={s.value} value={s.value}>{s.label}</option>))}
           </select>
-          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.roomStatus.addRoom', 'Add Room')}</button>
+          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"><Plus className="w-5 h-5" />{t('tools.roomStatus.addRoom', 'Add Room')}</button>
         </div>
 
         {/* Forms */}
@@ -376,7 +376,7 @@ export const RoomStatusTool: React.FC<RoomStatusToolProps> = ({
               <button onClick={() => setShowForm(false)} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}><X className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} /></button>
             </div>
             {renderForm(newRoom)}
-            <button onClick={handleAddRoom} disabled={!newRoom.roomNumber} className="mt-4 w-full py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.roomStatus.addRoom3', 'Add Room')}</button>
+            <button onClick={handleAddRoom} disabled={!newRoom.roomNumber} className="mt-4 w-full py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"><Plus className="w-5 h-5" />{t('tools.roomStatus.addRoom3', 'Add Room')}</button>
           </div>
         )}
 
@@ -388,7 +388,7 @@ export const RoomStatusTool: React.FC<RoomStatusToolProps> = ({
             </div>
             {renderForm(editingRoom, true)}
             <div className="flex gap-3 mt-4">
-              <button onClick={handleUpdateRoom} className="flex-1 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.roomStatus.save', 'Save')}</button>
+              <button onClick={handleUpdateRoom} className="flex-1 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.roomStatus.save', 'Save')}</button>
               <button onClick={() => setEditingRoom(null)} className={`px-6 py-3 rounded-xl font-medium ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>{t('tools.roomStatus.cancel', 'Cancel')}</button>
             </div>
           </div>

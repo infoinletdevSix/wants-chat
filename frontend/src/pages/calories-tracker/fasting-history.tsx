@@ -229,7 +229,7 @@ const FastingHistoryPage: React.FC = () => {
       {/* Stats Overview */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <Card className="p-4 text-center bg-white/5 border border-white/10">
-          <Icon path={mdiCalendarMonth} size={1.2} className="text-teal-400 mx-auto mb-2" />
+          <Icon path={mdiCalendarMonth} size={1.2} className="text-primary-400 mx-auto mb-2" />
           <p className="text-2xl font-bold text-white">{stats.totalFasts}</p>
           <p className="text-xs text-white/60">Total Fasts</p>
         </Card>
@@ -302,7 +302,7 @@ const FastingHistoryPage: React.FC = () => {
             <Icon path={mdiClockOutline} size={3} className="mx-auto mb-4 opacity-50" />
             <p className="text-lg font-medium text-white">No fasting history yet</p>
             <p className="text-sm mb-4">Start your first fast to track your progress</p>
-            <Button onClick={() => navigate('/calories-tracker/fasting')} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+            <Button onClick={() => navigate('/calories-tracker/fasting')} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
               Start Fasting
             </Button>
           </div>

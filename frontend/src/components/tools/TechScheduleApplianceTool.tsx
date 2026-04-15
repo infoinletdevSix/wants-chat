@@ -445,7 +445,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
 
   const inputClass = `w-full px-3 py-2 rounded-lg border ${
     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -454,9 +454,9 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.techScheduleAppliance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.techScheduleAppliance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -465,7 +465,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Calendar className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -554,7 +554,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
               }}
               className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                 activeTab === tab.id || (activeTab === 'edit-appointment' && tab.id === 'add-appointment')
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -576,7 +576,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                   <button onClick={goToPrev} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-                  <button onClick={goToToday} className="px-3 py-1 rounded-lg bg-[#0D9488] text-white text-sm">
+                  <button onClick={goToToday} className="px-3 py-1 rounded-lg bg-[#6096B4] text-white text-sm">
                     {t('tools.techScheduleAppliance.today', 'Today')}
                   </button>
                   <button onClick={goToNext} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>
@@ -601,13 +601,13 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                   <div className="flex rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('day')}
-                      className={`px-3 py-1 ${viewMode === 'day' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                      className={`px-3 py-1 ${viewMode === 'day' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                     >
                       {t('tools.techScheduleAppliance.day', 'Day')}
                     </button>
                     <button
                       onClick={() => setViewMode('week')}
-                      className={`px-3 py-1 ${viewMode === 'week' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                      className={`px-3 py-1 ${viewMode === 'week' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                     >
                       {t('tools.techScheduleAppliance.week', 'Week')}
                     </button>
@@ -631,7 +631,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                         <div
                           key={appt.id}
                           className={`p-4 rounded-lg border-l-4 ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}
-                          style={{ borderLeftColor: tech?.color || '#0D9488' }}
+                          style={{ borderLeftColor: tech?.color || '#6096B4' }}
                         >
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
@@ -720,7 +720,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                     setCurrentTech(createEmptyTechnician());
                     setShowTechForm(true);
                   }}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.techScheduleAppliance.addTechnician', 'Add Technician')}
@@ -877,7 +877,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                         onClick={() => toggleSpecialty(spec)}
                         className={`px-3 py-1 rounded-full text-sm transition-colors ${
                           currentTech.specialties.includes(spec)
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : isDark
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -906,7 +906,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                     type="checkbox"
                     checked={currentTech.isActive}
                     onChange={(e) => setCurrentTech({ ...currentTech, isActive: e.target.checked })}
-                    className="w-4 h-4 accent-[#0D9488]"
+                    className="w-4 h-4 accent-[#6096B4]"
                   />
                   <label className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.techScheduleAppliance.active', 'Active')}</label>
                 </div>
@@ -914,7 +914,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                   <button
                     onClick={handleSaveTechnician}
                     disabled={!currentTech.name}
-                    className="flex-1 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50"
+                    className="flex-1 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50"
                   >
                     {t('tools.techScheduleAppliance.save', 'Save')}
                   </button>
@@ -1136,7 +1136,7 @@ export const TechScheduleApplianceTool = ({ uiConfig }: TechScheduleApplianceToo
                 <button
                   onClick={handleSaveAppointment}
                   disabled={!currentAppointment.customerName || !currentAppointment.technicianId || !currentAppointment.applianceType}
-                  className="flex-1 px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {activeTab === 'add-appointment' ? t('tools.techScheduleAppliance.scheduleAppointment', 'Schedule Appointment') : t('tools.techScheduleAppliance.saveChanges', 'Save Changes')}

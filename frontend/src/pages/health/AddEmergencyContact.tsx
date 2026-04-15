@@ -174,7 +174,7 @@ const AddEmergencyContact: React.FC = () => {
           <GlassCard hover={false}>
             <div className="mb-6">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <PersonAdd className="h-5 w-5 text-teal-400" />
+                <PersonAdd className="h-5 w-5 text-primary-400" />
                 Basic Information
               </h3>
               <p className="text-sm text-white/60 mt-1">
@@ -257,7 +257,7 @@ const AddEmergencyContact: React.FC = () => {
                       id="isPrimary"
                       checked={formData.isPrimary}
                       onChange={(e) => updateField('isPrimary', e.target.checked)}
-                      className="h-4 w-4 text-teal-500 border-white/20 bg-white/10 rounded focus:ring-teal-500"
+                      className="h-4 w-4 text-primary-500 border-white/20 bg-white/10 rounded focus:ring-primary-500"
                     />
                     <label htmlFor="isPrimary" className="text-sm text-white/80">
                       Mark as primary emergency contact
@@ -272,7 +272,7 @@ const AddEmergencyContact: React.FC = () => {
           <GlassCard hover={false}>
             <div className="mb-6">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <PhoneIcon className="h-5 w-5 text-teal-400" />
+                <PhoneIcon className="h-5 w-5 text-primary-400" />
                 Contact Information
               </h3>
               <p className="text-sm text-white/60 mt-1">
@@ -364,7 +364,7 @@ const AddEmergencyContact: React.FC = () => {
           <GlassCard hover={false}>
             <div className="mb-6">
               <h3 className="flex items-center gap-2 text-xl font-bold text-white">
-                <Description className="h-5 w-5 text-teal-400" />
+                <Description className="h-5 w-5 text-primary-400" />
                 Additional Information
               </h3>
               <p className="text-sm text-white/60 mt-1">
@@ -437,7 +437,7 @@ const AddEmergencyContact: React.FC = () => {
             </Button>
             <Button
               type="submit"
-              className="min-w-[120px] bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               disabled={createContactMutation.loading || updateContactMutation.loading || contactLoading}
             >
               <Save className="h-4 w-4 mr-2" />

@@ -274,7 +274,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
         </div>
       </div>
       <div
-        className="absolute top-0 w-3 h-4 bg-[#0D9488] rounded-full transform -translate-x-1/2 shadow-lg"
+        className="absolute top-0 w-3 h-4 bg-[#6096B4] rounded-full transform -translate-x-1/2 shadow-lg"
         style={{ left: `${Math.min(100, Math.max(0, percentile))}%` }}
       />
     </div>
@@ -285,10 +285,10 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
       <div className="max-w-2xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
           {/* Header */}
-          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <TrendingUp className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -304,9 +304,9 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
           <div className="p-6 space-y-6">
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {t('tools.babyGrowthChart.dataLoadedFromYourConversation', 'Data loaded from your conversation')}
                 </span>
               </div>
@@ -361,7 +361,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -382,7 +382,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <select
                   value={weightUnit}
@@ -391,7 +391,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="kg">kg</option>
                   <option value="lb">lb</option>
@@ -416,7 +416,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <select
                   value={lengthUnit}
@@ -425,7 +425,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="cm">cm</option>
                   <option value="in">in</option>
@@ -450,7 +450,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-500'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <span className={`px-4 py-3 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-gray-400' : 'bg-gray-100 border-gray-300 text-gray-600'
@@ -471,7 +471,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <Scale className="w-4 h-4 text-[#0D9488]" />
+                        <Scale className="w-4 h-4 text-[#6096B4]" />
                         <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.babyGrowthChart.weight', 'Weight')}</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -494,7 +494,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <Ruler className="w-4 h-4 text-[#0D9488]" />
+                        <Ruler className="w-4 h-4 text-[#6096B4]" />
                         <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.babyGrowthChart.lengthHeight', 'Length/Height')}</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -517,7 +517,7 @@ export const BabyGrowthChartTool: React.FC<BabyGrowthChartToolProps> = ({ uiConf
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <Baby className="w-4 h-4 text-[#0D9488]" />
+                        <Baby className="w-4 h-4 text-[#6096B4]" />
                         <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.babyGrowthChart.headCircumference', 'Head Circumference')}</span>
                       </div>
                       <div className="flex items-center gap-2">

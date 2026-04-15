@@ -130,7 +130,7 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Hash className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -154,11 +154,11 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 onClick={checkPrime}
-                className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
+                className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
               >
                 <Search className="w-5 h-5" />
                 {t('tools.primeChecker.check', 'Check')}
@@ -182,7 +182,7 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <span className={`self-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>to</span>
               <input
@@ -195,11 +195,11 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 onClick={findPrimesInRange}
-                className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 {t('tools.primeChecker.find', 'Find')}
               </button>
@@ -262,11 +262,11 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
 
           {/* Primes List Result */}
           {showPrimesList && (
-            <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-              theme === 'dark' ? 'bg-gray-700' : t('tools.primeChecker.bg0d948810', 'bg-[#0D9488]/10')
+            <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+              theme === 'dark' ? 'bg-gray-700' : t('tools.primeChecker.bg0d948810', 'bg-[#6096B4]/10')
             }`}>
               <div className="mb-4">
-                <div className="text-2xl font-bold text-[#0D9488] mb-2">
+                <div className="text-2xl font-bold text-[#6096B4] mb-2">
                   {primesList.length} Prime{primesList.length !== 1 ? 's' : ''} Found
                 </div>
                 <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -278,7 +278,7 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
                   primesList.map((prime, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 rounded-full text-sm font-medium bg-[#0D9488] text-white"
+                      className="px-3 py-1 rounded-full text-sm font-medium bg-[#6096B4] text-white"
                     >
                       {prime}
                     </span>
@@ -303,7 +303,7 @@ export default function PrimeCheckerTool({ uiConfig }: PrimeCheckerToolProps) {
                   key={idx}
                   className={`px-3 py-1 rounded-full text-sm font-medium ${
                     theme === 'dark'
-                      ? 'bg-gray-600 text-gray-200' : t('tools.primeChecker.bg0d948820Text0d9488', 'bg-[#0D9488]/20 text-[#0D9488]')
+                      ? 'bg-gray-600 text-gray-200' : t('tools.primeChecker.bg0d948820Text0d9488', 'bg-[#6096B4]/20 text-[#6096B4]')
                   }`}
                 >
                   {prime}

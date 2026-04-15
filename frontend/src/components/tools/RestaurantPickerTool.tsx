@@ -208,9 +208,9 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Utensils className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Utensils className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.restaurantPicker.randomRestaurantPicker', 'Random Restaurant Picker')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.restaurantPicker.endTheWhereShouldWe', 'End the "where should we eat?" debate')}</p>
@@ -231,7 +231,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
                 onClick={() => toggleCuisine(cuisine.id)}
                 className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${
                   selectedCuisines.has(cuisine.id)
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -256,7 +256,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
                 onClick={() => togglePriceRange(price)}
                 className={`flex-1 py-2 rounded-lg font-medium ${
                   selectedPriceRanges.has(price)
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -280,7 +280,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
                 onClick={() => setMealType(meal.id)}
                 className={`flex-1 py-2 rounded-lg text-sm ${
                   mealType === meal.id
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -304,7 +304,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
             step="0.5"
             value={minRating}
             onChange={(e) => setMinRating(parseFloat(e.target.value))}
-            className="w-full accent-teal-500"
+            className="w-full accent-primary-500"
           />
         </div>
 
@@ -342,7 +342,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
               <div className="flex gap-2">
                 <button
                   onClick={addRestaurant}
-                  className="flex-1 py-2 rounded-lg bg-teal-500 text-white font-medium"
+                  className="flex-1 py-2 rounded-lg bg-primary-500 text-white font-medium"
                 >
                   {t('tools.restaurantPicker.addRestaurant', 'Add Restaurant')}
                 </button>
@@ -379,7 +379,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
             className={`flex-1 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 ${
               filteredRestaurants.length === 0
                 ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
-                : 'bg-teal-500 text-white hover:bg-teal-600'
+                : 'bg-primary-500 text-white hover:bg-primary-600'
             } ${isSpinning ? 'animate-pulse' : ''}`}
           >
             {isSpinning ? (
@@ -393,7 +393,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
 
         {/* Picked Restaurant Result */}
         {pickedRestaurant && (
-          <div className={`p-6 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'}`}>
+          <div className={`p-6 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'}`}>
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-center gap-3">
                 <span className="text-3xl">{getCuisineEmoji(pickedRestaurant.cuisine)}</span>
@@ -436,7 +436,7 @@ export const RestaurantPickerTool: React.FC<RestaurantPickerToolProps> = ({ uiCo
                 <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{pickedRestaurant.rating}</span>
               </div>
               <div className="flex items-center gap-1">
-                <MapPin className="w-4 h-4 text-teal-500" />
+                <MapPin className="w-4 h-4 text-primary-500" />
                 <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{pickedRestaurant.distance}</span>
               </div>
               <span className={`px-2 py-1 rounded-full text-sm font-medium ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}>

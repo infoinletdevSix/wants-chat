@@ -27,7 +27,7 @@ const popularCurrencies = [
   { code: 'EUR', name: 'Euro', color: 'bg-gradient-to-br from-emerald-500 to-emerald-600' },
   { code: 'JPY', name: 'Japanese Yen', color: 'bg-gradient-to-br from-orange-500 to-orange-600' },
   { code: 'GBP', name: 'British Pound', color: 'bg-gradient-to-br from-purple-500 to-purple-600' },
-  { code: 'AUD', name: 'Australian Dollar', color: 'bg-gradient-to-br from-teal-500 to-teal-600' },
+  { code: 'AUD', name: 'Australian Dollar', color: 'bg-gradient-to-br from-primary-500 to-primary-600' },
   { code: 'CAD', name: 'Canadian Dollar', color: 'bg-gradient-to-br from-red-500 to-red-600' },
   { code: 'CHF', name: 'Swiss Franc', color: 'bg-gradient-to-br from-indigo-500 to-indigo-600' },
   { code: 'CNY', name: 'Chinese Yuan', color: 'bg-gradient-to-br from-pink-500 to-pink-600' },
@@ -144,7 +144,7 @@ const ChartsTab: React.FC = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <div className="p-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg">
                 <Icon path={mdiChartLineVariant} size={1.2} className="text-white" />
               </div>
               Currency Charts
@@ -190,7 +190,7 @@ const ChartsTab: React.FC = () => {
                   <SelectTrigger id="from-currency-chart" className="h-12 rounded-lg bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select base currency" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {popularCurrencies.map(currency => (
                       <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                         <div className="flex items-center gap-2">
@@ -213,7 +213,7 @@ const ChartsTab: React.FC = () => {
                   <SelectTrigger id="to-currency-chart" className="h-12 rounded-lg bg-white/10 border-white/20 text-white">
                     <SelectValue placeholder="Select target currency" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {popularCurrencies.map(currency => (
                       <SelectItem key={currency.code} value={currency.code} className="text-white hover:bg-white/10">
                         <div className="flex items-center gap-2">
@@ -231,7 +231,7 @@ const ChartsTab: React.FC = () => {
             {/* Time Frame Selection */}
             <div className="space-y-3">
               <Label className="text-sm font-medium text-white flex items-center gap-2">
-                <Icon path={mdiCalendarRange} size={0.6} className="text-teal-400" />
+                <Icon path={mdiCalendarRange} size={0.6} className="text-primary-400" />
                 Time Frame
               </Label>
               <div className="flex flex-wrap gap-2">
@@ -255,7 +255,7 @@ const ChartsTab: React.FC = () => {
             <div className="flex justify-center pt-2">
               <Button
                 onClick={handleViewChart}
-                className="px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 h-12 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
+                className="px-8 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 h-12 rounded-lg font-medium transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center gap-2 text-white"
                 disabled={isLoading}
               >
                 <Icon path={mdiEye} size={0.8} />
@@ -300,8 +300,8 @@ const ChartsTab: React.FC = () => {
 
             {currentRate && (
               <p className="flex items-center gap-2 text-white/60 mt-2">
-                <Icon path={mdiCurrencyUsd} size={0.5} className="text-teal-400" />
-                Current Rate: <span className="font-bold text-teal-300">{currentRate.toFixed(4)}</span> as of {new Date().toLocaleString()}
+                <Icon path={mdiCurrencyUsd} size={0.5} className="text-primary-400" />
+                Current Rate: <span className="font-bold text-primary-300">{currentRate.toFixed(4)}</span> as of {new Date().toLocaleString()}
                 <Icon path={mdiClockOutline} size={0.4} className="text-white/40 ml-2" />
               </p>
             )}
@@ -356,8 +356,8 @@ const ChartsTab: React.FC = () => {
                   <LineChart data={chartData}>
                     <defs>
                       <linearGradient id="colorRate" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#2dd4bf" stopOpacity={0.8}/>
-                        <stop offset="95%" stopColor="#2dd4bf" stopOpacity={0.1}/>
+                        <stop offset="5%" stopColor="#75AAC1" stopOpacity={0.8}/>
+                        <stop offset="95%" stopColor="#75AAC1" stopOpacity={0.1}/>
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
@@ -385,7 +385,7 @@ const ChartsTab: React.FC = () => {
                     <Line
                       type="monotone"
                       dataKey="rate"
-                      stroke="#2dd4bf"
+                      stroke="#75AAC1"
                       strokeWidth={2}
                       fill="url(#colorRate)"
                       dot={false}
@@ -404,8 +404,8 @@ const ChartsTab: React.FC = () => {
         <div className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
           <div className="p-12">
             <div className="text-center">
-              <div className="p-4 bg-teal-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-400"></div>
+              <div className="p-4 bg-primary-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-400"></div>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Loading Chart Data</h3>
               <p className="text-white/60">Fetching {fromCurrency}/{toCurrency} rates for {timeFrame}...</p>
@@ -426,7 +426,7 @@ const ChartsTab: React.FC = () => {
               <p className="text-white/60 mb-4">Select currencies and click "View Chart" to display historical data</p>
               <Button
                 onClick={handleViewChart}
-                className="gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                className="gap-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               >
                 <Icon path={mdiEye} size={0.6} />
                 Load Chart Data

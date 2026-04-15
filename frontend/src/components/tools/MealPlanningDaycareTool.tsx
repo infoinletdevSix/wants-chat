@@ -487,7 +487,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
 
   const labelClass = `block text-sm font-medium mb-1 ${
     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
@@ -495,7 +495,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
 
   const tabClass = (active: boolean) => `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
     active
-      ? 'bg-[#0D9488] text-white'
+      ? 'bg-[#6096B4] text-white'
       : theme === 'dark'
         ? 'text-gray-400 hover:bg-gray-700'
         : 'text-gray-600 hover:bg-gray-100'
@@ -506,9 +506,9 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.mealPlanningDaycare.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.mealPlanningDaycare.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -516,7 +516,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Utensils className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -610,7 +610,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
                 </h3>
                 <button
                   onClick={goToCurrentWeek}
-                  className="text-sm text-[#0D9488] hover:underline"
+                  className="text-sm text-[#6096B4] hover:underline"
                 >
                   {t('tools.mealPlanningDaycare.goToCurrentWeek', 'Go to Current Week')}
                 </button>
@@ -718,7 +718,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
               </h3>
               <button
                 onClick={() => setShowRestrictionModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.mealPlanningDaycare.addRestriction', 'Add Restriction')}
@@ -1028,7 +1028,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
                     <button
                       type="button"
                       onClick={addMealItem}
-                      className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E]"
+                      className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E]"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.mealPlanningDaycare.addItem', 'Add Item')}
@@ -1064,7 +1064,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
                 </button>
                 <button
                   onClick={saveMeal}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.mealPlanningDaycare.saveMeal', 'Save Meal')}
@@ -1186,7 +1186,7 @@ export const MealPlanningDaycareTool: React.FC<MealPlanningDaycareToolProps> = (
                 </button>
                 <button
                   onClick={saveRestriction}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.mealPlanningDaycare.saveRestriction', 'Save Restriction')}

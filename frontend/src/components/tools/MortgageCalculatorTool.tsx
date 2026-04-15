@@ -159,14 +159,14 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-4xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.mortgageCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.mortgageCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Home className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -195,7 +195,7 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -215,7 +215,7 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -238,7 +238,7 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -255,7 +255,7 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
                     onClick={() => setQuickTerm(years)}
                     className={`py-2 px-3 rounded-lg font-medium transition-colors ${
                       loanTermYears === years.toString()
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -272,7 +272,7 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateMortgage}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.mortgageCalculator.calculate', 'Calculate')}
@@ -293,14 +293,14 @@ export const MortgageCalculatorTool: React.FC<MortgageCalculatorToolProps> = ({ 
           {result && (
             <div className="space-y-4">
               {/* Monthly Payment - Main Display */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.mortgageCalculator.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.mortgageCalculator.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <div className="text-center mb-6">
                   <div className={`text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.mortgageCalculator.monthlyPayment', 'Monthly Payment')}
                   </div>
-                  <div className="text-5xl font-bold text-[#0D9488]">
+                  <div className="text-5xl font-bold text-[#6096B4]">
                     ${result.monthlyPayment.toLocaleString()}
                   </div>
                 </div>

@@ -633,9 +633,9 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.tuitionPayment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.tuitionPayment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -643,7 +643,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <CreditCard className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -729,7 +729,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab.id as ActiveTab)}
                 className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : isDark
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-500 hover:text-gray-700'
@@ -788,7 +788,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                   </select>
                   <button
                     onClick={() => setShowPaymentForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.tuitionPayment.recordPayment2', 'Record Payment')}
@@ -873,7 +873,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tuitionPayment.invoices', 'Invoices')}</h2>
                   <button
                     onClick={() => setShowInvoiceForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.tuitionPayment.createInvoice2', 'Create Invoice')}
@@ -996,7 +996,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tuitionPayment.feeSchedule', 'Fee Schedule')}</h2>
                   <button
                     onClick={() => setShowFeeForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.tuitionPayment.addFee2', 'Add Fee')}
@@ -1026,7 +1026,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                           </button>
                         </div>
                         <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{fee.name}</h3>
-                        <p className={`text-2xl font-bold text-[#0D9488] mt-1`}>{formatCurrency(fee.amount)}</p>
+                        <p className={`text-2xl font-bold text-[#6096B4] mt-1`}>{formatCurrency(fee.amount)}</p>
                         <p className={`text-sm mt-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                           Due: {formatDate(fee.dueDate)}
                         </p>
@@ -1044,7 +1044,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.tuitionPayment.paymentPlans', 'Payment Plans')}</h2>
                   <button
                     onClick={() => setShowPaymentPlanForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.tuitionPayment.createPlan', 'Create Plan')}
@@ -1092,7 +1092,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                           </div>
                           <div className={`h-2 rounded-full overflow-hidden ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                             <div
-                              className="h-full rounded-full bg-[#0D9488]"
+                              className="h-full rounded-full bg-[#6096B4]"
                               style={{ width: `${progress}%` }}
                             />
                           </div>
@@ -1230,7 +1230,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={handleRecordPayment}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {t('tools.tuitionPayment.recordPayment3', 'Record Payment')}
                 </button>
@@ -1297,7 +1297,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                     type="checkbox"
                     checked={feeForm.isRecurring}
                     onChange={e => setFeeForm({ ...feeForm, isRecurring: e.target.checked })}
-                    className="w-4 h-4 text-[#0D9488]"
+                    className="w-4 h-4 text-[#6096B4]"
                   />
                   <label className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.tuitionPayment.recurringFee', 'Recurring Fee')}</label>
                 </div>
@@ -1325,7 +1325,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={handleSaveFee}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {t('tools.tuitionPayment.addFee3', 'Add Fee')}
                 </button>
@@ -1417,7 +1417,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                   ))}
                   <button
                     onClick={addInvoiceItem}
-                    className="text-[#0D9488] text-sm hover:underline"
+                    className="text-[#6096B4] text-sm hover:underline"
                   >
                     {t('tools.tuitionPayment.addItem', '+ Add Item')}
                   </button>
@@ -1461,7 +1461,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={handleCreateInvoice}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {t('tools.tuitionPayment.createInvoice3', 'Create Invoice')}
                 </button>
@@ -1565,7 +1565,7 @@ export const TuitionPaymentTool: React.FC<TuitionPaymentToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={handleCreatePaymentPlan}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {t('tools.tuitionPayment.createPlan2', 'Create Plan')}
                 </button>

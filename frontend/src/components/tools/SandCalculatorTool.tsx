@@ -153,10 +153,10 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Mountain className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Mountain className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.sandCalculator.sandCalculator', 'Sand Calculator')}</h3>
@@ -180,7 +180,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                   onClick={() => setShape(s)}
                   className={`flex items-center justify-center gap-2 py-3 px-3 rounded-lg text-sm font-medium capitalize transition-colors ${
                     shape === s
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -207,7 +207,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
                 min="0"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -219,7 +219,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                 value={width}
                 onChange={(e) => setWidth(e.target.value)}
                 min="0"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -236,7 +236,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
               value={diameter}
               onChange={(e) => setDiameter(e.target.value)}
               min="0"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         )}
@@ -253,7 +253,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                 value={triangleBase}
                 onChange={(e) => setTriangleBase(e.target.value)}
                 min="0"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -265,7 +265,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                 value={triangleHeight}
                 onChange={(e) => setTriangleHeight(e.target.value)}
                 min="0"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -283,7 +283,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
               onChange={(e) => setDepth(e.target.value)}
               min="0"
               step="0.5"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="space-y-2">
@@ -297,7 +297,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                   onClick={() => setDepthUnit(unit)}
                   className={`py-3 px-3 rounded-lg text-sm font-medium capitalize transition-colors ${
                     depthUnit === unit
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -322,7 +322,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
                 onClick={() => setSandType(key as SandType)}
                 className={`py-3 px-3 rounded-lg text-sm font-medium text-left transition-colors ${
                   sandType === key
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -332,7 +332,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
               </button>
             ))}
           </div>
-          <div className={`p-3 rounded-lg ${isDark ? t('tools.sandCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border mt-2`}>
+          <div className={`p-3 rounded-lg ${isDark ? t('tools.sandCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border mt-2`}>
             <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {calculations.sandInfo.description}
             </p>
@@ -353,7 +353,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
             max="25"
             value={compactionFactor}
             onChange={(e) => setCompactionFactor(e.target.value)}
-            className="w-full accent-[#0D9488]"
+            className="w-full accent-[#6096B4]"
           />
           <div className={`flex justify-between text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
             <span>0% (No compaction)</span>
@@ -366,7 +366,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.sandCalculator.area', 'Area')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{calculations.areaSqFt}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{calculations.areaSqFt}</div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.sandCalculator.sqFt', 'sq ft')}</div>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
@@ -402,12 +402,12 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-800' : t('tools.sandCalculator.bg0d948810', 'bg-[#0D9488]/10')}`}>
+        <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-800' : t('tools.sandCalculator.bg0d948810', 'bg-[#6096B4]/10')}`}>
           <div className="flex items-center gap-2 mb-2">
-            <DollarSign className="w-5 h-5 text-[#0D9488]" />
+            <DollarSign className="w-5 h-5 text-[#6096B4]" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.sandCalculator.estimatedCostBulk', 'Estimated Cost (Bulk)')}</span>
           </div>
-          <div className="text-3xl font-bold text-[#0D9488]">
+          <div className="text-3xl font-bold text-[#6096B4]">
             ${calculations.costLow} - ${calculations.costHigh}
           </div>
           <p className={`text-sm mt-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -416,7 +416,7 @@ export const SandCalculatorTool: React.FC<SandCalculatorToolProps> = ({
         </div>
 
         {/* Volume Details */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.sandCalculator.bg0d948810Border0d94882', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.sandCalculator.bg0d948810Border0d94882', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.sandCalculator.volumeDetails', 'Volume Details')}</h4>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div className={isDark ? 'text-gray-300' : 'text-gray-700'}>

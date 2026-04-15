@@ -239,7 +239,7 @@ const RefillRequests: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Header Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-white mb-2">
@@ -251,7 +251,7 @@ const RefillRequests: React.FC = () => {
             </div>
             <Button
               onClick={() => setShowRequestForm(true)}
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             >
               <Plus className="h-4 w-4 mr-2" />
               New Request
@@ -293,12 +293,12 @@ const RefillRequests: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-white/60 mb-1">Total Requests</p>
-                <p className="text-3xl font-bold text-teal-400">
+                <p className="text-3xl font-bold text-primary-400">
                   {requests.length}
                 </p>
               </div>
-              <div className="p-4 rounded-2xl bg-teal-500/20">
-                <RefreshIcon className="h-8 w-8 text-teal-400" />
+              <div className="p-4 rounded-2xl bg-primary-500/20">
+                <RefreshIcon className="h-8 w-8 text-primary-400" />
               </div>
             </div>
           </Card>
@@ -329,7 +329,7 @@ const RefillRequests: React.FC = () => {
               onClick={() => setActiveTab('active')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-colors ${
                 activeTab === 'active'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-sm'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-sm'
                   : 'text-white/60 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -339,7 +339,7 @@ const RefillRequests: React.FC = () => {
               onClick={() => setActiveTab('history')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium text-sm transition-colors ${
                 activeTab === 'history'
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-sm'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-sm'
                   : 'text-white/60 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -356,13 +356,13 @@ const RefillRequests: React.FC = () => {
               {(activeTab === 'active' ? activeRequests : historyRequests).map((request) => (
                 <Card
                   key={request.id}
-                  className="rounded-2xl hover:border-teal-500/30 transition-all duration-300 bg-white/5 border border-white/10"
+                  className="rounded-2xl hover:border-primary-500/30 transition-all duration-300 bg-white/5 border border-white/10"
                 >
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="p-3 rounded-xl bg-teal-500/20">
-                          <PillIcon className="h-6 w-6 text-teal-400" />
+                        <div className="p-3 rounded-xl bg-primary-500/20">
+                          <PillIcon className="h-6 w-6 text-primary-400" />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-white">
@@ -389,7 +389,7 @@ const RefillRequests: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                         <div className="flex items-center gap-2 mb-3">
-                          <CalendarIcon className="h-4 w-4 text-teal-400" />
+                          <CalendarIcon className="h-4 w-4 text-primary-400" />
                           <p className="font-semibold text-white">Request Details</p>
                         </div>
                         <div className="space-y-2 text-sm">
@@ -414,7 +414,7 @@ const RefillRequests: React.FC = () => {
 
                       <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                         <div className="flex items-center gap-2 mb-3">
-                          <PharmacyIcon className="h-4 w-4 text-teal-400" />
+                          <PharmacyIcon className="h-4 w-4 text-primary-400" />
                           <p className="font-semibold text-white">Pharmacy</p>
                         </div>
                         <div className="space-y-2 text-sm">
@@ -437,7 +437,7 @@ const RefillRequests: React.FC = () => {
                     </div>
 
                     {/* Status Update */}
-                    <div className="p-4 rounded-xl bg-teal-500/10 border border-teal-500/20">
+                    <div className="p-4 rounded-xl bg-primary-500/10 border border-primary-500/20">
                       <div className="flex items-center gap-2">
                         {getStatusIcon(request.status)}
                         <p className="font-semibold text-white">
@@ -473,7 +473,7 @@ const RefillRequests: React.FC = () => {
                         <Button
                           variant="outline"
                           onClick={() => window.open(`tel:${request.pharmacy.phone}`)}
-                          className="flex-1 rounded-xl bg-transparent border-teal-500/30 text-teal-400 hover:bg-teal-500/10"
+                          className="flex-1 rounded-xl bg-transparent border-primary-500/30 text-primary-400 hover:bg-primary-500/10"
                         >
                           <PhoneIcon className="h-4 w-4 mr-2" />
                           Call Pharmacy
@@ -487,8 +487,8 @@ const RefillRequests: React.FC = () => {
           ) : (
             <Card className="rounded-2xl p-12 text-center bg-white/5 border border-white/10">
               <div className="max-w-md mx-auto">
-                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-teal-500/20">
-                  <RefreshIcon className="h-10 w-10 text-teal-400" />
+                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-primary-500/20">
+                  <RefreshIcon className="h-10 w-10 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   No {activeTab === 'active' ? 'Active' : 'Historical'} Requests
@@ -502,7 +502,7 @@ const RefillRequests: React.FC = () => {
                 {activeTab === 'active' && (
                   <Button
                     onClick={() => setShowRequestForm(true)}
-                    className="rounded-xl px-6 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                   >
                     <Plus className="h-4 w-4 mr-2" />
                     Create First Request
@@ -524,7 +524,7 @@ const RefillRequests: React.FC = () => {
             <div className="p-6 border-b border-white/10">
               <div className="flex justify-between items-center">
                 <h2 className="flex items-center gap-2 text-xl font-semibold text-white">
-                  <RefreshIcon className="h-5 w-5 text-teal-400" />
+                  <RefreshIcon className="h-5 w-5 text-primary-400" />
                   New Refill Request
                 </h2>
                 <Button
@@ -541,7 +541,7 @@ const RefillRequests: React.FC = () => {
             <div className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Medication Information */}
-                <div className="p-6 rounded-xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+                <div className="p-6 rounded-xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
                   <h3 className="text-lg font-semibold mb-4 text-white">Medication Information</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -552,7 +552,7 @@ const RefillRequests: React.FC = () => {
                         value={formData.medicationName}
                         onChange={(e) => setFormData(prev => ({ ...prev, medicationName: e.target.value }))}
                         required
-                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500"
                         style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                       />
                     </div>
@@ -565,7 +565,7 @@ const RefillRequests: React.FC = () => {
                         onChange={(e) => setFormData(prev => ({ ...prev, dosage: e.target.value }))}
                         placeholder="e.g., 10mg, 1 tablet"
                         required
-                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500"
                         style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                       />
                     </div>
@@ -579,14 +579,14 @@ const RefillRequests: React.FC = () => {
                       onChange={(e) => setFormData(prev => ({ ...prev, prescriptionNumber: e.target.value }))}
                       placeholder="e.g., RX12345678"
                       required
-                      className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                     />
                   </div>
                 </div>
 
                 {/* Pharmacy Information */}
-                <div className="p-6 rounded-xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+                <div className="p-6 rounded-xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
                   <h3 className="text-lg font-semibold mb-4 text-white">Pharmacy Information</h3>
                   <div className="space-y-4">
                     <div>
@@ -598,7 +598,7 @@ const RefillRequests: React.FC = () => {
                         onChange={(e) => setFormData(prev => ({ ...prev, pharmacyName: e.target.value }))}
                         placeholder="e.g., CVS Pharmacy"
                         required
-                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500"
                         style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                       />
                     </div>
@@ -612,7 +612,7 @@ const RefillRequests: React.FC = () => {
                           onChange={(e) => setFormData(prev => ({ ...prev, pharmacyPhone: e.target.value }))}
                           placeholder="(555) 123-4567"
                           required
-                          className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                          className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500"
                           style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                         />
                       </div>
@@ -621,7 +621,7 @@ const RefillRequests: React.FC = () => {
                         <select
                           value={formData.priority}
                           onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as RefillRequest['priority'] }))}
-                          className="w-full h-10 px-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                          className="w-full h-10 px-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
                           style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                         >
                           <option value="low" style={{ backgroundColor: '#1e293b' }}>Low</option>
@@ -640,7 +640,7 @@ const RefillRequests: React.FC = () => {
                         onChange={(e) => setFormData(prev => ({ ...prev, pharmacyAddress: e.target.value }))}
                         placeholder="123 Main St, City, ST 12345"
                         required
-                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="w-full h-10 px-3 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500"
                         style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                       />
                     </div>
@@ -655,7 +655,7 @@ const RefillRequests: React.FC = () => {
                     onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
                     placeholder="Any special instructions or notes..."
                     rows={3}
-                    className="w-full p-3 rounded-xl text-white placeholder:text-white/40 resize-none focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-3 rounded-xl text-white placeholder:text-white/40 resize-none focus:outline-none focus:ring-2 focus:ring-primary-500"
                     style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}
                   />
                 </div>
@@ -671,7 +671,7 @@ const RefillRequests: React.FC = () => {
                   </Button>
                   <Button
                     type="submit"
-                    className="flex-1 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="flex-1 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                   >
                     <SendIcon className="h-4 w-4 mr-2" />
                     Submit Request

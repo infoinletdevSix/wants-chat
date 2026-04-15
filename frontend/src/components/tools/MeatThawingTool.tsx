@@ -266,7 +266,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Snowflake className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -309,7 +309,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                   onClick={() => setMeatType(meat.value)}
                   className={`p-3 rounded-lg text-center transition-all ${
                     meatType === meat.value
-                      ? 'bg-[#0D9488] text-white ring-2 ring-[#0D9488] ring-offset-2'
+                      ? 'bg-[#6096B4] text-white ring-2 ring-[#6096B4] ring-offset-2'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -339,14 +339,14 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <div className="flex">
                 <button
                   onClick={() => setWeightUnit('lbs')}
                   className={`px-4 py-3 rounded-l-lg font-medium transition-colors ${
                     weightUnit === 'lbs'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -358,7 +358,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                   onClick={() => setWeightUnit('kg')}
                   className={`px-4 py-3 rounded-r-lg font-medium transition-colors ${
                     weightUnit === 'kg'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -382,7 +382,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                   onClick={() => setMethod(methodOption.value)}
                   className={`w-full p-4 rounded-lg text-left transition-all flex items-center justify-between ${
                     method === methodOption.value
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -412,7 +412,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateThawingTime}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Clock className="w-5 h-5" />
               {t('tools.meatThawing.calculateThawingTime', 'Calculate Thawing Time')}
@@ -433,14 +433,14 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
           {result && (
             <div className="space-y-4 mb-6">
               {/* Main Result */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.meatThawing.bg0d94885', 'bg-[#0D9488]/5')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.meatThawing.bg0d94885', 'bg-[#6096B4]/5')
               }`}>
                 <div className="text-center">
                   <div className={`text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.meatThawing.estimatedThawingTime', 'Estimated Thawing Time')}
                   </div>
-                  <div className="text-4xl font-bold text-[#0D9488] mb-2">
+                  <div className="text-4xl font-bold text-[#6096B4] mb-2">
                     {formatTime(result.thawingTimeHours, result.thawingTimeMinutes)}
                   </div>
                   <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -461,7 +461,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                 <ul className={`space-y-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                   {result.temperatureGuidelines.map((tip, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <span className="text-[#0D9488] font-bold">-</span>
+                      <span className="text-[#6096B4] font-bold">-</span>
                       <span>{tip}</span>
                     </li>
                   ))}
@@ -543,7 +543,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -558,7 +558,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -588,7 +588,7 @@ export const MeatThawingTool: React.FC<MeatThawingToolProps> = ({ uiConfig }) =>
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                           {t('tools.meatThawing.thawingDuration', 'Thawing Duration:')}
                         </span>
-                        <span className="font-semibold text-[#0D9488]">
+                        <span className="font-semibold text-[#6096B4]">
                           {mealPlanResult.thawingDuration}
                         </span>
                       </div>

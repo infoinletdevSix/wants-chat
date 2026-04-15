@@ -240,7 +240,7 @@ export const TableManagementTool: React.FC<TableManagementToolProps> = ({ uiConf
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -253,8 +253,8 @@ export const TableManagementTool: React.FC<TableManagementToolProps> = ({ uiConf
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <LayoutGrid className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <LayoutGrid className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -390,7 +390,7 @@ export const TableManagementTool: React.FC<TableManagementToolProps> = ({ uiConf
                 onClick={() => setShowAddForm(!showAddForm)}
               >
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Plus className="w-5 h-5 text-[#0D9488]" />
+                  <Plus className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.tableManagement.addTable', 'Add Table')}
                 </CardTitle>
                 {showAddForm ? (
@@ -490,7 +490,7 @@ export const TableManagementTool: React.FC<TableManagementToolProps> = ({ uiConf
                 <button
                   onClick={handleAddTable}
                   disabled={!newTable.tableNumber}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.tableManagement.addTable2', 'Add Table')}
@@ -504,7 +504,7 @@ export const TableManagementTool: React.FC<TableManagementToolProps> = ({ uiConf
             <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
               <CardHeader>
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <LayoutGrid className="w-5 h-5 text-[#0D9488]" />
+                  <LayoutGrid className="w-5 h-5 text-[#6096B4]" />
                   Floor Map ({filteredTables.length} tables)
                 </CardTitle>
               </CardHeader>
@@ -727,7 +727,7 @@ export const TableManagementTool: React.FC<TableManagementToolProps> = ({ uiConf
                 <div className="flex gap-3">
                   <button
                     onClick={handleUpdateTable}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"
                   >
                     <Save className="w-5 h-5" />
                     {t('tools.tableManagement.save', 'Save')}

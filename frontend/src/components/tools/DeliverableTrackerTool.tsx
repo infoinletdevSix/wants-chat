@@ -469,9 +469,9 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.deliverableTracker.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.deliverableTracker.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -479,7 +479,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -557,7 +557,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.deliverableTracker.avgProgress', 'Avg Progress')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{stats.avgProgress.toFixed(0)}%</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{stats.avgProgress.toFixed(0)}%</p>
             </div>
           </div>
 
@@ -573,7 +573,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -645,7 +645,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
               </div>
               <button
                 onClick={() => setShowDeliverableForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.deliverableTracker.addDeliverable', 'Add Deliverable')}
@@ -722,7 +722,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                             <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                               <div
                                 className={`h-2 rounded-full transition-all ${
-                                  deliverable.progress === 100 ? 'bg-green-500' : t('tools.deliverableTracker.bg0d9488', 'bg-[#0D9488]')
+                                  deliverable.progress === 100 ? 'bg-green-500' : t('tools.deliverableTracker.bg0d9488', 'bg-[#6096B4]')
                                 }`}
                                 style={{ width: `${deliverable.progress}%` }}
                               />
@@ -733,7 +733,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                           {getNextStatus(deliverable.status) && (
                             <button
                               onClick={() => updateDeliverableStatus(deliverable.id, getNextStatus(deliverable.status)!)}
-                              className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                              className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                               title={`Move to ${getNextStatus(deliverable.status)?.replace('-', ' ')}`}
                             >
                               <ArrowRight className="w-4 h-4" />
@@ -820,7 +820,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                               </span>
                               <div className={`h-1 w-12 rounded-full ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-200'}`}>
                                 <div
-                                  className="h-1 rounded-full bg-[#0D9488]"
+                                  className="h-1 rounded-full bg-[#6096B4]"
                                   style={{ width: `${deliverable.progress}%` }}
                                 />
                               </div>
@@ -845,7 +845,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
               </h2>
               <button
                 onClick={() => setShowProjectForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.deliverableTracker.addProject', 'Add Project')}
@@ -899,7 +899,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                     </div>
                     <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-2 rounded-full bg-[#0D9488]"
+                        className="h-2 rounded-full bg-[#6096B4]"
                         style={{ width: `${overallProgress}%` }}
                       />
                     </div>
@@ -1056,7 +1056,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                 </button>
                 <button
                   onClick={addDeliverable}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.deliverableTracker.addDeliverable2', 'Add Deliverable')}
                 </button>
@@ -1146,7 +1146,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                 </button>
                 <button
                   onClick={addProject}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.deliverableTracker.addProject3', 'Add Project')}
                 </button>
@@ -1244,7 +1244,7 @@ export const DeliverableTrackerTool: React.FC<DeliverableTrackerToolProps> = ({ 
                         updateDeliverableStatus(selectedDeliverable.id, getNextStatus(selectedDeliverable.status)!);
                         setSelectedDeliverable(null);
                       }}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors flex items-center gap-2"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors flex items-center gap-2"
                     >
                       <ArrowRight className="w-4 h-4" />
                       Move to {getNextStatus(selectedDeliverable.status)?.replace('-', ' ')}

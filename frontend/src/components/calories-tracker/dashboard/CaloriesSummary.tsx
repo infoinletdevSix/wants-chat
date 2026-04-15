@@ -34,13 +34,13 @@ const CaloriesSummary: React.FC<CaloriesSummaryProps> = ({
   };
 
   return (
-    <Card className="p-6 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border border-teal-500/20">
+    <Card className="p-6 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
       <div className="space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-teal-500/20 rounded-xl">
-              <Flame className="h-8 w-8 text-teal-400" />
+            <div className="p-3 bg-primary-500/20 rounded-xl">
+              <Flame className="h-8 w-8 text-primary-400" />
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white">Daily Calories</h3>

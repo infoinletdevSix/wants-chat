@@ -95,7 +95,7 @@ export default function MediaTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               Media Tools
             </h1>
             <p className="text-gray-400">Convert and compress audio and video files</p>
@@ -103,11 +103,11 @@ export default function MediaTools() {
 
           <Tabs defaultValue="audio" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="audio" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="audio" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Music className="w-4 h-4 mr-2" />
                 Audio
               </TabsTrigger>
-              <TabsTrigger value="video" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="video" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Video className="w-4 h-4 mr-2" />
                 Video
               </TabsTrigger>
@@ -148,7 +148,7 @@ export default function MediaTools() {
                       <select
                         value={audioFormat}
                         onChange={(e) => setAudioFormat(e.target.value)}
-                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                       >
                         <option value="mp3">MP3</option>
                         <option value="wav">WAV</option>
@@ -165,7 +165,7 @@ export default function MediaTools() {
                       <select
                         value={audioBitrate}
                         onChange={(e) => setAudioBitrate(e.target.value)}
-                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                       >
                         <option value="64">64 kbps (Low)</option>
                         <option value="128">128 kbps (Standard)</option>
@@ -179,7 +179,7 @@ export default function MediaTools() {
                   <button
                     onClick={convertAudio}
                     disabled={!audioFile}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     <Download className="w-4 h-4" />
                     Convert Audio
@@ -257,7 +257,7 @@ export default function MediaTools() {
                       <select
                         value={videoQuality}
                         onChange={(e) => setVideoQuality(e.target.value)}
-                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                       >
                         <option value="low">Low (High Compression)</option>
                         <option value="medium">Medium (Balanced)</option>
@@ -269,7 +269,7 @@ export default function MediaTools() {
                       <select
                         value={videoResolution}
                         onChange={(e) => setVideoResolution(e.target.value)}
-                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-teal-500 focus:outline-none"
+                        className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-3 text-white focus:border-primary-500 focus:outline-none"
                       >
                         <option value="480">480p (SD)</option>
                         <option value="720">720p (HD)</option>
@@ -285,7 +285,7 @@ export default function MediaTools() {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm text-gray-400 mb-2">Output Format</label>
-                        <select className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-2 text-white text-sm focus:border-teal-500 focus:outline-none">
+                        <select className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-2 text-white text-sm focus:border-primary-500 focus:outline-none">
                           <option value="mp4">MP4 (H.264)</option>
                           <option value="webm">WebM (VP9)</option>
                           <option value="avi">AVI</option>
@@ -295,7 +295,7 @@ export default function MediaTools() {
                       </div>
                       <div>
                         <label className="block text-sm text-gray-400 mb-2">Frame Rate</label>
-                        <select className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-2 text-white text-sm focus:border-teal-500 focus:outline-none">
+                        <select className="w-full bg-gray-900/50 border border-gray-700 rounded-lg p-2 text-white text-sm focus:border-primary-500 focus:outline-none">
                           <option value="24">24 fps (Cinema)</option>
                           <option value="30">30 fps (Standard)</option>
                           <option value="60">60 fps (Smooth)</option>
@@ -307,7 +307,7 @@ export default function MediaTools() {
                   <button
                     onClick={compressVideo}
                     disabled={!videoFile}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     <Download className="w-4 h-4" />
                     Compress Video

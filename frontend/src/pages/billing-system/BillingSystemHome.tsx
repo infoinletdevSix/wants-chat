@@ -453,7 +453,7 @@ const BillingSystemHome: React.FC = () => {
         <BackgroundEffects variant="subtle" />
         <Header />
         <div className="flex items-center justify-center min-h-[60vh]">
-          <Loader2 className="w-8 h-8 text-teal-400 animate-spin" />
+          <Loader2 className="w-8 h-8 text-primary-400 animate-spin" />
         </div>
       </div>
     );
@@ -473,7 +473,7 @@ const BillingSystemHome: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-xl shadow-teal-500/30 mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-cyan-600 text-white shadow-xl shadow-primary-500/30 mb-6">
               <Receipt className="w-8 h-8" />
             </div>
             <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -538,8 +538,8 @@ const BillingSystemHome: React.FC = () => {
             <Card className="bg-white/10 backdrop-blur-xl border-white/20">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-teal-500/20">
-                    <FileText className="w-5 h-5 text-teal-400" />
+                  <div className="p-2 rounded-lg bg-primary-500/20">
+                    <FileText className="w-5 h-5 text-primary-400" />
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-white">
@@ -605,7 +605,7 @@ const BillingSystemHome: React.FC = () => {
                   </div>
                   <Button
                     onClick={() => setShowInvoiceDialog(true)}
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     New Invoice
@@ -626,8 +626,8 @@ const BillingSystemHome: React.FC = () => {
                         className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
                       >
                         <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center">
-                            <FileText className="w-5 h-5 text-teal-400" />
+                          <div className="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center">
+                            <FileText className="w-5 h-5 text-primary-400" />
                           </div>
                           <div>
                             <p className="font-semibold text-white">
@@ -701,7 +701,7 @@ const BillingSystemHome: React.FC = () => {
                       resetClientForm();
                       setShowClientDialog(true);
                     }}
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Add Client
@@ -799,7 +799,7 @@ const BillingSystemHome: React.FC = () => {
                   </div>
                   <Button
                     onClick={() => setShowPaymentDialog(true)}
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Record Payment

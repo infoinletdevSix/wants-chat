@@ -495,7 +495,7 @@ export const SalonClientRecordsTool = ({
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-[#0D9488] mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin text-[#6096B4] mx-auto mb-4" />
           <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}>{t('tools.salonClientRecords.loadingClientRecords', 'Loading client records...')}</p>
         </div>
       </div>
@@ -509,7 +509,7 @@ export const SalonClientRecordsTool = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Scissors className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -552,7 +552,7 @@ export const SalonClientRecordsTool = ({
               />
               <button
                 onClick={createNewClient}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.salonClientRecords.newClient', 'New Client')}
@@ -576,7 +576,7 @@ export const SalonClientRecordsTool = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -598,7 +598,7 @@ export const SalonClientRecordsTool = ({
                     }}
                     className={`p-3 rounded-lg cursor-pointer transition-colors ${
                       selectedClient?.id === client.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 hover:bg-gray-600 text-white'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
@@ -706,7 +706,7 @@ export const SalonClientRecordsTool = ({
                               setEditingClient(currentClient);
                               setIsEditing(true);
                             }}
-                            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                           >
                             <Edit className="w-5 h-5" />
                             {t('tools.salonClientRecords.edit', 'Edit')}
@@ -738,7 +738,7 @@ export const SalonClientRecordsTool = ({
                       onClick={() => setActiveTab(id as typeof activeTab)}
                       className={`flex items-center gap-2 px-6 py-3 font-medium transition-colors whitespace-nowrap ${
                         activeTab === id
-                          ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                          ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                           : theme === 'dark'
                           ? 'text-gray-400 hover:text-gray-300'
                           : 'text-gray-500 hover:text-gray-700'
@@ -759,7 +759,7 @@ export const SalonClientRecordsTool = ({
                       <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                         <CardHeader>
                           <CardTitle className={`flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                            <User className="w-5 h-5 text-[#0D9488]" />
+                            <User className="w-5 h-5 text-[#6096B4]" />
                             {t('tools.salonClientRecords.contactInformation', 'Contact Information')}
                           </CardTitle>
                         </CardHeader>
@@ -774,7 +774,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ firstName: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.firstName || '-'}</p>
@@ -789,7 +789,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ lastName: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.lastName || '-'}</p>
@@ -807,7 +807,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ phone: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.phone || '-'}</p>
@@ -825,7 +825,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ email: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.email || '-'}</p>
@@ -843,7 +843,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ birthday: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.birthday || '-'}</p>
@@ -861,7 +861,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ preferredStylist: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.preferredStylist || '-'}</p>
@@ -875,7 +875,7 @@ export const SalonClientRecordsTool = ({
                       <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                         <CardHeader>
                           <CardTitle className={`flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                            <Crown className="w-5 h-5 text-[#0D9488]" />
+                            <Crown className="w-5 h-5 text-[#6096B4]" />
                             {t('tools.salonClientRecords.loyaltyReferral', 'Loyalty & Referral')}
                           </CardTitle>
                         </CardHeader>
@@ -889,7 +889,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ loyaltyStatus: e.target.value as Client['loyaltyStatus'] })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   <option value="regular">{t('tools.salonClientRecords.regular', 'Regular')}</option>
                                   <option value="silver">{t('tools.salonClientRecords.silver', 'Silver')}</option>
@@ -909,7 +909,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateEditingClient({ referralSource: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   <option value="">{t('tools.salonClientRecords.select', 'Select...')}</option>
                                   {referralSources.map((src) => (
@@ -930,7 +930,7 @@ export const SalonClientRecordsTool = ({
                                   placeholder={t('tools.salonClientRecords.clientName', 'Client name...')}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.referredBy || '-'}</p>
@@ -940,11 +940,11 @@ export const SalonClientRecordsTool = ({
                           <div className="grid grid-cols-2 gap-4 mt-4">
                             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.salonClientRecords.totalSpent', 'Total Spent')}</p>
-                              <p className={`text-2xl font-bold text-[#0D9488]`}>${currentClient.totalSpent.toFixed(2)}</p>
+                              <p className={`text-2xl font-bold text-[#6096B4]`}>${currentClient.totalSpent.toFixed(2)}</p>
                             </div>
                             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.salonClientRecords.totalVisits', 'Total Visits')}</p>
-                              <p className={`text-2xl font-bold text-[#0D9488]`}>{currentClient.visitCount}</p>
+                              <p className={`text-2xl font-bold text-[#6096B4]`}>{currentClient.visitCount}</p>
                             </div>
                           </div>
                         </CardContent>
@@ -992,7 +992,7 @@ export const SalonClientRecordsTool = ({
                                     }}
                                     className={`flex-1 px-3 py-1 rounded-lg border text-sm ${
                                       theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                   />
                                 </div>
                               )}
@@ -1040,7 +1040,7 @@ export const SalonClientRecordsTool = ({
                                     }}
                                     className={`flex-1 px-3 py-1 rounded-lg border text-sm ${
                                       theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                   />
                                 </div>
                               )}
@@ -1054,7 +1054,7 @@ export const SalonClientRecordsTool = ({
                         <CardHeader className="cursor-pointer" onClick={() => toggleSection('products')}>
                           <CardTitle className={`flex items-center justify-between ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                             <span className="flex items-center gap-2">
-                              <Sparkles className="w-5 h-5 text-[#0D9488]" />
+                              <Sparkles className="w-5 h-5 text-[#6096B4]" />
                               {t('tools.salonClientRecords.productPreferences', 'Product Preferences')}
                             </span>
                             {expandedSections.products ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
@@ -1064,10 +1064,10 @@ export const SalonClientRecordsTool = ({
                           <CardContent>
                             <div className="flex flex-wrap gap-2">
                               {currentClient.productPreferences.map((product, idx) => (
-                                <span key={idx} className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-sm dark:bg-teal-900/30 dark:text-teal-400">
+                                <span key={idx} className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm dark:bg-primary-900/30 dark:text-primary-400">
                                   {product}
                                   {isEditing && (
-                                    <button onClick={() => removeListItem('productPreferences', idx)} className="ml-1 hover:text-teal-900">
+                                    <button onClick={() => removeListItem('productPreferences', idx)} className="ml-1 hover:text-primary-900">
                                       <X className="w-3 h-3" />
                                     </button>
                                   )}
@@ -1090,7 +1090,7 @@ export const SalonClientRecordsTool = ({
                                   }}
                                   className={`flex-1 px-3 py-1 rounded-lg border text-sm ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                             )}
@@ -1106,7 +1106,7 @@ export const SalonClientRecordsTool = ({
                       <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                         <CardHeader>
                           <CardTitle className={`flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                            <Palette className="w-5 h-5 text-[#0D9488]" />
+                            <Palette className="w-5 h-5 text-[#6096B4]" />
                             {t('tools.salonClientRecords.hairCharacteristics', 'Hair Characteristics')}
                           </CardTitle>
                         </CardHeader>
@@ -1122,7 +1122,7 @@ export const SalonClientRecordsTool = ({
                                   placeholder={t('tools.salonClientRecords.eGDarkBrown', 'e.g., Dark Brown')}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.hairProfile.naturalColor || '-'}</p>
@@ -1138,7 +1138,7 @@ export const SalonClientRecordsTool = ({
                                   placeholder={t('tools.salonClientRecords.eGBalayageBlonde', 'e.g., Balayage Blonde')}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               ) : (
                                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.hairProfile.currentColor || '-'}</p>
@@ -1152,7 +1152,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateHairProfile({ texture: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   <option value="">{t('tools.salonClientRecords.select2', 'Select...')}</option>
                                   {textureOptions.map((opt) => (
@@ -1171,7 +1171,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateHairProfile({ condition: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   <option value="">{t('tools.salonClientRecords.select3', 'Select...')}</option>
                                   {conditionOptions.map((opt) => (
@@ -1190,7 +1190,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateHairProfile({ porosity: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   <option value="">{t('tools.salonClientRecords.select4', 'Select...')}</option>
                                   {porosityOptions.map((opt) => (
@@ -1209,7 +1209,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => updateHairProfile({ density: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 >
                                   <option value="">{t('tools.salonClientRecords.select5', 'Select...')}</option>
                                   {densityOptions.map((opt) => (
@@ -1231,7 +1231,7 @@ export const SalonClientRecordsTool = ({
                                 placeholder={t('tools.salonClientRecords.anyAdditionalNotesAboutHair', 'Any additional notes about hair condition, treatments, etc.')}
                                 className={`w-full px-3 py-2 rounded-lg border ${
                                   theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
                               />
                             ) : (
                               <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{currentClient.hairProfile.notes || '-'}</p>
@@ -1277,7 +1277,7 @@ export const SalonClientRecordsTool = ({
                                 }}
                                 className={`flex-1 px-3 py-1 rounded-lg border text-sm ${
                                   theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                             </div>
                           )}
@@ -1293,7 +1293,7 @@ export const SalonClientRecordsTool = ({
                         <div className="flex justify-end">
                           <button
                             onClick={() => setShowServiceForm(!showServiceForm)}
-                            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                           >
                             <Plus className="w-5 h-5" />
                             {t('tools.salonClientRecords.addService', 'Add Service')}
@@ -1306,7 +1306,7 @@ export const SalonClientRecordsTool = ({
                         <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                           <CardHeader>
                             <CardTitle className={`flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                              <Plus className="w-5 h-5 text-[#0D9488]" />
+                              <Plus className="w-5 h-5 text-[#6096B4]" />
                               {t('tools.salonClientRecords.newServiceRecord', 'New Service Record')}
                             </CardTitle>
                           </CardHeader>
@@ -1320,7 +1320,7 @@ export const SalonClientRecordsTool = ({
                                   onChange={(e) => setNewService({ ...newService, date: e.target.value })}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                               <div>
@@ -1332,7 +1332,7 @@ export const SalonClientRecordsTool = ({
                                   placeholder={t('tools.salonClientRecords.eGHaircutColorHighlights', 'e.g., Haircut, Color, Highlights')}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                               <div>
@@ -1344,7 +1344,7 @@ export const SalonClientRecordsTool = ({
                                   placeholder={t('tools.salonClientRecords.stylistName', 'Stylist name')}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                               <div>
@@ -1358,7 +1358,7 @@ export const SalonClientRecordsTool = ({
                                   step="0.01"
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                               <div>
@@ -1370,7 +1370,7 @@ export const SalonClientRecordsTool = ({
                                   placeholder={t('tools.salonClientRecords.eG2Hours', 'e.g., 2 hours')}
                                   className={`w-full px-3 py-2 rounded-lg border ${
                                     theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                             </div>
@@ -1383,7 +1383,7 @@ export const SalonClientRecordsTool = ({
                                 placeholder={t('tools.salonClientRecords.notesAboutThisVisit', 'Notes about this visit...')}
                                 className={`w-full px-3 py-2 rounded-lg border ${
                                   theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
                               />
                             </div>
 
@@ -1394,7 +1394,7 @@ export const SalonClientRecordsTool = ({
                                   type="checkbox"
                                   checked={includeColorFormula}
                                   onChange={(e) => setIncludeColorFormula(e.target.checked)}
-                                  className="w-4 h-4 rounded text-[#0D9488] focus:ring-[#0D9488]"
+                                  className="w-4 h-4 rounded text-[#6096B4] focus:ring-[#6096B4]"
                                 />
                                 <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.salonClientRecords.includeColorFormula', 'Include Color Formula')}</span>
                               </label>
@@ -1414,7 +1414,7 @@ export const SalonClientRecordsTool = ({
                                       placeholder="e.g., 8A + 9N (1:1)"
                                       className={`w-full px-3 py-2 rounded-lg border ${
                                         theme === 'dark' ? 'bg-gray-700 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                     />
                                   </div>
                                   <div>
@@ -1426,7 +1426,7 @@ export const SalonClientRecordsTool = ({
                                       placeholder={t('tools.salonClientRecords.eG20Vol', 'e.g., 20 Vol')}
                                       className={`w-full px-3 py-2 rounded-lg border ${
                                         theme === 'dark' ? 'bg-gray-700 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                     />
                                   </div>
                                   <div>
@@ -1438,7 +1438,7 @@ export const SalonClientRecordsTool = ({
                                       placeholder={t('tools.salonClientRecords.eG35Minutes', 'e.g., 35 minutes')}
                                       className={`w-full px-3 py-2 rounded-lg border ${
                                         theme === 'dark' ? 'bg-gray-700 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                     />
                                   </div>
                                   <div>
@@ -1450,7 +1450,7 @@ export const SalonClientRecordsTool = ({
                                       placeholder={t('tools.salonClientRecords.anyNotes', 'Any notes...')}
                                       className={`w-full px-3 py-2 rounded-lg border ${
                                         theme === 'dark' ? 'bg-gray-700 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                     />
                                   </div>
                                 </div>
@@ -1495,7 +1495,7 @@ export const SalonClientRecordsTool = ({
                                   <div className="flex-1">
                                     <div className="flex items-center gap-3 mb-2">
                                       <span className={`text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{service.service}</span>
-                                      <span className="text-[#0D9488] font-medium">${service.price.toFixed(2)}</span>
+                                      <span className="text-[#6096B4] font-medium">${service.price.toFixed(2)}</span>
                                     </div>
                                     <div className={`flex flex-wrap items-center gap-4 text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                                       <span className="flex items-center gap-1">
@@ -1586,7 +1586,7 @@ export const SalonClientRecordsTool = ({
                           </button>
                           <button
                             onClick={() => addPhoto('after')}
-                            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                           >
                             <Plus className="w-5 h-5" />
                             {t('tools.salonClientRecords.addAfterPhoto', 'Add After Photo')}
@@ -1642,7 +1642,7 @@ export const SalonClientRecordsTool = ({
                       <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                         <CardHeader>
                           <CardTitle className={`flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                            <FileText className="w-5 h-5 text-[#0D9488]" />
+                            <FileText className="w-5 h-5 text-[#6096B4]" />
                             {t('tools.salonClientRecords.generalNotes', 'General Notes')}
                           </CardTitle>
                         </CardHeader>
@@ -1655,7 +1655,7 @@ export const SalonClientRecordsTool = ({
                               placeholder={t('tools.salonClientRecords.addAnyGeneralNotesAbout', 'Add any general notes about this client...')}
                               className={`w-full px-3 py-2 rounded-lg border ${
                                 theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
                             />
                           ) : (
                             <div className={`min-h-[200px] ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -1674,7 +1674,7 @@ export const SalonClientRecordsTool = ({
                         <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                           <CardHeader>
                             <CardTitle className={`flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                              <Scissors className="w-5 h-5 text-[#0D9488]" />
+                              <Scissors className="w-5 h-5 text-[#6096B4]" />
                               {t('tools.salonClientRecords.notesFromVisits', 'Notes from Visits')}
                             </CardTitle>
                           </CardHeader>

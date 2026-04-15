@@ -93,7 +93,7 @@ const FitnessLayout: React.FC = () => {
                   className={cn(
                     "flex items-center gap-2 py-4 px-1 border-b-2 text-sm font-medium whitespace-nowrap transition-colors",
                     isActive
-                      ? "border-teal-400 text-teal-400"
+                      ? "border-primary-400 text-primary-400"
                       : "border-transparent text-white/60 hover:text-white hover:border-white/40"
                   )}
                 >

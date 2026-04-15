@@ -177,7 +177,7 @@ const ScheduleCheckup: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Welcome Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             Manage Your Appointments
           </h1>
@@ -194,8 +194,8 @@ const ScheduleCheckup: React.FC = () => {
                 <p className="text-sm text-white/60 mb-1">Total Appointments</p>
                 <p className="text-3xl font-bold text-white">{appointments.length}</p>
               </div>
-              <div className="p-3 rounded-full bg-teal-500/20">
-                <CalendarToday className="h-6 w-6 text-teal-400" />
+              <div className="p-3 rounded-full bg-primary-500/20">
+                <CalendarToday className="h-6 w-6 text-primary-400" />
               </div>
             </div>
           </Card>
@@ -264,7 +264,7 @@ const ScheduleCheckup: React.FC = () => {
             <SelectTrigger className="w-full md:w-48 rounded-xl bg-white/10 border-white/20 text-white">
               <SelectValue placeholder="Filter by type" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="all">All Types</SelectItem>
               <SelectItem value="prenatal">Prenatal</SelectItem>
               <SelectItem value="ultrasound">Ultrasound</SelectItem>
@@ -279,7 +279,7 @@ const ScheduleCheckup: React.FC = () => {
             <SelectTrigger className="w-full md:w-48 rounded-xl bg-white/10 border-white/20 text-white">
               <SelectValue placeholder="Filter by status" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="all">All Status</SelectItem>
               <SelectItem value="scheduled">Scheduled</SelectItem>
               <SelectItem value="completed">Completed</SelectItem>
@@ -289,7 +289,7 @@ const ScheduleCheckup: React.FC = () => {
           </Select>
 
           <Button
-            className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             onClick={() => navigate('/health/add-checkup-appointment')}
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -301,7 +301,7 @@ const ScheduleCheckup: React.FC = () => {
         {appointmentsLoading ? (
           <div className="flex justify-center items-center py-12">
             <div className="text-center">
-              <div className="animate-spin h-12 w-12 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+              <div className="animate-spin h-12 w-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"></div>
               <p className="text-white/60">Loading appointments...</p>
             </div>
           </div>
@@ -310,7 +310,7 @@ const ScheduleCheckup: React.FC = () => {
             <p className="text-red-400 mb-4">{String(appointmentsError) || 'Failed to load appointments'}</p>
             <Button
               onClick={() => refetchAppointments()}
-              className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             >
               Try Again
             </Button>
@@ -325,7 +325,7 @@ const ScheduleCheckup: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {upcomingAppointments.map(appointment => (
-                <Card key={appointment.id} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/30 transition-all">
+                <Card key={appointment.id} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-500/30 transition-all">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div
@@ -486,7 +486,7 @@ const ScheduleCheckup: React.FC = () => {
             </p>
             <Button
               onClick={() => navigate('/health/add-checkup-appointment')}
-              className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             >
               <Plus className="h-5 w-5 mr-2" />
               Schedule Appointment

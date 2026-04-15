@@ -193,9 +193,9 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Package className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Package className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.movingBoxCalculator.movingBoxCalculator', 'Moving Box Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.movingBoxCalculator.estimateBoxesNeededForYour', 'Estimate boxes needed for your move')}</p>
@@ -205,9 +205,9 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.movingBoxCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.movingBoxCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -224,7 +224,7 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
                 onClick={() => setHomeSize(size)}
                 className={`py-2 px-2 rounded-lg text-sm text-center ${
                   homeSize === size
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -248,7 +248,7 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
                 onClick={() => setPackingStyle(style)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   packingStyle === style
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -301,7 +301,7 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
         <div className="space-y-2">
           <button
             onClick={() => setHasSpecialItems(!hasSpecialItems)}
-            className={`w-full py-2 rounded-lg flex items-center justify-center gap-2 ${hasSpecialItems ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+            className={`w-full py-2 rounded-lg flex items-center justify-center gap-2 ${hasSpecialItems ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
           >
             <Truck className="w-4 h-4" />
             {t('tools.movingBoxCalculator.includeSpecialtyBoxesTvsMirrors', 'Include specialty boxes (TVs, mirrors, mattresses)')}
@@ -309,9 +309,9 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
         </div>
 
         {/* Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.movingBoxCalculator.totalBoxesNeeded', 'Total Boxes Needed')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {calculations.boxes.total}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -346,7 +346,7 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
         {/* Packing Supplies */}
         <div className={`rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'} p-4`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <CheckCircle className="w-4 h-4 inline mr-2 text-teal-500" />
+            <CheckCircle className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.movingBoxCalculator.packingSuppliesNeeded', 'Packing Supplies Needed')}
           </h4>
           <div className="grid grid-cols-3 gap-4">
@@ -391,7 +391,7 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
         {/* Cost Estimate */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <DollarSign className="w-4 h-4 inline mr-2 text-teal-500" />
+            <DollarSign className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.movingBoxCalculator.estimatedSupplyCost', 'Estimated Supply Cost')}
           </h4>
           <div className="space-y-2">
@@ -411,7 +411,7 @@ export const MovingBoxCalculatorTool: React.FC<MovingBoxCalculatorToolProps> = (
             )}
             <div className={`flex justify-between font-bold pt-2 border-t ${isDark ? 'border-gray-700 text-white' : 'border-gray-200 text-gray-900'}`}>
               <span>{t('tools.movingBoxCalculator.totalEstimate', 'Total Estimate')}</span>
-              <span className="text-teal-500">${calculations.costs.total.toFixed(2)}</span>
+              <span className="text-primary-500">${calculations.costs.total.toFixed(2)}</span>
             </div>
           </div>
         </div>

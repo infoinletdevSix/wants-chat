@@ -289,14 +289,14 @@ Date: _________________
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg">
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">{t('tools.contractTemplate.contractTemplateGenerator', 'Contract Template Generator')}</h1>
-                <p className="text-teal-100 text-sm mt-1">{t('tools.contractTemplate.createProfessionalLegalContractsWith', 'Create professional legal contracts with customizable clauses')}</p>
+                <p className="text-primary-100 text-sm mt-1">{t('tools.contractTemplate.createProfessionalLegalContractsWith', 'Create professional legal contracts with customizable clauses')}</p>
               </div>
             </div>
           </div>
@@ -314,7 +314,7 @@ Date: _________________
                     onClick={() => handleContractTypeChange(type.value)}
                     className={`p-3 rounded-lg border text-left transition-all ${
                       contractData.contractType === type.value
-                        ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/30'
+                        ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/30'
                         : isDark
                         ? 'border-gray-600 hover:border-gray-500 bg-gray-700'
                         : 'border-gray-200 hover:border-gray-300 bg-white'
@@ -322,7 +322,7 @@ Date: _________________
                   >
                     <div className={`font-medium text-sm ${
                       contractData.contractType === type.value
-                        ? 'text-teal-700 dark:text-teal-300'
+                        ? 'text-primary-700 dark:text-primary-300'
                         : isDark ? 'text-gray-200' : 'text-gray-900'
                     }`}>
                       {type.label}
@@ -343,7 +343,7 @@ Date: _________________
                   onClick={() => setActiveTab(tab)}
                   className={`px-4 py-2 font-medium text-sm capitalize transition-colors ${
                     activeTab === tab
-                      ? 'text-teal-600 border-b-2 border-teal-600'
+                      ? 'text-primary-600 border-b-2 border-primary-600'
                       : isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -366,7 +366,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyA: { ...prev.partyA, name: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                     <input
                       type="text"
@@ -375,7 +375,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyA: { ...prev.partyA, address: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                     <input
                       type="email"
@@ -384,7 +384,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyA: { ...prev.partyA, email: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                     <input
                       type="text"
@@ -393,7 +393,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyA: { ...prev.partyA, representative: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                 </div>
@@ -409,7 +409,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyB: { ...prev.partyB, name: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                     <input
                       type="text"
@@ -418,7 +418,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyB: { ...prev.partyB, address: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                     <input
                       type="email"
@@ -427,7 +427,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyB: { ...prev.partyB, email: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                     <input
                       type="text"
@@ -436,7 +436,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, partyB: { ...prev.partyB, representative: e.target.value } }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                 </div>
@@ -456,7 +456,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, effectiveDate: e.target.value }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                   <div>
@@ -469,7 +469,7 @@ Date: _________________
                       onChange={(e) => setContractData(prev => ({ ...prev, terminationDate: e.target.value }))}
                       className={`w-full px-3 py-2 rounded-lg border ${
                         isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-teal-500`}
+                      } focus:ring-2 focus:ring-primary-500`}
                     />
                   </div>
                 </div>
@@ -483,7 +483,7 @@ Date: _________________
                     onChange={(e) => setContractData(prev => ({ ...prev, governingLaw: e.target.value }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     {US_STATES.map((state) => (
                       <option key={state} value={state}>{state}</option>
@@ -502,7 +502,7 @@ Date: _________________
                     rows={4}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
 
@@ -517,7 +517,7 @@ Date: _________________
                     rows={3}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -529,7 +529,7 @@ Date: _________________
                   <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.contractTemplate.contractClauses', 'Contract Clauses')}</h3>
                   <button
                     onClick={addCustomClause}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm transition-colors"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.contractTemplate.addClause', 'Add Clause')}
@@ -542,7 +542,7 @@ Date: _________________
                       key={clause.id}
                       className={`p-4 rounded-lg border ${
                         clause.isIncluded
-                          ? isDark ? 'border-teal-500/50 bg-teal-900/20' : 'border-teal-200 bg-teal-50'
+                          ? isDark ? 'border-primary-500/50 bg-primary-900/20' : 'border-primary-200 bg-primary-50'
                           : isDark ? 'border-gray-600 bg-gray-700/50' : 'border-gray-200 bg-gray-50'
                       }`}
                     >
@@ -552,7 +552,7 @@ Date: _________________
                           checked={clause.isIncluded}
                           onChange={() => toggleClause(clause.id)}
                           disabled={clause.isRequired}
-                          className="mt-1 w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                          className="mt-1 w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                         />
                         <div className="flex-1">
                           {clause.isRequired ? (
@@ -561,7 +561,7 @@ Date: _________________
                                 <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                                   {clause.title}
                                 </span>
-                                <span className="text-xs px-2 py-0.5 bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 rounded">
+                                <span className="text-xs px-2 py-0.5 bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300 rounded">
                                   {t('tools.contractTemplate.required', 'Required')}
                                 </span>
                               </div>
@@ -611,7 +611,7 @@ Date: _________________
             <div className="flex gap-3">
               <button
                 onClick={generateContract}
-                className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <FileText className="w-5 h-5" />
                 {t('tools.contractTemplate.generateContract', 'Generate Contract')}
@@ -647,7 +647,7 @@ Date: _________________
                     </button>
                     <button
                       onClick={downloadContract}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
                     >
                       <Download className="w-4 h-4" />
                       {t('tools.contractTemplate.download', 'Download')}

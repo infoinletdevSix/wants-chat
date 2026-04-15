@@ -436,9 +436,9 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.productionQueue.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.productionQueue.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -446,7 +446,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <ListOrdered className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -529,7 +529,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
                 onClick={() => setActiveView(view.id as typeof activeView)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeView === view.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -557,7 +557,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 />
               </div>
             </div>
@@ -605,7 +605,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
             </select>
             <button
               onClick={() => setShowItemForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.productionQueue.addToQueue', 'Add to Queue')}
@@ -712,7 +712,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
                             className={`p-1.5 rounded ${theme === 'dark' ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}
                             title={t('tools.productionQueue.edit', 'Edit')}
                           >
-                            <Edit2 className="w-4 h-4 text-[#0D9488]" />
+                            <Edit2 className="w-4 h-4 text-[#6096B4]" />
                           </button>
                           <button
                             onClick={() => deleteItem(item.id)}
@@ -733,7 +733,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
                   <p>{t('tools.productionQueue.noItemsInQueue', 'No items in queue')}</p>
                   <button
                     onClick={() => setShowItemForm(true)}
-                    className="mt-4 text-[#0D9488] hover:underline"
+                    className="mt-4 text-[#6096B4] hover:underline"
                   >
                     {t('tools.productionQueue.addYourFirstItem', 'Add your first item')}
                   </button>
@@ -973,7 +973,7 @@ export const ProductionQueueTool: React.FC<ProductionQueueToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={editingItem ? updateItem : addItem}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingItem ? t('tools.productionQueue.update', 'Update') : t('tools.productionQueue.addToQueue3', 'Add to Queue')}
                   </button>

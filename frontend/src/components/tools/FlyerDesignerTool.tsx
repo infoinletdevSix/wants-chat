@@ -305,10 +305,10 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.flyerDesigner.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.flyerDesigner.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.flyerDesigner.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.flyerDesigner.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <FileImage className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <FileImage className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.flyerDesigner.aiFlyerDesigner', 'AI Flyer Designer')}</h3>
@@ -329,7 +329,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
               const purpose = flyerPurposes.find((p) => p.label === e.target.value);
               if (purpose) setSelectedPurpose(purpose);
             }}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {flyerPurposes.map((purpose) => (
               <option key={purpose.label} value={purpose.label}>
@@ -349,7 +349,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
             value={formData.businessName}
             onChange={(e) => handleInputChange('businessName', e.target.value)}
             placeholder={t('tools.flyerDesigner.grandOpeningSale', 'Grand Opening Sale')}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-lg font-semibold`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-lg font-semibold`}
           />
         </div>
 
@@ -362,7 +362,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
             {formData.keyPoints.length < 5 && (
               <button
                 onClick={addKeyPoint}
-                className="text-sm text-[#0D9488] hover:text-[#2DD4BF] flex items-center gap-1 transition-colors"
+                className="text-sm text-[#6096B4] hover:text-[#75AAC1] flex items-center gap-1 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.flyerDesigner.addPoint', 'Add Point')}
@@ -377,7 +377,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
                 value={point}
                 onChange={(e) => handleKeyPointChange(index, e.target.value)}
                 placeholder={`Key point ${index + 1} (e.g., "Up to 50% OFF all items")`}
-                className={`flex-1 px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`flex-1 px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
               {formData.keyPoints.length > 3 && (
                 <button
@@ -401,7 +401,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
             value={formData.contactInfo}
             onChange={(e) => handleInputChange('contactInfo', e.target.value)}
             placeholder={t('tools.flyerDesigner.callUs5551234567', 'Call us: (555) 123-4567 | www.example.com')}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -418,7 +418,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
                   const style = flyerStyles.find((s) => s.label === e.target.value);
                   if (style) setSelectedStyle(style);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {flyerStyles.map((style) => (
                   <option key={style.label} value={style.label}>
@@ -436,7 +436,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
                   const color = colorSchemes.find((c) => c.label === e.target.value);
                   if (color) setSelectedColor(color);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {colorSchemes.map((color) => (
                   <option key={color.label} value={color.label}>
@@ -454,7 +454,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
                   const size = sizePresets.find((s) => s.label === e.target.value);
                   if (size) setSelectedSize(size);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {sizePresets.map((size) => (
                   <option key={size.label} value={size.label}>
@@ -477,7 +477,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !formData.businessName}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -551,7 +551,7 @@ export const FlyerDesignerTool: React.FC<FlyerDesignerToolProps> = ({ uiConfig }
                     <button
                       onClick={() => handleSave(flyer.url, flyer.prompt)}
                       disabled={isSaving}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                       title={t('tools.flyerDesigner.saveToGallery', 'Save to Gallery')}
                     >
                       <Save className="w-5 h-5" />

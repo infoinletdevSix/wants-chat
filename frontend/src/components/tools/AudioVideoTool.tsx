@@ -833,14 +833,14 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
       }`}
     >
       <div className="flex items-center gap-3">
-        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-          <Icon className="w-5 h-5 text-[#0D9488]" />
+        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+          <Icon className="w-5 h-5 text-[#6096B4]" />
         </div>
         <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
           {title}
         </span>
         {badge !== undefined && (
-          <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#0D9488]/20 text-[#0D9488]">
+          <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#6096B4]/20 text-[#6096B4]">
             {badge}
           </span>
         )}
@@ -857,19 +857,19 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const textareaClasses = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] resize-none`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] resize-none`;
 
   const selectClasses = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClasses = `block text-sm font-medium mb-2 ${
     theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
@@ -892,8 +892,8 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Video className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Video className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -958,9 +958,9 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.audioVideo.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.audioVideo.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
         </div>
       )}
 
@@ -1000,7 +1000,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
         </div>
         <div className="text-center">
           <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.audioVideo.budget', 'Budget')}</p>
-          <p className={`text-lg font-bold text-[#0D9488]`}>
+          <p className={`text-lg font-bold text-[#6096B4]`}>
             ${stats.totalActual.toLocaleString()}
           </p>
         </div>
@@ -1031,7 +1031,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
             onClick={() => setActiveTab(tab.id)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-700 hover:bg-gray-600 text-gray-200'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -1058,7 +1058,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                       key={project.id}
                       className={`p-4 rounded-lg ${
                         project.id === data.activeProjectId
-                          ? 'ring-2 ring-[#0D9488] ' + (theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50')
+                          ? 'ring-2 ring-[#6096B4] ' + (theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50')
                           : theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
                       }`}
                     >
@@ -1156,7 +1156,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                           onClick={() => updateData('activeProjectId', project.id)}
                           className={`px-4 py-2 text-sm rounded-lg transition-colors ${
                             project.id === data.activeProjectId
-                              ? t('tools.audioVideo.bg0d9488TextWhite', 'bg-[#0D9488] text-white') : t('tools.audioVideo.text0d9488HoverBg0d9488', 'text-[#0D9488] hover:bg-[#0D9488]/10')
+                              ? t('tools.audioVideo.bg0d9488TextWhite', 'bg-[#6096B4] text-white') : t('tools.audioVideo.text0d9488HoverBg0d9488', 'text-[#6096B4] hover:bg-[#6096B4]/10')
                           }`}
                         >
                           {project.id === data.activeProjectId ? t('tools.audioVideo.active', 'Active') : t('tools.audioVideo.setActive', 'Set Active')}
@@ -1172,7 +1172,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                   ))}
                   <button
                     onClick={addProject}
-                    className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.audioVideo.addProject', 'Add Project')}
@@ -1271,7 +1271,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                   ))}
                   <button
                     onClick={addClient}
-                    className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.audioVideo.addClient', 'Add Client')}
@@ -1372,7 +1372,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                 })}
                 <button
                   onClick={addEquipment}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.audioVideo.addEquipment', 'Add Equipment')}
@@ -1470,7 +1470,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                   ))}
                   <button
                     onClick={addStudioBooking}
-                    className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.audioVideo.addBooking', 'Add Booking')}
@@ -1574,7 +1574,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addCrewMember}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addCrewMember', 'Add Crew Member')}
@@ -1644,7 +1644,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addCrewAssignment}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addAssignment', 'Add Assignment')}
@@ -1678,7 +1678,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                             className="mt-1"
                           >
                             {shot.completed ? (
-                              <CheckSquare className="w-5 h-5 text-[#0D9488]" />
+                              <CheckSquare className="w-5 h-5 text-[#6096B4]" />
                             ) : (
                               <Square className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                             )}
@@ -1747,7 +1747,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addShotListItem}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addShot', 'Add Shot')}
@@ -1830,7 +1830,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addStoryboardItem}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addFrame', 'Add Frame')}
@@ -1915,7 +1915,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                   })}
                   <button
                     onClick={addPostProductionTask}
-                    className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.audioVideo.addTask', 'Add Task')}
@@ -1994,7 +1994,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addRevision}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addRevision', 'Add Revision')}
@@ -2028,7 +2028,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                             className="mt-1"
                           >
                             {format.delivered ? (
-                              <CheckSquare className="w-5 h-5 text-[#0D9488]" />
+                              <CheckSquare className="w-5 h-5 text-[#6096B4]" />
                             ) : (
                               <Square className={`w-5 h-5 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                             )}
@@ -2097,7 +2097,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addDeliverableFormat}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addFormat', 'Add Format')}
@@ -2188,7 +2188,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addFileTransfer}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addTransfer', 'Add Transfer')}
@@ -2283,7 +2283,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                     ))}
                     <button
                       onClick={addLicense}
-                      className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.audioVideo.addLicense', 'Add License')}
@@ -2329,7 +2329,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                   </div>
                   <div className="text-center">
                     <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.audioVideo.projectBudget', 'Project Budget')}</p>
-                    <p className={`text-lg font-bold text-[#0D9488]`}>
+                    <p className={`text-lg font-bold text-[#6096B4]`}>
                       ${stats.activeProject?.budget?.toLocaleString() || 0}
                     </p>
                   </div>
@@ -2395,7 +2395,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                                     type="checkbox"
                                     checked={item.paid}
                                     onChange={(e) => updateBudgetItem(item.id, { paid: e.target.checked })}
-                                    className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                                    className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                                   />
                                   <span className="text-sm">{t('tools.audioVideo.paid', 'Paid')}</span>
                                 </label>
@@ -2415,7 +2415,7 @@ export const AudioVideoTool: React.FC<AudioVideoToolProps> = ({ uiConfig }) => {
                 })}
                 <button
                   onClick={addBudgetItem}
-                  className="flex items-center gap-2 px-4 py-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.audioVideo.addBudgetItem', 'Add Budget Item')}

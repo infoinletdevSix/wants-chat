@@ -85,7 +85,7 @@ export function OrganizationSwitcher({
             <div className="flex items-center gap-2 min-w-0">
               {currentOrg ? (
                 <>
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center flex-shrink-0">
                     <Building2 className="w-4 h-4 text-white" />
                   </div>
                   <div className="text-left min-w-0">
@@ -133,7 +133,7 @@ export function OrganizationSwitcher({
                 <p className="text-sm font-medium">Personal</p>
                 <p className="text-xs text-gray-500">My Workspace</p>
               </div>
-              {!currentOrgId && <Check className="w-4 h-4 text-teal-500" />}
+              {!currentOrgId && <Check className="w-4 h-4 text-primary-500" />}
             </div>
           </DropdownMenuItem>
 
@@ -159,7 +159,7 @@ export function OrganizationSwitcher({
                   className="cursor-pointer"
                 >
                   <div className="flex items-center gap-3 w-full">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
                       <Building2 className="w-4 h-4 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -169,7 +169,7 @@ export function OrganizationSwitcher({
                       </p>
                     </div>
                     {currentOrgId === org.id && (
-                      <Check className="w-4 h-4 text-teal-500" />
+                      <Check className="w-4 h-4 text-primary-500" />
                     )}
                   </div>
                 </DropdownMenuItem>
@@ -182,7 +182,7 @@ export function OrganizationSwitcher({
           {/* Create New Organization */}
           <DropdownMenuItem
             onClick={() => setShowCreateDialog(true)}
-            className="cursor-pointer text-teal-600 dark:text-teal-400"
+            className="cursor-pointer text-primary-600 dark:text-primary-400"
           >
             <Plus className="w-4 h-4 mr-2" />
             Create New Organization

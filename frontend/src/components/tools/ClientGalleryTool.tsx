@@ -371,9 +371,9 @@ export const ClientGalleryTool: React.FC<ClientGalleryToolProps> = ({ uiConfig }
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.clientGallery.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.clientGallery.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -381,7 +381,7 @@ export const ClientGalleryTool: React.FC<ClientGalleryToolProps> = ({ uiConfig }
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Image className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -472,7 +472,7 @@ export const ClientGalleryTool: React.FC<ClientGalleryToolProps> = ({ uiConfig }
                 {selectedGallery.status !== 'shared' && (
                   <button
                     onClick={() => shareGallery(selectedGallery)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Share2 className="w-4 h-4" />
                     {t('tools.clientGallery.shareGallery', 'Share Gallery')}
@@ -501,13 +501,13 @@ export const ClientGalleryTool: React.FC<ClientGalleryToolProps> = ({ uiConfig }
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
+                    className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
                   >
                     <Grid className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
+                    className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
                   >
                     <List className="w-4 h-4" />
                   </button>
@@ -640,7 +640,7 @@ export const ClientGalleryTool: React.FC<ClientGalleryToolProps> = ({ uiConfig }
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <button
                 onClick={() => setShowGalleryForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.clientGallery.newGallery', 'New Gallery')}
@@ -895,7 +895,7 @@ export const ClientGalleryTool: React.FC<ClientGalleryToolProps> = ({ uiConfig }
                 </button>
                 <button
                   onClick={handleAddGallery}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.clientGallery.createGallery', 'Create Gallery')}
                 </button>

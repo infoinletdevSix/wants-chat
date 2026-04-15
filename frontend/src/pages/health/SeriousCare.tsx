@@ -76,7 +76,7 @@ const SeriousCare: React.FC = () => {
         {loading && (
           <div className="flex justify-center items-center py-12">
             <div className="text-center">
-              <div className="animate-spin h-12 w-12 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+              <div className="animate-spin h-12 w-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4"></div>
               <p className="text-white/60">Loading your serious conditions...</p>
             </div>
           </div>
@@ -109,7 +109,7 @@ const SeriousCare: React.FC = () => {
         {!loading && !error && (
           <>
             {/* Greeting Section */}
-            <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+            <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
               <h1 className="text-3xl font-bold text-white mb-2">
                 Stay Strong, Health Warrior!
               </h1>
@@ -127,8 +127,8 @@ const SeriousCare: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-teal-500/10">
-                  <Plus className="h-7 w-7 text-teal-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/10">
+                  <Plus className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Add Condition</h3>
                 <p className="text-white/60 text-sm">Track new conditions</p>
@@ -161,8 +161,8 @@ const SeriousCare: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-teal-500/10">
-                  <CalendarDays className="h-7 w-7 text-teal-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/10">
+                  <CalendarDays className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Treatment Schedule</h3>
                 <p className="text-white/60 text-sm">Manage appointments</p>
@@ -187,8 +187,8 @@ const SeriousCare: React.FC = () => {
                     {seriousCareRecords.filter(r => r.status === 'active').length}
                   </p>
                 </div>
-                <div className="p-3 rounded-full bg-teal-500/20">
-                  <AlertCircle className="h-6 w-6 text-teal-400" />
+                <div className="p-3 rounded-full bg-primary-500/20">
+                  <AlertCircle className="h-6 w-6 text-primary-400" />
                 </div>
               </div>
             </div>
@@ -266,7 +266,7 @@ const SeriousCare: React.FC = () => {
             </div>
             <Button
               onClick={() => navigate('/health/add-serious-condition')}
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Condition
@@ -278,7 +278,7 @@ const SeriousCare: React.FC = () => {
               {seriousCareRecords.map((record) => (
                 <div
                   key={record.id}
-                  className="rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/30 transition-all duration-300 overflow-hidden group relative"
+                  className="rounded-2xl bg-white/5 border border-white/10 hover:border-primary-500/30 transition-all duration-300 overflow-hidden group relative"
                 >
                   {/* Status Badges - Top Right Corner */}
                   <div className="absolute top-4 right-4 z-10 flex gap-2">
@@ -294,7 +294,7 @@ const SeriousCare: React.FC = () => {
                     <Badge
                       className={`rounded-full px-2 py-1 text-xs font-semibold shadow-md ${
                         record.status === 'active' ? 'bg-red-500 text-white' :
-                        record.status === 'monitoring' ? 'bg-teal-500 text-white' :
+                        record.status === 'monitoring' ? 'bg-primary-500 text-white' :
                         record.status === 'remission' ? 'bg-green-500 text-white' :
                         'bg-orange-500 text-white'
                       }`}
@@ -304,10 +304,10 @@ const SeriousCare: React.FC = () => {
                   </div>
 
                   {/* Card Header with Gradient Background */}
-                  <div className="p-6 pb-4 bg-gradient-to-br from-teal-500/5 to-teal-500/10">
+                  <div className="p-6 pb-4 bg-gradient-to-br from-primary-500/5 to-primary-500/10">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-teal-500/20">
-                        <HealthAndSafetyIcon className="h-6 w-6 text-teal-400" />
+                      <div className="p-3 rounded-xl bg-primary-500/20">
+                        <HealthAndSafetyIcon className="h-6 w-6 text-primary-400" />
                       </div>
                       <div className="flex-1 pr-20">
                         <h4 className="font-bold text-lg text-white line-clamp-1">
@@ -325,13 +325,13 @@ const SeriousCare: React.FC = () => {
                     {/* Medical Team */}
                     <div className="p-3 rounded-xl bg-white/5">
                       <div className="flex items-center gap-2 mb-2">
-                        <MedicalServicesIcon className="h-4 w-4 text-teal-400" />
+                        <MedicalServicesIcon className="h-4 w-4 text-primary-400" />
                         <p className="text-xs font-semibold text-white/80">Medical Team</p>
                       </div>
                       <div className="space-y-1">
                         <div className="flex items-center justify-between">
                           <span className="text-xs text-white/50 flex items-center gap-1">
-                            <User className="h-3 w-3 text-teal-400" />
+                            <User className="h-3 w-3 text-primary-400" />
                             Doctor
                           </span>
                           <span className="text-sm font-medium text-white text-right line-clamp-1">
@@ -340,7 +340,7 @@ const SeriousCare: React.FC = () => {
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs text-white/50 flex items-center gap-1">
-                            <HospitalIcon className="h-3 w-3 text-teal-400" />
+                            <HospitalIcon className="h-3 w-3 text-primary-400" />
                             Hospital
                           </span>
                           <span className="text-sm font-medium text-white text-right line-clamp-1">
@@ -354,7 +354,7 @@ const SeriousCare: React.FC = () => {
                     {record.treatments && record.treatments.length > 0 && (
                       <div className="pt-3 border-t border-white/10">
                         <div className="flex items-center gap-2 mb-2">
-                          <HealingIcon className="h-4 w-4 text-teal-400" />
+                          <HealingIcon className="h-4 w-4 text-primary-400" />
                           <p className="text-xs font-semibold text-white/80">Treatments</p>
                         </div>
                         <div className="space-y-1">
@@ -371,7 +371,7 @@ const SeriousCare: React.FC = () => {
                             </div>
                           ))}
                           {record.treatments.length > 2 && (
-                            <p className="text-xs text-center text-teal-400">
+                            <p className="text-xs text-center text-primary-400">
                               +{record.treatments.length - 2} more
                             </p>
                           )}
@@ -407,7 +407,7 @@ const SeriousCare: React.FC = () => {
                     {/* Checkup Schedule */}
                     <div className="pt-3 border-t border-white/10">
                       <div className="flex items-center gap-2 mb-2">
-                        <CalendarDays className="h-4 w-4 text-teal-400" />
+                        <CalendarDays className="h-4 w-4 text-primary-400" />
                         <p className="text-xs font-semibold text-white/80">Checkup Schedule</p>
                       </div>
                       <div className="space-y-1">
@@ -418,10 +418,10 @@ const SeriousCare: React.FC = () => {
                           </span>
                         </div>
                         {record.next_checkup && (
-                          <div className="p-2 rounded-lg bg-teal-500/10">
+                          <div className="p-2 rounded-lg bg-primary-500/10">
                             <div className="flex items-center gap-2">
-                              <EventAvailableIcon className="h-3.5 w-3.5 text-teal-400" />
-                              <p className="text-xs font-medium text-teal-400">
+                              <EventAvailableIcon className="h-3.5 w-3.5 text-primary-400" />
+                              <p className="text-xs font-medium text-primary-400">
                                 Next: {record.next_checkup}
                               </p>
                             </div>
@@ -450,7 +450,7 @@ const SeriousCare: React.FC = () => {
                         variant="outline"
                         size="sm"
                         onClick={() => editSeriousCondition(record)}
-                        className="flex-1 rounded-xl bg-transparent border-teal-500/30 text-teal-400 hover:bg-teal-500/10"
+                        className="flex-1 rounded-xl bg-transparent border-primary-500/30 text-primary-400 hover:bg-primary-500/10"
                       >
                         <EditIcon className="h-4 w-4 mr-2" />
                         Edit
@@ -482,8 +482,8 @@ const SeriousCare: React.FC = () => {
           ) : (
             <div className="rounded-2xl p-12 text-center bg-white/5 border border-white/10">
               <div className="max-w-md mx-auto">
-                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-teal-500/10">
-                  <HealthAndSafetyIcon className="h-10 w-10 text-teal-400" />
+                <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-primary-500/10">
+                  <HealthAndSafetyIcon className="h-10 w-10 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   No Conditions Tracked Yet
@@ -493,7 +493,7 @@ const SeriousCare: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/health/add-serious-condition')}
-                  className="rounded-xl px-6 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                  className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Your First Condition

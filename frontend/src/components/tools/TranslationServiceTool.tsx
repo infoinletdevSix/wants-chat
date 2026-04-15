@@ -902,7 +902,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
   const labelClass = `block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`;
   const textClass = theme === 'dark' ? 'text-white' : 'text-gray-900';
   const mutedTextClass = theme === 'dark' ? 'text-gray-400' : 'text-gray-500';
@@ -912,7 +912,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
-          <div className="p-3 bg-gradient-to-br from-[#0D9488] to-[#2DD4BF] rounded-xl shadow-lg">
+          <div className="p-3 bg-gradient-to-br from-[#6096B4] to-[#75AAC1] rounded-xl shadow-lg">
             <Languages className="w-8 h-8 text-white" />
           </div>
           <div>
@@ -927,9 +927,9 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.translationService.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.translationService.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -937,7 +937,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
           <div className={`${cardClass} p-4`}>
             <div className="flex items-center gap-2 mb-2">
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+              <FileText className="w-5 h-5 text-[#6096B4]" />
               <span className={mutedTextClass}>{t('tools.translationService.activeProjects', 'Active Projects')}</span>
             </div>
             <p className={`text-2xl font-bold ${textClass}`}>{stats.activeProjects}</p>
@@ -998,7 +998,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white shadow-lg'
                   : theme === 'dark'
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-white text-gray-600 hover:bg-gray-100'
@@ -1086,7 +1086,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                 />
                 <button
                   onClick={() => setShowProjectForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.translationService.newProject', 'New Project')}
@@ -1210,7 +1210,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                           type="checkbox"
                           checked={projectForm.isRush}
                           onChange={(e) => setProjectForm({ ...projectForm, isRush: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                          className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                         />
                         <span className={textClass}>{t('tools.translationService.rushOrder50', 'Rush Order (+50%)')}</span>
                         <Zap className="w-4 h-4 text-orange-500" />
@@ -1220,7 +1220,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                           type="checkbox"
                           checked={projectForm.isCertified}
                           onChange={(e) => setProjectForm({ ...projectForm, isCertified: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                          className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                         />
                         <span className={textClass}>Certified Translation (+${CERTIFICATION_FEE})</span>
                         <Award className="w-4 h-4 text-yellow-500" />
@@ -1271,7 +1271,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                           )}
                           <div className="flex justify-between font-bold pt-2 border-t border-gray-500">
                             <span className={textClass}>{t('tools.translationService.total', 'Total:')}</span>
-                            <span className="text-[#0D9488]">
+                            <span className="text-[#6096B4]">
                               {formatCurrency(calculateProjectPrice(
                                 projectForm.wordCount,
                                 projectForm.specialization,
@@ -1290,7 +1290,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                       <button
                         onClick={handleAddProject}
                         disabled={!projectForm.clientId || !projectForm.wordCount || !projectForm.deadline}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Check className="w-5 h-5" />
                         {t('tools.translationService.createProject', 'Create Project')}
@@ -1347,7 +1347,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                                 project.status === 'in_progress' ? 'bg-purple-100 text-purple-600' :
                                 project.status === 'review' ? 'bg-yellow-100 text-yellow-600' :
                                 project.status === 'completed' ? 'bg-green-100 text-green-600' :
-                                'bg-teal-100 text-teal-600'
+                                'bg-primary-100 text-primary-600'
                               }`}>
                                 {project.status.replace('_', ' ').toUpperCase()}
                               </span>
@@ -1359,7 +1359,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                               <span className={mutedTextClass}>{project.documentType}</span>
                               <span className={mutedTextClass}>{project.wordCount.toLocaleString()} words</span>
                               <span className={mutedTextClass}>Due: {formatDate(project.deadline)}</span>
-                              <span className="text-[#0D9488] font-semibold">{formatCurrency(project.totalPrice)}</span>
+                              <span className="text-[#6096B4] font-semibold">{formatCurrency(project.totalPrice)}</span>
                             </div>
                           </div>
                           <div className="flex items-center gap-2">
@@ -1402,7 +1402,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                               {translator ? (
                                 <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                                   <div className="flex items-center gap-2 mb-2">
-                                    <Users className="w-5 h-5 text-[#0D9488]" />
+                                    <Users className="w-5 h-5 text-[#6096B4]" />
                                     <span className={`font-medium ${textClass}`}>{translator.name}</span>
                                     <span className="flex items-center gap-1 text-yellow-500 text-sm">
                                       <Star className="w-4 h-4 fill-current" />
@@ -1445,7 +1445,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                                   onClick={() => handleUpdateReviewStatus(project.id, status as TranslationProject['reviewStatus'])}
                                   className={`px-3 py-1 text-sm rounded-lg transition-all ${
                                     project.reviewStatus === status
-                                      ? 'bg-[#0D9488] text-white'
+                                      ? 'bg-[#6096B4] text-white'
                                       : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                                   }`}
                                 >
@@ -1464,7 +1464,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                                 onClick={() => handleUpdateProjectStatus(project.id, status as TranslationProject['status'])}
                                 className={`px-3 py-1 text-xs rounded-lg transition-all ${
                                   project.status === status
-                                    ? 'bg-[#0D9488] text-white'
+                                    ? 'bg-[#6096B4] text-white'
                                     : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                                 }`}
                               >
@@ -1517,7 +1517,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                 />
                 <button
                   onClick={() => setShowSessionForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.translationService.scheduleSession', 'Schedule Session')}
@@ -1568,7 +1568,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                             onClick={() => setSessionForm({ ...sessionForm, type: type.value as typeof sessionForm.type })}
                             className={`flex-1 flex items-center justify-center gap-2 p-3 rounded-lg border transition-all ${
                               sessionForm.type === type.value
-                                ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                                ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                                 : theme === 'dark' ? 'border-gray-600 text-gray-300' : 'border-gray-300 text-gray-600'
                             }`}
                           >
@@ -1687,7 +1687,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                           <span className={mutedTextClass}>
                             Estimated Total ({sessionForm.duration} hours x ${((BASE_RATES[sessionForm.specialization] || BASE_RATES['General']) * 1000).toFixed(0)}/hr):
                           </span>
-                          <span className="text-xl font-bold text-[#0D9488]">
+                          <span className="text-xl font-bold text-[#6096B4]">
                             {formatCurrency(calculateSessionPrice(
                               sessionForm.duration,
                               sessionForm.specialization,
@@ -1703,7 +1703,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                       <button
                         onClick={handleAddSession}
                         disabled={!sessionForm.clientId || !sessionForm.scheduledDate || !sessionForm.scheduledTime}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Check className="w-5 h-5" />
                         {t('tools.translationService.scheduleSession2', 'Schedule Session')}
@@ -1759,7 +1759,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                               {formatDate(session.scheduledDate)} at {session.scheduledTime}
                             </span>
                             <span className={mutedTextClass}>{session.duration} hours</span>
-                            <span className="text-[#0D9488] font-semibold">{formatCurrency(session.totalPrice)}</span>
+                            <span className="text-[#6096B4] font-semibold">{formatCurrency(session.totalPrice)}</span>
                           </div>
                           {session.location && (
                             <p className={`text-sm mt-2 ${mutedTextClass}`}>
@@ -1839,7 +1839,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                 />
                 <button
                   onClick={() => setShowTranslatorForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.translationService.addTranslator2', 'Add Translator')}
@@ -1944,7 +1944,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                           ...translatorForm,
                           languagePairs: [...translatorForm.languagePairs, { source: 'English', target: 'Spanish' }]
                         })}
-                        className="text-sm text-[#0D9488] hover:underline"
+                        className="text-sm text-[#6096B4] hover:underline"
                       >
                         {t('tools.translationService.addAnotherLanguagePair', '+ Add another language pair')}
                       </button>
@@ -1965,7 +1965,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                             }}
                             className={`px-3 py-1 text-sm rounded-lg transition-all ${
                               translatorForm.specializations.includes(spec)
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : theme === 'dark' ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                             }`}
                           >
@@ -1996,7 +1996,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                               });
                             }
                           }}
-                          className="px-4 py-2 bg-[#0D9488] text-white rounded-lg"
+                          className="px-4 py-2 bg-[#6096B4] text-white rounded-lg"
                         >
                           {t('tools.translationService.add', 'Add')}
                         </button>
@@ -2030,7 +2030,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                       <button
                         onClick={handleAddTranslator}
                         disabled={!translatorForm.name || !translatorForm.email}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Check className="w-5 h-5" />
                         {t('tools.translationService.addTranslator3', 'Add Translator')}
@@ -2162,7 +2162,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                 />
                 <button
                   onClick={() => setShowClientForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.translationService.addClient2', 'Add Client')}
@@ -2234,7 +2234,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                           type="checkbox"
                           checked={clientForm.isRecurring}
                           onChange={(e) => setClientForm({ ...clientForm, isRecurring: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                          className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                         />
                         <span className={textClass}>{t('tools.translationService.recurringClient', 'Recurring Client')}</span>
                       </label>
@@ -2258,7 +2258,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                       <button
                         onClick={handleAddClient}
                         disabled={!clientForm.name || !clientForm.email}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Check className="w-5 h-5" />
                         {t('tools.translationService.addClient3', 'Add Client')}
@@ -2360,7 +2360,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                 />
                 <button
                   onClick={() => setShowInvoiceForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.translationService.generateInvoice2', 'Generate Invoice')}
@@ -2414,7 +2414,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                                         : invoiceForm.selectedProjects.filter(id => id !== project.id);
                                       setInvoiceForm({ ...invoiceForm, selectedProjects: newSelected });
                                     }}
-                                    className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                                    className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                                   />
                                   <span className={textClass}>
                                     {project.documentType} ({project.wordCount} words) - {formatCurrency(project.totalPrice)}
@@ -2444,7 +2444,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                                         : invoiceForm.selectedSessions.filter(id => id !== session.id);
                                       setInvoiceForm({ ...invoiceForm, selectedSessions: newSelected });
                                     }}
-                                    className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                                    className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                                   />
                                   <span className={textClass}>
                                     {session.type} ({session.duration} hrs) - {formatCurrency(session.totalPrice)}
@@ -2501,7 +2501,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                                     </div>
                                     <div className="flex justify-between font-bold pt-2 border-t border-gray-500">
                                       <span className={textClass}>{t('tools.translationService.total2', 'Total:')}</span>
-                                      <span className="text-[#0D9488]">{formatCurrency(total)}</span>
+                                      <span className="text-[#6096B4]">{formatCurrency(total)}</span>
                                     </div>
                                   </>
                                 );
@@ -2517,7 +2517,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                       <button
                         onClick={handleGenerateInvoice}
                         disabled={!invoiceForm.clientId || !invoiceForm.dueDate || (invoiceForm.selectedProjects.length === 0 && invoiceForm.selectedSessions.length === 0)}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Check className="w-5 h-5" />
                         {t('tools.translationService.generateInvoice3', 'Generate Invoice')}
@@ -2569,7 +2569,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                         </div>
                         <div className="flex items-center gap-4">
                           <div className="text-right">
-                            <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(invoice.total)}</p>
+                            <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(invoice.total)}</p>
                             {invoice.discount > 0 && (
                               <p className="text-sm text-green-500">Saved {formatCurrency(invoice.discount)}</p>
                             )}
@@ -2584,7 +2584,7 @@ export const TranslationServiceTool: React.FC<TranslationServiceToolProps> = ({ 
                             <option value="paid">{t('tools.translationService.paid', 'Paid')}</option>
                             <option value="overdue">{t('tools.translationService.overdue', 'Overdue')}</option>
                           </select>
-                          <button className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-all">
+                          <button className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-all">
                             <Download className="w-5 h-5" />
                           </button>
                         </div>

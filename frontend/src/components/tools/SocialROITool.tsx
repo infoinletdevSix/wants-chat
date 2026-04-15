@@ -119,7 +119,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
       roiColor = 'text-green-500';
     } else if (roi >= 200) {
       roiRating = 'Excellent';
-      roiColor = 'text-teal-500';
+      roiColor = 'text-primary-500';
     } else if (roi >= 100) {
       roiRating = 'Good';
       roiColor = 'text-blue-500';
@@ -159,8 +159,8 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-blue-900/20' : 'bg-gradient-to-r from-white to-blue-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <TrendingUp className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.socialROI.socialMediaRoiCalculator', 'Social Media ROI Calculator')}</h3>
@@ -171,9 +171,9 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.socialROI.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.socialROI.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -193,7 +193,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                 value={adSpend}
                 onChange={(e) => setAdSpend(e.target.value)}
                 placeholder="1000"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -205,7 +205,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                 value={toolsCost}
                 onChange={(e) => setToolsCost(e.target.value)}
                 placeholder="100"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -217,7 +217,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                 value={contentCost}
                 onChange={(e) => setContentCost(e.target.value)}
                 placeholder="500"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -230,14 +230,14 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                   value={laborHours}
                   onChange={(e) => setLaborHours(e.target.value)}
                   placeholder="40"
-                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="number"
                   value={hourlyRate}
                   onChange={(e) => setHourlyRate(e.target.value)}
                   placeholder="25"
-                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -263,7 +263,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                 value={revenue}
                 onChange={(e) => setRevenue(e.target.value)}
                 placeholder="5000"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -276,14 +276,14 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                   value={leads}
                   onChange={(e) => setLeads(e.target.value)}
                   placeholder="50"
-                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="number"
                   value={leadValue}
                   onChange={(e) => setLeadValue(e.target.value)}
                   placeholder="100"
-                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -300,7 +300,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                   value={newFollowers}
                   onChange={(e) => setNewFollowers(e.target.value)}
                   placeholder="500"
-                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="number"
@@ -308,7 +308,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                   value={followerValue}
                   onChange={(e) => setFollowerValue(e.target.value)}
                   placeholder="1"
-                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/2 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -325,7 +325,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                   value={websiteVisits}
                   onChange={(e) => setWebsiteVisits(e.target.value)}
                   placeholder={t('tools.socialROI.visits', 'Visits')}
-                  className={`w-1/3 px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/3 px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="number"
@@ -333,14 +333,14 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
                   value={conversionRate}
                   onChange={(e) => setConversionRate(e.target.value)}
                   placeholder={t('tools.socialROI.conv', 'Conv %')}
-                  className={`w-1/3 px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/3 px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="number"
                   value={avgOrderValue}
                   onChange={(e) => setAvgOrderValue(e.target.value)}
                   placeholder={t('tools.socialROI.avg', 'Avg $')}
-                  className={`w-1/3 px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-1/3 px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -351,7 +351,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
         </div>
 
         {/* Main ROI Result */}
-        <div className={`p-6 rounded-xl text-center ${calculations.roi >= 0 ? (isDark ? t('tools.socialROI.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
+        <div className={`p-6 rounded-xl text-center ${calculations.roi >= 0 ? (isDark ? t('tools.socialROI.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.socialROI.returnOnInvestment', 'Return on Investment')}</div>
           <div className={`text-5xl font-bold my-2 ${calculations.roiColor}`}>
             {calculations.roi.toFixed(1)}%
@@ -380,7 +380,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.socialROI.netProfit', 'Net Profit')}</div>
-            <div className={`text-xl font-bold ${calculations.netProfit >= 0 ? t('tools.socialROI.text0d9488', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-xl font-bold ${calculations.netProfit >= 0 ? t('tools.socialROI.text0d9488', 'text-[#6096B4]') : 'text-red-500'}`}>
               {formatCurrency(calculations.netProfit)}
             </div>
           </div>
@@ -459,7 +459,7 @@ export const SocialROITool: React.FC<SocialROIToolProps> = ({
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.socialROI.projSalesFromTraffic', 'Proj. Sales from Traffic')}</div>
-            <div className="text-lg font-bold text-[#0D9488]">
+            <div className="text-lg font-bold text-[#6096B4]">
               {formatCurrency(calculations.projectedSalesFromTraffic)}
             </div>
           </div>

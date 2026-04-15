@@ -282,7 +282,7 @@ const AddSleepLog: React.FC = () => {
   if (loadingLog && editId) {
     return (
       <div className="min-h-screen bg-[#0a0a0f] text-white flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-2 border-teal-500 border-t-transparent rounded-full" />
+        <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
       </div>
     );
   }
@@ -384,7 +384,7 @@ const AddSleepLog: React.FC = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-teal-400" />
+                        <Clock className="w-4 h-4 text-primary-400" />
                         Time to Fall Asleep (min)
                       </Label>
                       <Input
@@ -475,7 +475,7 @@ const AddSleepLog: React.FC = () => {
                           size="sm"
                           className={
                             formData.moodAfter === option.value
-                              ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-transparent'
+                              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent'
                               : 'border-white/20'
                           }
                           onClick={() =>
@@ -641,7 +641,7 @@ const AddSleepLog: React.FC = () => {
               <div className="flex flex-col gap-3 mt-4">
                 <Button
                   type="button"
-                  className="w-full bg-gradient-to-r from-teal-500 to-cyan-500"
+                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500"
                   disabled={isSubmitting || !formData.bedtime || !formData.wakeTime}
                   onClick={handleSubmit}
                 >

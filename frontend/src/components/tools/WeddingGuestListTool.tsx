@@ -167,11 +167,11 @@ export const WeddingGuestListTool: React.FC<WeddingGuestListToolProps> = ({ uiCo
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Users className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Users className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingGuestList.weddingGuestList', 'Wedding Guest List')}</h3>
@@ -187,7 +187,7 @@ export const WeddingGuestListTool: React.FC<WeddingGuestListToolProps> = ({ uiCo
             </button>
             <button
               onClick={() => setShowAddForm(true)}
-              className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-teal-500 hover:bg-teal-600 text-white"
+              className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-primary-500 hover:bg-primary-600 text-white"
             >
               <UserPlus className="w-4 h-4" /> Add Guest
             </button>
@@ -196,9 +196,9 @@ export const WeddingGuestListTool: React.FC<WeddingGuestListToolProps> = ({ uiCo
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.weddingGuestList.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -328,7 +328,7 @@ export const WeddingGuestListTool: React.FC<WeddingGuestListToolProps> = ({ uiCo
                   id="plusOne"
                   checked={newGuest.plusOne}
                   onChange={(e) => setNewGuest({ ...newGuest, plusOne: e.target.checked })}
-                  className="w-4 h-4 text-teal-500"
+                  className="w-4 h-4 text-primary-500"
                 />
                 <label htmlFor="plusOne" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.weddingGuestList.plusOne', 'Plus One')}</label>
               </div>
@@ -345,7 +345,7 @@ export const WeddingGuestListTool: React.FC<WeddingGuestListToolProps> = ({ uiCo
             <div className="flex gap-2 mt-4">
               <button
                 onClick={handleAddGuest}
-                className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium"
+                className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium"
               >
                 {t('tools.weddingGuestList.addGuest', 'Add Guest')}
               </button>
@@ -384,7 +384,7 @@ export const WeddingGuestListTool: React.FC<WeddingGuestListToolProps> = ({ uiCo
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-medium ${
-                      guest.group === 'bride' ? 'bg-pink-500' : guest.group === 'groom' ? 'bg-blue-500' : 'bg-teal-500'
+                      guest.group === 'bride' ? 'bg-pink-500' : guest.group === 'groom' ? 'bg-blue-500' : 'bg-primary-500'
                     }`}>
                       {guest.name.charAt(0).toUpperCase()}
                     </div>

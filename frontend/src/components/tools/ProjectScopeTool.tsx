@@ -414,9 +414,9 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.projectScope.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.projectScope.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -424,7 +424,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <FolderOpen className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -498,7 +498,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.projectScope.totalBudget', 'Total Budget')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(stats.totalBudget)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(stats.totalBudget)}</p>
             </div>
           </div>
 
@@ -513,7 +513,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -543,7 +543,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   />
                 </div>
                 <select
@@ -565,7 +565,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
               </div>
               <button
                 onClick={() => setActiveTab('create')}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.projectScope.newScopeDocument', 'New Scope Document')}
@@ -580,7 +580,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                   <p>{t('tools.projectScope.noProjectScopeDocumentsFound', 'No project scope documents found')}</p>
                   <button
                     onClick={() => setActiveTab('create')}
-                    className="mt-4 text-[#0D9488] hover:underline"
+                    className="mt-4 text-[#6096B4] hover:underline"
                   >
                     {t('tools.projectScope.createYourFirstScopeDocument', 'Create your first scope document')}
                   </button>
@@ -825,7 +825,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                   </label>
                   <button
                     onClick={() => addListItem('objectives')}
-                    className="text-sm text-[#0D9488] hover:underline flex items-center gap-1"
+                    className="text-sm text-[#6096B4] hover:underline flex items-center gap-1"
                   >
                     <Plus className="w-3 h-3" /> Add Objective
                   </button>
@@ -861,7 +861,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                   </label>
                   <button
                     onClick={() => addListItem('inScope')}
-                    className="text-sm text-[#0D9488] hover:underline flex items-center gap-1"
+                    className="text-sm text-[#6096B4] hover:underline flex items-center gap-1"
                   >
                     <Plus className="w-3 h-3" /> Add Item
                   </button>
@@ -897,7 +897,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                   </label>
                   <button
                     onClick={() => addListItem('outOfScope')}
-                    className="text-sm text-[#0D9488] hover:underline flex items-center gap-1"
+                    className="text-sm text-[#6096B4] hover:underline flex items-center gap-1"
                   >
                     <Plus className="w-3 h-3" /> Add Item
                   </button>
@@ -933,7 +933,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                   </label>
                   <button
                     onClick={addMilestone}
-                    className="text-sm text-[#0D9488] hover:underline flex items-center gap-1"
+                    className="text-sm text-[#6096B4] hover:underline flex items-center gap-1"
                   >
                     <Plus className="w-3 h-3" /> Add Milestone
                   </button>
@@ -996,7 +996,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={saveScope}
-                  className="px-6 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors flex items-center gap-2"
+                  className="px-6 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors flex items-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.projectScope.saveScopeDocument', 'Save Scope Document')}
@@ -1090,7 +1090,7 @@ export const ProjectScopeTool: React.FC<ProjectScopeToolProps> = ({ uiConfig }) 
               <div className="p-6 border-t border-gray-200 dark:border-gray-700 flex justify-end">
                 <button
                   onClick={() => setSelectedScope(null)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.projectScope.close', 'Close')}
                 </button>

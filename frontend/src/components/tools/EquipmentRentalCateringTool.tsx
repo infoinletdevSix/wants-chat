@@ -517,9 +517,9 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.equipmentRentalCatering.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.equipmentRentalCatering.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -527,7 +527,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -586,7 +586,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.equipmentRentalCatering.pendingRevenue', 'Pending Revenue')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(stats.pendingRevenue)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(stats.pendingRevenue)}</p>
             </div>
           </div>
 
@@ -602,7 +602,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -647,7 +647,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
               </div>
               <button
                 onClick={() => { resetOrderForm(); setActiveTab('new-order'); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.equipmentRentalCatering.newOrder', 'New Order')}
@@ -684,7 +684,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="font-semibold text-[#0D9488]">{formatCurrency(order.total)}</p>
+                        <p className="font-semibold text-[#6096B4]">{formatCurrency(order.total)}</p>
                         <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           Event: {formatDate(order.eventDate)}
                         </p>
@@ -795,7 +795,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
               </div>
               <button
                 onClick={() => setShowEquipmentForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.equipmentRentalCatering.addEquipment', 'Add Equipment')}
@@ -910,7 +910,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                       <button onClick={resetEquipmentForm} className={`px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}>
                         {t('tools.equipmentRentalCatering.cancel', 'Cancel')}
                       </button>
-                      <button onClick={saveEquipment} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90">
+                      <button onClick={saveEquipment} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90">
                         <Save className="w-4 h-4" />
                         {editingEquipment ? t('tools.equipmentRentalCatering.update', 'Update') : t('tools.equipmentRentalCatering.add', 'Add')}
                       </button>
@@ -943,7 +943,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                   <p className={`text-sm mb-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{item.description}</p>
                   <div className="flex justify-between items-center mb-3">
                     <div>
-                      <span className="text-[#0D9488] font-semibold">{formatCurrency(item.dailyRate)}</span>
+                      <span className="text-[#6096B4] font-semibold">{formatCurrency(item.dailyRate)}</span>
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>/day</span>
                     </div>
                     <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -1085,11 +1085,11 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                       onClick={() => addItemToOrder(item)}
                       className={`p-3 border rounded-lg cursor-pointer transition-colors ${
                         theme === 'dark' ? 'border-gray-600 hover:bg-gray-700' : 'border-gray-200 hover:bg-gray-50'
-                      } ${selectedItems.some(i => i.equipmentId === item.id) ? 'border-[#0D9488] bg-[#0D9488]/10' : ''}`}
+                      } ${selectedItems.some(i => i.equipmentId === item.id) ? 'border-[#6096B4] bg-[#6096B4]/10' : ''}`}
                     >
                       <div className="flex justify-between">
                         <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{item.name}</span>
-                        <span className="text-[#0D9488]">{formatCurrency(item.dailyRate)}/day</span>
+                        <span className="text-[#6096B4]">{formatCurrency(item.dailyRate)}/day</span>
                       </div>
                       <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                         {item.availableQty} available
@@ -1131,7 +1131,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                               +
                             </button>
                           </div>
-                          <span className="text-[#0D9488]">{formatCurrency(item.subtotal)}</span>
+                          <span className="text-[#6096B4]">{formatCurrency(item.subtotal)}</span>
                         </div>
                         <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                           {item.days} day(s) x {formatCurrency(item.dailyRate)}/day
@@ -1162,7 +1162,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                     </div>
                     <div className="flex justify-between font-bold text-lg border-t pt-2">
                       <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{t('tools.equipmentRentalCatering.total', 'Total')}</span>
-                      <span className="text-[#0D9488]">{formatCurrency(orderTotals.total)}</span>
+                      <span className="text-[#6096B4]">{formatCurrency(orderTotals.total)}</span>
                     </div>
                   </div>
                 </div>
@@ -1176,7 +1176,7 @@ export const EquipmentRentalCateringTool: React.FC<EquipmentRentalCateringToolPr
                   </button>
                   <button
                     onClick={saveOrder}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Save className="w-4 h-4" />
                     {t('tools.equipmentRentalCatering.createOrder', 'Create Order')}

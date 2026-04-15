@@ -165,10 +165,10 @@ export const RentIncreaseCalculatorTool: React.FC<RentIncreaseCalculatorToolProp
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <TrendingUp className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.rentIncreaseCalculator.rentIncreaseCalculator', 'Rent Increase Calculator')}</h3>
@@ -179,9 +179,9 @@ export const RentIncreaseCalculatorTool: React.FC<RentIncreaseCalculatorToolProp
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.rentIncreaseCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.rentIncreaseCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -202,7 +202,7 @@ export const RentIncreaseCalculatorTool: React.FC<RentIncreaseCalculatorToolProp
                 onClick={() => setCalculationMode(mode.value as any)}
                 className={`flex-1 py-2 rounded-lg font-medium transition-colors ${
                   calculationMode === mode.value
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -253,7 +253,7 @@ export const RentIncreaseCalculatorTool: React.FC<RentIncreaseCalculatorToolProp
                   onClick={() => setIncreasePercent(preset.value)}
                   className={`px-3 py-1.5 text-xs rounded-lg ${
                     increasePercent === preset.value
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -330,7 +330,7 @@ export const RentIncreaseCalculatorTool: React.FC<RentIncreaseCalculatorToolProp
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.rentIncreaseCalculator.newAnnualCost', 'New Annual Cost')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">
+            <div className="text-2xl font-bold text-[#6096B4]">
               {formatCurrency(calculations.annualNew)}
             </div>
           </div>

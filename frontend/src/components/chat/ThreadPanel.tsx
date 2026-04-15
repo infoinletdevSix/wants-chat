@@ -106,7 +106,7 @@ export const ThreadPanel: React.FC<ThreadPanelProps> = ({
         theme === 'dark' ? 'border-[#2a2a2a]' : 'border-slate-200'
       )}>
         <div className="flex items-center gap-2">
-          <GitBranch className="w-5 h-5 text-[#0D9488]" />
+          <GitBranch className="w-5 h-5 text-[#6096B4]" />
           <span className={cn(
             "font-semibold",
             theme === 'dark' ? 'text-white' : 'text-slate-900'
@@ -136,13 +136,13 @@ export const ThreadPanel: React.FC<ThreadPanelProps> = ({
           {parentMessage.role === 'user' ? (
             <div className={cn(
               "w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0",
-              theme === 'dark' ? 'bg-[#0D9488] text-white' : 'bg-[#0D9488] text-white'
+              theme === 'dark' ? 'bg-[#6096B4] text-white' : 'bg-[#6096B4] text-white'
             )}>
               U
             </div>
           ) : (
             <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-200">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
             </div>
           )}
           <div className={cn(
@@ -172,14 +172,14 @@ export const ThreadPanel: React.FC<ThreadPanelProps> = ({
                 {message.role === 'user' ? (
                   <div className={cn(
                     "w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0",
-                    theme === 'dark' ? 'bg-[#0D9488] text-white' : 'bg-[#0D9488] text-white'
+                    theme === 'dark' ? 'bg-[#6096B4] text-white' : 'bg-[#6096B4] text-white'
                   )}>
                     U
                   </div>
                 ) : (
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-200">
                     <Sparkles className={cn(
-                      "w-4 h-4 text-[#0D9488]",
+                      "w-4 h-4 text-[#6096B4]",
                       message.id === streamingMessageId && "animate-pulse"
                     )} />
                   </div>
@@ -191,7 +191,7 @@ export const ThreadPanel: React.FC<ThreadPanelProps> = ({
                   <MessageContent content={message.content} />
                   {/* Streaming cursor */}
                   {message.id === streamingMessageId && (
-                    <span className="inline-block w-2 h-4 ml-0.5 bg-[#0D9488] animate-pulse rounded-sm" />
+                    <span className="inline-block w-2 h-4 ml-0.5 bg-[#6096B4] animate-pulse rounded-sm" />
                   )}
                   {/* Action buttons for assistant messages - only show after streaming completes */}
                   {message.role === 'assistant' && message.id !== streamingMessageId && message.content && (
@@ -245,12 +245,12 @@ export const ThreadPanel: React.FC<ThreadPanelProps> = ({
             {isLoading && !streamingMessageId && (
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-200">
-                  <Sparkles className="w-4 h-4 text-[#0D9488] animate-pulse" />
+                  <Sparkles className="w-4 h-4 text-[#6096B4] animate-pulse" />
                 </div>
                 <div className="flex gap-1.5 pt-3">
-                  <span className="w-2 h-2 rounded-full animate-bounce bg-[#0D9488]" />
-                  <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.2s] bg-[#0D9488]/70" />
-                  <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.4s] bg-[#0D9488]/40" />
+                  <span className="w-2 h-2 rounded-full animate-bounce bg-[#6096B4]" />
+                  <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.2s] bg-[#6096B4]/70" />
+                  <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0.4s] bg-[#6096B4]/40" />
                 </div>
               </div>
             )}
@@ -290,7 +290,7 @@ export const ThreadPanel: React.FC<ThreadPanelProps> = ({
             className={cn(
               "p-2 rounded-lg transition-all disabled:opacity-40",
               inputValue.trim()
-                ? 'bg-[#0D9488] text-white hover:bg-[#0B8278]'
+                ? 'bg-[#6096B4] text-white hover:bg-[#0B8278]'
                 : theme === 'dark' ? 'bg-[#2a2a2a] text-slate-500' : 'bg-slate-100 text-slate-400'
             )}
           >

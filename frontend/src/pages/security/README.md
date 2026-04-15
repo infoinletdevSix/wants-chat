@@ -109,9 +109,9 @@ Each page follows the same structure:
 
 ### Colors
 All pages use the teal/cyan gradient theme. To customize:
-- Look for `from-teal-500 to-cyan-500` classes
+- Look for `from-primary-500 to-cyan-500` classes
 - Gradient backgrounds use `bg-gradient-to-r`
-- Borders use `border-teal-400/30`
+- Borders use `border-primary-400/30`
 
 ### Animations
 Powered by Framer Motion:

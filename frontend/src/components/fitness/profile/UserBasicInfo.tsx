@@ -86,8 +86,8 @@ const UserBasicInfo: React.FC<UserBasicInfoProps> = ({
     <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <Icon path={mdiAccount} size={1} className="text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <Icon path={mdiAccount} size={1} className="text-primary-400" />
           </div>
           <h3 className="text-lg font-semibold text-white">Personal Information</h3>
         </div>
@@ -96,14 +96,14 @@ const UserBasicInfo: React.FC<UserBasicInfoProps> = ({
           <Button
             size="sm"
             onClick={() => setIsEditing(true)}
-            className="bg-teal-500/10 hover:bg-teal-500/20 border border-teal-500/20 text-teal-400"
+            className="bg-primary-500/10 hover:bg-primary-500/20 border border-primary-500/20 text-primary-400"
           >
-            <Icon path={mdiPencil} size={0.7} className="mr-2 text-teal-400" />
+            <Icon path={mdiPencil} size={0.7} className="mr-2 text-primary-400" />
             Edit
           </Button>
         ) : (
           <div className="flex items-center gap-2">
-            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+            <Button size="sm" onClick={handleSave} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
               <Icon path={mdiCheck} size={0.7} className="mr-1" />
               Save
             </Button>

@@ -802,11 +802,11 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
   const labelClass = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`;
   const textClass = theme === 'dark' ? 'text-white' : 'text-gray-900';
   const mutedTextClass = theme === 'dark' ? 'text-gray-400' : 'text-gray-500';
-  const buttonPrimaryClass = 'bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
+  const buttonPrimaryClass = 'bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
   const buttonSecondaryClass = `${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2`;
 
   const tabs = [
@@ -976,7 +976,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.consignmentShop.loadingShopData', 'Loading shop data...')}</p>
         </div>
       </div>
@@ -990,7 +990,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
         <div className={`${cardClass} p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Store className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1032,7 +1032,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1047,9 +1047,9 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
 
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.consignmentShop.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.consignmentShop.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
           </div>
         )}
 
@@ -1064,7 +1064,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
                     <p className={mutedTextClass}>{t('tools.consignmentShop.totalConsignors', 'Total Consignors')}</p>
                     <p className={`text-2xl font-bold ${textClass}`}>{dashboardStats.totalConsignors}</p>
                   </div>
-                  <Users className="w-8 h-8 text-[#0D9488]" />
+                  <Users className="w-8 h-8 text-[#6096B4]" />
                 </div>
               </div>
               <div className={`${cardClass} p-4`}>
@@ -1073,7 +1073,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
                     <p className={mutedTextClass}>{t('tools.consignmentShop.activeItems', 'Active Items')}</p>
                     <p className={`text-2xl font-bold ${textClass}`}>{dashboardStats.activeItems}</p>
                   </div>
-                  <Package className="w-8 h-8 text-[#0D9488]" />
+                  <Package className="w-8 h-8 text-[#6096B4]" />
                 </div>
               </div>
               <div className={`${cardClass} p-4`}>
@@ -1082,7 +1082,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
                     <p className={mutedTextClass}>{t('tools.consignmentShop.inventoryValue', 'Inventory Value')}</p>
                     <p className={`text-2xl font-bold ${textClass}`}>{formatCurrency(dashboardStats.totalInventoryValue)}</p>
                   </div>
-                  <DollarSign className="w-8 h-8 text-[#0D9488]" />
+                  <DollarSign className="w-8 h-8 text-[#6096B4]" />
                 </div>
               </div>
               <div className={`${cardClass} p-4`}>
@@ -1091,7 +1091,7 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
                     <p className={mutedTextClass}>{t('tools.consignmentShop.pendingPayouts', 'Pending Payouts')}</p>
                     <p className={`text-2xl font-bold ${textClass}`}>{formatCurrency(dashboardStats.pendingPayouts)}</p>
                   </div>
-                  <CreditCard className="w-8 h-8 text-[#0D9488]" />
+                  <CreditCard className="w-8 h-8 text-[#6096B4]" />
                 </div>
               </div>
             </div>
@@ -2494,19 +2494,19 @@ export const ConsignmentShopTool: React.FC<ConsignmentShopToolProps> = ({ uiConf
           </p>
           <div className={`mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm ${mutedTextClass}`}>
             <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-[#0D9488]" />
+              <Users className="w-4 h-4 text-[#6096B4]" />
               <span>{t('tools.consignmentShop.consignorProfiles', 'Consignor Profiles')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <TrendingDown className="w-4 h-4 text-[#0D9488]" />
+              <TrendingDown className="w-4 h-4 text-[#6096B4]" />
               <span>{t('tools.consignmentShop.autoMarkdowns', 'Auto Markdowns')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <CreditCard className="w-4 h-4 text-[#0D9488]" />
+              <CreditCard className="w-4 h-4 text-[#6096B4]" />
               <span>{t('tools.consignmentShop.paymentTracking', 'Payment Tracking')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <ClipboardList className="w-4 h-4 text-[#0D9488]" />
+              <ClipboardList className="w-4 h-4 text-[#6096B4]" />
               <span>{t('tools.consignmentShop.statementGeneration', 'Statement Generation')}</span>
             </div>
           </div>

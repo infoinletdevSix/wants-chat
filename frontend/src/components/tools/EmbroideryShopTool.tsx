@@ -109,7 +109,7 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
 
   const inputClass = `w-full p-3 rounded-lg border ${
     theme === 'dark' ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:ring-2 focus:ring-[#6096B4]`;
 
   const cardClass = `p-4 rounded-lg ${theme === 'dark' ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
@@ -123,7 +123,7 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -131,7 +131,7 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Scissors className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -144,15 +144,15 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.embroideryShop.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.embroideryShop.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
         </div>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><Package className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><Package className="w-6 h-6 text-[#6096B4]" /></div>
           <div><p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.embroideryShop.totalOrders', 'Total Orders')}</p>
             <p className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{orders.length}</p></div>
         </div>
@@ -193,7 +193,7 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
           theme={isDark ? 'dark' : 'light'}
         />
         <button onClick={() => setShowForm(!showForm)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
           <Plus className="w-5 h-5" />New Order
         </button>
       </div>
@@ -216,7 +216,7 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
             <input type="date" value={formData.dueDate}
               onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })} className={inputClass} />
             <button onClick={handleAddOrder} disabled={!formData.customer || !formData.item}
-              className="px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">{t('tools.embroideryShop.saveOrder', 'Save Order')}</button>
+              className="px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50">{t('tools.embroideryShop.saveOrder', 'Save Order')}</button>
           </div>
         </div>
       )}
@@ -240,7 +240,7 @@ export const EmbroideryShopTool: React.FC<EmbroideryShopToolProps> = ({ uiConfig
                 <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>Due: {o.dueDate}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-[#0D9488]">${(o.pricePerItem * o.quantity).toFixed(2)}</span>
+                <span className="font-bold text-[#6096B4]">${(o.pricePerItem * o.quantity).toFixed(2)}</span>
                 <select value={o.status} onChange={(e) => handleUpdateStatus(o.id, e.target.value as Order['status'])}
                   className={`text-sm p-1 rounded border ${theme === 'dark' ? 'bg-[#252525] border-[#333] text-white' : 'bg-white border-gray-300'}`}>
                   <option value="pending">{t('tools.embroideryShop.pending2', 'Pending')}</option>

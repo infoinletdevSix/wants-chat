@@ -74,7 +74,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
             <Button
               size="sm"
               onClick={() => onSave(dayIndex, activity.id, {})}
-              className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-xs sm:text-sm"
+              className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white text-xs sm:text-sm"
             >
               <Save className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
               Save
@@ -104,7 +104,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
         )}
         <div className="flex justify-between items-start gap-3">
           <div className="flex gap-3 sm:gap-4 flex-1">
-            <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-xl bg-teal-500/20 border border-teal-500/30 flex items-center justify-center flex-shrink-0 text-teal-400">
+            <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-xl bg-primary-500/20 border border-primary-500/30 flex items-center justify-center flex-shrink-0 text-primary-400">
               <div className="scale-75 sm:scale-100">{getCategoryIcon(activity.category)}</div>
             </div>
             <div className="flex-1 min-w-0">
@@ -119,15 +119,15 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
               </p>
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-1 sm:gap-3 text-xs sm:text-sm text-white/50">
                 <span className="flex items-center gap-1">
-                  <AccessTime className="h-3 w-3 sm:h-4 sm:w-4 text-teal-400 flex-shrink-0" />
+                  <AccessTime className="h-3 w-3 sm:h-4 sm:w-4 text-primary-400 flex-shrink-0" />
                   {activity.time} • {activity.duration}
                 </span>
                 <span className="flex items-center gap-1">
-                  <LocationOn className="h-3 w-3 sm:h-4 sm:w-4 text-teal-400 flex-shrink-0" />
+                  <LocationOn className="h-3 w-3 sm:h-4 sm:w-4 text-primary-400 flex-shrink-0" />
                   <span className="truncate">{activity.location}</span>
                 </span>
                 <span className="flex items-center gap-1">
-                  <AttachMoney className="h-3 w-3 sm:h-4 sm:w-4 text-teal-400 flex-shrink-0" />
+                  <AttachMoney className="h-3 w-3 sm:h-4 sm:w-4 text-primary-400 flex-shrink-0" />
                   ${activity.cost}
                 </span>
               </div>
@@ -147,7 +147,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
                 variant="ghost"
                 size="icon"
                 onClick={() => window.open(activity.mapUrl, '_blank')}
-                className="h-6 w-6 sm:h-8 sm:w-8 text-white/60 hover:text-teal-400 hover:bg-teal-500/10"
+                className="h-6 w-6 sm:h-8 sm:w-8 text-white/60 hover:text-primary-400 hover:bg-primary-500/10"
               >
                 <Map className="h-3 w-3 sm:h-4 sm:w-4" />
               </Button>

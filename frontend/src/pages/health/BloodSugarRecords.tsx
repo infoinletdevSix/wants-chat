@@ -162,7 +162,7 @@ const BloodSugarRecords: React.FC = () => {
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Greeting Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/20 border border-teal-400/30">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/20 border border-primary-400/30">
           <h1 className="text-3xl font-bold text-white mb-2">
             Blood Sugar Tracking 📊
           </h1>
@@ -175,7 +175,7 @@ const BloodSugarRecords: React.FC = () => {
         <div className="mb-12">
           <Button
             onClick={() => navigate('/health/add-vital-record')}
-            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             size="lg"
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -193,8 +193,8 @@ const BloodSugarRecords: React.FC = () => {
                 </p>
                 <p className="text-sm font-medium text-white/60">Average mg/dL</p>
               </div>
-              <div className="p-4 rounded-2xl bg-teal-500/20">
-                <DropletIcon className="h-8 w-8 text-teal-400" />
+              <div className="p-4 rounded-2xl bg-primary-500/20">
+                <DropletIcon className="h-8 w-8 text-primary-400" />
               </div>
             </div>
           </Card>
@@ -220,7 +220,7 @@ const BloodSugarRecords: React.FC = () => {
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                <ShowChartIcon className="h-5 w-5 text-teal-400" />
+                <ShowChartIcon className="h-5 w-5 text-primary-400" />
                 Blood Sugar Trends
               </CardTitle>
               <CardDescription className="text-sm text-white/60">Daily glucose level variations</CardDescription>
@@ -262,10 +262,10 @@ const BloodSugarRecords: React.FC = () => {
                       if (active && payload && payload.length) {
                         const data = payload[0].payload;
                         return (
-                          <div className="bg-teal-800/90 p-3 border border-white/20 rounded-lg shadow-lg">
+                          <div className="bg-primary-800/90 p-3 border border-white/20 rounded-lg shadow-lg">
                             <p className="font-medium text-white">{label}</p>
                             <p className="text-sm text-white/60">{data.time}</p>
-                            <p className="font-bold text-teal-400">
+                            <p className="font-bold text-primary-400">
                               {payload[0].value} mg/dL
                             </p>
                             <p className="text-xs text-white/50 capitalize">{data.type} reading</p>
@@ -308,7 +308,7 @@ const BloodSugarRecords: React.FC = () => {
         <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-              <BarChartIcon className="h-5 w-5 text-teal-400" />
+              <BarChartIcon className="h-5 w-5 text-primary-400" />
               Average by Time of Day
             </CardTitle>
             <CardDescription className="text-sm text-white/60">Compare readings by measurement type</CardDescription>
@@ -342,9 +342,9 @@ const BloodSugarRecords: React.FC = () => {
                       if (active && payload && payload.length) {
                         const data = payload[0].payload;
                         return (
-                          <div className="bg-teal-800/90 p-3 border border-white/20 rounded-lg shadow-lg">
+                          <div className="bg-primary-800/90 p-3 border border-white/20 rounded-lg shadow-lg">
                             <p className="font-medium text-white">{data.name}</p>
-                            <p className="text-sm text-teal-400">
+                            <p className="text-sm text-primary-400">
                               Avg: {Math.round(data.avg)} mg/dL
                             </p>
                             <p className="text-xs text-white/50">
@@ -367,7 +367,7 @@ const BloodSugarRecords: React.FC = () => {
         <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-              <DonutLargeIcon className="h-5 w-5 text-teal-400" />
+              <DonutLargeIcon className="h-5 w-5 text-primary-400" />
               Reading Distribution
             </CardTitle>
             <CardDescription className="text-sm text-white/60">Breakdown by glucose ranges</CardDescription>
@@ -445,7 +445,7 @@ const BloodSugarRecords: React.FC = () => {
         <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-              <AnalyticsIcon className="h-5 w-5 text-teal-400" />
+              <AnalyticsIcon className="h-5 w-5 text-primary-400" />
               Weekly Pattern Analysis
             </CardTitle>
             <CardDescription className="text-sm text-white/60">7-day glucose level patterns</CardDescription>
@@ -496,7 +496,7 @@ const BloodSugarRecords: React.FC = () => {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-              <DropletIcon className="h-6 w-6 text-teal-400" />
+              <DropletIcon className="h-6 w-6 text-primary-400" />
               Recent Blood Sugar Readings
             </h2>
             <p className="text-sm text-white/60 mt-1">
@@ -505,7 +505,7 @@ const BloodSugarRecords: React.FC = () => {
           </div>
           <Button
             onClick={() => navigate('/health/add-vital-record')}
-            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
           >
             <Plus className="h-4 w-4 mr-2" />
             Add Reading
@@ -655,8 +655,8 @@ const BloodSugarRecords: React.FC = () => {
         ) : (
           <Card className="rounded-2xl p-12 text-center bg-white/10 backdrop-blur-xl border border-white/20">
             <div className="max-w-md mx-auto">
-              <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-teal-500/20">
-                <DropletIcon className="h-10 w-10 text-teal-400" />
+              <div className="p-4 rounded-full mx-auto w-20 h-20 flex items-center justify-center mb-6 bg-primary-500/20">
+                <DropletIcon className="h-10 w-10 text-primary-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
                 No Blood Sugar Readings Yet
@@ -666,7 +666,7 @@ const BloodSugarRecords: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/health/add-vital-record')}
-                className="rounded-xl px-6 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                className="rounded-xl px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Add Your First Reading

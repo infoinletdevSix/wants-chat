@@ -611,7 +611,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <ChefHat className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -651,7 +651,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                 onClick={() => setShowTips(!showTips)}
                 className={`p-2 rounded-lg transition-colors ${
                   showTips
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -665,8 +665,8 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="mb-4 p-3 bg-[#0D9488]/10 border border-[#0D9488]/20 rounded-lg flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
+            <div className="mb-4 p-3 bg-[#6096B4]/10 border border-[#6096B4]/20 rounded-lg flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
               <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 {isEditFromGallery ? t('tools.bakingSubstitution.dataRestoredFromYourSaved', 'Data restored from your saved gallery') : t('tools.bakingSubstitution.fieldsHaveBeenPrefilledFrom', 'Fields have been prefilled from AI suggestions')}
               </span>
@@ -675,12 +675,12 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
 
           {/* Tips Section */}
           {showTips && (
-            <div className={`mb-6 p-4 rounded-lg border-l-4 border-[#0D9488] ${
-              theme === 'dark' ? 'bg-gray-700' : t('tools.bakingSubstitution.bg0d948810', 'bg-[#0D9488]/10')
+            <div className={`mb-6 p-4 rounded-lg border-l-4 border-[#6096B4] ${
+              theme === 'dark' ? 'bg-gray-700' : t('tools.bakingSubstitution.bg0d948810', 'bg-[#6096B4]/10')
             }`}>
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
-                  <Lightbulb className="w-5 h-5 text-[#0D9488] flex-shrink-0 mt-0.5" />
+                  <Lightbulb className="w-5 h-5 text-[#6096B4] flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className={`font-semibold mb-1 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.bakingSubstitution.proTip', 'Pro Tip')}
@@ -692,7 +692,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                 </div>
                 <button
                   onClick={nextTip}
-                  className={`text-sm font-medium text-[#0D9488] hover:underline flex-shrink-0`}
+                  className={`text-sm font-medium text-[#6096B4] hover:underline flex-shrink-0`}
                 >
                   {t('tools.bakingSubstitution.nextTip', 'Next Tip')}
                 </button>
@@ -754,7 +754,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -769,7 +769,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                   }}
                   className={`p-3 rounded-lg text-left transition-colors ${
                     selectedIngredient?.id === ingredient.id
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -805,7 +805,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <span className={`text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                   {selectedIngredient.unit}
@@ -880,10 +880,10 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                         </CardHeader>
                         <CardContent>
                           <div className={`p-3 rounded-lg mb-3 ${
-                            theme === 'dark' ? 'bg-gray-600' : t('tools.bakingSubstitution.bg0d9488102', 'bg-[#0D9488]/10')
+                            theme === 'dark' ? 'bg-gray-600' : t('tools.bakingSubstitution.bg0d9488102', 'bg-[#6096B4]/10')
                           }`}>
                             <div className="flex items-center gap-2 mb-1">
-                              <ArrowRightLeft className="w-4 h-4 text-[#0D9488]" />
+                              <ArrowRightLeft className="w-4 h-4 text-[#6096B4]" />
                               <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                                 {t('tools.bakingSubstitution.scaledRatio', 'Scaled Ratio:')}
                               </span>
@@ -950,7 +950,7 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
                             {fav.ingredient.name}
                           </span>
                           <ArrowRightLeft className={`inline w-4 h-4 mx-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
-                          <span className={`font-medium text-[#0D9488]`}>
+                          <span className={`font-medium text-[#6096B4]`}>
                             {fav.substitution.name}
                           </span>
                         </div>
@@ -984,19 +984,19 @@ export function BakingSubstitutionTool({ uiConfig }: BakingSubstitutionToolProps
             </h3>
             <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
               <div className="flex items-start gap-2">
-                <span className="text-[#0D9488]">1 egg =</span>
+                <span className="text-[#6096B4]">1 egg =</span>
                 <span>1/4 cup applesauce or mashed banana</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-[#0D9488]">1 cup butter =</span>
+                <span className="text-[#6096B4]">1 cup butter =</span>
                 <span>3/4 cup vegetable oil</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-[#0D9488]">1 cup milk =</span>
+                <span className="text-[#6096B4]">1 cup milk =</span>
                 <span>1 cup any plant milk</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-[#0D9488]">1 cup sugar =</span>
+                <span className="text-[#6096B4]">1 cup sugar =</span>
                 <span>3/4 cup maple syrup (reduce liquid)</span>
               </div>
             </div>

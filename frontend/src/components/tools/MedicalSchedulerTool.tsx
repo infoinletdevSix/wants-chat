@@ -716,7 +716,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
               onClick={() => setCalendarView(view)}
               className={`px-3 py-1.5 text-sm font-medium capitalize ${
                 calendarView === view
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-white text-gray-600 hover:bg-gray-50'
@@ -832,7 +832,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
               <div
                 key={day.toISOString()}
                 className={`p-2 text-center border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} ${
-                  isToday ? 'bg-[#0D9488]/10' : ''
+                  isToday ? 'bg-[#6096B4]/10' : ''
                 }`}
               >
                 <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -840,7 +840,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 </div>
                 <div
                   className={`text-lg font-semibold ${
-                    isToday ? 'text-[#0D9488]' : theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    isToday ? 'text-[#6096B4]' : theme === 'dark' ? 'text-white' : 'text-gray-900'
                   }`}
                 >
                   {day.getDate()}
@@ -947,12 +947,12 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 }}
                 className={`p-2 min-h-[100px] border-b border-r cursor-pointer ${
                   theme === 'dark' ? 'border-gray-700 hover:bg-gray-700/50' : 'border-gray-200 hover:bg-gray-50'
-                } ${isSelected ? 'ring-2 ring-[#0D9488] ring-inset' : ''}`}
+                } ${isSelected ? 'ring-2 ring-[#6096B4] ring-inset' : ''}`}
               >
                 <div
                   className={`text-sm font-medium mb-1 ${
                     isToday
-                      ? 'w-7 h-7 rounded-full bg-[#0D9488] text-white flex items-center justify-center'
+                      ? 'w-7 h-7 rounded-full bg-[#6096B4] text-white flex items-center justify-center'
                       : theme === 'dark'
                       ? 'text-white'
                       : 'text-gray-900'
@@ -1040,7 +1040,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
         <select
@@ -1244,7 +1244,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                         }));
                         setShowBookingModal(true);
                       }}
-                      className="p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                      className="p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                       title={t('tools.medicalScheduler.bookAppointment2', 'Book Appointment')}
                     >
                       <Plus className="w-4 h-4" />
@@ -1309,7 +1309,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
           setEditingPatient(null);
           setShowPatientModal(true);
         }}
-        className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+        className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
       >
         <Plus className="w-4 h-4" /> Add Patient
       </button>
@@ -1344,7 +1344,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                     setBookingForm((prev) => ({ ...prev, patientId: patient.id }));
                     setShowBookingModal(true);
                   }}
-                  className="p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                  className="p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   title={t('tools.medicalScheduler.bookAppointment3', 'Book Appointment')}
                 >
                   <Plus className="w-4 h-4" />
@@ -1414,7 +1414,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               <option value="">{t('tools.medicalScheduler.selectPatient', 'Select Patient')}</option>
               {patients.map((patient) => (
@@ -1437,7 +1437,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               <option value="">{t('tools.medicalScheduler.selectProvider', 'Select Provider')}</option>
               {providers.map((provider) => (
@@ -1460,7 +1460,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               <option value="">{t('tools.medicalScheduler.noRoomAssignment', 'No Room Assignment')}</option>
               {rooms.map((room) => (
@@ -1491,7 +1491,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {Object.entries(APPOINTMENT_TYPES).map(([key, config]) => (
                   <option key={key} value={key}>
@@ -1514,7 +1514,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -1533,7 +1533,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -1548,7 +1548,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -1566,7 +1566,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="none">{t('tools.medicalScheduler.noRecurrence', 'No Recurrence')}</option>
                 <option value="daily">{t('tools.medicalScheduler.daily', 'Daily')}</option>
@@ -1588,7 +1588,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             )}
@@ -1610,7 +1610,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                       reminders: { ...prev.reminders, email: e.target.checked },
                     }))
                   }
-                  className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                  className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                 />
                 <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.medicalScheduler.email', 'Email')}</span>
               </label>
@@ -1624,7 +1624,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                       reminders: { ...prev.reminders, sms: e.target.checked },
                     }))
                   }
-                  className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                  className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                 />
                 <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.medicalScheduler.sms', 'SMS')}</span>
               </label>
@@ -1644,7 +1644,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               placeholder={t('tools.medicalScheduler.additionalNotesOrSpecialInstructions', 'Additional notes or special instructions...')}
             />
           </div>
@@ -1666,7 +1666,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
           <button
             onClick={handleBookAppointment}
             disabled={!bookingForm.patientId || !bookingForm.providerId}
-            className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {editingAppointment ? t('tools.medicalScheduler.updateAppointment', 'Update Appointment') : t('tools.medicalScheduler.bookAppointment', 'Book Appointment')}
           </button>
@@ -1713,7 +1713,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -1730,7 +1730,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -1745,7 +1745,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -1762,7 +1762,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -1778,7 +1778,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -1795,7 +1795,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div>
@@ -1810,7 +1810,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -1832,7 +1832,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
           <button
             onClick={handleSavePatient}
             disabled={!patientForm.name || !patientForm.email || !patientForm.phone || !patientForm.dateOfBirth}
-            className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {editingPatient ? t('tools.medicalScheduler.updatePatient', 'Update Patient') : t('tools.medicalScheduler.addPatient', 'Add Patient')}
           </button>
@@ -1845,7 +1845,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -1855,7 +1855,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Stethoscope className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -1902,7 +1902,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
               setEditingAppointment(null);
               setShowBookingModal(true);
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
           >
             <Plus className="w-4 h-4" /> New Appointment
           </button>
@@ -1923,7 +1923,7 @@ export const MedicalSchedulerTool = ({ uiConfig }: MedicalSchedulerToolProps) =>
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'text-gray-300 hover:bg-gray-600'
                 : 'text-gray-600 hover:bg-white'

@@ -747,11 +747,11 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const selectClass = `px-3 py-2 rounded-lg border ${
     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const getStatusColor = (status: JobSite['status']) => {
     return SITE_STATUSES.find((s) => s.value === status)?.color || '#6B7280';
@@ -783,7 +783,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>{t('tools.jobSiteManager.loadingJobSites', 'Loading job sites...')}</p>
         </div>
       </div>
@@ -795,9 +795,9 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.jobSiteManager.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.jobSiteManager.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -806,7 +806,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
           <CardHeader>
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <HardHat className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -921,8 +921,8 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
 
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <ClipboardList className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <ClipboardList className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.jobSiteManager.totalSites', 'Total Sites')}</p>
@@ -950,7 +950,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'text-gray-300 hover:bg-gray-700'
                     : 'text-gray-700 hover:bg-gray-100'
@@ -1030,7 +1030,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                       resetSiteForm();
                       setShowSiteForm(true);
                     }}
-                    className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.jobSiteManager.addSite', 'Add Site')}
@@ -1057,8 +1057,8 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                     <Card
                       key={site.id}
                       className={`cursor-pointer transition-all hover:shadow-lg ${
-                        theme === 'dark' ? t('tools.jobSiteManager.bgGray800BorderGray', 'bg-gray-800 border-gray-700 hover:border-[#0D9488]') : t('tools.jobSiteManager.bgWhiteBorderGray200', 'bg-white border-gray-200 hover:border-[#0D9488]')
-                      } ${selectedSiteId === site.id ? 'ring-2 ring-[#0D9488]' : ''}`}
+                        theme === 'dark' ? t('tools.jobSiteManager.bgGray800BorderGray', 'bg-gray-800 border-gray-700 hover:border-[#6096B4]') : t('tools.jobSiteManager.bgWhiteBorderGray200', 'bg-white border-gray-200 hover:border-[#6096B4]')
+                      } ${selectedSiteId === site.id ? 'ring-2 ring-[#6096B4]' : ''}`}
                       onClick={() => setSelectedSiteId(site.id)}
                     >
                       <CardContent className="p-4">
@@ -1128,7 +1128,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                           </div>
                           <div className="flex items-center gap-2">
                             <DollarSign className={`w-4 h-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
-                            <span className={`font-medium text-[#0D9488]`}>{formatCurrency(site.budget)}</span>
+                            <span className={`font-medium text-[#6096B4]`}>{formatCurrency(site.budget)}</span>
                           </div>
                         </div>
                       </CardContent>
@@ -1169,7 +1169,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                       resetLogForm();
                       setShowLogForm(true);
                     }}
-                    className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.jobSiteManager.addDailyLog', 'Add Daily Log')}
@@ -1305,7 +1305,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                       resetEquipmentForm();
                       setShowEquipmentForm(true);
                     }}
-                    className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.jobSiteManager.addEquipment', 'Add Equipment')}
@@ -1422,7 +1422,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                       resetIncidentForm();
                       setShowIncidentForm(true);
                     }}
-                    className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.jobSiteManager.reportIncident', 'Report Incident')}
@@ -1436,7 +1436,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className={`text-lg flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    <Truck className="w-5 h-5 text-[#0D9488]" />
+                    <Truck className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.jobSiteManager.materialDeliveries', 'Material Deliveries')}
                   </CardTitle>
                   <button
@@ -1444,7 +1444,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                       resetDeliveryForm();
                       setShowDeliveryForm(true);
                     }}
-                    className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-3 py-1.5 rounded-lg transition-colors text-sm"
+                    className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-3 py-1.5 rounded-lg transition-colors text-sm"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.jobSiteManager.addDelivery', 'Add Delivery')}
@@ -1856,7 +1856,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                 </button>
                 <button
                   onClick={handleSaveSite}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.jobSiteManager.updateSite', 'Update Site') : t('tools.jobSiteManager.addSite2', 'Add Site')}
                 </button>
@@ -1996,7 +1996,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                 </button>
                 <button
                   onClick={handleSaveLog}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.jobSiteManager.updateLog', 'Update Log') : t('tools.jobSiteManager.addLog', 'Add Log')}
                 </button>
@@ -2141,7 +2141,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                 </button>
                 <button
                   onClick={handleSaveEquipment}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.jobSiteManager.updateEquipment', 'Update Equipment') : t('tools.jobSiteManager.addEquipment3', 'Add Equipment')}
                 </button>
@@ -2285,7 +2285,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                       type="checkbox"
                       checked={incidentForm.resolved}
                       onChange={(e) => setIncidentForm({ ...incidentForm, resolved: e.target.checked })}
-                      className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                     <span className="text-sm font-medium">{t('tools.jobSiteManager.resolved', 'Resolved')}</span>
                   </label>
@@ -2300,7 +2300,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                 </button>
                 <button
                   onClick={handleSaveIncident}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.jobSiteManager.updateReport', 'Update Report') : t('tools.jobSiteManager.submitReport', 'Submit Report')}
                 </button>
@@ -2457,7 +2457,7 @@ export const JobSiteManagerTool = ({ uiConfig }: JobSiteManagerToolProps) => {
                 </button>
                 <button
                   onClick={handleSaveDelivery}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   {editingItem ? t('tools.jobSiteManager.updateDelivery', 'Update Delivery') : t('tools.jobSiteManager.addDelivery2', 'Add Delivery')}
                 </button>

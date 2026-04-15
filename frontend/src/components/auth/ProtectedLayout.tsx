@@ -64,7 +64,7 @@ export const ProtectedLayout: React.FC<ProtectedLayoutProps> = ({
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
-        <Loader2 className="h-8 w-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -78,7 +78,7 @@ export const ProtectedLayout: React.FC<ProtectedLayoutProps> = ({
   if (!skipOnboardingCheck && onboardingLoading && !onboardingChecked) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
-        <Loader2 className="h-8 w-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }

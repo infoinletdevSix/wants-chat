@@ -368,7 +368,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
   // Styling helpers
   const inputClass = `w-full px-4 py-2 rounded-lg border ${
     isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-500' : 'bg-white border-gray-300 placeholder-gray-400'
-  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
 
   const cardClass = `p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`;
 
@@ -431,7 +431,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
     return (
       <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -440,11 +440,11 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <FlaskConical className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <FlaskConical className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.experimentLog.experimentLog', 'Experiment Log')}</h3>
@@ -485,9 +485,9 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="mx-6 mt-4 flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.experimentLog.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="mx-6 mt-4 flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.experimentLog.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -508,7 +508,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
             onClick={() => setShowFilters(!showFilters)}
             className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
               showFilters
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
             }`}
           >
@@ -518,7 +518,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
           </button>
           <button
             onClick={() => setShowNewExperimentForm(true)}
-            className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('tools.experimentLog.newExperiment', 'New Experiment')}
@@ -586,7 +586,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium transition-colors ${
               activeTab === tab.id
-                ? `${isDark ? t('tools.experimentLog.text0d9488Border0d9488', 'text-[#0D9488] border-[#0D9488]') : t('tools.experimentLog.text0d9488Border0d94882', 'text-[#0D9488] border-[#0D9488]')} border-b-2`
+                ? `${isDark ? t('tools.experimentLog.text0d9488Border0d9488', 'text-[#6096B4] border-[#6096B4]') : t('tools.experimentLog.text0d9488Border0d94882', 'text-[#6096B4] border-[#6096B4]')} border-b-2`
                 : `${isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-700'}`
             }`}
           >
@@ -678,7 +678,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                   <button
                     onClick={createExperiment}
                     disabled={!newExperiment.title}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.experimentLog.createExperiment', 'Create Experiment')}
@@ -721,8 +721,8 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                 filteredExperiments.map(experiment => (
                   <div
                     key={experiment.id}
-                    className={`${cardClass} cursor-pointer hover:ring-2 hover:ring-[#0D9488]/50 transition-all ${
-                      selectedExperiment?.id === experiment.id ? 'ring-2 ring-[#0D9488]' : ''
+                    className={`${cardClass} cursor-pointer hover:ring-2 hover:ring-[#6096B4]/50 transition-all ${
+                      selectedExperiment?.id === experiment.id ? 'ring-2 ring-[#6096B4]' : ''
                     }`}
                     onClick={() => setSelectedExperiment(experiment)}
                   >
@@ -775,7 +775,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                       <>
                         <button
                           onClick={() => handleUpdateExperiment(selectedExperiment)}
-                          className="px-3 py-1.5 bg-[#0D9488] text-white rounded-lg text-sm flex items-center gap-1"
+                          className="px-3 py-1.5 bg-[#6096B4] text-white rounded-lg text-sm flex items-center gap-1"
                         >
                           <Save className="w-3 h-3" />
                           {t('tools.experimentLog.save', 'Save')}
@@ -894,8 +894,8 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
           <div className="space-y-4">
             {selectedExperiment ? (
               <>
-                <div className={`p-4 rounded-lg ${isDark ? t('tools.experimentLog.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/20') : t('tools.experimentLog.bg0d94885Border0d9488', 'bg-[#0D9488]/5 border-[#0D9488]/10')} border`}>
-                  <p className={`text-sm ${isDark ? t('tools.experimentLog.text0d9488', 'text-[#0D9488]') : t('tools.experimentLog.text0b8276', 'text-[#0B8276]')}`}>
+                <div className={`p-4 rounded-lg ${isDark ? t('tools.experimentLog.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/20') : t('tools.experimentLog.bg0d94885Border0d9488', 'bg-[#6096B4]/5 border-[#6096B4]/10')} border`}>
+                  <p className={`text-sm ${isDark ? t('tools.experimentLog.text0d9488', 'text-[#6096B4]') : t('tools.experimentLog.text0b8276', 'text-[#0B8276]')}`}>
                     Adding observations to: <span className="font-semibold">{selectedExperiment.title}</span>
                   </p>
                 </div>
@@ -927,7 +927,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                         }
                       }}
                       disabled={!newObservationNote.trim()}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.experimentLog.addObservation', 'Add Observation')}
@@ -947,7 +947,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                       <div key={obs.id} className={cardClass}>
                         <div className="flex items-start gap-3">
                           <div className={`p-2 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                            <Clock className="w-4 h-4 text-[#0D9488]" />
+                            <Clock className="w-4 h-4 text-[#6096B4]" />
                           </div>
                           <div className="flex-1">
                             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -955,7 +955,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                             </div>
                             <p className={`mt-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{obs.note}</p>
                             {obs.dataPoint && (
-                              <div className={`mt-2 inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs ${isDark ? t('tools.experimentLog.bg0d948820Text0d9488', 'bg-[#0D9488]/20 text-[#0D9488]') : t('tools.experimentLog.bg0d948810Text0b8276', 'bg-[#0D9488]/10 text-[#0B8276]')}`}>
+                              <div className={`mt-2 inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs ${isDark ? t('tools.experimentLog.bg0d948820Text0d9488', 'bg-[#6096B4]/20 text-[#6096B4]') : t('tools.experimentLog.bg0d948810Text0b8276', 'bg-[#6096B4]/10 text-[#0B8276]')}`}>
                                 <Target className="w-3 h-3" />
                                 {obs.dataPoint}
                               </div>
@@ -982,8 +982,8 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
           <div className="space-y-4">
             {selectedExperiment ? (
               <>
-                <div className={`p-4 rounded-lg ${isDark ? t('tools.experimentLog.bg0d948810Border0d94882', 'bg-[#0D9488]/10 border-[#0D9488]/20') : t('tools.experimentLog.bg0d94885Border0d94882', 'bg-[#0D9488]/5 border-[#0D9488]/10')} border`}>
-                  <p className={`text-sm ${isDark ? t('tools.experimentLog.text0d94882', 'text-[#0D9488]') : t('tools.experimentLog.text0b82762', 'text-[#0B8276]')}`}>
+                <div className={`p-4 rounded-lg ${isDark ? t('tools.experimentLog.bg0d948810Border0d94882', 'bg-[#6096B4]/10 border-[#6096B4]/20') : t('tools.experimentLog.bg0d94885Border0d94882', 'bg-[#6096B4]/5 border-[#6096B4]/10')} border`}>
+                  <p className={`text-sm ${isDark ? t('tools.experimentLog.text0d94882', 'text-[#6096B4]') : t('tools.experimentLog.text0b82762', 'text-[#0B8276]')}`}>
                     Managing variables for: <span className="font-semibold">{selectedExperiment.title}</span>
                   </p>
                 </div>
@@ -1038,7 +1038,7 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
                       }
                     }}
                     disabled={!newVariableName.trim()}
-                    className="mt-3 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="mt-3 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.experimentLog.addVariable', 'Add Variable')}
@@ -1102,8 +1102,8 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
           <div className="space-y-4">
             {selectedExperiment ? (
               <>
-                <div className={`p-4 rounded-lg ${isDark ? t('tools.experimentLog.bg0d948810Border0d94883', 'bg-[#0D9488]/10 border-[#0D9488]/20') : t('tools.experimentLog.bg0d94885Border0d94883', 'bg-[#0D9488]/5 border-[#0D9488]/10')} border`}>
-                  <p className={`text-sm ${isDark ? t('tools.experimentLog.text0d94883', 'text-[#0D9488]') : t('tools.experimentLog.text0b82763', 'text-[#0B8276]')}`}>
+                <div className={`p-4 rounded-lg ${isDark ? t('tools.experimentLog.bg0d948810Border0d94883', 'bg-[#6096B4]/10 border-[#6096B4]/20') : t('tools.experimentLog.bg0d94885Border0d94883', 'bg-[#6096B4]/5 border-[#6096B4]/10')} border`}>
+                  <p className={`text-sm ${isDark ? t('tools.experimentLog.text0d94883', 'text-[#6096B4]') : t('tools.experimentLog.text0b82763', 'text-[#0B8276]')}`}>
                     Results for: <span className="font-semibold">{selectedExperiment.title}</span>
                   </p>
                 </div>
@@ -1134,14 +1134,14 @@ export const ExperimentLogTool: React.FC<ExperimentLogToolProps> = ({ uiConfig }
 
                 <button
                   onClick={() => handleUpdateExperiment(selectedExperiment)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] flex items-center gap-2"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] flex items-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.experimentLog.saveResultsConclusions', 'Save Results & Conclusions')}
                 </button>
 
                 {/* Summary Card */}
-                <div className={`${cardClass} ${isDark ? t('tools.experimentLog.bgGradientToRFrom', 'bg-gradient-to-r from-gray-800 to-[#0D9488]/10') : t('tools.experimentLog.bgGradientToRFrom2', 'bg-gradient-to-r from-gray-50 to-[#0D9488]/5')}`}>
+                <div className={`${cardClass} ${isDark ? t('tools.experimentLog.bgGradientToRFrom', 'bg-gradient-to-r from-gray-800 to-[#6096B4]/10') : t('tools.experimentLog.bgGradientToRFrom2', 'bg-gradient-to-r from-gray-50 to-[#6096B4]/5')}`}>
                   <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.experimentLog.experimentSummary', 'Experiment Summary')}</h4>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                     <div>

@@ -112,11 +112,11 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Calculator className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Calculator className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingBudgetCalculator.weddingBudgetCalculator', 'Wedding Budget Calculator')}</h3>
@@ -133,9 +133,9 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.weddingBudgetCalculator.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -154,7 +154,7 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
                 type="number"
                 value={totalBudget}
                 onChange={(e) => setTotalBudget(Math.max(0, parseFloat(e.target.value) || 0))}
-                className={`w-full pl-10 pr-4 py-3 text-lg font-semibold rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500`}
+                className={`w-full pl-10 pr-4 py-3 text-lg font-semibold rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500`}
               />
             </div>
           </div>
@@ -168,7 +168,7 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
                 type="number"
                 value={guestCount}
                 onChange={(e) => setGuestCount(Math.max(1, parseInt(e.target.value) || 1))}
-                className={`w-full pl-10 pr-4 py-3 text-lg font-semibold rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500`}
+                className={`w-full pl-10 pr-4 py-3 text-lg font-semibold rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500`}
               />
             </div>
           </div>
@@ -180,8 +180,8 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
             <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{formatCurrency(totalBudget)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingBudgetCalculator.totalBudget', 'Total Budget')}</div>
           </div>
-          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'}`}>
-            <div className="text-xl font-bold text-teal-500">{formatCurrency(calculations.perGuestCost)}</div>
+          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+            <div className="text-xl font-bold text-primary-500">{formatCurrency(calculations.perGuestCost)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingBudgetCalculator.perGuest', 'Per Guest')}</div>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-blue-900/20' : 'bg-blue-50'}`}>
@@ -207,7 +207,7 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
         {/* Budget Allocation Bar */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <PieChart className="w-4 h-4 text-teal-500" />
+            <PieChart className="w-4 h-4 text-primary-500" />
             <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingBudgetCalculator.budgetAllocation', 'Budget Allocation')}</span>
           </div>
           <div className="h-6 rounded-full overflow-hidden flex bg-gray-300">
@@ -228,7 +228,7 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
         {/* Category Breakdown */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <TrendingUp className="w-4 h-4 text-teal-500" />
+            <TrendingUp className="w-4 h-4 text-primary-500" />
             {t('tools.weddingBudgetCalculator.budgetCategories', 'Budget Categories')}
           </h4>
           <div className="grid gap-3">
@@ -266,7 +266,7 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
                       }}
                     />
                   </div>
-                  <span className={`font-semibold min-w-[100px] text-right ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <span className={`font-semibold min-w-[100px] text-right ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {formatCurrency(category.amount)}
                   </span>
                 </div>
@@ -276,7 +276,7 @@ export const WeddingBudgetCalculatorTool: React.FC<WeddingBudgetCalculatorToolPr
         </div>
 
         {/* Quick Reference */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800/50' : 'bg-teal-50/50'}`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800/50' : 'bg-primary-50/50'}`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingBudgetCalculator.quickReference', 'Quick Reference')}</h4>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
             <div>

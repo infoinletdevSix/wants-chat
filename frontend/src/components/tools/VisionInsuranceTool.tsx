@@ -554,9 +554,9 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.visionInsurance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.visionInsurance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -564,7 +564,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -701,7 +701,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -723,7 +723,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
               </h2>
               <button
                 onClick={() => setShowEligibilityForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.visionInsurance.newVerification', 'New Verification')}
@@ -843,7 +843,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -854,7 +854,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.visionInsurance.allStatuses', 'All Statuses')}</option>
                   {CLAIM_STATUSES.map((status) => (
@@ -865,7 +865,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                 </select>
                 <button
                   onClick={() => setShowClaimForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.visionInsurance.newClaim', 'New Claim')}
@@ -931,7 +931,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                                 theme === 'dark'
                                   ? 'bg-gray-700 border-gray-600 text-white'
                                   : 'bg-white border-gray-300 text-gray-900'
-                              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                             >
                               {CLAIM_STATUSES.map((status) => (
                                 <option key={status.value} value={status.value}>
@@ -965,7 +965,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
               </h2>
               <button
                 onClick={() => setShowPatientForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.visionInsurance.addPatient', 'Add Patient')}
@@ -988,8 +988,8 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                          <CreditCard className="w-5 h-5 text-[#0D9488]" />
+                        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                          <CreditCard className="w-5 h-5 text-[#6096B4]" />
                         </div>
                         <div>
                           <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1014,7 +1014,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                             setSelectedPatientId(patient.id);
                             setShowEligibilityForm(true);
                           }}
-                          className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                          className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                           title={t('tools.visionInsurance.checkEligibility', 'Check Eligibility')}
                         >
                           <RefreshCw className="w-4 h-4" />
@@ -1024,7 +1024,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                             setSelectedPatientId(patient.id);
                             setShowClaimForm(true);
                           }}
-                          className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                          className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                           title={t('tools.visionInsurance.newClaim2', 'New Claim')}
                         >
                           <FileText className="w-4 h-4" />
@@ -1049,7 +1049,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-6`}>
               <div className="flex items-center gap-3 mb-2">
-                <FileText className="w-5 h-5 text-[#0D9488]" />
+                <FileText className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.visionInsurance.totalClaims', 'Total Claims')}</h3>
               </div>
               <p className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1059,7 +1059,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
 
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-6`}>
               <div className="flex items-center gap-3 mb-2">
-                <DollarSign className="w-5 h-5 text-[#0D9488]" />
+                <DollarSign className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.visionInsurance.pendingAmount', 'Pending Amount')}</h3>
               </div>
               <p className={`text-3xl font-bold text-yellow-500`}>
@@ -1069,7 +1069,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
 
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-6`}>
               <div className="flex items-center gap-3 mb-2">
-                <Clock className="w-5 h-5 text-[#0D9488]" />
+                <Clock className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.visionInsurance.avgDaysToPay', 'Avg Days to Pay')}</h3>
               </div>
               <p className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1120,7 +1120,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1135,7 +1135,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1153,7 +1153,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1168,7 +1168,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1185,7 +1185,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.visionInsurance.selectProvider', 'Select provider...')}</option>
                         {INSURANCE_PROVIDERS.map((provider) => (
@@ -1207,7 +1207,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1225,7 +1225,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1240,7 +1240,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1259,7 +1259,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addPatient}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.visionInsurance.addPatient2', 'Add Patient')}
                   </button>
@@ -1301,7 +1301,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="">{t('tools.visionInsurance.selectAPatient', 'Select a patient...')}</option>
                       {patients.map((p) => (
@@ -1324,7 +1324,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="pending">{t('tools.visionInsurance.pending2', 'Pending')}</option>
                         <option value="verified">{t('tools.visionInsurance.verified', 'Verified')}</option>
@@ -1344,7 +1344,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1355,7 +1355,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         type="checkbox"
                         checked={newEligibility.examEligible}
                         onChange={(e) => setNewEligibility({ ...newEligibility, examEligible: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                        className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.visionInsurance.examEligible', 'Exam Eligible')}</span>
                     </label>
@@ -1364,7 +1364,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         type="checkbox"
                         checked={newEligibility.frameEligible}
                         onChange={(e) => setNewEligibility({ ...newEligibility, frameEligible: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                        className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.visionInsurance.frameEligible', 'Frame Eligible')}</span>
                     </label>
@@ -1373,7 +1373,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         type="checkbox"
                         checked={newEligibility.lensEligible}
                         onChange={(e) => setNewEligibility({ ...newEligibility, lensEligible: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                        className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.visionInsurance.lensEligible', 'Lens Eligible')}</span>
                     </label>
@@ -1382,7 +1382,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         type="checkbox"
                         checked={newEligibility.contactLensEligible}
                         onChange={(e) => setNewEligibility({ ...newEligibility, contactLensEligible: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                        className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.visionInsurance.contactLensEligible', 'Contact Lens Eligible')}</span>
                     </label>
@@ -1403,7 +1403,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1420,7 +1420,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1437,7 +1437,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1454,7 +1454,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1475,7 +1475,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addEligibilityCheck}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.visionInsurance.saveVerification', 'Save Verification')}
                   </button>
@@ -1518,7 +1518,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.visionInsurance.selectAPatient2', 'Select a patient...')}</option>
                         {patients.map((p) => (
@@ -1539,7 +1539,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {CLAIM_TYPES.map((type) => (
                           <option key={type.value} value={type.value}>
@@ -1562,7 +1562,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1581,7 +1581,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1598,7 +1598,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1618,7 +1618,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1635,7 +1635,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1652,7 +1652,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1673,7 +1673,7 @@ export const VisionInsuranceTool: React.FC<VisionInsuranceToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addClaim}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.visionInsurance.submitClaim', 'Submit Claim')}
                   </button>

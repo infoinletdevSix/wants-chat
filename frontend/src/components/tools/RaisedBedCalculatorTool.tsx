@@ -189,9 +189,9 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Flower2 className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Flower2 className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.raisedBedCalculator.raisedGardenBedCalculator', 'Raised Garden Bed Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.raisedBedCalculator.calculateMaterialsSoilAndCosts', 'Calculate materials, soil, and costs')}</p>
@@ -203,7 +203,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
         {/* Bed Dimensions */}
         <div className="space-y-4">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Ruler className="w-4 h-4 text-teal-500" />
+            <Ruler className="w-4 h-4 text-primary-500" />
             {t('tools.raisedBedCalculator.bedDimensionsFeet', 'Bed Dimensions (feet)')}
           </h4>
           <div className="grid grid-cols-3 gap-4">
@@ -244,7 +244,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
               <button
                 key={h}
                 onClick={() => setHeight(h.toString())}
-                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(height) === h ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(height) === h ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {h}"
               </button>
@@ -255,7 +255,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
         {/* Wood Type Selection */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Package className="w-4 h-4 text-teal-500" />
+            <Package className="w-4 h-4 text-primary-500" />
             {t('tools.raisedBedCalculator.lumberType', 'Lumber Type')}
           </h4>
           <div className="grid grid-cols-4 gap-2">
@@ -263,7 +263,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
               <button
                 key={w}
                 onClick={() => setWoodType(w)}
-                className={`py-2 px-3 rounded-lg text-sm ${woodType === w ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${woodType === w ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {w}
               </button>
@@ -277,7 +277,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
         {/* Soil Mix Selection */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Leaf className="w-4 h-4 text-teal-500" />
+            <Leaf className="w-4 h-4 text-primary-500" />
             {t('tools.raisedBedCalculator.soilMix', 'Soil Mix')}
           </h4>
           <div className="grid grid-cols-3 gap-2">
@@ -285,13 +285,13 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
               <button
                 key={s}
                 onClick={() => setSoilMix(s)}
-                className={`py-2 px-3 rounded-lg text-sm ${soilMix === s ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${soilMix === s ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {soilMixes[s].name}
               </button>
             ))}
           </div>
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{soilConfig.description}</p>
             <div className={`mt-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {soilConfig.topsoil}% Topsoil | {soilConfig.compost}% Compost | {soilConfig.other}% {soilConfig.otherName}
@@ -316,7 +316,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
             </div>
             <div className="col-span-2">
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.raisedBedCalculator.totalLumber', 'Total Lumber')}</div>
-              <div className="text-3xl font-bold text-teal-500">{calculations.totalLumberFeet} linear ft</div>
+              <div className="text-3xl font-bold text-primary-500">{calculations.totalLumberFeet} linear ft</div>
             </div>
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>8ft boards</div>
@@ -350,7 +350,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.raisedBedCalculator.cubicFeet', 'Cubic Feet')}</div>
-              <div className="text-2xl font-bold text-teal-500">{calculations.soilVolumeCuFt}</div>
+              <div className="text-2xl font-bold text-primary-500">{calculations.soilVolumeCuFt}</div>
             </div>
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.raisedBedCalculator.cubicYards', 'Cubic Yards')}</div>
@@ -382,7 +382,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
         {/* Plant Spacing Guide */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Grid3X3 className="w-4 h-4 text-teal-500" />
+            <Grid3X3 className="w-4 h-4 text-primary-500" />
             Plant Spacing Guide ({calculations.plantingAreaSqFt} sq ft bed)
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -391,7 +391,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
               return (
                 <div key={plant.name} className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
                   <div className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{plant.name}</div>
-                  <div className="text-lg font-bold text-teal-500">{plantsCount}</div>
+                  <div className="text-lg font-bold text-primary-500">{plantsCount}</div>
                   <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>{plant.spacing}" spacing</div>
                 </div>
               );
@@ -402,7 +402,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
         {/* Custom Pricing */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <DollarSign className="w-4 h-4 text-teal-500" />
+            <DollarSign className="w-4 h-4 text-primary-500" />
             {t('tools.raisedBedCalculator.customPricingOptional', 'Custom Pricing (optional)')}
           </h4>
           <div className="grid grid-cols-2 gap-4">
@@ -438,7 +438,7 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
         {/* Cost Estimate */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-green-900/20 border-green-800' : 'bg-green-50 border-green-200'} border`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <DollarSign className="w-4 h-4 text-teal-500" />
+            <DollarSign className="w-4 h-4 text-primary-500" />
             {t('tools.raisedBedCalculator.estimatedCost', 'Estimated Cost')}
           </h4>
           <div className="space-y-2">
@@ -458,9 +458,9 @@ export const RaisedBedCalculatorTool: React.FC<RaisedBedCalculatorToolProps> = (
               <span>Soil ({soilConfig.name})</span>
               <span>${calculations.soilCost}</span>
             </div>
-            <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-teal-800' : 'border-teal-200'}`}>
+            <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-primary-800' : 'border-primary-200'}`}>
               <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.raisedBedCalculator.total', 'Total')}</span>
-              <span className="text-2xl font-bold text-teal-500">${calculations.totalCost}</span>
+              <span className="text-2xl font-bold text-primary-500">${calculations.totalCost}</span>
             </div>
           </div>
         </div>

@@ -76,7 +76,7 @@ export const EnvironmentTracker: React.FC<EnvironmentTrackerProps> = ({
             className={cn(
               'transition-all',
               value === option.value
-                ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-transparent'
+                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent'
                 : 'border-white/20 hover:border-white/40',
               readOnly && 'pointer-events-none'
             )}

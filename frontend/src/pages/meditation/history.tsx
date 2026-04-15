@@ -235,7 +235,7 @@ const MeditationHistory: React.FC = () => {
       'breathing': 'bg-cyan-100 text-cyan-800',
       'body_scan': 'bg-indigo-100 text-indigo-800',
       'loving_kindness': 'bg-pink-100 text-pink-800',
-      'walking': 'bg-teal-100 text-teal-800',
+      'walking': 'bg-primary-100 text-primary-800',
       'visualization': 'bg-violet-100 text-violet-800',
       'mantra': 'bg-amber-100 text-amber-800',
       'zen': 'bg-slate-100 text-slate-800',
@@ -269,7 +269,7 @@ const MeditationHistory: React.FC = () => {
                 <ChevronLeft className="h-5 w-5" />
               </Button>
               <div className="flex items-center gap-3">
-                <Icon path={mdiMeditation} size={1.2} className="text-teal-400" />
+                <Icon path={mdiMeditation} size={1.2} className="text-primary-400" />
                 <h1 className="text-xl font-semibold text-white">Meditation History</h1>
               </div>
             </div>
@@ -300,7 +300,7 @@ const MeditationHistory: React.FC = () => {
                   <p className="text-2xl font-bold text-white">{stats.daysActive}</p>
                 )}
               </div>
-              <Calendar className="h-8 w-8 text-teal-400 opacity-50" />
+              <Calendar className="h-8 w-8 text-primary-400 opacity-50" />
             </div>
           </Card>
 
@@ -314,7 +314,7 @@ const MeditationHistory: React.FC = () => {
                   <p className="text-2xl font-bold text-white">{stats.totalSessions}</p>
                 )}
               </div>
-              <CheckCircle className="h-8 w-8 text-teal-400 opacity-50" />
+              <CheckCircle className="h-8 w-8 text-primary-400 opacity-50" />
             </div>
           </Card>
 
@@ -328,7 +328,7 @@ const MeditationHistory: React.FC = () => {
                   <p className="text-2xl font-bold text-white">{stats.totalMinutes}</p>
                 )}
               </div>
-              <Clock className="h-8 w-8 text-teal-400 opacity-50" />
+              <Clock className="h-8 w-8 text-primary-400 opacity-50" />
             </div>
           </Card>
 
@@ -342,7 +342,7 @@ const MeditationHistory: React.FC = () => {
                   <p className="text-2xl font-bold text-white">{stats.averageMood > 0 ? stats.averageMood.toFixed(1) : '0'}</p>
                 )}
               </div>
-              <Smile className="h-8 w-8 text-teal-400 opacity-50" />
+              <Smile className="h-8 w-8 text-primary-400 opacity-50" />
             </div>
           </Card>
         </div>
@@ -402,7 +402,7 @@ const MeditationHistory: React.FC = () => {
         <div className="space-y-4">
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
               <p className="text-white/60">Loading sessions...</p>
             </div>
           ) : displaySessions.length === 0 ? (
@@ -416,27 +416,27 @@ const MeditationHistory: React.FC = () => {
                     ? "You haven't meditated this week yet."
                     : "You haven't started your meditation journey yet."}
               </p>
-              <Button onClick={() => navigate('/meditation')} className="flex items-center gap-2 mx-auto bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+              <Button onClick={() => navigate('/meditation')} className="flex items-center gap-2 mx-auto bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
                 <Play className="h-4 w-4" />
                 Start Meditating
               </Button>
             </Card>
           ) : (
             displaySessions.map((session) => (
-              <Card key={session.id} className="p-4 hover:shadow-lg transition-shadow cursor-pointer bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-400/50">
+              <Card key={session.id} className="p-4 hover:shadow-lg transition-shadow cursor-pointer bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-400/50">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <Icon path={mdiMeditation} size={1} className="text-teal-400" />
+                      <Icon path={mdiMeditation} size={1} className="text-primary-400" />
                       <h3 className="font-semibold text-white">{session.title || 'Meditation Session'}</h3>
-                      <Badge className="bg-teal-500/20 text-teal-400 border border-teal-400/30">
+                      <Badge className="bg-primary-500/20 text-primary-400 border border-primary-400/30">
                         {session.type ? session.type.replace(/_/g, ' ') : 'guided'}
                       </Badge>
                       <Badge variant="outline" className="border-white/20 text-white/80">
                         {session.duration ? Math.round(session.duration / 60) : 0} min
                       </Badge>
                       {session.completed && (
-                        <CheckCircle className="h-5 w-5 text-teal-400" />
+                        <CheckCircle className="h-5 w-5 text-primary-400" />
                       )}
                     </div>
 
@@ -519,7 +519,7 @@ const MeditationHistory: React.FC = () => {
                     variant={page === currentPage ? "default" : "outline"}
                     size="sm"
                     onClick={() => setCurrentPage(page)}
-                    className={page === currentPage ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-white" : "border-white/20 text-white hover:bg-white/10"}
+                    className={page === currentPage ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white" : "border-white/20 text-white hover:bg-white/10"}
                   >
                     {page}
                   </Button>

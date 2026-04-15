@@ -321,8 +321,8 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <ListChecks className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <ListChecks className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.punchList.punchListTracker', 'Punch List Tracker')}</h1>
@@ -389,20 +389,20 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
       <div className="flex gap-2 border-b border-gray-200">
         <button
           onClick={() => { setActiveTab('list'); setSelectedPunchList(null); }}
-          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'list' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'list' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
         >
           {t('tools.punchList.allPunchLists', 'All Punch Lists')}
         </button>
         <button
           onClick={() => setActiveTab('create')}
-          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'create' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'create' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
         >
           {t('tools.punchList.newPunchList2', 'New Punch List')}
         </button>
         {selectedPunchList && (
           <button
             onClick={() => setActiveTab('items')}
-            className={`px-4 py-2 font-medium transition-colors ${activeTab === 'items' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+            className={`px-4 py-2 font-medium transition-colors ${activeTab === 'items' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
           >
             Items ({selectedPunchList.totalItems})
           </button>
@@ -429,8 +429,8 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
                 <div className="p-4 cursor-pointer hover:bg-gray-50" onClick={() => setExpandedId(expandedId === pl.id ? null : pl.id)}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <ListChecks className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <ListChecks className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{pl.projectName}</h3>
@@ -443,7 +443,7 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
                           <span className="font-bold text-gray-900">{pl.percentComplete}%</span>
                           <div className="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-teal-500 rounded-full"
+                              className="h-full bg-primary-500 rounded-full"
                               style={{ width: `${pl.percentComplete}%` }}
                             />
                           </div>
@@ -482,7 +482,7 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
                     <div className="flex gap-2">
                       <button
                         onClick={() => { setSelectedPunchList(pl); setActiveTab('items'); }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <ListChecks className="w-4 h-4" />
                         {t('tools.punchList.viewItems', 'View Items')}
@@ -504,7 +504,7 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
               <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
                 <ListChecks className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900">{t('tools.punchList.noPunchListsFound', 'No punch lists found')}</h3>
-                <button onClick={() => setActiveTab('create')} className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+                <button onClick={() => setActiveTab('create')} className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
                   {t('tools.punchList.createPunchList', 'Create Punch List')}
                 </button>
               </div>
@@ -594,7 +594,7 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
 
           <div className="flex justify-end gap-3">
             <button onClick={() => setActiveTab('list')} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.punchList.cancel', 'Cancel')}</button>
-            <button onClick={handleSave} className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+            <button onClick={handleSave} className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
               <Save className="w-4 h-4" />
               {t('tools.punchList.createPunchList2', 'Create Punch List')}
             </button>
@@ -613,12 +613,12 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
               </div>
               <div className="flex items-center gap-4">
                 <div className="text-right">
-                  <p className="font-bold text-2xl text-teal-600">{selectedPunchList.percentComplete}%</p>
+                  <p className="font-bold text-2xl text-primary-600">{selectedPunchList.percentComplete}%</p>
                   <p className="text-sm text-gray-500">{selectedPunchList.completedItems}/{selectedPunchList.totalItems} complete</p>
                 </div>
                 <button
                   onClick={addPunchItem}
-                  className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.punchList.addItem', 'Add Item')}
@@ -730,7 +730,7 @@ export const PunchListTool: React.FC<PunchListToolProps> = ({
                 <ListChecks className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900">{t('tools.punchList.noItemsFound', 'No items found')}</h3>
                 <p className="text-gray-500 mt-1">{t('tools.punchList.addItemsToStartTracking', 'Add items to start tracking punch list')}</p>
-                <button onClick={addPunchItem} className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+                <button onClick={addPunchItem} className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
                   {t('tools.punchList.addFirstItem', 'Add First Item')}
                 </button>
               </div>

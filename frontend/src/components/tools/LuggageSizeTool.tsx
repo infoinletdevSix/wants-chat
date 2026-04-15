@@ -225,7 +225,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Luggage className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -239,9 +239,9 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.luggageSize.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.luggageSize.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -259,7 +259,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {AIRLINES.map((airline) => (
                   <option key={airline.code} value={airline.code}>
@@ -279,7 +279,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                   onClick={() => setBagType('carry-on')}
                   className={`flex-1 py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                     bagType === 'carry-on'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -292,7 +292,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                   onClick={() => setBagType('checked')}
                   className={`flex-1 py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors ${
                     bagType === 'checked'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -322,7 +322,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -336,7 +336,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -350,7 +350,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -372,7 +372,7 @@ export const LuggageSizeTool: React.FC<LuggageSizeToolProps> = ({ uiConfig }) =>
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 

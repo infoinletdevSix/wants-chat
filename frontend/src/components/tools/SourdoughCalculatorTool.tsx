@@ -311,7 +311,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Wheat className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -346,7 +346,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -397,7 +397,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                     onClick={() => setHydrationPercent(percent)}
                     className={`py-2 px-3 rounded-lg font-medium transition-colors ${
                       hydrationPercent === percent
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -430,7 +430,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
                 {t('tools.sourdoughCalculator.typicalRange1525', 'Typical range: 15-25%')}
@@ -454,7 +454,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
                 {t('tools.sourdoughCalculator.typical1822', 'Typical: 1.8-2.2%')}
@@ -480,7 +480,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="flex">
@@ -488,7 +488,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                     onClick={() => setTemperatureUnit('celsius')}
                     className={`px-3 py-3 rounded-l-lg font-medium transition-colors ${
                       temperatureUnit === 'celsius'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -500,7 +500,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                     onClick={() => setTemperatureUnit('fahrenheit')}
                     className={`px-3 py-3 rounded-r-lg font-medium transition-colors ${
                       temperatureUnit === 'fahrenheit'
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -529,7 +529,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -539,7 +539,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
           <div className="flex gap-3 mb-6">
             <button
               onClick={handleCalculate}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.sourdoughCalculator.calculateRecipe', 'Calculate Recipe')}
@@ -560,16 +560,16 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
           {calculated && calculateIngredients && (
             <div className="space-y-6">
               {/* Ingredients Card */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.sourdoughCalculator.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.sourdoughCalculator.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Scale className="w-5 h-5 text-[#0D9488]" />
+                  <Scale className="w-5 h-5 text-[#6096B4]" />
                   Ingredients for {numberOfLoaves} {numberOfLoaves === 1 ? t('tools.sourdoughCalculator.loaf', 'Loaf') : t('tools.sourdoughCalculator.loaves', 'Loaves')} ({numberOfLoaves * parseFloat(targetWeight)}g total)
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center">
-                    <div className={`text-3xl font-bold text-[#0D9488]`}>
+                    <div className={`text-3xl font-bold text-[#6096B4]`}>
                       {calculateIngredients.flour}g
                     </div>
                     <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -618,7 +618,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
               {/* Fermentation Times */}
               <div className={`p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Thermometer className="w-5 h-5 text-[#0D9488]" />
+                  <Thermometer className="w-5 h-5 text-[#6096B4]" />
                   Fermentation Times (at {Math.round(getFermentationTimes.temperature)}C / {Math.round(getFermentationTimes.temperature * 9/5 + 32)}F)
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -639,7 +639,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                     </div>
                   </div>
                   <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                    <div className={`text-2xl font-bold text-[#0D9488]`}>
+                    <div className={`text-2xl font-bold text-[#6096B4]`}>
                       ~{Math.round(getFermentationTimes.totalHours)} hrs
                     </div>
                     <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -682,7 +682,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                         <div className="flex-shrink-0">
                           <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                             index === generateTimeline.length - 1
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark' ? 'bg-gray-500' : 'bg-gray-200'
                           }`}>
                             <span className={`text-sm font-bold ${
@@ -699,7 +699,7 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
                             <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                               {step.step}
                             </span>
-                            <span className="text-[#0D9488] font-medium">
+                            <span className="text-[#6096B4] font-medium">
                               {step.time}
                             </span>
                           </div>
@@ -810,15 +810,15 @@ export const SourdoughCalculatorTool: React.FC<SourdoughCalculatorToolProps> = (
             </h3>
             <div className={`space-y-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
               <div className="flex gap-2">
-                <span className="text-[#0D9488] font-bold">65-68%:</span>
+                <span className="text-[#6096B4] font-bold">65-68%:</span>
                 <span>{t('tools.sourdoughCalculator.greatForBeginnersEasierTo', 'Great for beginners, easier to handle, tighter crumb')}</span>
               </div>
               <div className="flex gap-2">
-                <span className="text-[#0D9488] font-bold">70-75%:</span>
+                <span className="text-[#6096B4] font-bold">70-75%:</span>
                 <span>{t('tools.sourdoughCalculator.balancedHydrationGoodOvenSpring', 'Balanced hydration, good oven spring, moderate open crumb')}</span>
               </div>
               <div className="flex gap-2">
-                <span className="text-[#0D9488] font-bold">78-85%:</span>
+                <span className="text-[#6096B4] font-bold">78-85%:</span>
                 <span>{t('tools.sourdoughCalculator.advancedLevelVeryOpenCrumb', 'Advanced level, very open crumb, requires strong gluten development')}</span>
               </div>
             </div>

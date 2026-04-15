@@ -260,7 +260,7 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <Shield className="w-7 h-7 text-teal-500" />
+        <Shield className="w-7 h-7 text-primary-500" />
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
           {t('tools.encryption.textEncryptionTool', 'Text Encryption Tool')}
         </h2>
@@ -269,9 +269,9 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
       <div className="space-y-4">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.encryption.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.encryption.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -287,7 +287,7 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
                 onClick={() => setMethod(m)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
                   method === m
-                    ? 'bg-teal-500 text-white border-teal-500'
+                    ? 'bg-primary-500 text-white border-primary-500'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200'
@@ -326,7 +326,7 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
                 <button
                   type="button"
@@ -384,7 +384,7 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+            } focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
         </div>
 
@@ -401,7 +401,7 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
           <button
             onClick={handleEncrypt}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-2 bg-teal-500 hover:bg-teal-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-primary-500 hover:bg-primary-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
           >
             <Lock className="w-4 h-4" />
             {isProcessing ? t('tools.encryption.processing', 'Processing...') : t('tools.encryption.encrypt', 'Encrypt')}
@@ -409,7 +409,7 @@ export const EncryptionTool = ({ uiConfig }: EncryptionToolProps) => {
           <button
             onClick={handleDecrypt}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-2 bg-teal-500 hover:bg-teal-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-primary-500 hover:bg-primary-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
           >
             <Unlock className="w-4 h-4" />
             {isProcessing ? t('tools.encryption.processing2', 'Processing...') : t('tools.encryption.decrypt', 'Decrypt')}

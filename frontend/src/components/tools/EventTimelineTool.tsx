@@ -115,7 +115,7 @@ const categoryColors: Record<TimelineEntry['category'], string> = {
   'breakdown': 'bg-gray-500',
   'key-moment': 'bg-yellow-500',
   'buffer': 'bg-slate-400',
-  'other': 'bg-teal-500',
+  'other': 'bg-primary-500',
 };
 
 const categoryLabels: Record<TimelineEntry['category'], string> = {
@@ -596,7 +596,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -611,7 +611,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="wedding">{t('tools.eventTimeline.wedding', 'Wedding')}</option>
             <option value="corporate">{t('tools.eventTimeline.corporateEvent', 'Corporate Event')}</option>
@@ -635,7 +635,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -653,7 +653,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -669,7 +669,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -685,7 +685,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
       </div>
@@ -708,7 +708,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -725,7 +725,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
@@ -749,7 +749,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -766,7 +766,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -783,7 +783,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
@@ -802,7 +802,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
             theme === 'dark'
               ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
               : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
         />
       </div>
     </div>
@@ -934,7 +934,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                         type="checkbox"
                         checked={entry.isKeyMoment}
                         onChange={(e) => handleUpdateEntry(entry.id, { isKeyMoment: e.target.checked })}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.eventTimeline.keyMoment', 'Key Moment')}
@@ -1051,7 +1051,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
             onClick={() => setIsTracking(!isTracking)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
               isTracking
-                ? 'bg-red-500 hover:bg-red-600 text-white' : t('tools.eventTimeline.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                ? 'bg-red-500 hover:bg-red-600 text-white' : t('tools.eventTimeline.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
             }`}
           >
             {isTracking ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -1082,7 +1082,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
 
           <button
             onClick={() => setShowAddEntry(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.eventTimeline.addEntry', 'Add Entry')}
@@ -1121,7 +1121,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1138,7 +1138,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1156,7 +1156,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -1172,7 +1172,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {Object.entries(categoryLabels).map(([value, label]) => (
                     <option key={value} value={value}>{label}</option>
@@ -1193,7 +1193,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1212,7 +1212,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1229,7 +1229,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1247,7 +1247,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                   theme === 'dark'
                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -1257,7 +1257,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                   type="checkbox"
                   checked={newEntry.isKeyMoment}
                   onChange={(e) => setNewEntry({ ...newEntry, isKeyMoment: e.target.checked })}
-                  className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                  className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                 />
                 <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                   {t('tools.eventTimeline.markAsKeyMomentSpeeches', 'Mark as Key Moment (speeches, first dance, cake cutting, etc.)')}
@@ -1268,7 +1268,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
             <div className="flex gap-3">
               <button
                 onClick={handleAddEntry}
-                className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 {t('tools.eventTimeline.addEntry2', 'Add Entry')}
               </button>
@@ -1393,11 +1393,11 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                 </p>
               )}
               <div className={`text-sm mt-2 space-y-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                <a href={`tel:${contact.phone}`} className="flex items-center gap-2 hover:text-[#0D9488]">
+                <a href={`tel:${contact.phone}`} className="flex items-center gap-2 hover:text-[#6096B4]">
                   <Phone className="w-3 h-3" /> {contact.phone}
                 </a>
                 {contact.email && (
-                  <a href={`mailto:${contact.email}`} className="flex items-center gap-2 hover:text-[#0D9488]">
+                  <a href={`mailto:${contact.email}`} className="flex items-center gap-2 hover:text-[#6096B4]">
                     <Mail className="w-3 h-3" /> {contact.email}
                   </a>
                 )}
@@ -1437,7 +1437,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
       <div className="flex justify-end">
         <button
           onClick={() => setShowAddContact(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
         >
           <Plus className="w-4 h-4" />
           {t('tools.eventTimeline.addContact', 'Add Contact')}
@@ -1476,7 +1476,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1493,7 +1493,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1512,7 +1512,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -1529,7 +1529,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -1549,7 +1549,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
             <div className="flex gap-3">
               <button
                 onClick={handleAddContact}
-                className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 {t('tools.eventTimeline.addContact3', 'Add Contact')}
               </button>
@@ -1649,7 +1649,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
           <div className="print:hidden flex gap-2">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
             >
               <Printer className="w-4 h-4" />
               {t('tools.eventTimeline.print', 'Print')}
@@ -1863,7 +1863,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="max-w-6xl mx-auto">
           <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 flex items-center justify-center h-64`}>
-            <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+            <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           </div>
         </div>
       </div>
@@ -1878,7 +1878,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
           {/* Header */}
           <div className="flex items-center justify-between mb-6 print:hidden">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1941,7 +1941,7 @@ export const EventTimelineTool: React.FC<EventTimelineToolProps> = ({ uiConfig }
                   onClick={() => setActiveTab(tab.id as TabType)}
                   className={`flex items-center gap-2 px-4 py-3 font-medium transition-colors border-b-2 -mb-px ${
                     activeTab === tab.id
-                      ? 'border-[#0D9488] text-[#0D9488]'
+                      ? 'border-[#6096B4] text-[#6096B4]'
                       : theme === 'dark'
                       ? 'border-transparent text-gray-400 hover:text-gray-300'
                       : 'border-transparent text-gray-600 hover:text-gray-900'

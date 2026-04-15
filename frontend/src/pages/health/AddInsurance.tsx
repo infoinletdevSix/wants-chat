@@ -506,7 +506,7 @@ const AddInsurance: React.FC = () => {
         {(!isEditMode || !insuranceLoading) && !insuranceError && (
           <>
             {/* Insurance Card Upload */}
-            <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+            <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
               <Upload className="h-6 w-6 text-primary" />
@@ -518,7 +518,7 @@ const AddInsurance: React.FC = () => {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="border-2 border-dashed border-teal-500/30 rounded-xl p-8 bg-teal-500/10 hover:bg-teal-500/15 transition-colors">
+              <div className="border-2 border-dashed border-primary-500/30 rounded-xl p-8 bg-primary-500/10 hover:bg-primary-500/15 transition-colors">
                 <div className="text-center">
                   <CreditCard className="h-16 w-16 mx-auto mb-4 text-primary" />
                   <p className="text-base font-semibold text-white mb-3">
@@ -536,7 +536,7 @@ const AddInsurance: React.FC = () => {
                   />
                   <Label htmlFor="card-front-upload">
                     <Button 
-                      className="cursor-pointer h-12 px-6 rounded-xl border-2 border-teal-500/30 bg-transparent text-teal-400 hover:border-teal-500 hover:bg-teal-500/10 font-medium"
+                      className="cursor-pointer h-12 px-6 rounded-xl border-2 border-primary-500/30 bg-transparent text-primary-400 hover:border-primary-500 hover:bg-primary-500/10 font-medium"
                     >
                       <Upload className="h-4 w-4 mr-2" />
                       {cardFrontFile ? 'Change Front Image' : 'Upload Front Image'}
@@ -550,7 +550,7 @@ const AddInsurance: React.FC = () => {
                 </div>
               </div>
 
-              <div className="border-2 border-dashed border-teal-500/30 rounded-xl p-8 bg-teal-500/10 hover:bg-teal-500/15 transition-colors">
+              <div className="border-2 border-dashed border-primary-500/30 rounded-xl p-8 bg-primary-500/10 hover:bg-primary-500/15 transition-colors">
                 <div className="text-center">
                   <CreditCard className="h-16 w-16 mx-auto mb-4 text-primary" />
                   <p className="text-base font-semibold text-white mb-3">
@@ -568,7 +568,7 @@ const AddInsurance: React.FC = () => {
                   />
                   <Label htmlFor="card-back-upload">
                     <Button 
-                      className="cursor-pointer h-12 px-6 rounded-xl border-2 border-teal-500/30 bg-transparent text-teal-400 hover:border-teal-500 hover:bg-teal-500/10 font-medium"
+                      className="cursor-pointer h-12 px-6 rounded-xl border-2 border-primary-500/30 bg-transparent text-primary-400 hover:border-primary-500 hover:bg-primary-500/10 font-medium"
                     >
                       <Upload className="h-4 w-4 mr-2" />
                       {cardBackFile ? 'Change Back Image' : 'Upload Back Image'}
@@ -586,7 +586,7 @@ const AddInsurance: React.FC = () => {
         </Card>
 
         {/* Insurance Information */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
               <Shield className="h-6 w-6 text-primary" />
@@ -605,7 +605,7 @@ const AddInsurance: React.FC = () => {
                     <SelectTrigger id="provider" className={`h-12 rounded-xl bg-white/10 border-white/20 text-white ${errors.provider ? 'border-red-500' : ''}`}>
                       <SelectValue placeholder="Select your insurance provider" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                       {providers.map(provider => (
                         <SelectItem key={provider} value={provider} className="text-white hover:bg-white/10">{provider}</SelectItem>
                       ))}
@@ -643,7 +643,7 @@ const AddInsurance: React.FC = () => {
                     <SelectTrigger id="planType" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="Select your plan type" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                       {planTypes.map(type => (
                         <SelectItem key={type} value={type} className="text-white hover:bg-white/10">{type}</SelectItem>
                       ))}
@@ -715,7 +715,7 @@ const AddInsurance: React.FC = () => {
                     <SelectTrigger id="relationship" className="h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                       {relationships.map(rel => (
                         <SelectItem key={rel.value} value={rel.value} className="text-white hover:bg-white/10">{rel.label}</SelectItem>
                       ))}
@@ -764,7 +764,7 @@ const AddInsurance: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setInsuranceCountryDropdownOpen(!insuranceCountryDropdownOpen)}
-                        className="w-full px-3 py-3 text-left border border-white/20 rounded-xl bg-white/10 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-teal-500 h-12"
+                        className="w-full px-3 py-3 text-left border border-white/20 rounded-xl bg-white/10 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary-500 h-12"
                       >
                         <div className="flex items-center gap-2">
                           <span className="text-lg">{selectedInsuranceCountry?.flag}</span>
@@ -773,7 +773,7 @@ const AddInsurance: React.FC = () => {
                       </button>
                       
                       {insuranceCountryDropdownOpen && (
-                        <div className="absolute z-50 w-80 mt-1 bg-teal-800/90 border border-teal-400/30 rounded-xl shadow-lg max-h-60 overflow-hidden">
+                        <div className="absolute z-50 w-80 mt-1 bg-primary-800/90 border border-primary-400/30 rounded-xl shadow-lg max-h-60 overflow-hidden">
                           <div className="p-2 border-b border-white/10">
                             <Input
                               type="text"
@@ -839,7 +839,7 @@ const AddInsurance: React.FC = () => {
         </Card>
 
         {/* Financial Information */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
               <DollarSign className="h-6 w-6 text-primary" />
@@ -953,7 +953,7 @@ const AddInsurance: React.FC = () => {
         </Card>
 
         {/* Coverage Details */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
               <FileText className="h-6 w-6 text-primary" />
@@ -981,7 +981,7 @@ const AddInsurance: React.FC = () => {
         </Card>
 
         {/* Notes */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-bold text-white">
               <FileText className="h-6 w-6 text-primary" />
@@ -996,7 +996,7 @@ const AddInsurance: React.FC = () => {
               value={formData.notes}
               onChange={(e) => handleInputChange('notes', e.target.value)}
               placeholder="Enter any additional information about your insurance coverage, special benefits, limitations, or important notes..."
-              className="w-full px-4 py-3 border border-white/20 rounded-xl bg-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+              className="w-full px-4 py-3 border border-white/20 rounded-xl bg-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
               rows={5}
             />
           </CardContent>
@@ -1012,7 +1012,7 @@ const AddInsurance: React.FC = () => {
           <Button 
             onClick={handleSubmit}
             disabled={createInsuranceMutation.loading || updateInsuranceMutation.loading || (isEditMode && insuranceLoading)}
-            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 h-12 px-6 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {(createInsuranceMutation.loading || updateInsuranceMutation.loading) ? (
               <>

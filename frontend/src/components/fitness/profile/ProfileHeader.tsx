@@ -24,9 +24,9 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = () => {
   const getFitnessLevelColor = (level: string) => {
     switch (level) {
       case 'Beginner':
-        return 'bg-teal-500/20 text-teal-400 border-teal-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'Intermediate':
-        return 'bg-teal-500/20 text-teal-400 border-teal-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'Advanced':
         return 'bg-red-500/20 text-red-400 border-red-500/30';
       default:
@@ -64,7 +64,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = () => {
         <div className="relative">
           <Avatar className="w-16 h-16 sm:w-20 sm:h-20 border-2 border-white/20">
             <AvatarImage src={profileImage} alt={userName} />
-            <AvatarFallback className="text-lg font-bold bg-teal-500/20 text-teal-400">
+            <AvatarFallback className="text-lg font-bold bg-primary-500/20 text-primary-400">
               {getInitials(userName)}
             </AvatarFallback>
           </Avatar>
@@ -87,7 +87,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = () => {
               <span className="text-xs sm:text-sm">{totalDaysActive} days active</span>
             </div>
             <div className="flex items-center gap-1 text-white/60">
-              <Icon path={mdiCalendarToday} size={0.6} className="text-teal-400" />
+              <Icon path={mdiCalendarToday} size={0.6} className="text-primary-400" />
               <span className="text-xs sm:text-sm">Since {joinDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
             </div>
           </div>

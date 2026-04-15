@@ -97,7 +97,7 @@ const TimeConverterTool: React.FC<TimeConverterToolProps> = ({ uiConfig }) => {
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Clock className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -109,9 +109,9 @@ const TimeConverterTool: React.FC<TimeConverterToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.timeConverter.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.timeConverter.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -129,7 +129,7 @@ const TimeConverterTool: React.FC<TimeConverterToolProps> = ({ uiConfig }) => {
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] mb-3`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] mb-3`}
                 placeholder={t('tools.timeConverter.enterValue', 'Enter value')}
               />
               <select
@@ -139,7 +139,7 @@ const TimeConverterTool: React.FC<TimeConverterToolProps> = ({ uiConfig }) => {
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {units.map((unit) => (
                   <option key={unit} value={unit}>
@@ -153,7 +153,7 @@ const TimeConverterTool: React.FC<TimeConverterToolProps> = ({ uiConfig }) => {
             <div className="flex items-center justify-center md:col-span-2 md:order-none order-last">
               <button
                 onClick={handleSwapUnits}
-                className="p-3 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                className="p-3 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
                 title={t('tools.timeConverter.swapUnits', 'Swap units')}
               >
                 <ArrowLeftRight className="w-5 h-5" />
@@ -181,7 +181,7 @@ const TimeConverterTool: React.FC<TimeConverterToolProps> = ({ uiConfig }) => {
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {units.map((unit) => (
                   <option key={unit} value={unit}>

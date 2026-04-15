@@ -222,7 +222,7 @@ const VideoPlayer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -235,7 +235,7 @@ const VideoPlayer: React.FC = () => {
           </div>
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-2xl hover:from-cyan-600 hover:to-teal-600 transition shadow-lg flex items-center gap-2"
+            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-primary-500 text-white rounded-2xl hover:from-cyan-600 hover:to-primary-600 transition shadow-lg flex items-center gap-2"
           >
             <Upload size={20} />
             Upload Video
@@ -273,7 +273,7 @@ const VideoPlayer: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                   <button
                     onClick={togglePlay}
-                    className="p-8 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-2xl hover:scale-110 transition"
+                    className="p-8 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white shadow-2xl hover:scale-110 transition"
                   >
                     <Play size={48} />
                   </button>
@@ -425,7 +425,7 @@ const VideoPlayer: React.FC = () => {
                     </div>
                     <div className={`p-3 ${
                       currentVideo.id === video.id
-                        ? 'bg-gradient-to-r from-cyan-500/30 to-teal-500/30'
+                        ? 'bg-gradient-to-r from-cyan-500/30 to-primary-500/30'
                         : 'bg-white/5'
                     }`}>
                       <h4 className="text-white font-semibold text-sm line-clamp-2 mb-1">

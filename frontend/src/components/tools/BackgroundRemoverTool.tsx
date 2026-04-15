@@ -315,10 +315,10 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-gray-900' : t('tools.backgroundRemover.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-gray-900' : t('tools.backgroundRemover.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Eraser className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Eraser className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.backgroundRemover.backgroundRemover', 'Background Remover')}</h3>
@@ -330,9 +330,9 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.backgroundRemover.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.backgroundRemover.imageLoadedFromYourUpload', 'Image loaded from your upload')}</span>
           </div>
         )}
 
@@ -345,9 +345,9 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
             onClick={() => fileInputRef.current?.click()}
             className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${
               isDragging
-                ? 'border-[#0D9488] bg-[#0D9488]/10'
+                ? 'border-[#6096B4] bg-[#6096B4]/10'
                 : isDark
-                ? t('tools.backgroundRemover.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]/50 bg-gray-800/50') : t('tools.backgroundRemover.borderGray300HoverBorder', 'border-gray-300 hover:border-[#0D9488]/50 bg-gray-50')
+                ? t('tools.backgroundRemover.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]/50 bg-gray-800/50') : t('tools.backgroundRemover.borderGray300HoverBorder', 'border-gray-300 hover:border-[#6096B4]/50 bg-gray-50')
             }`}
           >
             <Upload className={`w-12 h-12 mx-auto mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
@@ -391,7 +391,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                     onClick={() => setOptions({ ...options, type: preset.value as any })}
                     className={`px-4 py-3 rounded-lg transition-all font-medium ${
                       options.type === preset.value
-                        ? 'bg-[#0D9488] text-white shadow-lg shadow-[#0D9488]/20'
+                        ? 'bg-[#6096B4] text-white shadow-lg shadow-[#6096B4]/20'
                         : isDark
                         ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -420,7 +420,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                     type="text"
                     value={options.color}
                     onChange={(e) => setOptions({ ...options, color: e.target.value })}
-                    className={`flex-1 px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+                    className={`flex-1 px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                       isDark
                         ? 'bg-gray-800 border-gray-600 text-white'
                         : 'bg-white border-gray-200 text-gray-900'
@@ -449,7 +449,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                       type="text"
                       value={options.gradientStart}
                       onChange={(e) => setOptions({ ...options, gradientStart: e.target.value })}
-                      className={`flex-1 px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+                      className={`flex-1 px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                         isDark
                           ? 'bg-gray-800 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
@@ -472,7 +472,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                       type="text"
                       value={options.gradientEnd}
                       onChange={(e) => setOptions({ ...options, gradientEnd: e.target.value })}
-                      className={`flex-1 px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+                      className={`flex-1 px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                         isDark
                           ? 'bg-gray-800 border-gray-600 text-white'
                           : 'bg-white border-gray-200 text-gray-900'
@@ -490,7 +490,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                   <label className={`text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
                     {t('tools.backgroundRemover.blurAmount', 'Blur Amount')}
                   </label>
-                  <span className="text-[#0D9488] font-semibold">{options.blurAmount}</span>
+                  <span className="text-[#6096B4] font-semibold">{options.blurAmount}</span>
                 </div>
                 <input
                   type="range"
@@ -498,7 +498,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                   max="50"
                   value={options.blurAmount}
                   onChange={(e) => setOptions({ ...options, blurAmount: Number(e.target.value) })}
-                  className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+                  className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
                 />
               </div>
             )}
@@ -510,7 +510,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
                 id="edgeRefinement"
                 checked={options.edgeRefinement}
                 onChange={(e) => setOptions({ ...options, edgeRefinement: e.target.checked })}
-                className="w-4 h-4 text-[#0D9488] bg-gray-100 border-gray-300 rounded focus:ring-[#0D9488] focus:ring-2"
+                className="w-4 h-4 text-[#6096B4] bg-gray-100 border-gray-300 rounded focus:ring-[#6096B4] focus:ring-2"
               />
               <label htmlFor="edgeRefinement" className={`text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
                 {t('tools.backgroundRemover.edgeRefinementBetterQualitySlower', 'Edge Refinement (better quality, slower processing)')}
@@ -522,7 +522,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
               <button
                 onClick={handleRemoveBackground}
                 disabled={isProcessing}
-                className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+                className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
               >
                 {isProcessing ? (
                   <>
@@ -597,7 +597,7 @@ export const BackgroundRemoverTool: React.FC<BackgroundRemoverToolProps> = ({ ui
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex-1 py-3 px-6 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 py-3 px-6 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSaving ? (
                   <>

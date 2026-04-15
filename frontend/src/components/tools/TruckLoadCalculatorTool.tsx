@@ -189,10 +189,10 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Truck className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Truck className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.truckLoadCalculator.truckLoadCalculator', 'Truck Load Calculator')}</h3>
@@ -203,9 +203,9 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.truckLoadCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.truckLoadCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -213,13 +213,13 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('imperial')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.truckLoadCalculator.imperialInLbs', 'Imperial (in/lbs)')}
           </button>
           <button
             onClick={() => setUnit('metric')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.truckLoadCalculator.metricCmKg', 'Metric (cm/kg)')}
           </button>
@@ -235,10 +235,10 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
               <button
                 key={key}
                 onClick={() => setTruckType(key as TruckType)}
-                className={`py-3 px-2 rounded-lg text-xs transition-colors ${truckType === key ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-3 px-2 rounded-lg text-xs transition-colors ${truckType === key ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 <div className="font-medium">{spec.name.split(' ')[0]}</div>
-                <div className={`${truckType === key ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>
+                <div className={`${truckType === key ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>
                   {spec.lengthFt}' x {spec.widthFt}' x {spec.heightFt}'
                 </div>
               </button>
@@ -277,7 +277,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
             </label>
             <button
               onClick={addItem}
-              className="flex items-center gap-1 px-3 py-1 text-sm bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors"
+              className="flex items-center gap-1 px-3 py-1 text-sm bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.truckLoadCalculator.addItem', 'Add Item')}
@@ -302,7 +302,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                         type="checkbox"
                         checked={item.stackable}
                         onChange={(e) => updateItem(item.id, 'stackable', e.target.checked)}
-                        className="w-3 h-3 rounded text-teal-500"
+                        className="w-3 h-3 rounded text-primary-500"
                       />
                       <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.truckLoadCalculator.stackable', 'Stackable')}</span>
                     </label>
@@ -322,7 +322,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                       type="number"
                       value={item.length}
                       onChange={(e) => updateItem(item.id, 'length', e.target.value)}
-                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>L ({unit === 'imperial' ? 'in' : 'cm'})</span>
                   </div>
@@ -331,7 +331,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                       type="number"
                       value={item.width}
                       onChange={(e) => updateItem(item.id, 'width', e.target.value)}
-                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>W</span>
                   </div>
@@ -340,7 +340,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                       type="number"
                       value={item.height}
                       onChange={(e) => updateItem(item.id, 'height', e.target.value)}
-                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>H</span>
                   </div>
@@ -349,7 +349,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                       type="number"
                       value={item.weight}
                       onChange={(e) => updateItem(item.id, 'weight', e.target.value)}
-                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{unit === 'imperial' ? 'lbs' : 'kg'}</span>
                   </div>
@@ -359,7 +359,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                       min="1"
                       value={item.quantity}
                       onChange={(e) => updateItem(item.id, 'quantity', e.target.value)}
-                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                      className={`w-full px-2 py-1.5 rounded border text-sm ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-1 focus:ring-primary-500`}
                     />
                     <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.truckLoadCalculator.qty', 'Qty')}</span>
                   </div>
@@ -381,7 +381,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
             ? 'bg-red-500/10 border-red-500/30'
             : calculations.loadStatus === 'optimal'
               ? 'bg-green-500/10 border-green-500/30'
-              : isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'
+              : isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'
         } border`}>
           <div className="flex items-center justify-center gap-2 mb-2">
             {calculations.loadStatus === 'overloaded' ? (
@@ -389,12 +389,12 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
             ) : calculations.loadStatus === 'optimal' ? (
               <CheckCircle className="w-5 h-5 text-green-500" />
             ) : (
-              <Truck className="w-5 h-5 text-teal-500" />
+              <Truck className="w-5 h-5 text-primary-500" />
             )}
             <span className={`font-medium ${
               calculations.loadStatus === 'overloaded' ? 'text-red-500'
               : calculations.loadStatus === 'optimal' ? 'text-green-500'
-              : 'text-teal-500'
+              : 'text-primary-500'
             }`}>
               {calculations.loadStatus === 'overloaded' ? 'OVERLOADED'
                : calculations.loadStatus === 'optimal' ? t('tools.truckLoadCalculator.optimalLoad', 'OPTIMAL LOAD') : t('tools.truckLoadCalculator.underutilized', 'UNDERUTILIZED')}
@@ -413,13 +413,13 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
                 <Maximize className="w-4 h-4 inline mr-1" />
                 {t('tools.truckLoadCalculator.volume2', 'Volume')}
               </span>
-              <span className={`text-sm font-medium ${calculations.isOverVolume ? 'text-red-500' : calculations.volumeUtilization > 85 ? 'text-green-500' : 'text-teal-500'}`}>
+              <span className={`text-sm font-medium ${calculations.isOverVolume ? 'text-red-500' : calculations.volumeUtilization > 85 ? 'text-green-500' : 'text-primary-500'}`}>
                 {calculations.volumeUtilization.toFixed(1)}%
               </span>
             </div>
             <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
               <div
-                className={`h-full rounded-full transition-all ${calculations.isOverVolume ? 'bg-red-500' : calculations.volumeUtilization > 85 ? 'bg-green-500' : 'bg-teal-500'}`}
+                className={`h-full rounded-full transition-all ${calculations.isOverVolume ? 'bg-red-500' : calculations.volumeUtilization > 85 ? 'bg-green-500' : 'bg-primary-500'}`}
                 style={{ width: `${Math.min(calculations.volumeUtilization, 100)}%` }}
               />
             </div>
@@ -468,7 +468,7 @@ export const TruckLoadCalculatorTool: React.FC<TruckLoadCalculatorToolProps> = (
 
         {/* Tips */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.truckLoadCalculator.loadingTips', 'Loading Tips')}</p>
             <ul className="space-y-1 list-disc list-inside">

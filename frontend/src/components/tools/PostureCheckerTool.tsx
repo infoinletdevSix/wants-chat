@@ -406,7 +406,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 rounded-lg bg-[#0D9488]">
+          <div className="p-3 rounded-lg bg-[#6096B4]">
             <User className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -473,7 +473,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -494,7 +494,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
               <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.postureChecker.postureScore', 'Posture Score')}
               </span>
-              <span className="text-2xl font-bold text-[#0D9488]">{getPostureScore()}%</span>
+              <span className="text-2xl font-bold text-[#6096B4]">{getPostureScore()}%</span>
             </div>
             <Progress value={getPostureScore()} className="h-3" />
           </div>
@@ -507,7 +507,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
                 onClick={() => togglePostureItem(item.id)}
                 className={`p-4 rounded-lg cursor-pointer transition-all ${
                   item.checked
-                    ? 'bg-[#0D9488]/20 border-2 border-[#0D9488]'
+                    ? 'bg-[#6096B4]/20 border-2 border-[#6096B4]'
                     : theme === 'dark'
                     ? 'bg-gray-700 border-2 border-transparent hover:border-gray-600'
                     : 'bg-gray-50 border-2 border-transparent hover:border-gray-300'
@@ -516,7 +516,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
                 <div className="flex items-start gap-3">
                   <div
                     className={`p-2 rounded-lg ${
-                      item.checked ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'bg-gray-600 text-gray-300' : 'bg-gray-200 text-gray-600'
+                      item.checked ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'bg-gray-600 text-gray-300' : 'bg-gray-200 text-gray-600'
                     }`}
                   >
                     {item.checked ? <Check className="w-5 h-5" /> : item.icon}
@@ -537,7 +537,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
           {/* Save Check-in Button */}
           <button
             onClick={saveCheckIn}
-            className="w-full py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors"
+            className="w-full py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors"
           >
             {t('tools.postureChecker.savePostureCheckIn', 'Save Posture Check-in')}
           </button>
@@ -550,7 +550,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
             <ul className={`space-y-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
               {ergonomicTips.slice(0, 4).map((tip, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <span className="text-[#0D9488] mt-1">&#8226;</span>
+                  <span className="text-[#6096B4] mt-1">&#8226;</span>
                   {tip}
                 </li>
               ))}
@@ -567,7 +567,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
             {!isTimerRunning ? (
               <button
                 onClick={startSession}
-                className="flex items-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors"
+                className="flex items-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors"
               >
                 <Play className="w-5 h-5" />
                 {t('tools.postureChecker.startSession', 'Start Session')}
@@ -705,7 +705,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
                   <p className={`text-sm mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     {exercise.description}
                   </p>
-                  <div className="flex items-center gap-1 text-[#0D9488]">
+                  <div className="flex items-center gap-1 text-[#6096B4]">
                     <Clock className="w-4 h-4" />
                     <span className="text-sm font-medium">{exercise.duration}</span>
                   </div>
@@ -723,7 +723,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
           <div className="grid gap-4 md:grid-cols-3">
             <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
               <CardContent className="p-4 text-center">
-                <div className={`text-3xl font-bold text-[#0D9488]`}>
+                <div className={`text-3xl font-bold text-[#6096B4]`}>
                   {getTodayCheckIns().length}
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -734,7 +734,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
 
             <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
               <CardContent className="p-4 text-center">
-                <div className={`text-3xl font-bold text-[#0D9488]`}>
+                <div className={`text-3xl font-bold text-[#6096B4]`}>
                   {getAverageScore()}%
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -745,7 +745,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
 
             <Card className={theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
               <CardContent className="p-4 text-center">
-                <div className={`text-3xl font-bold text-[#0D9488]`}>
+                <div className={`text-3xl font-bold text-[#6096B4]`}>
                   {formatDuration(totalSittingTime)}
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -806,7 +806,7 @@ export const PostureCheckerTool = ({ uiConfig }: PostureCheckerToolProps) => {
             <ul className={`space-y-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
               {ergonomicTips.slice(4).map((tip, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <span className="text-[#0D9488] mt-1">&#8226;</span>
+                  <span className="text-[#6096B4] mt-1">&#8226;</span>
                   {tip}
                 </li>
               ))}

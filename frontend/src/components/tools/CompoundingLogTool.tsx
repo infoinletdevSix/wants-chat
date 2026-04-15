@@ -381,7 +381,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
     isDark
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`;
+  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`;
 
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -390,8 +390,8 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50' : 'bg-teal-100'}`}>
-            <Beaker className="w-8 h-8 text-teal-500" />
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50' : 'bg-primary-100'}`}>
+            <Beaker className="w-8 h-8 text-primary-500" />
           </div>
           <div>
             <h1 className="text-2xl font-bold">{t('tools.compoundingLog.title', 'Compounding Log')}</h1>
@@ -425,9 +425,9 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
             <div className="flex items-center justify-between">
               <div>
                 <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.compoundingLog.today', 'Today')}</p>
-                <p className="text-2xl font-bold text-teal-500">{stats.todayCompounded}</p>
+                <p className="text-2xl font-bold text-primary-500">{stats.todayCompounded}</p>
               </div>
-              <FlaskConical className="w-8 h-8 text-teal-500 opacity-50" />
+              <FlaskConical className="w-8 h-8 text-primary-500 opacity-50" />
             </div>
           </CardContent>
         </Card>
@@ -483,7 +483,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
             }}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === tab.id
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-white text-gray-600 hover:bg-gray-100'
@@ -528,7 +528,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
           <CardContent>
             {isLoading ? (
               <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+                <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
               </div>
             ) : filteredCompounds.length === 0 ? (
               <div className="text-center py-12">
@@ -744,7 +744,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
                   <button
                     onClick={addIngredient}
                     disabled={!newIngredient.name || !newIngredient.quantity}
-                    className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50"
+                    className="px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -779,7 +779,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
                       onClick={() => toggleEquipment(equip)}
                       className={`px-3 py-1 rounded-full text-sm ${
                         form.equipmentUsed.includes(equip)
-                          ? 'bg-teal-500 text-white'
+                          ? 'bg-primary-500 text-white'
                           : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                       }`}
                     >
@@ -982,7 +982,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
                 <button
                   onClick={handleSubmit}
                   disabled={!form.compoundName || !form.patientName || !form.preparedBy}
-                  className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50"
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50"
                 >
                   <Save className="w-4 h-4 inline mr-2" />
                   {editingId ? 'Update' : 'Save'} Record
@@ -1060,7 +1060,7 @@ export const CompoundingLogTool = ({ uiConfig }: CompoundingLogToolProps) => {
             </div>
             <button
               onClick={() => window.print()}
-              className="w-full mt-4 px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
+              className="w-full mt-4 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
             >
               <Printer className="w-4 h-4 inline mr-2" />
               Print Label

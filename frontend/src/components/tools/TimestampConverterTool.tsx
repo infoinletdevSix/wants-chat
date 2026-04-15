@@ -122,7 +122,7 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Clock className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -134,9 +134,9 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.timestampConverter.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.timestampConverter.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -150,7 +150,7 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
                 onClick={() => handleUnitChange('seconds')}
                 className={`px-4 py-2 rounded-lg border transition-colors ${
                   timestampUnit === 'seconds'
-                    ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                    ? 'bg-[#6096B4] text-white border-[#6096B4]'
                     : isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600'
                     : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -162,7 +162,7 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
                 onClick={() => handleUnitChange('milliseconds')}
                 className={`px-4 py-2 rounded-lg border transition-colors ${
                   timestampUnit === 'milliseconds'
-                    ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                    ? 'bg-[#6096B4] text-white border-[#6096B4]'
                     : isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600'
                     : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -192,12 +192,12 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
                       isDarkMode
                         ? 'bg-gray-800 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={`Enter timestamp in ${timestampUnit}`}
                   />
                   <button
                     onClick={getCurrentTimestamp}
-                    className="px-4 py-3 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors whitespace-nowrap"
+                    className="px-4 py-3 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors whitespace-nowrap"
                   >
                     {t('tools.timestampConverter.currentTime', 'Current Time')}
                   </button>
@@ -205,7 +205,7 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
               </div>
               <button
                 onClick={timestampToDate}
-                className="w-full px-4 py-3 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                className="w-full px-4 py-3 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
               >
                 {t('tools.timestampConverter.convertToDate', 'Convert to Date')}
               </button>
@@ -237,12 +237,12 @@ const TimestampConverterTool: React.FC<TimestampConverterToolProps> = ({ uiConfi
                     isDarkMode
                       ? 'bg-gray-800 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <button
                 onClick={dateToTimestamp}
-                className="w-full px-4 py-3 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                className="w-full px-4 py-3 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
               >
                 {t('tools.timestampConverter.convertToTimestamp', 'Convert to Timestamp')}
               </button>

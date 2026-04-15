@@ -449,10 +449,10 @@ const AddExpense: React.FC = () => {
             )}
 
             {/* Receipt Upload Section */}
-            <GlassCard hover={false} className="mb-8 border-l-4 border-teal-400">
+            <GlassCard hover={false} className="mb-8 border-l-4 border-primary-400">
               <div className="pb-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-2">
-                  <CloudUpload className="h-5 w-5 text-teal-400" />
+                  <CloudUpload className="h-5 w-5 text-primary-400" />
                   Receipt Upload
                 </h3>
                 <p className="text-sm text-white/60">
@@ -464,8 +464,8 @@ const AddExpense: React.FC = () => {
                 <div
                   className={`border-2 border-dashed rounded-xl p-8 text-center transition-all ${
                     isDragging
-                      ? 'border-teal-400 bg-teal-400/10'
-                      : 'border-white/30 hover:border-teal-400 hover:bg-white/5'
+                      ? 'border-primary-400 bg-primary-400/10'
+                      : 'border-white/30 hover:border-primary-400 hover:bg-white/5'
                   }`}
                   onDragEnter={handleDragEnter}
                   onDragLeave={handleDragLeave}
@@ -483,10 +483,10 @@ const AddExpense: React.FC = () => {
 
                   <div className="flex flex-col items-center">
                     <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
-                      isDragging ? 'bg-teal-400/20' : 'bg-white/10'
+                      isDragging ? 'bg-primary-400/20' : 'bg-white/10'
                     }`}>
                       <CloudUpload className={`h-8 w-8 ${
-                        isDragging ? 'text-teal-400' : 'text-white/60'
+                        isDragging ? 'text-primary-400' : 'text-white/60'
                       }`} />
                     </div>
 
@@ -587,7 +587,7 @@ const AddExpense: React.FC = () => {
             <GlassCard hover={false}>
               <div className="pb-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-2">
-                  <Receipt className="h-5 w-5 text-teal-400" />
+                  <Receipt className="h-5 w-5 text-primary-400" />
                   Expense Details
                 </h3>
                 <p className="text-sm text-white/60">
@@ -598,7 +598,7 @@ const AddExpense: React.FC = () => {
                 {/* Title Field */}
                 <div className="space-y-2">
                   <Label htmlFor="title" className="text-sm font-semibold text-white flex items-center gap-2">
-                    <Receipt className="h-4 w-4 text-teal-400" />
+                    <Receipt className="h-4 w-4 text-primary-400" />
                     Expense Title
                   </Label>
                   <Input
@@ -618,7 +618,7 @@ const AddExpense: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="amount" className="text-sm font-semibold text-white flex items-center gap-2">
-                      <AttachMoney className="h-4 w-4 text-teal-400" />
+                      <AttachMoney className="h-4 w-4 text-primary-400" />
                       Amount ($)
                     </Label>
                     <Input
@@ -637,7 +637,7 @@ const AddExpense: React.FC = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="date" className="text-sm font-semibold text-white flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-teal-400" />
+                      <Calendar className="h-4 w-4 text-primary-400" />
                       Date
                     </Label>
                     <Input
@@ -657,7 +657,7 @@ const AddExpense: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="category" className="text-sm font-semibold text-white flex items-center gap-2">
-                      <Category className="h-4 w-4 text-teal-400" />
+                      <Category className="h-4 w-4 text-primary-400" />
                       Category {categories.length === 0 && !categoriesLoading && <span className="text-xs text-white/40">(Optional - categories unavailable)</span>}
                     </Label>
                     <Select
@@ -696,7 +696,7 @@ const AddExpense: React.FC = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="payment-method" className="text-sm font-semibold text-white flex items-center gap-2">
-                      <Payment className="h-4 w-4 text-teal-400" />
+                      <Payment className="h-4 w-4 text-primary-400" />
                       Payment Method
                     </Label>
                     <Select
@@ -723,7 +723,7 @@ const AddExpense: React.FC = () => {
                 {/* Description Field */}
                 <div className="space-y-2">
                   <Label htmlFor="description" className="text-sm font-semibold text-white flex items-center gap-2">
-                    <FileText className="h-4 w-4 text-teal-400" />
+                    <FileText className="h-4 w-4 text-primary-400" />
                     Description (Optional)
                   </Label>
                   <textarea
@@ -731,7 +731,7 @@ const AddExpense: React.FC = () => {
                     placeholder="Add any additional notes about this expense..."
                     value={formData.description}
                     onChange={(e) => handleInputChange('description', e.target.value)}
-                    className="w-full min-h-[120px] p-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
+                    className="w-full min-h-[120px] p-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
                     rows={4}
                   />
                 </div>
@@ -749,7 +749,7 @@ const AddExpense: React.FC = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting || loadingExpenseData}
-                    className="flex-1 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                    className="flex-1 h-12 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                   >
                     {isSubmitting ? (
                       <>

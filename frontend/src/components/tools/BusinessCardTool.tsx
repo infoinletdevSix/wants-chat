@@ -294,7 +294,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
     return (
       <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -303,11 +303,11 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.businessCard.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.businessCard.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.businessCard.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.businessCard.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <CreditCard className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <CreditCard className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.businessCard.aiBusinessCardDesigner', 'AI Business Card Designer')}</h3>
@@ -344,9 +344,9 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {isEditFromGallery
               ? t('tools.businessCard.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.businessCard.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
@@ -368,7 +368,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 placeholder={t('tools.businessCard.johnDoe', 'John Doe')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -381,7 +381,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.title}
                 onChange={(e) => handleInputChange('title', e.target.value)}
                 placeholder={t('tools.businessCard.seniorDesigner', 'Senior Designer')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -394,7 +394,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
                 placeholder={t('tools.businessCard.acmeCorp', 'Acme Corp')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -407,7 +407,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 placeholder={t('tools.businessCard.johnExampleCom', 'john@example.com')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -420,7 +420,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
                 placeholder="+1 (555) 123-4567"
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -433,7 +433,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.website}
                 onChange={(e) => handleInputChange('website', e.target.value)}
                 placeholder={t('tools.businessCard.wwwExampleCom', 'www.example.com')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
           </div>
@@ -449,7 +449,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.linkedin}
                 onChange={(e) => handleInputChange('linkedin', e.target.value)}
                 placeholder={t('tools.businessCard.linkedinComInJohndoe', 'linkedin.com/in/johndoe')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -462,7 +462,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 value={formData.twitter}
                 onChange={(e) => handleInputChange('twitter', e.target.value)}
                 placeholder={t('tools.businessCard.johndoe', '@johndoe')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
           </div>
@@ -481,7 +481,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                   const style = cardStyles.find((s) => s.label === e.target.value);
                   if (style) setSelectedStyle(style);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {cardStyles.map((style) => (
                   <option key={style.label} value={style.label}>
@@ -499,7 +499,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                   const color = colorSchemes.find((c) => c.label === e.target.value);
                   if (color) setSelectedColor(color);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {colorSchemes.map((color) => (
                   <option key={color.label} value={color.label}>
@@ -517,7 +517,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                   const orientation = orientations.find((o) => o.label === e.target.value);
                   if (orientation) setSelectedOrientation(orientation);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {orientations.map((orientation) => (
                   <option key={orientation.label} value={orientation.label}>
@@ -548,7 +548,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                 </button>
               </div>
             ) : (
-              <label className={`flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed ${isDark ? t('tools.businessCard.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]') : t('tools.businessCard.borderGray300HoverBorder', 'border-gray-300 hover:border-[#0D9488]')} rounded-xl cursor-pointer transition-colors`}>
+              <label className={`flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed ${isDark ? t('tools.businessCard.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]') : t('tools.businessCard.borderGray300HoverBorder', 'border-gray-300 hover:border-[#6096B4]')} rounded-xl cursor-pointer transition-colors`}>
                 <Upload className="w-5 h-5 text-gray-400" />
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                   {t('tools.businessCard.clickToUploadLogo', 'Click to upload logo')}
@@ -575,7 +575,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !formData.name || !formData.title}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -635,7 +635,7 @@ export const BusinessCardTool: React.FC<BusinessCardToolProps> = ({ uiConfig }) 
                     <button
                       onClick={() => handleSaveToGallery(card.url, card.prompt)}
                       disabled={isSavingToGallery}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                       title={t('tools.businessCard.saveToGallery', 'Save to Gallery')}
                     >
                       <Save className="w-5 h-5" />

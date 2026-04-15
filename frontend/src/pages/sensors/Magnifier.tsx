@@ -51,7 +51,7 @@ const Magnifier: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -66,14 +66,14 @@ const Magnifier: React.FC = () => {
             <ZoomIn className="w-10 h-10 text-cyan-400" />
             Magnifier
           </h1>
-          <p className="text-teal-200">Use your camera as a digital magnifying glass</p>
+          <p className="text-primary-200">Use your camera as a digital magnifying glass</p>
         </motion.div>
 
         {/* Main Magnifier Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl"
+          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
         >
           {/* Camera View */}
           <div className="relative bg-black rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '16/9' }}>
@@ -86,11 +86,11 @@ const Magnifier: React.FC = () => {
                 style={{ transform: `scale(${zoom})` }}
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-900/30 to-cyan-900/30">
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-900/30 to-cyan-900/30">
                 <div className="text-center">
-                  <Camera className="w-24 h-24 text-teal-400/50 mx-auto mb-4" />
-                  <p className="text-teal-200 text-lg">Camera is not active</p>
-                  <p className="text-teal-300 text-sm mt-2">Click "Start Camera" to begin</p>
+                  <Camera className="w-24 h-24 text-primary-400/50 mx-auto mb-4" />
+                  <p className="text-primary-200 text-lg">Camera is not active</p>
+                  <p className="text-primary-300 text-sm mt-2">Click "Start Camera" to begin</p>
                 </div>
               </div>
             )}
@@ -100,7 +100,7 @@ const Magnifier: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-teal-400/30"
+                className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-primary-400/30"
               >
                 <div className="text-white font-semibold">{zoom.toFixed(1)}x</div>
               </motion.div>
@@ -117,10 +117,10 @@ const Magnifier: React.FC = () => {
                 className="space-y-3"
               >
                 <div className="flex items-center justify-between">
-                  <label className="text-teal-200 font-medium">Zoom Level</label>
+                  <label className="text-primary-200 font-medium">Zoom Level</label>
                   <button
                     onClick={resetZoom}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-teal-200 text-sm transition-colors"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-primary-200 text-sm transition-colors"
                   >
                     <RotateCcw className="w-4 h-4" />
                     Reset
@@ -143,7 +143,7 @@ const Magnifier: React.FC = () => {
                     step="0.1"
                     value={zoom}
                     onChange={(e) => setZoom(parseFloat(e.target.value))}
-                    className="flex-1 h-2 bg-teal-900/50 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-teal-500 [&::-webkit-slider-thumb]:to-cyan-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gradient-to-r [&::-moz-range-thumb]:from-teal-500 [&::-moz-range-thumb]:to-cyan-500 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:shadow-lg [&::-moz-range-thumb]:border-0"
+                    className="flex-1 h-2 bg-primary-900/50 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-primary-500 [&::-webkit-slider-thumb]:to-cyan-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-lg [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gradient-to-r [&::-moz-range-thumb]:from-primary-500 [&::-moz-range-thumb]:to-cyan-500 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:shadow-lg [&::-moz-range-thumb]:border-0"
                   />
 
                   <button
@@ -156,7 +156,7 @@ const Magnifier: React.FC = () => {
                 </div>
 
                 {/* Zoom Markers */}
-                <div className="flex justify-between text-xs text-teal-300 px-1">
+                <div className="flex justify-between text-xs text-primary-300 px-1">
                   <span>1x</span>
                   <span>2x</span>
                   <span>3x</span>
@@ -172,7 +172,7 @@ const Magnifier: React.FC = () => {
               className={`w-full px-6 py-4 rounded-xl font-semibold text-white transition-all duration-300 ${
                 isStreaming
                   ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                  : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
+                  : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
               } shadow-lg hover:shadow-xl transform hover:scale-105`}
             >
               {isStreaming ? 'Stop Camera' : 'Start Camera'}
@@ -198,28 +198,28 @@ const Magnifier: React.FC = () => {
           transition={{ delay: 0.2 }}
           className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4"
         >
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 backdrop-blur-sm border border-teal-400/20 rounded-xl p-4">
+          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 backdrop-blur-sm border border-primary-400/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-2">
-              <ZoomIn className="w-5 h-5 text-teal-400" />
+              <ZoomIn className="w-5 h-5 text-primary-400" />
               <h3 className="text-white font-semibold">5x Magnification</h3>
             </div>
-            <p className="text-teal-200 text-sm">Zoom in up to 5 times for detailed viewing</p>
+            <p className="text-primary-200 text-sm">Zoom in up to 5 times for detailed viewing</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 backdrop-blur-sm border border-teal-400/20 rounded-xl p-4">
+          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 backdrop-blur-sm border border-primary-400/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-2">
               <Camera className="w-5 h-5 text-cyan-400" />
               <h3 className="text-white font-semibold">Live Camera</h3>
             </div>
-            <p className="text-teal-200 text-sm">Real-time camera feed with smooth zooming</p>
+            <p className="text-primary-200 text-sm">Real-time camera feed with smooth zooming</p>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/30 backdrop-blur-sm border border-teal-400/20 rounded-xl p-4">
+          <div className="bg-gradient-to-br from-primary-900/30 to-cyan-900/30 backdrop-blur-sm border border-primary-400/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-2">
-              <RotateCcw className="w-5 h-5 text-teal-400" />
+              <RotateCcw className="w-5 h-5 text-primary-400" />
               <h3 className="text-white font-semibold">Easy Controls</h3>
             </div>
-            <p className="text-teal-200 text-sm">Simple slider and button controls</p>
+            <p className="text-primary-200 text-sm">Simple slider and button controls</p>
           </div>
         </motion.div>
 
@@ -234,7 +234,7 @@ const Magnifier: React.FC = () => {
             <Camera className="w-5 h-5 text-blue-400" />
             How to Use
           </h3>
-          <ul className="space-y-2 text-teal-200 text-sm">
+          <ul className="space-y-2 text-primary-200 text-sm">
             <li className="flex items-start gap-2">
               <span className="text-cyan-400 font-bold">1.</span>
               <span>Click "Start Camera" to activate your device's camera</span>

@@ -415,9 +415,9 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.rideDispatch.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.rideDispatch.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -425,7 +425,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Navigation className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -506,7 +506,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -536,7 +536,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -547,7 +547,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="all">{t('tools.rideDispatch.allStatuses', 'All Statuses')}</option>
                 {RIDE_STATUSES.map((s) => (
@@ -556,7 +556,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
               </select>
               <button
                 onClick={() => setShowAddRide(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.rideDispatch.newRide2', 'New Ride')}
@@ -598,7 +598,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                           )}
                         </div>
                         <div className="flex items-center gap-2 mb-1">
-                          <User className="w-4 h-4 text-[#0D9488]" />
+                          <User className="w-4 h-4 text-[#6096B4]" />
                           <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                             {ride.passengerName}
                           </span>
@@ -647,7 +647,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                         {ride.status === 'pending' && (
                           <button
                             onClick={() => { setSelectedRide(ride); setShowAssignDriver(true); }}
-                            className="px-3 py-1.5 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0F766E] transition-colors"
+                            className="px-3 py-1.5 bg-[#6096B4] text-white rounded text-sm hover:bg-[#4C7F98] transition-colors"
                           >
                             {t('tools.rideDispatch.assignDriver2', 'Assign Driver')}
                           </button>
@@ -801,7 +801,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -816,7 +816,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -831,7 +831,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -846,7 +846,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -862,7 +862,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -879,7 +879,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -895,7 +895,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {VEHICLE_TYPES.map((v) => (
                         <option key={v.value} value={v.value}>{v.label}</option>
@@ -913,7 +913,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {PRIORITIES.map((p) => (
                         <option key={p.value} value={p.value}>{p.label}</option>
@@ -935,7 +935,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -950,7 +950,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -965,7 +965,7 @@ export const RideDispatchTool: React.FC<RideDispatchToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleAddRide}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                 >
                   {t('tools.rideDispatch.addRide', 'Add Ride')}
                 </button>

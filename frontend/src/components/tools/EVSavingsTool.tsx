@@ -156,9 +156,9 @@ export const EVSavingsTool: React.FC<EVSavingsToolProps> = ({ uiConfig }) => {
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Zap className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Zap className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.eVSavings.evVsGasSavingsCalculator', 'EV vs Gas Savings Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.eVSavings.compareElectricVsGasolineVehicle', 'Compare electric vs gasoline vehicle costs')}</p>
@@ -168,9 +168,9 @@ export const EVSavingsTool: React.FC<EVSavingsToolProps> = ({ uiConfig }) => {
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.eVSavings.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.eVSavings.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -221,7 +221,7 @@ export const EVSavingsTool: React.FC<EVSavingsToolProps> = ({ uiConfig }) => {
         {/* EV Vehicle Section */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <Zap className="w-4 h-4 text-teal-500" />
+            <Zap className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.eVSavings.electricVehicle', 'Electric Vehicle')}</h4>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -356,9 +356,9 @@ export const EVSavingsTool: React.FC<EVSavingsToolProps> = ({ uiConfig }) => {
         </div>
 
         {/* Annual Savings Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eVSavings.annualEvSavings', 'Annual EV Savings')}</div>
-          <div className="text-4xl font-bold text-teal-500 my-2">
+          <div className="text-4xl font-bold text-primary-500 my-2">
             {formatCurrency(calculations.totalAnnualSavings)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -378,12 +378,12 @@ export const EVSavingsTool: React.FC<EVSavingsToolProps> = ({ uiConfig }) => {
               ${calculations.gasCostPerMile.toFixed(3)}/mile
             </div>
           </div>
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <div className="flex items-center gap-2 mb-2">
-              <Zap className="w-4 h-4 text-teal-500" />
+              <Zap className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.eVSavings.electricVehicle2', 'Electric Vehicle')}</span>
             </div>
-            <div className="text-2xl font-bold text-teal-500">{formatCurrency(calculations.annualEvCost)}/yr</div>
+            <div className="text-2xl font-bold text-primary-500">{formatCurrency(calculations.annualEvCost)}/yr</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               ${calculations.evCostPerMile.toFixed(3)}/mile
             </div>
@@ -399,11 +399,11 @@ export const EVSavingsTool: React.FC<EVSavingsToolProps> = ({ uiConfig }) => {
           <div className="grid grid-cols-3 gap-4">
             <div className="text-center">
               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eVSavings.totalFuelSavings', 'Total Fuel Savings')}</div>
-              <div className="text-xl font-bold text-teal-500">{formatCurrency(calculations.totalFuelSavings)}</div>
+              <div className="text-xl font-bold text-primary-500">{formatCurrency(calculations.totalFuelSavings)}</div>
             </div>
             <div className="text-center">
               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eVSavings.totalMaintSavings', 'Total Maint. Savings')}</div>
-              <div className="text-xl font-bold text-teal-500">{formatCurrency(calculations.totalMaintenanceSavings)}</div>
+              <div className="text-xl font-bold text-primary-500">{formatCurrency(calculations.totalMaintenanceSavings)}</div>
             </div>
             <div className="text-center">
               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eVSavings.breakEven', 'Break-Even')}</div>

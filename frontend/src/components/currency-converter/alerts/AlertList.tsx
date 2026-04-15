@@ -120,8 +120,8 @@ const AlertList: React.FC<AlertListProps> = ({
       <div className="flex flex-col h-full bg-white/5 backdrop-blur-xl border-r border-white/10 rounded-xl">
         <div className="flex items-center justify-center h-96">
           <div className="text-center">
-            <div className="p-4 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-400"></div>
+            <div className="p-4 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-400"></div>
             </div>
             <p className="text-white/60">Loading alerts...</p>
           </div>
@@ -138,7 +138,7 @@ const AlertList: React.FC<AlertListProps> = ({
             <Icon path={mdiBellOutline} size={1.5} className="text-red-400" />
           </div>
           <p className="text-red-400 mb-4">Error loading alerts: {error}</p>
-          <Button onClick={() => refetch()} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">
+          <Button onClick={() => refetch()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">
             Try Again
           </Button>
         </div>
@@ -149,17 +149,17 @@ const AlertList: React.FC<AlertListProps> = ({
   return (
     <div className="flex flex-col h-full bg-white/5 backdrop-blur-xl border-r border-white/10 rounded-xl">
       {/* Header */}
-      <div className="p-6 border-b border-white/10 bg-gradient-to-r from-teal-500/10 to-cyan-500/10">
+      <div className="p-6 border-b border-white/10 bg-gradient-to-r from-primary-500/10 to-cyan-500/10">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl shadow-lg">
+            <div className="p-2.5 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-xl shadow-lg">
               <Icon path={mdiBellOutline} size={0.9} className="text-white" />
             </div>
             <div>
               <h2 className="text-lg font-bold text-white">
                 My Alerts
               </h2>
-              <p className="text-sm text-teal-300/80">
+              <p className="text-sm text-primary-300/80">
                 {filteredAlerts.length} {filteredAlerts.length === 1 ? 'alert' : 'alerts'} configured
               </p>
             </div>
@@ -189,7 +189,7 @@ const AlertList: React.FC<AlertListProps> = ({
               <Icon path={mdiFilter} size={0.5} className="mr-1" />
               <SelectValue placeholder="all" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="all" className="text-white hover:bg-white/10">all</SelectItem>
               <SelectItem value="active" className="text-white hover:bg-white/10">active</SelectItem>
               <SelectItem value="inactive" className="text-white hover:bg-white/10">inactive</SelectItem>
@@ -200,7 +200,7 @@ const AlertList: React.FC<AlertListProps> = ({
             <SelectTrigger className="h-10 bg-white/10 border-white/20 text-white focus:border-white/40 text-xs">
               <SelectValue placeholder="all" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="all" className="text-white hover:bg-white/10">all</SelectItem>
               <SelectItem value="above" className="text-white hover:bg-white/10">above</SelectItem>
               <SelectItem value="below" className="text-white hover:bg-white/10">below</SelectItem>
@@ -213,7 +213,7 @@ const AlertList: React.FC<AlertListProps> = ({
               <Icon path={mdiSwapVertical} size={0.5} className="mr-1" />
               <SelectValue placeholder="created" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="created" className="text-white hover:bg-white/10">created</SelectItem>
               <SelectItem value="name" className="text-white hover:bg-white/10">name</SelectItem>
               <SelectItem value="triggered" className="text-white hover:bg-white/10">triggered</SelectItem>
@@ -226,8 +226,8 @@ const AlertList: React.FC<AlertListProps> = ({
       <div className="flex-1 overflow-y-auto p-4">
         {filteredAlerts.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16">
-            <div className="p-4 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <Icon path={mdiBellOutline} size={1.5} className="text-teal-400" />
+            <div className="p-4 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <Icon path={mdiBellOutline} size={1.5} className="text-primary-400" />
             </div>
             <h3 className="text-base font-medium text-white mb-2">
               No alerts found
@@ -239,7 +239,7 @@ const AlertList: React.FC<AlertListProps> = ({
             </p>
             <Button
               onClick={onCreateNew}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white transition-all flex items-center gap-2 shadow-lg"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white transition-all flex items-center gap-2 shadow-lg"
             >
               <Icon path={mdiPlusCircleOutline} size={0.6} />
               Create Your First Alert
@@ -266,7 +266,7 @@ const AlertList: React.FC<AlertListProps> = ({
       <div className="p-4 border-t border-white/10 bg-white/5">
         <Button
           onClick={onCreateNew}
-          className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-11 rounded-xl font-medium transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+          className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-11 rounded-xl font-medium transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
           disabled={isDeleting || isToggling}
         >
           <Icon path={mdiPlusCircleOutline} size={0.6} />

@@ -46,7 +46,7 @@ const QuickAccessApps: React.FC = () => {
       id: 'travel', 
       name: 'Travel', 
       icon: FlightTakeoffIcon, 
-      color: 'from-indigo-500 to-teal-500',
+      color: 'from-indigo-500 to-primary-500',
       description: 'Trip planning'
     },
     { 
@@ -74,7 +74,7 @@ const QuickAccessApps: React.FC = () => {
       id: 'publication', 
       name: 'Publication', 
       icon: ArticleIcon, 
-      color: 'from-cyan-500 to-teal-500',
+      color: 'from-cyan-500 to-primary-500',
       description: 'Content creation'
     }
   ];
@@ -87,7 +87,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'fitness',
       status: 'Available',
       icon: SelfImprovementIcon,
-      color: 'from-teal-500 to-pink-500',
+      color: 'from-primary-500 to-pink-500',
       route: '/meditation'
     },
     {
@@ -127,7 +127,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'travel',
       status: 'Available',
       icon: FlightTakeoffIcon,
-      color: 'from-indigo-500 to-teal-500',
+      color: 'from-indigo-500 to-primary-500',
       route: '/travel-planner'
     },
     {
@@ -137,7 +137,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'finance',
       status: 'Available',
       icon: AccountBalanceWalletIcon,
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-emerald-500 to-primary-500',
       route: '/expense-tracker'
     },
     {
@@ -167,7 +167,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'finance',
       status: 'Coming Soon',
       icon: CurrencyExchangeIcon,
-      color: 'from-teal-500 to-cyan-500',
+      color: 'from-primary-500 to-cyan-500',
       route: '/currency'
     },
     {
@@ -187,7 +187,7 @@ const QuickAccessApps: React.FC = () => {
       category: 'publication',
       status: 'Available',
       icon: ArticleIcon,
-      color: 'from-cyan-500 to-teal-500',
+      color: 'from-cyan-500 to-primary-500',
       route: '/changelog'
     }
   ];
@@ -234,7 +234,7 @@ const QuickAccessApps: React.FC = () => {
   return (
     <motion.section
       id="quick-access"
-      className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"
+      className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -242,7 +242,7 @@ const QuickAccessApps: React.FC = () => {
     >
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -260,13 +260,13 @@ const QuickAccessApps: React.FC = () => {
           variants={cardVariants}
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-            <AutoAwesomeIcon className="h-5 w-5 text-teal-400" />
-            <span className="text-sm font-semibold text-teal-400 tracking-wide">QUICK ACCESS APPS</span>
+            <AutoAwesomeIcon className="h-5 w-5 text-primary-400" />
+            <span className="text-sm font-semibold text-primary-400 tracking-wide">QUICK ACCESS APPS</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
             Your Life Management
-            <span className="text-teal-400"> Hub</span>
+            <span className="text-primary-400"> Hub</span>
           </h2>
 
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -283,7 +283,7 @@ const QuickAccessApps: React.FC = () => {
             onClick={() => setActiveCategory('All')}
             className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeCategory === 'All'
-                ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg shadow-teal-500/25'
+                ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg shadow-primary-500/25'
                 : 'bg-white/10 text-white/80 border border-white/20 hover:bg-white/20'
             }`}
           >
@@ -295,7 +295,7 @@ const QuickAccessApps: React.FC = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
                 activeCategory === category.id
-                  ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg shadow-teal-500/25'
+                  ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg shadow-primary-500/25'
                   : 'bg-white/10 text-white/80 border border-white/20 hover:bg-white/20'
               }`}
             >
@@ -373,7 +373,7 @@ const QuickAccessApps: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold mb-2 text-white group-hover:text-teal-400 transition-colors duration-300">
+                <h3 className="text-lg font-bold mb-2 text-white group-hover:text-primary-400 transition-colors duration-300">
                   {app.title}
                 </h3>
 
@@ -383,15 +383,15 @@ const QuickAccessApps: React.FC = () => {
 
                 {/* Action Footer */}
                 <div className="flex items-center justify-between pt-3 border-t border-white/10">
-                  <span className={`text-sm font-semibold ${app.status === 'Available' ? 'text-teal-400' : 'text-white/40'}`}>
+                  <span className={`text-sm font-semibold ${app.status === 'Available' ? 'text-primary-400' : 'text-white/40'}`}>
                     {app.status === 'Available' ? 'Open App' : 'Coming Soon'}
                   </span>
                   {app.status === 'Available' && (
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-500/20 group-hover:bg-teal-500 group-hover:scale-110 transition-all duration-300">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-500/20 group-hover:bg-primary-500 group-hover:scale-110 transition-all duration-300">
                       <Icon
                         path={mdiArrowRight}
                         size={0.6}
-                        className="text-teal-400 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300"
+                        className="text-primary-400 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300"
                       />
                     </div>
                   )}
@@ -416,7 +416,7 @@ const QuickAccessApps: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="group font-semibold px-8 py-4 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 shadow-lg shadow-teal-500/25 hover:shadow-xl transition-all duration-300"
+              className="group font-semibold px-8 py-4 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-300"
               onClick={() => navigate('/login')}
             >
               ✨ Get Started Free

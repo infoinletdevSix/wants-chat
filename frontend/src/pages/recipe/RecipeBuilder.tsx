@@ -138,7 +138,7 @@ const RecipeBuilder: React.FC = () => {
           {/* Loading State */}
           {loading && (
             <div className="flex justify-center items-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
               <span className="ml-4 text-lg text-white">
                 {authLoading ? 'Checking authentication...' : 'Loading recipes...'}
               </span>

@@ -171,7 +171,7 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Scale className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -193,8 +193,8 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
 
           {/* Prefill indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.weightTracker.valueLoadedFromYourConversation', 'Value loaded from your conversation')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.weightTracker.valueLoadedFromYourConversation', 'Value loaded from your conversation')}</span>
             </div>
           )}
         </div>
@@ -278,7 +278,7 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -296,7 +296,7 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -311,7 +311,7 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="kg">{t('tools.weightTracker.kilogramsKg', 'Kilograms (kg)')}</option>
                 <option value="lbs">{t('tools.weightTracker.poundsLbs', 'Pounds (lbs)')}</option>
@@ -331,14 +331,14 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
 
           <button
             onClick={handleAddEntry}
-            className="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
           >
             <Plus className="w-5 h-5" />
             {t('tools.weightTracker.addEntry', 'Add Entry')}
@@ -388,7 +388,7 @@ export default function WeightTrackerTool({ uiConfig }: WeightTrackerToolProps) 
                     <tr key={entry.id} className={theme === 'dark' ? 'hover:bg-gray-700' : 'hover:bg-gray-50'}>
                       <td className={`px-6 py-4 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-900'}`}>
                         <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-[#0D9488]" />
+                          <Calendar className="w-4 h-4 text-[#6096B4]" />
                           {new Date(entry.date).toLocaleDateString()}
                         </div>
                       </td>

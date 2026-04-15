@@ -243,11 +243,11 @@ export const CustomerDatabaseTool: React.FC<CustomerDatabaseToolProps> = ({ uiCo
   return (
     <div className={`rounded-xl shadow-sm border overflow-hidden ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
       {/* Header */}
-      <div className={`px-6 py-4 border-b ${isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.customerDatabase.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#0D9488]/5 border-gray-100')}`}>
+      <div className={`px-6 py-4 border-b ${isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.customerDatabase.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#6096B4]/5 border-gray-100')}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Users className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Users className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -283,7 +283,7 @@ export const CustomerDatabaseTool: React.FC<CustomerDatabaseToolProps> = ({ uiCo
             />
             <button
               onClick={handleAddNew}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
             >
               <UserPlus className="w-4 h-4" />
               {t('tools.customerDatabase.addCustomer', 'Add Customer')}
@@ -369,13 +369,13 @@ export const CustomerDatabaseTool: React.FC<CustomerDatabaseToolProps> = ({ uiCo
       <div className="px-4 pb-4">
         {isLoading ? (
           <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+            <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           </div>
         ) : filteredCustomers.length === 0 ? (
           <div className={`text-center py-12 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
             <Users className="w-12 h-12 mx-auto mb-3 opacity-30" />
             <p>{customers.length === 0 ? t('tools.customerDatabase.noCustomersFound', 'No customers found') : t('tools.customerDatabase.noMatchingCustomers', 'No matching customers')}</p>
-            <button onClick={handleAddNew} className="mt-2 text-[#0D9488] hover:underline">
+            <button onClick={handleAddNew} className="mt-2 text-[#6096B4] hover:underline">
               {customers.length === 0 ? t('tools.customerDatabase.addYourFirstCustomer', 'Add your first customer') : t('tools.customerDatabase.clearFiltersAndTryAgain', 'Clear filters and try again')}
             </button>
           </div>
@@ -606,7 +606,7 @@ export const CustomerDatabaseTool: React.FC<CustomerDatabaseToolProps> = ({ uiCo
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 disabled:opacity-50"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 disabled:opacity-50"
               >
                 {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                 {isSaving ? t('tools.customerDatabase.saving', 'Saving...') : t('tools.customerDatabase.save', 'Save')}

@@ -147,7 +147,7 @@ const CholesterolRecords: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Header Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             Cholesterol Tracking
           </h1>
@@ -160,7 +160,7 @@ const CholesterolRecords: React.FC = () => {
         <div className="mb-12">
           <Button
             onClick={() => navigate('/health/add-vital-record?section=cholesterol')}
-            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             size="lg"
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -178,8 +178,8 @@ const CholesterolRecords: React.FC = () => {
                 </p>
                 <p className="text-sm font-medium text-white/60">Average Total</p>
               </div>
-              <div className="p-4 rounded-2xl bg-teal-500/20">
-                <ScienceIcon className="h-8 w-8 text-teal-400" />
+              <div className="p-4 rounded-2xl bg-primary-500/20">
+                <ScienceIcon className="h-8 w-8 text-primary-400" />
               </div>
             </div>
           </Card>
@@ -220,7 +220,7 @@ const CholesterolRecords: React.FC = () => {
             </p>
             <Button
               onClick={() => navigate('/health/add-vital-record?section=cholesterol')}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             >
               <Plus className="h-5 w-5 mr-2" />
               Add First Reading
@@ -229,12 +229,12 @@ const CholesterolRecords: React.FC = () => {
         ) : (
           <div className="space-y-4">
             {records.map((record) => (
-              <Card key={record.id} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/30 transition-all duration-200">
+              <Card key={record.id} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-500/30 transition-all duration-200">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-3 rounded-xl bg-teal-500/20">
-                        <ScienceIcon className="h-6 w-6 text-teal-400" />
+                      <div className="p-3 rounded-xl bg-primary-500/20">
+                        <ScienceIcon className="h-6 w-6 text-primary-400" />
                       </div>
                       <div>
                         <p className="font-semibold text-white">{record.date}</p>

@@ -419,9 +419,9 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.engagementLetter.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.engagementLetter.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -429,7 +429,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -523,7 +523,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.engagementLetter.acceptedValue', 'Accepted Value')}</p>
-              <p className={`text-2xl font-bold text-[#0D9488]`}>{formatCurrency(stats.totalValue)}</p>
+              <p className={`text-2xl font-bold text-[#6096B4]`}>{formatCurrency(stats.totalValue)}</p>
             </div>
           </div>
 
@@ -538,7 +538,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -568,7 +568,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   />
                 </div>
                 <select
@@ -604,7 +604,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
               </div>
               <button
                 onClick={() => setShowLetterForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.engagementLetter.newEngagementLetter', 'New Engagement Letter')}
@@ -619,7 +619,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                   <p>{t('tools.engagementLetter.noEngagementLettersFound', 'No engagement letters found')}</p>
                   <button
                     onClick={() => setShowLetterForm(true)}
-                    className="mt-4 text-[#0D9488] hover:underline"
+                    className="mt-4 text-[#6096B4] hover:underline"
                   >
                     {t('tools.engagementLetter.createYourFirstEngagementLetter', 'Create your first engagement letter')}
                   </button>
@@ -718,7 +718,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
               </h2>
               <button
                 onClick={() => setShowClientForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.engagementLetter.addClient', 'Add Client')}
@@ -878,7 +878,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                           value={type}
                           checked={newLetter.feeType === type}
                           onChange={(e) => setNewLetter({ ...newLetter, feeType: e.target.value as 'hourly' | 'fixed' | 'hybrid' })}
-                          className="text-[#0D9488]"
+                          className="text-[#6096B4]"
                         />
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
                           {type.charAt(0).toUpperCase() + type.slice(1)}
@@ -946,7 +946,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={addLetter}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.engagementLetter.createLetter', 'Create Letter')}
                 </button>
@@ -1034,7 +1034,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={addClient}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.engagementLetter.addClient3', 'Add Client')}
                 </button>
@@ -1079,7 +1079,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
                   </div>
                   <div>
                     <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.engagementLetter.totalFee', 'Total Fee')}</p>
-                    <p className={`font-medium text-[#0D9488]`}>
+                    <p className={`font-medium text-[#6096B4]`}>
                       {formatCurrency(calculateTotalFee(selectedLetter))}
                     </p>
                   </div>
@@ -1114,7 +1114,7 @@ export const EngagementLetterTool: React.FC<EngagementLetterToolProps> = ({ uiCo
               <div className="p-6 border-t border-gray-200 dark:border-gray-700 flex justify-end">
                 <button
                   onClick={() => setSelectedLetter(null)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7A6E] transition-colors"
                 >
                   {t('tools.engagementLetter.close', 'Close')}
                 </button>

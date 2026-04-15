@@ -524,7 +524,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.servicePricing.loadingServices', 'Loading services...')}</p>
         </div>
       </div>
@@ -538,7 +538,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -595,7 +595,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-lg flex items-center gap-2 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -628,7 +628,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -642,7 +642,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="all">{t('tools.servicePricing.allCategories', 'All Categories')}</option>
                     {categories.map(cat => (
@@ -653,7 +653,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
 
                 <button
                   onClick={() => setShowAddModal(true)}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.servicePricing.addService', 'Add Service')}
@@ -721,7 +721,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                             {formatDuration(service.duration)}
                           </span>
                         </div>
-                        <div className="text-xl font-bold text-[#0D9488]">
+                        <div className="text-xl font-bold text-[#6096B4]">
                           ${service.basePrice.toFixed(2)}
                         </div>
                       </div>
@@ -794,7 +794,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.servicePricing.addAddOn', 'Add Add-on')}
@@ -836,7 +836,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                           {formatDuration(addon.duration)}
                         </span>
-                        <span className="text-lg font-bold text-[#0D9488]">
+                        <span className="text-lg font-bold text-[#6096B4]">
                           +${addon.price.toFixed(2)}
                         </span>
                       </div>
@@ -882,7 +882,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.servicePricing.addPackage', 'Add Package')}
@@ -904,7 +904,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           <div className="flex items-center gap-2 mb-1">
-                            <Package className="w-5 h-5 text-[#0D9488]" />
+                            <Package className="w-5 h-5 text-[#6096B4]" />
                             <h3 className={`text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                               {pkg.name}
                             </h3>
@@ -926,7 +926,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                           <div className={`text-sm line-through ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
                             ${pkg.originalPrice.toFixed(2)}
                           </div>
-                          <div className="text-2xl font-bold text-[#0D9488]">
+                          <div className="text-2xl font-bold text-[#6096B4]">
                             ${pkg.discountedPrice.toFixed(2)}
                           </div>
                         </div>
@@ -979,7 +979,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.servicePricing.addPromotion', 'Add Promotion')}
@@ -1012,7 +1012,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                           </div>
                         </div>
                         <div className="flex items-center gap-4">
-                          <div className="text-2xl font-bold text-[#0D9488]">
+                          <div className="text-2xl font-bold text-[#6096B4]">
                             {promo.discountPercent}% OFF
                           </div>
                           <span className={`px-2 py-1 rounded text-xs font-medium ${
@@ -1060,7 +1060,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       addCompetitor({ name, services: [] });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.servicePricing.addCompetitor', 'Add Competitor')}
@@ -1097,7 +1097,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                           <td className={`p-3 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                             {service.name}
                           </td>
-                          <td className="p-3 text-center font-bold text-[#0D9488]">
+                          <td className="p-3 text-center font-bold text-[#6096B4]">
                             ${service.basePrice.toFixed(2)}
                           </td>
                           {competitors.map(comp => {
@@ -1369,7 +1369,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                 <div className="flex gap-2">
                   <button
                     onClick={printMenu}
-                    className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                    className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                   >
                     <Printer className="w-4 h-4" />
                     {t('tools.servicePricing.printMenu2', 'Print Menu')}
@@ -1454,7 +1454,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                               </div>
                             </div>
                             <div className="text-right ml-4">
-                              <div className="text-lg font-bold text-[#0D9488]">
+                              <div className="text-lg font-bold text-[#6096B4]">
                                 ${service.basePrice.toFixed(2)}
                               </div>
                               <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -1508,7 +1508,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.servicePricing.eGHaircutStyle', 'e.g., Haircut & Style')}
                   />
                 </div>
@@ -1524,7 +1524,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     rows={2}
                     placeholder={t('tools.servicePricing.briefDescriptionOfTheService', 'Brief description of the service')}
                   />
@@ -1541,7 +1541,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {categories.map(cat => (
                       <option key={cat.id} value={cat.id}>{cat.name}</option>
@@ -1562,7 +1562,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="5"
                       step="5"
                     />
@@ -1580,7 +1580,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="0"
                       step="0.01"
                     />
@@ -1599,7 +1599,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     min="0"
                     step="0.01"
                     placeholder={t('tools.servicePricing.costOfProductsUsed', 'Cost of products used')}
@@ -1610,7 +1610,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={addService}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.servicePricing.addService2', 'Add Service')}
@@ -1659,7 +1659,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1674,7 +1674,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     rows={2}
                   />
                 </div>
@@ -1690,7 +1690,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {categories.map(cat => (
                       <option key={cat.id} value={cat.id}>{cat.name}</option>
@@ -1711,7 +1711,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="5"
                       step="5"
                     />
@@ -1729,7 +1729,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="0"
                       step="0.01"
                     />
@@ -1748,7 +1748,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     min="0"
                     step="0.01"
                   />
@@ -1760,7 +1760,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
                     id="isActive"
                     checked={editingItem.isActive}
                     onChange={(e) => setEditingItem({ ...editingItem, isActive: e.target.checked })}
-                    className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                    className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                   />
                   <label htmlFor="isActive" className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.servicePricing.activeVisibleOnMenu', 'Active (visible on menu)')}
@@ -1771,7 +1771,7 @@ export const ServicePricingTool: React.FC<ServicePricingToolProps> = ({
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={() => updateService(editingItem)}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.servicePricing.saveChanges', 'Save Changes')}

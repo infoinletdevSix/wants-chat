@@ -299,7 +299,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
@@ -400,7 +400,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
 
         <div className="flex items-center gap-4">
           <label className="flex items-center gap-2 cursor-pointer">
-            <input type="checkbox" checked={checkOut.keyCardReturned || false} onChange={(e) => setData({ keyCardReturned: e.target.checked })} className="w-4 h-4 text-[#0D9488] rounded" />
+            <input type="checkbox" checked={checkOut.keyCardReturned || false} onChange={(e) => setData({ keyCardReturned: e.target.checked })} className="w-4 h-4 text-[#6096B4] rounded" />
             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Key Card Returned</span>
           </label>
         </div>
@@ -426,8 +426,8 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                <UserMinus className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                <UserMinus className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.guestCheckOut.title')}</h1>
@@ -450,7 +450,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.guestCheckOut.stats.todayCheckOuts')}</p><p className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.todayCount}</p></div>
           <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.guestCheckOut.stats.completed')}</p><p className="text-2xl font-bold text-green-500">{stats.completed}</p></div>
-          <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.guestCheckOut.stats.todayRevenue')}</p><p className="text-2xl font-bold text-[#0D9488]">${stats.todayRevenue.toFixed(0)}</p></div>
+          <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.guestCheckOut.stats.todayRevenue')}</p><p className="text-2xl font-bold text-[#6096B4]">${stats.todayRevenue.toFixed(0)}</p></div>
           <div className={cardClass}><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.guestCheckOut.stats.pendingBalance')}</p><p className="text-2xl font-bold text-orange-500">${stats.pendingBalance.toFixed(0)}</p></div>
         </div>
 
@@ -466,7 +466,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
             <option value="">{t('tools.guestCheckOut.allStatuses')}</option>
             {CHECK_OUT_STATUSES.map(s => (<option key={s.value} value={s.value}>{s.label}</option>))}
           </select>
-          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2">
+          <button onClick={() => setShowForm(true)} className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2">
             <Plus className="w-5 h-5" />{t('tools.guestCheckOut.newCheckOut')}
           </button>
         </div>
@@ -479,7 +479,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
               <button onClick={() => setShowForm(false)} className={`p-2 rounded-lg ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}><X className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} /></button>
             </div>
             {renderForm(newCheckOut)}
-            <button onClick={handleAddCheckOut} disabled={!newCheckOut.guestName || !newCheckOut.roomNumber} className="mt-4 w-full py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2">
+            <button onClick={handleAddCheckOut} disabled={!newCheckOut.guestName || !newCheckOut.roomNumber} className="mt-4 w-full py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2">
               <Plus className="w-5 h-5" />{t('tools.guestCheckOut.processCheckOut')}
             </button>
           </div>
@@ -493,7 +493,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
             </div>
             {renderForm(editingCheckOut, true)}
             <div className="flex gap-3 mt-4">
-              <button onClick={handleUpdateCheckOut} className="flex-1 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.guestCheckOut.save')}</button>
+              <button onClick={handleUpdateCheckOut} className="flex-1 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"><Save className="w-5 h-5" />{t('tools.guestCheckOut.save')}</button>
               <button onClick={() => setEditingCheckOut(null)} className={`px-6 py-3 rounded-xl font-medium ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>{t('tools.guestCheckOut.cancel')}</button>
             </div>
           </div>
@@ -512,7 +512,7 @@ export const GuestCheckOutTool: React.FC<GuestCheckOutToolProps> = ({ uiConfig }
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
                     <div className="flex items-center gap-2"><Bed className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className={isDark ? 'text-gray-300' : 'text-gray-700'}>Room {c.roomNumber}</span></div>
                     <div className="flex items-center gap-2"><Clock className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{c.checkOutTime}</span></div>
-                    <div className="flex items-center gap-2"><DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className="text-[#0D9488] font-medium">${c.totalAmount}</span></div>
+                    <div className="flex items-center gap-2"><DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className="text-[#6096B4] font-medium">${c.totalAmount}</span></div>
                     <div className="flex items-center gap-2"><FileText className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} /><span className={`${c.balanceDue > 0 ? 'text-red-500' : 'text-green-500'} font-medium`}>Balance: ${c.balanceDue}</span></div>
                   </div>
                 </div>

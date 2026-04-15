@@ -181,7 +181,7 @@ const statusConfig: Record<ProjectStatus, { label: string; color: string; bgColo
   proofing: { label: 'Client Proofing', color: 'text-purple-600', bgColor: 'bg-purple-100', darkBgColor: 'bg-purple-900/30' },
   revision: { label: 'Revisions', color: 'text-orange-600', bgColor: 'bg-orange-100', darkBgColor: 'bg-orange-900/30' },
   completed: { label: 'Completed', color: 'text-green-600', bgColor: 'bg-green-100', darkBgColor: 'bg-green-900/30' },
-  delivered: { label: 'Delivered', color: 'text-teal-600', bgColor: 'bg-teal-100', darkBgColor: 'bg-teal-900/30' },
+  delivered: { label: 'Delivered', color: 'text-primary-600', bgColor: 'bg-primary-100', darkBgColor: 'bg-primary-900/30' },
 };
 
 const priorityConfig: Record<ProjectPriority, { label: string; color: string; bgColor: string; darkBgColor: string }> = {
@@ -777,7 +777,7 @@ export const PhotoEditingTrackerTool = ({
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <Image className="w-4 h-4 text-[#0D9488]" />
+            <Image className="w-4 h-4 text-[#6096B4]" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.photoEditingTracker.totalPhotos', 'Total Photos')}</span>
           </div>
           <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -787,7 +787,7 @@ export const PhotoEditingTrackerTool = ({
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <Timer className="w-4 h-4 text-[#0D9488]" />
+            <Timer className="w-4 h-4 text-[#6096B4]" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.photoEditingTracker.timeSpent', 'Time Spent')}</span>
           </div>
           <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -797,7 +797,7 @@ export const PhotoEditingTrackerTool = ({
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <RefreshCw className="w-4 h-4 text-[#0D9488]" />
+            <RefreshCw className="w-4 h-4 text-[#6096B4]" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.photoEditingTracker.revisions', 'Revisions')}</span>
           </div>
           <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -807,7 +807,7 @@ export const PhotoEditingTrackerTool = ({
 
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <HardDrive className="w-4 h-4 text-[#0D9488]" />
+            <HardDrive className="w-4 h-4 text-[#6096B4]" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.photoEditingTracker.needsBackup', 'Needs Backup')}</span>
           </div>
           <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -819,7 +819,7 @@ export const PhotoEditingTrackerTool = ({
       {/* Priority Queue */}
       <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
         <div className="flex items-center gap-2 mb-4">
-          <Flag className="w-5 h-5 text-[#0D9488]" />
+          <Flag className="w-5 h-5 text-[#6096B4]" />
           <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
             {t('tools.photoEditingTracker.priorityQueue', 'Priority Queue')}
           </h3>
@@ -861,7 +861,7 @@ export const PhotoEditingTrackerTool = ({
                   <div className="flex items-center gap-2">
                     <div className={`flex-1 h-2 rounded-full ${isDark ? 'bg-gray-500' : 'bg-gray-200'}`}>
                       <div
-                        className="h-full bg-[#0D9488] rounded-full transition-all"
+                        className="h-full bg-[#6096B4] rounded-full transition-all"
                         style={{ width: `${progress}%` }}
                       />
                     </div>
@@ -883,7 +883,7 @@ export const PhotoEditingTrackerTool = ({
       {/* Batch Progress */}
       <div className={`p-6 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
         <div className="flex items-center gap-2 mb-4">
-          <Layers className="w-5 h-5 text-[#0D9488]" />
+          <Layers className="w-5 h-5 text-[#6096B4]" />
           <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
             {t('tools.photoEditingTracker.editingStageDistribution', 'Editing Stage Distribution')}
           </h3>
@@ -1044,7 +1044,7 @@ export const PhotoEditingTrackerTool = ({
             </div>
             <div className={`h-2 rounded-full overflow-hidden ${isDark ? 'bg-gray-600' : 'bg-gray-200'}`}>
               <div
-                className="h-full bg-[#0D9488] transition-all duration-300"
+                className="h-full bg-[#6096B4] transition-all duration-300"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -1070,7 +1070,7 @@ export const PhotoEditingTrackerTool = ({
                         key={stage}
                         className={`p-3 rounded-lg border-2 transition-all ${
                           isActive
-                            ? 'border-[#0D9488] ring-2 ring-[#0D9488]/20'
+                            ? 'border-[#6096B4] ring-2 ring-[#6096B4]/20'
                             : isDark
                             ? 'border-gray-600'
                             : 'border-gray-200'
@@ -1082,7 +1082,7 @@ export const PhotoEditingTrackerTool = ({
                             onClick={() => updateCurrentStage(project.id, stage)}
                             className={`p-1 rounded ${
                               isActive
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : isDark
                                 ? 'hover:bg-gray-600'
                                 : 'hover:bg-gray-200'
@@ -1164,7 +1164,7 @@ export const PhotoEditingTrackerTool = ({
                         onClick={() => updateProofingStatus(project.id, status)}
                         className={`px-3 py-1 rounded-lg text-sm transition-colors ${
                           project.proofingStatus === status
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : isDark
                             ? 'bg-gray-600 hover:bg-gray-500 text-gray-300'
                             : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -1194,7 +1194,7 @@ export const PhotoEditingTrackerTool = ({
                       setSelectedProjectId(project.id);
                       setShowRevisionModal(true);
                     }}
-                    className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] hover:bg-[#0B7C73] text-white text-sm rounded-lg transition-colors"
+                    className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] hover:bg-[#0B7C73] text-white text-sm rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.photoEditingTracker.add', 'Add')}
@@ -1297,7 +1297,7 @@ export const PhotoEditingTrackerTool = ({
                         onClick={() => updateArchiveStatus(project.id, status)}
                         className={`px-3 py-1 rounded-lg text-sm transition-colors ${
                           project.archiveStatus === status
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : isDark
                             ? 'bg-gray-600 hover:bg-gray-500 text-gray-300'
                             : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -1320,7 +1320,7 @@ export const PhotoEditingTrackerTool = ({
                         onClick={() => updateBackupStatus(project.id, status)}
                         className={`px-3 py-1 rounded-lg text-sm transition-colors ${
                           project.backupStatus === status
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : isDark
                             ? 'bg-gray-600 hover:bg-gray-500 text-gray-300'
                             : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -1345,7 +1345,7 @@ export const PhotoEditingTrackerTool = ({
                       setSelectedProjectId(project.id);
                       setShowTimeModal(true);
                     }}
-                    className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] hover:bg-[#0B7C73] text-white text-sm rounded-lg transition-colors"
+                    className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] hover:bg-[#0B7C73] text-white text-sm rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.photoEditingTracker.addTime', 'Add Time')}
@@ -1365,7 +1365,7 @@ export const PhotoEditingTrackerTool = ({
                       setSelectedProjectId(project.id);
                       setShowFeedbackModal(true);
                     }}
-                    className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] hover:bg-[#0B7C73] text-white text-sm rounded-lg transition-colors"
+                    className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] hover:bg-[#0B7C73] text-white text-sm rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.photoEditingTracker.add2', 'Add')}
@@ -1426,7 +1426,7 @@ export const PhotoEditingTrackerTool = ({
                       onClick={() => updateProjectStatus(project.id, status)}
                       className={`px-3 py-1 rounded-lg text-sm transition-colors ${
                         project.status === status
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : isDark
                           ? 'bg-gray-600 hover:bg-gray-500 text-gray-300'
                           : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
@@ -1462,7 +1462,7 @@ export const PhotoEditingTrackerTool = ({
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-            } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -1475,7 +1475,7 @@ export const PhotoEditingTrackerTool = ({
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
-            } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             <option value="all">{t('tools.photoEditingTracker.allStatus', 'All Status')}</option>
             <option value="not_started">{t('tools.photoEditingTracker.notStarted', 'Not Started')}</option>
@@ -1496,7 +1496,7 @@ export const PhotoEditingTrackerTool = ({
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-200 text-gray-900'
-            } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             <option value="priority">{t('tools.photoEditingTracker.priority', 'Priority')}</option>
             <option value="deadline">{t('tools.photoEditingTracker.deadline', 'Deadline')}</option>
@@ -1538,7 +1538,7 @@ export const PhotoEditingTrackerTool = ({
                 resetProjectForm();
                 setShowProjectModal(true);
               }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C73] text-white rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C73] text-white rounded-xl transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.photoEditingTracker.createProject', 'Create Project')}
@@ -1593,7 +1593,7 @@ export const PhotoEditingTrackerTool = ({
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -1610,7 +1610,7 @@ export const PhotoEditingTrackerTool = ({
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -1627,7 +1627,7 @@ export const PhotoEditingTrackerTool = ({
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
           </div>
@@ -1645,7 +1645,7 @@ export const PhotoEditingTrackerTool = ({
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -1660,7 +1660,7 @@ export const PhotoEditingTrackerTool = ({
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 <option value="low">{t('tools.photoEditingTracker.low', 'Low')}</option>
                 <option value="medium">{t('tools.photoEditingTracker.medium', 'Medium')}</option>
@@ -1683,7 +1683,7 @@ export const PhotoEditingTrackerTool = ({
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -1700,7 +1700,7 @@ export const PhotoEditingTrackerTool = ({
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
         </div>
@@ -1725,7 +1725,7 @@ export const PhotoEditingTrackerTool = ({
           <button
             onClick={handleSaveProject}
             disabled={!projectForm.client.trim()}
-            className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {editingProject ? t('tools.photoEditingTracker.saveChanges', 'Save Changes') : t('tools.photoEditingTracker.createProject2', 'Create Project')}
           </button>
@@ -1769,7 +1769,7 @@ export const PhotoEditingTrackerTool = ({
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -1786,7 +1786,7 @@ export const PhotoEditingTrackerTool = ({
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
         </div>
@@ -1808,7 +1808,7 @@ export const PhotoEditingTrackerTool = ({
           <button
             onClick={() => selectedProjectId && addRevisionRequest(selectedProjectId)}
             disabled={!revisionForm.description.trim()}
-            className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {t('tools.photoEditingTracker.addRevision', 'Add Revision')}
           </button>
@@ -1852,7 +1852,7 @@ export const PhotoEditingTrackerTool = ({
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -1899,7 +1899,7 @@ export const PhotoEditingTrackerTool = ({
           <button
             onClick={() => selectedProjectId && addClientFeedback(selectedProjectId)}
             disabled={!feedbackForm.note.trim()}
-            className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {t('tools.photoEditingTracker.addFeedback', 'Add Feedback')}
           </button>
@@ -1944,7 +1944,7 @@ export const PhotoEditingTrackerTool = ({
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
             <div className="flex-1">
@@ -1961,7 +1961,7 @@ export const PhotoEditingTrackerTool = ({
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
           </div>
@@ -1984,7 +1984,7 @@ export const PhotoEditingTrackerTool = ({
           <button
             onClick={() => selectedProjectId && addManualTime(selectedProjectId)}
             disabled={timeForm.hours === 0 && timeForm.minutes === 0}
-            className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C73] text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {t('tools.photoEditingTracker.addTime2', 'Add Time')}
           </button>
@@ -1996,7 +1996,7 @@ export const PhotoEditingTrackerTool = ({
   if (isLoading) {
     return (
       <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden flex items-center justify-center py-12`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -2004,11 +2004,11 @@ export const PhotoEditingTrackerTool = ({
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.photoEditingTracker.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.photoEditingTracker.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.photoEditingTracker.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.photoEditingTracker.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Camera className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Camera className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -2026,7 +2026,7 @@ export const PhotoEditingTrackerTool = ({
                 onClick={() => setViewMode('list')}
                 className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   viewMode === 'list'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'text-gray-400 hover:text-white'
                     : 'text-gray-600 hover:text-gray-900'
@@ -2038,7 +2038,7 @@ export const PhotoEditingTrackerTool = ({
                 onClick={() => setViewMode('dashboard')}
                 className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   viewMode === 'dashboard'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'text-gray-400 hover:text-white'
                     : 'text-gray-600 hover:text-gray-900'
@@ -2063,7 +2063,7 @@ export const PhotoEditingTrackerTool = ({
                 resetProjectForm();
                 setShowProjectModal(true);
               }}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C73] text-white rounded-xl transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C73] text-white rounded-xl transition-colors"
             >
               <Plus className="w-4 h-4" />
               <span className="hidden sm:inline">{t('tools.photoEditingTracker.newProject', 'New Project')}</span>

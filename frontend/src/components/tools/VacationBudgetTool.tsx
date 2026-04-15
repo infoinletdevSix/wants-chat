@@ -19,7 +19,7 @@ interface CustomExpense {
 }
 
 const DEFAULT_CATEGORIES: Omit<BudgetCategory, 'amount'>[] = [
-  { id: 'flights', name: 'Flights', icon: <Plane className="w-5 h-5" />, color: '#0D9488' },
+  { id: 'flights', name: 'Flights', icon: <Plane className="w-5 h-5" />, color: '#6096B4' },
   { id: 'accommodation', name: 'Accommodation', icon: <Hotel className="w-5 h-5" />, color: '#8B5CF6' },
   { id: 'food', name: 'Food & Dining', icon: <Utensils className="w-5 h-5" />, color: '#F59E0B' },
   { id: 'transport', name: 'Local Transport', icon: <Car className="w-5 h-5" />, color: '#3B82F6' },
@@ -174,7 +174,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Wallet className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -188,9 +188,9 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.vacationBudget.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.vacationBudget.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -210,7 +210,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -224,7 +224,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="USD">{t('tools.vacationBudget.usdUsDollar', 'USD - US Dollar')}</option>
                   <option value="EUR">{t('tools.vacationBudget.eurEuro', 'EUR - Euro')}</option>
@@ -250,7 +250,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -266,7 +266,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -283,13 +283,13 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
 
             {/* Budget Overview */}
-            <div className={`p-6 rounded-xl ${calculations.isOverBudget ? (isDark ? 'bg-red-900/30 border border-red-800' : 'bg-red-50 border border-red-200') : (isDark ? 'bg-teal-900/30 border border-teal-800' : 'bg-teal-50 border border-teal-200')}`}>
+            <div className={`p-6 rounded-xl ${calculations.isOverBudget ? (isDark ? 'bg-red-900/30 border border-red-800' : 'bg-red-50 border border-red-200') : (isDark ? 'bg-primary-900/30 border border-primary-800' : 'bg-primary-50 border border-primary-200')}`}>
               <div className="grid md:grid-cols-4 gap-4 text-center">
                 <div>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.vacationBudget.totalBudget', 'Total Budget')}</div>
@@ -299,7 +299,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                 </div>
                 <div>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.vacationBudget.planned', 'Planned')}</div>
-                  <div className="text-2xl font-bold text-[#0D9488]">
+                  <div className="text-2xl font-bold text-[#6096B4]">
                     {formatCurrency(calculations.totalPlanned)}
                   </div>
                 </div>
@@ -319,7 +319,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
               <div className="mt-4">
                 <div className={`h-3 rounded-full ${isDark ? 'bg-gray-600' : 'bg-gray-300'}`}>
                   <div
-                    className={`h-full rounded-full transition-all ${calculations.isOverBudget ? 'bg-red-500' : t('tools.vacationBudget.bg0d9488', 'bg-[#0D9488]')}`}
+                    className={`h-full rounded-full transition-all ${calculations.isOverBudget ? 'bg-red-500' : t('tools.vacationBudget.bg0d9488', 'bg-[#6096B4]')}`}
                     style={{ width: `${Math.min(calculations.percentUsed, 100)}%` }}
                   />
                 </div>
@@ -372,7 +372,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                         isDark
                           ? 'bg-gray-600 border-gray-500 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                     {calculations.totalPlanned > 0 && category.amount > 0 && (
                       <div className="mt-2 flex items-center gap-2">
@@ -410,7 +410,7 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <input
                   type="number"
@@ -421,11 +421,11 @@ export const VacationBudgetTool: React.FC<VacationBudgetToolProps> = ({ uiConfig
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <button
                   onClick={addCustomExpense}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                 >
                   <PlusCircle className="w-5 h-5" />
                 </button>

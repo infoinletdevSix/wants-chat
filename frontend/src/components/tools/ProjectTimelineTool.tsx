@@ -684,9 +684,9 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.projectTimeline.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.projectTimeline.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -696,7 +696,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
         >
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg print:hidden">
+              <div className="p-3 bg-[#6096B4] rounded-lg print:hidden">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -752,7 +752,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
               </h2>
               <button
                 onClick={() => setShowProjectForm(true)}
-                className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.projectTimeline.newProject', 'New Project')}
@@ -780,7 +780,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                       value={newProjectName}
                       onChange={(e) => setNewProjectName(e.target.value)}
                       placeholder={t('tools.projectTimeline.eGNewHomeConstruction', 'e.g., New Home Construction')}
-                      className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -793,14 +793,14 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                       type="date"
                       value={newProjectStartDate}
                       onChange={(e) => setNewProjectStartDate(e.target.value)}
-                      className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
                 <div className="flex gap-2">
                   <button
                     onClick={createProject}
-                    className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                    className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     {t('tools.projectTimeline.createProject', 'Create Project')}
                   </button>
@@ -908,7 +908,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                       <button
                         key={mode}
                         onClick={() => setViewMode(mode)}
-                        className={`px-4 py-2 text-sm font-medium capitalize transition-colors ${viewMode === mode ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'text-gray-300 hover:bg-gray-600' : 'text-gray-700 hover:bg-gray-200'}`}
+                        className={`px-4 py-2 text-sm font-medium capitalize transition-colors ${viewMode === mode ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'text-gray-300 hover:bg-gray-600' : 'text-gray-700 hover:bg-gray-200'}`}
                       >
                         {mode === 'gantt' ? 'Gantt Chart' : mode === 'list' ? t('tools.projectTimeline.listView', 'List View') : t('tools.projectTimeline.analysis', 'Analysis')}
                       </button>
@@ -921,7 +921,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                       setEditingTask(null);
                       setShowTaskForm(true);
                     }}
-                    className="flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors"
+                    className="flex items-center gap-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.projectTimeline.addTask', 'Add Task')}
@@ -967,7 +967,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                         value={taskForm.name}
                         onChange={(e) => setTaskForm({ ...taskForm, name: e.target.value })}
                         placeholder={t('tools.projectTimeline.eGPourFoundation', 'e.g., Pour Foundation')}
-                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
 
@@ -981,7 +981,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                       <select
                         value={taskForm.phase}
                         onChange={(e) => setTaskForm({ ...taskForm, phase: e.target.value as Phase })}
-                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {PHASES.map((phase) => (
                           <option key={phase.value} value={phase.value}>
@@ -1003,7 +1003,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                           type="date"
                           value={taskForm.startDate}
                           onChange={(e) => setTaskForm({ ...taskForm, startDate: e.target.value })}
-                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1019,7 +1019,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                           onChange={(e) =>
                             setTaskForm({ ...taskForm, duration: parseInt(e.target.value) || 1 })
                           }
-                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                     </div>
@@ -1040,7 +1040,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                           onChange={(e) =>
                             setTaskForm({ ...taskForm, weatherBuffer: parseInt(e.target.value) || 0 })
                           }
-                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1060,7 +1060,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                               progress: Math.min(100, Math.max(0, parseInt(e.target.value) || 0)),
                             })
                           }
-                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                     </div>
@@ -1076,7 +1076,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                       <select
                         value={taskForm.resource}
                         onChange={(e) => setTaskForm({ ...taskForm, resource: e.target.value })}
-                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {RESOURCES.map((resource) => (
                           <option key={resource} value={resource}>
@@ -1119,7 +1119,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                                     });
                                   }
                                 }}
-                                className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                                className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                               />
                               <span
                                 className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}
@@ -1150,7 +1150,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                           onChange={(e) =>
                             setTaskForm({ ...taskForm, isMilestone: e.target.checked })
                           }
-                          className="rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <Flag className="w-4 h-4" />
                         <span className="text-sm font-medium">{t('tools.projectTimeline.markAsMilestone', 'Mark as Milestone')}</span>
@@ -1169,7 +1169,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                         onChange={(e) => setTaskForm({ ...taskForm, notes: e.target.value })}
                         rows={3}
                         placeholder={t('tools.projectTimeline.additionalNotes', 'Additional notes...')}
-                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1188,7 +1188,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                     </button>
                     <button
                       onClick={editingTask ? updateTaskHandler : addTask}
-                      className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg transition-colors flex items-center gap-2"
+                      className="bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg transition-colors flex items-center gap-2"
                     >
                       {editingTask ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                       {editingTask ? t('tools.projectTimeline.updateTask', 'Update Task') : t('tools.projectTimeline.addTask2', 'Add Task')}
@@ -1209,7 +1209,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                 <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => setSelectedPhaseFilter('all')}
-                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${selectedPhaseFilter === 'all' ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${selectedPhaseFilter === 'all' ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                   >
                     {t('tools.projectTimeline.allPhases', 'All Phases')}
                   </button>
@@ -1555,7 +1555,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                               className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-200'}`}
                             >
                               <div
-                                className={`h-full rounded-full transition-all ${task.progress === 100 ? 'bg-green-500' : t('tools.projectTimeline.bg0d9488', 'bg-[#0D9488]')}`}
+                                className={`h-full rounded-full transition-all ${task.progress === 100 ? 'bg-green-500' : t('tools.projectTimeline.bg0d9488', 'bg-[#6096B4]')}`}
                                 style={{ width: `${task.progress}%` }}
                               />
                             </div>
@@ -1564,7 +1564,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                                 <button
                                   key={p}
                                   onClick={() => updateTaskProgress(task.id, p)}
-                                  className={`px-2 py-1 text-xs rounded transition-colors ${task.progress === p ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'bg-gray-600 text-gray-300 hover:bg-gray-500' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                                  className={`px-2 py-1 text-xs rounded transition-colors ${task.progress === p ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'bg-gray-600 text-gray-300 hover:bg-gray-500' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                                 >
                                   {p}%
                                 </button>
@@ -1669,8 +1669,8 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                     className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4`}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                        <Target className="w-5 h-5 text-[#0D9488]" />
+                      <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                        <Target className="w-5 h-5 text-[#6096B4]" />
                       </div>
                       <div>
                         <p
@@ -1876,7 +1876,7 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                           setDelayTaskId(e.target.value);
                           setDelayImpact(null);
                         }}
-                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.projectTimeline.chooseATask', 'Choose a task...')}</option>
                         {currentProject.tasks.map((task) => (
@@ -1900,14 +1900,14 @@ export const ProjectTimelineTool = ({ uiConfig }: ProjectTimelineToolProps) => {
                           setDelayDays(parseInt(e.target.value) || 0);
                           setDelayImpact(null);
                         }}
-                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-3 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div className="flex items-end">
                       <button
                         onClick={analyzeDelay}
                         disabled={!delayTaskId || delayDays <= 0}
-                        className="w-full bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-500 text-white px-4 py-2 rounded-lg transition-colors"
+                        className="w-full bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-500 text-white px-4 py-2 rounded-lg transition-colors"
                       >
                         {t('tools.projectTimeline.analyzeImpact', 'Analyze Impact')}
                       </button>

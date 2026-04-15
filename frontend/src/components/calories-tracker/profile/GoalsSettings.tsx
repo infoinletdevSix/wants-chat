@@ -323,7 +323,7 @@ const GoalsSettings: React.FC<GoalsSettingsProps> = ({
           <Button
             onClick={handleSave}
             disabled={!isBalanced || isSaving}
-            className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50"
+            className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
           >
             {isSaving ? 'Saving...' : 'Save Goals'}
           </Button>

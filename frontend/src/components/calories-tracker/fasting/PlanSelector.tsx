@@ -55,8 +55,8 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
                 className={`
                   p-4 rounded-lg border-2 cursor-pointer transition-all
                   ${selectedPlan === plan.id
-                    ? 'border-teal-400 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 shadow-lg shadow-teal-500/20'
-                    : 'border-white/10 bg-white/5 hover:border-teal-400/50 hover:bg-white/10'
+                    ? 'border-primary-400 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 shadow-lg shadow-primary-500/20'
+                    : 'border-white/10 bg-white/5 hover:border-primary-400/50 hover:bg-white/10'
                   }
                 `}
                 onClick={() => onSelectPlan(plan.id)}
@@ -68,7 +68,7 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
                         {plan.name}
                       </h3>
                       {plan.popular && (
-                        <Badge className="bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                        <Badge className="bg-primary-500/20 text-primary-400 border border-primary-500/30">
                           Popular
                         </Badge>
                       )}
@@ -87,7 +87,7 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
                   </div>
 
                   <div className="text-center ml-4">
-                    <p className="text-2xl font-bold text-teal-400">{plan.duration}</p>
+                    <p className="text-2xl font-bold text-primary-400">{plan.duration}</p>
                     <p className="text-xs text-white/60">hours</p>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({
           </div>
 
           <Button
-            className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             size="lg"
             onClick={onStartFast}
           >

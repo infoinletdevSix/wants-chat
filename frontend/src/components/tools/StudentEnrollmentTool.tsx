@@ -501,9 +501,9 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.studentEnrollment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.studentEnrollment.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -511,7 +511,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -613,7 +613,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                 onClick={() => setActiveTab(tab.id as ActiveTab)}
                 className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : isDark
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-500 hover:text-gray-700'
@@ -673,7 +673,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                   </select>
                   <button
                     onClick={() => setShowStudentForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <UserPlus className="w-4 h-4" />
                     {t('tools.studentEnrollment.addStudent', 'Add Student')}
@@ -791,7 +791,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.studentEnrollment.programs2', 'Programs')}</h2>
                   <button
                     onClick={() => setShowProgramForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.studentEnrollment.addProgram', 'Add Program')}
@@ -862,7 +862,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                       <div className="mt-3">
                         <div className={`h-2 rounded-full overflow-hidden ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                           <div
-                            className={`h-full rounded-full ${program.enrolled >= program.capacity ? 'bg-red-500' : t('tools.studentEnrollment.bg0d9488', 'bg-[#0D9488]')}`}
+                            className={`h-full rounded-full ${program.enrolled >= program.capacity ? 'bg-red-500' : t('tools.studentEnrollment.bg0d9488', 'bg-[#6096B4]')}`}
                             style={{ width: `${Math.min((program.enrolled / program.capacity) * 100, 100)}%` }}
                           />
                         </div>
@@ -880,7 +880,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                   <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.studentEnrollment.applications', 'Applications')}</h2>
                   <button
                     onClick={() => setShowApplicationForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B] transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.studentEnrollment.newApplication', 'New Application')}
@@ -976,7 +976,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                                 className={`h-full rounded-full ${
                                   isDark ? STATUS_COLORS[status]?.darkBg : STATUS_COLORS[status]?.bg
                                 }`}
-                                style={{ width: `${percentage}%`, backgroundColor: status === 'enrolled' ? '#0D9488' : undefined }}
+                                style={{ width: `${percentage}%`, backgroundColor: status === 'enrolled' ? '#6096B4' : undefined }}
                               />
                             </div>
                           </div>
@@ -997,7 +997,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                             </div>
                             <div className={`h-2 rounded-full overflow-hidden ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                               <div
-                                className={`h-full rounded-full ${percentage >= 100 ? 'bg-red-500' : percentage >= 80 ? 'bg-yellow-500' : t('tools.studentEnrollment.bg0d94882', 'bg-[#0D9488]')}`}
+                                className={`h-full rounded-full ${percentage >= 100 ? 'bg-red-500' : percentage >= 80 ? 'bg-yellow-500' : t('tools.studentEnrollment.bg0d94882', 'bg-[#6096B4]')}`}
                                 style={{ width: `${Math.min(percentage, 100)}%` }}
                               />
                             </div>
@@ -1185,7 +1185,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                 </button>
                 <button
                   onClick={handleSaveStudent}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {editingStudent ? t('tools.studentEnrollment.updateStudent', 'Update Student') : t('tools.studentEnrollment.addStudent2', 'Add Student')}
                 </button>
@@ -1299,7 +1299,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                 </button>
                 <button
                   onClick={handleSaveProgram}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {editingProgram ? t('tools.studentEnrollment.updateProgram', 'Update Program') : t('tools.studentEnrollment.addProgram2', 'Add Program')}
                 </button>
@@ -1357,7 +1357,7 @@ export const StudentEnrollmentTool: React.FC<StudentEnrollmentToolProps> = ({ ui
                 </button>
                 <button
                   onClick={handleSubmitApplication}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C7B]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C7B]"
                 >
                   {t('tools.studentEnrollment.submitApplication', 'Submit Application')}
                 </button>

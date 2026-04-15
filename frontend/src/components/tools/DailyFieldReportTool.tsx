@@ -401,8 +401,8 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <ClipboardList className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <ClipboardList className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.dailyFieldReport.dailyFieldReport', 'Daily Field Report')}</h1>
@@ -476,7 +476,7 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
         <button
           onClick={() => setActiveTab('list')}
           className={`px-4 py-2 font-medium transition-colors ${
-            activeTab === 'list' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'list' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.dailyFieldReport.allReports', 'All Reports')}
@@ -484,7 +484,7 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
         <button
           onClick={() => setActiveTab('create')}
           className={`px-4 py-2 font-medium transition-colors ${
-            activeTab === 'create' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'create' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.dailyFieldReport.newReport', 'New Report')}
@@ -526,8 +526,8 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <ClipboardList className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <ClipboardList className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{report.projectName}</h3>
@@ -593,7 +593,7 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
                           setEditingReport(report);
                           setActiveTab('edit');
                         }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.dailyFieldReport.edit', 'Edit')}
@@ -624,7 +624,7 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
                 <h3 className="text-lg font-medium text-gray-900">{t('tools.dailyFieldReport.noReportsFound', 'No reports found')}</h3>
                 <button
                   onClick={() => setActiveTab('create')}
-                  className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {t('tools.dailyFieldReport.createReport', 'Create Report')}
                 </button>
@@ -766,12 +766,12 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
           <div>
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2">
-                <Users className="w-5 h-5 text-teal-600" />
+                <Users className="w-5 h-5 text-primary-600" />
                 {t('tools.dailyFieldReport.crewMembers', 'Crew Members')}
               </h3>
               <button
                 onClick={() => addCrewMember(activeTab === 'edit' ? editingReport! : newReport, activeTab === 'edit' ? setEditingReport : setNewReport)}
-                className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.dailyFieldReport.addCrew', 'Add Crew')}
@@ -839,12 +839,12 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
           <div>
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2">
-                <HardHat className="w-5 h-5 text-teal-600" />
+                <HardHat className="w-5 h-5 text-primary-600" />
                 {t('tools.dailyFieldReport.workPerformed2', 'Work Performed')}
               </h3>
               <button
                 onClick={() => addWorkPerformed(activeTab === 'edit' ? editingReport! : newReport, activeTab === 'edit' ? setEditingReport : setNewReport)}
-                className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.dailyFieldReport.addWork', 'Add Work')}
@@ -925,7 +925,7 @@ export const DailyFieldReportTool: React.FC<DailyFieldReportToolProps> = ({
             </button>
             <button
               onClick={activeTab === 'edit' ? handleUpdate : handleSave}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
             >
               <Save className="w-4 h-4" />
               {activeTab === 'edit' ? t('tools.dailyFieldReport.update', 'Update') : t('tools.dailyFieldReport.save', 'Save')} Report

@@ -170,11 +170,11 @@ const TravelPlannerPage: React.FC = () => {
 
             <Tabs defaultValue="overview" className="w-full">
               <TabsList className="grid w-full grid-cols-5 bg-white/10 border border-white/20">
-                <TabsTrigger value="overview" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">Overview</TabsTrigger>
-                <TabsTrigger value="itinerary" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">Itinerary</TabsTrigger>
-                <TabsTrigger value="budget" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">Budget</TabsTrigger>
-                <TabsTrigger value="bookings" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">Bookings</TabsTrigger>
-                <TabsTrigger value="documents" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">Documents</TabsTrigger>
+                <TabsTrigger value="overview" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">Overview</TabsTrigger>
+                <TabsTrigger value="itinerary" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">Itinerary</TabsTrigger>
+                <TabsTrigger value="budget" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">Budget</TabsTrigger>
+                <TabsTrigger value="bookings" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">Bookings</TabsTrigger>
+                <TabsTrigger value="documents" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">Documents</TabsTrigger>
               </TabsList>
 
               <TabsContent value="overview" className="space-y-6 mt-6">
@@ -199,14 +199,14 @@ const TravelPlannerPage: React.FC = () => {
                   <div className="space-y-4 mt-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-teal-400" />
+                        <Calendar className="h-4 w-4 text-primary-400" />
                         <div>
                           <p className="text-sm text-white/60">Duration</p>
                           <p className="font-semibold text-white">{selectedPlan.duration} days</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <DollarSign className="h-4 w-4 text-teal-400" />
+                        <DollarSign className="h-4 w-4 text-primary-400" />
                         <div>
                           <p className="text-sm text-white/60">Budget</p>
                           <p className="font-semibold text-white">
@@ -218,14 +218,14 @@ const TravelPlannerPage: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Users className="h-4 w-4 text-teal-400" />
+                        <Users className="h-4 w-4 text-primary-400" />
                         <div>
                           <p className="text-sm text-white/60">Travelers</p>
                           <p className="font-semibold text-white">{selectedPlan.travelers.length}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4 text-teal-400" />
+                        <Clock className="h-4 w-4 text-primary-400" />
                         <div>
                           <p className="text-sm text-white/60">Activities</p>
                           <p className="font-semibold text-white">{selectedPlan.activities.length}</p>
@@ -278,8 +278,8 @@ const TravelPlannerPage: React.FC = () => {
             {/* Hero Section */}
             <div className="text-center mb-12">
               <div className="flex justify-center mb-6">
-                <div className="p-4 bg-teal-500/20 rounded-2xl">
-                  <MapPin className="h-12 w-12 text-teal-400" />
+                <div className="p-4 bg-primary-500/20 rounded-2xl">
+                  <MapPin className="h-12 w-12 text-primary-400" />
                 </div>
               </div>
 
@@ -293,7 +293,7 @@ const TravelPlannerPage: React.FC = () => {
 
               <Button
                 onClick={() => setShowCreateForm(true)}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-lg px-8 py-3"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white text-lg px-8 py-3"
               >
                 <Plus className="h-5 w-5 mr-2" />
                 New Travel Plan
@@ -303,10 +303,10 @@ const TravelPlannerPage: React.FC = () => {
             <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as typeof activeTab)}>
               <div className="flex justify-center mb-8">
                 <TabsList className="bg-white/10 border border-white/20">
-                  <TabsTrigger value="plans" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">
+                  <TabsTrigger value="plans" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">
                     My Plans ({totalPlans})
                   </TabsTrigger>
-                  <TabsTrigger value="stats" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-white/60">
+                  <TabsTrigger value="stats" className="data-[state=active]:bg-primary-500 data-[state=active]:text-white text-white/60">
                     Statistics
                   </TabsTrigger>
                 </TabsList>
@@ -376,7 +376,7 @@ const TravelPlannerPage: React.FC = () => {
                     {travelPlans.length === 0 && (
                       <Button
                         onClick={() => setShowCreateForm(true)}
-                        className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                        className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                       >
                         <Plus className="h-4 w-4 mr-2" />
                         Create Travel Plan

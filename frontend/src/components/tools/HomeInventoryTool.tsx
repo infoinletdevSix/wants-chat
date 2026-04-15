@@ -436,7 +436,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -448,7 +448,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Home className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -491,9 +491,9 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
 
           {/* Prefill indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.homeInventory.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.homeInventory.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
             </div>
           )}
 
@@ -513,7 +513,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                 <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.homeInventory.totalValue', 'Total Value')}</span>
               </div>
-              <div className="text-2xl font-bold text-[#0D9488]">
+              <div className="text-2xl font-bold text-[#6096B4]">
                 ${reportsData.totalValue.toLocaleString()}
               </div>
             </div>
@@ -551,7 +551,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : isDark
                     ? 'text-gray-400 hover:text-gray-300'
                     : 'text-gray-600 hover:text-gray-900'
@@ -582,7 +582,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -594,7 +594,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.homeInventory.allRooms', 'All Rooms')}</option>
                   {rooms.map((room) => (
@@ -611,7 +611,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.homeInventory.allCategories', 'All Categories')}</option>
                   {CATEGORIES.map((cat) => (
@@ -628,7 +628,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.homeInventory.allConditions', 'All Conditions')}</option>
                   {CONDITIONS.map((cond) => (
@@ -646,7 +646,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="name">{t('tools.homeInventory.sortByName', 'Sort by Name')}</option>
                     <option value="value">{t('tools.homeInventory.sortByValue', 'Sort by Value')}</option>
@@ -670,7 +670,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                     setEditingItem(null);
                     setShowItemModal(true);
                   }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.homeInventory.addItem', 'Add Item')}
@@ -745,7 +745,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                       </div>
 
                       <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600 flex justify-between items-center">
-                        <div className="text-xl font-bold text-[#0D9488]">
+                        <div className="text-xl font-bold text-[#6096B4]">
                           ${(item.currentValue * item.quantity).toLocaleString()}
                         </div>
                         {item.warrantyExpiration && new Date(item.warrantyExpiration) < new Date() && (
@@ -771,7 +771,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                 </h2>
                 <button
                   onClick={() => setShowRoomModal(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.homeInventory.addRoom', 'Add Room')}
@@ -813,7 +813,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                           </button>
                         )}
                       </div>
-                      <div className="text-lg font-bold text-[#0D9488]">
+                      <div className="text-lg font-bold text-[#6096B4]">
                         ${roomValue.toLocaleString()}
                       </div>
                     </div>
@@ -842,7 +842,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         </span>
                         <div className="flex-1 h-4 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-[#0D9488]"
+                            className="h-full bg-[#6096B4]"
                             style={{ width: `${(value / reportsData.totalValue) * 100}%` }}
                           />
                         </div>
@@ -870,7 +870,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         </span>
                         <div className="flex-1 h-4 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-[#0D9488]"
+                            className="h-full bg-[#6096B4]"
                             style={{ width: `${(value / reportsData.totalValue) * 100}%` }}
                           />
                         </div>
@@ -943,7 +943,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
               {/* Insurance Documentation */}
               <div className={`p-4 rounded-lg border-2 border-dashed ${isDark ? 'border-gray-600' : 'border-gray-300'}`}>
                 <h3 className={`font-semibold mb-2 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Shield className="w-5 h-5 text-[#0D9488]" />
+                  <Shield className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.homeInventory.insuranceDocumentation', 'Insurance Documentation')}
                 </h3>
                 <p className={`text-sm mb-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -995,7 +995,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1013,7 +1013,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1029,7 +1029,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {CATEGORIES.map((cat) => (
                         <option key={cat.id} value={cat.id}>
@@ -1051,7 +1051,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {rooms.map((room) => (
                         <option key={room.id} value={room.id}>
@@ -1074,7 +1074,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1091,7 +1091,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1111,7 +1111,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1131,7 +1131,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1149,7 +1149,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1167,7 +1167,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1183,7 +1183,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {CONDITIONS.map((cond) => (
                         <option key={cond} value={cond}>
@@ -1207,7 +1207,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         isDark
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1217,7 +1217,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                   <button
                     onClick={handleAddItem}
                     disabled={!itemForm.name}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     {editingItem ? t('tools.homeInventory.updateItem', 'Update Item') : t('tools.homeInventory.addItem2', 'Add Item')}
                   </button>
@@ -1274,7 +1274,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1289,7 +1289,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                         onClick={() => setRoomForm({ ...roomForm, icon: iconName })}
                         className={`p-3 rounded-lg border transition-colors ${
                           roomForm.icon === iconName
-                            ? 'border-[#0D9488] bg-[#0D9488]/10 text-[#0D9488]'
+                            ? 'border-[#6096B4] bg-[#6096B4]/10 text-[#6096B4]'
                             : isDark
                             ? 'border-gray-600 hover:border-gray-500'
                             : 'border-gray-300 hover:border-gray-400'
@@ -1305,7 +1305,7 @@ export const HomeInventoryTool: React.FC<HomeInventoryToolProps> = ({ uiConfig }
                   <button
                     onClick={handleAddRoom}
                     disabled={!roomForm.name}
-                    className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     {t('tools.homeInventory.addRoom2', 'Add Room')}
                   </button>

@@ -403,7 +403,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
 
   const inputClass = `w-full px-3 py-2 rounded-lg border ${
     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -412,9 +412,9 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.repairTicketAppliance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.repairTicketAppliance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -423,7 +423,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Ticket className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -494,7 +494,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
             onClick={() => setActiveTab('list')}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === 'list'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -507,7 +507,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
             onClick={handleNewTicket}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === 'create'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -793,7 +793,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
                           onClick={() => toggleSymptom(symptom)}
                           className={`px-3 py-1 rounded-full text-sm transition-colors ${
                             currentTicket.reportedSymptoms.includes(symptom)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -827,7 +827,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
                     />
                     <button
                       onClick={handleAddNote}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                     >
                       {t('tools.repairTicketAppliance.add', 'Add')}
                     </button>
@@ -977,7 +977,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
                     />
                     <button
                       onClick={handleAddTag}
-                      className="px-3 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                      className="px-3 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -1006,7 +1006,7 @@ export const RepairTicketApplianceTool = ({ uiConfig }: RepairTicketApplianceToo
                 <button
                   onClick={handleSaveTicket}
                   disabled={!currentTicket.customerName || !currentTicket.applianceType}
-                  className="w-full px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {activeTab === 'create' ? t('tools.repairTicketAppliance.createTicket', 'Create Ticket') : t('tools.repairTicketAppliance.saveChanges', 'Save Changes')}

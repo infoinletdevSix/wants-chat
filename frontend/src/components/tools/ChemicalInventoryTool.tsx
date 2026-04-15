@@ -550,9 +550,9 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.chemicalInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.chemicalInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -560,7 +560,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <FlaskConical className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -607,7 +607,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.chemicalInventory.products', 'Products')}</div>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-              <div className={`text-2xl font-bold text-[#0D9488]`}>
+              <div className={`text-2xl font-bold text-[#6096B4]`}>
                 {formatCurrency(stats.totalValue)}
               </div>
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.chemicalInventory.totalValue', 'Total Value')}</div>
@@ -657,7 +657,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -689,7 +689,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <select
@@ -699,7 +699,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             >
               <option value="all">{t('tools.chemicalInventory.allCategories', 'All Categories')}</option>
               <option value="insecticide">{t('tools.chemicalInventory.insecticide', 'Insecticide')}</option>
@@ -716,7 +716,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             >
               <option value="all">{t('tools.chemicalInventory.allStock', 'All Stock')}</option>
               <option value="low">{t('tools.chemicalInventory.lowStock2', 'Low Stock')}</option>
@@ -725,7 +725,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
             </select>
             <button
               onClick={() => setShowAddChemical(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
             >
               <Plus className="w-5 h-5" />
               {t('tools.chemicalInventory.addProduct', 'Add Product')}
@@ -852,7 +852,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                                 href={chemical.safetyDataSheet}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-1 text-[#0D9488] hover:underline"
+                                className="flex items-center gap-1 text-[#6096B4] hover:underline"
                               >
                                 <FileText className="w-4 h-4" />
                                 View SDS
@@ -867,7 +867,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                       <div className={`mt-4 pt-4 border-t ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} flex gap-2`}>
                         <button
                           onClick={() => { setSelectedChemical(chemical); setShowAddTransaction(true); }}
-                          className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 text-sm"
+                          className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 text-sm"
                         >
                           <RefreshCw className="w-4 h-4" />
                           {t('tools.chemicalInventory.recordTransaction', 'Record Transaction')}
@@ -897,7 +897,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                 </p>
                 <button
                   onClick={() => setShowAddChemical(true)}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.chemicalInventory.addProduct2', 'Add Product')}
@@ -928,7 +928,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                       </div>
                       <button
                         onClick={() => { setSelectedChemical(item); setTransactionForm({ ...transactionForm, type: 'purchase', chemicalId: item.id }); setShowAddTransaction(true); }}
-                        className="px-3 py-1 bg-[#0D9488] text-white rounded-lg text-sm"
+                        className="px-3 py-1 bg-[#6096B4] text-white rounded-lg text-sm"
                       >
                         {t('tools.chemicalInventory.orderMore', 'Order More')}
                       </button>
@@ -1032,7 +1032,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                       placeholder={t('tools.chemicalInventory.eGTermidorSc', 'e.g., Termidor SC')}
                     />
                   </div>
@@ -1048,7 +1048,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                       placeholder="e.g., 7969-210"
                     />
                   </div>
@@ -1067,7 +1067,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1082,7 +1082,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                       placeholder="e.g., 9.1%"
                     />
                   </div>
@@ -1098,7 +1098,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1115,7 +1115,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     >
                       <option value="insecticide">{t('tools.chemicalInventory.insecticide2', 'Insecticide')}</option>
                       <option value="rodenticide">{t('tools.chemicalInventory.rodenticide2', 'Rodenticide')}</option>
@@ -1136,7 +1136,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     >
                       <option value="liquid">{t('tools.chemicalInventory.liquid', 'Liquid')}</option>
                       <option value="granular">{t('tools.chemicalInventory.granular', 'Granular')}</option>
@@ -1157,7 +1157,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     >
                       <option value="danger">{t('tools.chemicalInventory.danger', 'Danger')}</option>
                       <option value="warning">{t('tools.chemicalInventory.warning', 'Warning')}</option>
@@ -1171,7 +1171,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         type="checkbox"
                         checked={chemicalForm.restrictedUse || false}
                         onChange={(e) => setChemicalForm({ ...chemicalForm, restrictedUse: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                        className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.chemicalInventory.restrictedUse2', 'Restricted Use')}
@@ -1194,7 +1194,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1209,7 +1209,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                       placeholder={t('tools.chemicalInventory.ozLbsGal', 'oz, lbs, gal')}
                     />
                   </div>
@@ -1225,7 +1225,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1240,7 +1240,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1256,7 +1256,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1275,7 +1275,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1290,7 +1290,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1305,7 +1305,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1323,7 +1323,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                 </button>
                 <button
                   onClick={handleAddChemical}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.chemicalInventory.addProduct3', 'Add Product')}
                 </button>
@@ -1365,7 +1365,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   >
                     <option value="usage">{t('tools.chemicalInventory.usage', 'Usage')}</option>
                     <option value="purchase">{t('tools.chemicalInventory.purchase', 'Purchase')}</option>
@@ -1388,7 +1388,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1403,7 +1403,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1420,7 +1420,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     placeholder={t('tools.chemicalInventory.transactionNotes', 'Transaction notes...')}
                   />
                 </div>
@@ -1438,7 +1438,7 @@ export const ChemicalInventoryTool = ({ uiConfig }: ChemicalInventoryToolProps) 
                 </button>
                 <button
                   onClick={handleAddTransaction}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.chemicalInventory.recordTransaction2', 'Record Transaction')}
                 </button>

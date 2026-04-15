@@ -69,11 +69,11 @@ const VPN: React.FC = () => {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-3 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl">
+            <div className="p-3 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl">
               <Shield className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
                 VPN Shield
               </h1>
               <p className="text-slate-400 text-sm">Secure your connection with encrypted VPN</p>
@@ -88,7 +88,7 @@ const VPN: React.FC = () => {
           transition={{ delay: 0.1 }}
           className="mb-8"
         >
-          <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-teal-400/30 p-6 shadow-xl">
+          <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-primary-400/30 p-6 shadow-xl">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               {/* Status Display */}
               <div className="flex-1 w-full">
@@ -120,7 +120,7 @@ const VPN: React.FC = () => {
                       {isConnecting ? 'Connecting...' : isConnected ? 'Connected' : 'Disconnected'}
                     </h2>
                     {selectedServer && isConnected && (
-                      <div className="flex items-center gap-2 text-teal-400">
+                      <div className="flex items-center gap-2 text-primary-400">
                         <span className="text-3xl">{selectedServer.flag}</span>
                         <span className="font-medium">{selectedServer.city}, {selectedServer.country}</span>
                       </div>
@@ -170,7 +170,7 @@ const VPN: React.FC = () => {
                 className={`px-8 py-4 rounded-xl font-bold text-lg transition-all ${
                   isConnected
                     ? 'bg-gradient-to-r from-red-500 to-rose-500 hover:from-red-600 hover:to-rose-600 text-white shadow-lg shadow-red-500/50'
-                    : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg shadow-teal-500/50 disabled:opacity-50 disabled:cursor-not-allowed'
+                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/50 disabled:opacity-50 disabled:cursor-not-allowed'
                 }`}
               >
                 {isConnecting ? 'Connecting...' : isConnected ? 'Disconnect' : 'Select Server'}
@@ -186,7 +186,7 @@ const VPN: React.FC = () => {
           transition={{ delay: 0.2 }}
         >
           <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-teal-400" />
+            <MapPin className="w-5 h-5 text-primary-400" />
             Available Servers
           </h2>
 
@@ -202,7 +202,7 @@ const VPN: React.FC = () => {
                 className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border p-4 cursor-pointer transition-all ${
                   selectedServer?.id === server.id && isConnected
                     ? 'border-emerald-500 bg-emerald-500/10'
-                    : 'border-teal-400/30 hover:border-teal-400/50'
+                    : 'border-primary-400/30 hover:border-primary-400/50'
                 } ${isConnected ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <div className="flex items-center justify-between mb-3">

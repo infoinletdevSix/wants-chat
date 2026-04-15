@@ -44,12 +44,12 @@ const FitnessLanding: React.FC = () => {
       <div className="relative z-10 flex items-center justify-center p-4 min-h-[80vh]">
       <div className="max-w-4xl w-full">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 rounded-full bg-teal-500/20 px-4 py-2 mb-6">
-            <Sparkles className="h-5 w-5 text-teal-400" />
-            <span className="text-sm font-medium text-teal-400">Let's Get Started</span>
+          <div className="inline-flex items-center space-x-2 rounded-full bg-primary-500/20 px-4 py-2 mb-6">
+            <Sparkles className="h-5 w-5 text-primary-400" />
+            <span className="text-sm font-medium text-primary-400">Let's Get Started</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white">
-            Welcome to <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Fitness Tracker</span>
+            Welcome to <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">Fitness Tracker</span>
           </h1>
           <p className="text-xl text-white/60">
             Where do you prefer to workout?
@@ -59,7 +59,7 @@ const FitnessLanding: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Gym Option */}
           <div className="group relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative">
               <div className="inline-flex p-3 rounded-lg bg-blue-500/20 mb-6">
                 <Dumbbell className="h-8 w-8 text-blue-400" />
@@ -69,25 +69,25 @@ const FitnessLanding: React.FC = () => {
               </h2>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Full equipment access
                 </li>
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Advanced training programs
                 </li>
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Heavy lifting routines
                 </li>
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Machine-based exercises
                 </li>
               </ul>
               <Button
                 onClick={() => handleLocationSelect('gym')}
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
                 size="lg"
               >
                 Select Gym Workouts
@@ -97,7 +97,7 @@ const FitnessLanding: React.FC = () => {
 
           {/* Home Option */}
           <div className="group relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative">
               <div className="inline-flex p-3 rounded-lg bg-green-500/20 mb-6">
                 <Home className="h-8 w-8 text-green-400" />
@@ -107,25 +107,25 @@ const FitnessLanding: React.FC = () => {
               </h2>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   No equipment needed
                 </li>
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Bodyweight exercises
                 </li>
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Flexible scheduling
                 </li>
                 <li className="flex items-center text-white/80">
-                  <Check className="h-4 w-4 text-teal-400 mr-2" />
+                  <Check className="h-4 w-4 text-primary-400 mr-2" />
                   Minimal space required
                 </li>
               </ul>
               <Button
                 onClick={() => handleLocationSelect('home')}
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
                 size="lg"
               >
                 Select Home Workouts

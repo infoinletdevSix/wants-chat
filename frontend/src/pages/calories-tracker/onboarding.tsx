@@ -333,7 +333,7 @@ const CaloriesTrackerOnboarding: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
               <div className="p-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-teal-400">{onboardingData.bmr}</p>
+                  <p className="text-2xl font-bold text-primary-400">{onboardingData.bmr}</p>
                   <p className="text-sm text-white/60">BMR (Calories)</p>
                   <p className="text-xs text-white/50 mt-1">Base Metabolic Rate</p>
                 </div>
@@ -356,7 +356,7 @@ const CaloriesTrackerOnboarding: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 p-4 rounded-lg border border-white/20">
+            <div className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10 p-4 rounded-lg border border-white/20">
               <p className="text-sm text-white/80">
                 <strong className="text-white">Next:</strong> Start tracking your meals and monitoring your progress
                 with your personalized calorie target.
@@ -432,7 +432,7 @@ const CaloriesTrackerOnboarding: React.FC = () => {
             <Button
               onClick={handleComplete}
               disabled={isSubmitting}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg shadow-teal-500/30"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/30"
             >
               {isSubmitting ? 'Saving...' : 'Get Started'}
               <Icon path={mdiCheckCircle} size={0.8} className="ml-2" />
@@ -441,7 +441,7 @@ const CaloriesTrackerOnboarding: React.FC = () => {
             <Button
               onClick={handleNext}
               disabled={!canProceedToNext()}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg shadow-teal-500/30"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/30"
             >
               Next
               <Icon path={mdiArrowRight} size={0.8} className="ml-2" />

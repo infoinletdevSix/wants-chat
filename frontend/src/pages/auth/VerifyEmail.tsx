@@ -75,14 +75,14 @@ const VerifyEmail: React.FC = () => {
   const floatingIcons = [
     { Icon: Key, color: 'text-yellow-400', delay: 0, x: '15%', y: '25%' },
     { Icon: Shield, color: 'text-blue-400', delay: 0.5, x: '75%', y: '20%' },
-    { Icon: Mail, color: 'text-teal-400', delay: 1, x: '20%', y: '70%' },
+    { Icon: Mail, color: 'text-primary-400', delay: 1, x: '20%', y: '70%' },
     { Icon: Sparkles, color: 'text-rose-400', delay: 1.5, x: '80%', y: '75%' },
   ];
 
   const BackgroundAnimation = () => (
-    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <motion.div
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-500/30 rounded-full blur-[120px]"
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/30 rounded-full blur-[120px]"
         animate={{
           x: [0, 50, 0],
           y: [0, 30, 0],
@@ -138,8 +138,8 @@ const VerifyEmail: React.FC = () => {
     switch (verificationState) {
       case 'verifying':
         return {
-          icon: <Loader2 className="h-10 w-10 text-teal-400 animate-spin" />,
-          bgColor: 'bg-teal-500/20 border-teal-500/30',
+          icon: <Loader2 className="h-10 w-10 text-primary-400 animate-spin" />,
+          bgColor: 'bg-primary-500/20 border-primary-500/30',
           title: 'Verifying Email',
           description: 'Please wait while we verify your email address...'
         };
@@ -225,8 +225,8 @@ const VerifyEmail: React.FC = () => {
 
             {verificationState === 'verifying' && (
               <div className="py-4">
-                <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto">
-                  <Loader2 className="w-8 h-8 text-teal-400 animate-spin" />
+                <div className="w-16 h-16 bg-primary-500/20 rounded-full flex items-center justify-center mx-auto">
+                  <Loader2 className="w-8 h-8 text-primary-400 animate-spin" />
                 </div>
               </div>
             )}
@@ -238,7 +238,7 @@ const VerifyEmail: React.FC = () => {
                 </p>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
-                    className="w-full h-12 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
+                    className="w-full h-12 bg-gradient-to-r from-emerald-600 to-primary-600 hover:from-emerald-500 hover:to-primary-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 transition-all duration-200"
                     onClick={() => navigate('/login')}
                   >
                     Continue to Login
@@ -263,7 +263,7 @@ const VerifyEmail: React.FC = () => {
                     <Button
                       onClick={handleResendVerification}
                       disabled={isResending}
-                      className="w-full h-12 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-teal-500/25 transition-all duration-200"
+                      className="w-full h-12 bg-gradient-to-r from-primary-600 to-cyan-600 hover:from-primary-500 hover:to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                     >
                       {isResending ? (
                         <>

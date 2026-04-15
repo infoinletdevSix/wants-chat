@@ -702,13 +702,13 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
   const tabClass = (tab: TabType) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     activeTab === tab
-      ? 'bg-[#0D9488] text-white'
+      ? 'bg-[#6096B4] text-white'
       : isDark
       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -868,7 +868,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
                 onClick={() => toggleAmenity(amenity.id, isEditing)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${
                   (room.amenities || []).includes(amenity.id)
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -887,7 +887,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
             id={isEditing ? 'edit-active' : 'new-active'}
             checked={room.isActive ?? true}
             onChange={(e) => setRoom({ isActive: e.target.checked })}
-            className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+            className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
           />
           <label
             htmlFor={isEditing ? 'edit-active' : 'new-active'}
@@ -947,7 +947,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
                 </p>
               </div>
               <div className="text-right">
-                <p className="text-[#0D9488] font-medium">${selectedRoom.hourlyRate}/hour</p>
+                <p className="text-[#6096B4] font-medium">${selectedRoom.hourlyRate}/hour</p>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                   ${selectedRoom.dailyRate}/day
                 </p>
@@ -1078,7 +1078,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
               {t('tools.roomBooking.estimatedAmount', 'Estimated Amount')}
             </label>
             <div className={`px-4 py-2.5 rounded-xl ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
-              <span className="text-[#0D9488] font-bold text-lg">${estimatedAmount.toFixed(2)}</span>
+              <span className="text-[#6096B4] font-bold text-lg">${estimatedAmount.toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -1128,7 +1128,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
         </select>
         <button
           onClick={() => setShowRoomForm(true)}
-          className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2 transition-colors"
+          className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2 transition-colors"
         >
           <Plus className="w-5 h-5" />
           {t('tools.roomBooking.addRoom', 'Add Room')}
@@ -1153,7 +1153,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
           <button
             onClick={handleAddRoom}
             disabled={!newRoom.name}
-            className="mt-4 w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="mt-4 w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             <Plus className="w-5 h-5" />
             {t('tools.roomBooking.addRoom2', 'Add Room')}
@@ -1179,7 +1179,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
           <div className="flex gap-3 mt-4">
             <button
               onClick={handleUpdateRoom}
-              className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2"
+              className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2"
             >
               <Save className="w-5 h-5" />
               {t('tools.roomBooking.saveChanges', 'Save Changes')}
@@ -1246,7 +1246,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
-                <span className="text-[#0D9488] font-medium">
+                <span className="text-[#6096B4] font-medium">
                   ${room.hourlyRate}/hr | ${room.dailyRate}/day
                 </span>
               </div>
@@ -1327,7 +1327,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
         />
         <button
           onClick={() => setShowBookingForm(true)}
-          className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2 transition-colors"
+          className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2 transition-colors"
         >
           <Plus className="w-5 h-5" />
           {t('tools.roomBooking.newBooking', 'New Booking')}
@@ -1352,7 +1352,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
           <button
             onClick={handleAddBooking}
             disabled={!newBooking.roomId || !newBooking.guestName || !newBooking.date}
-            className="mt-4 w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="mt-4 w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             <Plus className="w-5 h-5" />
             {t('tools.roomBooking.createBooking', 'Create Booking')}
@@ -1378,7 +1378,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
           <div className="flex gap-3 mt-4">
             <button
               onClick={handleUpdateBooking}
-              className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2"
+              className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2"
             >
               <Save className="w-5 h-5" />
               {t('tools.roomBooking.saveChanges2', 'Save Changes')}
@@ -1435,7 +1435,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
                     </div>
                     <div className="flex items-center gap-2">
                       <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
-                      <span className="text-[#0D9488] font-medium">
+                      <span className="text-[#6096B4] font-medium">
                         ${booking.totalAmount.toFixed(2)}
                       </span>
                     </div>
@@ -1565,14 +1565,14 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
                   key={day}
                   className={`h-24 p-1 rounded-lg border ${
                     isToday
-                      ? 'border-[#0D9488] bg-[#0D9488]/10'
+                      ? 'border-[#6096B4] bg-[#6096B4]/10'
                       : isDark
                       ? 'border-gray-700 hover:bg-gray-700/50'
                       : 'border-gray-200 hover:bg-gray-50'
                   }`}
                 >
                   <div className={`text-sm font-medium mb-1 ${
-                    isToday ? 'text-[#0D9488]' : isDark ? 'text-gray-300' : 'text-gray-700'
+                    isToday ? 'text-[#6096B4]' : isDark ? 'text-gray-300' : 'text-gray-700'
                   }`}>
                     {day}
                   </div>
@@ -1615,8 +1615,8 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className={cardClass}>
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-              <Calendar className="w-6 h-6 text-[#0D9488]" />
+            <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+              <Calendar className="w-6 h-6 text-[#6096B4]" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.roomBooking.totalBookings', 'Total Bookings')}</p>
@@ -1726,7 +1726,7 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
                   <td className={`py-3 px-4 text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {totalHours.toFixed(1)}
                   </td>
-                  <td className="py-3 px-4 text-right text-[#0D9488] font-medium">
+                  <td className="py-3 px-4 text-right text-[#6096B4] font-medium">
                     ${revenue.toFixed(2)}
                   </td>
                 </tr>
@@ -1759,9 +1759,9 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.roomBooking.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.roomBooking.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -1769,8 +1769,8 @@ export const RoomBookingTool: React.FC<RoomBookingToolProps> = ({
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                <Building2 className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                <Building2 className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>

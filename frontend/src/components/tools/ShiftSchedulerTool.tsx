@@ -390,7 +390,7 @@ export const ShiftSchedulerTool = ({
   if (isLoading) {
     return (
       <div className={`flex items-center justify-center min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -401,7 +401,7 @@ export const ShiftSchedulerTool = ({
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Calendar className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -432,7 +432,7 @@ export const ShiftSchedulerTool = ({
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 font-medium transition-colors border-b-2 ${
                 activeTab === tab
-                  ? 'border-[#0D9488] text-[#0D9488]'
+                  ? 'border-[#6096B4] text-[#6096B4]'
                   : `border-transparent ${isDark ? 'text-gray-400 hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
               }`}
             >
@@ -451,14 +451,14 @@ export const ShiftSchedulerTool = ({
                 placeholder={activeTab === 'shifts' ? t('tools.shiftScheduler.searchShifts', 'Search shifts...') : t('tools.shiftScheduler.searchEmployees', 'Search employees...')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className={`w-full pl-10 pr-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full pl-10 pr-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             {activeTab === 'shifts' && (
               <select
                 value={filterDepartment}
                 onChange={(e) => setFilterDepartment(e.target.value)}
-                className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.shiftScheduler.allDepartments', 'All Departments')}</option>
                 {departments.map(dept => (
@@ -486,7 +486,7 @@ export const ShiftSchedulerTool = ({
           <div>
             <button
               onClick={() => setShowForm(!showForm)}
-              className="mb-6 flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="mb-6 flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <Plus className="w-5 h-5" />
               {t('tools.shiftScheduler.addShift', 'Add Shift')}
@@ -508,7 +508,7 @@ export const ShiftSchedulerTool = ({
                         department: emp?.department || '',
                       });
                     }}
-                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.shiftScheduler.selectEmployee', 'Select Employee')}</option>
                     {employees.map(emp => (
@@ -520,27 +520,27 @@ export const ShiftSchedulerTool = ({
                     type="date"
                     value={formData.date || ''}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
 
                   <input
                     type="time"
                     value={formData.startTime || '09:00'}
                     onChange={(e) => setFormData({ ...formData, startTime: e.target.value })}
-                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
 
                   <input
                     type="time"
                     value={formData.endTime || '17:00'}
                     onChange={(e) => setFormData({ ...formData, endTime: e.target.value })}
-                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
 
                   <select
                     value={formData.status || 'scheduled'}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
-                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="scheduled">{t('tools.shiftScheduler.scheduled', 'Scheduled')}</option>
                     <option value="confirmed">{t('tools.shiftScheduler.confirmed', 'Confirmed')}</option>
@@ -553,14 +553,14 @@ export const ShiftSchedulerTool = ({
                     placeholder={t('tools.shiftScheduler.notes', 'Notes')}
                     value={formData.notes || ''}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
                 <div className="flex gap-2">
                   <button
                     onClick={editingId ? handleUpdateShift : handleAddShift}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
                   >
                     <Check className="w-4 h-4" />
                     {editingId ? t('tools.shiftScheduler.update', 'Update') : t('tools.shiftScheduler.add', 'Add')}
@@ -662,7 +662,7 @@ export const ShiftSchedulerTool = ({
           <div>
             <button
               onClick={() => setEmployeeFormData({ department: 'General' })}
-              className="mb-6 flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="mb-6 flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <Plus className="w-5 h-5" />
               {t('tools.shiftScheduler.addEmployee', 'Add Employee')}
@@ -676,7 +676,7 @@ export const ShiftSchedulerTool = ({
                   placeholder={t('tools.shiftScheduler.fullName', 'Full Name')}
                   value={employeeFormData.name || ''}
                   onChange={(e) => setEmployeeFormData({ ...employeeFormData, name: e.target.value })}
-                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
 
                 <input
@@ -684,7 +684,7 @@ export const ShiftSchedulerTool = ({
                   placeholder={t('tools.shiftScheduler.email2', 'Email')}
                   value={employeeFormData.email || ''}
                   onChange={(e) => setEmployeeFormData({ ...employeeFormData, email: e.target.value })}
-                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
 
                 <input
@@ -692,7 +692,7 @@ export const ShiftSchedulerTool = ({
                   placeholder={t('tools.shiftScheduler.phone2', 'Phone')}
                   value={employeeFormData.phone || ''}
                   onChange={(e) => setEmployeeFormData({ ...employeeFormData, phone: e.target.value })}
-                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
 
                 <input
@@ -700,13 +700,13 @@ export const ShiftSchedulerTool = ({
                   placeholder={t('tools.shiftScheduler.position3', 'Position')}
                   value={employeeFormData.position || ''}
                   onChange={(e) => setEmployeeFormData({ ...employeeFormData, position: e.target.value })}
-                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
 
                 <select
                   value={employeeFormData.department || ''}
                   onChange={(e) => setEmployeeFormData({ ...employeeFormData, department: e.target.value })}
-                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`px-4 py-2 rounded-lg border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.shiftScheduler.selectDepartment', 'Select Department')}</option>
                   {departments.map(dept => (
@@ -718,7 +718,7 @@ export const ShiftSchedulerTool = ({
 
               <button
                 onClick={handleAddEmployee}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
               >
                 <Check className="w-4 h-4" />
                 {t('tools.shiftScheduler.addEmployee2', 'Add Employee')}
@@ -802,7 +802,7 @@ export const ShiftSchedulerTool = ({
                     </p>
                     <div className="text-xs space-y-1 mt-1">
                       {dayShifts.slice(0, 2).map(shift => (
-                        <div key={shift.id} className="bg-[#0D9488] text-white p-1 rounded text-xs truncate">
+                        <div key={shift.id} className="bg-[#6096B4] text-white p-1 rounded text-xs truncate">
                           {shift.employeeName}
                         </div>
                       ))}

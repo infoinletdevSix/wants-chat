@@ -81,7 +81,7 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
             isOpen
               ? theme === 'dark'
                 ? 'bg-[#2a2a2a] text-white'
-                : 'bg-[#0D9488]/10 text-slate-900'
+                : 'bg-[#6096B4]/10 text-slate-900'
               : theme === 'dark'
                 ? 'hover:bg-[#2a2a2a] text-slate-300'
                 : 'hover:bg-slate-100 text-slate-700'
@@ -90,7 +90,7 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
           <div className="flex items-center gap-2.5 min-w-0 flex-1">
             {currentOrg ? (
               <>
-                <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-[#0D9488] to-[#0F766E]">
+                <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-[#6096B4] to-[#4C7F98]">
                   <Building2 className="w-4 h-4 text-white" />
                 </div>
                 <div className="text-left min-w-0 flex-1">
@@ -175,8 +175,8 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
                 "w-full px-4 py-3 flex items-center gap-3 transition-all duration-200",
                 !currentOrgId
                   ? theme === 'dark'
-                    ? 'bg-[#0D9488]/10'
-                    : 'bg-[#0D9488]/5'
+                    ? 'bg-[#6096B4]/10'
+                    : 'bg-[#6096B4]/5'
                   : theme === 'dark'
                     ? 'hover:bg-[#2a2a2a]'
                     : 'hover:bg-slate-50'
@@ -206,7 +206,7 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
                 </p>
               </div>
               {!currentOrgId && (
-                <Check className="w-4 h-4 text-[#0D9488]" />
+                <Check className="w-4 h-4 text-[#6096B4]" />
               )}
             </button>
 
@@ -247,14 +247,14 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
                       "w-full px-4 py-3 flex items-center gap-3 transition-all duration-200",
                       currentOrgId === org.id
                         ? theme === 'dark'
-                          ? 'bg-[#0D9488]/10'
-                          : 'bg-[#0D9488]/5'
+                          ? 'bg-[#6096B4]/10'
+                          : 'bg-[#6096B4]/5'
                         : theme === 'dark'
                           ? 'hover:bg-[#2a2a2a]'
                           : 'hover:bg-slate-50'
                     )}
                   >
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#0D9488] to-[#0F766E]">
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#6096B4] to-[#4C7F98]">
                       <Building2 className="w-4 h-4 text-white" />
                     </div>
                     <div className="flex-1 text-left min-w-0">
@@ -292,7 +292,7 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
                       </div>
                     </div>
                     {currentOrgId === org.id && (
-                      <Check className="w-4 h-4 text-[#0D9488] flex-shrink-0" />
+                      <Check className="w-4 h-4 text-[#6096B4] flex-shrink-0" />
                     )}
                   </button>
                 ))}
@@ -314,13 +314,13 @@ export const OrganizationDropdown: React.FC<OrganizationDropdownProps> = ({
               className={cn(
                 "w-full px-4 py-3 flex items-center gap-3 transition-all duration-200",
                 theme === 'dark'
-                  ? 'hover:bg-[#0D9488]/10 text-[#0D9488]'
-                  : 'hover:bg-[#0D9488]/5 text-[#0D9488]'
+                  ? 'hover:bg-[#6096B4]/10 text-[#6096B4]'
+                  : 'hover:bg-[#6096B4]/5 text-[#6096B4]'
               )}
             >
               <div className={cn(
                 "w-9 h-9 rounded-lg flex items-center justify-center border-2 border-dashed",
-                theme === 'dark' ? 'border-[#0D9488]/50' : 'border-[#0D9488]/40'
+                theme === 'dark' ? 'border-[#6096B4]/50' : 'border-[#6096B4]/40'
               )}>
                 <Plus className="w-4 h-4" />
               </div>

@@ -9,14 +9,14 @@ import * as organizationApi from '../../services/organizationApi'
 const floatingIcons = [
   { Icon: Key, color: 'text-yellow-400', delay: 0, x: '15%', y: '25%' },
   { Icon: Shield, color: 'text-blue-400', delay: 0.5, x: '75%', y: '20%' },
-  { Icon: Lock, color: 'text-teal-400', delay: 1, x: '20%', y: '70%' },
+  { Icon: Lock, color: 'text-primary-400', delay: 1, x: '20%', y: '70%' },
   { Icon: Sparkles, color: 'text-rose-400', delay: 1.5, x: '80%', y: '75%' },
 ]
 
 const BackgroundAnimation = () => (
-  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
     <motion.div
-      className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-500/30 rounded-full blur-[120px]"
+      className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/30 rounded-full blur-[120px]"
       animate={{
         x: [0, 50, 0],
         y: [0, 30, 0],
@@ -225,9 +225,9 @@ export default function OAuthCallback() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
-              className="w-20 h-20 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-teal-500/30"
+              className="w-20 h-20 bg-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary-500/30"
             >
-              <Loader2 className="h-10 w-10 text-teal-400 animate-spin" />
+              <Loader2 className="h-10 w-10 text-primary-400 animate-spin" />
             </motion.div>
 
             <h2 className="text-2xl font-bold text-white mb-2">Completing Sign In...</h2>

@@ -180,7 +180,7 @@ export const CountdownTimerTool = ({
   return (
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-[#0D9488] rounded-lg">
+        <div className="p-3 bg-[#6096B4] rounded-lg">
           <Timer className="w-6 h-6 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -193,10 +193,10 @@ export const CountdownTimerTool = ({
         <div className={`text-center py-12 rounded-lg relative overflow-hidden ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
           {/* Progress Bar */}
           {totalSeconds > 0 && (
-            <div className="absolute top-0 left-0 h-1 bg-[#0D9488] transition-all duration-1000" style={{ width: `${getProgress()}%` }} />
+            <div className="absolute top-0 left-0 h-1 bg-[#6096B4] transition-all duration-1000" style={{ width: `${getProgress()}%` }} />
           )}
 
-          <div className={`text-6xl font-mono font-bold ${isComplete ? 'text-[#0D9488] animate-pulse' : theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+          <div className={`text-6xl font-mono font-bold ${isComplete ? 'text-[#6096B4] animate-pulse' : theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             {formatTime(remainingSeconds)}
           </div>
           <div className={`text-sm mt-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -219,7 +219,7 @@ export const CountdownTimerTool = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <div>
@@ -234,7 +234,7 @@ export const CountdownTimerTool = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <div>
@@ -249,7 +249,7 @@ export const CountdownTimerTool = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
           </div>
@@ -279,7 +279,7 @@ export const CountdownTimerTool = ({
           {!isRunning ? (
             <button
               onClick={handleStart}
-              className="flex items-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <Play className="w-5 h-5" />
               {t('tools.countdownTimer.start', 'Start')}

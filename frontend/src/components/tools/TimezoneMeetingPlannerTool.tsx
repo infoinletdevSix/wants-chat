@@ -401,7 +401,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
     return (
       <div className={`max-w-6xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -412,7 +412,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Globe className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -453,9 +453,9 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
 
       <div className="space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.timezoneMeetingPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.timezoneMeetingPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -476,7 +476,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                 isDark
                   ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <select
               value={newParticipantTimezone}
@@ -485,7 +485,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                 isDark
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             >
               {TIMEZONES.map((tz) => (
                 <option key={tz.value} value={tz.value}>
@@ -496,7 +496,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
             <button
               onClick={addParticipant}
               disabled={!newParticipantName.trim()}
-              className="px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors flex items-center gap-2"
             >
               <Plus className="w-5 h-5" />
               {t('tools.timezoneMeetingPlanner.add', 'Add')}
@@ -550,7 +550,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                       <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                         {getTimezoneOffset(participant.timezone)}
                       </div>
-                      <div className={`text-lg font-mono font-bold mt-2 ${isDark ? t('tools.timezoneMeetingPlanner.text0d9488', 'text-[#0D9488]') : t('tools.timezoneMeetingPlanner.text0d94882', 'text-[#0D9488]')}`}>
+                      <div className={`text-lg font-mono font-bold mt-2 ${isDark ? t('tools.timezoneMeetingPlanner.text0d9488', 'text-[#6096B4]') : t('tools.timezoneMeetingPlanner.text0d94882', 'text-[#6096B4]')}`}>
                         {localTime}
                       </div>
                     </div>
@@ -581,7 +581,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                     isDark
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -631,7 +631,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                         onClick={() => setSelectedHour(slot.hour)}
                         className={`cursor-pointer transition-colors ${
                           isSelected
-                            ? 'ring-2 ring-[#0D9488] ring-inset'
+                            ? 'ring-2 ring-[#6096B4] ring-inset'
                             : ''
                         } ${
                           isDark ? 'hover:bg-gray-600/50' : 'hover:bg-gray-100'
@@ -691,9 +691,9 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
 
         {/* Best Meeting Times */}
         {bestSlots.length > 0 && (
-          <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-700' : t('tools.timezoneMeetingPlanner.bg0d948810', 'bg-[#0D9488]/10')}`}>
+          <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-700' : t('tools.timezoneMeetingPlanner.bg0d948810', 'bg-[#6096B4]/10')}`}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Sparkles className="w-5 h-5 text-[#0D9488]" />
+              <Sparkles className="w-5 h-5 text-[#6096B4]" />
               {t('tools.timezoneMeetingPlanner.bestMeetingTimesAllIn', 'Best Meeting Times (All in Working Hours)')}
             </h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -703,7 +703,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                   onClick={() => setSelectedHour(slot.hour)}
                   className={`p-4 rounded-lg text-left transition-colors ${
                     selectedHour === slot.hour
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-600 text-white hover:bg-gray-500'
                       : 'bg-white border border-gray-200 hover:bg-gray-50 text-gray-900'
@@ -739,7 +739,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                   {t('tools.timezoneMeetingPlanner.selectedTimeUtc', 'Selected Time (UTC)')}
                 </label>
                 <div className={`px-4 py-3 rounded-lg font-mono text-xl font-bold ${
-                  isDark ? t('tools.timezoneMeetingPlanner.bgGray600Text0d9488', 'bg-gray-600 text-[#0D9488]') : t('tools.timezoneMeetingPlanner.bgWhiteBorderBorderGray', 'bg-white border border-gray-200 text-[#0D9488]')
+                  isDark ? t('tools.timezoneMeetingPlanner.bgGray600Text0d9488', 'bg-gray-600 text-[#6096B4]') : t('tools.timezoneMeetingPlanner.bgWhiteBorderBorderGray', 'bg-white border border-gray-200 text-[#6096B4]')
                 }`}>
                   {selectedHour.toString().padStart(2, '0')}:00 UTC
                 </div>
@@ -755,7 +755,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
                     isDark
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {DURATION_OPTIONS.map((opt) => (
                     <option key={opt.value} value={opt.value}>
@@ -806,7 +806,7 @@ export const TimezoneMeetingPlannerTool: React.FC<TimezoneMeetingPlannerToolProp
               onClick={copyToClipboard}
               className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
                 copied
-                  ? 'bg-green-500 text-white' : t('tools.timezoneMeetingPlanner.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                  ? 'bg-green-500 text-white' : t('tools.timezoneMeetingPlanner.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
               }`}
             >
               {copied ? (

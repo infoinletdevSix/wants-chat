@@ -34,7 +34,7 @@ const SimpleMoodTracker: React.FC<SimpleMoodTrackerProps> = ({ title, value, onC
             onClick={() => onChange(mood.value)}
             className={`flex flex-col items-center gap-2 p-3 rounded-lg transition-all duration-200 ${
               value === mood.value
-                ? 'bg-teal-500/10 scale-110 shadow-lg'
+                ? 'bg-primary-500/10 scale-110 shadow-lg'
                 : 'hover:bg-secondary/50 hover:scale-105'
             }`}
           >
@@ -46,7 +46,7 @@ const SimpleMoodTracker: React.FC<SimpleMoodTrackerProps> = ({ title, value, onC
               }`}
             />
             <span className={`text-xs font-medium ${
-              value === mood.value ? 'text-teal-400' : 'text-muted-foreground'
+              value === mood.value ? 'text-primary-400' : 'text-muted-foreground'
             }`}>
               {mood.label}
             </span>

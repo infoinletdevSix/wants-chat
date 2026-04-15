@@ -162,10 +162,10 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Droplets className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Droplets className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.wateringSchedule.wateringSchedule', 'Watering Schedule')}</h3>
@@ -183,7 +183,7 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
               onClick={() => setCategoryFilter(cat)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 categoryFilter === cat
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -197,7 +197,7 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
         {/* Plant Selection */}
         <div className="space-y-3">
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            <Leaf className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Leaf className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.wateringSchedule.selectYourPlants', 'Select Your Plants')}
           </label>
           <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto p-2">
@@ -207,7 +207,7 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
                 onClick={() => togglePlant(plant.name)}
                 className={`px-3 py-2 rounded-lg text-sm transition-colors ${
                   selectedPlants.includes(plant.name)
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -227,13 +227,13 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              <ThermometerSun className="w-4 h-4 inline mr-2 text-teal-500" />
+              <ThermometerSun className="w-4 h-4 inline mr-2 text-primary-500" />
               {t('tools.wateringSchedule.weatherConditions', 'Weather Conditions')}
             </label>
             <select
               value={weatherCondition}
               onChange={(e) => setWeatherCondition(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
             >
               {weatherConditions.map(w => (
                 <option key={w.name} value={w.name}>{w.name}</option>
@@ -251,7 +251,7 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
                 onClick={() => setContainerGrowing(false)}
                 className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
                   !containerGrowing
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -263,7 +263,7 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
                 onClick={() => setContainerGrowing(true)}
                 className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
                   containerGrowing
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -279,7 +279,7 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
         {selectedPlantsData.length > 0 && (
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Clock className="w-4 h-4 text-teal-500" />
+              <Clock className="w-4 h-4 text-primary-500" />
               {t('tools.wateringSchedule.yourPlantsWateringNeeds', 'Your Plants\' Watering Needs')}
             </h4>
             <div className="space-y-3">
@@ -326,9 +326,9 @@ export const WateringScheduleTool: React.FC<WateringScheduleToolProps> = ({ uiCo
 
         {/* 2-Week Schedule */}
         {generateSchedule.length > 0 && (
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <Calendar className="w-4 h-4 text-teal-500" />
+              <Calendar className="w-4 h-4 text-primary-500" />
               {t('tools.wateringSchedule.your2WeekWateringSchedule', 'Your 2-Week Watering Schedule')}
             </h4>
             <div className="space-y-2">

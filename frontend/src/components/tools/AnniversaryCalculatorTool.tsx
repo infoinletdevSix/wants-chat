@@ -153,10 +153,10 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Heart className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Heart className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.anniversaryCalculator.anniversaryCalculator', 'Anniversary Calculator')}</h3>
@@ -166,9 +166,9 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.anniversaryCalculator.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -233,8 +233,8 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
 
             {/* Time Together Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'}`}>
-                <div className="text-3xl font-bold text-teal-500">{calculations.years}</div>
+              <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+                <div className="text-3xl font-bold text-primary-500">{calculations.years}</div>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.anniversaryCalculator.years', 'Years')}</div>
               </div>
               <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-blue-900/20' : 'bg-blue-50'}`}>
@@ -254,13 +254,13 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
             {/* Detailed Time */}
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
               <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <Clock className="w-4 h-4 text-teal-500" />
+                <Clock className="w-4 h-4 text-primary-500" />
                 {t('tools.anniversaryCalculator.timeTogether', 'Time Together')}
               </h4>
               <div className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                <span className="font-bold text-teal-500">{calculations.years}</span> years,{' '}
-                <span className="font-bold text-teal-500">{calculations.months}</span> months, and{' '}
-                <span className="font-bold text-teal-500">{calculations.days}</span> days
+                <span className="font-bold text-primary-500">{calculations.years}</span> years,{' '}
+                <span className="font-bold text-primary-500">{calculations.months}</span> months, and{' '}
+                <span className="font-bold text-primary-500">{calculations.days}</span> days
               </div>
               <div className={`text-sm mt-2 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                 That's {calculations.totalHours.toLocaleString()} hours of love!
@@ -271,7 +271,7 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
             {!calculations.isToday && (
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Cake className="w-4 h-4 text-teal-500" />
+                  <Cake className="w-4 h-4 text-primary-500" />
                   {t('tools.anniversaryCalculator.nextAnniversary', 'Next Anniversary')}
                 </h4>
                 <div className="flex flex-wrap items-center gap-4">
@@ -283,9 +283,9 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
                       {calculations.nextAnniversaryYears}{calculations.nextAnniversaryYears === 1 ? 'st' : calculations.nextAnniversaryYears === 2 ? 'nd' : calculations.nextAnniversaryYears === 3 ? 'rd' : 'th'} Anniversary
                     </div>
                   </div>
-                  <div className={`px-4 py-2 rounded-lg ${isDark ? 'bg-teal-900/30' : 'bg-teal-100'}`}>
-                    <span className="text-2xl font-bold text-teal-500">{calculations.daysUntilNext}</span>
-                    <span className={`text-sm ml-1 ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{t('tools.anniversaryCalculator.daysToGo', 'days to go')}</span>
+                  <div className={`px-4 py-2 rounded-lg ${isDark ? 'bg-primary-900/30' : 'bg-primary-100'}`}>
+                    <span className="text-2xl font-bold text-primary-500">{calculations.daysUntilNext}</span>
+                    <span className={`text-sm ml-1 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{t('tools.anniversaryCalculator.daysToGo', 'days to go')}</span>
                   </div>
                 </div>
               </div>
@@ -293,27 +293,27 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
 
             {/* Current Anniversary Gift Ideas */}
             {calculations.currentMilestone && (
-              <div className={`p-4 rounded-lg border ${isDark ? 'bg-gray-800 border-teal-500/30' : 'bg-teal-50 border-teal-200'}`}>
+              <div className={`p-4 rounded-lg border ${isDark ? 'bg-gray-800 border-primary-500/30' : 'bg-primary-50 border-primary-200'}`}>
                 <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Gift className="w-4 h-4 text-teal-500" />
+                  <Gift className="w-4 h-4 text-primary-500" />
                   {calculations.years === calculations.currentMilestone.years ? 'This Year\'s' : `${calculations.currentMilestone.years}th Anniversary`} Gift Ideas
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div>
                     <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.anniversaryCalculator.traditional', 'Traditional')}</div>
-                    <div className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{calculations.currentMilestone.traditional}</div>
+                    <div className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{calculations.currentMilestone.traditional}</div>
                   </div>
                   <div>
                     <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.anniversaryCalculator.modern', 'Modern')}</div>
-                    <div className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{calculations.currentMilestone.modern}</div>
+                    <div className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{calculations.currentMilestone.modern}</div>
                   </div>
                   <div>
                     <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.anniversaryCalculator.gemstone', 'Gemstone')}</div>
-                    <div className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{calculations.currentMilestone.gemstone}</div>
+                    <div className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{calculations.currentMilestone.gemstone}</div>
                   </div>
                   <div>
                     <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.anniversaryCalculator.flower', 'Flower')}</div>
-                    <div className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{calculations.currentMilestone.flower}</div>
+                    <div className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{calculations.currentMilestone.flower}</div>
                   </div>
                 </div>
               </div>
@@ -323,12 +323,12 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
             {calculations.nextMilestone && (
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Star className="w-4 h-4 text-teal-500" />
+                  <Star className="w-4 h-4 text-primary-500" />
                   Next Major Milestone: {calculations.nextMilestone.years}th Anniversary
                 </h4>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                   {calculations.yearsToNextMilestone} year{calculations.yearsToNextMilestone !== 1 ? 's' : ''} until your{' '}
-                  <span className="font-medium text-teal-500">{calculations.nextMilestone.traditional}</span> anniversary!
+                  <span className="font-medium text-primary-500">{calculations.nextMilestone.traditional}</span> anniversary!
                 </div>
               </div>
             )}
@@ -336,7 +336,7 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
             {/* Wedding Details */}
             <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
               <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <Info className="w-4 h-4 text-teal-500" />
+                <Info className="w-4 h-4 text-primary-500" />
                 {t('tools.anniversaryCalculator.weddingDetails', 'Wedding Details')}
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
@@ -358,7 +358,7 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
             </div>
 
             {/* Milestone Reference */}
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800/50' : 'bg-teal-50/50'}`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800/50' : 'bg-primary-50/50'}`}>
               <h5 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.anniversaryCalculator.anniversaryMilestonesReference', 'Anniversary Milestones Reference')}</h5>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
                 {milestones.slice(0, 10).map((m) => (
@@ -366,7 +366,7 @@ export const AnniversaryCalculatorTool: React.FC<AnniversaryCalculatorToolProps>
                     key={m.years}
                     className={`p-2 rounded ${
                       calculations.years >= m.years
-                        ? isDark ? 'bg-teal-900/30 text-teal-400' : 'bg-teal-100 text-teal-700'
+                        ? isDark ? 'bg-primary-900/30 text-primary-400' : 'bg-primary-100 text-primary-700'
                         : isDark ? 'bg-gray-700 text-gray-400' : 'bg-white text-gray-600'
                     }`}
                   >

@@ -1169,7 +1169,7 @@ ${progress.map(w => `
       }`}
     >
       <div className="flex items-center gap-3">
-        <Icon className="w-5 h-5 text-[#0D9488]" />
+        <Icon className="w-5 h-5 text-[#6096B4]" />
         <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{title}</span>
         {count !== undefined && (
           <span className={`text-xs px-2 py-0.5 rounded-full ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'}`}>
@@ -1189,15 +1189,15 @@ ${progress.map(w => `
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const selectClass = `px-3 py-2 rounded-lg border ${
     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const tabClass = (isActive: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     isActive
-      ? 'bg-[#0D9488] text-white'
+      ? 'bg-[#6096B4] text-white'
       : theme === 'dark'
         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1209,7 +1209,7 @@ ${progress.map(w => `
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="max-w-7xl mx-auto flex items-center justify-center h-64">
           <div className="flex flex-col items-center gap-4">
-            <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+            <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
             <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>{t('tools.upholstery.loadingShopData', 'Loading shop data...')}</p>
           </div>
         </div>
@@ -1225,7 +1225,7 @@ ${progress.map(w => `
           <CardHeader>
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Armchair className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -1267,16 +1267,16 @@ ${progress.map(w => `
 
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.upholstery.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.upholstery.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
         {/* Dashboard Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
-            <div className="text-2xl font-bold text-[#0D9488]">{dashboardStats.activeProjects}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{dashboardStats.activeProjects}</div>
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.upholstery.activeProjects', 'Active Projects')}</div>
           </div>
           <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
@@ -1352,7 +1352,7 @@ ${progress.map(w => `
                     <button
                       onClick={() => selectedCustomerId && addFurnitureIntake(selectedCustomerId)}
                       disabled={!selectedCustomerId}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 text-white rounded-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                       {t('tools.upholstery.newProject', 'New Project')}
@@ -1381,7 +1381,7 @@ ${progress.map(w => `
                           key={project.id}
                           className={`p-4 rounded-lg border ${
                             theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'
-                          } ${selectedProjectId === project.id ? 'ring-2 ring-[#0D9488]' : ''}`}
+                          } ${selectedProjectId === project.id ? 'ring-2 ring-[#6096B4]' : ''}`}
                         >
                           <div className="flex items-start justify-between mb-3">
                             <div>
@@ -1580,7 +1580,7 @@ ${progress.map(w => `
                                   </h4>
                                   <button
                                     onClick={() => addFabricSelection(project.id)}
-                                    className="flex items-center gap-1 text-sm text-[#0D9488] hover:underline"
+                                    className="flex items-center gap-1 text-sm text-[#6096B4] hover:underline"
                                   >
                                     <Plus className="w-4 h-4" />Add Fabric
                                   </button>
@@ -1593,7 +1593,7 @@ ${progress.map(w => `
                                           type="checkbox"
                                           checked={fabric.isCOM}
                                           onChange={(e) => updateFabricSelection(fabric.id, 'isCOM', e.target.checked)}
-                                          className="rounded text-[#0D9488]"
+                                          className="rounded text-[#6096B4]"
                                         />
                                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                                           {t('tools.upholstery.comCustomerOwnMaterial', 'COM (Customer Own Material)')}
@@ -1604,7 +1604,7 @@ ${progress.map(w => `
                                               type="checkbox"
                                               checked={fabric.comCustomerProvided}
                                               onChange={(e) => updateFabricSelection(fabric.id, 'comCustomerProvided', e.target.checked)}
-                                              className="rounded text-[#0D9488]"
+                                              className="rounded text-[#6096B4]"
                                             />
                                             <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>{t('tools.upholstery.received', 'Received')}</span>
                                           </label>
@@ -1667,7 +1667,7 @@ ${progress.map(w => `
                                   {!estimate && (
                                     <button
                                       onClick={() => createEstimate(project.id)}
-                                      className="flex items-center gap-1 text-sm bg-[#0D9488] text-white px-3 py-1 rounded-lg hover:bg-[#0F766E]"
+                                      className="flex items-center gap-1 text-sm bg-[#6096B4] text-white px-3 py-1 rounded-lg hover:bg-[#4C7F98]"
                                     >
                                       <Plus className="w-4 h-4" />Create Estimate
                                     </button>
@@ -1679,25 +1679,25 @@ ${progress.map(w => `
                                     <div className="flex gap-2 flex-wrap">
                                       <button
                                         onClick={() => addEstimateLineItem(estimate.id, 'labor')}
-                                        className="text-xs px-2 py-1 border border-[#0D9488] text-[#0D9488] rounded hover:bg-[#0D9488]/10"
+                                        className="text-xs px-2 py-1 border border-[#6096B4] text-[#6096B4] rounded hover:bg-[#6096B4]/10"
                                       >
                                         {t('tools.upholstery.labor', '+ Labor')}
                                       </button>
                                       <button
                                         onClick={() => addEstimateLineItem(estimate.id, 'materials')}
-                                        className="text-xs px-2 py-1 border border-[#0D9488] text-[#0D9488] rounded hover:bg-[#0D9488]/10"
+                                        className="text-xs px-2 py-1 border border-[#6096B4] text-[#6096B4] rounded hover:bg-[#6096B4]/10"
                                       >
                                         {t('tools.upholstery.materials', '+ Materials')}
                                       </button>
                                       <button
                                         onClick={() => addEstimateLineItem(estimate.id, 'fabric')}
-                                        className="text-xs px-2 py-1 border border-[#0D9488] text-[#0D9488] rounded hover:bg-[#0D9488]/10"
+                                        className="text-xs px-2 py-1 border border-[#6096B4] text-[#6096B4] rounded hover:bg-[#6096B4]/10"
                                       >
                                         {t('tools.upholstery.fabric', '+ Fabric')}
                                       </button>
                                       <button
                                         onClick={() => addEstimateLineItem(estimate.id, 'other')}
-                                        className="text-xs px-2 py-1 border border-[#0D9488] text-[#0D9488] rounded hover:bg-[#0D9488]/10"
+                                        className="text-xs px-2 py-1 border border-[#6096B4] text-[#6096B4] rounded hover:bg-[#6096B4]/10"
                                       >
                                         {t('tools.upholstery.other', '+ Other')}
                                       </button>
@@ -1791,8 +1791,8 @@ ${progress.map(w => `
                                             </div>
                                           )}
                                           <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-600">
-                                            <span className="text-[#0D9488]">{t('tools.upholstery.total', 'Total:')}</span>
-                                            <span className="text-[#0D9488]">{formatCurrency(estimateTotals.total)}</span>
+                                            <span className="text-[#6096B4]">{t('tools.upholstery.total', 'Total:')}</span>
+                                            <span className="text-[#6096B4]">{formatCurrency(estimateTotals.total)}</span>
                                           </div>
                                         </div>
                                       </div>
@@ -1822,7 +1822,7 @@ ${progress.map(w => `
                                   </h4>
                                   <button
                                     onClick={() => addWorkProgress(project.id)}
-                                    className="flex items-center gap-1 text-sm text-[#0D9488] hover:underline"
+                                    className="flex items-center gap-1 text-sm text-[#6096B4] hover:underline"
                                   >
                                     <Plus className="w-4 h-4" />Add Progress
                                   </button>
@@ -1870,7 +1870,7 @@ ${progress.map(w => `
                                   </h4>
                                   <button
                                     onClick={() => addSubcontractorAssignment(project.id)}
-                                    className="flex items-center gap-1 text-sm text-[#0D9488] hover:underline"
+                                    className="flex items-center gap-1 text-sm text-[#6096B4] hover:underline"
                                   >
                                     <Plus className="w-4 h-4" />Assign
                                   </button>
@@ -1930,7 +1930,7 @@ ${progress.map(w => `
                                   </h4>
                                   <button
                                     onClick={() => addPayment(project.id)}
-                                    className="flex items-center gap-1 text-sm text-[#0D9488] hover:underline"
+                                    className="flex items-center gap-1 text-sm text-[#6096B4] hover:underline"
                                   >
                                     <Plus className="w-4 h-4" />Add Payment
                                   </button>
@@ -1981,7 +1981,7 @@ ${progress.map(w => `
                                   </div>
                                 ))}
                                 <div className={`mt-2 text-right text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                                  Total Paid: <span className="font-semibold text-[#0D9488]">{formatCurrency(totalPaid)}</span>
+                                  Total Paid: <span className="font-semibold text-[#6096B4]">{formatCurrency(totalPaid)}</span>
                                   {estimateTotals && (
                                     <span className="ml-4">
                                       Balance: <span className={`font-semibold ${estimateTotals.total - totalPaid > 0 ? 'text-orange-500' : 'text-green-500'}`}>
@@ -1996,7 +1996,7 @@ ${progress.map(w => `
                               <div className="flex gap-2 justify-end">
                                 <button
                                   onClick={() => exportProjectData(project.id)}
-                                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                                 >
                                   <Download className="w-4 h-4" />
                                   {t('tools.upholstery.exportReport', 'Export Report')}
@@ -2024,7 +2024,7 @@ ${progress.map(w => `
                 </h3>
                 <button
                   onClick={addCustomer}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.upholstery.addCustomer', 'Add Customer')}
@@ -2164,7 +2164,7 @@ ${progress.map(w => `
                     ))}
                     <button
                       onClick={addFabricInventoryItem}
-                      className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                      className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                     >
                       <Plus className="w-4 h-4" />Add Fabric to Inventory
                     </button>
@@ -2208,7 +2208,7 @@ ${progress.map(w => `
                     ))}
                     <button
                       onClick={addFoamInventoryItem}
-                      className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#0D9488] text-[#0D9488] rounded-lg hover:bg-[#0D9488]/10 transition-colors w-full justify-center"
+                      className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-[#6096B4] text-[#6096B4] rounded-lg hover:bg-[#6096B4]/10 transition-colors w-full justify-center"
                     >
                       <Plus className="w-4 h-4" />Add Foam/Padding
                     </button>
@@ -2338,7 +2338,7 @@ ${progress.map(w => `
                 </h3>
                 <button
                   onClick={addSubcontractor}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-4 h-4" />Add Subcontractor
                 </button>

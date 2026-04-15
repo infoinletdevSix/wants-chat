@@ -363,8 +363,8 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
   return (
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-          <HelpCircle className="w-6 h-6 text-[#0D9488]" />
+        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+          <HelpCircle className="w-6 h-6 text-[#6096B4]" />
         </div>
         <div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -399,7 +399,7 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
           />
         </div>
 
@@ -416,7 +416,7 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             >
               {audiences.map((audience) => (
                 <option key={audience.value} value={audience.value}>
@@ -438,7 +438,7 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
             >
               {faqCounts.map((count) => (
                 <option key={count} value={count}>
@@ -456,7 +456,7 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
               type="checkbox"
               checked={includeCategories}
               onChange={(e) => setIncludeCategories(e.target.checked)}
-              className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+              className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
               {t('tools.faqGenerator.includeCategories', 'Include categories')}
@@ -483,7 +483,7 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
           <button
             onClick={handleGenerate}
             disabled={isGenerating || !topic.trim()}
-            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#0D9488]/20"
+            className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[#6096B4]/20"
           >
             {isGenerating ? (
               <>
@@ -535,7 +535,7 @@ Make the questions relevant to ${targetAudience} and ensure answers are informat
                   disabled={isSaving}
                   className={`flex items-center gap-2 px-3 py-1 rounded-lg transition-colors text-sm ${
                     isSaving
-                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.faqGenerator.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+                      ? 'bg-gray-400 text-white cursor-not-allowed' : t('tools.faqGenerator.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
                   }`}
                 >
                   {isSaving ? (

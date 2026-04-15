@@ -520,7 +520,7 @@ const AddMedicalFacility: React.FC = () => {
             </Button>
             <Button
               type="submit"
-              className="min-w-[120px] bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="min-w-[120px] bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               disabled={createFacilityMutation.loading || updateFacilityMutation.loading || facilityLoading}
             >
               <Save className="h-4 w-4 mr-2" />

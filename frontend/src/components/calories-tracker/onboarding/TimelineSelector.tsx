@@ -155,7 +155,7 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
             className={`
               p-6 cursor-pointer transition-all duration-300 border-2
               ${selectedTimeline === option.value
-                ? 'border-teal-400 bg-gradient-to-br from-teal-500/30 to-cyan-500/30 shadow-xl shadow-teal-500/30 scale-[1.02]'
+                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-cyan-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
                 : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
               }
             `}
@@ -166,17 +166,17 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
                 <div className="flex items-center gap-3">
                   <div className={`p-3 rounded-lg ${
                     selectedTimeline === option.value
-                      ? 'bg-teal-500/40'
+                      ? 'bg-primary-500/40'
                       : 'bg-white/10'
                   }`}>
                     <Icon
                       path={option.icon}
                       size={1.2}
-                      className={selectedTimeline === option.value ? 'text-teal-300' : option.iconColor}
+                      className={selectedTimeline === option.value ? 'text-primary-300' : option.iconColor}
                     />
                   </div>
                   <div>
-                    <h3 className={`text-lg font-semibold ${selectedTimeline === option.value ? 'text-teal-300' : 'text-white'}`}>
+                    <h3 className={`text-lg font-semibold ${selectedTimeline === option.value ? 'text-primary-300' : 'text-white'}`}>
                       {option.title}
                     </h3>
                     <p className={`text-sm font-medium ${selectedTimeline === option.value ? 'text-white/80' : 'text-white/60'}`}>
@@ -203,8 +203,8 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
 
               {selectedTimeline === option.value && (
                 <div className="flex items-center gap-2 pt-2">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-                  <span className="text-xs font-medium text-teal-400">Selected</span>
+                  <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+                  <span className="text-xs font-medium text-primary-400">Selected</span>
                 </div>
               )}
             </div>
@@ -230,9 +230,9 @@ const TimelineSelector: React.FC<TimelineSelectorProps> = ({
         </div>
       )}
 
-      <div className="bg-teal-500/10 p-4 rounded-lg border border-teal-500/20">
+      <div className="bg-primary-500/10 p-4 rounded-lg border border-primary-500/20">
         <p className="text-sm text-white/80">
-          <strong className="text-teal-400">Remember:</strong> Consistency is more important than speed. Choose a timeline
+          <strong className="text-primary-400">Remember:</strong> Consistency is more important than speed. Choose a timeline
           you can stick to long-term for the best results.
         </p>
       </div>

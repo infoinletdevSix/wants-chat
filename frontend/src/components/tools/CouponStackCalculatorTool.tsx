@@ -123,10 +123,10 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Ticket className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Ticket className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.couponStackCalculator.couponStackCalculator', 'Coupon Stack Calculator')}</h3>
@@ -137,9 +137,9 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.couponStackCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.couponStackCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -175,7 +175,7 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
             <div key={coupon.id}>
               <div className={`p-4 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'}`}>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold bg-teal-500 text-white`}>
+                  <span className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold bg-primary-500 text-white`}>
                     {index + 1}
                   </span>
                   <input
@@ -221,7 +221,7 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
                         onClick={() => updateCoupon(coupon.id, 'type', 'percent')}
                         className={`flex-1 px-3 py-2 flex items-center justify-center gap-1 text-sm transition-colors ${
                           coupon.type === 'percent'
-                            ? 'bg-teal-500 text-white'
+                            ? 'bg-primary-500 text-white'
                             : isDark ? 'bg-gray-700 text-gray-300' : 'bg-white text-gray-700'
                         }`}
                       >
@@ -231,7 +231,7 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
                         onClick={() => updateCoupon(coupon.id, 'type', 'fixed')}
                         className={`flex-1 px-3 py-2 flex items-center justify-center gap-1 text-sm transition-colors ${
                           coupon.type === 'fixed'
-                            ? 'bg-teal-500 text-white'
+                            ? 'bg-primary-500 text-white'
                             : isDark ? 'bg-gray-700 text-gray-300' : 'bg-white text-gray-700'
                         }`}
                       >
@@ -267,8 +267,8 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
           onClick={addCoupon}
           className={`w-full py-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-2 transition-colors ${
             isDark
-              ? 'border-gray-700 hover:border-teal-500 text-gray-400 hover:text-teal-500'
-              : 'border-gray-300 hover:border-teal-500 text-gray-500 hover:text-teal-500'
+              ? 'border-gray-700 hover:border-primary-500 text-gray-400 hover:text-primary-500'
+              : 'border-gray-300 hover:border-primary-500 text-gray-500 hover:text-primary-500'
           }`}
         >
           <Plus className="w-4 h-4" />
@@ -276,15 +276,15 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
         </button>
 
         {/* Results */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-between mb-4">
-            <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
               {t('tools.couponStackCalculator.calculationBreakdown', 'Calculation Breakdown')}
             </h4>
             <button
               onClick={handleCopy}
               className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
               }`}
             >
               {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -311,10 +311,10 @@ Total Savings: $${calculations.totalSavings.toFixed(2)} (${calculations.savingsP
               </div>
             ))}
 
-            <div className={`pt-4 border-t ${isDark ? 'border-gray-700' : 'border-teal-200'}`}>
+            <div className={`pt-4 border-t ${isDark ? 'border-gray-700' : 'border-primary-200'}`}>
               <div className="flex justify-between items-center mb-2">
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.couponStackCalculator.finalPrice', 'Final Price')}</span>
-                <span className={`text-3xl font-bold text-teal-500`}>
+                <span className={`text-3xl font-bold text-primary-500`}>
                   ${calculations.finalPrice.toFixed(2)}
                 </span>
               </div>

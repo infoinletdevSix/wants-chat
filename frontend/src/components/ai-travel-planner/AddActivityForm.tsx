@@ -39,9 +39,9 @@ const AddActivityForm: React.FC<AddActivityFormProps> = ({ dayIndex, onSave, onC
   };
 
   return (
-    <div className="border-2 border-dashed border-teal-500/50 rounded-xl p-3 sm:p-4 bg-teal-500/10">
+    <div className="border-2 border-dashed border-primary-500/50 rounded-xl p-3 sm:p-4 bg-primary-500/10">
       <h4 className="font-semibold mb-3 flex items-center gap-2 text-sm sm:text-base text-white">
-        <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-teal-400" />
+        <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-primary-400" />
         Add New Activity
       </h4>
       <div className="space-y-3">
@@ -88,7 +88,7 @@ const AddActivityForm: React.FC<AddActivityFormProps> = ({ dayIndex, onSave, onC
             <SelectTrigger className="h-9 sm:h-10 rounded-xl text-sm bg-white/5 border-white/20 text-white">
               <SelectValue placeholder="Category" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 backdrop-blur-xl border-white/20">
+            <SelectContent className="bg-primary-800/90 backdrop-blur-xl border-white/20">
               <SelectItem value="sightseeing" className="text-white hover:bg-white/10">Sightseeing</SelectItem>
               <SelectItem value="adventure" className="text-white hover:bg-white/10">Adventure</SelectItem>
               <SelectItem value="culture" className="text-white hover:bg-white/10">Culture</SelectItem>
@@ -116,7 +116,7 @@ const AddActivityForm: React.FC<AddActivityFormProps> = ({ dayIndex, onSave, onC
           <Button
             size="sm"
             onClick={handleSubmit}
-            className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-xs sm:text-sm"
+            className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white text-xs sm:text-sm"
           >
             <Check className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
             Add Activity

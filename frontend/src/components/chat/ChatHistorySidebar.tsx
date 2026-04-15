@@ -185,7 +185,7 @@ export const ChatHistorySidebar: React.FC<ChatHistorySidebarProps> = ({
         <div className="p-3">
           <button
             onClick={() => { onNewChat(); onClose(); }}
-            className="w-full flex items-center gap-2 px-3 py-2.5 rounded-xl bg-gradient-to-br from-[#0D9488] to-[#0F766E] text-white font-medium hover:from-[#14B8A6] hover:to-[#0D9488] transition-all"
+            className="w-full flex items-center gap-2 px-3 py-2.5 rounded-xl bg-gradient-to-br from-[#6096B4] to-[#4C7F98] text-white font-medium hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
           >
             <Plus className="w-4 h-4" />
             {t('chatHistory.newChat')}
@@ -334,7 +334,7 @@ function ConversationItem({
       className={cn(
         'group flex items-center gap-2 px-3 py-2.5 rounded-lg cursor-pointer mb-1 transition-colors',
         isActive
-          ? theme === 'dark' ? 'bg-[#0D9488]/20 text-[#14B8A6]' : 'bg-[#0D9488]/10 text-[#0D9488]'
+          ? theme === 'dark' ? 'bg-[#6096B4]/20 text-[#75AAC1]' : 'bg-[#6096B4]/10 text-[#6096B4]'
           : theme === 'dark' ? 'hover:bg-[#2a2a2a] text-gray-300' : 'hover:bg-gray-100 text-gray-700'
       )}
     >
@@ -350,7 +350,7 @@ function ConversationItem({
         <div className="flex items-center gap-1">
           <button
             onClick={(e) => onPin(conv.id, conv.isPinned, e)}
-            className={cn('p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600', conv.isPinned ? 'text-[#0D9488]' : 'text-gray-400')}
+            className={cn('p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600', conv.isPinned ? 'text-[#6096B4]' : 'text-gray-400')}
           >
             <Pin className="w-3.5 h-3.5" />
           </button>

@@ -91,7 +91,7 @@ const TwoFactorAuth: React.FC = () => {
     const colors = [
       'from-blue-500 to-indigo-500',
       'from-purple-500 to-pink-500',
-      'from-teal-500 to-cyan-500',
+      'from-primary-500 to-cyan-500',
       'from-orange-500 to-red-500',
       'from-green-500 to-emerald-500',
     ];
@@ -135,11 +135,11 @@ const TwoFactorAuth: React.FC = () => {
           className="mb-8"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-3 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl">
+            <div className="p-3 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl">
               <Shield className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
                 Two-Factor Authenticator
               </h1>
               <p className="text-slate-400 text-sm">Secure your accounts with TOTP codes</p>
@@ -154,13 +154,13 @@ const TwoFactorAuth: React.FC = () => {
           transition={{ delay: 0.1 }}
           className="mb-6"
         >
-          <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-teal-400/30 p-6 shadow-xl">
+          <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-primary-400/30 p-6 shadow-xl">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2 text-slate-300">
-                <Clock className="w-5 h-5 text-teal-400" />
+                <Clock className="w-5 h-5 text-primary-400" />
                 <span className="font-medium">Time Remaining</span>
               </div>
-              <span className="text-2xl font-bold text-teal-400">{timeLeft}s</span>
+              <span className="text-2xl font-bold text-primary-400">{timeLeft}s</span>
             </div>
 
             {/* Progress Bar */}
@@ -170,7 +170,7 @@ const TwoFactorAuth: React.FC = () => {
                 className={`h-full transition-all duration-1000 ${
                   timeLeft <= 5
                     ? 'bg-gradient-to-r from-red-500 to-rose-500'
-                    : 'bg-gradient-to-r from-teal-500 to-cyan-500'
+                    : 'bg-gradient-to-r from-primary-500 to-cyan-500'
                 }`}
               />
             </div>
@@ -186,7 +186,7 @@ const TwoFactorAuth: React.FC = () => {
         >
           <button
             onClick={() => setShowAddForm(!showAddForm)}
-            className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-teal-500/50"
+            className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/50"
           >
             <Plus className="w-5 h-5" />
             Add New Account
@@ -199,7 +199,7 @@ const TwoFactorAuth: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="mb-6 bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-teal-400/30 p-6"
+            className="mb-6 bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-primary-400/30 p-6"
           >
             <h3 className="text-lg font-bold text-white mb-4">Add New Account</h3>
             <div className="space-y-4">
@@ -210,7 +210,7 @@ const TwoFactorAuth: React.FC = () => {
                   placeholder="e.g., john@example.com"
                   value={newAccount.name}
                   onChange={(e) => setNewAccount({ ...newAccount, name: e.target.value })}
-                  className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:border-teal-500 focus:outline-none"
+                  className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:border-primary-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -220,7 +220,7 @@ const TwoFactorAuth: React.FC = () => {
                   placeholder="e.g., Google, GitHub, AWS"
                   value={newAccount.issuer}
                   onChange={(e) => setNewAccount({ ...newAccount, issuer: e.target.value })}
-                  className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:border-teal-500 focus:outline-none"
+                  className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:border-primary-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -230,13 +230,13 @@ const TwoFactorAuth: React.FC = () => {
                   placeholder="e.g., JBSWY3DPEHPK3PXP"
                   value={newAccount.secret}
                   onChange={(e) => setNewAccount({ ...newAccount, secret: e.target.value.toUpperCase() })}
-                  className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:border-teal-500 focus:outline-none font-mono"
+                  className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:border-primary-500 focus:outline-none font-mono"
                 />
               </div>
               <div className="flex gap-3">
                 <button
                   onClick={handleAddAccount}
-                  className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-bold py-3 rounded-lg transition-all"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-bold py-3 rounded-lg transition-all"
                 >
                   Add Account
                 </button>
@@ -259,7 +259,7 @@ const TwoFactorAuth: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + index * 0.1 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-teal-400/30 p-6 shadow-xl hover:border-teal-400/50 transition-all"
+              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-primary-400/30 p-6 shadow-xl hover:border-primary-400/50 transition-all"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-start gap-3">
@@ -282,19 +282,19 @@ const TwoFactorAuth: React.FC = () => {
               {/* TOTP Code Display */}
               <div className="bg-slate-900/50 rounded-xl p-6 mb-3">
                 <div className="flex items-center justify-between">
-                  <div className="font-mono text-4xl font-bold text-teal-400 tracking-wider">
+                  <div className="font-mono text-4xl font-bold text-primary-400 tracking-wider">
                     {currentCodes[account.id]?.slice(0, 3) || '000'}{' '}
                     <span className="text-cyan-400">{currentCodes[account.id]?.slice(3) || '000'}</span>
                   </div>
                   <motion.button
                     whileTap={{ scale: 0.9 }}
                     onClick={() => copyToClipboard(currentCodes[account.id] || '', account.id)}
-                    className="p-3 bg-teal-500/20 hover:bg-teal-500/30 rounded-lg transition-all"
+                    className="p-3 bg-primary-500/20 hover:bg-primary-500/30 rounded-lg transition-all"
                   >
                     {copiedId === account.id ? (
                       <Check className="w-5 h-5 text-emerald-400" />
                     ) : (
-                      <Copy className="w-5 h-5 text-teal-400" />
+                      <Copy className="w-5 h-5 text-primary-400" />
                     )}
                   </motion.button>
                 </div>

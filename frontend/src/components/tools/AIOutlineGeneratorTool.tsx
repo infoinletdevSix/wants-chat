@@ -243,11 +243,11 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <List className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <List className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aIOutlineGenerator.aiOutlineGenerator', 'AI Outline Generator')}</h3>
@@ -257,9 +257,9 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aIOutlineGenerator.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aIOutlineGenerator.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -276,7 +276,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.aIOutlineGenerator.enterTheTopicYouWant', 'Enter the topic you want to create content about...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -292,7 +292,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
                 const selected = contentTypes.find(t => t.value === e.target.value);
                 if (selected) setContentType(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {contentTypes.map(type => (
                 <option key={type.value} value={type.value}>{type.label}</option>
@@ -310,7 +310,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
                 const selected = depthLevels.find(d => d.value === Number(e.target.value));
                 if (selected) setDepthLevel(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {depthLevels.map(level => (
                 <option key={level.value} value={level.value}>{level.label}</option>
@@ -329,7 +329,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
             value={targetAudience}
             onChange={(e) => setTargetAudience(e.target.value)}
             placeholder={t('tools.aIOutlineGenerator.eGBeginnersMarketingProfessionals', 'e.g., Beginners, Marketing professionals, Students...')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -343,7 +343,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
             onChange={(e) => setKeyPoints(e.target.value)}
             placeholder={t('tools.aIOutlineGenerator.listSpecificTopicsOrPoints', 'List specific topics or points you want covered...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -358,7 +358,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -401,7 +401,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
 
             <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
               {/* Title & Description */}
-              <div className="p-4 bg-[#0D9488]/5 border-b border-gray-200 dark:border-gray-700">
+              <div className="p-4 bg-[#6096B4]/5 border-b border-gray-200 dark:border-gray-700">
                 <h5 className="font-semibold text-gray-900 dark:text-white text-lg mb-1">
                   {generatedOutline.title}
                 </h5>
@@ -419,7 +419,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
                       className="w-full p-4 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="flex items-center justify-center w-6 h-6 bg-[#0D9488] text-white text-xs font-medium rounded">
+                        <span className="flex items-center justify-center w-6 h-6 bg-[#6096B4] text-white text-xs font-medium rounded">
                           {idx + 1}
                         </span>
                         <span className="font-medium text-gray-900 dark:text-white">
@@ -442,7 +442,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
                               key={pIdx}
                               className="flex items-start gap-2 text-gray-700 dark:text-gray-300"
                             >
-                              <span className="text-[#0D9488] font-medium">
+                              <span className="text-[#6096B4] font-medium">
                                 {String.fromCharCode(97 + pIdx)}.
                               </span>
                               {point}
@@ -452,7 +452,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
 
                         {/* Subsections */}
                         {section.subsections && section.subsections.length > 0 && (
-                          <div className="pl-4 border-l-2 border-[#0D9488]/20 space-y-3">
+                          <div className="pl-4 border-l-2 border-[#6096B4]/20 space-y-3">
                             {section.subsections.map((sub, subIdx) => (
                               <div key={subIdx}>
                                 <p className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
@@ -464,7 +464,7 @@ Include ${Math.max(3, depthLevel.value + 1)} main sections with appropriate subs
                                       key={spIdx}
                                       className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"
                                     >
-                                      <span className="text-[#0D9488]">-</span>
+                                      <span className="text-[#6096B4]">-</span>
                                       {point}
                                     </li>
                                   ))}

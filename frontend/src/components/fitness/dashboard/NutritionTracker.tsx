@@ -69,7 +69,7 @@ const NutritionTracker: React.FC<NutritionTrackerProps> = ({
           <h3 className="text-lg font-semibold text-foreground mb-1">Nutrition Tracker</h3>
           <p className="text-sm text-muted-foreground">Monitor your daily nutrition intake</p>
         </div>
-        <Button size="sm" onClick={onAddMeal} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+        <Button size="sm" onClick={onAddMeal} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
           <Plus className="h-4 w-4 mr-1" />
           Add Meal
         </Button>

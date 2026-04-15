@@ -58,7 +58,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
       case 'common':
         return 'bg-white/10 text-white/60 border-white/20';
       case 'rare':
-        return 'bg-teal-500/20 text-teal-400 border-teal-500/30';
+        return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'epic':
         return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
       case 'legendary':
@@ -109,8 +109,8 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
       {/* Header */}
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <Icon path={mdiTrophy} size={1} className="text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <Icon path={mdiTrophy} size={1} className="text-primary-400" />
           </div>
           <div>
             <h3 className="text-lg font-semibold">Achievements & Badges</h3>
@@ -153,12 +153,12 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
       {/* Points and Progress */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {/* Total Points */}
-        <div className="p-4 bg-gradient-to-br from-teal-500/10 to-teal-500/20 rounded-lg">
+        <div className="p-4 bg-gradient-to-br from-primary-500/10 to-primary-500/20 rounded-lg">
           <div className="flex items-center gap-3 mb-2">
-            <Icon path={mdiStar} size={1} className="text-teal-400" />
+            <Icon path={mdiStar} size={1} className="text-primary-400" />
             <h4 className="font-semibold">Achievement Points</h4>
           </div>
-          <div className="text-3xl font-bold text-teal-400">
+          <div className="text-3xl font-bold text-primary-400">
             {totalPoints.toLocaleString()}
           </div>
           <p className="text-sm text-white/60">Total points earned</p>
@@ -207,7 +207,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
               <div className={`
                 relative inline-block p-4 rounded-full mb-2
                 ${achievement.unlockedAt
-                  ? 'bg-teal-500/20'
+                  ? 'bg-primary-500/20'
                   : 'bg-white/10'
                 }
               `}>
@@ -216,7 +216,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
                   size={1.5} 
                   className={`
                     ${achievement.unlockedAt 
-                      ? 'text-teal-400' 
+                      ? 'text-primary-400' 
                       : 'text-white/60'
                     }
                   `}
@@ -229,9 +229,9 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
                       path={mdiStar} 
                       size={0.8} 
                       className={
-                        achievement.rarity === 'legendary' ? 'text-teal-400' :
+                        achievement.rarity === 'legendary' ? 'text-primary-400' :
                         achievement.rarity === 'epic' ? 'text-accent' :
-                        'text-teal-400'
+                        'text-primary-400'
                       }
                     />
                   </div>
@@ -266,7 +266,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
                   </div>
                   
                   <div className="text-center">
-                    <span className="text-sm font-bold text-teal-400">
+                    <span className="text-sm font-bold text-primary-400">
                       +{achievement.points} points
                     </span>
                   </div>
@@ -343,7 +343,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
         <h4 className="font-medium mb-3 text-sm">Achievement Categories</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
           <div className="flex items-center gap-2">
-            <Icon path={mdiDumbbell} size={0.6} className="text-teal-400" />
+            <Icon path={mdiDumbbell} size={0.6} className="text-primary-400" />
             <span>Workout Achievements</span>
           </div>
           <div className="flex items-center gap-2">
@@ -355,7 +355,7 @@ const AchievementsBadges: React.FC<AchievementsBadgesProps> = ({
             <span>Weight Achievements</span>
           </div>
           <div className="flex items-center gap-2">
-            <Icon path={mdiTrophy} size={0.6} className="text-teal-400" />
+            <Icon path={mdiTrophy} size={0.6} className="text-primary-400" />
             <span>Milestone Achievements</span>
           </div>
         </div>

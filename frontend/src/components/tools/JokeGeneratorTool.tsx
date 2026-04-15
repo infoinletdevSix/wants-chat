@@ -284,11 +284,11 @@ Please format each joke clearly, separated by "---"`;
     }`}>
       {/* Header */}
       <div className={`px-6 py-4 border-b ${
-        isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.jokeGenerator.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#0D9488]/5 border-gray-100')
+        isDark ? 'bg-gray-800/50 border-gray-700' : t('tools.jokeGenerator.bgGradientToRFrom', 'bg-gradient-to-r from-white to-[#6096B4]/5 border-gray-100')
       }`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Smile className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Smile className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -304,9 +304,9 @@ Please format each joke clearly, separated by "---"`;
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{isEditFromGallery ? t('tools.jokeGenerator.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.jokeGenerator.topicLoadedFromYourConversation', 'Topic loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{isEditFromGallery ? t('tools.jokeGenerator.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.jokeGenerator.topicLoadedFromYourConversation', 'Topic loaded from your conversation')}</span>
           </div>
         )}
         {/* Joke Type & Audience */}
@@ -319,7 +319,7 @@ Please format each joke clearly, separated by "---"`;
             <select
               value={jokeType}
               onChange={(e) => setJokeType(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -340,7 +340,7 @@ Please format each joke clearly, separated by "---"`;
             <select
               value={audience}
               onChange={(e) => setAudience(e.target.value)}
-              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+              className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
@@ -365,7 +365,7 @@ Please format each joke clearly, separated by "---"`;
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.jokeGenerator.eGProgrammingCoffeeCats', 'e.g., Programming, Coffee, Cats, Weather, Travel...')}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all ${
+            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all ${
               isDark
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
@@ -384,7 +384,7 @@ Please format each joke clearly, separated by "---"`;
             max="10"
             value={numJokes}
             onChange={(e) => setNumJokes(Number(e.target.value))}
-            className="w-full accent-[#0D9488]"
+            className="w-full accent-[#6096B4]"
           />
           <div className="flex justify-between text-xs text-gray-500">
             <span>1</span>
@@ -407,7 +407,7 @@ Please format each joke clearly, separated by "---"`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -441,7 +441,7 @@ Please format each joke clearly, separated by "---"`;
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#2DD4BF] transition-all flex items-center gap-2 disabled:opacity-50 text-sm"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#75AAC1] transition-all flex items-center gap-2 disabled:opacity-50 text-sm"
                 >
                   {isSaving ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -491,7 +491,7 @@ Please format each joke clearly, separated by "---"`;
                           copySuccess === index
                             ? 'text-green-500'
                             : isDark
-                            ? t('tools.jokeGenerator.textGray400HoverText', 'text-gray-400 hover:text-[#0D9488]') : t('tools.jokeGenerator.textGray400HoverText2', 'text-gray-400 hover:text-[#0D9488]')
+                            ? t('tools.jokeGenerator.textGray400HoverText', 'text-gray-400 hover:text-[#6096B4]') : t('tools.jokeGenerator.textGray400HoverText2', 'text-gray-400 hover:text-[#6096B4]')
                         }`}
                         title={t('tools.jokeGenerator.copy', 'Copy')}
                       >
@@ -510,7 +510,7 @@ Please format each joke clearly, separated by "---"`;
                           onClick={() => handleRateJoke(index, star)}
                           className={`transition-colors ${
                             star <= joke.rating
-                              ? 'text-[#0D9488]'
+                              ? 'text-[#6096B4]'
                               : isDark
                               ? 'text-gray-600 hover:text-gray-500'
                               : 'text-gray-300 hover:text-gray-400'

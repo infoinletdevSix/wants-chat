@@ -69,7 +69,7 @@ const BREATHING_PATTERNS: BreathingPattern[] = [
       'Enhances performance under pressure',
     ],
     phases: { inhale: 4, hold: 4, exhale: 4, holdAfterExhale: 4 },
-    color: '#0D9488', // Teal
+    color: '#6096B4', // Teal
   },
   {
     id: 'wim-hof',
@@ -496,9 +496,9 @@ export const BreathingExerciseTool = ({ uiConfig }: BreathingExerciseToolProps) 
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.breathingExercise.settingsLoadedFromYourConversation', 'Settings loaded from your conversation')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.breathingExercise.settingsLoadedFromYourConversation', 'Settings loaded from your conversation')}</span>
         </div>
       )}
 

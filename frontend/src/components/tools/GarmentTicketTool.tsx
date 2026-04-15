@@ -340,9 +340,9 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.garmentTicket.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.garmentTicket.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -350,7 +350,7 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Tag className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -416,9 +416,9 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
               <p className={`text-xs ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`}>{t('tools.garmentTicket.todayReceived', 'Today Received')}</p>
               <p className={`text-xl font-bold ${theme === 'dark' ? 'text-purple-300' : 'text-purple-700'}`}>{stats.todayReceived}</p>
             </div>
-            <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-teal-900/30' : 'bg-teal-100'}`}>
-              <p className={`text-xs ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>{t('tools.garmentTicket.todayRevenue', 'Today Revenue')}</p>
-              <p className={`text-xl font-bold ${theme === 'dark' ? 'text-teal-300' : 'text-teal-700'}`}>${stats.todayRevenue.toFixed(2)}</p>
+            <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-primary-900/30' : 'bg-primary-100'}`}>
+              <p className={`text-xs ${theme === 'dark' ? 'text-primary-400' : 'text-primary-600'}`}>{t('tools.garmentTicket.todayRevenue', 'Today Revenue')}</p>
+              <p className={`text-xl font-bold ${theme === 'dark' ? 'text-primary-300' : 'text-primary-700'}`}>${stats.todayRevenue.toFixed(2)}</p>
             </div>
           </div>
 
@@ -434,7 +434,7 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -590,7 +590,7 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
                       key={service.type}
                       className={`flex items-center gap-2 px-3 py-1.5 rounded-lg cursor-pointer text-sm ${
                         (newItem.services || []).includes(service.type)
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-600 text-gray-300'
                           : 'bg-gray-200 text-gray-700'
@@ -632,7 +632,7 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
 
               <button
                 onClick={addItemToTicket}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.garmentTicket.addGarment2', 'Add Garment')}
@@ -711,7 +711,7 @@ export function GarmentTicketTool({ uiConfig }: GarmentTicketToolProps) {
             {/* Create Button */}
             <button
               onClick={createTicket}
-              className="w-full py-3 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0D9488]/90 transition-colors"
+              className="w-full py-3 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#6096B4]/90 transition-colors"
             >
               {t('tools.garmentTicket.createTicket', 'Create Ticket')}
             </button>

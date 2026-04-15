@@ -115,7 +115,7 @@ const APPOINTMENT_TYPES = [
   { value: 'follow-up', label: 'Follow-up', duration: 30, color: 'bg-blue-500' },
   { value: 'urgent', label: 'Urgent Care', duration: 30, color: 'bg-red-500' },
   { value: 'procedure', label: 'Procedure', duration: 60, color: 'bg-orange-500' },
-  { value: 'consultation', label: 'Consultation', duration: 45, color: 'bg-teal-500' },
+  { value: 'consultation', label: 'Consultation', duration: 45, color: 'bg-primary-500' },
   { value: 'telehealth', label: 'Telehealth', duration: 30, color: 'bg-green-500' },
   { value: 'annual-checkup', label: 'Annual Checkup', duration: 45, color: 'bg-indigo-500' },
   { value: 'specialist', label: 'Specialist Visit', duration: 45, color: 'bg-pink-500' },
@@ -145,7 +145,7 @@ const DEPARTMENTS = [
 const STATUS_CONFIG = {
   scheduled: { label: 'Scheduled', color: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' },
   confirmed: { label: 'Confirmed', color: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' },
-  'checked-in': { label: 'Checked In', color: 'bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400' },
+  'checked-in': { label: 'Checked In', color: 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400' },
   'in-progress': { label: 'In Progress', color: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' },
   completed: { label: 'Completed', color: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300' },
   'no-show': { label: 'No Show', color: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' },
@@ -333,7 +333,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
     return (
       <div className={`flex items-center justify-center h-64 ${isDark ? 'text-white' : 'text-gray-900'}`}>
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0D9488] mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#6096B4] mx-auto mb-4"></div>
           <p>{t('tools.appointmentSchedulerMedical.loadingAppointments', 'Loading appointments...')}</p>
         </div>
       </div>
@@ -347,7 +347,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
         <div className={`mb-6 p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -392,7 +392,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                   setEditingAppointment(null);
                   setShowModal(true);
                 }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C7C] text-white rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C7C] text-white rounded-lg transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.appointmentSchedulerMedical.newAppointment', 'New Appointment')}
@@ -417,7 +417,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.appointmentSchedulerMedical.checkedIn', 'Checked In')}</p>
-            <p className="text-2xl font-bold text-teal-600">{stats.checkedIn}</p>
+            <p className="text-2xl font-bold text-primary-600">{stats.checkedIn}</p>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-sm`}>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.appointmentSchedulerMedical.inProgress', 'In Progress')}</p>
@@ -444,7 +444,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                   onClick={() => setActiveView(view)}
                   className={`px-4 py-2 rounded-lg font-medium capitalize transition-colors ${
                     activeView === view
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -468,7 +468,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <select
@@ -478,7 +478,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.appointmentSchedulerMedical.allStatuses', 'All Statuses')}</option>
                 {Object.entries(STATUS_CONFIG).map(([value, { label }]) => (
@@ -492,7 +492,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.appointmentSchedulerMedical.allDepartments', 'All Departments')}</option>
                 {DEPARTMENTS.map(dept => (
@@ -537,7 +537,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                       !day.isCurrentMonth
                         ? isDark ? 'text-gray-600' : 'text-gray-400'
                         : isSelected
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isToday
                         ? isDark ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-900'
                         : isDark ? 'hover:bg-gray-700 text-white' : 'hover:bg-gray-100 text-gray-900'
@@ -545,7 +545,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                   >
                     <span className="block">{new Date(day.date).getDate()}</span>
                     {day.appointments > 0 && (
-                      <span className={`text-xs ${isSelected ? 'text-white/80' : t('tools.appointmentSchedulerMedical.text0d9488', 'text-[#0D9488]')}`}>
+                      <span className={`text-xs ${isSelected ? 'text-white/80' : t('tools.appointmentSchedulerMedical.text0d9488', 'text-[#6096B4]')}`}>
                         {day.appointments}
                       </span>
                     )}
@@ -572,7 +572,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {new Date(selectedDate).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
@@ -666,7 +666,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                       {apt.status === 'confirmed' && (
                         <button
                           onClick={() => handleStatusChange(apt.id, 'checked-in')}
-                          className="px-3 py-1.5 text-sm bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"
+                          className="px-3 py-1.5 text-sm bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
                         >
                           {t('tools.appointmentSchedulerMedical.checkIn', 'Check In')}
                         </button>
@@ -749,7 +749,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.enterPatientName', 'Enter patient name')}
                       />
                     </div>
@@ -765,7 +765,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.patientId2', 'Patient ID')}
                       />
                     </div>
@@ -781,7 +781,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.phoneNumber', 'Phone number')}
                       />
                     </div>
@@ -797,7 +797,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.emailAddress', 'Email address')}
                       />
                     </div>
@@ -813,7 +813,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -835,7 +835,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -850,7 +850,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -864,7 +864,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {APPOINTMENT_TYPES.map(type => (
                           <option key={type.value} value={type.value}>
@@ -884,7 +884,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {Object.entries(STATUS_CONFIG).map(([value, { label }]) => (
                           <option key={value} value={value}>{label}</option>
@@ -903,7 +903,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.physicianName', 'Physician name')}
                       />
                     </div>
@@ -918,7 +918,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.appointmentSchedulerMedical.selectDepartment', 'Select department')}</option>
                         {DEPARTMENTS.map(dept => (
@@ -938,7 +938,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.clinicOfficeLocation', 'Clinic/Office location')}
                       />
                     </div>
@@ -954,7 +954,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.roomNumber', 'Room number')}
                       />
                     </div>
@@ -977,7 +977,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.describeTheReasonForThis', 'Describe the reason for this visit')}
                       />
                     </div>
@@ -993,7 +993,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.fastingRequiredBringMedicationsEtc', 'Fasting required, bring medications, etc.')}
                       />
                     </div>
@@ -1009,7 +1009,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder={t('tools.appointmentSchedulerMedical.additionalNotes', 'Additional notes')}
                       />
                     </div>
@@ -1026,7 +1026,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                         id="insuranceVerified"
                         checked={formData.insuranceVerified}
                         onChange={e => setFormData({ ...formData, insuranceVerified: e.target.checked })}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <label htmlFor="insuranceVerified" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.appointmentSchedulerMedical.insuranceVerified', 'Insurance Verified')}
@@ -1045,7 +1045,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         placeholder="0.00"
                       />
                     </div>
@@ -1055,7 +1055,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                         id="copayCollected"
                         checked={formData.copayCollected}
                         onChange={e => setFormData({ ...formData, copayCollected: e.target.checked })}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <label htmlFor="copayCollected" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.appointmentSchedulerMedical.copayCollected', 'Copay Collected')}
@@ -1072,7 +1072,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                       id="isRecurring"
                       checked={formData.isRecurring}
                       onChange={e => setFormData({ ...formData, isRecurring: e.target.checked })}
-                      className="w-4 h-4 rounded accent-[#0D9488]"
+                      className="w-4 h-4 rounded accent-[#6096B4]"
                     />
                     <label htmlFor="isRecurring" className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       {t('tools.appointmentSchedulerMedical.recurringAppointment', 'Recurring Appointment')}
@@ -1085,7 +1085,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                           isDark
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="weekly">{t('tools.appointmentSchedulerMedical.weekly', 'Weekly')}</option>
                         <option value="bi-weekly">{t('tools.appointmentSchedulerMedical.biWeekly', 'Bi-weekly')}</option>
@@ -1101,7 +1101,7 @@ export const AppointmentSchedulerMedicalTool: React.FC<AppointmentSchedulerMedic
                 <button
                   onClick={handleSave}
                   disabled={!formData.patientName || !formData.appointmentDate}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C7C] disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C7C] disabled:bg-gray-400 text-white rounded-lg transition-colors"
                 >
                   <Save className="w-5 h-5" />
                   {editingAppointment ? t('tools.appointmentSchedulerMedical.updateAppointment', 'Update Appointment') : t('tools.appointmentSchedulerMedical.scheduleAppointment', 'Schedule Appointment')}

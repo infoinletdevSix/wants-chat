@@ -150,10 +150,10 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Truck className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Truck className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.freightCalculator.freightCostCalculator', 'Freight Cost Calculator')}</h3>
@@ -164,9 +164,9 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.freightCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.freightCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -184,10 +184,10 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
               <button
                 key={m.value}
                 onClick={() => setMode(m.value as FreightMode)}
-                className={`py-3 px-3 rounded-lg text-sm transition-colors ${mode === m.value ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-3 px-3 rounded-lg text-sm transition-colors ${mode === m.value ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 <div className="font-medium">{m.label}</div>
-                <div className={`text-xs ${mode === m.value ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{m.desc}</div>
+                <div className={`text-xs ${mode === m.value ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{m.desc}</div>
               </button>
             ))}
           </div>
@@ -204,7 +204,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
               type="number"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -216,7 +216,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
               type="number"
               value={distance}
               onChange={(e) => setDistance(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -229,7 +229,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
               min="1"
               value={palletCount}
               onChange={(e) => setPalletCount(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
         </div>
@@ -245,7 +245,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
                 type="number"
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.freightCalculator.length', 'Length')}</span>
             </div>
@@ -254,7 +254,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
                 type="number"
                 value={width}
                 onChange={(e) => setWidth(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.freightCalculator.width', 'Width')}</span>
             </div>
@@ -263,7 +263,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
                 type="number"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.freightCalculator.height', 'Height')}</span>
             </div>
@@ -281,7 +281,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
               <select
                 value={freightClass}
                 onChange={(e) => setFreightClass(e.target.value as FreightClass)}
-                className={`flex-1 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`flex-1 px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               >
                 {Object.keys(freightClassRates).map((fc) => (
                   <option key={fc} value={fc}>Class {fc}</option>
@@ -289,7 +289,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
               </select>
               <button
                 onClick={() => setFreightClass(getSuggestedClass(calculations.density))}
-                className="px-3 py-2 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition-colors"
+                className="px-3 py-2 bg-primary-500 text-white rounded-lg text-sm hover:bg-primary-600 transition-colors"
               >
                 {t('tools.freightCalculator.autoDetect', 'Auto-Detect')}
               </button>
@@ -317,7 +317,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
                   type="checkbox"
                   checked={accessorials[acc.key as keyof typeof accessorials]}
                   onChange={(e) => setAccessorials({ ...accessorials, [acc.key]: e.target.checked })}
-                  className="w-4 h-4 rounded text-teal-500"
+                  className="w-4 h-4 rounded text-primary-500"
                 />
                 <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{acc.label}</span>
                 <span className={`text-xs ml-auto ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>+${acc.cost}</span>
@@ -327,9 +327,9 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.freightCalculator.estimatedFreightCost', 'Estimated Freight Cost')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             ${calculations.totalCost.toFixed(2)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -353,13 +353,13 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.freightCalculator.costPerPallet', 'Cost per Pallet')}</div>
-            <div className="text-2xl font-bold text-teal-500">
+            <div className="text-2xl font-bold text-primary-500">
               ${calculations.costPerPallet.toFixed(2)}
             </div>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.freightCalculator.costPerPound', 'Cost per Pound')}</div>
-            <div className="text-2xl font-bold text-teal-500">
+            <div className="text-2xl font-bold text-primary-500">
               ${calculations.costPerPound.toFixed(3)}
             </div>
           </div>
@@ -367,7 +367,7 @@ export const FreightCalculatorTool: React.FC<FreightCalculatorToolProps> = ({ ui
 
         {/* Info Box */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.freightCalculator.aboutFreightClasses', 'About Freight Classes')}</p>
             <p>{t('tools.freightCalculator.nmfcFreightClassesRangeFrom', 'NMFC freight classes range from 50-500 based on density, handling, stowability, and liability. Lower classes mean lower rates. Use the auto-detect feature to find your approximate class based on density.')}</p>

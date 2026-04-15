@@ -288,7 +288,7 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -301,8 +301,8 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <Coins className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <Coins className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -373,7 +373,7 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
           </div>
           <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.tipPoolCalculator.avgPerSession', 'Avg Per Session')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">${stats.avgTipsPerSession.toFixed(2)}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">${stats.avgTipsPerSession.toFixed(2)}</div>
           </div>
         </div>
 
@@ -386,7 +386,7 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
                 onClick={() => setShowAddForm(!showAddForm)}
               >
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Calculator className="w-5 h-5 text-[#0D9488]" />
+                  <Calculator className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.tipPoolCalculator.newTipPoolSession', 'New Tip Pool Session')}
                 </CardTitle>
                 {showAddForm ? (
@@ -566,7 +566,7 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
                     <button
                       onClick={handleAddMember}
                       disabled={!newMember.name || !newMember.hoursWorked}
-                      className="px-3 py-2 bg-[#0D9488] text-white rounded-lg disabled:opacity-50"
+                      className="px-3 py-2 bg-[#6096B4] text-white rounded-lg disabled:opacity-50"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -636,7 +636,7 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
                 <button
                   onClick={handleSaveSession}
                   disabled={!currentSession.totalTips || !(currentSession.members?.length)}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Coins className="w-5 h-5" />
                   {t('tools.tipPoolCalculator.saveTipPoolSession', 'Save Tip Pool Session')}
@@ -649,7 +649,7 @@ export const TipPoolCalculatorTool: React.FC<TipPoolCalculatorToolProps> = ({ ui
           <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
             <CardHeader>
               <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <Clock className="w-5 h-5 text-[#0D9488]" />
+                <Clock className="w-5 h-5 text-[#6096B4]" />
                 Previous Sessions ({sessions.length})
               </CardTitle>
             </CardHeader>

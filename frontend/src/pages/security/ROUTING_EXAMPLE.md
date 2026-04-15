@@ -49,7 +49,7 @@ const SecuritySection = () => (
       to="/security/vpn"
       className="flex items-center gap-3 px-4 py-3 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all"
     >
-      <Shield className="w-5 h-5 text-teal-400" />
+      <Shield className="w-5 h-5 text-primary-400" />
       <div>
         <p className="font-medium text-white">VPN Shield</p>
         <p className="text-xs text-slate-400">Secure your connection</p>
@@ -60,7 +60,7 @@ const SecuritySection = () => (
       to="/security/2fa"
       className="flex items-center gap-3 px-4 py-3 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all"
     >
-      <Key className="w-5 h-5 text-teal-400" />
+      <Key className="w-5 h-5 text-primary-400" />
       <div>
         <p className="font-medium text-white">Two-Factor Auth</p>
         <p className="text-xs text-slate-400">TOTP code generator</p>
@@ -71,7 +71,7 @@ const SecuritySection = () => (
       to="/security/cipher"
       className="flex items-center gap-3 px-4 py-3 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all"
     >
-      <Lock className="w-5 h-5 text-teal-400" />
+      <Lock className="w-5 h-5 text-primary-400" />
       <div>
         <p className="font-medium text-white">Ciphertext Encoder</p>
         <p className="text-xs text-slate-400">Encrypt & decrypt text</p>
@@ -84,7 +84,7 @@ const SecuritySection = () => (
 <nav className="space-y-1">
   <Link
     to="/security/vpn"
-    className="flex items-center px-4 py-2 text-sm font-medium text-white hover:bg-teal-500/10 rounded-lg"
+    className="flex items-center px-4 py-2 text-sm font-medium text-white hover:bg-primary-500/10 rounded-lg"
   >
     <Shield className="w-5 h-5 mr-3" />
     VPN Shield
@@ -92,7 +92,7 @@ const SecuritySection = () => (
 
   <Link
     to="/security/2fa"
-    className="flex items-center px-4 py-2 text-sm font-medium text-white hover:bg-teal-500/10 rounded-lg"
+    className="flex items-center px-4 py-2 text-sm font-medium text-white hover:bg-primary-500/10 rounded-lg"
   >
     <Key className="w-5 h-5 mr-3" />
     Two-Factor Auth
@@ -100,7 +100,7 @@ const SecuritySection = () => (
 
   <Link
     to="/security/cipher"
-    className="flex items-center px-4 py-2 text-sm font-medium text-white hover:bg-teal-500/10 rounded-lg"
+    className="flex items-center px-4 py-2 text-sm font-medium text-white hover:bg-primary-500/10 rounded-lg"
   >
     <Lock className="w-5 h-5 mr-3" />
     Ciphertext
@@ -124,9 +124,9 @@ const AppSettingsSecuritySection = () => (
 
       <Link
         to="/security/2fa"
-        className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border border-teal-500/30 rounded-lg p-4 hover:scale-105 transition-transform"
+        className="bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/30 rounded-lg p-4 hover:scale-105 transition-transform"
       >
-        <Key className="w-8 h-8 text-teal-400 mb-2" />
+        <Key className="w-8 h-8 text-primary-400 mb-2" />
         <h3 className="font-bold text-white">2FA</h3>
         <p className="text-sm text-slate-400">Authenticator</p>
       </Link>
@@ -165,7 +165,7 @@ const megaDropdownConfig = {
         title: 'Two-Factor Auth',
         description: 'Generate TOTP codes',
         href: '/security/2fa',
-        color: 'text-teal-400',
+        color: 'text-primary-400',
       },
       {
         icon: Lock,
@@ -245,7 +245,7 @@ const Breadcrumbs = ({ items }: { items: { label: string; href?: string }[] }) =
       <React.Fragment key={index}>
         {index > 0 && <span className="text-slate-500">/</span>}
         {item.href ? (
-          <Link to={item.href} className="text-teal-400 hover:text-teal-300">
+          <Link to={item.href} className="text-primary-400 hover:text-primary-300">
             {item.label}
           </Link>
         ) : (

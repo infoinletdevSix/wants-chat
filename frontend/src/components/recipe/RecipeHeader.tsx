@@ -29,7 +29,7 @@ export const RecipeHeader: React.FC<RecipeHeaderProps> = ({
                 <ArrowLeft className="h-5 w-5" />
               </Button>
             )}
-            <ChefHat className="h-5 w-5 sm:h-6 sm:w-6 text-teal-400" />
+            <ChefHat className="h-5 w-5 sm:h-6 sm:w-6 text-primary-400" />
             <div className="flex flex-col">
               <span className="text-lg sm:text-xl font-semibold text-white">
                 <span className="hidden sm:inline">{title}</span>

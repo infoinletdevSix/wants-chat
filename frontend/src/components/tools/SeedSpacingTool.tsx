@@ -134,10 +134,10 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Grid3X3 className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Grid3X3 className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.seedSpacing.seedSpacingCalculator', 'Seed Spacing Calculator')}</h3>
@@ -155,7 +155,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
               onClick={() => setCategoryFilter(cat)}
               className={`px-4 py-2 rounded-lg text-sm font-medium capitalize transition-colors ${
                 categoryFilter === cat
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -169,13 +169,13 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
         {/* Plant Selection */}
         <div className="space-y-2">
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            <Leaf className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Leaf className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.seedSpacing.selectPlant', 'Select Plant')}
           </label>
           <select
             value={selectedPlant}
             onChange={(e) => setSelectedPlant(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500`}
           >
             <option value="">{t('tools.seedSpacing.chooseAPlant', 'Choose a plant...')}</option>
             {filteredPlants.map(plant => (
@@ -186,7 +186,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
 
         {/* Selected Plant Info */}
         {selectedPlantData && (
-          <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
             <div className="flex items-center gap-2 mb-3">
               <div className={`w-3 h-3 rounded-full ${getCategoryColor(selectedPlantData.category)}`}></div>
               <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{selectedPlantData.name}</span>
@@ -221,7 +221,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
         {/* Calculation Mode */}
         <div className="space-y-2">
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            <Calculator className="w-4 h-4 inline mr-2 text-teal-500" />
+            <Calculator className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.seedSpacing.calculationMethod', 'Calculation Method')}
           </label>
           <div className="grid grid-cols-3 gap-2">
@@ -235,7 +235,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
                 onClick={() => setCalculationMode(mode.value as any)}
                 className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                   calculationMode === mode.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -250,7 +250,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
         {/* Dimension Inputs */}
         <div className="space-y-4">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Ruler className="w-4 h-4 text-teal-500" />
+            <Ruler className="w-4 h-4 text-primary-500" />
             {t('tools.seedSpacing.gardenDimensionsFeet', 'Garden Dimensions (feet)')}
           </h4>
 
@@ -308,7 +308,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
                 </div>
                 <div className="flex items-center justify-center gap-4">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-teal-500">{calculations.plantsPerRow}</div>
+                    <div className="text-4xl font-bold text-primary-500">{calculations.plantsPerRow}</div>
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.seedSpacing.plantsPerRow', 'plants per row')}</div>
                   </div>
                 </div>
@@ -326,7 +326,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
                 </div>
                 <div className="flex items-center justify-center gap-4">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-teal-500">{calculations.plantsSqFt}</div>
+                    <div className="text-4xl font-bold text-primary-500">{calculations.plantsSqFt}</div>
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.seedSpacing.totalPlants', 'total plants')}</div>
                   </div>
                 </div>
@@ -339,7 +339,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
                   <div className={`text-xs font-medium mb-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.seedSpacing.1SquareFootLayout', '1 Square Foot Layout:')}
                   </div>
-                  <div className="inline-block border-2 border-teal-500 rounded p-2">
+                  <div className="inline-block border-2 border-primary-500 rounded p-2">
                     <div
                       className="grid gap-1"
                       style={{
@@ -349,7 +349,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
                       }}
                     >
                       {Array.from({ length: selectedPlantData.squareFootSpacing }).map((_, i) => (
-                        <div key={i} className="bg-teal-500 rounded-full aspect-square"></div>
+                        <div key={i} className="bg-primary-500 rounded-full aspect-square"></div>
                       ))}
                     </div>
                   </div>
@@ -375,7 +375,7 @@ export const SeedSpacingTool: React.FC<SeedSpacingToolProps> = ({
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-teal-500">{calculations.totalPlantsBed}</div>
+                    <div className="text-4xl font-bold text-primary-500">{calculations.totalPlantsBed}</div>
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.seedSpacing.totalPlantsNeeded', 'total plants needed')}</div>
                   </div>
                 </div>

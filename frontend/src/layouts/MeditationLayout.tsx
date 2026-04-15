@@ -43,7 +43,7 @@ const MeditationLayout: React.FC = () => {
                   className={cn(
                     "flex items-center gap-2 px-3 py-4 text-sm font-medium border-b-2 transition-colors",
                     isActive
-                      ? "border-teal-400 text-teal-400"
+                      ? "border-primary-400 text-primary-400"
                       : "border-transparent text-white/60 hover:text-white hover:border-white/40"
                   )}
                 >

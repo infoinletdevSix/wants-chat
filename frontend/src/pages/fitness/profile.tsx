@@ -333,7 +333,7 @@ const FitnessProfile: React.FC = () => {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
           <p className="text-white/60">
             {profileLoading ? 'Loading fitness profile...' :
              achievementsLoading ? 'Loading achievements...' :
@@ -356,7 +356,7 @@ const FitnessProfile: React.FC = () => {
           </p>
           <button
             onClick={() => navigate('/fitness/onboarding')}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-6 py-2 rounded-md"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white px-6 py-2 rounded-md"
           >
             Complete Profile Setup
           </button>
@@ -378,16 +378,16 @@ const FitnessProfile: React.FC = () => {
         {/* Main Content Tabs */}
         <Tabs defaultValue="overview" className="space-y-4">
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 bg-white/10 backdrop-blur-xl border border-white/20">
-            <TabsTrigger value="overview" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
+            <TabsTrigger value="overview" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
               Overview
             </TabsTrigger>
-            <TabsTrigger value="plans" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
+            <TabsTrigger value="plans" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
               Plans
             </TabsTrigger>
-            <TabsTrigger value="history" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
+            <TabsTrigger value="history" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
               History
             </TabsTrigger>
-            <TabsTrigger value="achievements" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
+            <TabsTrigger value="achievements" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60 text-xs sm:text-sm">
               Achievements
             </TabsTrigger>
           </TabsList>

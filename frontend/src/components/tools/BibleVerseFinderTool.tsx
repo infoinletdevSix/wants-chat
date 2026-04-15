@@ -307,7 +307,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Book className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -336,12 +336,12 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <button
                 onClick={searchVerse}
                 disabled={loading}
-                className="px-4 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                className="px-4 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
               >
                 <Search className="w-5 h-5" />
               </button>
@@ -365,7 +365,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="">{t('tools.bibleVerseFinder.book', 'Book')}</option>
                 {BIBLE_BOOKS.map((book) => (
@@ -383,7 +383,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] disabled:opacity-50`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] disabled:opacity-50`}
               >
                 <option value="">{t('tools.bibleVerseFinder.chapter', 'Chapter')}</option>
                 {selectedBook && getChaptersForBook(selectedBook).map((ch) => (
@@ -398,7 +398,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] disabled:opacity-50`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] disabled:opacity-50`}
               >
                 <option value="">{t('tools.bibleVerseFinder.verse', 'Verse')}</option>
                 {selectedBook && selectedChapter && getVersesForChapter(selectedBook, parseInt(selectedChapter)).map((v) => (
@@ -413,7 +413,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
             <button
               onClick={searchVerse}
               disabled={loading}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {loading ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Search className="w-5 h-5" />}
               Find Verse
@@ -452,7 +452,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
                   onClick={() => loadPopularVerse(pv)}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     theme === 'dark'
-                      ? t('tools.bibleVerseFinder.bgGray700TextGray', 'bg-gray-700 text-gray-300 hover:bg-[#0D9488] hover:text-white') : t('tools.bibleVerseFinder.bgGray200TextGray', 'bg-gray-200 text-gray-700 hover:bg-[#0D9488] hover:text-white')
+                      ? t('tools.bibleVerseFinder.bgGray700TextGray', 'bg-gray-700 text-gray-300 hover:bg-[#6096B4] hover:text-white') : t('tools.bibleVerseFinder.bgGray200TextGray', 'bg-gray-200 text-gray-700 hover:bg-[#6096B4] hover:text-white')
                   }`}
                 >
                   {pv.ref}
@@ -470,12 +470,12 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
 
           {/* Verse Display */}
           {foundVerse && (
-            <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-              theme === 'dark' ? 'bg-gray-700' : t('tools.bibleVerseFinder.bg0d948810', 'bg-[#0D9488]/10')
+            <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+              theme === 'dark' ? 'bg-gray-700' : t('tools.bibleVerseFinder.bg0d948810', 'bg-[#6096B4]/10')
             }`}>
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-2">
-                  <Bookmark className="w-5 h-5 text-[#0D9488]" />
+                  <Bookmark className="w-5 h-5 text-[#6096B4]" />
                   <h3 className={`text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {foundVerse.reference}
                   </h3>
@@ -542,7 +542,7 @@ export default function BibleVerseFinderTool({ uiConfig }: BibleVerseFinderToolP
                     onClick={() => setSearchQuery(fav)}
                     className={`px-3 py-1 rounded-full text-sm transition-colors ${
                       theme === 'dark'
-                        ? t('tools.bibleVerseFinder.bgGray600TextGray', 'bg-gray-600 text-gray-300 hover:bg-[#0D9488] hover:text-white') : t('tools.bibleVerseFinder.bgWhiteTextGray700', 'bg-white text-gray-700 hover:bg-[#0D9488] hover:text-white')
+                        ? t('tools.bibleVerseFinder.bgGray600TextGray', 'bg-gray-600 text-gray-300 hover:bg-[#6096B4] hover:text-white') : t('tools.bibleVerseFinder.bgWhiteTextGray700', 'bg-white text-gray-700 hover:bg-[#6096B4] hover:text-white')
                     }`}
                   >
                     {fav}

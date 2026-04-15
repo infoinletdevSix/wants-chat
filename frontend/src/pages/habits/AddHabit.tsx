@@ -293,7 +293,7 @@ const AddHabit: React.FC = () => {
         <Header />
         <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)]">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto"></div>
             <p className="mt-4 text-white/60">Loading habit details...</p>
           </div>
         </div>
@@ -312,7 +312,7 @@ const AddHabit: React.FC = () => {
             <AlertCircle className="h-12 w-12 text-red-400 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-white mb-2">Failed to load habit</h2>
             <p className="text-white/60 mb-4">{habitError || 'Unable to fetch habit details'}</p>
-            <Button onClick={() => navigate('/habit-planner')} className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+            <Button onClick={() => navigate('/habit-planner')} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
               Back to Habits
             </Button>
           </div>
@@ -339,7 +339,7 @@ const AddHabit: React.FC = () => {
           </Button>
           <div>
             <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <Target className="h-6 w-6 text-teal-400" />
+              <Target className="h-6 w-6 text-primary-400" />
               {isEditMode ? 'Edit Habit' : 'Add New Habit'}
             </h1>
             <p className="text-sm text-white/60 mt-1">
@@ -361,7 +361,7 @@ const AddHabit: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/login')}
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               >
                 Go to Login
               </Button>
@@ -402,7 +402,7 @@ const AddHabit: React.FC = () => {
         <GlassCard className="mb-8">
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-              <Target className="h-5 w-5 text-teal-400" />
+              <Target className="h-5 w-5 text-primary-400" />
               Habit Details
             </h3>
             <p className="text-sm text-white/60 mt-1">Define your habit and set your goals</p>
@@ -432,7 +432,7 @@ const AddHabit: React.FC = () => {
                   <SelectTrigger id="category" className={`mt-1 h-12 rounded-xl bg-white/10 backdrop-blur-xl border-white/20 text-white ${errors.category ? 'border-red-400' : ''}`}>
                     <SelectValue placeholder="Select a category" />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30 text-white">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30 text-white">
                     {categories.map(cat => (
                       <SelectItem key={cat} value={cat} className="text-white hover:bg-white/10">{cat}</SelectItem>
                     ))}
@@ -457,7 +457,7 @@ const AddHabit: React.FC = () => {
             </div>
 
             {/* Target Goal - Always Measurable */}
-            <div className="p-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
+            <div className="p-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
               <Label className="text-sm font-semibold mb-3 block text-white">Target Goal</Label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -484,7 +484,7 @@ const AddHabit: React.FC = () => {
                     <SelectTrigger id="targetUnit" className={`mt-1 h-12 rounded-xl bg-white/10 backdrop-blur-xl border-white/20 text-white ${errors.targetUnit ? 'border-red-400' : ''}`}>
                       <SelectValue placeholder="Select unit" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30 text-white">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30 text-white">
                       <div className="px-2 py-1.5 text-xs font-semibold text-white/40 uppercase">Count</div>
                       {HABIT_UNITS.count.map(unit => (
                         <SelectItem key={unit.value} value={unit.value} className="text-white hover:bg-white/10">{unit.label}</SelectItem>
@@ -542,7 +542,7 @@ const AddHabit: React.FC = () => {
                   <SelectTrigger id="priority" className="mt-1 h-12 rounded-xl bg-white/10 backdrop-blur-xl border-white/20 text-white">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     <SelectItem value="low" className="text-white hover:bg-white/10">
                       <div className="flex items-center gap-2">
                         <Flag className="h-4 w-4 text-green-400" />
@@ -572,7 +572,7 @@ const AddHabit: React.FC = () => {
         <GlassCard className="mb-8">
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-              <CalendarToday className="h-5 w-5 text-teal-400" />
+              <CalendarToday className="h-5 w-5 text-primary-400" />
               Schedule & Frequency
             </h3>
             <p className="text-sm text-white/60 mt-1">When and how often to practice this habit</p>
@@ -590,8 +590,8 @@ const AddHabit: React.FC = () => {
                     onClick={() => toggleWeekDay(day)}
                     className={`px-4 py-2 rounded-xl border-2 transition-all ${
                       formData.frequency.includes(day)
-                        ? 'border-teal-400 bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
-                        : 'border-white/20 text-white/60 hover:border-teal-400 hover:text-white'
+                        ? 'border-primary-400 bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
+                        : 'border-white/20 text-white/60 hover:border-primary-400 hover:text-white'
                     }`}
                   >
                     {day}
@@ -651,7 +651,7 @@ const AddHabit: React.FC = () => {
         <GlassCard className="mb-8">
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-              <NotificationsActive className="h-5 w-5 text-teal-400" />
+              <NotificationsActive className="h-5 w-5 text-primary-400" />
               Reminders
             </h3>
             <p className="text-sm text-white/60 mt-1">Set reminder times for your habit</p>
@@ -679,7 +679,7 @@ const AddHabit: React.FC = () => {
             {formData.reminders.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {formData.reminders.map(reminder => (
-                  <Badge key={reminder} variant="secondary" className="flex items-center gap-1 py-1.5 bg-teal-500/20 text-teal-300 border-teal-500/30">
+                  <Badge key={reminder} variant="secondary" className="flex items-center gap-1 py-1.5 bg-primary-500/20 text-primary-300 border-primary-500/30">
                     <Bell className="h-3 w-3" />
                     {reminder}
                     <button
@@ -708,7 +708,7 @@ const AddHabit: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={creating || updating}
-            className="h-12 px-8 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 border-0"
+            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 border-0"
           >
             {(creating || updating) ? (
               <>

@@ -71,8 +71,8 @@ const TreeNode: React.FC<TreeNodeProps> = ({
           'flex items-center gap-1 py-1 px-2 cursor-pointer rounded text-sm transition-colors',
           isSelected
             ? isDark
-              ? 'bg-[#0D9488]/20 text-[#0D9488]'
-              : 'bg-teal-50 text-teal-700'
+              ? 'bg-[#6096B4]/20 text-[#6096B4]'
+              : 'bg-primary-50 text-primary-700'
             : isDark
             ? 'hover:bg-white/5 text-slate-300'
             : 'hover:bg-slate-100 text-slate-700'

@@ -53,7 +53,7 @@ const CurrencyConverterPage: React.FC = () => {
               onClick={() => setActiveTab('convert')}
               className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === 'convert'
-                  ? 'border-teal-400 text-white'
+                  ? 'border-primary-400 text-white'
                   : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
               }`}
             >
@@ -64,7 +64,7 @@ const CurrencyConverterPage: React.FC = () => {
               onClick={() => setActiveTab('rates')}
               className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === 'rates'
-                  ? 'border-teal-400 text-white'
+                  ? 'border-primary-400 text-white'
                   : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
               }`}
             >
@@ -75,7 +75,7 @@ const CurrencyConverterPage: React.FC = () => {
               onClick={() => setActiveTab('charts')}
               className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === 'charts'
-                  ? 'border-teal-400 text-white'
+                  ? 'border-primary-400 text-white'
                   : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
               }`}
             >
@@ -86,7 +86,7 @@ const CurrencyConverterPage: React.FC = () => {
               onClick={() => setActiveTab('alerts')}
               className={`flex items-center gap-2 px-1 py-3 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === 'alerts'
-                  ? 'border-teal-400 text-white'
+                  ? 'border-primary-400 text-white'
                   : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
               }`}
             >

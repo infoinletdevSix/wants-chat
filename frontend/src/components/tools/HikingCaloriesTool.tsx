@@ -114,9 +114,9 @@ export const HikingCaloriesTool: React.FC<HikingCaloriesToolProps> = ({ uiConfig
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Mountain className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Mountain className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.hikingCalories.hikingCaloriesCalculator', 'Hiking Calories Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.hikingCalories.estimateCaloriesBurnedOnYour', 'Estimate calories burned on your hike')}</p>
@@ -167,7 +167,7 @@ export const HikingCaloriesTool: React.FC<HikingCaloriesToolProps> = ({ uiConfig
             <button
               key={d}
               onClick={() => setDuration(d.toString())}
-              className={`flex-1 py-2 rounded-lg text-sm ${parseInt(duration) === d ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`flex-1 py-2 rounded-lg text-sm ${parseInt(duration) === d ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               {d >= 60 ? `${d / 60}h` : `${d}min`}
             </button>
@@ -222,7 +222,7 @@ export const HikingCaloriesTool: React.FC<HikingCaloriesToolProps> = ({ uiConfig
                 onClick={() => setTerrain(t)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   terrain === t
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -249,7 +249,7 @@ export const HikingCaloriesTool: React.FC<HikingCaloriesToolProps> = ({ uiConfig
                 onClick={() => setPackWeight(p)}
                 className={`py-3 px-3 rounded-lg text-sm flex flex-col items-center gap-1 ${
                   packWeight === p
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -265,11 +265,11 @@ export const HikingCaloriesTool: React.FC<HikingCaloriesToolProps> = ({ uiConfig
         </div>
 
         {/* Results */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {distance} {distanceUnit} hike over {parseFloat(duration) / 60} hours
           </div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {Math.round(calculation.totalCalories)}
           </div>
           <div className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.hikingCalories.caloriesBurned', 'calories burned')}</div>

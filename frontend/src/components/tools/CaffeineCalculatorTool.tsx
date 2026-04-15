@@ -278,7 +278,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Coffee className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -474,7 +474,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
                     {/* Caffeine curve */}
                     <polyline
                       fill="none"
-                      stroke="#0D9488"
+                      stroke="#6096B4"
                       strokeWidth="1"
                       points={graphData.map((point, i) => {
                         const x = (point.hour / 24) * 100;
@@ -485,7 +485,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
 
                     {/* Area fill under curve */}
                     <polygon
-                      fill="#0D9488"
+                      fill="#6096B4"
                       fillOpacity="0.1"
                       points={`0,100 ${graphData.map((point) => {
                         const x = (point.hour / 24) * 100;
@@ -509,7 +509,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
               {/* Legend */}
               <div className="flex gap-4 mt-2 text-xs">
                 <div className="flex items-center gap-1">
-                  <div className="w-3 h-0.5 bg-[#0D9488]"></div>
+                  <div className="w-3 h-0.5 bg-[#6096B4]"></div>
                   <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}>{t('tools.caffeineCalculator.caffeineLevel', 'Caffeine Level')}</span>
                 </div>
                 <div className="flex items-center gap-1">
@@ -543,7 +543,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
                     theme === 'dark'
                       ? 'bg-gray-600 border-gray-500 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {DRINK_OPTIONS.map((option) => (
                     <option key={option.name} value={option.name}>
@@ -569,7 +569,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               )}
@@ -591,7 +591,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -600,7 +600,7 @@ export const CaffeineCalculatorTool = ({ uiConfig }: CaffeineCalculatorToolProps
               <div className={`flex items-end ${selectedDrink === 'Custom Amount' ? '' : 'md:col-span-1'}`}>
                 <button
                   onClick={addDrink}
-                  className="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.caffeineCalculator.addDrink', 'Add Drink')}

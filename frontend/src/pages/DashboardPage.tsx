@@ -157,9 +157,9 @@ const getActivityColorClasses = (color: string) => {
       border: 'border-green-200/50 dark:border-green-700/30'
     },
     teal: {
-      bg: 'from-teal-50 to-cyan-50 dark:from-teal-900/10 dark:to-cyan-900/10',
-      icon: 'from-teal-500 to-cyan-500',
-      border: 'border-teal-200/50 dark:border-teal-700/30'
+      bg: 'from-primary-50 to-cyan-50 dark:from-primary-900/10 dark:to-cyan-900/10',
+      icon: 'from-primary-500 to-cyan-500',
+      border: 'border-primary-200/50 dark:border-primary-700/30'
     },
     sky: {
       bg: 'from-sky-50 to-blue-50 dark:from-sky-900/10 dark:to-blue-900/10',
@@ -336,7 +336,7 @@ export const DashboardPage = () => {
           className="flex items-center justify-between mb-6"
         >
           <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
               {t('dashboard.welcomeBack', { name: user?.name || user?.email?.split('@')[0] || 'User' })}
             </h1>
             <p className="text-white/60 mt-1">
@@ -389,7 +389,7 @@ export const DashboardPage = () => {
         >
           {quickStats.map((stat, index) => {
             const colors = [
-              'from-teal-500 to-cyan-500',
+              'from-primary-500 to-cyan-500',
               'from-emerald-500 to-green-500',
               'from-purple-500 to-indigo-500',
               'from-amber-500 to-orange-500'
@@ -434,7 +434,7 @@ export const DashboardPage = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg flex items-center justify-center">
                       <TrendingUp className="h-4 w-4 text-white" />
                     </div>
                     {t('dashboard.personalStats.title')}
@@ -444,7 +444,7 @@ export const DashboardPage = () => {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-white/40">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
                   <span>{t('dashboard.personalStats.syncedData')}</span>
                 </div>
               </div>
@@ -630,7 +630,7 @@ export const DashboardPage = () => {
                 {isAppSelected('expense-tracker') && (
                 <div className="p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl hover:shadow-lg transition-shadow duration-200">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg flex items-center justify-center">
                       <DollarSign className="h-4 w-4 text-white" />
                     </div>
                     <h4 className="text-xs font-semibold text-white/60">Transactions</h4>
@@ -819,7 +819,7 @@ export const DashboardPage = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-lg flex items-center justify-center">
                     <Grid3X3 className="h-4 w-4 text-white" />
                   </div>
                   {t('dashboard.myApps.title')}
@@ -829,7 +829,7 @@ export const DashboardPage = () => {
                 </p>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/40">
-                <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
                 <span>{t('dashboard.myApps.appsAvailable', { count: filteredUsedApps.length || 0 })}</span>
               </div>
             </div>
@@ -934,7 +934,7 @@ export const DashboardPage = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-emerald-500 rounded-lg flex items-center justify-center">
                     <Activity className="h-4 w-4 text-white" />
                   </div>
                   {t('dashboard.todayActivity.title')}
@@ -944,7 +944,7 @@ export const DashboardPage = () => {
                 </p>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/40">
-                <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
                 <span>{t('dashboard.todayActivity.liveUpdates')}</span>
               </div>
             </div>

@@ -35,7 +35,7 @@ export const SleepStatsCards: React.FC<SleepStatsCardsProps> = ({
       label: 'Efficiency',
       value: summary?.averageEfficiency ? `${Math.round(summary.averageEfficiency)}%` : '0%',
       icon: Activity,
-      color: 'from-cyan-500 to-teal-500',
+      color: 'from-cyan-500 to-primary-500',
       change: progress?.efficiencyProgress ? `${Math.round(progress.efficiencyProgress)}% of goal` : undefined,
     },
     {

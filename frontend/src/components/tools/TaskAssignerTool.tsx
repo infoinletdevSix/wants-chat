@@ -26,7 +26,7 @@ interface Assignment {
 }
 
 const defaultColors = [
-  '#14b8a6', '#f97316', '#8b5cf6', '#ec4899', '#06b6d4',
+  '#75AAC1', '#f97316', '#8b5cf6', '#ec4899', '#06b6d4',
   '#84cc16', '#f59e0b', '#6366f1', '#ef4444', '#22c55e',
 ];
 
@@ -201,9 +201,9 @@ export const TaskAssignerTool: React.FC<TaskAssignerToolProps> = ({ uiConfig }) 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Users className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Users className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.taskAssigner.randomTaskAssigner', 'Random Task Assigner')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.taskAssigner.fairlyDistributeTasksAmongTeam', 'Fairly distribute tasks among team members')}</p>
@@ -252,7 +252,7 @@ export const TaskAssignerTool: React.FC<TaskAssignerToolProps> = ({ uiConfig }) 
             <button
               onClick={addPerson}
               disabled={!newPersonName.trim()}
-              className={`px-4 py-2 rounded-lg ${newPersonName.trim() ? 'bg-teal-500 text-white hover:bg-teal-600' : isDark ? 'bg-gray-700 text-gray-500' : 'bg-gray-200 text-gray-400'}`}
+              className={`px-4 py-2 rounded-lg ${newPersonName.trim() ? 'bg-primary-500 text-white hover:bg-primary-600' : isDark ? 'bg-gray-700 text-gray-500' : 'bg-gray-200 text-gray-400'}`}
             >
               <Plus className="w-5 h-5" />
             </button>
@@ -308,7 +308,7 @@ export const TaskAssignerTool: React.FC<TaskAssignerToolProps> = ({ uiConfig }) 
             <button
               onClick={addTask}
               disabled={!newTaskName.trim()}
-              className={`px-4 py-2 rounded-lg ${newTaskName.trim() ? 'bg-teal-500 text-white hover:bg-teal-600' : isDark ? 'bg-gray-700 text-gray-500' : 'bg-gray-200 text-gray-400'}`}
+              className={`px-4 py-2 rounded-lg ${newTaskName.trim() ? 'bg-primary-500 text-white hover:bg-primary-600' : isDark ? 'bg-gray-700 text-gray-500' : 'bg-gray-200 text-gray-400'}`}
             >
               <Plus className="w-5 h-5" />
             </button>
@@ -322,7 +322,7 @@ export const TaskAssignerTool: React.FC<TaskAssignerToolProps> = ({ uiConfig }) 
               type="checkbox"
               checked={fairMode}
               onChange={(e) => setFairMode(e.target.checked)}
-              className="w-5 h-5 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+              className="w-5 h-5 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
             />
             <div>
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -351,7 +351,7 @@ export const TaskAssignerTool: React.FC<TaskAssignerToolProps> = ({ uiConfig }) 
             className={`flex-1 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 ${
               people.length === 0 || tasks.length === 0
                 ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
-                : 'bg-teal-500 text-white hover:bg-teal-600'
+                : 'bg-primary-500 text-white hover:bg-primary-600'
             } ${isAssigning ? 'animate-pulse' : ''}`}
           >
             {isAssigning ? (
@@ -365,7 +365,7 @@ export const TaskAssignerTool: React.FC<TaskAssignerToolProps> = ({ uiConfig }) 
 
         {/* Assignments Summary */}
         {assignments.length > 0 && (
-          <div className={`p-4 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'}`}>
+          <div className={`p-4 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'}`}>
             <div className="flex items-center justify-between mb-4">
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.taskAssigner.taskAssignments', 'Task Assignments')}

@@ -161,9 +161,9 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><TrendingDown className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><TrendingDown className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.carDepreciation.carDepreciationCalculator', 'Car Depreciation Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.carDepreciation.estimateYourVehicleSValue', 'Estimate your vehicle\'s value over time')}</p>
@@ -173,9 +173,9 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.carDepreciation.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.carDepreciation.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -210,7 +210,7 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
                 onClick={() => setVehicleType(type.value as typeof vehicleType)}
                 className={`p-2 rounded-lg text-sm font-medium transition-all ${
                   vehicleType === type.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -288,11 +288,11 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
         </div>
 
         {/* Current Value Display */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {parseInt(vehicleAge) === 0 ? t('tools.carDepreciation.valueAfterYear1', 'Value After Year 1') : t('tools.carDepreciation.estimatedCurrentValue', 'Estimated Current Value')}
           </div>
-          <div className="text-4xl font-bold text-teal-500 my-2">
+          <div className="text-4xl font-bold text-primary-500 my-2">
             {formatCurrency(calculations.currentValue)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -304,7 +304,7 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
         <div className="grid grid-cols-3 gap-4">
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Value in {yearsToProject}yr</div>
-            <div className="text-xl font-bold text-teal-500">{formatCurrency(calculations.futureValue)}</div>
+            <div className="text-xl font-bold text-primary-500">{formatCurrency(calculations.futureValue)}</div>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.carDepreciation.totalDepreciation', 'Total Depreciation')}</div>
@@ -319,7 +319,7 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
         {/* Depreciation Schedule */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <BarChart3 className="w-4 h-4 text-teal-500" />
+            <BarChart3 className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.carDepreciation.depreciationSchedule', 'Depreciation Schedule')}</h4>
           </div>
           <div className="max-h-64 overflow-y-auto">
@@ -336,7 +336,7 @@ export const CarDepreciationTool: React.FC<CarDepreciationToolProps> = ({ uiConf
                 {calculations.schedule.map((row, idx) => (
                   <tr key={idx} className={`border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                     <td className="py-2">Year {row.year}</td>
-                    <td className="text-right py-2 text-teal-500 font-medium">{formatCurrency(row.value)}</td>
+                    <td className="text-right py-2 text-primary-500 font-medium">{formatCurrency(row.value)}</td>
                     <td className="text-right py-2 text-red-500">{row.depreciation > 0 ? `-${formatCurrency(row.depreciation)}` : '-'}</td>
                     <td className="text-right py-2">{row.percentOfOriginal.toFixed(1)}%</td>
                   </tr>

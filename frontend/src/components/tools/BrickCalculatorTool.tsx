@@ -133,10 +133,10 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Brick className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Brick className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.brickCalculator.brickCalculator', 'Brick Calculator')}</h3>
@@ -158,7 +158,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
               value={wallLength}
               onChange={(e) => setWallLength(e.target.value)}
               min="1"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="space-y-2">
@@ -170,7 +170,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
               value={wallHeight}
               onChange={(e) => setWallHeight(e.target.value)}
               min="1"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
@@ -188,7 +188,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
                 onClick={() => setBrickSize(key as BrickSize)}
                 className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                   brickSize === key
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -216,7 +216,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
                 onClick={() => setBondPattern(key as BondPattern)}
                 className={`py-3 px-3 rounded-lg text-sm font-medium text-left transition-colors ${
                   bondPattern === key
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -245,7 +245,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
               value={numberOfOpenings}
               onChange={(e) => setNumberOfOpenings(e.target.value)}
               min="0"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
               {t('tools.brickCalculator.windowsDoorsEtc', 'Windows, doors, etc.')}
@@ -261,7 +261,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
               onChange={(e) => setOpeningArea(e.target.value)}
               min="0"
               step="0.5"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
@@ -278,7 +278,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
               onChange={(e) => setExtraWaste(e.target.value)}
               min="0"
               max="25"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="space-y-2">
@@ -291,7 +291,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
               onChange={(e) => setBrickCost(e.target.value)}
               min="0"
               step="0.05"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
@@ -300,7 +300,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.brickCalculator.wallArea', 'Wall Area')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{calculations.netArea.toFixed(0)}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{calculations.netArea.toFixed(0)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.brickCalculator.sqFtNet', 'sq ft (net)')}</div>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
@@ -340,9 +340,9 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-800' : t('tools.brickCalculator.bg0d948810', 'bg-[#0D9488]/10')}`}>
+        <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-800' : t('tools.brickCalculator.bg0d948810', 'bg-[#6096B4]/10')}`}>
           <div className="flex items-center gap-2 mb-3">
-            <DollarSign className="w-5 h-5 text-[#0D9488]" />
+            <DollarSign className="w-5 h-5 text-[#6096B4]" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.brickCalculator.materialCostEstimate', 'Material Cost Estimate')}</span>
           </div>
           <div className="grid grid-cols-2 gap-4 text-sm mb-3">
@@ -366,7 +366,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
             </div>
             <div>
               <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.brickCalculator.totalMaterials', 'Total Materials')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">
+              <div className="text-xl font-bold text-[#6096B4]">
                 ${calculations.totalMaterialCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </div>
             </div>
@@ -377,7 +377,7 @@ export const BrickCalculatorTool: React.FC<BrickCalculatorToolProps> = ({ uiConf
         </div>
 
         {/* Summary Box */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.brickCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.brickCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.brickCalculator.projectSummary', 'Project Summary')}</h4>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div className={isDark ? 'text-gray-300' : 'text-gray-700'}>

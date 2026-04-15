@@ -138,8 +138,8 @@ export const ResizablePanel: React.FC<ResizablePanelProps> = ({
         onTouchStart={handleTouchStart}
         className={cn(
           "absolute left-0 top-0 bottom-0 w-1 cursor-col-resize z-10",
-          "hover:bg-[#0D9488]/50 active:bg-[#0D9488]/70 transition-colors",
-          isDragging && "bg-[#0D9488]/70",
+          "hover:bg-[#6096B4]/50 active:bg-[#6096B4]/70 transition-colors",
+          isDragging && "bg-[#6096B4]/70",
           theme === 'dark' ? 'bg-[#2a2a2a]' : 'bg-slate-200'
         )}
       >

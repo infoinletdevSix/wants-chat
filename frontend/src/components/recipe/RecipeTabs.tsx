@@ -48,7 +48,7 @@ export const RecipeTabs: React.FC<RecipeTabsProps> = ({ activeTab, onTabChange }
           onClick={() => onTabChange(tab.id)}
           className={`flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 rounded-xl transition-all duration-200 whitespace-nowrap min-h-[44px] font-medium ${
             activeTab === tab.id
-              ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg scale-105'
+              ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-lg scale-105'
               : 'text-white/60 hover:text-white hover:bg-white/10 bg-transparent'
           }`}
         >

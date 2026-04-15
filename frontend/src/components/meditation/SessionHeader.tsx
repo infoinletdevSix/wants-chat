@@ -38,7 +38,7 @@ export const SessionHeader: React.FC<SessionHeaderProps> = ({
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <div className="flex items-center gap-3">
-              <Icon path={mdiMeditation} size={1.2} className="text-teal-400" />
+              <Icon path={mdiMeditation} size={1.2} className="text-primary-400" />
               <div>
                 <h1 className="text-lg font-semibold">
                   {formatCategory(category)} Session

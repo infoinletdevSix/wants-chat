@@ -476,9 +476,9 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.projectBid.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.projectBid.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -486,7 +486,7 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
         <div className={`${cardBg} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -538,7 +538,7 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
                 }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeTab === id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : `${textSecondary} hover:bg-gray-700`
                 }`}
               >
@@ -930,7 +930,7 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
                 <div>
                   <button
                     onClick={addLineItem}
-                    className="w-full px-3 py-2 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0B7C72] flex items-center justify-center gap-2"
+                    className="w-full px-3 py-2 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#0B7C72] flex items-center justify-center gap-2"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.projectBid.add', 'Add')}
@@ -1054,7 +1054,7 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
                     <div className={`border-t pt-2 mt-2 ${cardBorder}`}>
                       <div className="flex justify-between text-lg font-bold">
                         <span className={textPrimary}>{t('tools.projectBid.totalBid', 'Total Bid:')}</span>
-                        <span className="text-[#0D9488]">{formatCurrency(formData.totalBid || 0)}</span>
+                        <span className="text-[#6096B4]">{formatCurrency(formData.totalBid || 0)}</span>
                       </div>
                     </div>
                   </div>
@@ -1077,7 +1077,7 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
             <div className="flex gap-4">
               <button
                 onClick={saveBid}
-                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#0D9488] text-white font-medium hover:bg-[#0B7C72]"
+                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#6096B4] text-white font-medium hover:bg-[#0B7C72]"
               >
                 <Save className="w-5 h-5" />
                 {selectedBidId ? t('tools.projectBid.updateBid', 'Update Bid') : t('tools.projectBid.createBid', 'Create Bid')}
@@ -1135,7 +1135,7 @@ export const ProjectBidTool: React.FC<ProjectBidToolProps> = ({ uiConfig }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className={`p-6 rounded-xl border ${cardBorder}`}>
                 <h3 className={`text-lg font-semibold ${textPrimary} mb-4`}>{t('tools.projectBid.totalBidValue', 'Total Bid Value')}</h3>
-                <p className={`text-4xl font-bold text-[#0D9488]`}>{formatCurrency(analytics.totalValue)}</p>
+                <p className={`text-4xl font-bold text-[#6096B4]`}>{formatCurrency(analytics.totalValue)}</p>
                 <p className={`text-sm ${textSecondary} mt-2`}>{t('tools.projectBid.acrossAllBids', 'Across all bids')}</p>
               </div>
               <div className={`p-6 rounded-xl border ${cardBorder}`}>

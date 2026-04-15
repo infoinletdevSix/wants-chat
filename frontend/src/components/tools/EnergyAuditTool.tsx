@@ -127,8 +127,8 @@ const CATEGORY_CONFIG: Record<AuditCategory, {
   water: {
     label: 'Water Heating',
     icon: Droplet,
-    color: 'text-teal-500',
-    bgColor: 'bg-teal-500/10',
+    color: 'text-primary-500',
+    bgColor: 'bg-primary-500/10',
     description: 'Water heater and plumbing',
   },
   renewable: {
@@ -500,7 +500,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -548,7 +548,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
                   onClick={() => setActiveTab(tab as typeof activeTab)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeTab === tab
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -570,7 +570,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
               </h2>
               <button
                 onClick={() => setShowAuditForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.energyAudit.newAudit', 'New Audit')}
@@ -689,7 +689,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
                   </button>
                   <button
                     onClick={createAudit}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.energyAudit.createAudit', 'Create Audit')}
                   </button>
@@ -712,7 +712,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
                     onClick={() => setSelectedAuditId(audit.id)}
                     className={`p-4 rounded-lg border cursor-pointer transition-colors ${
                       theme === 'dark'
-                        ? t('tools.energyAudit.bgGray700BorderGray', 'bg-gray-700 border-gray-600 hover:border-[#0D9488]') : t('tools.energyAudit.bgGray50BorderGray', 'bg-gray-50 border-gray-200 hover:border-[#0D9488]')
+                        ? t('tools.energyAudit.bgGray700BorderGray', 'bg-gray-700 border-gray-600 hover:border-[#6096B4]') : t('tools.energyAudit.bgGray50BorderGray', 'bg-gray-50 border-gray-200 hover:border-[#6096B4]')
                     }`}
                   >
                     <div className="flex items-start justify-between mb-3">
@@ -837,7 +837,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
                   </select>
                   <button
                     onClick={() => setShowItemForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.energyAudit.addItem', 'Add Item')}
@@ -900,7 +900,7 @@ export const EnergyAuditTool: React.FC<EnergyAuditToolProps> = ({ uiConfig }) =>
                       </button>
                       <button
                         onClick={addAuditItem}
-                        className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                        className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                       >
                         {t('tools.energyAudit.addItem2', 'Add Item')}
                       </button>

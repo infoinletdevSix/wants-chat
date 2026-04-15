@@ -614,7 +614,7 @@ export function CopyShopTool({
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -687,7 +687,7 @@ export function CopyShopTool({
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-500'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-            } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+            } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
           />
         </div>
         <select
@@ -697,7 +697,7 @@ export function CopyShopTool({
             theme === 'dark'
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-200 text-gray-900'
-          } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+          } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
         >
           <option value="all">{t('tools.copyShop.allStatus', 'All Status')}</option>
           <option value="pending">{t('tools.copyShop.pending2', 'Pending')}</option>
@@ -713,7 +713,7 @@ export function CopyShopTool({
             theme === 'dark'
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-200 text-gray-900'
-          } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+          } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
         >
           <option value="all">{t('tools.copyShop.allPriority', 'All Priority')}</option>
           <option value="normal">{t('tools.copyShop.normal', 'Normal')}</option>
@@ -825,7 +825,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
           <div>
@@ -841,7 +841,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
           <div>
@@ -857,7 +857,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
         </div>
@@ -881,7 +881,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="walk-in">{t('tools.copyShop.walkInWait', 'Walk-in (Wait)')}</option>
               <option value="pickup">{t('tools.copyShop.pickupLater', 'Pickup Later')}</option>
@@ -899,7 +899,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="normal">{t('tools.copyShop.normal2', 'Normal')}</option>
               <option value="same-day">{t('tools.copyShop.sameDay25', 'Same Day (+25%)')}</option>
@@ -918,7 +918,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
           <div>
@@ -936,7 +936,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
         </div>
@@ -953,7 +953,7 @@ export function CopyShopTool({
               theme === 'dark'
                 ? 'bg-gray-600 border-gray-500 text-white placeholder:text-gray-400'
                 : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-            } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none resize-none`}
+            } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none resize-none`}
           />
         </div>
       </div>
@@ -977,7 +977,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="copy">{t('tools.copyShop.copy', 'Copy')}</option>
               <option value="print">{t('tools.copyShop.print', 'Print')}</option>
@@ -1003,7 +1003,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white placeholder:text-gray-400'
                   : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
           <div>
@@ -1019,7 +1019,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
           <div>
@@ -1035,7 +1035,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             />
           </div>
         </div>
@@ -1052,7 +1052,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="letter">{t('tools.copyShop.letter85X11', 'Letter (8.5" x 11")')}</option>
               <option value="legal">{t('tools.copyShop.legal85X14', 'Legal (8.5" x 14")')}</option>
@@ -1075,7 +1075,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="standard">{t('tools.copyShop.standard20lb', 'Standard (20lb)')}</option>
               <option value="cardstock">{t('tools.copyShop.cardstock65lb', 'Cardstock (65lb)')}</option>
@@ -1097,7 +1097,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="bw">{t('tools.copyShop.blackWhite', 'Black & White')}</option>
               <option value="color">{t('tools.copyShop.fullColor', 'Full Color')}</option>
@@ -1114,7 +1114,7 @@ export function CopyShopTool({
                 theme === 'dark'
                   ? 'bg-gray-600 border-gray-500 text-white'
                   : 'bg-white border-gray-200 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+              } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
             >
               <option value="none">None</option>
               <option value="staple">{t('tools.copyShop.staple025', 'Staple (+$0.25)')}</option>
@@ -1132,7 +1132,7 @@ export function CopyShopTool({
               type="checkbox"
               checked={currentItem.doubleSided}
               onChange={(e) => setCurrentItem({ ...currentItem, doubleSided: e.target.checked })}
-              className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+              className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
             />
             {t('tools.copyShop.doubleSided10Off', 'Double-sided (10% off)')}
           </label>
@@ -1141,7 +1141,7 @@ export function CopyShopTool({
               type="checkbox"
               checked={currentItem.collated}
               onChange={(e) => setCurrentItem({ ...currentItem, collated: e.target.checked })}
-              className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+              className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
             />
             {t('tools.copyShop.collated', 'Collated')}
           </label>
@@ -1154,7 +1154,7 @@ export function CopyShopTool({
           <button
             onClick={addItemToOrder}
             disabled={!currentItem.fileName}
-            className="px-6 py-2.5 bg-[#0D9488] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-6 py-2.5 bg-[#6096B4] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('tools.copyShop.addItem', 'Add Item')}
@@ -1225,14 +1225,14 @@ export function CopyShopTool({
             )}
             <div className="flex items-center justify-between text-lg font-bold">
               <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{t('tools.copyShop.total', 'Total')}</span>
-              <span className="text-[#0D9488]">{formatCurrency(orderTotal)}</span>
+              <span className="text-[#6096B4]">{formatCurrency(orderTotal)}</span>
             </div>
           </div>
 
           <button
             onClick={submitOrder}
             disabled={!orderForm.customerName || orderItems.length === 0}
-            className="w-full mt-4 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#0B7C71] hover:to-[#0D9488] text-white font-semibold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full mt-4 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#0B7C71] hover:to-[#6096B4] text-white font-semibold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             <Check className="w-5 h-5" />
             {t('tools.copyShop.createOrder', 'Create Order')}
@@ -1250,7 +1250,7 @@ export function CopyShopTool({
         </h3>
         <button
           onClick={() => setShowFileUploadModal(true)}
-          className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors flex items-center gap-2"
         >
           <Upload className="w-4 h-4" />
           {t('tools.copyShop.uploadFile', 'Upload File')}
@@ -1301,7 +1301,7 @@ export function CopyShopTool({
         </h3>
         <button
           onClick={() => setShowSupplyModal(true)}
-          className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
           {t('tools.copyShop.addSupply', 'Add Supply')}
@@ -1366,7 +1366,7 @@ export function CopyShopTool({
                       updateSupplyStock(item.id, parseInt(newStock))
                     }
                   }}
-                  className="text-[#0D9488] hover:text-[#0B7C71] font-medium"
+                  className="text-[#6096B4] hover:text-[#0B7C71] font-medium"
                 >
                   {t('tools.copyShop.update', 'Update')}
                 </button>
@@ -1386,7 +1386,7 @@ export function CopyShopTool({
         </h3>
         <button
           onClick={() => setShowMaintenanceModal(true)}
-          className="px-4 py-2 bg-[#0D9488] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
           {t('tools.copyShop.logMaintenance', 'Log Maintenance')}
@@ -1720,7 +1720,7 @@ export function CopyShopTool({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                     : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
               />
             </div>
 
@@ -1735,7 +1735,7 @@ export function CopyShopTool({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-200 text-gray-900'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
               >
                 <option value="routine">{t('tools.copyShop.routineMaintenance', 'Routine Maintenance')}</option>
                 <option value="repair">{t('tools.copyShop.repair', 'Repair')}</option>
@@ -1759,7 +1759,7 @@ export function CopyShopTool({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                     : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none resize-none`}
+                } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none resize-none`}
               />
             </div>
 
@@ -1777,7 +1777,7 @@ export function CopyShopTool({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400'
                       : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'
-                  } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+                  } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
                 />
               </div>
               <div>
@@ -1794,7 +1794,7 @@ export function CopyShopTool({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-200 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none`}
+                  } focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none`}
                 />
               </div>
             </div>
@@ -1802,7 +1802,7 @@ export function CopyShopTool({
             <button
               onClick={addMaintenanceLog}
               disabled={!maintenanceForm.machineName || !maintenanceForm.description}
-              className="w-full py-3 bg-[#0D9488] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-[#6096B4] hover:bg-[#0B7C71] text-white font-medium rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {t('tools.copyShop.saveMaintenanceLog', 'Save Maintenance Log')}
             </button>
@@ -1818,8 +1818,8 @@ export function CopyShopTool({
         <CardHeader className={`border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'}`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <Printer className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <Printer className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <CardTitle className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>
@@ -1866,9 +1866,9 @@ export function CopyShopTool({
         <CardContent className="p-6">
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.copyShop.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.copyShop.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
             </div>
           )}
 
@@ -1887,7 +1887,7 @@ export function CopyShopTool({
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'text-gray-400 hover:text-white hover:bg-gray-600'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-white'

@@ -198,9 +198,9 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Mountain className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Mountain className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.altitudeSickness.altitudeSicknessRiskAssessment', 'Altitude Sickness Risk Assessment')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.altitudeSickness.evaluateYourAmsRiskAnd', 'Evaluate your AMS risk and get recommendations')}</p>
@@ -253,7 +253,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
               <button
                 key={dest.name}
                 onClick={() => setTargetAltitude(dest.alt.toString())}
-                className={`px-3 py-1.5 rounded-lg text-sm ${parseInt(targetAltitude) === dest.alt ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`px-3 py-1.5 rounded-lg text-sm ${parseInt(targetAltitude) === dest.alt ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {dest.name} ({dest.alt}m)
               </button>
@@ -271,7 +271,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
               <button
                 key={d}
                 onClick={() => setAscentDays(d.toString())}
-                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(ascentDays) === d ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(ascentDays) === d ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {d} {d === 1 ? 'day' : 'days'}
               </button>
@@ -291,7 +291,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
                 onClick={() => setFitnessLevel(level)}
                 className={`py-3 px-3 rounded-lg text-sm ${
                   fitnessLevel === level
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -313,7 +313,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
               <button
                 key={d}
                 onClick={() => setAcclimatization(d)}
-                className={`flex-1 py-2 rounded-lg text-sm ${acclimatization === d ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm ${acclimatization === d ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {d}
               </button>
@@ -328,7 +328,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
               type="checkbox"
               checked={previousAMS}
               onChange={(e) => setPreviousAMS(e.target.checked)}
-              className="w-5 h-5 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+              className="w-5 h-5 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
             />
             <div>
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -357,7 +357,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
                       ? 'bg-red-500 text-white'
                       : symptom.severity === 'moderate'
                       ? 'bg-orange-500 text-white'
-                      : 'bg-teal-500 text-white'
+                      : 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -388,7 +388,7 @@ export const AltitudeSicknessTool: React.FC<AltitudeSicknessToolProps> = ({ uiCo
         {/* Prevention Tips */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <CheckCircle className="w-4 h-4 text-teal-500" />
+            <CheckCircle className="w-4 h-4 text-primary-500" />
             {t('tools.altitudeSickness.preventionTips', 'Prevention Tips')}
           </h4>
           <ul className={`space-y-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

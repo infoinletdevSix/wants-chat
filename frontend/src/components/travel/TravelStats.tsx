@@ -106,8 +106,8 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30 flex items-center justify-center">
-            <Public className="h-5 w-5 text-teal-400" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30 flex items-center justify-center">
+            <Public className="h-5 w-5 text-primary-400" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-white">
@@ -123,7 +123,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <Button
             size="sm"
             onClick={() => setViewMode('globe')}
-            className={`rounded-xl ${viewMode === 'globe' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
+            className={`rounded-xl ${viewMode === 'globe' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
           >
             <Public className="h-4 w-4 mr-1" />
             Globe
@@ -131,7 +131,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <Button
             size="sm"
             onClick={() => setViewMode('stats')}
-            className={`rounded-xl ${viewMode === 'stats' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
+            className={`rounded-xl ${viewMode === 'stats' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'}`}
           >
             <TravelExplore className="h-4 w-4 mr-1" />
             Stats
@@ -212,7 +212,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between">
               <CardTitle className="flex items-center gap-2 text-white">
-                <Public className="h-5 w-5 text-teal-400" />
+                <Public className="h-5 w-5 text-primary-400" />
                 Interactive Travel Globe
               </CardTitle>
               <div className="flex items-center gap-2">
@@ -267,7 +267,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
-                <LocationOn className="h-5 w-5 text-teal-400" />
+                <LocationOn className="h-5 w-5 text-primary-400" />
                 Visited Countries
               </CardTitle>
             </CardHeader>
@@ -304,7 +304,7 @@ const TravelStats: React.FC<TravelStatsProps> = ({ travelPlans, className }) => 
           <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
-                <EmojiEvents className="h-5 w-5 text-teal-400" />
+                <EmojiEvents className="h-5 w-5 text-primary-400" />
                 Travel Achievements
               </CardTitle>
             </CardHeader>

@@ -128,7 +128,7 @@ const RecipeDetail: React.FC = () => {
           />
           <div className="flex items-center justify-center py-32">
             <div className="text-center">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500 mb-4"></div>
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mb-4"></div>
               <h2 className="text-xl font-semibold mb-2 text-white">Loading Recipe...</h2>
             </div>
           </div>

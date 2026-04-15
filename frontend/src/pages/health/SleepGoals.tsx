@@ -159,7 +159,7 @@ const SleepGoals: React.FC = () => {
               </Button>
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500"
                 onClick={handleSave}
                 disabled={updateGoalMutation.isPending}
               >
@@ -188,7 +188,7 @@ const SleepGoals: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label>Target Duration</Label>
-                    <span className="text-lg font-semibold text-teal-400">
+                    <span className="text-lg font-semibold text-primary-400">
                       {formatDuration(formData.targetDurationMinutes)}
                     </span>
                   </div>
@@ -201,7 +201,7 @@ const SleepGoals: React.FC = () => {
                     onChange={(e) =>
                       handleChange('targetDurationMinutes', parseInt(e.target.value))
                     }
-                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-primary-500"
                   />
                   <div className="flex justify-between text-xs text-white/40">
                     <span>5h</span>
@@ -257,7 +257,7 @@ const SleepGoals: React.FC = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-teal-400" />
+                  <TrendingUp className="w-5 h-5 text-primary-400" />
                   Quality Targets
                 </CardTitle>
                 <CardDescription>
@@ -269,7 +269,7 @@ const SleepGoals: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label>Target Quality Score</Label>
-                    <span className="text-lg font-semibold text-teal-400">
+                    <span className="text-lg font-semibold text-primary-400">
                       {formData.targetQualityScore}/100
                     </span>
                   </div>
@@ -282,7 +282,7 @@ const SleepGoals: React.FC = () => {
                     onChange={(e) =>
                       handleChange('targetQualityScore', parseInt(e.target.value))
                     }
-                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-primary-500"
                   />
                   <div className="flex justify-between text-xs text-white/40">
                     <span>50 (minimum)</span>
@@ -295,7 +295,7 @@ const SleepGoals: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label>Target Efficiency</Label>
-                    <span className="text-lg font-semibold text-teal-400">
+                    <span className="text-lg font-semibold text-primary-400">
                       {formData.targetEfficiency}%
                     </span>
                   </div>
@@ -308,7 +308,7 @@ const SleepGoals: React.FC = () => {
                     onChange={(e) =>
                       handleChange('targetEfficiency', parseInt(e.target.value))
                     }
-                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-primary-500"
                   />
                   <div className="flex justify-between text-xs text-white/40">
                     <span>70%</span>
@@ -369,7 +369,7 @@ const SleepGoals: React.FC = () => {
 
                     <div className="pt-4 border-t border-white/10">
                       <div className="text-center">
-                        <p className="text-3xl font-bold text-teal-400">
+                        <p className="text-3xl font-bold text-primary-400">
                           {progress.streakDays || 0}
                         </p>
                         <p className="text-sm text-white/60">day streak</p>
@@ -405,19 +405,19 @@ const SleepGoals: React.FC = () => {
               <CardContent>
                 <ul className="space-y-2 text-sm text-white/70">
                   <li className="flex items-start gap-2">
-                    <span className="text-teal-400">•</span>
+                    <span className="text-primary-400">•</span>
                     Adults need 7-9 hours of sleep
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-teal-400">•</span>
+                    <span className="text-primary-400">•</span>
                     Consistency is more important than duration
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-teal-400">•</span>
+                    <span className="text-primary-400">•</span>
                     85%+ efficiency is considered healthy
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-teal-400">•</span>
+                    <span className="text-primary-400">•</span>
                     Start with realistic goals and adjust
                   </li>
                 </ul>

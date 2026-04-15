@@ -191,14 +191,14 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
 
   const deleteRecord = (id: string) => deleteRecordItem(id);
 
-  const inputClass = `w-full p-3 rounded-lg border ${theme === 'dark' ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488]`;
+  const inputClass = `w-full p-3 rounded-lg border ${theme === 'dark' ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4]`;
   const cardClass = `p-4 rounded-lg ${theme === 'dark' ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
   // Loading state
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -207,7 +207,7 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
     <div className="space-y-6">
       <div className="flex items-start justify-between mb-6">
         <div className="flex items-center gap-4">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E]">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98]">
             <Stethoscope className="w-8 h-8 text-white" />
           </div>
           <div>
@@ -252,7 +252,7 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><PawPrint className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><PawPrint className="w-6 h-6 text-[#6096B4]" /></div>
           <div><p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.veterinaryRecords.totalPets', 'Total Pets')}</p>
             <p className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{pets.length}</p></div>
         </div>
@@ -271,11 +271,11 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
       <div className="flex gap-2 border-b border-gray-200 dark:border-gray-700">
         {(['pets', 'records'] as const).map(tab => (
           <button key={tab} onClick={() => { setActiveTab(tab); setShowForm(false); }}
-            className={`px-4 py-2 font-medium capitalize ${activeTab === tab ? 'text-[#0D9488] border-b-2 border-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+            className={`px-4 py-2 font-medium capitalize ${activeTab === tab ? 'text-[#6096B4] border-b-2 border-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
             {tab}
           </button>
         ))}
-        <button onClick={() => setShowForm(!showForm)} className="ml-auto flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+        <button onClick={() => setShowForm(!showForm)} className="ml-auto flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
           <Plus className="w-5 h-5" />Add {activeTab === 'pets' ? t('tools.veterinaryRecords.pet', 'Pet') : t('tools.veterinaryRecords.record', 'Record')}
         </button>
       </div>
@@ -292,7 +292,7 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
             <input type="number" placeholder={t('tools.veterinaryRecords.weightLbs', 'Weight (lbs)')} value={petForm.weight} onChange={(e) => setPetForm({ ...petForm, weight: parseFloat(e.target.value) })} className={inputClass} />
             <input type="text" placeholder={t('tools.veterinaryRecords.ownerName', 'Owner Name')} value={petForm.owner} onChange={(e) => setPetForm({ ...petForm, owner: e.target.value })} className={inputClass} />
             <input type="tel" placeholder={t('tools.veterinaryRecords.ownerPhone', 'Owner Phone')} value={petForm.ownerPhone} onChange={(e) => setPetForm({ ...petForm, ownerPhone: e.target.value })} className={inputClass} />
-            <button onClick={addPet} disabled={!petForm.name || !petForm.owner} className="px-4 py-3 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.veterinaryRecords.savePet', 'Save Pet')}</button>
+            <button onClick={addPet} disabled={!petForm.name || !petForm.owner} className="px-4 py-3 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.veterinaryRecords.savePet', 'Save Pet')}</button>
           </div>
         </div>
       )}
@@ -311,7 +311,7 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
             <input type="text" placeholder={t('tools.veterinaryRecords.veterinarian', 'Veterinarian')} value={recordForm.veterinarian} onChange={(e) => setRecordForm({ ...recordForm, veterinarian: e.target.value })} className={inputClass} />
             <textarea placeholder={t('tools.veterinaryRecords.descriptionNotes', 'Description/Notes')} value={recordForm.description} onChange={(e) => setRecordForm({ ...recordForm, description: e.target.value })} className={`${inputClass} md:col-span-2`} rows={2} />
             <input type="date" placeholder={t('tools.veterinaryRecords.nextVisit', 'Next Visit')} value={recordForm.nextVisit} onChange={(e) => setRecordForm({ ...recordForm, nextVisit: e.target.value })} className={inputClass} />
-            <button onClick={addRecord} disabled={!recordForm.petId || !recordForm.date} className="px-4 py-3 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.veterinaryRecords.saveRecord', 'Save Record')}</button>
+            <button onClick={addRecord} disabled={!recordForm.petId || !recordForm.date} className="px-4 py-3 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.veterinaryRecords.saveRecord', 'Save Record')}</button>
           </div>
         </div>
       )}
@@ -342,7 +342,7 @@ export const VeterinaryRecordsTool: React.FC<VeterinaryRecordsToolProps> = ({ ui
                   <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{r.petName} - {r.type}</h4>
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{r.date} • Dr. {r.veterinarian}</p>
                   {r.description && <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{r.description}</p>}
-                  {r.nextVisit && <p className="text-sm text-[#0D9488]">Next visit: {r.nextVisit}</p>}
+                  {r.nextVisit && <p className="text-sm text-[#6096B4]">Next visit: {r.nextVisit}</p>}
                 </div>
                 <button onClick={() => deleteRecord(r.id)} className="p-2 text-red-500 hover:bg-red-500/10 rounded-lg"><Trash2 className="w-4 h-4" /></button>
               </div>

@@ -253,10 +253,10 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 px-6 py-4 border-b border-gray-100 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Sparkles className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Sparkles className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className="font-semibold text-gray-900">{t('tools.aIImageGenerator.aiImageGenerator', 'AI Image Generator')}</h3>
@@ -279,9 +279,9 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">
               {isEditFromGallery
                 ? t('tools.aIImageGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.aIImageGenerator.promptLoadedFromYourInput', 'Prompt loaded from your input')}
             </span>
@@ -298,7 +298,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
             onChange={(e) => setPrompt(e.target.value)}
             placeholder={t('tools.aIImageGenerator.aSereneMountainLandscapeAt', 'A serene mountain landscape at sunset with a crystal clear lake...')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 placeholder:text-gray-400"
           />
         </div>
 
@@ -313,7 +313,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
                 const style = stylePresets.find((s) => s.label === e.target.value);
                 if (style) setSelectedStyle(style);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 bg-white"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 bg-white"
             >
               {stylePresets.map((style) => (
                 <option key={style.label} value={style.label}>
@@ -332,7 +332,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
                 const aspect = aspectRatios.find((a) => a.label === e.target.value);
                 if (aspect) setSelectedAspect(aspect);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 bg-white"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 bg-white"
             >
               {aspectRatios.map((aspect) => (
                 <option key={aspect.label} value={aspect.label}>
@@ -346,7 +346,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
         {/* Advanced Settings Toggle */}
         <button
           onClick={() => setShowAdvanced(!showAdvanced)}
-          className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#0D9488] transition-colors"
+          className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#6096B4] transition-colors"
         >
           <Settings2 className="w-4 h-4" />
           {showAdvanced ? t('tools.aIImageGenerator.hide', 'Hide') : t('tools.aIImageGenerator.show', 'Show')} Advanced Settings
@@ -366,7 +366,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
                 max="4"
                 value={numberResults}
                 onChange={(e) => setNumberResults(Number(e.target.value))}
-                className="w-full accent-[#0D9488]"
+                className="w-full accent-[#6096B4]"
               />
             </div>
 
@@ -380,7 +380,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
                 value={negativePrompt}
                 onChange={(e) => setNegativePrompt(e.target.value)}
                 placeholder={t('tools.aIImageGenerator.blurryBadQualityDistorted', 'blurry, bad quality, distorted...')}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 placeholder:text-gray-400"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 placeholder:text-gray-400"
               />
             </div>
           </div>
@@ -397,7 +397,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !prompt.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -457,7 +457,7 @@ export const AIImageGeneratorTool: React.FC<AIImageGeneratorToolProps> = ({ uiCo
                     <button
                       onClick={() => handleSave(img.url, img.prompt)}
                       disabled={isSaving}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                       title={t('tools.aIImageGenerator.saveToGallery', 'Save to Gallery')}
                     >
                       <Save className="w-5 h-5" />

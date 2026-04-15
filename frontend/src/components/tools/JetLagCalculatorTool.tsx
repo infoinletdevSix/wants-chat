@@ -306,7 +306,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -321,9 +321,9 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
 
           {/* Prefill indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.jetLagCalculator.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.jetLagCalculator.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -340,7 +340,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {TIMEZONES.map((tz) => (
                     <option key={tz.name} value={tz.offset}>
@@ -361,7 +361,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {TIMEZONES.map((tz) => (
                     <option key={tz.name} value={tz.offset}>
@@ -387,7 +387,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -395,7 +395,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
           <div className="flex gap-3 mb-6">
             <button
               onClick={handleCalculate}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Plane className="w-5 h-5" />
               {t('tools.jetLagCalculator.calculateJetLag', 'Calculate Jet Lag')}
@@ -465,7 +465,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-2">
-                    <Bed className="w-5 h-5 text-[#0D9488]" />
+                    <Bed className="w-5 h-5 text-[#6096B4]" />
                     <CardTitle className={`text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.jetLagCalculator.sleepScheduleAdjustment', 'Sleep Schedule Adjustment')}
                     </CardTitle>
@@ -507,7 +507,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-2">
-                    <Sun className="w-5 h-5 text-[#0D9488]" />
+                    <Sun className="w-5 h-5 text-[#6096B4]" />
                     <CardTitle className={`text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.jetLagCalculator.lightExposureStrategy', 'Light Exposure Strategy')}
                     </CardTitle>
@@ -531,7 +531,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-2">
-                    <Utensils className="w-5 h-5 text-[#0D9488]" />
+                    <Utensils className="w-5 h-5 text-[#6096B4]" />
                     <CardTitle className={`text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.jetLagCalculator.mealTimingSuggestions', 'Meal Timing Suggestions')}
                     </CardTitle>
@@ -555,7 +555,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-2">
-                    <Pill className="w-5 h-5 text-[#0D9488]" />
+                    <Pill className="w-5 h-5 text-[#6096B4]" />
                     <CardTitle className={`text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.jetLagCalculator.melatoninTiming', 'Melatonin Timing')}
                     </CardTitle>
@@ -587,7 +587,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-2">
-                    <Plane className="w-5 h-5 text-[#0D9488]" />
+                    <Plane className="w-5 h-5 text-[#6096B4]" />
                     <CardTitle className={`text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.jetLagCalculator.travelTips', 'Travel Tips')}
                     </CardTitle>
@@ -605,7 +605,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
                       <ul className="space-y-1">
                         {flightTips.pre.map((tip, index) => (
                           <li key={index} className={`text-sm flex items-start gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                            <span className="text-[#0D9488] mt-1">-</span> {tip}
+                            <span className="text-[#6096B4] mt-1">-</span> {tip}
                           </li>
                         ))}
                       </ul>
@@ -618,7 +618,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
                       <ul className="space-y-1">
                         {flightTips.during.map((tip, index) => (
                           <li key={index} className={`text-sm flex items-start gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                            <span className="text-[#0D9488] mt-1">-</span> {tip}
+                            <span className="text-[#6096B4] mt-1">-</span> {tip}
                           </li>
                         ))}
                       </ul>
@@ -631,7 +631,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
                       <ul className="space-y-1">
                         {flightTips.post.map((tip, index) => (
                           <li key={index} className={`text-sm flex items-start gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                            <span className="text-[#0D9488] mt-1">-</span> {tip}
+                            <span className="text-[#6096B4] mt-1">-</span> {tip}
                           </li>
                         ))}
                       </ul>
@@ -643,7 +643,7 @@ export const JetLagCalculatorTool: React.FC<JetLagCalculatorToolProps> = ({ uiCo
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-2">
-                    <Droplets className="w-5 h-5 text-[#0D9488]" />
+                    <Droplets className="w-5 h-5 text-[#6096B4]" />
                     <CardTitle className={`text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.jetLagCalculator.hydrationTips', 'Hydration Tips')}
                     </CardTitle>

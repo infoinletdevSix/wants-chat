@@ -220,9 +220,9 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Shield className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Shield className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.carInsurance.carInsuranceEstimator', 'Car Insurance Estimator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.carInsurance.estimateYourAutoInsurancePremium', 'Estimate your auto insurance premium')}</p>
@@ -232,16 +232,16 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.carInsurance.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.carInsurance.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
         {/* Driver Information */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <User className="w-4 h-4 text-teal-500" />
+            <User className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.carInsurance.driverInformation', 'Driver Information')}</h4>
           </div>
           <div className="grid grid-cols-3 gap-4">
@@ -317,7 +317,7 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
         {/* Vehicle Information */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <Car className="w-4 h-4 text-teal-500" />
+            <Car className="w-4 h-4 text-primary-500" />
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.carInsurance.vehicleInformation', 'Vehicle Information')}</h4>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -370,7 +370,7 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={safetyFeatures}
                 onChange={(e) => setSafetyFeatures(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.carInsurance.safetyFeaturesAbsAirbags', 'Safety features (ABS, airbags)')}</span>
             </label>
@@ -379,7 +379,7 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
                 type="checkbox"
                 checked={antiTheft}
                 onChange={(e) => setAntiTheft(e.target.checked)}
-                className="w-4 h-4 rounded text-teal-500"
+                className="w-4 h-4 rounded text-primary-500"
               />
               <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.carInsurance.antiTheftDevice', 'Anti-theft device')}</span>
             </label>
@@ -413,7 +413,7 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
                   type="checkbox"
                   checked={garageParking}
                   onChange={(e) => setGarageParking(e.target.checked)}
-                  className="w-4 h-4 rounded text-teal-500"
+                  className="w-4 h-4 rounded text-primary-500"
                 />
                 <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.carInsurance.garageCoveredParking', 'Garage/Covered parking')}</span>
               </label>
@@ -438,12 +438,12 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
                 onClick={() => setCoverageLevel(opt.value as typeof coverageLevel)}
                 className={`p-3 rounded-lg text-left transition-all ${
                   coverageLevel === opt.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 <div className="font-medium text-sm">{opt.label}</div>
-                <div className={`text-xs ${coverageLevel === opt.value ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                <div className={`text-xs ${coverageLevel === opt.value ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                   {opt.desc}
                 </div>
               </button>
@@ -461,7 +461,7 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
                   onClick={() => setDeductible(d)}
                   className={`flex-1 py-2 rounded-lg text-sm ${
                     deductible === d
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
                   }`}
                 >
@@ -473,9 +473,9 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
         </div>
 
         {/* Premium Estimate */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.carInsurance.estimatedMonthlyPremium', 'Estimated Monthly Premium')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {formatCurrency(calculations.monthlyPremium)}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -504,7 +504,7 @@ export const CarInsuranceTool: React.FC<CarInsuranceToolProps> = ({ uiConfig }) 
         {calculations.potentialSavings.length > 0 && (
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-3">
-              <DollarSign className="w-4 h-4 text-teal-500" />
+              <DollarSign className="w-4 h-4 text-primary-500" />
               <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.carInsurance.potentialAnnualSavings', 'Potential Annual Savings')}</h4>
             </div>
             <div className="space-y-2">

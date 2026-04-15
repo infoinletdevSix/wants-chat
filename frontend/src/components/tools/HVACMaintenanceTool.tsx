@@ -607,7 +607,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
           <ExportDropdown onExport={handleExport} />
           <button
             onClick={() => setShowNewMaintenanceForm(true)}
-            className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center gap-2"
+            className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('tools.hVACMaintenance.scheduleMaintenance2', 'Schedule Maintenance')}
@@ -692,7 +692,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -726,7 +726,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <select
@@ -736,7 +736,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.hVACMaintenance.allStatuses', 'All Statuses')}</option>
                   {STATUSES.map((s) => (
@@ -752,7 +752,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.hVACMaintenance.allTypes', 'All Types')}</option>
                   {MAINTENANCE_TYPES.map((t) => (
@@ -839,7 +839,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                                   theme === 'dark'
                                     ? 'bg-gray-700 border-gray-600 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               >
                                 {STATUSES.map((s) => (
                                   <option key={s.status} value={s.status}>
@@ -883,7 +883,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
           <div className="flex justify-end">
             <button
               onClick={() => setShowNewEquipmentForm(true)}
-              className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center gap-2"
             >
               <Plus className="w-4 h-4" />
               {t('tools.hVACMaintenance.addEquipment2', 'Add Equipment')}
@@ -967,7 +967,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                   <span>Customers ({customers.length})</span>
                   <button
                     onClick={() => setShowNewCustomerForm(true)}
-                    className="p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -981,7 +981,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       onClick={() => setSelectedCustomerId(customer.id)}
                       className={`p-3 rounded-lg cursor-pointer transition-colors ${
                         selectedCustomerId === customer.id
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 hover:bg-gray-600'
                           : 'bg-gray-100 hover:bg-gray-200'
@@ -1144,7 +1144,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         </span>
                         <div className={`w-24 h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                           <div
-                            className="h-2 rounded-full bg-[#0D9488]"
+                            className="h-2 rounded-full bg-[#6096B4]"
                             style={{ width: `${count > 0 ? (completed / count) * 100 : 0}%` }}
                           />
                         </div>
@@ -1178,7 +1178,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         </span>
                         <div className={`w-24 h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                           <div
-                            className="h-2 rounded-full bg-[#0D9488]"
+                            className="h-2 rounded-full bg-[#6096B4]"
                             style={{ width: `${(count / total) * 100}%` }}
                           />
                         </div>
@@ -1220,7 +1220,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.hVACMaintenance.selectCustomer', 'Select Customer')}</option>
                     {customers.map((c) => (
@@ -1242,7 +1242,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488] disabled:opacity-50`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4] disabled:opacity-50`}
                   >
                     <option value="">{t('tools.hVACMaintenance.selectEquipment', 'Select Equipment')}</option>
                     {equipment
@@ -1266,7 +1266,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {MAINTENANCE_TYPES.map((t) => (
                         <option key={t.type} value={t.type}>
@@ -1286,7 +1286,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="">{t('tools.hVACMaintenance.unassigned', 'Unassigned')}</option>
                       {technicians.filter((t) => t.available).map((t) => (
@@ -1310,7 +1310,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1325,7 +1325,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1341,7 +1341,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.hVACMaintenance.describeTheMaintenanceWork', 'Describe the maintenance work...')}
                   />
                 </div>
@@ -1356,7 +1356,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                   </button>
                   <button
                     onClick={addMaintenance}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.hVACMaintenance.scheduleMaintenance3', 'Schedule Maintenance')}
                   </button>
@@ -1392,7 +1392,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.hVACMaintenance.selectCustomer2', 'Select Customer')}</option>
                     {customers.map((c) => (
@@ -1414,7 +1414,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {EQUIPMENT_TYPES.map((t) => (
                         <option key={t.type} value={t.type}>
@@ -1435,7 +1435,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1452,7 +1452,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1467,7 +1467,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1484,7 +1484,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -1500,7 +1500,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1515,7 +1515,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1530,7 +1530,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                   </button>
                   <button
                     onClick={addEquipment}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.hVACMaintenance.addEquipment3', 'Add Equipment')}
                   </button>
@@ -1568,7 +1568,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1583,7 +1583,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1599,7 +1599,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1614,7 +1614,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-4">
@@ -1630,7 +1630,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1645,7 +1645,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1660,7 +1660,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1670,7 +1670,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                       type="checkbox"
                       checked={newCustomer.serviceContract}
                       onChange={(e) => setNewCustomer({ ...newCustomer, serviceContract: e.target.checked })}
-                      className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                     <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.hVACMaintenance.serviceContract2', 'Service Contract')}</span>
                   </label>
@@ -1685,7 +1685,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   )}
@@ -1701,7 +1701,7 @@ export const HVACMaintenanceTool: React.FC<HVACMaintenanceToolProps> = ({
                   </button>
                   <button
                     onClick={addCustomer}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.hVACMaintenance.addCustomer', 'Add Customer')}
                   </button>

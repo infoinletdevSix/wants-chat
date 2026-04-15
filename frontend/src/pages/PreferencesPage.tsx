@@ -335,8 +335,8 @@ const InputField: React.FC<InputFieldProps> = ({ label, value, onChange, type = 
       className={cn(
         "w-full px-4 py-3 rounded-xl border transition-colors outline-none",
         theme === 'dark'
-          ? 'bg-[#1a1a1a] border-[#3a3a3a] text-white placeholder-slate-500 focus:border-[#0D9488]'
-          : 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400 focus:border-[#0D9488]'
+          ? 'bg-[#1a1a1a] border-[#3a3a3a] text-white placeholder-slate-500 focus:border-[#6096B4]'
+          : 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400 focus:border-[#6096B4]'
       )}
     />
   </div>
@@ -362,8 +362,8 @@ const SelectField: React.FC<SelectFieldProps> = ({ label, value, onChange, optio
       className={cn(
         "w-full px-4 py-3 rounded-xl border transition-colors outline-none",
         theme === 'dark'
-          ? 'bg-[#1a1a1a] border-[#3a3a3a] text-white focus:border-[#0D9488]'
-          : 'bg-slate-50 border-slate-200 text-slate-900 focus:border-[#0D9488]'
+          ? 'bg-[#1a1a1a] border-[#3a3a3a] text-white focus:border-[#6096B4]'
+          : 'bg-slate-50 border-slate-200 text-slate-900 focus:border-[#6096B4]'
       )}
     >
       {placeholder && <option value="">{placeholder}</option>}
@@ -396,7 +396,7 @@ const ButtonSelect: React.FC<ButtonSelectProps> = ({ value, onChange, options, c
         className={cn(
           "p-4 rounded-xl border text-left transition-all",
           value === option.value
-            ? 'border-[#0D9488] bg-[#0D9488]/10'
+            ? 'border-[#6096B4] bg-[#6096B4]/10'
             : theme === 'dark'
               ? 'border-[#3a3a3a] hover:border-[#4a4a4a]'
               : 'border-slate-200 hover:border-slate-300'
@@ -406,7 +406,7 @@ const ButtonSelect: React.FC<ButtonSelectProps> = ({ value, onChange, options, c
           <span className={cn("font-medium", theme === 'dark' ? 'text-white' : 'text-slate-900')}>
             {option.label}
           </span>
-          {value === option.value && <Check className="w-4 h-4 text-[#0D9488]" />}
+          {value === option.value && <Check className="w-4 h-4 text-[#6096B4]" />}
         </div>
         {option.description && (
           <span className={cn("text-xs", theme === 'dark' ? 'text-slate-400' : 'text-slate-600')}>
@@ -639,7 +639,7 @@ const PreferencesPage: React.FC = () => {
   if (loading) {
     return (
       <div className={cn("flex h-screen items-center justify-center", theme === 'dark' ? 'bg-[#1a1a1a]' : 'bg-slate-50')}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -677,7 +677,7 @@ const PreferencesPage: React.FC = () => {
                 className={cn(
                   "relative w-11 h-6 rounded-full transition-colors",
                   enablePersonalization
-                    ? 'bg-[#0D9488]'
+                    ? 'bg-[#6096B4]'
                     : theme === 'dark' ? 'bg-[#3a3a3a]' : 'bg-slate-300'
                 )}
               >
@@ -807,7 +807,7 @@ const PreferencesPage: React.FC = () => {
             className={cn(
               "w-full py-4 rounded-xl font-medium flex items-center justify-center gap-2 transition-all mb-8",
               hasChanges
-                ? 'bg-[#0D9488] text-white hover:bg-[#0B8278]'
+                ? 'bg-[#6096B4] text-white hover:bg-[#0B8278]'
                 : theme === 'dark'
                   ? 'bg-[#2a2a2a] text-slate-500 cursor-not-allowed'
                   : 'bg-slate-200 text-slate-500 cursor-not-allowed'

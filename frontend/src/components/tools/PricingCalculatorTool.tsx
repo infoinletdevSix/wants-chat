@@ -330,7 +330,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
   if (isLoading) {
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -342,7 +342,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -388,7 +388,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-lg flex items-center gap-2 font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -421,7 +421,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -435,7 +435,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="all">{t('tools.pricingCalculator.allCategories', 'All Categories')}</option>
                     {getCategories().map(cat => (
@@ -446,7 +446,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
 
                 <button
                   onClick={() => setShowAddModal(true)}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.pricingCalculator.addItem', 'Add Item')}
@@ -496,7 +496,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                           {t('tools.pricingCalculator.basePrice', 'Base Price')}
                         </span>
-                        <span className="text-lg font-bold text-[#0D9488]">
+                        <span className="text-lg font-bold text-[#6096B4]">
                           ${item.basePrice.toFixed(2)}
                         </span>
                       </div>
@@ -556,7 +556,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.pricingCalculator.addAddOn', 'Add Add-on')}
@@ -587,7 +587,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         <Trash2 className="w-4 h-4 text-red-500" />
                       </button>
                     </div>
-                    <span className="text-lg font-bold text-[#0D9488]">
+                    <span className="text-lg font-bold text-[#6096B4]">
                       +${addon.price.toFixed(2)}
                     </span>
                   </div>
@@ -627,7 +627,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.pricingCalculator.addPackage', 'Add Package')}
@@ -668,7 +668,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                           <div className={`text-sm line-through ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
                             ${pkg.originalPrice.toFixed(2)}
                           </div>
-                          <div className="text-2xl font-bold text-[#0D9488]">
+                          <div className="text-2xl font-bold text-[#6096B4]">
                             ${pkg.discountedPrice.toFixed(2)}
                           </div>
                         </div>
@@ -715,7 +715,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.pricingCalculator.addPromotion', 'Add Promotion')}
@@ -748,7 +748,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                           </div>
                         </div>
                         <div className="flex items-center gap-4">
-                          <div className="text-2xl font-bold text-[#0D9488]">
+                          <div className="text-2xl font-bold text-[#6096B4]">
                             {promo.discountPercent}% OFF
                           </div>
                           <span className={`px-2 py-1 rounded text-xs font-medium ${
@@ -800,7 +800,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       });
                     }
                   }}
-                  className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+                  className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.pricingCalculator.addCompetitor', 'Add Competitor')}
@@ -1034,7 +1034,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.pricingCalculator.productOrServiceName', 'Product or service name')}
                   />
                 </div>
@@ -1050,7 +1050,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     rows={2}
                     placeholder={t('tools.pricingCalculator.briefDescription', 'Brief description')}
                   />
@@ -1068,7 +1068,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     placeholder={t('tools.pricingCalculator.eGElectronicsSoftware', 'e.g., Electronics, Software')}
                   />
                 </div>
@@ -1086,7 +1086,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="0"
                       step="0.01"
                     />
@@ -1104,7 +1104,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="0"
                       step="0.01"
                     />
@@ -1117,7 +1117,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.pricingCalculator.calculatedMarkup', 'Calculated Markup')}
                       </span>
-                      <span className="font-semibold text-[#0D9488]">
+                      <span className="font-semibold text-[#6096B4]">
                         {calculateMarkup(newItem.basePrice, newItem.cost).toFixed(1)}%
                       </span>
                     </div>
@@ -1128,7 +1128,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={addNewItem}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.pricingCalculator.addItem2', 'Add Item')}
@@ -1177,7 +1177,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1192,7 +1192,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     rows={2}
                   />
                 </div>
@@ -1209,7 +1209,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1226,7 +1226,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="0"
                       step="0.01"
                     />
@@ -1244,7 +1244,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       min="0"
                       step="0.01"
                     />
@@ -1257,7 +1257,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
                     id="isActive"
                     checked={editingItem.isActive}
                     onChange={(e) => setEditingItem({ ...editingItem, isActive: e.target.checked })}
-                    className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                    className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                   />
                   <label htmlFor="isActive" className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.pricingCalculator.active', 'Active')}
@@ -1268,7 +1268,7 @@ export const PricingCalculatorTool: React.FC<PricingCalculatorToolProps> = ({ ui
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={() => updateItem(editingItem)}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.pricingCalculator.saveChanges', 'Save Changes')}

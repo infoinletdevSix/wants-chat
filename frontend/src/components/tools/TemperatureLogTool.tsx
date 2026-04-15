@@ -219,7 +219,7 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -232,8 +232,8 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <Thermometer className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <Thermometer className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -369,7 +369,7 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
                 onClick={() => setShowAddForm(!showAddForm)}
               >
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Plus className="w-5 h-5 text-[#0D9488]" />
+                  <Plus className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.temperatureLog.logTemperature', 'Log Temperature')}
                 </CardTitle>
                 {showAddForm ? (
@@ -510,7 +510,7 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
                 <button
                   onClick={handleAddReading}
                   disabled={!newReading.equipmentName || !newReading.temperature}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Thermometer className="w-5 h-5" />
                   {t('tools.temperatureLog.logReading', 'Log Reading')}
@@ -524,7 +524,7 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
             <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
               <CardHeader>
                 <CardTitle className={`flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Clock className="w-5 h-5 text-[#0D9488]" />
+                  <Clock className="w-5 h-5 text-[#6096B4]" />
                   Temperature Log ({filteredReadings.length})
                 </CardTitle>
               </CardHeader>
@@ -554,11 +554,11 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-2">
-                                  <Icon className={`w-5 h-5 ${reading.isCompliant ? t('tools.temperatureLog.text0d9488', 'text-[#0D9488]') : 'text-red-500'}`} />
+                                  <Icon className={`w-5 h-5 ${reading.isCompliant ? t('tools.temperatureLog.text0d9488', 'text-[#6096B4]') : 'text-red-500'}`} />
                                   <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                                     {reading.equipmentName}
                                   </span>
-                                  <span className={`text-2xl font-bold ${reading.isCompliant ? t('tools.temperatureLog.text0d94882', 'text-[#0D9488]') : 'text-red-500'}`}>
+                                  <span className={`text-2xl font-bold ${reading.isCompliant ? t('tools.temperatureLog.text0d94882', 'text-[#6096B4]') : 'text-red-500'}`}>
                                     {reading.temperature}°F
                                   </span>
                                   {reading.isCompliant ? (
@@ -662,7 +662,7 @@ export const TemperatureLogTool: React.FC<TemperatureLogToolProps> = ({ uiConfig
                 <div className="flex gap-3">
                   <button
                     onClick={handleUpdateReading}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"
                   >
                     <Save className="w-5 h-5" />
                     {t('tools.temperatureLog.save', 'Save')}

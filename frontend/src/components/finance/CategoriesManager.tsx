@@ -60,7 +60,7 @@ const CategoriesManager: React.FC<CategoriesManagerProps> = ({
 
   const predefinedColors = [
     '#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6',
-    '#ec4899', '#14b8a6', '#f97316', '#84cc16', '#06b6d4',
+    '#ec4899', '#75AAC1', '#f97316', '#84cc16', '#06b6d4',
     '#6366f1', '#f43f5e', '#22c55e', '#eab308', '#a855f7'
   ];
 
@@ -70,7 +70,7 @@ const CategoriesManager: React.FC<CategoriesManagerProps> = ({
     { name: 'Transportation', color: '#3b82f6' },
     { name: 'Entertainment', color: '#8b5cf6' },
     { name: 'Utilities', color: '#ef4444' },
-    { name: 'Housing', color: '#14b8a6' },
+    { name: 'Housing', color: '#75AAC1' },
     { name: 'Healthcare', color: '#ec4899' },
     { name: 'Education', color: '#f97316' },
     { name: 'Personal Care', color: '#84cc16' },
@@ -215,7 +215,7 @@ const CategoriesManager: React.FC<CategoriesManagerProps> = ({
             
             <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
               <DialogTrigger>
-                <Button className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+                <Button className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
                   <Plus className="h-4 w-4 mr-2" />
                   Add Category
                 </Button>
@@ -317,7 +317,7 @@ const CategoriesManager: React.FC<CategoriesManagerProps> = ({
                     </Button>
                     <Button
                       type="submit"
-                      className="flex-1 h-10 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                      className="flex-1 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                     >
                       {editingCategory ? 'Update' : 'Create'}
                     </Button>
@@ -362,7 +362,7 @@ const CategoriesManager: React.FC<CategoriesManagerProps> = ({
               </Button>
               <Button
                 onClick={() => setIsCreateOpen(true)}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 rounded-xl"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 rounded-xl"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Create Custom Category

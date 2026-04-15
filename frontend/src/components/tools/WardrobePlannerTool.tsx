@@ -212,7 +212,7 @@ export const WardrobePlannerTool: React.FC<WardrobePlannerToolProps> = ({ uiConf
     cool: {
       name: 'Cool Tones',
       colors: ['Blue', 'Purple', 'Teal', 'Lavender', 'Mint', 'Silver'],
-      hexColors: ['#2563eb', '#7c3aed', '#0d9488', '#c4b5fd', '#86efac', '#c0c0c0'],
+      hexColors: ['#2563eb', '#7c3aed', '#6096B4', '#c4b5fd', '#86efac', '#c0c0c0'],
       pairsWith: ['neutral', 'pastel'],
     },
     earth: {

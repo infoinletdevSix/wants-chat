@@ -273,7 +273,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-12">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -281,11 +281,11 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Calendar className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Calendar className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">
@@ -295,7 +295,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                 {t('tools.socialMediaScheduler.scheduleAndManageSocialMedia', 'Schedule and manage social media posts')}
               </p>
               {isPrefilled && (
-                <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+                <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                   <Sparkles className="w-3 h-3" />
                   <span>{t('tools.socialMediaScheduler.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
                 </div>
@@ -323,7 +323,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={() => setShowForm(!showForm)}
-            className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-lg transition-all shadow-lg shadow-[#0D9488]/20"
+            className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-lg transition-all shadow-lg shadow-[#6096B4]/20"
           >
             <Plus className="w-4 h-4" />
             {t('tools.socialMediaScheduler.newPost', 'New Post')}
@@ -372,7 +372,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                     platform: e.target.value as typeof formData.platform,
                   }))
                 }
-                className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
               >
                 {platforms.map((p) => (
                   <option key={p.value} value={p.value}>
@@ -400,7 +400,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                 placeholder={t('tools.socialMediaScheduler.writeYourPostContentHere', 'Write your post content here...')}
                 rows={4}
                 maxLength={platformMaxLength}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 ${
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 ${
                   formData.content.length > platformMaxLength * 0.9
                     ? 'border-yellow-300 dark:border-yellow-600'
                     : 'border-gray-300 dark:border-gray-600'
@@ -423,7 +423,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                       scheduledDate: e.target.value,
                     }))
                   }
-                  className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
               </div>
               <div className="space-y-2">
@@ -439,7 +439,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                       scheduledTime: e.target.value,
                     }))
                   }
-                  className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
               </div>
             </div>
@@ -461,7 +461,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                     }
                   }}
                   placeholder={t('tools.socialMediaScheduler.addHashtagWithout', 'Add hashtag (without #)')}
-                  className="flex-1 px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400"
+                  className="flex-1 px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400"
                 />
                 <button
                   onClick={handleAddHashtag}
@@ -475,12 +475,12 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                   {formData.hashtags.map((tag, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-2 px-3 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded-lg text-sm"
+                      className="flex items-center gap-2 px-3 py-1 bg-[#6096B4]/10 text-[#6096B4] rounded-lg text-sm"
                     >
                       #{tag}
                       <button
                         onClick={() => handleRemoveHashtag(index)}
-                        className="text-[#0D9488] hover:text-[#0D9488]/70"
+                        className="text-[#6096B4] hover:text-[#6096B4]/70"
                       >
                         ×
                       </button>
@@ -503,7 +503,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                     status: e.target.value as typeof formData.status,
                   }))
                 }
-                className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all dark:bg-gray-800 text-gray-900 dark:text-white"
               >
                 <option value="draft">{t('tools.socialMediaScheduler.draft', 'Draft')}</option>
                 <option value="scheduled">{t('tools.socialMediaScheduler.scheduled', 'Scheduled')}</option>
@@ -516,7 +516,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
               <button
                 onClick={handleAddPost}
                 disabled={isSaving}
-                className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-lg transition-all disabled:opacity-50"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-lg transition-all disabled:opacity-50"
               >
                 {isSaving ? (
                   <>
@@ -562,7 +562,7 @@ export const SocialMediaSchedulerTool: React.FC<SocialMediaSchedulerToolProps> =
                           {post.hashtags.map((tag, index) => (
                             <span
                               key={index}
-                              className="text-xs px-2 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded"
+                              className="text-xs px-2 py-1 bg-[#6096B4]/10 text-[#6096B4] rounded"
                             >
                               #{tag}
                             </span>

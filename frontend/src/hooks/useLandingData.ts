@@ -137,7 +137,7 @@ export const useLandingData = () => {
                   icon: 'Psychology',
                   link: '/mental-health',
                   description: 'Track mood and mental wellness',
-                  color: '#14b8a6'
+                  color: '#75AAC1'
                 }
               ]
             },

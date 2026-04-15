@@ -243,9 +243,9 @@ export const HabitTrackerTool: React.FC<HabitTrackerToolProps> = ({
               size="sm"
             />
             {isPrefilled && (
-              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-                <span className="text-xs text-[#0D9488] font-medium">{t('tools.habitTracker.prefilled', 'Prefilled')}</span>
+              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+                <span className="text-xs text-[#6096B4] font-medium">{t('tools.habitTracker.prefilled', 'Prefilled')}</span>
               </div>
             )}
             <ExportDropdown

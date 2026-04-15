@@ -521,7 +521,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
 
   const inputClass = `w-full px-3 py-2 rounded-lg border ${
     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -530,9 +530,9 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.partsLookup.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.partsLookup.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -541,7 +541,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Package className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -556,7 +556,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setShowCart(!showCart)}
-                  className="relative p-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                  className="relative p-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   {cart.length > 0 && (
@@ -700,7 +700,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
                     <button
                       onClick={handlePlaceOrder}
                       disabled={!selectedSupplier}
-                      className="w-full px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      className="w-full px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       <Truck className="w-4 h-4" />
                       {t('tools.partsLookup.placeOrder', 'Place Order')}
@@ -729,7 +729,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
               }}
               className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                 activeTab === tab.id || (activeTab === 'edit-part' && tab.id === 'add-part')
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -816,7 +816,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
                       <div className="flex gap-2">
                         <button
                           onClick={() => handleAddToCart(part)}
-                          className="flex-1 px-3 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] text-sm flex items-center justify-center gap-1"
+                          className="flex-1 px-3 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] text-sm flex items-center justify-center gap-1"
                         >
                           <ShoppingCart className="w-4 h-4" />
                           {t('tools.partsLookup.order', 'Order')}
@@ -990,7 +990,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
                         onClick={() => toggleApplianceType(type)}
                         className={`px-3 py-1 rounded-full text-sm transition-colors ${
                           currentPart.applianceTypes.includes(type)
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : isDark
                             ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1012,7 +1012,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
                       className={inputClass}
                       onKeyDown={(e) => e.key === 'Enter' && handleAddBrand()}
                     />
-                    <button onClick={handleAddBrand} className="px-3 py-2 bg-[#0D9488] text-white rounded-lg">
+                    <button onClick={handleAddBrand} className="px-3 py-2 bg-[#6096B4] text-white rounded-lg">
                       <Plus className="w-4 h-4" />
                     </button>
                   </div>
@@ -1169,7 +1169,7 @@ export const PartsLookupTool = ({ uiConfig }: PartsLookupToolProps) => {
                 <button
                   onClick={handleSavePart}
                   disabled={!currentPart.name || !currentPart.category}
-                  className="flex-1 px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {activeTab === 'add-part' ? t('tools.partsLookup.addPart', 'Add Part') : t('tools.partsLookup.saveChanges', 'Save Changes')}

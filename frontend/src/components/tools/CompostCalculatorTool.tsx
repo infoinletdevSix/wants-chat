@@ -210,10 +210,10 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Recycle className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Recycle className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.compostCalculator.compostCalculator', 'Compost Calculator')}</h3>
@@ -229,7 +229,7 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
             onClick={() => setCalculationMode('binSize')}
             className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
               calculationMode === 'binSize'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -241,7 +241,7 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
             onClick={() => setCalculationMode('recipe')}
             className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
               calculationMode === 'recipe'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -265,7 +265,7 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
                     onClick={() => setBinType(bin.name)}
                     className={`py-2 px-3 rounded-lg text-xs font-medium transition-colors ${
                       binType === bin.name
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -279,7 +279,7 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
                   onClick={() => setBinType('custom')}
                   className={`py-2 px-3 rounded-lg text-xs font-medium transition-colors ${
                     binType === 'custom'
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -330,13 +330,13 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
             {binCalculations && (
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Calculator className="w-4 h-4 text-teal-500" />
+                  <Calculator className="w-4 h-4 text-primary-500" />
                   {t('tools.compostCalculator.binSpecifications', 'Bin Specifications')}
                 </h4>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                  <div className="text-center p-3 rounded-lg bg-teal-500/10">
-                    <div className="text-2xl font-bold text-teal-500">{binCalculations.volumeCuFt}</div>
+                  <div className="text-center p-3 rounded-lg bg-primary-500/10">
+                    <div className="text-2xl font-bold text-primary-500">{binCalculations.volumeCuFt}</div>
                     <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.compostCalculator.cubicFeet', 'cubic feet')}</div>
                   </div>
                   <div className="text-center p-3 rounded-lg bg-blue-500/10">
@@ -485,7 +485,7 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
             {recipeCalculations && (
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
                 <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  <Scale className="w-4 h-4 text-teal-500" />
+                  <Scale className="w-4 h-4 text-primary-500" />
                   {t('tools.compostCalculator.recipeAnalysis', 'Recipe Analysis')}
                 </h4>
 
@@ -526,8 +526,8 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                  <div className="text-center p-3 rounded-lg bg-teal-500/10">
-                    <div className="text-2xl font-bold text-teal-500">{recipeCalculations.totalVolume}</div>
+                  <div className="text-center p-3 rounded-lg bg-primary-500/10">
+                    <div className="text-2xl font-bold text-primary-500">{recipeCalculations.totalVolume}</div>
                     <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.compostCalculator.cuFtTotal', 'cu ft total')}</div>
                   </div>
                   <div className="text-center p-3 rounded-lg bg-green-500/10">
@@ -546,9 +546,9 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
 
                 <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-teal-500" />
+                    <Clock className="w-5 h-5 text-primary-500" />
                     <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>
-                      Estimated time: <strong className="text-teal-500">{recipeCalculations.compostTime}</strong>
+                      Estimated time: <strong className="text-primary-500">{recipeCalculations.compostTime}</strong>
                     </span>
                   </div>
                 </div>
@@ -580,7 +580,7 @@ export const CompostCalculatorTool: React.FC<CompostCalculatorToolProps> = ({ ui
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Scale className="w-5 h-5 text-teal-500 mt-0.5" />
+              <Scale className="w-5 h-5 text-primary-500 mt-0.5" />
               <div>
                 <strong className={isDark ? 'text-white' : 'text-gray-900'}>{t('tools.compostCalculator.balance', 'Balance')}</strong>
                 <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>

@@ -279,7 +279,7 @@ export const PomodoroTimerTool = ({ uiConfig }: PomodoroTimerToolProps) => {
   const getSessionColor = () => {
     switch (sessionType) {
       case 'work':
-        return '#0D9488';
+        return '#6096B4';
       case 'shortBreak':
         return '#10b981';
       case 'longBreak':
@@ -440,13 +440,13 @@ export const PomodoroTimerTool = ({ uiConfig }: PomodoroTimerToolProps) => {
                   type="checkbox"
                   checked={autoStart}
                   onChange={(e) => setAutoStart(e.target.checked)}
-                  className="w-5 h-5 rounded accent-[#0D9488]"
+                  className="w-5 h-5 rounded accent-[#6096B4]"
                 />
               </div>
             </div>
             <button
               onClick={() => applySettings(settings)}
-              className="w-full mt-4 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="w-full mt-4 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               {t('tools.pomodoroTimer.applySettings', 'Apply Settings')}
             </button>
@@ -480,7 +480,7 @@ export const PomodoroTimerTool = ({ uiConfig }: PomodoroTimerToolProps) => {
               key={index}
               className={`w-3 h-3 rounded-full ${
                 index < completedSessions % settings.sessionsUntilLongBreak
-                  ? 'bg-[#0D9488]'
+                  ? 'bg-[#6096B4]'
                   : theme === 'dark'
                   ? 'bg-gray-600'
                   : 'bg-gray-300'

@@ -620,9 +620,9 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.vehicleFleet.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.vehicleFleet.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -630,7 +630,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Car className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -716,7 +716,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -746,7 +746,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -757,7 +757,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="all">{t('tools.vehicleFleet.allStatuses', 'All Statuses')}</option>
                 {VEHICLE_STATUSES.map((s) => (
@@ -766,7 +766,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
               </select>
               <button
                 onClick={() => setShowAddVehicle(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.vehicleFleet.addVehicle2', 'Add Vehicle')}
@@ -827,7 +827,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                         <span>{FUEL_TYPES.find(f => f.value === vehicle.fuelType)?.label}</span>
                       </div>
                       {vehicle.assignedDriverName && (
-                        <div className="flex items-center gap-1 text-[#0D9488]">
+                        <div className="flex items-center gap-1 text-[#6096B4]">
                           <Key className="w-4 h-4" />
                           {vehicle.assignedDriverName}
                         </div>
@@ -849,7 +849,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
               </h2>
               <button
                 onClick={() => setShowAddMaintenance(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.vehicleFleet.addMaintenance', 'Add Maintenance')}
@@ -909,7 +909,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
               </h2>
               <button
                 onClick={() => setShowAddFuel(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.vehicleFleet.addFuelLog2', 'Add Fuel Log')}
@@ -1031,7 +1031,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newVehicle.make || ''}
                       onChange={(e) => setNewVehicle({ ...newVehicle, make: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1040,7 +1040,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newVehicle.model || ''}
                       onChange={(e) => setNewVehicle({ ...newVehicle, model: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1051,7 +1051,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="number"
                       value={newVehicle.year || new Date().getFullYear()}
                       onChange={(e) => setNewVehicle({ ...newVehicle, year: parseInt(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1060,7 +1060,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newVehicle.licensePlate || ''}
                       onChange={(e) => setNewVehicle({ ...newVehicle, licensePlate: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1070,7 +1070,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                     <select
                       value={newVehicle.vehicleType || 'sedan'}
                       onChange={(e) => setNewVehicle({ ...newVehicle, vehicleType: e.target.value as Vehicle['vehicleType'] })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {VEHICLE_TYPES.map((t) => (
                         <option key={t.value} value={t.value}>{t.label}</option>
@@ -1082,7 +1082,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                     <select
                       value={newVehicle.fuelType || 'gasoline'}
                       onChange={(e) => setNewVehicle({ ...newVehicle, fuelType: e.target.value as Vehicle['fuelType'] })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {FUEL_TYPES.map((f) => (
                         <option key={f.value} value={f.value}>{f.label}</option>
@@ -1098,7 +1098,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       min="0"
                       value={newVehicle.mileage || 0}
                       onChange={(e) => setNewVehicle({ ...newVehicle, mileage: parseInt(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1109,7 +1109,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       max="20"
                       value={newVehicle.capacity || 4}
                       onChange={(e) => setNewVehicle({ ...newVehicle, capacity: parseInt(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1119,7 +1119,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                     type="text"
                     value={newVehicle.vin || ''}
                     onChange={(e) => setNewVehicle({ ...newVehicle, vin: e.target.value })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -1129,7 +1129,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newVehicle.color || ''}
                       onChange={(e) => setNewVehicle({ ...newVehicle, color: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1140,7 +1140,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       step="100"
                       value={newVehicle.purchasePrice || 0}
                       onChange={(e) => setNewVehicle({ ...newVehicle, purchasePrice: parseFloat(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1151,7 +1151,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="date"
                       value={newVehicle.insuranceExpiry || ''}
                       onChange={(e) => setNewVehicle({ ...newVehicle, insuranceExpiry: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1160,7 +1160,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="date"
                       value={newVehicle.registrationExpiry || ''}
                       onChange={(e) => setNewVehicle({ ...newVehicle, registrationExpiry: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1174,7 +1174,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleAddVehicle}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                 >
                   {t('tools.vehicleFleet.addVehicle3', 'Add Vehicle')}
                 </button>
@@ -1199,7 +1199,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                   <select
                     value={newMaintenance.vehicleId || ''}
                     onChange={(e) => setNewMaintenance({ ...newMaintenance, vehicleId: e.target.value })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.vehicleFleet.selectVehicle', 'Select Vehicle')}</option>
                     {vehicles.map((v) => (
@@ -1213,7 +1213,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                     <select
                       value={newMaintenance.type || 'scheduled'}
                       onChange={(e) => setNewMaintenance({ ...newMaintenance, type: e.target.value as MaintenanceRecord['type'] })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {MAINTENANCE_TYPES.map((t) => (
                         <option key={t.value} value={t.value}>{t.label}</option>
@@ -1226,7 +1226,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="date"
                       value={newMaintenance.date || ''}
                       onChange={(e) => setNewMaintenance({ ...newMaintenance, date: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1236,7 +1236,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                     type="text"
                     value={newMaintenance.description || ''}
                     onChange={(e) => setNewMaintenance({ ...newMaintenance, description: e.target.value })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -1248,7 +1248,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       step="0.01"
                       value={newMaintenance.cost || 0}
                       onChange={(e) => setNewMaintenance({ ...newMaintenance, cost: parseFloat(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1257,7 +1257,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="text"
                       value={newMaintenance.vendor || ''}
                       onChange={(e) => setNewMaintenance({ ...newMaintenance, vendor: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1271,7 +1271,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleAddMaintenance}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                 >
                   {t('tools.vehicleFleet.addRecord', 'Add Record')}
                 </button>
@@ -1296,7 +1296,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                   <select
                     value={newFuelLog.vehicleId || ''}
                     onChange={(e) => setNewFuelLog({ ...newFuelLog, vehicleId: e.target.value })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.vehicleFleet.selectVehicle2', 'Select Vehicle')}</option>
                     {vehicles.map((v) => (
@@ -1311,7 +1311,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       type="date"
                       value={newFuelLog.date || ''}
                       onChange={(e) => setNewFuelLog({ ...newFuelLog, date: e.target.value })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1321,7 +1321,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       min="0"
                       value={newFuelLog.mileage || 0}
                       onChange={(e) => setNewFuelLog({ ...newFuelLog, mileage: parseInt(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1334,7 +1334,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       step="0.01"
                       value={newFuelLog.gallons || 0}
                       onChange={(e) => setNewFuelLog({ ...newFuelLog, gallons: parseFloat(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1345,7 +1345,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                       step="0.01"
                       value={newFuelLog.pricePerGallon || 0}
                       onChange={(e) => setNewFuelLog({ ...newFuelLog, pricePerGallon: parseFloat(e.target.value) })}
-                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1355,7 +1355,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                     type="text"
                     value={newFuelLog.station || ''}
                     onChange={(e) => setNewFuelLog({ ...newFuelLog, station: e.target.value })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1368,7 +1368,7 @@ export const VehicleFleetTool: React.FC<VehicleFleetToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={handleAddFuelLog}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
                 >
                   {t('tools.vehicleFleet.addLog', 'Add Log')}
                 </button>

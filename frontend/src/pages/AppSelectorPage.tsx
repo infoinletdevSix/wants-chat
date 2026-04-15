@@ -49,7 +49,7 @@ const APP_METADATA: Record<string, { name: string; icon: string; color: string }
   'ai-social-captions': { name: 'AI Social Captions', icon: 'MessageSquare', color: 'bg-pink-500' },
   'ai-hashtag-generator': { name: 'AI Hashtag Generator', icon: 'Hash', color: 'bg-violet-500' },
   'ai-video-script': { name: 'AI Video Script', icon: 'Video', color: 'bg-red-500' },
-  'ai-meeting-notes': { name: 'AI Meeting Notes', icon: 'Users', color: 'bg-teal-500' },
+  'ai-meeting-notes': { name: 'AI Meeting Notes', icon: 'Users', color: 'bg-primary-500' },
   'ai-study-notes': { name: 'AI Study Notes', icon: 'GraduationCap', color: 'bg-amber-500' },
   'ai-contract-analyzer': { name: 'AI Contract Analyzer', icon: 'FileSearch', color: 'bg-rose-500' },
   'ai-legal-document': { name: 'AI Legal Document', icon: 'Scale', color: 'bg-slate-500' },

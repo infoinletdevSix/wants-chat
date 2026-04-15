@@ -156,7 +156,7 @@ export const CompatibilityTestTool: React.FC<CompatibilityTestToolProps> = ({ ui
     const colors: Record<string, string> = {
       pink: isDark ? 'text-pink-400 bg-pink-900/30' : 'text-pink-600 bg-pink-50',
       green: isDark ? 'text-green-400 bg-green-900/30' : 'text-green-600 bg-green-50',
-      teal: isDark ? 'text-teal-400 bg-teal-900/30' : 'text-teal-600 bg-teal-50',
+      teal: isDark ? 'text-primary-400 bg-primary-900/30' : 'text-primary-600 bg-primary-50',
       blue: isDark ? 'text-blue-400 bg-blue-900/30' : 'text-blue-600 bg-blue-50',
       amber: isDark ? 'text-amber-400 bg-amber-900/30' : 'text-amber-600 bg-amber-50',
       red: isDark ? 'text-red-400 bg-red-900/30' : 'text-red-600 bg-red-50',
@@ -171,11 +171,11 @@ export const CompatibilityTestTool: React.FC<CompatibilityTestToolProps> = ({ ui
           {icon}
           <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{label}</span>
         </div>
-        <span className={`text-sm font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{score}%</span>
+        <span className={`text-sm font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{score}%</span>
       </div>
       <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
         <div
-          className="h-full rounded-full bg-gradient-to-r from-teal-500 to-teal-400 transition-all duration-1000"
+          className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-400 transition-all duration-1000"
           style={{ width: `${score}%` }}
         />
       </div>
@@ -187,7 +187,7 @@ export const CompatibilityTestTool: React.FC<CompatibilityTestToolProps> = ({ ui
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <Heart size={28} />
           </div>
           <div>
@@ -217,8 +217,8 @@ export const CompatibilityTestTool: React.FC<CompatibilityTestToolProps> = ({ ui
                       className={`p-2 rounded-lg border transition-all text-center ${
                         sign1?.name === sign.name
                           ? isDark
-                            ? 'bg-teal-900/50 border-teal-500 ring-2 ring-teal-500/50'
-                            : 'bg-teal-50 border-teal-500 ring-2 ring-teal-500/30'
+                            ? 'bg-primary-900/50 border-primary-500 ring-2 ring-primary-500/50'
+                            : 'bg-primary-50 border-primary-500 ring-2 ring-primary-500/30'
                           : isDark
                           ? 'bg-gray-700 border-gray-600 hover:bg-gray-600'
                           : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
@@ -286,7 +286,7 @@ export const CompatibilityTestTool: React.FC<CompatibilityTestToolProps> = ({ ui
               disabled={!sign1 || !sign2}
               className={`w-full py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 sign1 && sign2
-                  ? 'bg-gradient-to-r from-teal-500 to-pink-500 hover:from-teal-600 hover:to-pink-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-primary-500 to-pink-500 hover:from-primary-600 hover:to-pink-600 text-white shadow-lg'
                   : isDark
                   ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
@@ -377,14 +377,14 @@ export const CompatibilityTestTool: React.FC<CompatibilityTestToolProps> = ({ ui
             </div>
 
             {/* Tips */}
-            <div className={`p-4 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'}`}>
-              <h3 className={`font-semibold mb-3 ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <div className={`p-4 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'}`}>
+              <h3 className={`font-semibold mb-3 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.compatibilityTest.tipsForYourRelationship', 'Tips for Your Relationship')}
               </h3>
               <ul className="space-y-2">
                 {compatibility.tips.map((tip, idx) => (
                   <li key={idx} className={`text-sm flex items-start gap-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                    <span className="text-teal-500 mt-1">★</span>
+                    <span className="text-primary-500 mt-1">★</span>
                     {tip}
                   </li>
                 ))}

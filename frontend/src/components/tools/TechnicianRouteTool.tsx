@@ -607,7 +607,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
               activeTab === tab.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -642,7 +642,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {technicians.map((tech) => (
                       <option key={tech.id} value={tech.id}>
@@ -663,7 +663,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </CardContent>
@@ -700,7 +700,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                     </div>
                     <div className={`w-full h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-2 rounded-full bg-[#0D9488]"
+                        className="h-2 rounded-full bg-[#6096B4]"
                         style={{ width: `${routeStats.progress}%` }}
                       />
                     </div>
@@ -718,7 +718,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
             <div className="space-y-2">
               <button
                 onClick={() => setShowAddStopForm(true)}
-                className="w-full py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] flex items-center justify-center gap-2"
+                className="w-full py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] flex items-center justify-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.technicianRoute.addStop', 'Add Stop')}
@@ -764,7 +764,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         <div className="flex items-start gap-4">
                           {/* Stop Number */}
                           <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${
-                            stop.status === 'completed' ? 'bg-green-500' : t('tools.technicianRoute.bg0d9488', 'bg-[#0D9488]')
+                            stop.status === 'completed' ? 'bg-green-500' : t('tools.technicianRoute.bg0d9488', 'bg-[#6096B4]')
                           }`}>
                             {stop.status === 'completed' ? (
                               <CheckCircle className="w-5 h-5" />
@@ -823,7 +823,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-1 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-1 focus:ring-[#6096B4]`}
                               >
                                 {STOP_STATUSES.map((s) => (
                                   <option key={s.status} value={s.status}>
@@ -945,7 +945,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                     </div>
                     <div className={`w-full h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-2 rounded-full bg-[#0D9488]"
+                        className="h-2 rounded-full bg-[#6096B4]"
                         style={{ width: `${techStops.length > 0 ? (completed / techStops.length) * 100 : 0}%` }}
                       />
                     </div>
@@ -968,7 +968,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         setSelectedTechnicianId(tech.id);
                         setActiveTab('route');
                       }}
-                      className="flex-1 py-2 rounded-lg bg-[#0D9488] text-white text-sm hover:bg-[#0F766E]"
+                      className="flex-1 py-2 rounded-lg bg-[#6096B4] text-white text-sm hover:bg-[#4C7F98]"
                     >
                       {t('tools.technicianRoute.viewRoute', 'View Route')}
                     </button>
@@ -995,7 +995,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -1106,7 +1106,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1121,7 +1121,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-4">
@@ -1137,7 +1137,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1152,7 +1152,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1167,7 +1167,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1184,7 +1184,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1199,7 +1199,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1215,7 +1215,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {SERVICE_TYPES.map((type) => (
                         <option key={type} value={type}>
@@ -1235,7 +1235,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {PRIORITIES.map((p) => (
                         <option key={p.priority} value={p.priority}>
@@ -1257,7 +1257,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -1272,7 +1272,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div className="flex justify-end gap-3 pt-4">
@@ -1286,7 +1286,7 @@ export const TechnicianRouteTool: React.FC<TechnicianRouteToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addStop}
-                    className="px-4 py-2 rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E]"
+                    className="px-4 py-2 rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98]"
                   >
                     {t('tools.technicianRoute.addStop2', 'Add Stop')}
                   </button>

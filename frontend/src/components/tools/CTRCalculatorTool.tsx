@@ -99,7 +99,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
       ratingColor = 'text-green-500';
     } else if (currentCTR >= 3) {
       rating = 'Very Good';
-      ratingColor = 'text-teal-500';
+      ratingColor = 'text-primary-500';
     } else if (currentCTR >= 2) {
       rating = 'Good';
       ratingColor = 'text-blue-500';
@@ -146,8 +146,8 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-indigo-900/20' : 'bg-gradient-to-r from-white to-indigo-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Percent className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Percent className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cTRCalculator.ctrCalculator', 'CTR Calculator')}</h3>
@@ -158,9 +158,9 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.cTRCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.cTRCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -172,21 +172,21 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => setCalculationMode('ctr')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'ctr' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'ctr' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.cTRCalculator.ctr', 'CTR')}</div>
               <div className="text-xs opacity-75">{t('tools.cTRCalculator.fromClicksImpressions', 'From clicks & impressions')}</div>
             </button>
             <button
               onClick={() => setCalculationMode('clicks')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'clicks' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'clicks' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.cTRCalculator.clicks', 'Clicks')}</div>
               <div className="text-xs opacity-75">{t('tools.cTRCalculator.fromImpressionsCtr', 'From impressions & CTR')}</div>
             </button>
             <button
               onClick={() => setCalculationMode('impressions')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'impressions' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'impressions' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.cTRCalculator.impressions', 'Impressions')}</div>
               <div className="text-xs opacity-75">{t('tools.cTRCalculator.forTargetClicksCtr', 'For target clicks & CTR')}</div>
@@ -208,7 +208,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
                   value={clicks}
                   onChange={(e) => setClicks(e.target.value)}
                   placeholder="250"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -221,7 +221,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
                   value={impressions}
                   onChange={(e) => setImpressions(e.target.value)}
                   placeholder="10000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -239,7 +239,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
                   value={impressions}
                   onChange={(e) => setImpressions(e.target.value)}
                   placeholder="10000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -253,7 +253,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
                   value={ctr}
                   onChange={(e) => setCtr(e.target.value)}
                   placeholder="2.5"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -271,7 +271,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
                   value={targetClicks}
                   onChange={(e) => setTargetClicks(e.target.value)}
                   placeholder="500"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -285,7 +285,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
                   value={ctr}
                   onChange={(e) => setCtr(e.target.value)}
                   placeholder="2.5"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -293,11 +293,11 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.cTRCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.cTRCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {calculationMode === 'ctr' ? 'Your CTR' : calculationMode === 'clicks' ? t('tools.cTRCalculator.expectedClicks', 'Expected Clicks') : t('tools.cTRCalculator.requiredImpressions', 'Required Impressions')}
           </div>
-          <div className="text-5xl font-bold text-[#0D9488] my-2">
+          <div className="text-5xl font-bold text-[#6096B4] my-2">
             {calculationMode === 'ctr'
               ? calculations.calculatedCTR.toFixed(2) + '%'
               : calculationMode === 'clicks'
@@ -327,7 +327,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cTRCalculator.ctr2', 'CTR')}</div>
-            <div className="text-xl font-bold text-[#0D9488]">
+            <div className="text-xl font-bold text-[#6096B4]">
               {calculations.calculatedCTR.toFixed(2)}%
             </div>
           </div>
@@ -341,11 +341,11 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {calculations.ctrScenarios.map((scenario, idx) => (
-              <div key={idx} className={`p-3 rounded text-center ${idx === 0 ? 'bg-[#0D9488]/20 border border-[#0D9488]/30' : isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
+              <div key={idx} className={`p-3 rounded text-center ${idx === 0 ? 'bg-[#6096B4]/20 border border-[#6096B4]/30' : isDark ? 'bg-gray-700' : 'bg-white border border-gray-200'}`}>
                 <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                   {scenario.improvement === 0 ? 'Current' : `+${scenario.improvement}%`}
                 </div>
-                <div className={`font-bold ${idx === 0 ? 'text-[#0D9488]' : isDark ? 'text-white' : 'text-gray-900'}`}>
+                <div className={`font-bold ${idx === 0 ? 'text-[#6096B4]' : isDark ? 'text-white' : 'text-gray-900'}`}>
                   {scenario.ctr.toFixed(2)}% CTR
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -373,7 +373,7 @@ export const CTRCalculatorTool: React.FC<CTRCalculatorToolProps> = ({ uiConfig }
             </div>
             <div className="text-center">
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>1,000 Clicks</div>
-              <div className="font-bold text-[#0D9488]">{formatNumber(calculations.impressionsFor1000Clicks)}</div>
+              <div className="font-bold text-[#6096B4]">{formatNumber(calculations.impressionsFor1000Clicks)}</div>
             </div>
           </div>
         </div>

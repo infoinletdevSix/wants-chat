@@ -262,7 +262,7 @@ const EventReminder: React.FC = () => {
         <div
           key={day}
           className={`aspect-square p-2 border border-white/10 rounded-lg ${
-            isToday ? 'bg-teal-500/30 border-teal-400' : 'bg-white/5'
+            isToday ? 'bg-primary-500/30 border-primary-400' : 'bg-white/5'
           } hover:bg-white/10 transition-all`}
         >
           <div className="text-white font-semibold mb-1">{day}</div>
@@ -270,7 +270,7 @@ const EventReminder: React.FC = () => {
             {dayEvents.slice(0, 2).map(event => (
               <div
                 key={event.id}
-                className="text-xs bg-teal-500/50 text-white px-1 py-0.5 rounded truncate cursor-pointer hover:bg-teal-500/70"
+                className="text-xs bg-primary-500/50 text-white px-1 py-0.5 rounded truncate cursor-pointer hover:bg-primary-500/70"
                 onClick={() => handleEdit(event)}
                 title={event.title}
               >
@@ -278,7 +278,7 @@ const EventReminder: React.FC = () => {
               </div>
             ))}
             {dayEvents.length > 2 && (
-              <div className="text-xs text-teal-300">+{dayEvents.length - 2} more</div>
+              <div className="text-xs text-primary-300">+{dayEvents.length - 2} more</div>
             )}
           </div>
         </div>
@@ -289,7 +289,7 @@ const EventReminder: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -297,10 +297,10 @@ const EventReminder: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
-            <Calendar className="w-12 h-12 text-teal-400" />
+            <Calendar className="w-12 h-12 text-primary-400" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Event Reminder</h1>
-          <p className="text-teal-200">Never miss an important event</p>
+          <p className="text-primary-200">Never miss an important event</p>
           {!permissionGranted && (
             <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 border border-yellow-500/50 rounded-lg text-yellow-200">
               <AlertCircle className="w-4 h-4" />
@@ -314,13 +314,13 @@ const EventReminder: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-4 mb-4">
             {/* Search */}
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-teal-300 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary-300 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search events..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
               />
             </div>
 
@@ -330,8 +330,8 @@ const EventReminder: React.FC = () => {
                 onClick={() => setViewMode('calendar')}
                 className={`px-4 py-3 rounded-xl font-medium transition-all ${
                   viewMode === 'calendar'
-                    ? 'bg-teal-500 text-white'
-                    : 'bg-white/10 text-teal-200 hover:bg-white/20'
+                    ? 'bg-primary-500 text-white'
+                    : 'bg-white/10 text-primary-200 hover:bg-white/20'
                 }`}
               >
                 Calendar
@@ -340,8 +340,8 @@ const EventReminder: React.FC = () => {
                 onClick={() => setViewMode('list')}
                 className={`px-4 py-3 rounded-xl font-medium transition-all ${
                   viewMode === 'list'
-                    ? 'bg-teal-500 text-white'
-                    : 'bg-white/10 text-teal-200 hover:bg-white/20'
+                    ? 'bg-primary-500 text-white'
+                    : 'bg-white/10 text-primary-200 hover:bg-white/20'
                 }`}
               >
                 List
@@ -351,7 +351,7 @@ const EventReminder: React.FC = () => {
             {/* Add button */}
             <button
               onClick={() => setShowModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               <Plus className="w-5 h-5" />
               Add Event
@@ -364,8 +364,8 @@ const EventReminder: React.FC = () => {
               onClick={() => setSelectedCategory('All')}
               className={`px-4 py-2 rounded-lg font-medium transition-all ${
                 selectedCategory === 'All'
-                  ? 'bg-teal-500 text-white'
-                  : 'bg-white/10 text-teal-200 hover:bg-white/20'
+                  ? 'bg-primary-500 text-white'
+                  : 'bg-white/10 text-primary-200 hover:bg-white/20'
               }`}
             >
               All
@@ -376,8 +376,8 @@ const EventReminder: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   selectedCategory === cat
-                    ? 'bg-teal-500 text-white'
-                    : 'bg-white/10 text-teal-200 hover:bg-white/20'
+                    ? 'bg-primary-500 text-white'
+                    : 'bg-white/10 text-primary-200 hover:bg-white/20'
                 }`}
               >
                 {cat}
@@ -411,7 +411,7 @@ const EventReminder: React.FC = () => {
             {/* Day names */}
             <div className="grid grid-cols-7 gap-2 mb-2">
               {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                <div key={day} className="text-center text-teal-300 font-semibold py-2">
+                <div key={day} className="text-center text-primary-300 font-semibold py-2">
                   {day}
                 </div>
               ))}
@@ -431,7 +431,7 @@ const EventReminder: React.FC = () => {
             {upcomingEvents.length > 0 && (
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Bell className="w-6 h-6 text-teal-400" />
+                  <Bell className="w-6 h-6 text-primary-400" />
                   Upcoming Events
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -443,7 +443,7 @@ const EventReminder: React.FC = () => {
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
                           <h3 className="text-lg font-bold text-white mb-2">{event.title}</h3>
-                          <span className="inline-block px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-xs font-medium">
+                          <span className="inline-block px-3 py-1 bg-primary-500/30 text-primary-200 rounded-full text-xs font-medium">
                             {event.category}
                           </span>
                         </div>
@@ -452,7 +452,7 @@ const EventReminder: React.FC = () => {
                             onClick={() => handleEdit(event)}
                             className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
                           >
-                            <Edit2 className="w-4 h-4 text-teal-300" />
+                            <Edit2 className="w-4 h-4 text-primary-300" />
                           </button>
                           <button
                             onClick={() => handleDelete(event.id)}
@@ -465,16 +465,16 @@ const EventReminder: React.FC = () => {
 
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-white">
-                          <Calendar className="w-4 h-4 text-teal-400" />
+                          <Calendar className="w-4 h-4 text-primary-400" />
                           <span>{new Date(event.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         </div>
                         <div className="flex items-center gap-2 text-white">
-                          <Clock className="w-4 h-4 text-teal-400" />
+                          <Clock className="w-4 h-4 text-primary-400" />
                           <span>{event.time}</span>
                         </div>
                         {event.location && (
                           <div className="flex items-center gap-2 text-white">
-                            <MapPin className="w-4 h-4 text-teal-400" />
+                            <MapPin className="w-4 h-4 text-primary-400" />
                             <span>{event.location}</span>
                           </div>
                         )}
@@ -482,7 +482,7 @@ const EventReminder: React.FC = () => {
                           <p className="text-white/70 text-sm mt-2">{event.description}</p>
                         )}
                         {event.isRecurring && (
-                          <div className="flex items-center gap-2 text-teal-300 text-sm">
+                          <div className="flex items-center gap-2 text-primary-300 text-sm">
                             <Tag className="w-4 h-4" />
                             <span>Repeats {event.recurringType}</span>
                           </div>
@@ -504,9 +504,9 @@ const EventReminder: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-4">All Events</h2>
             {sortedEvents.length === 0 ? (
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 text-center border border-white/20">
-                <Calendar className="w-16 h-16 text-teal-400 mx-auto mb-4" />
+                <Calendar className="w-16 h-16 text-primary-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">No events found</h3>
-                <p className="text-teal-200 mb-6">Start by adding your first event</p>
+                <p className="text-primary-200 mb-6">Start by adding your first event</p>
               </div>
             ) : (
               <div className="space-y-4">
@@ -519,23 +519,23 @@ const EventReminder: React.FC = () => {
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           <h3 className="text-lg font-bold text-white">{event.title}</h3>
-                          <span className="px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-xs font-medium">
+                          <span className="px-3 py-1 bg-primary-500/30 text-primary-200 rounded-full text-xs font-medium">
                             {event.category}
                           </span>
                         </div>
 
                         <div className="flex flex-wrap gap-4 text-sm text-white/80 mb-2">
                           <div className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4 text-teal-400" />
+                            <Calendar className="w-4 h-4 text-primary-400" />
                             <span>{new Date(event.date).toLocaleDateString()}</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4 text-teal-400" />
+                            <Clock className="w-4 h-4 text-primary-400" />
                             <span>{event.time}</span>
                           </div>
                           {event.location && (
                             <div className="flex items-center gap-1">
-                              <MapPin className="w-4 h-4 text-teal-400" />
+                              <MapPin className="w-4 h-4 text-primary-400" />
                               <span>{event.location}</span>
                             </div>
                           )}
@@ -551,7 +551,7 @@ const EventReminder: React.FC = () => {
                           onClick={() => handleEdit(event)}
                           className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
                         >
-                          <Edit2 className="w-4 h-4 text-teal-300" />
+                          <Edit2 className="w-4 h-4 text-primary-300" />
                         </button>
                         <button
                           onClick={() => handleDelete(event.id)}
@@ -571,7 +571,7 @@ const EventReminder: React.FC = () => {
         {/* Add/Edit Modal */}
         {showModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-teal-500/30">
+            <div className="bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-primary-500/30">
               <div className="p-6 border-b border-white/10">
                 <h2 className="text-2xl font-bold text-white">
                   {editingEvent ? 'Edit Event' : 'Add New Event'}
@@ -580,58 +580,58 @@ const EventReminder: React.FC = () => {
 
               <form onSubmit={handleSubmit} className="p-6 space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Event Title *</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Event Title *</label>
                   <input
                     type="text"
                     required
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
                     placeholder="e.g., Team Meeting"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-teal-300 mb-2">Date *</label>
+                    <label className="block text-sm font-medium text-primary-300 mb-2">Date *</label>
                     <input
                       type="date"
                       required
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-teal-300 mb-2">Time *</label>
+                    <label className="block text-sm font-medium text-primary-300 mb-2">Time *</label>
                     <input
                       type="time"
                       required
                       value={formData.time}
                       onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Location</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Location</label>
                   <input
                     type="text"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400"
                     placeholder="Meeting room, address, etc."
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Category</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Category</label>
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                   >
                     {categories.map(cat => (
                       <option key={cat} value={cat} className="bg-slate-900">{cat}</option>
@@ -640,12 +640,12 @@ const EventReminder: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-teal-300 mb-2">Description</label>
+                  <label className="block text-sm font-medium text-primary-300 mb-2">Description</label>
                   <textarea
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                     rows={3}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-teal-300/50 focus:outline-none focus:ring-2 focus:ring-teal-400 resize-none"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-300/50 focus:outline-none focus:ring-2 focus:ring-primary-400 resize-none"
                     placeholder="Event details..."
                   />
                 </div>
@@ -656,7 +656,7 @@ const EventReminder: React.FC = () => {
                       type="checkbox"
                       checked={formData.isRecurring}
                       onChange={(e) => setFormData({ ...formData, isRecurring: e.target.checked })}
-                      className="w-4 h-4 rounded border-teal-500 text-teal-500 focus:ring-teal-400"
+                      className="w-4 h-4 rounded border-primary-500 text-primary-500 focus:ring-primary-400"
                     />
                     <span className="text-sm font-medium">Recurring Event</span>
                   </label>
@@ -664,11 +664,11 @@ const EventReminder: React.FC = () => {
 
                 {formData.isRecurring && (
                   <div>
-                    <label className="block text-sm font-medium text-teal-300 mb-2">Repeat</label>
+                    <label className="block text-sm font-medium text-primary-300 mb-2">Repeat</label>
                     <select
                       value={formData.recurringType}
                       onChange={(e) => setFormData({ ...formData, recurringType: e.target.value as any })}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                     >
                       <option value="daily" className="bg-slate-900">Daily</option>
                       <option value="weekly" className="bg-slate-900">Weekly</option>
@@ -684,7 +684,7 @@ const EventReminder: React.FC = () => {
                       type="checkbox"
                       checked={formData.notificationEnabled}
                       onChange={(e) => setFormData({ ...formData, notificationEnabled: e.target.checked })}
-                      className="w-4 h-4 rounded border-teal-500 text-teal-500 focus:ring-teal-400"
+                      className="w-4 h-4 rounded border-primary-500 text-primary-500 focus:ring-primary-400"
                     />
                     <span className="text-sm font-medium">Enable Notifications</span>
                   </label>
@@ -693,7 +693,7 @@ const EventReminder: React.FC = () => {
                     <select
                       value={formData.notificationMinutes}
                       onChange={(e) => setFormData({ ...formData, notificationMinutes: parseInt(e.target.value) })}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400"
                     >
                       {notificationOptions.map(option => (
                         <option key={option.value} value={option.value} className="bg-slate-900">
@@ -714,7 +714,7 @@ const EventReminder: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all shadow-lg"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-xl font-semibold hover:from-primary-600 hover:to-cyan-600 transition-all shadow-lg"
                   >
                     {editingEvent ? 'Update' : 'Add'} Event
                   </button>

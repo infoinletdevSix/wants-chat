@@ -421,9 +421,9 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.productCatalog.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.productCatalog.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -431,7 +431,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -475,7 +475,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -544,20 +544,20 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                 <div className={`flex rounded-lg border ${theme === 'dark' ? 'border-gray-600' : 'border-gray-300'}`}>
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 ${viewMode === 'grid' ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} rounded-l-lg`}
+                    className={`p-2 ${viewMode === 'grid' ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} rounded-l-lg`}
                   >
                     <Grid className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 ${viewMode === 'list' ? 'bg-[#0D9488] text-white' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} rounded-r-lg`}
+                    className={`p-2 ${viewMode === 'list' ? 'bg-[#6096B4] text-white' : theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} rounded-r-lg`}
                   >
                     <List className="w-5 h-5" />
                   </button>
                 </div>
                 <button
                   onClick={() => { setEditingProduct({}); setShowProductForm(true); }}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   <Plus className="w-4 h-4 inline mr-2" />
                   {t('tools.productCatalog.addProduct', 'Add Product')}
@@ -597,7 +597,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                         SKU: {product.sku}
                       </p>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-[#0D9488] font-bold">{formatCurrency(product.price)}</span>
+                        <span className="text-[#6096B4] font-bold">{formatCurrency(product.price)}</span>
                         {product.compareAtPrice && (
                           <span className={`text-sm line-through ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
                             {formatCurrency(product.compareAtPrice)}
@@ -750,7 +750,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
               </h2>
               <button
                 onClick={() => setShowCategoryForm(true)}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
               >
                 <Plus className="w-4 h-4 inline mr-2" />
                 {t('tools.productCatalog.addCategory', 'Add Category')}
@@ -772,7 +772,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                         <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
                           theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
                         }`}>
-                          <Layers className="w-5 h-5 text-[#0D9488]" />
+                          <Layers className="w-5 h-5 text-[#6096B4]" />
                         </div>
                         <div>
                           <h3 className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -958,7 +958,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                     </div>
                     <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-2 rounded-full bg-[#0D9488]"
+                        className="h-2 rounded-full bg-[#6096B4]"
                         style={{ width: `${(count / analytics.totalProducts) * 100}%` }}
                       />
                     </div>
@@ -1236,7 +1236,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                         type="checkbox"
                         checked={editingProduct.isFeatured || false}
                         onChange={(e) => setEditingProduct((prev) => ({ ...prev, isFeatured: e.target.checked }))}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.productCatalog.featuredProduct', 'Featured Product')}</span>
                     </label>
@@ -1245,7 +1245,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                         type="checkbox"
                         checked={editingProduct.taxable !== false}
                         onChange={(e) => setEditingProduct((prev) => ({ ...prev, taxable: e.target.checked }))}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.productCatalog.taxable', 'Taxable')}</span>
                     </label>
@@ -1266,7 +1266,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={saveProduct}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   {editingProduct.id ? t('tools.productCatalog.updateProduct', 'Update Product') : t('tools.productCatalog.addProduct2', 'Add Product')}
                 </button>
@@ -1312,7 +1312,7 @@ export const ProductCatalogTool: React.FC<ProductCatalogToolProps> = ({ uiConfig
                 </button>
                 <button
                   onClick={addCategory}
-                  className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
+                  className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7B6F]"
                 >
                   {t('tools.productCatalog.addCategory2', 'Add Category')}
                 </button>

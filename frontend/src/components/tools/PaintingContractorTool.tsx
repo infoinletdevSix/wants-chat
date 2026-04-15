@@ -846,13 +846,13 @@ Thank you for your business!
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClass = `w-full px-4 py-2 rounded-lg border ${
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`;
 
@@ -868,7 +868,7 @@ Thank you for your business!
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -878,8 +878,8 @@ Thank you for your business!
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Paintbrush className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Paintbrush className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -919,7 +919,7 @@ Thank you for your business!
           />
           <button
             onClick={createNewProject}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.paintingContractor.newProject', 'New Project')}
@@ -953,7 +953,7 @@ Thank you for your business!
                   key={project.id}
                   className={`p-3 rounded-lg cursor-pointer ${
                     currentProject.id === project.id
-                      ? 'bg-[#0D9488]/20 border border-[#0D9488]'
+                      ? 'bg-[#6096B4]/20 border border-[#6096B4]'
                       : theme === 'dark' ? 'bg-gray-700 hover:bg-gray-650' : 'bg-gray-50 hover:bg-gray-100'
                   }`}
                   onClick={() => loadProject(project)}
@@ -1003,7 +1003,7 @@ Thank you for your business!
               onClick={() => toggleSection('customer')}
             >
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-[#0D9488]" />
+                <User className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.customerPropertyInformation', 'Customer & Property Information')}
                 </span>
@@ -1152,7 +1152,7 @@ Thank you for your business!
               onClick={() => toggleSection('measurements')}
             >
               <div className="flex items-center gap-2">
-                <Ruler className="w-5 h-5 text-[#0D9488]" />
+                <Ruler className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.roomAreaMeasurements', 'Room/Area Measurements')}
                 </span>
@@ -1246,7 +1246,7 @@ Thank you for your business!
                           type="checkbox"
                           checked={room.includesCeiling}
                           onChange={e => updateRoom(room.id, 'includesCeiling', e.target.checked)}
-                          className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.paintingContractor.includeCeiling', 'Include Ceiling')}</span>
                       </div>
@@ -1255,7 +1255,7 @@ Thank you for your business!
                           type="checkbox"
                           checked={room.includesTrim}
                           onChange={e => updateRoom(room.id, 'includesTrim', e.target.checked)}
-                          className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.paintingContractor.includeTrim', 'Include Trim')}</span>
                       </div>
@@ -1281,7 +1281,7 @@ Thank you for your business!
 
                 <button
                   onClick={addRoom}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.paintingContractor.addRoomArea', 'Add Room/Area')}
@@ -1312,7 +1312,7 @@ Thank you for your business!
               onClick={() => toggleSection('surface')}
             >
               <div className="flex items-center gap-2">
-                <Layers className="w-5 h-5 text-[#0D9488]" />
+                <Layers className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.surfacePreparationChecklist', 'Surface Preparation & Checklist')}
                 </span>
@@ -1362,7 +1362,7 @@ Thank you for your business!
                           type="checkbox"
                           checked={item.completed}
                           onChange={() => togglePrepItem(item.id)}
-                          className="w-5 h-5 mt-0.5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="w-5 h-5 mt-0.5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <div className="flex-1">
                           <span className={`text-sm ${item.completed ? 'line-through opacity-60' : ''} ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
@@ -1395,7 +1395,7 @@ Thank you for your business!
               onClick={() => toggleSection('paint')}
             >
               <div className="flex items-center gap-2">
-                <Palette className="w-5 h-5 text-[#0D9488]" />
+                <Palette className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.paintSpecifications', 'Paint Specifications')}
                 </span>
@@ -1523,7 +1523,7 @@ Thank you for your business!
 
                 <button
                   onClick={addPaintSpec}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.paintingContractor.addPaintSpecification', 'Add Paint Specification')}
@@ -1539,7 +1539,7 @@ Thank you for your business!
               onClick={() => toggleSection('crew')}
             >
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-[#0D9488]" />
+                <Users className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.crewScheduling', 'Crew Scheduling')}
                 </span>
@@ -1644,7 +1644,7 @@ Thank you for your business!
 
                 <button
                   onClick={addCrewMember}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.paintingContractor.addCrewMember', 'Add Crew Member')}
@@ -1660,7 +1660,7 @@ Thank you for your business!
               onClick={() => toggleSection('color')}
             >
               <div className="flex items-center gap-2">
-                <Palette className="w-5 h-5 text-[#0D9488]" />
+                <Palette className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.colorConsultationNotes', 'Color Consultation Notes')}
                 </span>
@@ -1747,7 +1747,7 @@ Thank you for your business!
               onClick={() => toggleSection('furniture')}
             >
               <div className="flex items-center gap-2">
-                <Armchair className="w-5 h-5 text-[#0D9488]" />
+                <Armchair className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.furnitureProtectionRequirements', 'Furniture & Protection Requirements')}
                 </span>
@@ -1818,7 +1818,7 @@ Thank you for your business!
 
                 <button
                   onClick={addFurnitureItem}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.paintingContractor.addFurnitureItem', 'Add Furniture Item')}
@@ -1835,7 +1835,7 @@ Thank you for your business!
                 onClick={() => toggleSection('weather')}
               >
                 <div className="flex items-center gap-2">
-                  <Cloud className="w-5 h-5 text-[#0D9488]" />
+                  <Cloud className="w-5 h-5 text-[#6096B4]" />
                   <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.paintingContractor.weatherConsiderationsExterior', 'Weather Considerations (Exterior)')}
                   </span>
@@ -1907,7 +1907,7 @@ Thank you for your business!
                             type="checkbox"
                             checked={entry.precipitation}
                             onChange={e => updateWeatherEntry(index, 'precipitation', e.target.checked)}
-                            className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                            className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                           />
                           <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.paintingContractor.rain', 'Rain')}</span>
                         </div>
@@ -1933,7 +1933,7 @@ Thank you for your business!
 
                   <button
                     onClick={addWeatherEntry}
-                    className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                    className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.paintingContractor.addWeatherCheck', 'Add Weather Check')}
@@ -1950,7 +1950,7 @@ Thank you for your business!
               onClick={() => toggleSection('materials')}
             >
               <div className="flex items-center gap-2">
-                <Package className="w-5 h-5 text-[#0D9488]" />
+                <Package className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.materialOrdering', 'Material Ordering')}
                 </span>
@@ -2036,7 +2036,7 @@ Thank you for your business!
                           type="checkbox"
                           checked={order.ordered}
                           onChange={e => updateMaterialOrder(order.id, 'ordered', e.target.checked)}
-                          className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.paintingContractor.ordered', 'Ordered')}</span>
                       </div>
@@ -2045,7 +2045,7 @@ Thank you for your business!
                           type="checkbox"
                           checked={order.received}
                           onChange={e => updateMaterialOrder(order.id, 'received', e.target.checked)}
-                          className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                          className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                         />
                         <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.paintingContractor.received', 'Received')}</span>
                       </div>
@@ -2061,7 +2061,7 @@ Thank you for your business!
 
                 <button
                   onClick={addMaterialOrder}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.paintingContractor.addMaterialOrder', 'Add Material Order')}
@@ -2077,7 +2077,7 @@ Thank you for your business!
               onClick={() => toggleSection('photos')}
             >
               <div className="flex items-center gap-2">
-                <Camera className="w-5 h-5 text-[#0D9488]" />
+                <Camera className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.beforeAfterPhotos', 'Before/After Photos')}
                 </span>
@@ -2129,7 +2129,7 @@ Thank you for your business!
                       onClick={() => addPhoto('before')}
                       className={`flex items-center gap-2 px-4 py-2 border-2 border-dashed rounded-lg w-full justify-center ${
                         theme === 'dark'
-                          ? t('tools.paintingContractor.borderGray600TextGray', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.paintingContractor.borderGray300TextGray', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                          ? t('tools.paintingContractor.borderGray600TextGray', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.paintingContractor.borderGray300TextGray', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
                       }`}
                     >
                       <Plus className="w-4 h-4" />
@@ -2175,7 +2175,7 @@ Thank you for your business!
                       onClick={() => addPhoto('after')}
                       className={`flex items-center gap-2 px-4 py-2 border-2 border-dashed rounded-lg w-full justify-center ${
                         theme === 'dark'
-                          ? t('tools.paintingContractor.borderGray600TextGray2', 'border-gray-600 text-gray-400 hover:border-[#0D9488] hover:text-[#0D9488]') : t('tools.paintingContractor.borderGray300TextGray2', 'border-gray-300 text-gray-500 hover:border-[#0D9488] hover:text-[#0D9488]')
+                          ? t('tools.paintingContractor.borderGray600TextGray2', 'border-gray-600 text-gray-400 hover:border-[#6096B4] hover:text-[#6096B4]') : t('tools.paintingContractor.borderGray300TextGray2', 'border-gray-300 text-gray-500 hover:border-[#6096B4] hover:text-[#6096B4]')
                       }`}
                     >
                       <Plus className="w-4 h-4" />
@@ -2194,11 +2194,11 @@ Thank you for your business!
               onClick={() => toggleSection('estimate')}
             >
               <div className="flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-[#0D9488]" />
+                <DollarSign className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.paintingContractor.estimateBuilder', 'Estimate Builder')}
                 </span>
-                <span className={`text-sm font-bold text-[#0D9488]`}>
+                <span className={`text-sm font-bold text-[#6096B4]`}>
                   (${estimateTotal.toFixed(2)})
                 </span>
               </div>
@@ -2309,7 +2309,7 @@ Thank you for your business!
                     )}
                     <div className={`border-t pt-2 flex justify-between ${theme === 'dark' ? 'border-gray-600' : 'border-gray-300'}`}>
                       <span className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.paintingContractor.totalEstimate', 'Total Estimate:')}</span>
-                      <span className="font-bold text-[#0D9488] text-xl">${estimateTotal.toFixed(2)}</span>
+                      <span className="font-bold text-[#6096B4] text-xl">${estimateTotal.toFixed(2)}</span>
                     </div>
                   </div>
                 </div>
@@ -2331,7 +2331,7 @@ Thank you for your business!
                       type="checkbox"
                       checked={currentProject.depositPaid}
                       onChange={e => setCurrentProject(prev => ({ ...prev, depositPaid: e.target.checked }))}
-                      className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                      className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                     />
                     <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                       {t('tools.paintingContractor.depositPaid', 'Deposit Paid')}
@@ -2345,7 +2345,7 @@ Thank you for your business!
           {/* Notes Section */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+              <FileText className="w-5 h-5 text-[#6096B4]" />
               {t('tools.paintingContractor.additionalNotes', 'Additional Notes')}
             </h3>
             <textarea
@@ -2361,7 +2361,7 @@ Thank you for your business!
           <div className="flex flex-wrap gap-3">
             <button
               onClick={saveProject}
-              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20"
+              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20"
             >
               <Save className="w-4 h-4" />
               {t('tools.paintingContractor.saveProject', 'Save Project')}

@@ -20,7 +20,7 @@ interface Investment {
 const INVESTMENT_TYPES = [
   { id: 'stocks', name: 'Stocks', color: 'from-blue-500 to-cyan-500' },
   { id: 'crypto', name: 'Cryptocurrency', color: 'from-orange-500 to-amber-500' },
-  { id: 'bonds', name: 'Bonds', color: 'from-emerald-500 to-teal-500' },
+  { id: 'bonds', name: 'Bonds', color: 'from-emerald-500 to-primary-500' },
   { id: 'mutual-funds', name: 'Mutual Funds', color: 'from-purple-500 to-pink-500' },
   { id: 'etf', name: 'ETF', color: 'from-indigo-500 to-blue-500' },
   { id: 'real-estate', name: 'Real Estate', color: 'from-green-500 to-emerald-500' },
@@ -255,9 +255,9 @@ const InvestmentTracker: React.FC = () => {
         {/* Type Breakdown */}
         {typeBreakdown.length > 0 && (
           <div className="max-w-6xl mx-auto mb-6">
-            <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 p-6">
+            <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6">
               <div className="flex items-center gap-3 mb-4">
-                <PieChart className="w-6 h-6 text-teal-400" />
+                <PieChart className="w-6 h-6 text-primary-400" />
                 <h2 className="text-xl font-semibold text-white">Portfolio Breakdown</h2>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -283,7 +283,7 @@ const InvestmentTracker: React.FC = () => {
                 placeholder="Search investments..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-teal-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-teal-500"
+                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-primary-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-500"
               />
             </div>
             <button
@@ -344,10 +344,10 @@ const InvestmentTracker: React.FC = () => {
               return (
                 <div
                   key={investment.id}
-                  className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 p-6 hover:border-teal-500/50 transition-all"
+                  className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6 hover:border-primary-500/50 transition-all"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${type?.color || 'from-teal-500 to-cyan-500'}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${type?.color || 'from-primary-500 to-cyan-500'}`}>
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex gap-2">

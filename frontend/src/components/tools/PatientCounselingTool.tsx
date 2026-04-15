@@ -316,7 +316,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold flex items-center gap-2">
-            <MessageCircle className="w-7 h-7 text-teal-500" />
+            <MessageCircle className="w-7 h-7 text-primary-500" />
             {t('tools.patientCounseling.patientCounseling', 'Patient Counseling')}
           </h1>
           <p className={`text-sm mt-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -330,7 +330,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
           <ExportDropdown data={filteredSessions} columns={SESSION_COLUMNS} filename="patient-counseling" />
           <button
             onClick={() => { resetForm(); setActiveTab('new'); }}
-            className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 flex items-center gap-2"
+            className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             {t('tools.patientCounseling.newSession', 'New Session')}
@@ -342,7 +342,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <div className={`p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
           <div className="flex items-center gap-2 mb-1">
-            <Calendar className="w-5 h-5 text-teal-500" />
+            <Calendar className="w-5 h-5 text-primary-500" />
             <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.patientCounseling.today', 'Today')}</span>
           </div>
           <p className="text-2xl font-bold">{stats.todaySessions}</p>
@@ -386,7 +386,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
             onClick={() => setActiveTab(tab.id as any)}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors ${
               activeTab === tab.id
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
             }`}
           >
@@ -491,7 +491,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                     <div className="grid md:grid-cols-2 gap-4 pt-4">
                       <div>
                         <h4 className="font-medium mb-2 flex items-center gap-2">
-                          <ClipboardCheck className="w-4 h-4 text-teal-500" />
+                          <ClipboardCheck className="w-4 h-4 text-primary-500" />
                           {t('tools.patientCounseling.topicsDiscussed2', 'Topics Discussed')}
                         </h4>
                         <div className="flex flex-wrap gap-1">
@@ -581,7 +581,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
           {/* Patient & Medication Info */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <User className="w-5 h-5 text-teal-500" />
+              <User className="w-5 h-5 text-primary-500" />
               {t('tools.patientCounseling.patientMedicationInformation', 'Patient & Medication Information')}
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -638,7 +638,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                     type="checkbox"
                     checked={formData.isNewMedication}
                     onChange={(e) => setFormData({ ...formData, isNewMedication: e.target.checked })}
-                    className="w-4 h-4 rounded border-gray-300 text-teal-600"
+                    className="w-4 h-4 rounded border-gray-300 text-primary-600"
                   />
                   <span className="text-sm">{t('tools.patientCounseling.newMedication', 'New Medication')}</span>
                 </label>
@@ -649,7 +649,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
           {/* Counseling Details */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <MessageCircle className="w-5 h-5 text-teal-500" />
+              <MessageCircle className="w-5 h-5 text-primary-500" />
               {t('tools.patientCounseling.counselingDetails', 'Counseling Details')}
             </h3>
             <div className="grid md:grid-cols-4 gap-4 mb-4">
@@ -711,8 +711,8 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                     onClick={() => toggleTopic(topic)}
                     className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
                       formData.topics?.includes(topic)
-                        ? 'bg-teal-600 text-white border-teal-600'
-                        : isDark ? 'border-gray-600 hover:border-teal-500' : 'border-gray-300 hover:border-teal-500'
+                        ? 'bg-primary-600 text-white border-primary-600'
+                        : isDark ? 'border-gray-600 hover:border-primary-500' : 'border-gray-300 hover:border-primary-500'
                     }`}
                   >
                     {topic}
@@ -756,7 +756,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                 <button
                   type="button"
                   onClick={addInteraction}
-                  className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {t('tools.patientCounseling.add', 'Add')}
                 </button>
@@ -797,7 +797,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                 <button
                   type="button"
                   onClick={addPatientQuestion}
-                  className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {t('tools.patientCounseling.add2', 'Add')}
                 </button>
@@ -828,7 +828,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
           {/* Assessment & Follow-up */}
           <div className={`p-6 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <ClipboardCheck className="w-5 h-5 text-teal-500" />
+              <ClipboardCheck className="w-5 h-5 text-primary-500" />
               {t('tools.patientCounseling.assessmentFollowUp', 'Assessment & Follow-up')}
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -851,7 +851,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                     type="checkbox"
                     checked={formData.followUpRequired}
                     onChange={(e) => setFormData({ ...formData, followUpRequired: e.target.checked })}
-                    className="w-4 h-4 rounded border-gray-300 text-teal-600"
+                    className="w-4 h-4 rounded border-gray-300 text-primary-600"
                   />
                   <span className="text-sm">{t('tools.patientCounseling.followUpRequired', 'Follow-up Required')}</span>
                 </label>
@@ -898,7 +898,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                       signature: e.target.checked,
                       signatureDate: e.target.checked ? new Date().toISOString() : undefined,
                     })}
-                    className="w-4 h-4 rounded border-gray-300 text-teal-600"
+                    className="w-4 h-4 rounded border-gray-300 text-primary-600"
                   />
                   <span className="text-sm">{t('tools.patientCounseling.patientAcknowledgesReceiptOfCounseling', 'Patient acknowledges receipt of counseling')}</span>
                 </label>
@@ -917,7 +917,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 flex items-center justify-center gap-2"
+              className="flex-1 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center justify-center gap-2"
             >
               <Save className="w-4 h-4" />
               {editingSession ? t('tools.patientCounseling.updateSession', 'Update Session') : t('tools.patientCounseling.saveSession', 'Save Session')}
@@ -961,7 +961,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                         <div className="flex justify-end gap-2">
                           <button
                             onClick={() => handleEdit(session)}
-                            className="px-3 py-1 text-sm bg-teal-100 text-teal-700 rounded hover:bg-teal-200"
+                            className="px-3 py-1 text-sm bg-primary-100 text-primary-700 rounded hover:bg-primary-200"
                           >
                             {t('tools.patientCounseling.complete', 'Complete')}
                           </button>
@@ -999,7 +999,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
               className={`p-4 rounded-xl border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}
             >
               <h3 className="font-semibold mb-3 flex items-center gap-2">
-                <Pill className="w-5 h-5 text-teal-500" />
+                <Pill className="w-5 h-5 text-primary-500" />
                 {template.class}
               </h3>
               <div className="space-y-3">
@@ -1029,7 +1029,7 @@ const PatientCounselingTool: React.FC<PatientCounselingToolProps> = ({ uiConfig 
                   });
                   setActiveTab('new');
                 }}
-                className="mt-3 w-full px-3 py-1.5 text-sm bg-teal-100 text-teal-700 rounded hover:bg-teal-200"
+                className="mt-3 w-full px-3 py-1.5 text-sm bg-primary-100 text-primary-700 rounded hover:bg-primary-200"
               >
                 {t('tools.patientCounseling.useTemplate', 'Use Template')}
               </button>

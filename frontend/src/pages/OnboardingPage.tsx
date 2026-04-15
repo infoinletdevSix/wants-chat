@@ -348,7 +348,7 @@ export const OnboardingPage: React.FC = () => {
   if (loading && !data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-        <Loader2 className="h-8 w-8 animate-spin text-teal-600" />
+        <Loader2 className="h-8 w-8 animate-spin text-primary-600" />
       </div>
     );
   }
@@ -373,22 +373,22 @@ export const OnboardingPage: React.FC = () => {
             </p>
             <ul className="text-sm text-slate-600 dark:text-slate-300 mb-6 space-y-2">
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-teal-500" />
+                <Check className="h-4 w-4 text-primary-500" />
                 Auto-fill forms with your preferences
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-teal-500" />
+                <Check className="h-4 w-4 text-primary-500" />
                 Get region-appropriate calculations
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-teal-500" />
+                <Check className="h-4 w-4 text-primary-500" />
                 AI responses in your preferred tone
               </li>
             </ul>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowSkipConfirm(false)}
-                className="flex-1 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 font-medium"
+                className="flex-1 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 font-medium"
               >
                 Continue Setup
               </button>
@@ -428,19 +428,19 @@ export const OnboardingPage: React.FC = () => {
                   <div
                     className={`
                       w-12 h-12 rounded-full flex items-center justify-center transition-all
-                      ${isCompleted ? 'bg-teal-600 text-white' : ''}
-                      ${isActive ? 'bg-teal-600 text-white ring-4 ring-teal-200 dark:ring-teal-800' : ''}
+                      ${isCompleted ? 'bg-primary-600 text-white' : ''}
+                      ${isActive ? 'bg-primary-600 text-white ring-4 ring-primary-200 dark:ring-primary-800' : ''}
                       ${!isActive && !isCompleted ? 'bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400' : ''}
                     `}
                   >
                     {isCompleted ? <Check className="h-5 w-5" /> : <StepIcon className="h-5 w-5" />}
                   </div>
-                  <span className={`text-xs mt-2 font-medium ${isActive ? 'text-teal-600' : 'text-slate-500'}`}>
+                  <span className={`text-xs mt-2 font-medium ${isActive ? 'text-primary-600' : 'text-slate-500'}`}>
                     {step.title}
                   </span>
                 </div>
                 {index < STEPS.length - 1 && (
-                  <div className={`flex-1 h-1 mx-2 rounded ${currentStep > step.id ? 'bg-teal-600' : 'bg-slate-200 dark:bg-slate-700'}`} />
+                  <div className={`flex-1 h-1 mx-2 rounded ${currentStep > step.id ? 'bg-primary-600' : 'bg-slate-200 dark:bg-slate-700'}`} />
                 )}
               </React.Fragment>
             );
@@ -468,7 +468,7 @@ export const OnboardingPage: React.FC = () => {
                   className={`
                     w-full p-4 rounded-xl border-2 text-left transition-all
                     ${formData.account_type === type.value
-                      ? 'border-teal-600 bg-teal-50 dark:bg-teal-900/20'
+                      ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20'
                       : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'}
                   `}
                 >
@@ -491,7 +491,7 @@ export const OnboardingPage: React.FC = () => {
                   value={formData.display_name || ''}
                   onChange={(e) => updateFormData({ display_name: e.target.value })}
                   placeholder="How should we call you?"
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
 
@@ -507,7 +507,7 @@ export const OnboardingPage: React.FC = () => {
                       className={`
                         px-3 py-2 rounded-lg text-sm font-medium transition-all
                         ${formData.role === role.value
-                          ? 'bg-teal-600 text-white'
+                          ? 'bg-primary-600 text-white'
                           : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'}
                       `}
                     >
@@ -529,7 +529,7 @@ export const OnboardingPage: React.FC = () => {
                       className={`
                         px-3 py-2 rounded-lg text-sm font-medium transition-all
                         ${formData.primary_use_case === useCase.value
-                          ? 'bg-teal-600 text-white'
+                          ? 'bg-primary-600 text-white'
                           : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'}
                       `}
                     >
@@ -550,7 +550,7 @@ export const OnboardingPage: React.FC = () => {
                       value={formData.company_name || ''}
                       onChange={(e) => updateFormData({ company_name: e.target.value })}
                       placeholder="Your company or organization"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     />
                   </div>
 
@@ -562,7 +562,7 @@ export const OnboardingPage: React.FC = () => {
                       <select
                         value={formData.industry || ''}
                         onChange={(e) => updateFormData({ industry: e.target.value as Industry })}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       >
                         <option value="">Select industry</option>
                         {INDUSTRIES.map((ind) => (
@@ -577,7 +577,7 @@ export const OnboardingPage: React.FC = () => {
                       <select
                         value={formData.company_size || ''}
                         onChange={(e) => updateFormData({ company_size: e.target.value as CompanySize })}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       >
                         <option value="">Select size</option>
                         {COMPANY_SIZES.map((size) => (
@@ -602,7 +602,7 @@ export const OnboardingPage: React.FC = () => {
                   <select
                     value={formData.preferred_language || 'en'}
                     onChange={(e) => updateFormData({ preferred_language: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
                     {LANGUAGES.map((lang) => (
                       <option key={lang.value} value={lang.value}>{lang.label}</option>
@@ -616,7 +616,7 @@ export const OnboardingPage: React.FC = () => {
                   <select
                     value={formData.preferred_currency || 'USD'}
                     onChange={(e) => updateFormData({ preferred_currency: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
                     {CURRENCIES.map((curr) => (
                       <option key={curr.value} value={curr.value}>{curr.label}</option>
@@ -659,7 +659,7 @@ export const OnboardingPage: React.FC = () => {
                           placeholder="Search country..."
                           value={countrySearchValue}
                           onChange={(e) => setCountrySearchValue(e.target.value)}
-                          className="w-full px-3 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
+                          className="w-full px-3 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                           onClick={(e) => e.stopPropagation()}
                           autoFocus
                         />
@@ -681,13 +681,13 @@ export const OnboardingPage: React.FC = () => {
                                 setCountrySearchValue('');
                               }}
                               className={`w-full px-4 py-2 flex items-center gap-3 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-left ${
-                                formData.country === country.name ? 'bg-teal-50 dark:bg-teal-900/30' : ''
+                                formData.country === country.name ? 'bg-primary-50 dark:bg-primary-900/30' : ''
                               }`}
                             >
                               <span className="text-xl">{country.flag}</span>
                               <span className="flex-1 text-sm text-slate-900 dark:text-white">{country.name}</span>
                               {formData.country === country.name && (
-                                <Check className="h-4 w-4 text-teal-600" />
+                                <Check className="h-4 w-4 text-primary-600" />
                               )}
                             </button>
                           ))}
@@ -709,7 +709,7 @@ export const OnboardingPage: React.FC = () => {
                       className={`
                         px-4 py-3 rounded-lg text-sm font-medium transition-all
                         ${formData.measurement_system === sys.value
-                          ? 'bg-teal-600 text-white'
+                          ? 'bg-primary-600 text-white'
                           : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'}
                       `}
                     >
@@ -736,7 +736,7 @@ export const OnboardingPage: React.FC = () => {
                       className={`
                         p-4 rounded-xl border-2 text-left transition-all
                         ${formData.tone_preference === tone.value
-                          ? 'border-teal-600 bg-teal-50 dark:bg-teal-900/20'
+                          ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20'
                           : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'}
                       `}
                     >
@@ -759,7 +759,7 @@ export const OnboardingPage: React.FC = () => {
                       className={`
                         p-4 rounded-xl border-2 text-center transition-all
                         ${formData.output_length === length.value
-                          ? 'border-teal-600 bg-teal-50 dark:bg-teal-900/20'
+                          ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/20'
                           : 'border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'}
                       `}
                     >
@@ -952,7 +952,7 @@ export const OnboardingPage: React.FC = () => {
             <button
               onClick={currentStep === 5 ? handleComplete : handleNext}
               disabled={saving}
-              className="flex items-center gap-2 px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 font-medium transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 font-medium transition-colors disabled:opacity-50"
             >
               {saving ? (
                 <Loader2 className="h-5 w-5 animate-spin" />

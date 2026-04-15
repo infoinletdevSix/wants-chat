@@ -277,14 +277,14 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
 
   const getScoreColor = (score: number) => {
     if (score >= 80) return theme === 'dark' ? 'text-green-400' : 'text-green-600';
-    if (score >= 60) return theme === 'dark' ? 'text-teal-400' : 'text-teal-600';
+    if (score >= 60) return theme === 'dark' ? 'text-primary-400' : 'text-primary-600';
     if (score >= 40) return theme === 'dark' ? 'text-yellow-400' : 'text-yellow-600';
     return theme === 'dark' ? 'text-orange-400' : 'text-orange-600';
   };
 
   const getScoreBgColor = (score: number) => {
     if (score >= 80) return theme === 'dark' ? 'bg-green-900/20' : 'bg-green-50';
-    if (score >= 60) return theme === 'dark' ? 'bg-teal-900/20' : 'bg-teal-50';
+    if (score >= 60) return theme === 'dark' ? 'bg-primary-900/20' : 'bg-primary-50';
     if (score >= 40) return theme === 'dark' ? 'bg-yellow-900/20' : 'bg-yellow-50';
     return theme === 'dark' ? 'bg-orange-900/20' : 'bg-orange-50';
   };
@@ -363,17 +363,17 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-teal-900/20' : t('tools.headlineGenerator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : t('tools.headlineGenerator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Type className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Type className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.headlineGenerator.aiHeadlineGenerator', 'AI Headline Generator')}</h3>
               <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.headlineGenerator.createEngagingHeadlinesWithEngagement', 'Create engaging headlines with engagement scores')}</p>
               {isPrefilled && (
-                <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+                <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                   <Sparkles className="w-3 h-3" />
                   <span>{isEditFromGallery ? t('tools.headlineGenerator.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.headlineGenerator.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
                 </div>
@@ -404,7 +404,7 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.headlineGenerator.enterYourTopicMainIdea', 'Enter your topic, main idea, or key message...')}
             rows={3}
-            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -415,7 +415,7 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
             <select
               value={headlineType}
               onChange={(e) => setHeadlineType(e.target.value)}
-              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {headlineTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -430,7 +430,7 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
             <select
               value={tone}
               onChange={(e) => setTone(e.target.value)}
-              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {tones.map((t) => (
                 <option key={t.value} value={t.value}>
@@ -453,7 +453,7 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
                 onClick={() => setNumberOfResults(num)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   numberOfResults === num
-                    ? 'bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white'
+                    ? 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -476,7 +476,7 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -534,7 +534,7 @@ Format: Return ONLY the headlines, one per line, without numbering or formatting
                         </button>
                         <button
                           onClick={() => handleSave(headline.text, headline.score)}
-                          className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-teal-900/30 hover:bg-teal-900/50 text-teal-300' : 'bg-teal-50 hover:bg-teal-100 text-teal-700'} border ${theme === 'dark' ? 'border-teal-800' : 'border-teal-200'} rounded-lg transition-colors text-sm`}
+                          className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-primary-900/30 hover:bg-primary-900/50 text-primary-300' : 'bg-primary-50 hover:bg-primary-100 text-primary-700'} border ${theme === 'dark' ? 'border-primary-800' : 'border-primary-200'} rounded-lg transition-colors text-sm`}
                         >
                           <Save className="w-4 h-4" />
                           {t('tools.headlineGenerator.save', 'Save')}

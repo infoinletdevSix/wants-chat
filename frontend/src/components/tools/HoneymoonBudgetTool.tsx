@@ -143,18 +143,18 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
   };
 
   const getCategoryColor = (category: string, index: number) => {
-    const colors = ['#0D9488', '#3B82F6', '#8B5CF6', '#F59E0B', '#EC4899', '#10B981', '#EF4444'];
+    const colors = ['#6096B4', '#3B82F6', '#8B5CF6', '#F59E0B', '#EC4899', '#10B981', '#EF4444'];
     return colors[index % colors.length];
   };
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Palmtree className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Palmtree className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.honeymoonBudget.honeymoonBudgetPlanner', 'Honeymoon Budget Planner')}</h3>
@@ -163,7 +163,7 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
           </div>
           <button
             onClick={() => setShowAddForm(true)}
-            className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-teal-500 hover:bg-teal-600 text-white"
+            className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-primary-500 hover:bg-primary-600 text-white"
           >
             <Plus className="w-4 h-4" /> Add Expense
           </button>
@@ -171,9 +171,9 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.honeymoonBudget.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -239,8 +239,8 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
             <div className="text-xl font-bold text-blue-500">{formatCurrency(calculations.totalEstimated)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.honeymoonBudget.estimated', 'Estimated')}</div>
           </div>
-          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'}`}>
-            <div className="text-xl font-bold text-teal-500">{formatCurrency(calculations.totalPaid)}</div>
+          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+            <div className="text-xl font-bold text-primary-500">{formatCurrency(calculations.totalPaid)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.honeymoonBudget.paid', 'Paid')}</div>
           </div>
           <div className={`p-4 rounded-lg text-center ${calculations.remaining >= 0 ? (isDark ? 'bg-green-900/20' : 'bg-green-50') : (isDark ? 'bg-red-900/20' : 'bg-red-50')}`}>
@@ -275,7 +275,7 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
         {expenses.length > 0 && (
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-3">
-              <PieChart className="w-4 h-4 text-teal-500" />
+              <PieChart className="w-4 h-4 text-primary-500" />
               <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.honeymoonBudget.budgetAllocation', 'Budget Allocation')}</span>
             </div>
             <div className="h-6 rounded-full overflow-hidden flex bg-gray-300">
@@ -356,13 +356,13 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
                   id="paid"
                   checked={newExpense.paid}
                   onChange={(e) => setNewExpense({ ...newExpense, paid: e.target.checked })}
-                  className="w-4 h-4 text-teal-500"
+                  className="w-4 h-4 text-primary-500"
                 />
                 <label htmlFor="paid" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.honeymoonBudget.alreadyPaid', 'Already Paid')}</label>
               </div>
             </div>
             <div className="flex gap-2 mt-4">
-              <button onClick={handleAddExpense} className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium">
+              <button onClick={handleAddExpense} className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium">
                 {t('tools.honeymoonBudget.addExpense2', 'Add Expense')}
               </button>
               <button
@@ -385,7 +385,7 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
           ) : (
             <>
               <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <TrendingUp className="w-4 h-4 text-teal-500" />
+                <TrendingUp className="w-4 h-4 text-primary-500" />
                 Expenses ({expenses.length})
               </h4>
               {expenses.map((expense, idx) => {
@@ -425,7 +425,7 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
                           type="checkbox"
                           checked={expense.paid}
                           onChange={(e) => handleUpdateExpense(expense.id, { paid: e.target.checked })}
-                          className="w-4 h-4 text-teal-500"
+                          className="w-4 h-4 text-primary-500"
                         />
                         <button
                           onClick={() => handleDeleteExpense(expense.id)}
@@ -443,14 +443,14 @@ export const HoneymoonBudgetTool: React.FC<HoneymoonBudgetToolProps> = ({ uiConf
         </div>
 
         {/* Recommended Budget Allocation */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800/50' : 'bg-teal-50/50'}`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800/50' : 'bg-primary-50/50'}`}>
           <h5 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.honeymoonBudget.recommendedBudgetAllocation', 'Recommended Budget Allocation')}</h5>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
             {defaultCategories.slice(0, 4).map((cat) => (
               <div key={cat.name}>
                 <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{cat.name}</span>
                 <div className="flex items-center gap-2">
-                  <span className={`font-medium ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>{cat.defaultPercent}%</span>
+                  <span className={`font-medium ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>{cat.defaultPercent}%</span>
                   <span className={isDark ? 'text-gray-500' : 'text-gray-400'}>
                     ({formatCurrency(totalBudget * cat.defaultPercent / 100)})
                   </span>

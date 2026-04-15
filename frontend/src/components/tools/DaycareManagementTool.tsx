@@ -912,8 +912,8 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-teal-500`;
-  const buttonPrimary = 'bg-teal-600 hover:bg-teal-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center gap-2';
+  } focus:outline-none focus:ring-2 focus:ring-primary-500`;
+  const buttonPrimary = 'bg-primary-600 hover:bg-primary-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center gap-2';
   const buttonSecondary = `${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center gap-2`;
 
   // Tab button component
@@ -922,7 +922,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
       onClick={() => setActiveTab(tab)}
       className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-colors ${
         activeTab === tab
-          ? 'bg-teal-600 text-white'
+          ? 'bg-primary-600 text-white'
           : theme === 'dark'
           ? 'text-gray-300 hover:bg-gray-700'
           : 'text-gray-700 hover:bg-gray-100'
@@ -940,8 +940,8 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         <div className={`${cardClass} p-4`}>
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-100 dark:bg-teal-900 rounded-lg">
-              <Baby className="w-5 h-5 text-teal-600" />
+            <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg">
+              <Baby className="w-5 h-5 text-primary-600" />
             </div>
             <div>
               <p className={`text-2xl font-bold ${textClass}`}>{stats.activeChildren}</p>
@@ -1038,7 +1038,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                     </div>
                     <div className="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2 mt-2">
                       <div
-                        className="bg-teal-500 h-2 rounded-full"
+                        className="bg-primary-500 h-2 rounded-full"
                         style={{ width: `${(childCount / classroom.capacity) * 100}%` }}
                       />
                     </div>
@@ -1056,7 +1056,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
         <div className={cardClass}>
           <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
             <h3 className={`text-lg font-semibold ${textClass}`}>{t('tools.daycareManagement.recentActivities', 'Recent Activities')}</h3>
-            <button onClick={() => setActiveTab('activities')} className="text-teal-500 text-sm hover:underline">
+            <button onClick={() => setActiveTab('activities')} className="text-primary-500 text-sm hover:underline">
               {t('tools.daycareManagement.viewAll', 'View All')}
             </button>
           </div>
@@ -1096,7 +1096,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
         <div className={cardClass}>
           <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
             <h3 className={`text-lg font-semibold ${textClass}`}>{t('tools.daycareManagement.recentIncidents', 'Recent Incidents')}</h3>
-            <button onClick={() => setActiveTab('incidents')} className="text-teal-500 text-sm hover:underline">
+            <button onClick={() => setActiveTab('incidents')} className="text-primary-500 text-sm hover:underline">
               {t('tools.daycareManagement.viewAll2', 'View All')}
             </button>
           </div>
@@ -1213,8 +1213,8 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                 <tr key={child.id} className={`border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} hover:${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
                   <td className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-teal-100 dark:bg-teal-900 flex items-center justify-center">
-                        <span className="text-teal-600 font-semibold">
+                      <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
+                        <span className="text-primary-600 font-semibold">
                           {child.firstName[0]}{child.lastName[0]}
                         </span>
                       </div>
@@ -1347,8 +1347,8 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                   }`}>
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900 flex items-center justify-center">
-                          <span className="text-teal-600 text-sm font-semibold">
+                        <div className="w-8 h-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
+                          <span className="text-primary-600 text-sm font-semibold">
                             {child.firstName[0]}{child.lastName[0]}
                           </span>
                         </div>
@@ -1608,8 +1608,8 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-teal-100 dark:bg-teal-900 rounded-lg">
-                      <Building className="w-5 h-5 text-teal-600" />
+                    <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                      <Building className="w-5 h-5 text-primary-600" />
                     </div>
                     <div>
                       <h4 className={`font-semibold ${textClass}`}>{classroom.name}</h4>
@@ -1655,7 +1655,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                   <p className={`text-sm font-medium mb-2 ${textClass}`}>Assigned Staff ({assignedStaff.length})</p>
                   <div className="flex flex-wrap gap-2">
                     {assignedStaff.map(staff => (
-                      <span key={staff.id} className={`px-2 py-1 rounded-full text-xs bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300`}>
+                      <span key={staff.id} className={`px-2 py-1 rounded-full text-xs bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300`}>
                         {staff.firstName} {staff.lastName[0]}.
                       </span>
                     ))}
@@ -1794,7 +1794,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
         </div>
         <div className={`${cardClass} p-4`}>
           <p className={`text-sm ${mutedTextClass}`}>{t('tools.daycareManagement.totalCollected', 'Total Collected')}</p>
-          <p className={`text-2xl font-bold text-teal-500`}>
+          <p className={`text-2xl font-bold text-primary-500`}>
             ${data.payments.filter(p => p.status === 'paid').reduce((acc, p) => acc + p.amount, 0).toFixed(2)}
           </p>
         </div>
@@ -2153,7 +2153,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                   type="checkbox"
                   checked={childForm.photoConsent}
                   onChange={(e) => setChildForm(prev => ({ ...prev, photoConsent: e.target.checked }))}
-                  className="w-5 h-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                  className="w-5 h-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                 />
                 <div>
                   <span className={`font-medium ${textClass}`}>{t('tools.daycareManagement.photoVideoConsent', 'Photo/Video Consent')}</span>
@@ -2357,7 +2357,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                   type="checkbox"
                   checked={incidentForm.parentNotified}
                   onChange={(e) => setIncidentForm(prev => ({ ...prev, parentNotified: e.target.checked }))}
-                  className="w-5 h-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                  className="w-5 h-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                 />
                 <span className={textClass}>{t('tools.daycareManagement.parentHasBeenNotified', 'Parent has been notified')}</span>
               </label>
@@ -2366,7 +2366,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                   type="checkbox"
                   checked={incidentForm.followUpRequired}
                   onChange={(e) => setIncidentForm(prev => ({ ...prev, followUpRequired: e.target.checked }))}
-                  className="w-5 h-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                  className="w-5 h-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                 />
                 <span className={textClass}>{t('tools.daycareManagement.followUpRequired2', 'Follow-up required')}</span>
               </label>
@@ -2471,7 +2471,7 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
                           setStaffForm(prev => ({ ...prev, classroomIds: prev.classroomIds.filter(id => id !== c.id) }));
                         }
                       }}
-                      className="w-4 h-4 rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                      className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                     />
                     <span className={textClass}>{c.name}</span>
                   </label>
@@ -2572,8 +2572,8 @@ export const DaycareManagementTool: React.FC<DaycareManagementToolProps> = ({ ui
         <div className={`${cardClass} p-4 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-teal-100 dark:bg-teal-900 rounded-lg">
-                <Baby className="w-6 h-6 text-teal-600" />
+              <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                <Baby className="w-6 h-6 text-primary-600" />
               </div>
               <div>
                 <h1 className={`text-2xl font-bold ${textClass}`}>{t('tools.daycareManagement.daycareManagement', 'Daycare Management')}</h1>

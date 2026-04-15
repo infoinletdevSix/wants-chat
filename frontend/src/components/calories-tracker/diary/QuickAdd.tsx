@@ -271,7 +271,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
           <Button
             onClick={handleShowFavorites}
             className={`relative ${showFavorites
-              ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+              ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               : "bg-white/10 border border-white/20 text-white hover:bg-white/20"
             }`}
           >
@@ -283,7 +283,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
               </Badge>
             )}
           </Button>
-          <Button onClick={onSearch} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+          <Button onClick={onSearch} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
             <Icon path={mdiMagnify} size={0.8} className="mr-2" />
             <span className="sr-only sm:not-sr-only">More</span>
           </Button>
@@ -295,7 +295,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
 
         {/* Search Results Dropdown */}
         {showResults && (
-          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-teal-800/90 border border-white/20 rounded-lg shadow-lg overflow-hidden">
+          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-primary-800/90 border border-white/20 rounded-lg shadow-lg overflow-hidden">
             <div className="max-h-96 overflow-y-auto">
               {isSearching ? (
                 <div className="p-4 text-center text-white/60">
@@ -372,7 +372,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
 
         {/* Favorites Display */}
         {showFavorites && favoriteFoods.length > 0 && (
-          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-teal-800/90 border border-white/20 rounded-lg shadow-lg overflow-hidden">
+          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-primary-800/90 border border-white/20 rounded-lg shadow-lg overflow-hidden">
             <div className="p-3 border-b border-white/10 bg-white/5">
               <h4 className="font-medium text-sm flex items-center gap-2 text-white">
                 <Icon path={mdiHeart} size={0.7} className="text-red-500" />
@@ -431,7 +431,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
         )}
 
         {showFavorites && favoriteFoods.length === 0 && (
-          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-teal-800/90 border border-white/20 rounded-lg shadow-lg p-6 text-center">
+          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-primary-800/90 border border-white/20 rounded-lg shadow-lg p-6 text-center">
             <Icon path={mdiHeart} size={1.5} className="text-white/40 mx-auto mb-2" />
             <p className="text-sm text-white/60">No favorite foods yet</p>
             <p className="text-xs text-white/40 mt-1">Star foods from search results to add them here</p>
@@ -440,7 +440,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
 
         {/* Meal Selector Modal */}
         {showMealSelector && selectedFood && (
-          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-teal-800/90 border border-white/20 rounded-lg shadow-lg p-4">
+          <div className="absolute z-50 mt-1 w-full max-w-[calc(100%-2rem)] bg-primary-800/90 border border-white/20 rounded-lg shadow-lg p-4">
             <h4 className="font-medium mb-3 text-white">Add "{selectedFood.name}" to:</h4>
             <div className="grid grid-cols-2 gap-2">
               {meals.map((meal) => (
@@ -449,7 +449,7 @@ const QuickAdd: React.FC<QuickAddProps> = ({
                   onClick={() => handleMealSelect(meal.id)}
                   className={`justify-start ${
                     meal.id === getAutoDetectedMeal()
-                      ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                      ? "bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                       : "bg-white/10 border border-white/20 text-white hover:bg-white/20"
                   }`}
                 >

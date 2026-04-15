@@ -995,13 +995,13 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
     isDark
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClass = `w-full px-4 py-2 rounded-lg border ${
     isDark
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-2 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
 
@@ -1098,7 +1098,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
                   type="checkbox"
                   checked={newComic.variant}
                   onChange={(e) => setNewComic({ ...newComic, variant: e.target.checked })}
-                  className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                  className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                 />
                 <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>{t('tools.comicBookStore.variantCover', 'Variant Cover')}</span>
               </label>
@@ -1128,7 +1128,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addComic}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addToInventory', 'Add to Inventory')}
@@ -1203,7 +1203,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addPullSubscription}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addSubscription', 'Add Subscription')}
@@ -1292,7 +1292,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addNewRelease}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addRelease', 'Add Release')}
@@ -1365,7 +1365,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addCustomer}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addCustomer', 'Add Customer')}
@@ -1447,7 +1447,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addSpecialOrder}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addOrder', 'Add Order')}
@@ -1531,7 +1531,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addGamingItem}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addItem', 'Add Item')}
@@ -1625,7 +1625,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addEvent}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addEvent', 'Add Event')}
@@ -1709,7 +1709,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addConsignment}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addConsignment', 'Add Consignment')}
@@ -1781,7 +1781,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addPreorder}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addPreOrder', 'Add Pre-Order')}
@@ -1872,7 +1872,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             <div className="flex gap-3">
               <button
                 onClick={addCGCSubmission}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all"
               >
                 <Save className="w-4 h-4" />
                 {t('tools.comicBookStore.addSubmission', 'Add Submission')}
@@ -1929,7 +1929,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
                         )}
                       </div>
                       <div className="text-right">
-                        <p className={`font-bold text-lg ${isDark ? t('tools.comicBookStore.text2dd4bf', 'text-[#2DD4BF]') : t('tools.comicBookStore.text0d9488', 'text-[#0D9488]')}`}>
+                        <p className={`font-bold text-lg ${isDark ? t('tools.comicBookStore.text2dd4bf', 'text-[#75AAC1]') : t('tools.comicBookStore.text0d9488', 'text-[#6096B4]')}`}>
                           ${comic.price.toFixed(2)}
                         </p>
                         <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -2108,7 +2108,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
                       </div>
                       <div className="text-right">
                         {customer.storeCredit > 0 && (
-                          <p className={`font-medium ${isDark ? t('tools.comicBookStore.text2dd4bf2', 'text-[#2DD4BF]') : t('tools.comicBookStore.text0d94882', 'text-[#0D9488]')}`}>
+                          <p className={`font-medium ${isDark ? t('tools.comicBookStore.text2dd4bf2', 'text-[#75AAC1]') : t('tools.comicBookStore.text0d94882', 'text-[#6096B4]')}`}>
                             <DollarSign className="w-4 h-4 inline" />
                             {customer.storeCredit.toFixed(2)} credit
                           </p>
@@ -2239,7 +2239,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className={`font-bold ${isDark ? t('tools.comicBookStore.text2dd4bf3', 'text-[#2DD4BF]') : t('tools.comicBookStore.text0d94883', 'text-[#0D9488]')}`}>
+                        <p className={`font-bold ${isDark ? t('tools.comicBookStore.text2dd4bf3', 'text-[#75AAC1]') : t('tools.comicBookStore.text0d94883', 'text-[#6096B4]')}`}>
                           ${item.price.toFixed(2)}
                         </p>
                       </div>
@@ -2483,7 +2483,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
                             <option value="completed">{t('tools.comicBookStore.completed3', 'Completed')}</option>
                           </select>
                           {sub.grade && (
-                            <span className="px-2 py-0.5 text-xs rounded-full bg-[#0D9488]/20 text-[#2DD4BF] font-bold">
+                            <span className="px-2 py-0.5 text-xs rounded-full bg-[#6096B4]/20 text-[#75AAC1] font-bold">
                               {sub.grade}
                             </span>
                           )}
@@ -2525,7 +2525,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
     return (
       <div className={`max-w-6xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -2536,8 +2536,8 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Book className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Book className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -2563,9 +2563,9 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className="text-sm text-teal-500 font-medium">{t('tools.comicBookStore.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-500 font-medium">{t('tools.comicBookStore.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
@@ -2577,7 +2577,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
         </div>
         <div className={cardClass}>
           <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.comicBookStore.inventoryValue', 'Inventory Value')}</p>
-          <p className={`text-xl font-bold ${isDark ? t('tools.comicBookStore.text2dd4bf4', 'text-[#2DD4BF]') : t('tools.comicBookStore.text0d94884', 'text-[#0D9488]')}`}>
+          <p className={`text-xl font-bold ${isDark ? t('tools.comicBookStore.text2dd4bf4', 'text-[#75AAC1]') : t('tools.comicBookStore.text0d94884', 'text-[#6096B4]')}`}>
             ${stats.totalInventoryValue.toFixed(0)}
           </p>
         </div>
@@ -2615,7 +2615,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
             }}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
               activeTab === tab.id
-                ? 'bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white'
+                ? 'bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white'
                 : isDark
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -2653,7 +2653,7 @@ export const ComicBookStoreTool: React.FC<ComicBookStoreToolProps> = ({ uiConfig
           />
           <button
             onClick={() => setShowAddForm(!showAddForm)}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg hover:from-[#2DD4BF] hover:to-[#0D9488] transition-all whitespace-nowrap"
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg hover:from-[#75AAC1] hover:to-[#6096B4] transition-all whitespace-nowrap"
           >
             {showAddForm ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
             {showAddForm ? 'Cancel' : `Add ${tabs.find((t) => t.id === activeTab)?.label.slice(0, -1) || 'Item'}`}

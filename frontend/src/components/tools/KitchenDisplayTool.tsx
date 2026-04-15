@@ -288,7 +288,7 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -301,8 +301,8 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                  <ChefHat className="w-6 h-6 text-[#0D9488]" />
+                <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                  <ChefHat className="w-6 h-6 text-[#6096B4]" />
                 </div>
                 <div>
                   <CardTitle className={isDark ? 'text-white' : 'text-gray-900'}>
@@ -327,7 +327,7 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
                 />
                 <button
                   onClick={() => setShowAddForm(true)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg flex items-center gap-2 hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg flex items-center gap-2 hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.kitchenDisplay.newOrder', 'New Order')}
@@ -380,9 +380,9 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.kitchenDisplay.completed', 'Completed')}</div>
             <div className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.completed}</div>
           </div>
-          <div className={`p-4 rounded-xl border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
+          <div className={`p-4 rounded-xl border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.kitchenDisplay.avgWait', 'Avg Wait')}</div>
-            <div className="text-3xl font-bold text-[#0D9488]">{stats.avgWaitTime}m</div>
+            <div className="text-3xl font-bold text-[#6096B4]">{stats.avgWaitTime}m</div>
           </div>
         </div>
 
@@ -394,7 +394,7 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
               onClick={() => setFilterStatus(status)}
               className={`px-4 py-2 rounded-lg text-sm font-medium capitalize ${
                 filterStatus === status
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -464,7 +464,7 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
                         <span>{order.serverName}</span>
                       </div>
                       {order.courseNumber > 1 && (
-                        <div className="text-[#0D9488]">Course {order.courseNumber}</div>
+                        <div className="text-[#6096B4]">Course {order.courseNumber}</div>
                       )}
                     </div>
 
@@ -668,7 +668,7 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
                     <button
                       onClick={handleAddItem}
                       disabled={!newItemName}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg disabled:opacity-50"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg disabled:opacity-50"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -734,7 +734,7 @@ export const KitchenDisplayTool: React.FC<KitchenDisplayToolProps> = ({ uiConfig
                   <button
                     onClick={handleAddOrder}
                     disabled={!newOrder.orderNumber || !newOrder.items?.length}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2 disabled:opacity-50"
                   >
                     <ClipboardList className="w-5 h-5" />
                     {t('tools.kitchenDisplay.sendToKitchen', 'Send to Kitchen')}

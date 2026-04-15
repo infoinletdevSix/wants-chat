@@ -284,7 +284,7 @@ const BedtimeReminders: React.FC = () => {
               setEditingReminder(null);
               setShowDialog(true);
             }}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add Reminder
@@ -356,7 +356,7 @@ const BedtimeReminders: React.FC = () => {
               </p>
               <Button
                 onClick={() => setShowDialog(true)}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create Your First Reminder
@@ -390,7 +390,7 @@ const BedtimeReminders: React.FC = () => {
 
         {/* Create/Edit Dialog */}
         <Dialog open={showDialog} onOpenChange={setShowDialog}>
-          <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto bg-teal-800/95 backdrop-blur-xl border-teal-400/30">
+          <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto bg-primary-800/95 backdrop-blur-xl border-primary-400/30">
             <DialogHeader>
               <DialogTitle className="text-white">
                 {editingReminder ? 'Edit Reminder' : 'Create Bedtime Reminder'}
@@ -459,7 +459,7 @@ const BedtimeReminders: React.FC = () => {
                       className={cn(
                         'w-9 h-9 rounded-full',
                         formData.daysActive?.includes(day.value)
-                          ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-transparent text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent text-white'
                           : 'border-white/20 text-white/60 hover:border-white/40',
                         index >= 5 && !formData.daysActive?.includes(day.value) && 'border-purple-500/30'
                       )}
@@ -486,7 +486,7 @@ const BedtimeReminders: React.FC = () => {
                       className={cn(
                         'justify-start h-auto py-2',
                         formData.windDownSuggestions?.includes(option.value)
-                          ? 'bg-teal-500/30 border-teal-400 text-white'
+                          ? 'bg-primary-500/30 border-primary-400 text-white'
                           : 'border-white/20 hover:border-white/40'
                       )}
                       onClick={() => handleSuggestionToggle(option.value)}
@@ -514,7 +514,7 @@ const BedtimeReminders: React.FC = () => {
                 </Button>
                 <Button
                   type="button"
-                  className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500"
                   onClick={handleSave}
                   disabled={createMutation.loading || updateMutation.loading}
                 >
@@ -578,7 +578,7 @@ const BedtimeReminders: React.FC = () => {
 
               {/* Dismiss button */}
               <Button
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500"
+                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500"
                 onClick={dismissReminder}
               >
                 <Check className="w-4 h-4 mr-2" />

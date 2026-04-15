@@ -70,7 +70,7 @@ const AVATAR_COLORS = [
   { color: '#3B82F6', name: 'Blue' },
   { color: '#8B5CF6', name: 'Purple' },
   { color: '#EC4899', name: 'Pink' },
-  { color: '#14B8A6', name: 'Teal' },
+  { color: '#75AAC1', name: 'Teal' },
 ];
 
 const REWARD_THRESHOLD = 50;

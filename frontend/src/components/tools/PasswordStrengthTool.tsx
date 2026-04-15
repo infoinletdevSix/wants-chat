@@ -212,8 +212,8 @@ export const PasswordStrengthTool: React.FC<PasswordStrengthToolProps> = ({ uiCo
               border: '1px solid rgba(13, 148, 136, 0.2)',
             }}
           >
-            <Sparkles size={14} style={{ color: '#0D9488' }} />
-            <span style={{ fontSize: '12px', color: '#0D9488', fontWeight: 500 }}>{t('tools.passwordStrength.prefilled', 'Prefilled')}</span>
+            <Sparkles size={14} style={{ color: '#6096B4' }} />
+            <span style={{ fontSize: '12px', color: '#6096B4', fontWeight: 500 }}>{t('tools.passwordStrength.prefilled', 'Prefilled')}</span>
           </div>
         )}
       </div>

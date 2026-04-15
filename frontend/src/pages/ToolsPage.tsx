@@ -129,7 +129,7 @@ const aiBrowserFeatures = [
     icon: Globe,
     title: "Research Mode (Deep Web Search)",
     description: "Multi-source research with citations. Search academic papers, news, and real-time data.",
-    color: "from-emerald-500 to-teal-500",
+    color: "from-emerald-500 to-primary-500",
     tag: "Deep Research"
   },
   {

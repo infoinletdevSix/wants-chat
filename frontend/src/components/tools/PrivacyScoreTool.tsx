@@ -292,7 +292,7 @@ export const PrivacyScoreTool = ({ uiConfig }: PrivacyScoreToolProps) => {
     <div className={`max-w-4xl mx-auto p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <Shield className="w-7 h-7 text-teal-500" />
+        <Shield className="w-7 h-7 text-primary-500" />
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
           {t('tools.privacyScore.websitePrivacyScoreChecker', 'Website Privacy Score Checker')}
         </h2>
@@ -301,9 +301,9 @@ export const PrivacyScoreTool = ({ uiConfig }: PrivacyScoreToolProps) => {
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.privacyScore.urlLoadedFromAiResponse', 'URL loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.privacyScore.urlLoadedFromAiResponse', 'URL loaded from AI response')}</span>
           </div>
         )}
 
@@ -328,13 +328,13 @@ export const PrivacyScoreTool = ({ uiConfig }: PrivacyScoreToolProps) => {
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <button
               onClick={handleAnalyze}
               disabled={isAnalyzing}
-              className="flex items-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-600 disabled:opacity-50 text-white rounded-lg transition-colors font-medium"
             >
               {isAnalyzing ? (
                 <RefreshCw className="w-5 h-5 animate-spin" />
@@ -397,7 +397,7 @@ export const PrivacyScoreTool = ({ uiConfig }: PrivacyScoreToolProps) => {
                       href={result.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 hover:text-teal-500"
+                      className="flex items-center gap-1 hover:text-primary-500"
                     >
                       {result.url}
                       <ExternalLink className="w-3 h-3" />
@@ -455,11 +455,11 @@ export const PrivacyScoreTool = ({ uiConfig }: PrivacyScoreToolProps) => {
             </div>
 
             {/* Recommendations */}
-            <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border border-teal-700/30' : 'bg-teal-50 border border-teal-200'}`}>
-              <h3 className={`text-sm font-semibold mb-3 ${isDark ? 'text-teal-300' : 'text-teal-800'}`}>
+            <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border border-primary-700/30' : 'bg-primary-50 border border-primary-200'}`}>
+              <h3 className={`text-sm font-semibold mb-3 ${isDark ? 'text-primary-300' : 'text-primary-800'}`}>
                 {t('tools.privacyScore.recommendations', 'Recommendations')}
               </h3>
-              <ul className={`space-y-2 ${isDark ? 'text-teal-200/80' : 'text-teal-700'}`}>
+              <ul className={`space-y-2 ${isDark ? 'text-primary-200/80' : 'text-primary-700'}`}>
                 {result.recommendations.map((rec, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-sm">
                     <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -488,7 +488,7 @@ export const PrivacyScoreTool = ({ uiConfig }: PrivacyScoreToolProps) => {
                   key={idx}
                   className={`flex flex-col items-center gap-2 p-3 rounded-lg ${isDark ? 'bg-gray-600' : 'bg-white'}`}
                 >
-                  <div className="text-teal-500">{item.icon}</div>
+                  <div className="text-primary-500">{item.icon}</div>
                   <span className={`text-xs font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                     {item.label}
                   </span>

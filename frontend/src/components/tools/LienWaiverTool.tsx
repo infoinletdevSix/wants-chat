@@ -318,7 +318,7 @@ const LienWaiverTool: React.FC = () => {
       {/* Basic Information */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <FileSignature className="w-5 h-5 text-teal-600" />
+          <FileSignature className="w-5 h-5 text-primary-600" />
           Waiver Information
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -330,7 +330,7 @@ const LienWaiverTool: React.FC = () => {
               type="text"
               value={formData.waiverNumber}
               onChange={(e) => setFormData({ ...formData, waiverNumber: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Auto-generated"
             />
           </div>
@@ -341,7 +341,7 @@ const LienWaiverTool: React.FC = () => {
             <select
               value={formData.waiverType}
               onChange={(e) => setFormData({ ...formData, waiverType: e.target.value as any })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               {waiverTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -357,7 +357,7 @@ const LienWaiverTool: React.FC = () => {
             <select
               value={formData.releaseType}
               onChange={(e) => setFormData({ ...formData, releaseType: e.target.value as any })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               {releaseTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -372,7 +372,7 @@ const LienWaiverTool: React.FC = () => {
       {/* Project Information */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Building2 className="w-5 h-5 text-teal-600" />
+          <Building2 className="w-5 h-5 text-primary-600" />
           Project Information
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -384,7 +384,7 @@ const LienWaiverTool: React.FC = () => {
               type="text"
               value={formData.projectName}
               onChange={(e) => setFormData({ ...formData, projectName: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Enter project name"
               required
             />
@@ -397,7 +397,7 @@ const LienWaiverTool: React.FC = () => {
               type="text"
               value={formData.projectAddress}
               onChange={(e) => setFormData({ ...formData, projectAddress: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Enter project address"
             />
           </div>
@@ -407,7 +407,7 @@ const LienWaiverTool: React.FC = () => {
       {/* Party Information */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <User className="w-5 h-5 text-teal-600" />
+          <User className="w-5 h-5 text-primary-600" />
           Party Information
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -419,7 +419,7 @@ const LienWaiverTool: React.FC = () => {
               type="text"
               value={formData.partyName}
               onChange={(e) => setFormData({ ...formData, partyName: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Contractor/Subcontractor/Supplier name"
               required
             />
@@ -431,7 +431,7 @@ const LienWaiverTool: React.FC = () => {
             <select
               value={formData.partyType}
               onChange={(e) => setFormData({ ...formData, partyType: e.target.value as any })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               {partyTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -446,7 +446,7 @@ const LienWaiverTool: React.FC = () => {
       {/* Payment Information */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <DollarSign className="w-5 h-5 text-teal-600" />
+          <DollarSign className="w-5 h-5 text-primary-600" />
           Payment Information
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -458,7 +458,7 @@ const LienWaiverTool: React.FC = () => {
               type="date"
               value={formData.throughDate}
               onChange={(e) => setFormData({ ...formData, throughDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               required
             />
           </div>
@@ -470,7 +470,7 @@ const LienWaiverTool: React.FC = () => {
               type="number"
               value={formData.paymentAmount}
               onChange={(e) => setFormData({ ...formData, paymentAmount: parseFloat(e.target.value) || 0 })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="0.00"
               min="0"
               step="0.01"
@@ -484,7 +484,7 @@ const LienWaiverTool: React.FC = () => {
               type="text"
               value={formData.checkNumber}
               onChange={(e) => setFormData({ ...formData, checkNumber: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Check #"
             />
           </div>
@@ -496,7 +496,7 @@ const LienWaiverTool: React.FC = () => {
               type="date"
               value={formData.paymentDate}
               onChange={(e) => setFormData({ ...formData, paymentDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
         </div>
@@ -505,7 +505,7 @@ const LienWaiverTool: React.FC = () => {
       {/* Status & Dates */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Calendar className="w-5 h-5 text-teal-600" />
+          <Calendar className="w-5 h-5 text-primary-600" />
           Status & Dates
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -516,7 +516,7 @@ const LienWaiverTool: React.FC = () => {
             <select
               value={formData.status}
               onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               {statuses.map((status) => (
                 <option key={status.value} value={status.value}>
@@ -533,7 +533,7 @@ const LienWaiverTool: React.FC = () => {
               type="date"
               value={formData.dueDate}
               onChange={(e) => setFormData({ ...formData, dueDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -544,7 +544,7 @@ const LienWaiverTool: React.FC = () => {
               type="date"
               value={formData.signedDate}
               onChange={(e) => setFormData({ ...formData, signedDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -555,7 +555,7 @@ const LienWaiverTool: React.FC = () => {
               type="text"
               value={formData.signedBy}
               onChange={(e) => setFormData({ ...formData, signedBy: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Signatory name"
             />
           </div>
@@ -565,7 +565,7 @@ const LienWaiverTool: React.FC = () => {
       {/* Notarization */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <FileCheck className="w-5 h-5 text-teal-600" />
+          <FileCheck className="w-5 h-5 text-primary-600" />
           Notarization
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -575,7 +575,7 @@ const LienWaiverTool: React.FC = () => {
               id="notarized"
               checked={formData.notarized}
               onChange={(e) => setFormData({ ...formData, notarized: e.target.checked })}
-              className="w-5 h-5 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
+              className="w-5 h-5 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
             />
             <label htmlFor="notarized" className="text-sm font-medium text-gray-700">
               Document is notarized
@@ -591,7 +591,7 @@ const LienWaiverTool: React.FC = () => {
                   type="date"
                   value={formData.notaryDate}
                   onChange={(e) => setFormData({ ...formData, notaryDate: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 />
               </div>
               <div>
@@ -602,7 +602,7 @@ const LienWaiverTool: React.FC = () => {
                   type="text"
                   value={formData.notaryName}
                   onChange={(e) => setFormData({ ...formData, notaryName: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Notary public name"
                 />
               </div>
@@ -622,7 +622,7 @@ const LienWaiverTool: React.FC = () => {
             <textarea
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               rows={3}
               placeholder="Describe work/materials covered by this waiver..."
             />
@@ -634,7 +634,7 @@ const LienWaiverTool: React.FC = () => {
             <textarea
               value={formData.notes}
               onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               rows={2}
               placeholder="Additional notes..."
             />
@@ -647,7 +647,7 @@ const LienWaiverTool: React.FC = () => {
               type="url"
               value={formData.documentUrl}
               onChange={(e) => setFormData({ ...formData, documentUrl: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Link to signed document..."
             />
           </div>
@@ -667,7 +667,7 @@ const LienWaiverTool: React.FC = () => {
         </button>
         <button
           onClick={handleSubmit}
-          className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
+          className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2"
         >
           <CheckCircle2 className="w-4 h-4" />
           {editingWaiver ? 'Update Waiver' : 'Create Waiver'}
@@ -687,14 +687,14 @@ const LienWaiverTool: React.FC = () => {
             placeholder="Search waivers..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           />
         </div>
         <div className="flex gap-2">
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           >
             <option value="all">All Status</option>
             {statuses.map((status) => (
@@ -706,7 +706,7 @@ const LienWaiverTool: React.FC = () => {
           <select
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           >
             <option value="all">All Types</option>
             {waiverTypes.map((type) => (
@@ -735,7 +735,7 @@ const LienWaiverTool: React.FC = () => {
                 setFormData({ ...formData, waiverNumber: generateWaiverNumber() });
                 setActiveTab('create');
               }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
               <Plus className="w-4 h-4" />
               Create Waiver
@@ -755,8 +755,8 @@ const LienWaiverTool: React.FC = () => {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                      <FileSignature className="w-5 h-5 text-teal-600" />
+                    <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <FileSignature className="w-5 h-5 text-primary-600" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
@@ -869,7 +869,7 @@ const LienWaiverTool: React.FC = () => {
                         href={waiver.documentUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 px-3 py-1.5 text-sm text-teal-600 hover:bg-teal-50 rounded-lg transition-colors"
+                        className="flex items-center gap-1 px-3 py-1.5 text-sm text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
                       >
                         <FileText className="w-4 h-4" />
                         View Document
@@ -898,8 +898,8 @@ const LienWaiverTool: React.FC = () => {
       <div className="bg-white border-b border-gray-200 px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center">
-              <FileCheck className="w-6 h-6 text-teal-600" />
+            <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+              <FileCheck className="w-6 h-6 text-primary-600" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">{t('tools.lienWaiver.lienWaiverTracker', 'Lien Waiver Tracker')}</h1>
@@ -930,7 +930,7 @@ const LienWaiverTool: React.FC = () => {
                   setFormData({ ...formData, waiverNumber: generateWaiverNumber() });
                   setActiveTab('create');
                 }}
-                className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.lienWaiver.newWaiver', 'New Waiver')}
@@ -979,7 +979,7 @@ const LienWaiverTool: React.FC = () => {
             <p className="text-2xl font-bold text-gray-900">{stats.expired}</p>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-            <div className="flex items-center gap-2 text-teal-500 mb-1">
+            <div className="flex items-center gap-2 text-primary-500 mb-1">
               <DollarSign className="w-4 h-4" />
               <span className="text-xs">{t('tools.lienWaiver.totalAmount', 'Total Amount')}</span>
             </div>
@@ -1007,7 +1007,7 @@ const LienWaiverTool: React.FC = () => {
             onClick={() => setActiveTab('list')}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === 'list'
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -1021,7 +1021,7 @@ const LienWaiverTool: React.FC = () => {
             }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === 'create'
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -1029,7 +1029,7 @@ const LienWaiverTool: React.FC = () => {
           </button>
           {activeTab === 'edit' && (
             <button
-              className="px-4 py-2 rounded-lg font-medium bg-teal-600 text-white"
+              className="px-4 py-2 rounded-lg font-medium bg-primary-600 text-white"
             >
               {t('tools.lienWaiver.editWaiver', 'Edit Waiver')}
             </button>

@@ -188,10 +188,10 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Home className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Home className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.affordabilityCalculator.homeAffordabilityCalculator', 'Home Affordability Calculator')}</h3>
@@ -202,9 +202,9 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.affordabilityCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.affordabilityCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -226,7 +226,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="85000"
                 className={`w-full pl-8 pr-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
           </div>
@@ -244,7 +244,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="500"
                 className={`w-full pl-8 pr-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -272,7 +272,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="20"
                 className={`w-full px-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <div className="flex gap-2">
                 {[3.5, 5, 10, 20].map((pct) => (
@@ -281,7 +281,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                     onClick={() => setDownPaymentPercent(pct.toString())}
                     className={`flex-1 py-1 text-xs rounded ${
                       parseFloat(downPaymentPercent) === pct
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -306,7 +306,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="7.0"
                 className={`w-full px-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
           </div>
@@ -322,7 +322,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                   onClick={() => setLoanTermYears(term)}
                   className={`flex-1 py-2 rounded-lg font-medium ${
                     loanTermYears === term
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -352,7 +352,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="1.2"
                 className={`w-full px-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div className="space-y-2">
@@ -367,7 +367,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="0.35"
                 className={`w-full px-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
             <div className="space-y-2">
@@ -381,7 +381,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 placeholder="0"
                 className={`w-full px-4 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
             </div>
           </div>
@@ -390,10 +390,10 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
         {/* Results */}
         {result && (
           <div className="space-y-4">
-            <div className={`p-6 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+            <div className={`p-6 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
               <div className="text-center mb-4">
                 <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.affordabilityCalculator.youCanAffordUpTo', 'You Can Afford Up To')}</div>
-                <div className="text-5xl font-bold text-teal-500">
+                <div className="text-5xl font-bold text-primary-500">
                   {formatCurrency(result.maxHomePrice)}
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -468,7 +468,7 @@ export const AffordabilityCalculatorTool: React.FC<AffordabilityCalculatorToolPr
                 <div className={`border-t pt-2 ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                   <div className="flex justify-between items-center">
                     <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.affordabilityCalculator.totalMonthly', 'Total Monthly')}</span>
-                    <span className="font-bold text-teal-500">{formatCurrency(result.monthlyPayment)}</span>
+                    <span className="font-bold text-primary-500">{formatCurrency(result.monthlyPayment)}</span>
                   </div>
                 </div>
               </div>

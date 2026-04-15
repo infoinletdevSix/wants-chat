@@ -235,7 +235,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
       <div className="max-w-4xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Moon className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -261,7 +261,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {[2024, 2025, 2026, 2027, 2028, 2029, 2030].map((y) => (
                   <option key={y} value={y}>{y}</option>
@@ -273,7 +273,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
               <button
                 onClick={getCurrentLocation}
                 disabled={loading}
-                className="flex items-center gap-2 px-4 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors disabled:opacity-50"
+                className="flex items-center gap-2 px-4 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors disabled:opacity-50"
               >
                 <MapPin className="w-5 h-5" />
                 {t('tools.ramadanCalendar.useMyLocation', 'Use My Location')}
@@ -300,7 +300,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -317,7 +317,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
           <button
             onClick={generateRamadanCalendar}
             disabled={loading}
-            className="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 mb-6"
+            className="w-full bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 mb-6"
           >
             {loading ? (
               <RefreshCw className="w-5 h-5 animate-spin" />
@@ -341,8 +341,8 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
           {ramadanInfo && (
             <div className="space-y-6">
               {/* Overview */}
-              <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.ramadanCalendar.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.ramadanCalendar.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 <h2 className={`text-xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   Ramadan {ramadanInfo.hijriYear} AH / {ramadanInfo.year} CE
@@ -350,7 +350,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                     <div className="flex items-center gap-2 mb-1">
-                      <Sunrise className="w-4 h-4 text-[#0D9488]" />
+                      <Sunrise className="w-4 h-4 text-[#6096B4]" />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.ramadanCalendar.ramadanBegins', 'Ramadan Begins')}
                       </span>
@@ -361,7 +361,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                   </div>
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                     <div className="flex items-center gap-2 mb-1">
-                      <Sunset className="w-4 h-4 text-[#0D9488]" />
+                      <Sunset className="w-4 h-4 text-[#6096B4]" />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.ramadanCalendar.ramadanEnds', 'Ramadan Ends')}
                       </span>
@@ -372,7 +372,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                   </div>
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                     <div className="flex items-center gap-2 mb-1">
-                      <Moon className="w-4 h-4 text-[#0D9488]" />
+                      <Moon className="w-4 h-4 text-[#6096B4]" />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('tools.ramadanCalendar.eidAlFitr', 'Eid al-Fitr')}
                       </span>
@@ -394,7 +394,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                     <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                       <Sunrise className="w-6 h-6 text-orange-500 mx-auto mb-2" />
                       <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.ramadanCalendar.suhoorEnds', 'Suhoor Ends')}</div>
-                      <div className="text-xl font-bold text-[#0D9488]">
+                      <div className="text-xl font-bold text-[#6096B4]">
                         {ramadanInfo.days[selectedDay].suhoorEnd}
                       </div>
                     </div>
@@ -408,7 +408,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                     <div className={`p-4 rounded-lg text-center ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
                       <Sunset className="w-6 h-6 text-purple-500 mx-auto mb-2" />
                       <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.ramadanCalendar.iftarTime', 'Iftar Time')}</div>
-                      <div className="text-xl font-bold text-[#0D9488]">
+                      <div className="text-xl font-bold text-[#6096B4]">
                         {ramadanInfo.days[selectedDay].iftarTime}
                       </div>
                     </div>
@@ -428,9 +428,9 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                       onClick={() => setSelectedDay(idx)}
                       className={`p-2 rounded-lg text-center transition-colors ${
                         selectedDay === idx
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : day.isToday
-                          ? 'bg-[#0D9488]/30 text-[#0D9488] ring-2 ring-[#0D9488]'
+                          ? 'bg-[#6096B4]/30 text-[#6096B4] ring-2 ring-[#6096B4]'
                           : day.isPast
                           ? theme === 'dark'
                             ? 'bg-gray-600 text-gray-400'
@@ -468,7 +468,7 @@ export default function RamadanCalendarTool({ uiConfig }: RamadanCalendarToolPro
                         <tr
                           key={idx}
                           className={`border-t ${theme === 'dark' ? 'border-gray-600' : 'border-gray-200'} ${
-                            day.isToday ? 'bg-[#0D9488]/10' : ''
+                            day.isToday ? 'bg-[#6096B4]/10' : ''
                           }`}
                         >
                           <td className={`p-2 font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>

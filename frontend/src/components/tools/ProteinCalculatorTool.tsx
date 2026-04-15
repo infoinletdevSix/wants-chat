@@ -285,7 +285,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Beef className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -328,7 +328,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -344,7 +344,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {[3, 4, 5, 6].map((num) => (
                   <option key={num} value={num}>
@@ -366,7 +366,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                     onClick={() => setBodyType(type)}
                     className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
                       bodyType === type
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -390,7 +390,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="sedentary">{t('tools.proteinCalculator.sedentaryLittleOrNoExercise', 'Sedentary (little or no exercise)')}</option>
                 <option value="light">{t('tools.proteinCalculator.light13DaysWeek', 'Light (1-3 days/week)')}</option>
@@ -417,7 +417,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                   onClick={() => setGoal(value as Goal)}
                   className={`py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
                     goal === value
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -434,7 +434,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateProtein}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Beef className="w-5 h-5" />
               {t('tools.proteinCalculator.calculateProteinNeeds', 'Calculate Protein Needs')}
@@ -456,8 +456,8 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
             <div className="space-y-6">
               {/* Main Result */}
               <div
-                className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                  theme === 'dark' ? 'bg-gray-700' : t('tools.proteinCalculator.bg0d948810', 'bg-[#0D9488]/10')
+                className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                  theme === 'dark' ? 'bg-gray-700' : t('tools.proteinCalculator.bg0d948810', 'bg-[#6096B4]/10')
                 }`}
               >
                 <div className="flex justify-between items-start mb-4">
@@ -465,7 +465,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                     <div className={`text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.proteinCalculator.recommendedDailyProtein', 'Recommended Daily Protein')}
                     </div>
-                    <div className="text-5xl font-bold text-[#0D9488]">{result.dailyProtein}g</div>
+                    <div className="text-5xl font-bold text-[#6096B4]">{result.dailyProtein}g</div>
                   </div>
                   <button
                     onClick={copyResults}
@@ -499,7 +499,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
               {/* Method Comparison */}
               <div className={`p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Dumbbell className="w-5 h-5 text-[#0D9488]" />
+                  <Dumbbell className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.proteinCalculator.calculationMethodsComparison', 'Calculation Methods Comparison')}
                 </h3>
                 <div className="space-y-3">
@@ -519,7 +519,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-xl font-bold text-[#0D9488]">{method.dailyProtein}g</div>
+                        <div className="text-xl font-bold text-[#6096B4]">{method.dailyProtein}g</div>
                         <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           {method.multiplier}
                         </div>
@@ -532,7 +532,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
               {/* Timing Suggestions */}
               <div className={`p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Clock className="w-5 h-5 text-[#0D9488]" />
+                  <Clock className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.proteinCalculator.proteinTimingSuggestions', 'Protein Timing Suggestions')}
                 </h3>
                 <ul className="space-y-2">
@@ -541,7 +541,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                       key={index}
                       className={`flex items-start gap-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}
                     >
-                      <span className="text-[#0D9488] mt-1">&#8226;</span>
+                      <span className="text-[#6096B4] mt-1">&#8226;</span>
                       {suggestion}
                     </li>
                   ))}
@@ -551,7 +551,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
               {/* Protein Sources */}
               <div className={`p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Beef className="w-5 h-5 text-[#0D9488]" />
+                  <Beef className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.proteinCalculator.proteinSourcesAmountForDaily', 'Protein Sources (Amount for Daily Goal)')}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -570,7 +570,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                           {source.proteinPer100g}g per 100g
                         </div>
                       </div>
-                      <div className="text-xl font-bold text-[#0D9488]">{source.amountNeeded}g</div>
+                      <div className="text-xl font-bold text-[#6096B4]">{source.amountNeeded}g</div>
                     </div>
                   ))}
                 </div>
@@ -579,7 +579,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
               {/* Meal Plan */}
               <div className={`p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                  <Utensils className="w-5 h-5 text-[#0D9488]" />
+                  <Utensils className="w-5 h-5 text-[#6096B4]" />
                   {t('tools.proteinCalculator.sampleMealPlan', 'Sample Meal Plan')}
                 </h3>
                 <div className="space-y-3">
@@ -597,7 +597,7 @@ ${result.proteinSources.slice(0, 5).map(s => `- ${s.name}: ${s.amountNeeded}g ($
                             {meal.meal}
                           </span>
                         </div>
-                        <span className="text-lg font-bold text-[#0D9488]">{meal.protein}g</span>
+                        <span className="text-lg font-bold text-[#6096B4]">{meal.protein}g</span>
                       </div>
                       <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         Suggestions: {meal.suggestions.join(' | ')}

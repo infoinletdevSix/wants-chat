@@ -686,12 +686,12 @@ export const DocumentReviewTool: React.FC<DocumentReviewToolProps> = ({ uiConfig
         </div>
         <div className={cardClass}>
           <div className="p-4 flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Send className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Send className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.documentReview.productions', 'Productions')}</p>
-              <p className="text-xl font-bold text-teal-500">{stats.totalProductions}</p>
+              <p className="text-xl font-bold text-primary-500">{stats.totalProductions}</p>
             </div>
           </div>
         </div>

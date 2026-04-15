@@ -48,10 +48,10 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[120px]"
+        className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px]"
         animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -102,7 +102,7 @@ export const LoginPage = () => {
                     placeholder="you@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-teal-400 focus:ring-teal-400/20 rounded-xl h-12"
+                    className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-primary-400 focus:ring-primary-400/20 rounded-xl h-12"
                     required
                     disabled={loading}
                   />
@@ -120,7 +120,7 @@ export const LoginPage = () => {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-teal-400 focus:ring-teal-400/20 rounded-xl h-12"
+                    className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-primary-400 focus:ring-primary-400/20 rounded-xl h-12"
                     required
                     disabled={loading}
                   />
@@ -129,7 +129,7 @@ export const LoginPage = () => {
               <div className="flex items-center justify-end">
                 <Link
                   to="/forgot-password"
-                  className="text-sm text-teal-400 hover:text-teal-300 transition-colors"
+                  className="text-sm text-primary-400 hover:text-primary-300 transition-colors"
                 >
                   Forgot password?
                 </Link>
@@ -138,7 +138,7 @@ export const LoginPage = () => {
             <CardFooter className="flex flex-col space-y-4">
               <Button
                 type="submit"
-                className="w-full h-12 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-teal-500/25 transition-all duration-200"
+                className="w-full h-12 bg-gradient-to-r from-primary-600 to-cyan-600 hover:from-primary-500 hover:to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 transition-all duration-200"
                 disabled={loading}
               >
                 {loading ? (
@@ -152,7 +152,7 @@ export const LoginPage = () => {
               </Button>
               <p className="text-sm text-white/60 text-center">
                 Don't have an account?{' '}
-                <Link to="/signup" className="text-teal-400 hover:text-teal-300 font-medium transition-colors">
+                <Link to="/signup" className="text-primary-400 hover:text-primary-300 font-medium transition-colors">
                   Sign up
                 </Link>
               </p>

@@ -380,8 +380,8 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <Truck className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <Truck className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.equipmentLog.equipmentLog', 'Equipment Log')}</h1>
@@ -459,13 +459,13 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
       <div className="flex gap-2 border-b border-gray-200">
         <button
           onClick={() => { setActiveTab('list'); setSelectedEquipment(null); }}
-          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'list' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'list' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
         >
           {t('tools.equipmentLog.allEquipment', 'All Equipment')}
         </button>
         <button
           onClick={() => setActiveTab('create')}
-          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'create' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-4 py-2 font-medium transition-colors ${activeTab === 'create' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'}`}
         >
           {t('tools.equipmentLog.addEquipment', 'Add Equipment')}
         </button>
@@ -505,8 +505,8 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
                 <div className="p-4 cursor-pointer hover:bg-gray-50" onClick={() => setExpandedId(expandedId === equip.id ? null : equip.id)}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <Truck className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <Truck className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{equip.name}</h3>
@@ -564,7 +564,7 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
                       </button>
                       <button
                         onClick={() => { setSelectedEquipment(equip); setActiveTab('edit'); }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.equipmentLog.edit', 'Edit')}
@@ -586,7 +586,7 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
               <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
                 <Truck className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900">{t('tools.equipmentLog.noEquipmentFound', 'No equipment found')}</h3>
-                <button onClick={() => setActiveTab('create')} className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+                <button onClick={() => setActiveTab('create')} className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
                   {t('tools.equipmentLog.addEquipment2', 'Add Equipment')}
                 </button>
               </div>
@@ -697,7 +697,7 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
 
           <div className="flex justify-end gap-3">
             <button onClick={() => { setActiveTab('list'); setSelectedEquipment(null); }} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.equipmentLog.cancel', 'Cancel')}</button>
-            <button onClick={activeTab === 'edit' ? handleUpdate : handleSave} className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+            <button onClick={activeTab === 'edit' ? handleUpdate : handleSave} className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
               <Save className="w-4 h-4" />
               {activeTab === 'edit' ? t('tools.equipmentLog.update', 'Update') : t('tools.equipmentLog.save', 'Save')} Equipment
             </button>
@@ -737,14 +737,14 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
               <input type="number" value={newUsageLog.fuelAdded} onChange={e => setNewUsageLog({ ...newUsageLog, fuelAdded: parseFloat(e.target.value) || 0 })} className="w-full px-4 py-2 border border-gray-300 rounded-lg" />
             </div>
             <div className="flex items-center gap-2 pt-6">
-              <input type="checkbox" id="preInspection" checked={newUsageLog.preInspectionDone} onChange={e => setNewUsageLog({ ...newUsageLog, preInspectionDone: e.target.checked })} className="w-4 h-4 text-teal-600 rounded" />
+              <input type="checkbox" id="preInspection" checked={newUsageLog.preInspectionDone} onChange={e => setNewUsageLog({ ...newUsageLog, preInspectionDone: e.target.checked })} className="w-4 h-4 text-primary-600 rounded" />
               <label htmlFor="preInspection" className="text-sm font-medium text-gray-700">{t('tools.equipmentLog.preInspectionCompleted', 'Pre-inspection completed')}</label>
             </div>
           </div>
 
           <div className="flex justify-end gap-3">
             <button onClick={() => { setActiveTab('list'); setSelectedEquipment(null); }} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.equipmentLog.cancel2', 'Cancel')}</button>
-            <button onClick={handleAddUsageLog} className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+            <button onClick={handleAddUsageLog} className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
               <Plus className="w-4 h-4" />
               {t('tools.equipmentLog.logUsage2', 'Log Usage')}
             </button>
@@ -813,7 +813,7 @@ export const EquipmentLogTool: React.FC<EquipmentLogToolProps> = ({ uiConfig }) 
 
           <div className="flex justify-end gap-3">
             <button onClick={() => { setActiveTab('list'); setSelectedEquipment(null); }} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">{t('tools.equipmentLog.cancel3', 'Cancel')}</button>
-            <button onClick={handleAddMaintenance} className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700">
+            <button onClick={handleAddMaintenance} className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
               <Plus className="w-4 h-4" />
               {t('tools.equipmentLog.addRecord', 'Add Record')}
             </button>

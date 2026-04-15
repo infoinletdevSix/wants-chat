@@ -375,7 +375,7 @@ READABILITY: [0-100]`;
   return (
     <div className={`rounded-xl shadow-sm border overflow-hidden ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+      <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
         <div className="flex items-center justify-between space-x-3">
           <div className="flex items-center space-x-3 flex-1">
             <div className="bg-white/20 p-3 rounded-lg">
@@ -383,7 +383,7 @@ READABILITY: [0-100]`;
             </div>
             <div>
               <h2 className="text-2xl font-bold text-white">{t('tools.grammarChecker.grammarChecker', 'Grammar Checker')}</h2>
-              <p className="text-teal-50 text-sm mt-1">{t('tools.grammarChecker.aiPoweredGrammarSpellingAnd', 'AI-powered grammar, spelling, and writing analysis')}</p>
+              <p className="text-primary-50 text-sm mt-1">{t('tools.grammarChecker.aiPoweredGrammarSpellingAnd', 'AI-powered grammar, spelling, and writing analysis')}</p>
               {isPrefilled && (
                 <div className="flex items-center gap-1 mt-1 text-xs text-white/80">
                   <Sparkles className="w-3 h-3" />
@@ -418,14 +418,14 @@ READABILITY: [0-100]`;
                 onClick={() => toggleCheckType(type.value)}
                 className={`flex items-center space-x-2 px-4 py-3 rounded-lg border-2 transition-all ${
                   selectedCheckTypes.includes(type.value)
-                    ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/20'
+                    ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
                     : isDark
                     ? 'border-gray-600 bg-gray-700 hover:bg-gray-650'
                     : 'border-gray-200 bg-white hover:bg-gray-50'
                 }`}
               >
-                <type.icon className={`w-4 h-4 ${selectedCheckTypes.includes(type.value) ? 'text-teal-600 dark:text-teal-400' : isDark ? 'text-gray-400' : 'text-gray-500'}`} />
-                <span className={`text-sm font-medium ${selectedCheckTypes.includes(type.value) ? isDark ? 'text-teal-400' : 'text-teal-600' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <type.icon className={`w-4 h-4 ${selectedCheckTypes.includes(type.value) ? 'text-primary-600 dark:text-primary-400' : isDark ? 'text-gray-400' : 'text-gray-500'}`} />
+                <span className={`text-sm font-medium ${selectedCheckTypes.includes(type.value) ? isDark ? 'text-primary-400' : 'text-primary-600' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {type.label}
                 </span>
               </button>
@@ -444,7 +444,7 @@ READABILITY: [0-100]`;
               onChange={(e) => setInputText(e.target.value)}
               placeholder={t('tools.grammarChecker.pasteOrTypeYourText', 'Paste or type your text here for grammar and writing analysis...')}
               rows={10}
-              className={`w-full px-4 py-3 rounded-lg border font-mono text-sm resize-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors ${
+              className={`w-full px-4 py-3 rounded-lg border font-mono text-sm resize-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                 isDark
                   ? 'bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
@@ -460,7 +460,7 @@ READABILITY: [0-100]`;
             <button
               onClick={handleCheck}
               disabled={isChecking || !inputText.trim()}
-              className="flex-1 bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+              className="flex-1 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
             >
               {isChecking ? (
                 <>
@@ -519,7 +519,7 @@ READABILITY: [0-100]`;
                 </div>
 
                 <div className="text-center">
-                  <div className={`text-4xl font-bold mb-2 ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <div className={`text-4xl font-bold mb-2 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {result.readabilityScore}
                   </div>
                   <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -531,7 +531,7 @@ READABILITY: [0-100]`;
                 </div>
 
                 <div className="text-center">
-                  <div className={`text-4xl font-bold mb-2 ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <div className={`text-4xl font-bold mb-2 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {result.issues.length}
                   </div>
                   <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -580,7 +580,7 @@ READABILITY: [0-100]`;
                             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                               <span className="line-through">{issue.original}</span>
                               <span className="mx-2">→</span>
-                              <span className="font-semibold text-teal-600 dark:text-teal-400">{issue.suggestion}</span>
+                              <span className="font-semibold text-primary-600 dark:text-primary-400">{issue.suggestion}</span>
                             </div>
                           </div>
                           <button
@@ -636,7 +636,7 @@ READABILITY: [0-100]`;
                   <button
                     onClick={handleSave}
                     disabled={isSaving}
-                    className="flex items-center space-x-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
+                    className="flex items-center space-x-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
                   >
                     {isSaving ? (
                       <>

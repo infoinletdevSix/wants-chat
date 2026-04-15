@@ -90,8 +90,8 @@ ${notes.nextSteps.map((n) => `- ${n}`).join('\n')}
       title="AI Meeting Notes"
       description="Transform meeting transcripts into organized notes"
       icon={<Users className="w-8 h-8" />}
-      iconColor="text-teal-400"
-      iconBgColor="bg-teal-500/20"
+      iconColor="text-primary-400"
+      iconBgColor="bg-primary-500/20"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Form Section */}
@@ -170,7 +170,7 @@ ${notes.nextSteps.map((n) => `- ${n}`).join('\n')}
             <Button
               onClick={handleGenerate}
               disabled={loading || !formData.transcript.trim()}
-              className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
             >
               {loading ? (
                 <>
@@ -206,13 +206,13 @@ ${notes.nextSteps.map((n) => `- ${n}`).join('\n')}
           <CardContent>
             {loading ? (
               <div className="flex items-center justify-center min-h-[400px]">
-                <Loader2 className="w-8 h-8 text-teal-400 animate-spin" />
+                <Loader2 className="w-8 h-8 text-primary-400 animate-spin" />
               </div>
             ) : notes ? (
               <div className="space-y-4 max-h-[600px] overflow-y-auto">
                 {/* Summary */}
-                <div className="bg-teal-500/10 rounded-lg p-4">
-                  <h4 className="text-teal-400 font-medium text-sm mb-2">Summary</h4>
+                <div className="bg-primary-500/10 rounded-lg p-4">
+                  <h4 className="text-primary-400 font-medium text-sm mb-2">Summary</h4>
                   <p className="text-white text-sm">{notes.summary}</p>
                 </div>
 
@@ -222,7 +222,7 @@ ${notes.nextSteps.map((n) => `- ${n}`).join('\n')}
                   <ul className="space-y-2">
                     {notes.keyPoints.map((point, idx) => (
                       <li key={idx} className="text-white text-sm flex gap-2">
-                        <span className="text-teal-400">•</span>
+                        <span className="text-primary-400">•</span>
                         {point}
                       </li>
                     ))}
@@ -271,7 +271,7 @@ ${notes.nextSteps.map((n) => `- ${n}`).join('\n')}
                     <ul className="space-y-1">
                       {notes.nextSteps.map((step, idx) => (
                         <li key={idx} className="text-white text-sm flex gap-2">
-                          <span className="text-teal-400">→</span>
+                          <span className="text-primary-400">→</span>
                           {step}
                         </li>
                       ))}

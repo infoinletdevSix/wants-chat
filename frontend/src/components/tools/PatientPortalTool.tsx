@@ -530,7 +530,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
 
   const cardClass = `rounded-xl border ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`;
 
-  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
+  const buttonPrimary = `flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-primary-600 hover:from-cyan-700 hover:to-primary-700 text-white rounded-lg transition-all font-medium shadow-lg shadow-cyan-500/20`;
 
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium ${
     theme === 'dark'
@@ -540,7 +540,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
 
   const tabClass = (active: boolean) => `px-4 py-2 rounded-lg font-medium transition-colors ${
     active
-      ? 'bg-gradient-to-r from-cyan-600 to-teal-600 text-white'
+      ? 'bg-gradient-to-r from-cyan-600 to-primary-600 text-white'
       : theme === 'dark'
         ? 'text-gray-400 hover:text-white hover:bg-gray-700'
         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -551,7 +551,7 @@ export const PatientPortalTool: React.FC<PatientPortalToolProps> = ({ uiConfig }
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-xl">
+          <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-primary-500/20 rounded-xl">
             <LayoutDashboard className="w-8 h-8 text-cyan-500" />
           </div>
           <div>

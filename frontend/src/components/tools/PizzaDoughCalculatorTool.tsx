@@ -220,7 +220,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Scale className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -247,7 +247,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -263,7 +263,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                       onClick={() => setPizzaSize(key)}
                       className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
                         pizzaSize === key
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -287,7 +287,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                       onClick={() => setCrustStyle(key)}
                       className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
                         crustStyle === key
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -314,7 +314,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {(Object.entries(FLOUR_TYPES) as [FlourType, string][]).map(([key, label]) => (
                     <option key={key} value={key}>
@@ -336,7 +336,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                       onClick={() => setYeastType(key)}
                       className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
                         yeastType === key
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -367,7 +367,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -384,7 +384,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
                       onClick={() => setColdFermentDays(days.toString())}
                       className={`py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
                         coldFermentDays === days.toString()
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -402,7 +402,7 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateDough}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.pizzaDoughCalculator.calculateRecipe', 'Calculate Recipe')}
@@ -516,9 +516,9 @@ export const PizzaDoughCalculatorTool: React.FC<PizzaDoughCalculatorToolProps> =
 
               {/* Timing & Temperature */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${theme === 'dark' ? 'bg-gray-700' : 'bg-teal-50'}`}>
+                <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${theme === 'dark' ? 'bg-gray-700' : 'bg-primary-50'}`}>
                   <div className="flex items-center gap-2 mb-2">
-                    <Clock className="w-5 h-5 text-[#0D9488]" />
+                    <Clock className="w-5 h-5 text-[#6096B4]" />
                     <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.pizzaDoughCalculator.riseTime', 'Rise Time')}
                     </span>

@@ -60,7 +60,7 @@ const AppShortcuts: React.FC = () => {
 
   // Color mapping for gradient backgrounds
   const getGradientFromColor = (color?: string): string => {
-    if (!color) return 'from-teal-500 to-cyan-500';
+    if (!color) return 'from-primary-500 to-cyan-500';
     // Create gradient from single color
     return `from-[${color}] to-[${color}]`;
   };
@@ -180,14 +180,14 @@ const AppShortcuts: React.FC = () => {
                 {/* Background Gradient */}
                 <div
                   className="absolute -top-4 -right-4 w-16 h-16 opacity-10 rounded-full group-hover:opacity-20 transition-opacity duration-300"
-                  style={{ background: `linear-gradient(135deg, ${app.color || '#14b8a6'}, ${app.color || '#06b6d4'})` }}
+                  style={{ background: `linear-gradient(135deg, ${app.color || '#75AAC1'}, ${app.color || '#06b6d4'})` }}
                 />
 
                 {/* Header */}
                 <div className="flex justify-between items-start mb-3">
                   <div
                     className="h-10 w-10 rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 text-xl"
-                    style={{ background: `linear-gradient(135deg, ${app.color || '#14b8a6'}, ${app.color || '#06b6d4'}88)` }}
+                    style={{ background: `linear-gradient(135deg, ${app.color || '#75AAC1'}, ${app.color || '#06b6d4'}88)` }}
                   >
                     {app.icon}
                   </div>

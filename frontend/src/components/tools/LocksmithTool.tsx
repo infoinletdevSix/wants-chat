@@ -569,7 +569,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={textSecondary}>{t('tools.locksmith.loadingJobs', 'Loading jobs...')}</p>
         </div>
       </div>
@@ -583,7 +583,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
         <div className={`${cardBg} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Key className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -650,7 +650,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : `${isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`
                 }`}
               >
@@ -670,7 +670,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
               <Card className={cardBg}>
                 <CardHeader>
                   <CardTitle className={`flex items-center gap-2 ${textPrimary}`}>
-                    <Plus className="w-5 h-5 text-[#0D9488]" />
+                    <Plus className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.locksmith.createNewServiceDispatch', 'Create New Service Dispatch')}
                   </CardTitle>
                 </CardHeader>
@@ -688,28 +688,28 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                           placeholder={t('tools.locksmith.customerName', 'Customer Name *')}
                           value={newJob.customerName || ''}
                           onChange={e => setNewJob(prev => ({ ...prev, customerName: e.target.value }))}
-                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                         />
                         <input
                           type="tel"
                           placeholder={t('tools.locksmith.phoneNumber', 'Phone Number')}
                           value={newJob.customerPhone || ''}
                           onChange={e => setNewJob(prev => ({ ...prev, customerPhone: e.target.value }))}
-                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                         />
                         <input
                           type="email"
                           placeholder={t('tools.locksmith.emailAddress', 'Email Address')}
                           value={newJob.customerEmail || ''}
                           onChange={e => setNewJob(prev => ({ ...prev, customerEmail: e.target.value }))}
-                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                         />
                         <input
                           type="text"
                           placeholder={t('tools.locksmith.billingAddress', 'Billing Address')}
                           value={newJob.customerAddress || ''}
                           onChange={e => setNewJob(prev => ({ ...prev, customerAddress: e.target.value }))}
-                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                          className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                     </div>
@@ -725,7 +725,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                         placeholder={t('tools.locksmith.serviceAddress', 'Service Address *')}
                         value={newJob.serviceAddress || ''}
                         onChange={e => setNewJob(prev => ({ ...prev, serviceAddress: e.target.value }))}
-                        className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
 
@@ -741,7 +741,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                           <select
                             value={newJob.jobType}
                             onChange={e => setNewJob(prev => ({ ...prev, jobType: e.target.value as JobType }))}
-                            className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           >
                             {Object.entries(SERVICE_PRICING).map(([type, info]) => (
                               <option key={type} value={type}>
@@ -755,7 +755,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                           <select
                             value={newJob.propertyType}
                             onChange={e => setNewJob(prev => ({ ...prev, propertyType: e.target.value as PropertyType }))}
-                            className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           >
                             <option value="residential">{t('tools.locksmith.residential', 'Residential')}</option>
                             <option value="commercial">{t('tools.locksmith.commercial', 'Commercial')}</option>
@@ -768,7 +768,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                           <select
                             value={newJob.urgency}
                             onChange={e => setNewJob(prev => ({ ...prev, urgency: e.target.value as UrgencyLevel }))}
-                            className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           >
                             <option value="normal">{t('tools.locksmith.normal', 'Normal')}</option>
                             <option value="urgent">{t('tools.locksmith.urgent', 'Urgent')}</option>
@@ -783,7 +783,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             type="checkbox"
                             checked={newJob.isEmergency}
                             onChange={e => setNewJob(prev => ({ ...prev, isEmergency: e.target.checked, urgency: e.target.checked ? 'emergency' : prev.urgency }))}
-                            className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                            className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                           />
                           <AlertTriangle className="w-4 h-4 text-red-500" />
                           Emergency Call (+${EMERGENCY_FEE} fee)
@@ -795,7 +795,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                         value={newJob.description || ''}
                         onChange={e => setNewJob(prev => ({ ...prev, description: e.target.value }))}
                         rows={3}
-                        className={`w-full mt-4 px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full mt-4 px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
 
@@ -812,35 +812,35 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             placeholder={t('tools.locksmith.make', 'Make')}
                             value={newJob.vehicleMake || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, vehicleMake: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
                             placeholder={t('tools.locksmith.model', 'Model')}
                             value={newJob.vehicleModel || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, vehicleModel: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
                             placeholder={t('tools.locksmith.year', 'Year')}
                             value={newJob.vehicleYear || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, vehicleYear: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
                             placeholder={t('tools.locksmith.vin', 'VIN')}
                             value={newJob.vehicleVin || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, vehicleVin: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
                             placeholder={t('tools.locksmith.licensePlate', 'License Plate')}
                             value={newJob.vehicleLicensePlate || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, vehicleLicensePlate: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                       </div>
@@ -859,21 +859,21 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             placeholder={t('tools.locksmith.propertyDescription', 'Property Description')}
                             value={newJob.propertyDescription || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, propertyDescription: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
                             placeholder={t('tools.locksmith.lockBrand', 'Lock Brand')}
                             value={newJob.lockBrand || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, lockBrand: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                           <input
                             type="text"
                             placeholder={t('tools.locksmith.lockModel', 'Lock Model')}
                             value={newJob.lockModel || ''}
                             onChange={e => setNewJob(prev => ({ ...prev, lockModel: e.target.value }))}
-                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                            className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                           />
                         </div>
                       </div>
@@ -895,7 +895,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             technicianName: tech?.name
                           }));
                         }}
-                        className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="">{t('tools.locksmith.selectTechnicianOptional', 'Select Technician (Optional)')}</option>
                         {technicians.filter(t => t.available).map(tech => (
@@ -926,7 +926,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                         <div className={`border-t pt-2 ${isDark ? 'border-gray-600' : 'border-gray-300'}`}>
                           <div className={`flex justify-between font-bold ${textPrimary}`}>
                             <span>{t('tools.locksmith.estimatedTotal', 'Estimated Total:')}</span>
-                            <span className="text-[#0D9488]">
+                            <span className="text-[#6096B4]">
                               ${(SERVICE_PRICING[newJob.jobType || 'lockout'].base + (newJob.isEmergency ? EMERGENCY_FEE : 0)).toFixed(2)}
                             </span>
                           </div>
@@ -937,7 +937,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                     {/* Submit Button */}
                     <button
                       onClick={createJob}
-                      className="w-full py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+                      className="w-full py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
                     >
                       <Plus className="w-5 h-5" />
                       {t('tools.locksmith.createServiceDispatch', 'Create Service Dispatch')}
@@ -953,7 +953,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                 <CardHeader>
                   <CardTitle className={`flex items-center justify-between ${textPrimary}`}>
                     <span className="flex items-center gap-2">
-                      <ClipboardList className="w-5 h-5 text-[#0D9488]" />
+                      <ClipboardList className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.locksmith.serviceJobs', 'Service Jobs')}
                     </span>
                     <span className={`text-sm font-normal ${textSecondary}`}>
@@ -971,13 +971,13 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                         placeholder={t('tools.locksmith.searchJobs', 'Search jobs...')}
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
-                        className={`w-full pl-10 pr-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full pl-10 pr-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <select
                       value={statusFilter}
                       onChange={e => setStatusFilter(e.target.value as JobStatus | 'all')}
-                      className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                      className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="all">{t('tools.locksmith.allStatus', 'All Status')}</option>
                       <option value="pending">{t('tools.locksmith.pending', 'Pending')}</option>
@@ -1002,7 +1002,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                           onClick={() => setSelectedJob(job)}
                           className={`p-4 rounded-lg border cursor-pointer transition-colors ${
                             selectedJob?.id === job.id
-                              ? 'border-[#0D9488] bg-[#0D9488]/10'
+                              ? 'border-[#6096B4] bg-[#6096B4]/10'
                               : isDark ? 'border-gray-700 hover:border-gray-600' : 'border-gray-200 hover:border-gray-300'
                           }`}
                         >
@@ -1032,7 +1032,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                               )}
                             </div>
                             <div className="text-right">
-                              <div className={`font-bold text-lg text-[#0D9488]`}>
+                              <div className={`font-bold text-lg text-[#6096B4]`}>
                                 ${job.totalCost.toFixed(2)}
                               </div>
                               <div className={`text-xs ${textSecondary}`}>
@@ -1053,7 +1053,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
               <Card className={cardBg}>
                 <CardHeader>
                   <CardTitle className={`flex items-center gap-2 ${textPrimary}`}>
-                    <Copy className="w-5 h-5 text-[#0D9488]" />
+                    <Copy className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.locksmith.duplicateKeyOrders', 'Duplicate Key Orders')}
                   </CardTitle>
                 </CardHeader>
@@ -1083,20 +1083,20 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                         type="text"
                         placeholder={t('tools.locksmith.customerName2', 'Customer Name *')}
                         required
-                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                       <input
                         name="customerPhone"
                         type="tel"
                         placeholder={t('tools.locksmith.phoneNumber2', 'Phone Number')}
-                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                       <input
                         name="keyType"
                         type="text"
                         placeholder={t('tools.locksmith.keyType', 'Key Type *')}
                         required
-                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                       <input
                         name="quantity"
@@ -1104,23 +1104,23 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                         min="1"
                         defaultValue="1"
                         placeholder={t('tools.locksmith.quantity', 'Quantity')}
-                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                       <input
                         name="keyCode"
                         type="text"
                         placeholder={t('tools.locksmith.keyCodeOptional', 'Key Code (optional)')}
-                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                       <input
                         name="notes"
                         type="text"
                         placeholder={t('tools.locksmith.notes', 'Notes')}
-                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`px-4 py-2 rounded-lg border ${inputBg} focus:ring-2 focus:ring-[#6096B4]`}
                       />
                       <button
                         type="submit"
-                        className="md:col-span-2 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                        className="md:col-span-2 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
                       >
                         {t('tools.locksmith.createOrder', 'Create Order')}
                       </button>
@@ -1194,7 +1194,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
               <Card className={cardBg}>
                 <CardHeader>
                   <CardTitle className={`flex items-center gap-2 ${textPrimary}`}>
-                    <User className="w-5 h-5 text-[#0D9488]" />
+                    <User className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.locksmith.technicians', 'Technicians')}
                   </CardTitle>
                 </CardHeader>
@@ -1240,7 +1240,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                                     t.id === tech.id ? { ...t, available: !t.available } : t
                                   ));
                                 }}
-                                className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                                className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                               />
                               <span className={`text-sm ${tech.available ? 'text-green-500' : textSecondary}`}>
                                 {tech.available ? t('tools.locksmith.available', 'Available') : t('tools.locksmith.unavailable', 'Unavailable')}
@@ -1260,7 +1260,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
               <Card className={cardBg}>
                 <CardHeader>
                   <CardTitle className={`flex items-center gap-2 ${textPrimary}`}>
-                    <FileText className="w-5 h-5 text-[#0D9488]" />
+                    <FileText className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.locksmith.reportsAnalytics', 'Reports & Analytics')}
                   </CardTitle>
                 </CardHeader>
@@ -1278,7 +1278,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                     </div>
                     <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                       <div className={`text-sm ${textSecondary}`}>{t('tools.locksmith.totalRevenue', 'Total Revenue')}</div>
-                      <div className={`text-3xl font-bold text-[#0D9488]`}>
+                      <div className={`text-3xl font-bold text-[#6096B4]`}>
                         ${stats.totalRevenue.toFixed(2)}
                       </div>
                     </div>
@@ -1305,7 +1305,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             </div>
                             <div className={`h-2 rounded-full ${isDark ? 'bg-gray-600' : 'bg-gray-300'}`}>
                               <div
-                                className="h-full rounded-full bg-[#0D9488]"
+                                className="h-full rounded-full bg-[#6096B4]"
                                 style={{ width: `${percentage}%` }}
                               />
                             </div>
@@ -1326,7 +1326,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                 <CardHeader>
                   <CardTitle className={`flex items-center justify-between ${textPrimary}`}>
                     <span className="flex items-center gap-2">
-                      <Key className="w-5 h-5 text-[#0D9488]" />
+                      <Key className="w-5 h-5 text-[#6096B4]" />
                       {t('tools.locksmith.jobDetails2', 'Job Details')}
                     </span>
                     <div className="flex gap-2">
@@ -1418,7 +1418,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                               dispatchJob(selectedJob.id, select.value);
                             }
                           }}
-                          className="px-3 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                          className="px-3 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                         >
                           {t('tools.locksmith.dispatch', 'Dispatch')}
                         </button>
@@ -1481,7 +1481,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             updateJob(updated as Job);
                           }
                         }}
-                        className="text-[#0D9488] hover:underline text-sm"
+                        className="text-[#6096B4] hover:underline text-sm"
                       >
                         {t('tools.locksmith.add', '+ Add')}
                       </button>
@@ -1517,7 +1517,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                             updateJob(updated as Job);
                           }
                         }}
-                        className="text-[#0D9488] hover:underline text-sm"
+                        className="text-[#6096B4] hover:underline text-sm"
                       >
                         {t('tools.locksmith.add2', '+ Add')}
                       </button>
@@ -1532,7 +1532,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                               <span className={`text-sm ${textSecondary}`}>{kc.type}</span>
                               <button
                                 onClick={() => setShowKeyCode(prev => ({ ...prev, [kc.id]: !prev[kc.id] }))}
-                                className="text-[#0D9488] text-sm"
+                                className="text-[#6096B4] text-sm"
                               >
                                 {showKeyCode[kc.id] ? t('tools.locksmith.hide', 'Hide') : t('tools.locksmith.show', 'Show')}
                               </button>
@@ -1582,7 +1582,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                       )}
                       <div className={`flex justify-between pt-2 border-t font-bold ${isDark ? 'border-gray-600' : 'border-gray-300'} ${textPrimary}`}>
                         <span>{t('tools.locksmith.total', 'Total:')}</span>
-                        <span className="text-[#0D9488]">${selectedJob.totalCost.toFixed(2)}</span>
+                        <span className="text-[#6096B4]">${selectedJob.totalCost.toFixed(2)}</span>
                       </div>
                     </div>
                   </div>
@@ -1592,7 +1592,7 @@ export function LocksmithTool({ uiConfig }: LocksmithToolProps) {
                     {!selectedJob.invoiceGenerated && selectedJob.status === 'completed' && (
                       <button
                         onClick={() => generateInvoice(selectedJob.id)}
-                        className="w-full py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium flex items-center justify-center gap-2"
+                        className="w-full py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium flex items-center justify-center gap-2"
                       >
                         <FileText className="w-4 h-4" />
                         {t('tools.locksmith.generateInvoice', 'Generate Invoice')}

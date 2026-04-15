@@ -10,12 +10,12 @@ interface HotelCardProps {
 
 const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
   return (
-    <Card className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-500/50 transition-all">
+    <Card className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-500/50 transition-all">
       <div className="h-32 sm:h-40 relative">
         {hotel.image ? (
           <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover" />
         ) : (
-          <div className="w-full h-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20"></div>
+          <div className="w-full h-full bg-gradient-to-r from-primary-500/20 to-cyan-500/20"></div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       </div>
@@ -28,10 +28,10 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
           </div>
         </div>
         <p className="text-white/60 text-xs sm:text-sm mb-2">
-          <LocationOn className="h-3 w-3 sm:h-4 sm:w-4 inline mr-1 text-teal-400" />
+          <LocationOn className="h-3 w-3 sm:h-4 sm:w-4 inline mr-1 text-primary-400" />
           {hotel.location}
         </p>
-        <p className="text-base sm:text-lg font-semibold text-teal-400 mb-2">
+        <p className="text-base sm:text-lg font-semibold text-primary-400 mb-2">
           ${hotel.pricePerNight}/night
         </p>
         <div className="flex flex-wrap gap-1">

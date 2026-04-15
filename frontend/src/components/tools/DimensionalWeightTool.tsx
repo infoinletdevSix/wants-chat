@@ -124,10 +124,10 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Box className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Box className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.dimensionalWeight.dimensionalWeightCalculator', 'Dimensional Weight Calculator')}</h3>
@@ -138,9 +138,9 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.dimensionalWeight.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.dimensionalWeight.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -148,13 +148,13 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('imperial')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.dimensionalWeight.imperialInLbs', 'Imperial (in/lbs)')}
           </button>
           <button
             onClick={() => setUnit('metric')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.dimensionalWeight.metricCmKg', 'Metric (cm/kg)')}
           </button>
@@ -164,13 +164,13 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
         <div className="flex gap-2">
           <button
             onClick={() => setShipmentType('domestic')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${shipmentType === 'domestic' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${shipmentType === 'domestic' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.dimensionalWeight.domestic', 'Domestic')}
           </button>
           <button
             onClick={() => setShipmentType('international')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${shipmentType === 'international' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${shipmentType === 'international' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.dimensionalWeight.international', 'International')}
           </button>
@@ -188,7 +188,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
                 type="number"
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.dimensionalWeight.length', 'Length')}</span>
             </div>
@@ -197,7 +197,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
                 type="number"
                 value={width}
                 onChange={(e) => setWidth(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.dimensionalWeight.width', 'Width')}</span>
             </div>
@@ -206,7 +206,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
                 type="number"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.dimensionalWeight.height', 'Height')}</span>
             </div>
@@ -223,7 +223,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
             type="number"
             value={actualWeight}
             onChange={(e) => setActualWeight(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
           />
         </div>
 
@@ -238,10 +238,10 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
               <button
                 key={key}
                 onClick={() => setCarrier(key as Carrier)}
-                className={`py-2 px-3 rounded-lg text-sm transition-colors ${carrier === key ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-2 px-3 rounded-lg text-sm transition-colors ${carrier === key ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 <div className="font-medium">{info.name}</div>
-                <div className={`text-xs ${carrier === key ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>
+                <div className={`text-xs ${carrier === key ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>
                   Factor: {info.domestic}
                 </div>
               </button>
@@ -260,7 +260,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
         )}
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="text-center">
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.dimensionalWeight.actual', 'Actual')}</div>
@@ -278,7 +278,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
             <ArrowRight className={`w-6 h-6 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
             <div className="text-center">
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.dimensionalWeight.billable', 'Billable')}</div>
-              <div className="text-2xl font-bold text-teal-500">
+              <div className="text-2xl font-bold text-primary-500">
                 {calculations.selectedCarrier.billableWeight.toFixed(1)} lbs
               </div>
             </div>
@@ -300,7 +300,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
           <div className={`text-sm font-mono ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             (L x W x H) / {calculations.selectedCarrier.factor} = DIM Weight
           </div>
-          <div className={`text-sm font-mono mt-1 ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+          <div className={`text-sm font-mono mt-1 ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
             ({length} x {width} x {height}) / {calculations.selectedCarrier.factor} = {calculations.selectedCarrier.dimWeight.toFixed(2)} lbs
           </div>
         </div>
@@ -313,7 +313,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
           </h4>
           <div className="space-y-2">
             {calculations.allCarrierResults.map((c) => (
-              <div key={c.carrier} className={`flex justify-between items-center p-2 rounded ${c.carrier === carrier ? 'bg-teal-500/20' : ''}`}>
+              <div key={c.carrier} className={`flex justify-between items-center p-2 rounded ${c.carrier === carrier ? 'bg-primary-500/20' : ''}`}>
                 <span className={`${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {c.name}
                   <span className={`text-xs ml-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -368,7 +368,7 @@ export const DimensionalWeightTool: React.FC<DimensionalWeightToolProps> = ({ ui
 
         {/* Info Box */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.dimensionalWeight.aboutDimensionalWeight', 'About Dimensional Weight')}</p>
             <p>{t('tools.dimensionalWeight.dimWeightIsAPricing', 'DIM weight is a pricing technique that accounts for package volume rather than just weight. Carriers charge by whichever is greater: actual weight or DIM weight. Lower DIM factors (like 139) result in higher DIM weights.')}</p>

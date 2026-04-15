@@ -210,9 +210,9 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
               </div>
             </div>
             {optimalWakeTime && (
-              <div className="flex items-center gap-2 p-3 rounded-lg bg-teal-500/10 border border-teal-500/30">
-                <Clock className="w-4 h-4 text-teal-400" />
-                <span className="text-sm text-teal-300">
+              <div className="flex items-center gap-2 p-3 rounded-lg bg-primary-500/10 border border-primary-500/30">
+                <Clock className="w-4 h-4 text-primary-400" />
+                <span className="text-sm text-primary-300">
                   Optimal wake time: <strong>{optimalWakeTime}</strong>
                 </span>
               </div>
@@ -232,7 +232,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
                   className={cn(
                     'w-9 h-9 rounded-full',
                     formData.daysActive?.includes(day.value)
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-transparent text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-transparent text-white'
                       : 'border-white/20 text-white/60',
                     index >= 5 && 'border-purple-500/30'
                   )}
@@ -247,7 +247,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
           {/* Smart Alarm Toggle */}
           <div className="flex items-center justify-between p-4 rounded-lg bg-white/5">
             <div className="flex items-center gap-3">
-              <Settings2 className="w-5 h-5 text-teal-400" />
+              <Settings2 className="w-5 h-5 text-primary-400" />
               <div>
                 <p className="text-sm font-medium text-white">Smart Alarm</p>
                 <p className="text-xs text-white/50">
@@ -275,7 +275,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
                   className={cn(
                     'h-auto py-3 justify-start flex-col items-start',
                     formData.soundType === sound.value
-                      ? 'bg-teal-500/30 border-teal-400 text-white'
+                      ? 'bg-primary-500/30 border-primary-400 text-white'
                       : 'border-white/20 hover:border-white/40'
                   )}
                   onClick={() => setFormData({ ...formData, soundType: sound.value })}
@@ -419,7 +419,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
             )}
             <Button
               type="button"
-              className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500"
+              className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500"
               disabled={isLoading}
               onClick={handleSaveClick}
             >
@@ -435,7 +435,7 @@ export const SmartAlarmConfig: React.FC<SmartAlarmConfigProps> = ({
       <Card>
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
-            <AlarmClock className="w-5 h-5 text-teal-400" />
+            <AlarmClock className="w-5 h-5 text-primary-400" />
             Smart Alarm
           </CardTitle>
         </CardHeader>

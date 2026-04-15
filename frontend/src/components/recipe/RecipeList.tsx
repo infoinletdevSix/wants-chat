@@ -43,7 +43,7 @@ export const RecipeList: React.FC<RecipeListProps> = ({
         </div>
         <Button
           onClick={() => onNavigate('/recipe-builder/add')}
-          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6"
+          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 px-6"
         >
           <Plus className="h-4 w-4 mr-2" />
           Add Recipe
@@ -51,7 +51,7 @@ export const RecipeList: React.FC<RecipeListProps> = ({
       </div>
 
       {/* Search and Filter Section */}
-      <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 border-l-4 border-l-teal-500 p-6">
+      <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 border-l-4 border-l-primary-500 p-6">
         <div className="space-y-4">
           {/* Search Input */}
           <div className="relative">
@@ -75,7 +75,7 @@ export const RecipeList: React.FC<RecipeListProps> = ({
                 <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                   <SelectValue placeholder="All cuisines" />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border-primary-400/30">
                   <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10">All Cuisines</SelectItem>
                   {cuisines.map(cuisine => (
                     <SelectItem key={cuisine} value={cuisine} className="text-white hover:bg-white/10 focus:bg-white/10">{cuisine}</SelectItem>
@@ -92,7 +92,7 @@ export const RecipeList: React.FC<RecipeListProps> = ({
                 <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                   <SelectValue placeholder="All levels" />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border-primary-400/30">
                   <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10">All Levels</SelectItem>
                   <SelectItem value="easy" className="text-white hover:bg-white/10 focus:bg-white/10">Easy</SelectItem>
                   <SelectItem value="medium" className="text-white hover:bg-white/10 focus:bg-white/10">Medium</SelectItem>

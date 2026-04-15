@@ -138,8 +138,8 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
       {/* Header */}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-orange-900/20' : 'bg-gradient-to-r from-white to-orange-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Plug className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Plug className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.applianceEnergy.applianceEnergyCostCalculator', 'Appliance Energy Cost Calculator')}</h3>
@@ -161,35 +161,35 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
             value={electricityRate}
             onChange={(e) => setElectricityRate(e.target.value)}
             placeholder="0.12"
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
           />
         </div>
 
         {/* Summary Cards */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.applianceEnergy.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.applianceEnergy.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <BarChart3 className="w-4 h-4 text-[#0D9488]" />
+            <BarChart3 className="w-4 h-4 text-[#6096B4]" />
             {t('tools.applianceEnergy.totalEnergyCostSummary', 'Total Energy Cost Summary')}
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.applianceEnergy.daily', 'Daily')}</div>
-              <div className="text-lg font-bold text-[#0D9488]">${calculations.totals.dailyCost.toFixed(2)}</div>
+              <div className="text-lg font-bold text-[#6096B4]">${calculations.totals.dailyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.totals.dailyKwh.toFixed(2)} kWh</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.applianceEnergy.weekly', 'Weekly')}</div>
-              <div className="text-lg font-bold text-[#0D9488]">${calculations.totals.weeklyCost.toFixed(2)}</div>
+              <div className="text-lg font-bold text-[#6096B4]">${calculations.totals.weeklyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.totals.weeklyKwh.toFixed(1)} kWh</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.applianceEnergy.monthly', 'Monthly')}</div>
-              <div className="text-lg font-bold text-[#0D9488]">${calculations.totals.monthlyCost.toFixed(2)}</div>
+              <div className="text-lg font-bold text-[#6096B4]">${calculations.totals.monthlyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.totals.monthlyKwh.toFixed(0)} kWh</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.applianceEnergy.yearly', 'Yearly')}</div>
-              <div className="text-lg font-bold text-[#0D9488]">${calculations.totals.yearlyCost.toFixed(2)}</div>
+              <div className="text-lg font-bold text-[#6096B4]">${calculations.totals.yearlyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.totals.yearlyKwh.toFixed(0)} kWh</div>
             </div>
           </div>
@@ -201,7 +201,7 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
             <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.applianceEnergy.yourAppliances', 'Your Appliances')}</h4>
             <button
               onClick={() => setShowAddForm(!showAddForm)}
-              className="flex items-center gap-1 px-3 py-1.5 bg-[#0D9488] text-white text-sm rounded-lg hover:bg-[#0F766E] transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 bg-[#6096B4] text-white text-sm rounded-lg hover:bg-[#4C7F98] transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.applianceEnergy.addAppliance', 'Add Appliance')}
@@ -285,7 +285,7 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
                     className={`w-full px-2 py-1 text-center text-sm rounded border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'}`}
                   />
                 </div>
-                <div className={`col-span-2 text-center font-medium ${isDark ? t('tools.applianceEnergy.text0d9488', 'text-[#0D9488]') : t('tools.applianceEnergy.text0d94882', 'text-[#0D9488]')}`}>
+                <div className={`col-span-2 text-center font-medium ${isDark ? t('tools.applianceEnergy.text0d9488', 'text-[#6096B4]') : t('tools.applianceEnergy.text0d94882', 'text-[#6096B4]')}`}>
                   ${appliance.monthlyCost.toFixed(2)}
                 </div>
                 <div className="col-span-1 flex justify-center">
@@ -323,7 +323,7 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
                     </div>
                     <div className={`h-2 rounded-full overflow-hidden ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-full bg-gradient-to-r from-[#0D9488] to-[#0F766E] rounded-full"
+                        className="h-full bg-gradient-to-r from-[#6096B4] to-[#4C7F98] rounded-full"
                         style={{ width: `${percentage}%` }}
                       />
                     </div>
@@ -337,7 +337,7 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
         {/* Detailed Cost Breakdown */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Clock className="w-4 h-4 text-[#0D9488]" />
+            <Clock className="w-4 h-4 text-[#6096B4]" />
             {t('tools.applianceEnergy.detailedBreakdownByAppliance', 'Detailed Breakdown by Appliance')}
           </h4>
           <div className="overflow-x-auto">
@@ -358,7 +358,7 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
                     <td className={`text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>${a.dailyCost.toFixed(2)}</td>
                     <td className={`text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>${a.weeklyCost.toFixed(2)}</td>
                     <td className={`text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>${a.monthlyCost.toFixed(2)}</td>
-                    <td className={`text-right font-medium ${isDark ? t('tools.applianceEnergy.text0d94883', 'text-[#0D9488]') : t('tools.applianceEnergy.text0d94884', 'text-[#0D9488]')}`}>${a.yearlyCost.toFixed(2)}</td>
+                    <td className={`text-right font-medium ${isDark ? t('tools.applianceEnergy.text0d94883', 'text-[#6096B4]') : t('tools.applianceEnergy.text0d94884', 'text-[#6096B4]')}`}>${a.yearlyCost.toFixed(2)}</td>
                   </tr>
                 ))}
                 <tr className={`${isDark ? 'border-gray-700 bg-gray-700/50' : 'border-gray-200 bg-gray-100'} border-t font-medium`}>
@@ -366,7 +366,7 @@ export const ApplianceEnergyTool: React.FC<ApplianceEnergyToolProps> = ({ uiConf
                   <td className={`text-right ${isDark ? 'text-white' : 'text-gray-900'}`}>${calculations.totals.dailyCost.toFixed(2)}</td>
                   <td className={`text-right ${isDark ? 'text-white' : 'text-gray-900'}`}>${calculations.totals.weeklyCost.toFixed(2)}</td>
                   <td className={`text-right ${isDark ? 'text-white' : 'text-gray-900'}`}>${calculations.totals.monthlyCost.toFixed(2)}</td>
-                  <td className={`text-right text-[#0D9488]`}>${calculations.totals.yearlyCost.toFixed(2)}</td>
+                  <td className={`text-right text-[#6096B4]`}>${calculations.totals.yearlyCost.toFixed(2)}</td>
                 </tr>
               </tbody>
             </table>

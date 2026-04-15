@@ -270,7 +270,7 @@ export const SplitTimerTool = ({
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Timer className="w-6 h-6 text-white" />
           </div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -305,7 +305,7 @@ export const SplitTimerTool = ({
           {/* Current Lap Time */}
           {(isRunning || splits.length > 0) && (
             <div className="mt-6">
-              <div className={`text-2xl sm:text-3xl font-mono ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>
+              <div className={`text-2xl sm:text-3xl font-mono ${theme === 'dark' ? 'text-primary-400' : 'text-primary-600'}`}>
                 {formatTime(currentLapTime)}
               </div>
               <div className={`text-sm mt-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -324,7 +324,7 @@ export const SplitTimerTool = ({
                 ? theme === 'dark'
                   ? 'bg-yellow-600 hover:bg-yellow-700 text-white active:bg-yellow-800'
                   : 'bg-yellow-500 hover:bg-yellow-600 text-white active:bg-yellow-700'
-                : 'bg-[#0D9488] hover:bg-[#0F766E] text-white active:bg-[#0A5E54]'
+                : 'bg-[#6096B4] hover:bg-[#4C7F98] text-white active:bg-[#0A5E54]'
             }`}
           >
             {isRunning ? (

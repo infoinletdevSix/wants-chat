@@ -14,7 +14,7 @@ interface ColorData {
 const ColorDetector: React.FC = () => {
   const { alert } = useConfirm();
   const [selectedColor, setSelectedColor] = useState<ColorData>({
-    hex: '#14b8a6',
+    hex: '#75AAC1',
     rgb: { r: 20, g: 184, b: 166 },
     hsl: { h: 174, s: 80, l: 40 }
   });
@@ -163,7 +163,7 @@ const ColorDetector: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -178,7 +178,7 @@ const ColorDetector: React.FC = () => {
             <Pipette className="w-10 h-10 text-cyan-400" />
             Color Detector
           </h1>
-          <p className="text-teal-200">Pick colors from your camera or uploaded images</p>
+          <p className="text-primary-200">Pick colors from your camera or uploaded images</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -186,7 +186,7 @@ const ColorDetector: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl"
+            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
               <Camera className="w-6 h-6 text-cyan-400" />
@@ -204,10 +204,10 @@ const ColorDetector: React.FC = () => {
                   className="w-full h-full object-cover cursor-crosshair"
                 />
               ) : (
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-900/30 to-cyan-900/30">
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-900/30 to-cyan-900/30">
                   <div className="text-center">
-                    <Pipette className="w-24 h-24 text-teal-400/50 mx-auto mb-4" />
-                    <p className="text-teal-200 text-lg">Start camera or upload image</p>
+                    <Pipette className="w-24 h-24 text-primary-400/50 mx-auto mb-4" />
+                    <p className="text-primary-200 text-lg">Start camera or upload image</p>
                   </div>
                 </div>
               )}
@@ -229,7 +229,7 @@ const ColorDetector: React.FC = () => {
                 className={`w-full px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 ${
                   isStreaming
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600'
-                    : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'
+                    : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600'
                 } shadow-lg hover:shadow-xl transform hover:scale-105`}
               >
                 {isStreaming ? 'Stop Camera' : 'Start Camera'}
@@ -245,7 +245,7 @@ const ColorDetector: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full px-6 py-3 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-teal-400/30 transition-all"
+                  className="w-full px-6 py-3 rounded-xl font-semibold text-white bg-white/10 hover:bg-white/20 border border-primary-400/30 transition-all"
                 >
                   <Upload className="w-5 h-5 inline mr-2" />
                   Upload Image
@@ -258,7 +258,7 @@ const ColorDetector: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl"
+            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl"
           >
             <h2 className="text-2xl font-bold text-white mb-4">Selected Color</h2>
 
@@ -272,9 +272,9 @@ const ColorDetector: React.FC = () => {
             {/* Color Values */}
             <div className="space-y-4">
               {/* HEX */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-teal-200 text-sm font-medium">HEX</span>
+                  <span className="text-primary-200 text-sm font-medium">HEX</span>
                   <button
                     onClick={() => copyToClipboard(selectedColor.hex, 'hex')}
                     className="p-1.5 hover:bg-white/10 rounded transition-colors"
@@ -282,7 +282,7 @@ const ColorDetector: React.FC = () => {
                     {copiedField === 'hex' ? (
                       <Check className="w-4 h-4 text-green-400" />
                     ) : (
-                      <Copy className="w-4 h-4 text-teal-400" />
+                      <Copy className="w-4 h-4 text-primary-400" />
                     )}
                   </button>
                 </div>
@@ -290,9 +290,9 @@ const ColorDetector: React.FC = () => {
               </div>
 
               {/* RGB */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-teal-200 text-sm font-medium">RGB</span>
+                  <span className="text-primary-200 text-sm font-medium">RGB</span>
                   <button
                     onClick={() => copyToClipboard(`rgb(${selectedColor.rgb.r}, ${selectedColor.rgb.g}, ${selectedColor.rgb.b})`, 'rgb')}
                     className="p-1.5 hover:bg-white/10 rounded transition-colors"
@@ -300,7 +300,7 @@ const ColorDetector: React.FC = () => {
                     {copiedField === 'rgb' ? (
                       <Check className="w-4 h-4 text-green-400" />
                     ) : (
-                      <Copy className="w-4 h-4 text-teal-400" />
+                      <Copy className="w-4 h-4 text-primary-400" />
                     )}
                   </button>
                 </div>
@@ -309,24 +309,24 @@ const ColorDetector: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-2 mt-3">
                   <div>
-                    <div className="text-xs text-teal-300">R</div>
+                    <div className="text-xs text-primary-300">R</div>
                     <div className="text-lg font-semibold text-white">{selectedColor.rgb.r}</div>
                   </div>
                   <div>
-                    <div className="text-xs text-teal-300">G</div>
+                    <div className="text-xs text-primary-300">G</div>
                     <div className="text-lg font-semibold text-white">{selectedColor.rgb.g}</div>
                   </div>
                   <div>
-                    <div className="text-xs text-teal-300">B</div>
+                    <div className="text-xs text-primary-300">B</div>
                     <div className="text-lg font-semibold text-white">{selectedColor.rgb.b}</div>
                   </div>
                 </div>
               </div>
 
               {/* HSL */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-teal-200 text-sm font-medium">HSL</span>
+                  <span className="text-primary-200 text-sm font-medium">HSL</span>
                   <button
                     onClick={() => copyToClipboard(`hsl(${selectedColor.hsl.h}, ${selectedColor.hsl.s}%, ${selectedColor.hsl.l}%)`, 'hsl')}
                     className="p-1.5 hover:bg-white/10 rounded transition-colors"
@@ -334,7 +334,7 @@ const ColorDetector: React.FC = () => {
                     {copiedField === 'hsl' ? (
                       <Check className="w-4 h-4 text-green-400" />
                     ) : (
-                      <Copy className="w-4 h-4 text-teal-400" />
+                      <Copy className="w-4 h-4 text-primary-400" />
                     )}
                   </button>
                 </div>
@@ -343,15 +343,15 @@ const ColorDetector: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-2 mt-3">
                   <div>
-                    <div className="text-xs text-teal-300">Hue</div>
+                    <div className="text-xs text-primary-300">Hue</div>
                     <div className="text-lg font-semibold text-white">{selectedColor.hsl.h}°</div>
                   </div>
                   <div>
-                    <div className="text-xs text-teal-300">Sat</div>
+                    <div className="text-xs text-primary-300">Sat</div>
                     <div className="text-lg font-semibold text-white">{selectedColor.hsl.s}%</div>
                   </div>
                   <div>
-                    <div className="text-xs text-teal-300">Light</div>
+                    <div className="text-xs text-primary-300">Light</div>
                     <div className="text-lg font-semibold text-white">{selectedColor.hsl.l}%</div>
                   </div>
                 </div>
@@ -371,7 +371,7 @@ const ColorDetector: React.FC = () => {
             <Pipette className="w-5 h-5 text-blue-400" />
             How to Use
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-teal-200 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-primary-200 text-sm">
             <div>
               <h4 className="font-semibold text-white mb-2">From Camera:</h4>
               <ol className="space-y-1 ml-4">

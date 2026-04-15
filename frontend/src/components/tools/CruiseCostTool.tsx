@@ -153,7 +153,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Ship className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -167,9 +167,9 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20 mb-4">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.cruiseCost.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20 mb-4">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.cruiseCost.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
             </div>
           )}
 
@@ -190,7 +190,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -207,7 +207,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -230,14 +230,14 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     onClick={() => setCruiseLine(type.id as CruiseLine)}
                     className={`p-3 rounded-lg text-left transition-colors ${
                       cruiseLine === type.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
                     <div className="font-medium text-sm">{type.name}</div>
-                    <div className={`text-xs ${cruiseLine === type.id ? 'text-teal-100' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <div className={`text-xs ${cruiseLine === type.id ? 'text-primary-100' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                       {type.desc}
                     </div>
                   </button>
@@ -262,14 +262,14 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     onClick={() => setCabinType(type.id as CabinType)}
                     className={`p-3 rounded-lg text-left transition-colors ${
                       cabinType === type.id
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
                     <div className="font-medium text-sm">{type.name}</div>
-                    <div className={`text-xs ${cabinType === type.id ? 'text-teal-100' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <div className={`text-xs ${cabinType === type.id ? 'text-primary-100' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                       {type.desc}
                     </div>
                   </button>
@@ -294,7 +294,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -312,7 +312,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -328,7 +328,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                     key={addon.id}
                     className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors ${
                       addon.selected
-                        ? isDark ? 'bg-teal-900/30 border border-teal-700' : 'bg-teal-50 border border-teal-200'
+                        ? isDark ? 'bg-primary-900/30 border border-primary-700' : 'bg-primary-50 border border-primary-200'
                         : isDark ? 'bg-gray-700' : 'bg-gray-50'
                     }`}
                   >
@@ -336,9 +336,9 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                       type="checkbox"
                       checked={addon.selected}
                       onChange={() => toggleAddOn(addon.id)}
-                      className="w-4 h-4 rounded text-[#0D9488]"
+                      className="w-4 h-4 rounded text-[#6096B4]"
                     />
-                    <div className={`p-2 rounded ${addon.selected ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-600 text-gray-300' : 'bg-gray-200 text-gray-600'}`}>
+                    <div className={`p-2 rounded ${addon.selected ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-600 text-gray-300' : 'bg-gray-200 text-gray-600'}`}>
                       {addon.icon}
                     </div>
                     <div className="flex-1">
@@ -362,9 +362,9 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
             </div>
 
             {/* Cost Breakdown */}
-            <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/30 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
+            <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/30 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
               <h3 className={`font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <DollarSign className="w-5 h-5 text-[#0D9488]" />
+                <DollarSign className="w-5 h-5 text-[#6096B4]" />
                 {t('tools.cruiseCost.costBreakdown', 'Cost Breakdown')}
               </h3>
 
@@ -392,7 +392,7 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                   </span>
                 </div>
 
-                <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-teal-700' : 'border-teal-200'}`}>
+                <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-primary-700' : 'border-primary-200'}`}>
                   <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>{t('tools.cruiseCost.subtotal', 'Subtotal')}</span>
                   <span className={isDark ? 'text-white' : 'text-gray-900'}>
                     {formatCurrency(calculations.subtotal)}
@@ -408,9 +408,9 @@ export const CruiseCostTool: React.FC<CruiseCostToolProps> = ({ uiConfig }) => {
                   </div>
                 )}
 
-                <div className={`flex justify-between pt-3 border-t ${isDark ? 'border-teal-700' : 'border-teal-200'}`}>
+                <div className={`flex justify-between pt-3 border-t ${isDark ? 'border-primary-700' : 'border-primary-200'}`}>
                   <span className={`text-lg font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cruiseCost.grandTotal', 'Grand Total')}</span>
-                  <span className="text-2xl font-bold text-[#0D9488]">
+                  <span className="text-2xl font-bold text-[#6096B4]">
                     {formatCurrency(calculations.grandTotal)}
                   </span>
                 </div>

@@ -43,9 +43,9 @@ const GoalsProgress: React.FC<GoalsProgressProps> = ({ goals, onAddGoal }) => {
     switch (color) {
       case 'primary':
         return {
-          badge: 'bg-teal-500/20 text-teal-400',
-          progress: 'bg-gradient-to-r from-teal-500 to-cyan-400',
-          icon: 'text-teal-400'
+          badge: 'bg-primary-500/20 text-primary-400',
+          progress: 'bg-gradient-to-r from-primary-500 to-cyan-400',
+          icon: 'text-primary-400'
         };
       case 'emerald':
         return {
@@ -72,13 +72,13 @@ const GoalsProgress: React.FC<GoalsProgressProps> = ({ goals, onAddGoal }) => {
     <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <Icon path={mdiTarget} size={1} className="text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <Icon path={mdiTarget} size={1} className="text-primary-400" />
           </div>
           <h3 className="text-lg font-semibold text-white">Goal Progress</h3>
         </div>
         {onAddGoal && (
-          <Button size="sm" onClick={onAddGoal} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+          <Button size="sm" onClick={onAddGoal} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
             <Icon path={mdiPlus} size={0.7} className="mr-2" />
             Add Goal
           </Button>

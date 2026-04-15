@@ -404,9 +404,9 @@ export const IngredientInventoryTool: React.FC<IngredientInventoryToolProps> = (
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.ingredientInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.ingredientInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -414,7 +414,7 @@ export const IngredientInventoryTool: React.FC<IngredientInventoryToolProps> = (
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -506,7 +506,7 @@ export const IngredientInventoryTool: React.FC<IngredientInventoryToolProps> = (
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -700,7 +700,7 @@ export const IngredientInventoryTool: React.FC<IngredientInventoryToolProps> = (
                             setAdjustment({ ...adjustment, type: 'in', quantity: item.reorderQuantity, reason: 'Restock order' });
                             setShowAdjustModal(true);
                           }}
-                          className="text-sm text-[#0D9488] hover:underline"
+                          className="text-sm text-[#6096B4] hover:underline"
                         >
                           {t('tools.ingredientInventory.markAsReceived', 'Mark as Received')}
                         </button>
@@ -908,7 +908,7 @@ export const IngredientInventoryTool: React.FC<IngredientInventoryToolProps> = (
                 />
                 <button
                   onClick={addItem}
-                  className="w-full py-3 bg-[#0D9488] text-white rounded-lg font-medium hover:bg-[#0B7C71] transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-[#6096B4] text-white rounded-lg font-medium hover:bg-[#0B7C71] transition-colors flex items-center justify-center gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.ingredientInventory.addItem', 'Add Item')}
@@ -975,7 +975,7 @@ export const IngredientInventoryTool: React.FC<IngredientInventoryToolProps> = (
                   </button>
                   <button
                     onClick={adjustStock}
-                    className="flex-1 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C71]"
+                    className="flex-1 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C71]"
                   >
                     {t('tools.ingredientInventory.apply', 'Apply')}
                   </button>

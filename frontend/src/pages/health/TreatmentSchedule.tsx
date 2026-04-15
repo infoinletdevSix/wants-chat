@@ -225,11 +225,11 @@ const TreatmentSchedule: React.FC = () => {
     switch (status) {
       case 'active':
       case 'scheduled':
-        return <Badge className="bg-teal-500/20 text-teal-400 border border-teal-400/30">Active</Badge>;
+        return <Badge className="bg-primary-500/20 text-primary-400 border border-primary-400/30">Active</Badge>;
       case 'completed':
         return <Badge className="bg-green-500/20 text-green-400 border border-green-400/30">Completed</Badge>;
       default:
-        return <Badge className="bg-teal-500/20 text-teal-400 border border-teal-400/30">Active</Badge>;
+        return <Badge className="bg-primary-500/20 text-primary-400 border border-primary-400/30">Active</Badge>;
     }
   };
 
@@ -253,7 +253,7 @@ const TreatmentSchedule: React.FC = () => {
       <div className="min-h-screen relative flex items-center justify-center">
         <BackgroundEffects />
         <div className="text-center relative z-10">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
           <p className="text-white/60">Loading treatments...</p>
         </div>
       </div>
@@ -271,7 +271,7 @@ const TreatmentSchedule: React.FC = () => {
             Failed to load treatments
           </h3>
           <p className="text-white/60 mb-4">{error}</p>
-          <Button onClick={refetch} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">Try Again</Button>
+          <Button onClick={refetch} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Try Again</Button>
         </div>
       </div>
     );
@@ -296,7 +296,7 @@ const TreatmentSchedule: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Welcome Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             Treatment Management
           </h1>
@@ -307,7 +307,7 @@ const TreatmentSchedule: React.FC = () => {
 
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 cursor-pointer hover:border-teal-500/30 transition-all" onClick={() => setActiveTab('schedule')}>
+          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 cursor-pointer hover:border-primary-500/30 transition-all" onClick={() => setActiveTab('schedule')}>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-white/60 mb-1">Active Treatments</p>
@@ -315,8 +315,8 @@ const TreatmentSchedule: React.FC = () => {
                   {treatments?.filter(t => t.status !== 'completed').length || 0}
                 </p>
               </div>
-              <div className="p-3 rounded-full bg-teal-500/20">
-                <Assignment className="h-6 w-6 text-teal-400" />
+              <div className="p-3 rounded-full bg-primary-500/20">
+                <Assignment className="h-6 w-6 text-primary-400" />
               </div>
             </div>
           </div>
@@ -367,7 +367,7 @@ const TreatmentSchedule: React.FC = () => {
             <SelectTrigger className="w-full md:w-48 rounded-xl bg-white/10 border-white/20 text-white">
               <SelectValue placeholder="Filter by status" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">All Status</SelectItem>
               <SelectItem value="active" className="text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">Active</SelectItem>
               <SelectItem value="completed" className="text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">Completed</SelectItem>
@@ -378,7 +378,7 @@ const TreatmentSchedule: React.FC = () => {
             <SelectTrigger className="w-full md:w-48 rounded-xl bg-white/10 border-white/20 text-white">
               <SelectValue placeholder="Filter by type" />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="all" className="text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">All Types</SelectItem>
               <SelectItem value="medication" className="text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">Medication</SelectItem>
               <SelectItem value="therapy" className="text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">Therapy</SelectItem>
@@ -391,7 +391,7 @@ const TreatmentSchedule: React.FC = () => {
           </Select>
 
           <Button
-            className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+            className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
             onClick={() => navigate('/health/add-treatment')}
           >
             <Plus className="h-5 w-5 mr-2" />
@@ -402,11 +402,11 @@ const TreatmentSchedule: React.FC = () => {
         {/* Tabs for different views */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid grid-cols-2 gap-2 h-auto p-1 bg-white/10 border border-white/20 rounded-xl">
-            <TabsTrigger value="schedule" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="schedule" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
               <Schedule className="h-5 w-5 mr-2" />
               Active
             </TabsTrigger>
-            <TabsTrigger value="completed" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+            <TabsTrigger value="completed" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
               <CheckCircle className="h-5 w-5 mr-2" />
               Completed
             </TabsTrigger>
@@ -415,7 +415,7 @@ const TreatmentSchedule: React.FC = () => {
           <TabsContent value="schedule" className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {activeTreatments.map(treatment => (
-                <div key={treatment.id} className="rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/30 transition-all">
+                <div key={treatment.id} className="rounded-2xl bg-white/5 border border-white/10 hover:border-primary-500/30 transition-all">
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -559,7 +559,7 @@ const TreatmentSchedule: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/health/add-treatment')}
-                  className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                  className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Treatment

@@ -96,7 +96,7 @@ export default function TextTools() {
     // Italic
     html = html.replace(/\*(.*)\*/gim, '<em class="italic">$1</em>');
     // Links
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-teal-400 hover:underline">$1</a>');
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-primary-400 hover:underline">$1</a>');
     // Line breaks
     html = html.replace(/\n/gim, '<br />');
     return html;
@@ -110,7 +110,7 @@ export default function TextTools() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               Text Tools
             </h1>
             <p className="text-gray-400">Powerful text manipulation and formatting utilities</p>
@@ -118,19 +118,19 @@ export default function TextTools() {
 
           <Tabs defaultValue="json" className="w-full">
             <TabsList className="grid w-full grid-cols-4 bg-gray-800/50 backdrop-blur-sm">
-              <TabsTrigger value="json" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="json" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <FileText className="w-4 h-4 mr-2" />
                 JSON
               </TabsTrigger>
-              <TabsTrigger value="case" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="case" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Type className="w-4 h-4 mr-2" />
                 Case
               </TabsTrigger>
-              <TabsTrigger value="counter" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="counter" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Calculator className="w-4 h-4 mr-2" />
                 Counter
               </TabsTrigger>
-              <TabsTrigger value="markdown" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500">
+              <TabsTrigger value="markdown" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500">
                 <Eye className="w-4 h-4 mr-2" />
                 Markdown
               </TabsTrigger>
@@ -143,12 +143,12 @@ export default function TextTools() {
                   value={jsonInput}
                   onChange={(e) => setJsonInput(e.target.value)}
                   placeholder='{"name":"John","age":30}'
-                  className="w-full h-48 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white font-mono text-sm focus:border-teal-500 focus:outline-none"
+                  className="w-full h-48 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white font-mono text-sm focus:border-primary-500 focus:outline-none"
                 />
                 <div className="flex gap-3 mt-4">
                   <button
                     onClick={formatJSON}
-                    className="px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    className="px-6 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     Format
                   </button>
@@ -184,7 +184,7 @@ export default function TextTools() {
                   value={caseInput}
                   onChange={(e) => setCaseInput(e.target.value)}
                   placeholder="Enter your text here"
-                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-teal-500 focus:outline-none"
+                  className="w-full h-32 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-primary-500 focus:outline-none"
                 />
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
                   <button onClick={() => convertCase('upper')} className="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors text-sm">
@@ -234,23 +234,23 @@ export default function TextTools() {
                   value={counterText}
                   onChange={(e) => countWords(e.target.value)}
                   placeholder="Type or paste your text here..."
-                  className="w-full h-48 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-teal-500 focus:outline-none"
+                  className="w-full h-48 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white focus:border-primary-500 focus:outline-none"
                 />
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-lg p-4 border border-teal-500/30">
-                    <div className="text-3xl font-bold text-teal-400">{wordStats.words}</div>
+                  <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-lg p-4 border border-primary-500/30">
+                    <div className="text-3xl font-bold text-primary-400">{wordStats.words}</div>
                     <div className="text-sm text-gray-400 mt-1">Words</div>
                   </div>
-                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-lg p-4 border border-teal-500/30">
-                    <div className="text-3xl font-bold text-teal-400">{wordStats.chars}</div>
+                  <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-lg p-4 border border-primary-500/30">
+                    <div className="text-3xl font-bold text-primary-400">{wordStats.chars}</div>
                     <div className="text-sm text-gray-400 mt-1">Characters</div>
                   </div>
-                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-lg p-4 border border-teal-500/30">
-                    <div className="text-3xl font-bold text-teal-400">{wordStats.lines}</div>
+                  <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-lg p-4 border border-primary-500/30">
+                    <div className="text-3xl font-bold text-primary-400">{wordStats.lines}</div>
                     <div className="text-sm text-gray-400 mt-1">Lines</div>
                   </div>
-                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-lg p-4 border border-teal-500/30">
-                    <div className="text-3xl font-bold text-teal-400">{wordStats.sentences}</div>
+                  <div className="bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-lg p-4 border border-primary-500/30">
+                    <div className="text-3xl font-bold text-primary-400">{wordStats.sentences}</div>
                     <div className="text-sm text-gray-400 mt-1">Sentences</div>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ export default function TextTools() {
                       value={markdownInput}
                       onChange={(e) => setMarkdownInput(e.target.value)}
                       placeholder="# Heading&#10;**Bold** *Italic*&#10;[Link](https://example.com)"
-                      className="w-full h-96 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white font-mono text-sm focus:border-teal-500 focus:outline-none"
+                      className="w-full h-96 bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-white font-mono text-sm focus:border-primary-500 focus:outline-none"
                     />
                   </div>
                   <div>

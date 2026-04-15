@@ -479,9 +479,9 @@ export const ContractSigningTool: React.FC<ContractSigningToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.contractSigning.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.contractSigning.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -489,7 +489,7 @@ export const ContractSigningTool: React.FC<ContractSigningToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <FileSignature className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -564,7 +564,7 @@ export const ContractSigningTool: React.FC<ContractSigningToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab as typeof activeTab)}
                 className={`flex-1 px-4 py-3 text-sm font-medium capitalize ${
                   activeTab === tab
-                    ? 'border-b-2 border-[#0D9488] text-[#0D9488]'
+                    ? 'border-b-2 border-[#6096B4] text-[#6096B4]'
                     : theme === 'dark' ? 'text-gray-400 hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -674,7 +674,7 @@ export const ContractSigningTool: React.FC<ContractSigningToolProps> = ({ uiConf
                             {contract.status === 'draft' && (
                               <button
                                 onClick={() => sendContract(contract.id)}
-                                className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0D9488]/90"
+                                className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] text-white rounded text-sm hover:bg-[#6096B4]/90"
                               >
                                 <Send className="w-4 h-4" />
                                 {t('tools.contractSigning.send', 'Send')}
@@ -978,7 +978,7 @@ export const ContractSigningTool: React.FC<ContractSigningToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={handleCreateContract}
-                    className="px-6 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-6 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.contractSigning.createContract', 'Create Contract')}
                   </button>
@@ -1101,7 +1101,7 @@ export const ContractSigningTool: React.FC<ContractSigningToolProps> = ({ uiConf
               <div className="flex justify-end mt-6">
                 <button
                   onClick={() => setSelectedContract(null)}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.contractSigning.close', 'Close')}
                 </button>

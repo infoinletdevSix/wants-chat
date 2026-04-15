@@ -91,7 +91,7 @@ const FileTransfer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -103,7 +103,7 @@ const FileTransfer: React.FC = () => {
         >
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 File Transfer
               </h1>
               <p className="text-gray-400">
@@ -113,7 +113,7 @@ const FileTransfer: React.FC = () => {
 
             <div className="space-y-6">
               {/* Upload Zone */}
-              <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+              <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                 <CardContent className="p-6">
                   <div
                     onDrop={handleDrop}
@@ -123,8 +123,8 @@ const FileTransfer: React.FC = () => {
                       relative border-2 border-dashed rounded-2xl p-12 text-center transition-all duration-300
                       ${
                         isDragging
-                          ? 'border-teal-400 bg-teal-900/30'
-                          : 'border-teal-500/30 bg-gradient-to-br from-teal-900/10 to-cyan-900/10'
+                          ? 'border-primary-400 bg-primary-900/30'
+                          : 'border-primary-500/30 bg-gradient-to-br from-primary-900/10 to-cyan-900/10'
                       }
                     `}
                   >
@@ -132,7 +132,7 @@ const FileTransfer: React.FC = () => {
                       animate={isDragging ? { scale: 1.05 } : { scale: 1 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <FolderOpen className="w-16 h-16 mx-auto mb-4 text-teal-400" />
+                      <FolderOpen className="w-16 h-16 mx-auto mb-4 text-primary-400" />
                       <h3 className="text-xl font-semibold text-white mb-2">
                         {isDragging ? 'Drop files here' : 'Drag & drop files here'}
                       </h3>
@@ -140,7 +140,7 @@ const FileTransfer: React.FC = () => {
                       <label htmlFor="file-upload">
                         <Button
                           asChild
-                          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                         >
                           <span className="cursor-pointer">
                             <Upload className="w-4 h-4 mr-2" />
@@ -165,10 +165,10 @@ const FileTransfer: React.FC = () => {
 
               {/* Files List */}
               {files.length > 0 && (
-                <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                   <CardHeader>
                     <div className="flex items-center justify-between">
-                      <CardTitle className="flex items-center gap-2 text-teal-400">
+                      <CardTitle className="flex items-center gap-2 text-primary-400">
                         <File className="w-5 h-5" />
                         Files ({files.length})
                       </CardTitle>
@@ -193,7 +193,7 @@ const FileTransfer: React.FC = () => {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, x: -100 }}
-                            className="bg-slate-700/30 rounded-lg p-4 border border-teal-500/20"
+                            className="bg-slate-700/30 rounded-lg p-4 border border-primary-500/20"
                           >
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-3 flex-1 min-w-0">
@@ -202,7 +202,7 @@ const FileTransfer: React.FC = () => {
                                 ) : file.status === 'error' ? (
                                   <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                                 ) : (
-                                  <Upload className="w-5 h-5 text-teal-400 flex-shrink-0 animate-pulse" />
+                                  <Upload className="w-5 h-5 text-primary-400 flex-shrink-0 animate-pulse" />
                                 )}
                                 <div className="flex-1 min-w-0">
                                   <p className="text-white font-medium truncate">
@@ -232,7 +232,7 @@ const FileTransfer: React.FC = () => {
                                 </div>
                                 <div className="w-full bg-slate-600 rounded-full h-2 overflow-hidden">
                                   <motion.div
-                                    className="h-full bg-gradient-to-r from-teal-500 to-cyan-500"
+                                    className="h-full bg-gradient-to-r from-primary-500 to-cyan-500"
                                     style={{ width: `${file.progress}%` }}
                                     transition={{ duration: 0.3 }}
                                   />
@@ -245,7 +245,7 @@ const FileTransfer: React.FC = () => {
                               <Button
                                 variant="ghost"
                                 size="sm"
-                                className="w-full mt-2 text-teal-400 hover:text-teal-300 hover:bg-teal-900/30"
+                                className="w-full mt-2 text-primary-400 hover:text-primary-300 hover:bg-primary-900/30"
                               >
                                 <Download className="w-4 h-4 mr-2" />
                                 Download

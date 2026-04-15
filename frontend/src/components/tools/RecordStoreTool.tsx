@@ -503,7 +503,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.artist || ''}
                   onChange={(e) => setFormData({ ...formData, artist: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -512,7 +512,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.title || ''}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -520,7 +520,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                 <select
                   value={formData.format || 'LP'}
                   onChange={(e) => setFormData({ ...formData, format: e.target.value as RecordFormat })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {FORMATS.map(f => <option key={f} value={f}>{f}</option>)}
                 </select>
@@ -530,7 +530,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                 <select
                   value={formData.genre || ''}
                   onChange={(e) => setFormData({ ...formData, genre: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="">{t('tools.recordStore.selectGenre', 'Select Genre')}</option>
                   {GENRES.map(g => <option key={g} value={g}>{g}</option>)}
@@ -542,7 +542,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.label || ''}
                   onChange={(e) => setFormData({ ...formData, label: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -551,7 +551,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.catalogNumber || ''}
                   onChange={(e) => setFormData({ ...formData, catalogNumber: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -559,7 +559,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                 <select
                   value={formData.condition || 'VG+'}
                   onChange={(e) => setFormData({ ...formData, condition: e.target.value as RecordCondition })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {CONDITIONS.map(c => <option key={c.value} value={c.value}>{c.value} - {c.label}</option>)}
                 </select>
@@ -569,7 +569,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                 <select
                   value={formData.sleeveCondition || 'VG+'}
                   onChange={(e) => setFormData({ ...formData, sleeveCondition: e.target.value as RecordCondition })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   {CONDITIONS.map(c => <option key={c.value} value={c.value}>{c.value} - {c.label}</option>)}
                 </select>
@@ -581,7 +581,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   step="0.01"
                   value={formData.price || ''}
                   onChange={(e) => setFormData({ ...formData, price: parseFloat(e.target.value) || 0 })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -591,7 +591,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   step="0.01"
                   value={formData.cost || ''}
                   onChange={(e) => setFormData({ ...formData, cost: parseFloat(e.target.value) || 0 })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -599,7 +599,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                 <select
                   value={formData.status || 'in_stock'}
                   onChange={(e) => setFormData({ ...formData, status: e.target.value as RecordStatus })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="in_stock">{t('tools.recordStore.inStock', 'In Stock')}</option>
                   <option value="sold">{t('tools.recordStore.sold', 'Sold')}</option>
@@ -614,7 +614,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   value={formData.location || ''}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   placeholder={t('tools.recordStore.eGBinA12', 'e.g., Bin A-12')}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="col-span-2 flex items-center gap-4">
@@ -623,7 +623,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                     type="checkbox"
                     checked={formData.isNew || false}
                     onChange={(e) => setFormData({ ...formData, isNew: e.target.checked })}
-                    className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.recordStore.newSealed', 'New/Sealed')}</span>
                 </label>
@@ -635,7 +635,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   onChange={(e) => setFormData({ ...formData, pricingResearch: e.target.value })}
                   placeholder={t('tools.recordStore.discogsMedianEbaySoldListings', 'Discogs median, eBay sold listings, etc.')}
                   rows={2}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="col-span-2">
@@ -644,7 +644,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   value={formData.notes || ''}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   rows={2}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -658,7 +658,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
               </button>
               <button
                 onClick={handleSubmit}
-                className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
               >
                 {record ? t('tools.recordStore.update', 'Update') : t('tools.recordStore.add', 'Add')} Record
               </button>
@@ -726,7 +726,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.customerName || ''}
                   onChange={(e) => setFormData({ ...formData, customerName: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -735,7 +735,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.customerContact || ''}
                   onChange={(e) => setFormData({ ...formData, customerContact: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -744,7 +744,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.artist || ''}
                   onChange={(e) => setFormData({ ...formData, artist: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div>
@@ -753,7 +753,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   type="text"
                   value={formData.title || ''}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -762,7 +762,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   <select
                     value={formData.format || 'LP'}
                     onChange={(e) => setFormData({ ...formData, format: e.target.value as RecordFormat })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {FORMATS.map(f => <option key={f} value={f}>{f}</option>)}
                   </select>
@@ -774,7 +774,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                     step="0.01"
                     value={formData.maxPrice || ''}
                     onChange={(e) => setFormData({ ...formData, maxPrice: parseFloat(e.target.value) || 0 })}
-                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -784,7 +784,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   value={formData.notes || ''}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   rows={2}
-                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -798,7 +798,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
               </button>
               <button
                 onClick={handleSubmit}
-                className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
               >
                 {item ? t('tools.recordStore.update2', 'Update') : t('tools.recordStore.add2', 'Add')}
               </button>
@@ -877,7 +877,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="max-w-7xl mx-auto flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -890,7 +890,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
           <CardHeader>
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Disc3 className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -936,9 +936,9 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
           <CardContent>
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">{t('tools.recordStore.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+              <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">{t('tools.recordStore.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
               </div>
             )}
 
@@ -946,7 +946,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-6">
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <div className="flex items-center gap-2 mb-1">
-                  <Package className="w-4 h-4 text-[#0D9488]" />
+                  <Package className="w-4 h-4 text-[#6096B4]" />
                   <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.recordStore.inStock2', 'In Stock')}</span>
                 </div>
                 <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.totalRecords}</div>
@@ -1004,7 +1004,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeTab === tab.id
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1029,14 +1029,14 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                         placeholder={t('tools.recordStore.searchByArtistTitleLabel', 'Search by artist, title, label, catalog #...')}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className={`w-full pl-10 pr-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        className={`w-full pl-10 pr-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
                   <select
                     value={genreFilter}
                     onChange={(e) => setGenreFilter(e.target.value)}
-                    className={`px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.recordStore.allGenres', 'All Genres')}</option>
                     {GENRES.map(g => <option key={g} value={g}>{g}</option>)}
@@ -1044,7 +1044,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   <select
                     value={conditionFilter}
                     onChange={(e) => setConditionFilter(e.target.value as RecordCondition | '')}
-                    className={`px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.recordStore.allConditions', 'All Conditions')}</option>
                     {CONDITIONS.map(c => <option key={c.value} value={c.value}>{c.value} - {c.label}</option>)}
@@ -1052,7 +1052,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   <select
                     value={isNewFilter === null ? '' : isNewFilter ? 'new' : 'used'}
                     onChange={(e) => setIsNewFilter(e.target.value === '' ? null : e.target.value === 'new')}
-                    className={`px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    className={`px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.recordStore.newUsed', 'New & Used')}</option>
                     <option value="new">{t('tools.recordStore.newOnly', 'New Only')}</option>
@@ -1060,7 +1060,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </select>
                   <button
                     onClick={() => { setShowRecordModal(true); setEditingRecord(null); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.addRecord', 'Add Record')}
@@ -1154,7 +1154,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setShowWantListModal(true); setEditingWantList(null); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.addRequest', 'Add Request')}
@@ -1247,7 +1247,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('Intake form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.newIntake', 'New Intake')}
@@ -1270,7 +1270,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('RSD form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.addRsdItem', 'Add RSD Item')}
@@ -1293,7 +1293,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('Pre-order form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.newPreOrder', 'New Pre-Order')}
@@ -1316,7 +1316,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('Listening session form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.startSession', 'Start Session')}
@@ -1330,7 +1330,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                     >
                       <div className="flex items-center gap-3 mb-3">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isDark ? 'bg-gray-600' : 'bg-gray-200'}`}>
-                          <Headphones className="w-5 h-5 text-[#0D9488]" />
+                          <Headphones className="w-5 h-5 text-[#6096B4]" />
                         </div>
                         <div>
                           <h4 className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>Station {station}</h4>
@@ -1355,7 +1355,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('Event form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.scheduleEvent', 'Schedule Event')}
@@ -1378,7 +1378,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('Consignor form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.addConsignor', 'Add Consignor')}
@@ -1401,7 +1401,7 @@ export const RecordStoreTool: React.FC<RecordStoreToolProps> = ({ uiConfig }) =>
                   </h3>
                   <button
                     onClick={() => { setValidationMessage('Order form coming soon!'); setTimeout(() => setValidationMessage(null), 3000); }}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.recordStore.addOrder', 'Add Order')}

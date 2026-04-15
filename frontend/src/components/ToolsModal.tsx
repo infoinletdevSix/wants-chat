@@ -841,7 +841,7 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
           <div className="flex items-center justify-between gap-4">
             {/* Left: Title and count */}
             <div className="flex items-center gap-3 flex-shrink-0">
-              <div className="p-2 bg-gradient-to-br from-[#0D9488] to-[#0F766E] rounded-xl">
+              <div className="p-2 bg-gradient-to-br from-[#6096B4] to-[#4C7F98] rounded-xl">
                 <Grid3X3 className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -867,11 +867,11 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                 theme === 'dark' ? 'text-slate-400' : 'text-gray-500'
               )}>
                 <span className={cn("font-medium", theme === 'dark' ? 'text-white' : 'text-gray-900')}>{t('toolsModal.cantFindWhatYouNeed')}</span>{' '}
-                <span className="text-[#0D9488]">{t('toolsModal.requestDescription')}</span>
+                <span className="text-[#6096B4]">{t('toolsModal.requestDescription')}</span>
               </p>
               <button
                 onClick={() => setShowRequestForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white rounded-lg font-medium text-sm hover:from-[#0F766E] hover:to-[#115E59] transition-all shadow-md shadow-[#0D9488]/20 whitespace-nowrap"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#4C7F98] text-white rounded-lg font-medium text-sm hover:from-[#4C7F98] hover:to-[#3A6A82] transition-all shadow-md shadow-[#6096B4]/20 whitespace-nowrap"
               >
                 <Sparkles className="w-4 h-4" />
                 {t('toolsModal.requestATool')}
@@ -902,11 +902,11 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
               theme === 'dark' ? 'text-slate-400' : 'text-gray-500'
             )}>
               <span className={cn("font-medium", theme === 'dark' ? 'text-white' : 'text-gray-900')}>{t('toolsModal.cantFindWhatYouNeed')}</span>{' '}
-              <span className="text-[#0D9488]">{t('toolsModal.requestAToolMobile')}</span>
+              <span className="text-[#6096B4]">{t('toolsModal.requestAToolMobile')}</span>
             </p>
             <button
               onClick={() => setShowRequestForm(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white rounded-lg font-medium text-xs hover:from-[#0F766E] hover:to-[#115E59] transition-all whitespace-nowrap"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#6096B4] to-[#4C7F98] text-white rounded-lg font-medium text-xs hover:from-[#4C7F98] hover:to-[#3A6A82] transition-all whitespace-nowrap"
             >
               <Sparkles className="w-3 h-3" />
               {t('toolsModal.request')}
@@ -918,8 +918,8 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
             <div className={cn(
               "relative flex items-center rounded-xl border transition-colors",
               theme === 'dark'
-                ? 'bg-[#2a2a2a] border-[#3a3a3a] focus-within:border-[#0D9488]'
-                : 'bg-gray-50 border-gray-200 focus-within:border-[#0D9488]'
+                ? 'bg-[#2a2a2a] border-[#3a3a3a] focus-within:border-[#6096B4]'
+                : 'bg-gray-50 border-gray-200 focus-within:border-[#6096B4]'
             )}>
               <Search className={cn(
                 "w-5 h-5 ml-3",
@@ -992,16 +992,16 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                 "text-sm mb-4",
                 theme === 'dark' ? 'text-slate-400' : 'text-gray-500'
               )}>
-                {t('toolsModal.describeTheTool')} <span className="font-medium text-[#0D9488]">{user?.email || t('toolsModal.yourEmail')}</span>.
+                {t('toolsModal.describeTheTool')} <span className="font-medium text-[#6096B4]">{user?.email || t('toolsModal.yourEmail')}</span>.
               </p>
 
               {submitSuccess ? (
                 <div className="flex flex-col items-center py-6">
                   <div className={cn(
                     "w-14 h-14 rounded-full flex items-center justify-center mb-3",
-                    theme === 'dark' ? 'bg-[#0D9488]/20' : 'bg-[#0D9488]/10'
+                    theme === 'dark' ? 'bg-[#6096B4]/20' : 'bg-[#6096B4]/10'
                   )}>
-                    <Check className="w-7 h-7 text-[#0D9488]" />
+                    <Check className="w-7 h-7 text-[#6096B4]" />
                   </div>
                   <h4 className={cn(
                     "text-lg font-medium mb-1",
@@ -1034,15 +1034,15 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                       className={cn(
                         "w-full px-4 py-2.5 rounded-xl border focus:outline-none focus:ring-1 transition-colors resize-none",
                         theme === 'dark'
-                          ? 'bg-[#2a2a2a] border-[#3a3a3a] text-white placeholder-slate-500 focus:border-[#0D9488] focus:ring-[#0D9488]'
-                          : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400 focus:border-[#0D9488] focus:ring-[#0D9488]'
+                          ? 'bg-[#2a2a2a] border-[#3a3a3a] text-white placeholder-slate-500 focus:border-[#6096B4] focus:ring-[#6096B4]'
+                          : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-400 focus:border-[#6096B4] focus:ring-[#6096B4]'
                       )}
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting || !toolDescription.trim()}
-                    className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white rounded-xl font-bold hover:from-[#0F766E] hover:to-[#115E59] transition-all shadow-lg shadow-[#0D9488]/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-[#6096B4] to-[#4C7F98] text-white rounded-xl font-bold hover:from-[#4C7F98] hover:to-[#3A6A82] transition-all shadow-lg shadow-[#6096B4]/30 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -1079,7 +1079,7 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
                   selectedCategory === 'pinned'
-                    ? 'bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white shadow-lg shadow-[#0D9488]/25'
+                    ? 'bg-gradient-to-r from-[#6096B4] to-[#4C7F98] text-white shadow-lg shadow-[#6096B4]/25'
                     : theme === 'dark'
                       ? 'text-slate-300 hover:bg-[#2a2a2a]'
                       : 'text-gray-700 hover:bg-gray-100'
@@ -1092,7 +1092,7 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                     "ml-auto text-xs px-2 py-0.5 rounded-full",
                     selectedCategory === 'pinned'
                       ? 'bg-white/20'
-                      : theme === 'dark' ? 'bg-[#0D9488]/20 text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]'
+                      : theme === 'dark' ? 'bg-[#6096B4]/20 text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]'
                   )}>
                     {pinnedTools.length}
                   </span>
@@ -1108,7 +1108,7 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
                   selectedCategory === 'all'
-                    ? 'bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white shadow-lg shadow-[#0D9488]/25'
+                    ? 'bg-gradient-to-r from-[#6096B4] to-[#4C7F98] text-white shadow-lg shadow-[#6096B4]/25'
                     : theme === 'dark'
                       ? 'text-slate-300 hover:bg-[#2a2a2a]'
                       : 'text-gray-700 hover:bg-gray-100'
@@ -1146,7 +1146,7 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                     className={cn(
                       "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
                       selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white shadow-lg shadow-[#0D9488]/25'
+                        ? 'bg-gradient-to-r from-[#6096B4] to-[#4C7F98] text-white shadow-lg shadow-[#6096B4]/25'
                         : theme === 'dark'
                           ? 'text-slate-300 hover:bg-[#2a2a2a]'
                           : 'text-gray-700 hover:bg-gray-100'
@@ -1238,14 +1238,14 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                       className={cn(
                         "group relative p-4 rounded-xl border cursor-pointer transition-all duration-200",
                         theme === 'dark'
-                          ? 'bg-[#2a2a2a] border-[#3a3a3a] hover:border-[#0D9488] hover:bg-[#2f2f2f]'
-                          : 'bg-white border-gray-200 hover:border-[#0D9488] hover:shadow-md'
+                          ? 'bg-[#2a2a2a] border-[#3a3a3a] hover:border-[#6096B4] hover:bg-[#2f2f2f]'
+                          : 'bg-white border-gray-200 hover:border-[#6096B4] hover:shadow-md'
                       )}
                     >
                       {/* Pin indicator */}
                       {pinned && (
                         <div className="absolute top-2 right-2">
-                          <div className="w-2 h-2 rounded-full bg-[#0D9488]" />
+                          <div className="w-2 h-2 rounded-full bg-[#6096B4]" />
                         </div>
                       )}
 
@@ -1256,8 +1256,8 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                           <div className={cn(
                             "w-10 h-10 rounded-xl flex items-center justify-center mb-3 transition-colors",
                             theme === 'dark'
-                              ? 'bg-[#0D9488]/10 text-[#0D9488]'
-                              : 'bg-[#0D9488]/10 text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white'
+                              ? 'bg-[#6096B4]/10 text-[#6096B4]'
+                              : 'bg-[#6096B4]/10 text-[#6096B4] group-hover:bg-[#6096B4] group-hover:text-white'
                           )}>
                             <ToolIcon className="w-5 h-5" />
                           </div>
@@ -1284,10 +1284,10 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
                         className={cn(
                           "absolute bottom-3 right-3 p-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200",
                           pinned
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
-                              ? 'bg-[#3a3a3a] hover:bg-[#0D9488] text-slate-400 hover:text-white'
-                              : 'bg-gray-100 hover:bg-[#0D9488] text-gray-500 hover:text-white'
+                              ? 'bg-[#3a3a3a] hover:bg-[#6096B4] text-slate-400 hover:text-white'
+                              : 'bg-gray-100 hover:bg-[#6096B4] text-gray-500 hover:text-white'
                         )}
                         title={pinned ? t('toolsModal.unpinTool') : t('toolsModal.pinToSidebar')}
                       >
@@ -1310,7 +1310,7 @@ export const ToolsModal: React.FC<ToolsModalProps> = ({ isOpen, onClose, onSelec
             "text-sm",
             theme === 'dark' ? 'text-slate-400' : 'text-gray-500'
           )}>
-            <span className="font-medium text-[#0D9488]">{pinnedTools.length}</span> {t('toolsModal.toolsPinned')}
+            <span className="font-medium text-[#6096B4]">{pinnedTools.length}</span> {t('toolsModal.toolsPinned')}
           </div>
           <div className={cn(
             "text-xs",

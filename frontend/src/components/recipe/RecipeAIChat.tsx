@@ -40,10 +40,10 @@ export const RecipeAIChat: React.FC<RecipeAIChatProps> = ({
   return (
     <div className="h-[calc(100vh-200px)] flex flex-col">
       {/* Chat Header */}
-      <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-teal-500 mb-4">
+      <Card className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-l-primary-500 mb-4">
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-3 text-2xl font-bold text-white">
-            <Bot className="h-8 w-8 text-teal-400" />
+            <Bot className="h-8 w-8 text-primary-400" />
             AI Cooking Assistant
           </CardTitle>
           <CardDescription className="text-lg text-white/60">
@@ -67,13 +67,13 @@ export const RecipeAIChat: React.FC<RecipeAIChatProps> = ({
                 <div
                   className={`max-w-[80%] p-4 rounded-2xl ${
                     message.role === 'user'
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                       : 'bg-white/10 backdrop-blur-xl border border-white/20 text-white'
                   }`}
                 >
                   <div className="flex items-start gap-3">
                     {message.role === 'assistant' && (
-                      <Bot className="h-5 w-5 mt-0.5 text-teal-400" />
+                      <Bot className="h-5 w-5 mt-0.5 text-primary-400" />
                     )}
                     <div className="flex-1">
                       <p className="leading-relaxed">{message.content}</p>
@@ -130,7 +130,7 @@ export const RecipeAIChat: React.FC<RecipeAIChatProps> = ({
             <Button
               type="submit"
               disabled={!inputMessage.trim()}
-              className="h-12 px-6 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl disabled:opacity-50"
+              className="h-12 px-6 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl disabled:opacity-50"
             >
               <Send className="h-4 w-4" />
             </Button>

@@ -79,19 +79,19 @@ const FitnessPage: React.FC = () => {
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
             <TabsList className="grid w-full grid-cols-4 bg-white/10 backdrop-blur-xl border border-white/20 p-1">
-              <TabsTrigger value="dashboard" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+              <TabsTrigger value="dashboard" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
                 <Activity className="h-4 w-4" />
                 <span>Dashboard</span>
               </TabsTrigger>
-              <TabsTrigger value="log-workout" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+              <TabsTrigger value="log-workout" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
                 <Plus className="h-4 w-4" />
                 <span>Log Workout</span>
               </TabsTrigger>
-              <TabsTrigger value="exercises" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+              <TabsTrigger value="exercises" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
                 <Dumbbell className="h-4 w-4" />
                 <span>Exercise Library</span>
               </TabsTrigger>
-              <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
+              <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">
                 <TrendingUp className="h-4 w-4" />
                 <span>Progress</span>
               </TabsTrigger>
@@ -109,7 +109,7 @@ const FitnessPage: React.FC = () => {
                         {statsLoading ? <Loader2 className="h-6 w-6 animate-spin" /> : (fitnessStats?.totalWorkouts || 0)}
                       </p>
                     </div>
-                    <Activity className="h-8 w-8 text-teal-400 opacity-75" />
+                    <Activity className="h-8 w-8 text-primary-400 opacity-75" />
                   </div>
                 </div>
 
@@ -133,7 +133,7 @@ const FitnessPage: React.FC = () => {
                         {statsLoading ? <Loader2 className="h-6 w-6 animate-spin" /> : `${fitnessStats?.currentStreak || 0}d`}
                       </p>
                     </div>
-                    <Target className="h-8 w-8 text-teal-400 opacity-75" />
+                    <Target className="h-8 w-8 text-primary-400 opacity-75" />
                   </div>
                 </div>
 
@@ -200,7 +200,7 @@ const FitnessPage: React.FC = () => {
                               {'★'.repeat(workout.rating)} {workout.rating}/5
                             </Badge>
                           )}
-                          <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-0">
+                          <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0">
                             {workout.totalCaloriesBurned || 0} cal
                           </Badge>
                         </div>

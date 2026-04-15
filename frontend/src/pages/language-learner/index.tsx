@@ -309,7 +309,7 @@ const LanguageLearnerLanding: React.FC = () => {
                 </p>
                 <Button
                   onClick={() => navigate('/language-learner/onboarding')}
-                  className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                  className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                 >
                   Get Started
                 </Button>
@@ -343,8 +343,8 @@ const LanguageLearnerLanding: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-teal-500/30">
-              <BookOpen className="h-12 w-12 text-teal-400" />
+            <div className="p-4 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-primary-500/30">
+              <BookOpen className="h-12 w-12 text-primary-400" />
             </div>
           </div>
 
@@ -359,7 +359,7 @@ const LanguageLearnerLanding: React.FC = () => {
             <Button
               size="lg"
               onClick={() => navigate('/language-learner/onboarding')}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-lg px-8 py-3"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white text-lg px-8 py-3"
             >
               Get Started
               <ArrowRight className="h-5 w-5 ml-2" />
@@ -451,8 +451,8 @@ const LanguageLearnerLanding: React.FC = () => {
               >
                 <div className="space-y-4 p-6">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-teal-500/20 rounded-lg backdrop-blur-sm">
-                      <feature.icon className="h-5 w-5 text-teal-400" />
+                    <div className="p-3 bg-primary-500/20 rounded-lg backdrop-blur-sm">
+                      <feature.icon className="h-5 w-5 text-primary-400" />
                     </div>
                     <h3 className="text-lg font-semibold text-white">
                       {feature.title}
@@ -475,8 +475,8 @@ const LanguageLearnerLanding: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {learningMethods.map((method, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm border border-teal-500/30">
-                  <method.icon className="h-8 w-8 text-teal-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm border border-primary-500/30">
+                  <method.icon className="h-8 w-8 text-primary-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-sm text-white/60">{method.description}</p>
@@ -489,8 +489,8 @@ const LanguageLearnerLanding: React.FC = () => {
         <GlassCard className="p-8 glow text-center">
           <div className="space-y-6">
             <div className="flex justify-center">
-              <div className="p-4 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-teal-500/30">
-                <Trophy className="h-8 w-8 text-teal-400" />
+              <div className="p-4 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-primary-500/30">
+                <Trophy className="h-8 w-8 text-primary-400" />
               </div>
             </div>
 
@@ -508,7 +508,7 @@ const LanguageLearnerLanding: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => navigate('/language-learner/onboarding')}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               >
                 <Play className="h-4 w-4 mr-2" />
                 Start Learning

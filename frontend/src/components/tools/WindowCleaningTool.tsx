@@ -717,9 +717,9 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
 
   // Style classes
   const cardClass = `${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg`;
-  const inputClass = `w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  const inputClass = `w-full px-3 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
-  const buttonPrimary = 'bg-[#0D9488] hover:bg-[#0F766E] text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2';
+  const buttonPrimary = 'bg-[#6096B4] hover:bg-[#4C7F98] text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2';
   const buttonSecondary = `${isDark ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2`;
 
   // Tab configuration
@@ -794,7 +794,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
     return (
       <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} flex items-center justify-center`}>
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
           <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.windowCleaning.loadingData', 'Loading data...')}</p>
         </div>
       </div>
@@ -808,7 +808,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
         <div className={`${cardClass} p-6 mb-6`}>
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Droplets className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -872,7 +872,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -1162,7 +1162,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
                           }}
                           className={`px-3 py-1 rounded-full text-sm ${
                             propertyForm.accessRequirements?.includes(option)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-600 text-gray-300'
                               : 'bg-gray-300 text-gray-700'
@@ -1411,7 +1411,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
                           }}
                           className={`px-3 py-1 rounded-full text-sm ${
                             jobForm.assignedCrew?.includes(crew.id)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-600 text-gray-300'
                               : 'bg-gray-300 text-gray-700'
@@ -1449,7 +1449,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
                           }}
                           className={`px-3 py-1 rounded-full text-sm ${
                             jobForm.equipment?.includes(eq.id)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-600 text-gray-300'
                               : 'bg-gray-300 text-gray-700'
@@ -1763,7 +1763,7 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
                           }}
                           className={`px-3 py-1 rounded-full text-sm ${
                             crewForm.specializations?.includes(spec)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-600 text-gray-300'
                               : 'bg-gray-300 text-gray-700'
@@ -2066,9 +2066,9 @@ export const WindowCleaningTool: React.FC<WindowCleaningToolProps> = ({ uiConfig
               <div className={`${isDark ? 'bg-gray-700' : 'bg-gray-100'} p-6 rounded-lg`}>
                 <h3 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.windowCleaning.calculatedPrices', 'Calculated Prices')}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center p-4 rounded-lg bg-[#0D9488]/20">
+                  <div className="text-center p-4 rounded-lg bg-[#6096B4]/20">
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-1`}>{t('tools.windowCleaning.perWindow2', 'Per Window')}</div>
-                    <div className="text-3xl font-bold text-[#0D9488]">${calculatedPrice.byWindow.toFixed(2)}</div>
+                    <div className="text-3xl font-bold text-[#6096B4]">${calculatedPrice.byWindow.toFixed(2)}</div>
                     <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'} mt-1`}>
                       {pricingCalc.windowCount} windows x ${pricingCalc.pricePerWindow}
                     </div>

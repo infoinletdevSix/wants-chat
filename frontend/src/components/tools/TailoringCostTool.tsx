@@ -191,7 +191,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-teal-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-primary-500 flex items-center justify-center">
               <Scissors className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -203,9 +203,9 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-teal-500/10 rounded-xl border border-teal-500/20">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.tailoringCost.alterationsLoadedFromAiResponse', 'Alterations loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.tailoringCost.alterationsLoadedFromAiResponse', 'Alterations loaded from AI response')}</span>
             </div>
           )}
 
@@ -213,7 +213,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
           <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className={`flex items-center gap-2 text-sm font-medium mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                <Star className="w-4 h-4 text-teal-500" />
+                <Star className="w-4 h-4 text-primary-500" />
                 {t('tools.tailoringCost.garmentQuality', 'Garment Quality')}
               </label>
               <div className="flex gap-2">
@@ -227,7 +227,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
                     onClick={() => setGarmentQuality(q.value as typeof garmentQuality)}
                     className={`flex-1 py-2 px-2 rounded-lg text-sm ${
                       garmentQuality === q.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDarkMode
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -241,7 +241,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
             </div>
             <div>
               <label className={`flex items-center gap-2 text-sm font-medium mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                <DollarSign className="w-4 h-4 text-teal-500" />
+                <DollarSign className="w-4 h-4 text-primary-500" />
                 {t('tools.tailoringCost.tailorType', 'Tailor Type')}
               </label>
               <div className="flex gap-2">
@@ -255,7 +255,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
                     onClick={() => setLocation(l.value as typeof location)}
                     className={`flex-1 py-2 px-2 rounded-lg text-sm ${
                       location === l.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDarkMode
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -292,7 +292,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
                       title={alteration.description}
                     >
                       <span>{alteration.name}</span>
-                      <span className="text-teal-500">${alteration.minCost}-${alteration.maxCost}</span>
+                      <span className="text-primary-500">${alteration.minCost}-${alteration.maxCost}</span>
                       <Plus className="w-4 h-4" />
                     </button>
                   ))}
@@ -362,7 +362,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
                               +
                             </button>
                           </div>
-                          <span className="font-bold text-teal-500 w-28 text-right">
+                          <span className="font-bold text-primary-500 w-28 text-right">
                             ${minCost.toFixed(0)}-${maxCost.toFixed(0)}
                           </span>
                           <button
@@ -398,8 +398,8 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
 
           {/* Cost Summary */}
           {selectedAlterations.length > 0 && (
-            <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
-              <h3 className={`text-lg font-semibold mb-4 ${isDarkMode ? 'text-teal-400' : 'text-teal-700'}`}>
+            <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
+              <h3 className={`text-lg font-semibold mb-4 ${isDarkMode ? 'text-primary-400' : 'text-primary-700'}`}>
                 <DollarSign className="w-5 h-5 inline mr-2" />
                 {t('tools.tailoringCost.costEstimate', 'Cost Estimate')}
               </h3>
@@ -424,7 +424,7 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
                   <span className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.tailoringCost.estimatedTotal', 'Estimated Total')}
                   </span>
-                  <span className="text-2xl font-bold text-teal-500">
+                  <span className="text-2xl font-bold text-primary-500">
                     ${calculations.grandMinTotal.toFixed(0)} - ${calculations.grandMaxTotal.toFixed(0)}
                   </span>
                 </div>
@@ -451,8 +451,8 @@ const TailoringCostTool: React.FC<TailoringCostToolProps> = ({ uiConfig }) => {
           )}
 
           {/* Info */}
-          <div className={`mt-6 p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-teal-50'} flex items-start gap-3`}>
-            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-teal-400' : 'text-teal-600'}`} />
+          <div className={`mt-6 p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-primary-50'} flex items-start gap-3`}>
+            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-primary-400' : 'text-primary-600'}`} />
             <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               <p className="font-medium mb-1">{t('tools.tailoringCost.tailoringTips', 'Tailoring Tips:')}</p>
               <ul className="space-y-1 list-disc list-inside">

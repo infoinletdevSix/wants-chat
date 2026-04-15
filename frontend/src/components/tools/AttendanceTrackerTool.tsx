@@ -551,9 +551,9 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
 
   // ============ STYLES ============
   const cardClass = `rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`;
-  const inputClass = `w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500 focus:border-transparent`;
+  const inputClass = `w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500 focus:border-transparent`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
-  const buttonPrimary = 'px-4 py-2 rounded-lg bg-teal-500 text-white hover:bg-teal-600 transition-colors';
+  const buttonPrimary = 'px-4 py-2 rounded-lg bg-primary-500 text-white hover:bg-primary-600 transition-colors';
   const buttonSecondary = `px-4 py-2 rounded-lg ${isDark ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} transition-colors`;
 
   const tabs: { id: ActiveTab; label: string; icon: React.ReactNode }[] = [
@@ -567,7 +567,7 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
   if (isLoadingRecords) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
       </div>
     );
   }
@@ -576,11 +576,11 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <UserCheck className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <UserCheck className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.attendanceTracker.attendanceTracker', 'Attendance Tracker')}</h3>
@@ -600,7 +600,7 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
               size="sm"
             />
             {members.length === 0 && (
-              <button onClick={handleLoadSampleData} className="flex items-center gap-2 px-3 py-1.5 text-sm text-teal-500 hover:bg-teal-500/10 rounded-lg transition-colors">
+              <button onClick={handleLoadSampleData} className="flex items-center gap-2 px-3 py-1.5 text-sm text-primary-500 hover:bg-primary-500/10 rounded-lg transition-colors">
                 <RefreshCw className="w-4 h-4" />
                 {t('tools.attendanceTracker.loadSampleData', 'Load Sample Data')}
               </button>
@@ -611,9 +611,9 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-6 py-2 bg-teal-500/10 border-b border-teal-500/20">
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className="text-sm text-teal-500 font-medium">{t('tools.attendanceTracker.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-6 py-2 bg-primary-500/10 border-b border-primary-500/20">
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className="text-sm text-primary-500 font-medium">{t('tools.attendanceTracker.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -622,8 +622,8 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className={`${cardClass} p-4`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-teal-500/10 rounded-lg">
-                <Users className="w-5 h-5 text-teal-500" />
+              <div className="p-2 bg-primary-500/10 rounded-lg">
+                <Users className="w-5 h-5 text-primary-500" />
               </div>
               <div>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.attendanceTracker.activeMembers', 'Active Members')}</p>
@@ -673,7 +673,7 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-colors ${
-                activeTab === tab.id ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                activeTab === tab.id ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               {tab.icon}
@@ -1054,7 +1054,7 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
             {!showEventForm && (
               <button
                 onClick={() => { setShowEventForm(true); setEditingEvent(null); }}
-                className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10 transition-colors"
+                className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10 transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.attendanceTracker.addEventSession', 'Add Event/Session')}
@@ -1142,7 +1142,7 @@ export const AttendanceTrackerTool: React.FC<AttendanceTrackerToolProps> = ({ ui
                           type="checkbox"
                           checked={eventForm.isRecurring}
                           onChange={(e) => setEventForm({ ...eventForm, isRecurring: e.target.checked })}
-                          className="rounded text-teal-500"
+                          className="rounded text-primary-500"
                         />
                         <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.attendanceTracker.yes', 'Yes')}</span>
                       </label>

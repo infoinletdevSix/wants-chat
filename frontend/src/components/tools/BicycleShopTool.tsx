@@ -1312,7 +1312,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.bicycleShop.totalBikes', 'Total Bikes')}</p>
               <p className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.totalBikes}</p>
             </div>
-            <Bike className={`w-8 h-8 ${isDark ? 'text-teal-400' : 'text-teal-500'}`} />
+            <Bike className={`w-8 h-8 ${isDark ? 'text-primary-400' : 'text-primary-500'}`} />
           </div>
         </CardContent>
       </Card>
@@ -1931,7 +1931,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
                 </button>
                 <button
                   onClick={addBike}
-                  className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white"
+                  className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
                 >
                   {t('tools.bicycleShop.addBike', 'Add Bike')}
                 </button>
@@ -2016,7 +2016,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
                 </button>
                 <button
                   onClick={addPart}
-                  className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white"
+                  className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
                 >
                   {t('tools.bicycleShop.addPart', 'Add Part')}
                 </button>
@@ -2105,7 +2105,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
                 </button>
                 <button
                   onClick={addCustomer}
-                  className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white"
+                  className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
                 >
                   {t('tools.bicycleShop.addCustomer', 'Add Customer')}
                 </button>
@@ -2188,7 +2188,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
                 </button>
                 <button
                   onClick={addWorkOrder}
-                  className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white"
+                  className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
                 >
                   {t('tools.bicycleShop.addWorkOrder', 'Add Work Order')}
                 </button>
@@ -2259,7 +2259,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
     return (
       <div className={`min-h-screen p-6 ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+          <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
         </div>
       </div>
     );
@@ -2271,8 +2271,8 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-500/20' : 'bg-teal-100'}`}>
-              <Bike className={`w-8 h-8 ${isDark ? 'text-teal-400' : 'text-teal-600'}`} />
+            <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-500/20' : 'bg-primary-100'}`}>
+              <Bike className={`w-8 h-8 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
             </div>
             <div>
               <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -2308,7 +2308,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
             />
             <button
               onClick={() => setShowAddModal(true)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.bicycleShop.addNew', 'Add New')}
@@ -2318,9 +2318,9 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
 
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.bicycleShop.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.bicycleShop.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
           </div>
         )}
 
@@ -2355,7 +2355,7 @@ export const BicycleShopTool: React.FC<BicycleShopToolProps> = ({ uiConfig }) =>
                 }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-white text-gray-600 hover:bg-gray-100'

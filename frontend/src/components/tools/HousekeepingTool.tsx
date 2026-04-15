@@ -465,7 +465,7 @@ export const HousekeepingTool: React.FC<HousekeepingToolProps> = ({ uiConfig }) 
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2">
-              <SprayCan className="w-7 h-7 text-teal-500" />
+              <SprayCan className="w-7 h-7 text-primary-500" />
               {t('tools.housekeeping.housekeepingManagement', 'Housekeeping Management')}
             </h1>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -492,7 +492,7 @@ export const HousekeepingTool: React.FC<HousekeepingToolProps> = ({ uiConfig }) 
             />
             <button
               onClick={() => setShowForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.housekeeping.addTask', 'Add Task')}
@@ -584,13 +584,13 @@ export const HousekeepingTool: React.FC<HousekeepingToolProps> = ({ uiConfig }) 
             <div className="flex gap-1">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-teal-600 text-white' : isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
+                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-primary-600 text-white' : isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
               >
                 <LayoutGrid className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded ${viewMode === 'list' ? 'bg-teal-600 text-white' : isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
+                className={`p-2 rounded ${viewMode === 'list' ? 'bg-primary-600 text-white' : isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}
               >
                 <List className="w-4 h-4" />
               </button>
@@ -610,7 +610,7 @@ export const HousekeepingTool: React.FC<HousekeepingToolProps> = ({ uiConfig }) 
                   <div className="flex justify-between items-start mb-3">
                     <div>
                       <div className="flex items-center gap-2">
-                        <Bed className="w-4 h-4 text-teal-500" />
+                        <Bed className="w-4 h-4 text-primary-500" />
                         <span className="font-bold">Room {task.roomNumber}</span>
                       </div>
                       <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -642,7 +642,7 @@ export const HousekeepingTool: React.FC<HousekeepingToolProps> = ({ uiConfig }) 
                     </div>
                     <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                       <div
-                        className="h-full rounded-full bg-teal-500 transition-all"
+                        className="h-full rounded-full bg-primary-500 transition-all"
                         style={{ width: `${getCompletionPercentage(task)}%` }}
                       />
                     </div>
@@ -978,7 +978,7 @@ export const HousekeepingTool: React.FC<HousekeepingToolProps> = ({ uiConfig }) 
                 </button>
                 <button
                   onClick={editingTask ? handleUpdateTask : handleAddTask}
-                  className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 flex items-center gap-2"
+                  className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {editingTask ? t('tools.housekeeping.update', 'Update') : t('tools.housekeeping.create', 'Create')} Task

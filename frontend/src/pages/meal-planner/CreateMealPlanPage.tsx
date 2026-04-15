@@ -87,7 +87,7 @@ const CreateMealPlanPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <Header />
 
       {/* Page Title Bar */}
@@ -103,7 +103,7 @@ const CreateMealPlanPage: React.FC = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-xl flex items-center justify-center">
                 <ChefHat className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -138,7 +138,7 @@ const CreateMealPlanPage: React.FC = () => {
                     value={planName}
                     onChange={(e) => setPlanName(e.target.value)}
                     placeholder="e.g., Healthy Week Plan"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-teal-400/50 focus:border-teal-400/50 focus:outline-none"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400/50 focus:outline-none"
                     required
                   />
                 </div>
@@ -152,7 +152,7 @@ const CreateMealPlanPage: React.FC = () => {
                     onChange={(e) => setPlanDescription(e.target.value)}
                     placeholder="Add notes about this meal plan..."
                     rows={3}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-teal-400/50 focus:border-teal-400/50 focus:outline-none"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400/50 focus:outline-none"
                     required
                   />
                 </div>
@@ -167,7 +167,7 @@ const CreateMealPlanPage: React.FC = () => {
                       type="date"
                       value={selectedStartDate.toISOString().split('T')[0]}
                       onChange={(e) => setSelectedStartDate(new Date(e.target.value))}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:ring-2 focus:ring-teal-400/50 focus:border-teal-400/50 focus:outline-none [color-scheme:dark]"
+                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400/50 focus:outline-none [color-scheme:dark]"
                     />
                   </div>
                 </div>
@@ -180,7 +180,7 @@ const CreateMealPlanPage: React.FC = () => {
             <div className="p-8 space-y-6">
               <div>
                 <h3 className="text-lg font-semibold flex items-center gap-2 mb-4 text-white">
-                  <Clock className="h-5 w-5 text-teal-400" />
+                  <Clock className="h-5 w-5 text-primary-400" />
                   Week Overview
                 </h3>
                 <p className="text-white/60 mb-6">
@@ -202,10 +202,10 @@ const CreateMealPlanPage: React.FC = () => {
           </div>
 
           {/* Create Plan Card */}
-          <div className="bg-white/10 backdrop-blur-xl rounded-2xl border-2 border-dashed border-white/20 hover:border-teal-400/50 transition-colors">
+          <div className="bg-white/10 backdrop-blur-xl rounded-2xl border-2 border-dashed border-white/20 hover:border-primary-400/50 transition-colors">
             <div className="p-8 text-center space-y-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto border border-teal-400/30">
-                <Plus className="h-8 w-8 text-teal-400" />
+              <div className="w-16 h-16 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto border border-primary-400/30">
+                <Plus className="h-8 w-8 text-primary-400" />
               </div>
               <div>
                 <h4 className="text-xl font-semibold mb-2 text-white">Create Your Meal Plan</h4>
@@ -224,7 +224,7 @@ const CreateMealPlanPage: React.FC = () => {
                 <Button
                   onClick={handleCreatePlan}
                   disabled={createMealPlan.loading}
-                  className="px-8 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                  className="px-8 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                 >
                   {createMealPlan.loading ? 'Creating...' : 'Create Meal Plan'}
                 </Button>

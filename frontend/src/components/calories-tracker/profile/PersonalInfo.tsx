@@ -124,7 +124,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({
             <SelectTrigger id="gender" className="bg-white/10 border-white/20 text-white">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="male" className="text-white hover:bg-white/10">Male</SelectItem>
               <SelectItem value="female" className="text-white hover:bg-white/10">Female</SelectItem>
               <SelectItem value="other" className="text-white hover:bg-white/10">Other</SelectItem>
@@ -138,7 +138,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({
             <SelectTrigger id="activity" className="bg-white/10 border-white/20 text-white">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-teal-800/90 border-teal-400/30">
+            <SelectContent className="bg-primary-800/90 border-primary-400/30">
               <SelectItem value="sedentary" className="text-white hover:bg-white/10">Sedentary</SelectItem>
               <SelectItem value="lightly_active" className="text-white hover:bg-white/10">Lightly Active</SelectItem>
               <SelectItem value="moderately_active" className="text-white hover:bg-white/10">Moderately Active</SelectItem>
@@ -186,7 +186,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({
         </div>
 
         <div className="flex gap-2 pt-4">
-          <Button onClick={handleSave} className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+          <Button onClick={handleSave} className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
             Save Changes
           </Button>
           <Button onClick={onCancel} className="flex-1 bg-white/10 border border-white/20 text-white hover:bg-white/20">

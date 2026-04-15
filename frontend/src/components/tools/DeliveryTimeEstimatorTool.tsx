@@ -153,17 +153,17 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
 
   const getDeliveryColor = (days: number) => {
     if (days <= 2) return 'text-green-500';
-    if (days <= 5) return 'text-teal-500';
+    if (days <= 5) return 'text-primary-500';
     if (days <= 10) return 'text-amber-500';
     return 'text-orange-500';
   };
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Clock className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Clock className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.deliveryTimeEstimator.deliveryTimeEstimator', 'Delivery Time Estimator')}</h3>
@@ -174,9 +174,9 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.deliveryTimeEstimator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.deliveryTimeEstimator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -190,7 +190,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
             <select
               value={originCountry}
               onChange={(e) => setOriginCountry(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             >
               {countries.map(c => (
                 <option key={c.code} value={c.code}>{c.name}</option>
@@ -201,7 +201,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
               value={originCity}
               onChange={(e) => setOriginCity(e.target.value)}
               placeholder={t('tools.deliveryTimeEstimator.cityOptional', 'City (optional)')}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -212,7 +212,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
             <select
               value={destCountry}
               onChange={(e) => setDestCountry(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             >
               {countries.map(c => (
                 <option key={c.code} value={c.code}>{c.name}</option>
@@ -223,7 +223,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
               value={destCity}
               onChange={(e) => setDestCity(e.target.value)}
               placeholder={t('tools.deliveryTimeEstimator.cityOptional2', 'City (optional)')}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
         </div>
@@ -238,7 +238,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
               type="number"
               value={distance}
               onChange={(e) => setDistance(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
           <div className="space-y-2">
@@ -250,7 +250,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
               type="date"
               value={shipDate}
               onChange={(e) => setShipDate(e.target.value)}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
             />
           </div>
         </div>
@@ -270,10 +270,10 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
               <button
                 key={type.value}
                 onClick={() => setPackageType(type.value as typeof packageType)}
-                className={`py-3 px-3 rounded-lg text-sm transition-colors ${packageType === type.value ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-3 px-3 rounded-lg text-sm transition-colors ${packageType === type.value ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 <div className="font-medium">{type.label}</div>
-                <div className={`text-xs ${packageType === type.value ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{type.desc}</div>
+                <div className={`text-xs ${packageType === type.value ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{type.desc}</div>
               </button>
             ))}
           </div>
@@ -296,7 +296,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
           {calculations.map((option, index) => (
             <div
               key={`${option.mode}-${option.service}`}
-              className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'} ${index === 0 ? 'ring-2 ring-teal-500' : ''}`}
+              className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'} ${index === 0 ? 'ring-2 ring-primary-500' : ''}`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -322,7 +322,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
                 </div>
               </div>
               {index === 0 && (
-                <div className="mt-2 text-xs text-teal-500 font-medium">{t('tools.deliveryTimeEstimator.fastestOption', 'Fastest Option')}</div>
+                <div className="mt-2 text-xs text-primary-500 font-medium">{t('tools.deliveryTimeEstimator.fastestOption', 'Fastest Option')}</div>
               )}
             </div>
           ))}
@@ -330,7 +330,7 @@ export const DeliveryTimeEstimatorTool: React.FC<DeliveryTimeEstimatorToolProps>
 
         {/* Info Box */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.deliveryTimeEstimator.deliveryTimeFactors', 'Delivery Time Factors')}</p>
             <ul className="space-y-1 list-disc list-inside">

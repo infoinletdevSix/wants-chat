@@ -635,7 +635,7 @@ const MeditationProfile: React.FC = () => {
           </div>
           <Card className="p-6 text-center bg-white/10 backdrop-blur-xl border border-white/20">
             <p className="text-red-400 mb-4">{error}</p>
-            <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white">Try Again</Button>
+            <Button onClick={() => window.location.reload()} className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white">Try Again</Button>
           </Card>
         </div>
       </div>
@@ -665,7 +665,7 @@ const MeditationProfile: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             {/* Avatar with Photo Upload */}
             <div className="relative group">
-              <div className="w-20 h-20 rounded-full bg-teal-500/20 border-2 border-teal-400/30 overflow-hidden">
+              <div className="w-20 h-20 rounded-full bg-primary-500/20 border-2 border-primary-400/30 overflow-hidden">
                 {profileImage || userData.profileImage ? (
                   <img
                     src={profileImage || userData.profileImage}
@@ -674,7 +674,7 @@ const MeditationProfile: React.FC = () => {
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
-                    <Icon path={mdiMeditation} size={2} className="text-teal-400" />
+                    <Icon path={mdiMeditation} size={2} className="text-primary-400" />
                   </div>
                 )}
               </div>
@@ -714,7 +714,7 @@ const MeditationProfile: React.FC = () => {
               <div className="flex items-center gap-2">
                 <h2 className="text-xl font-bold text-white">{userData.name}</h2>
                 <Button size="sm" variant="ghost" className="h-6 w-6 p-0 hover:bg-white/10">
-                  <Pencil className="h-4 w-4 text-teal-400" />
+                  <Pencil className="h-4 w-4 text-primary-400" />
                 </Button>
               </div>
 
@@ -722,7 +722,7 @@ const MeditationProfile: React.FC = () => {
               <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-sm">
                 <Badge
                   variant="outline"
-                  className="px-2 py-1 text-xs bg-teal-500/20 text-teal-400 border-teal-400/30"
+                  className="px-2 py-1 text-xs bg-primary-500/20 text-primary-400 border-primary-400/30"
                 >
                   Level {userData.level}
                 </Badge>
@@ -731,7 +731,7 @@ const MeditationProfile: React.FC = () => {
                   <span>{userData.currentStreak} day streak</span>
                 </div>
                 <div className="flex items-center gap-1 text-white/60">
-                  <Calendar className="h-4 w-4 text-teal-400" />
+                  <Calendar className="h-4 w-4 text-primary-400" />
                   <span>Since {userData.memberSince}</span>
                 </div>
               </div>
@@ -793,11 +793,11 @@ const MeditationProfile: React.FC = () => {
         </div>
 
         {/* Motivational Footer */}
-        <Card className="p-4 bg-teal-500/20 backdrop-blur-xl border border-teal-400/30">
+        <Card className="p-4 bg-primary-500/20 backdrop-blur-xl border border-primary-400/30">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-teal-500/20 rounded-lg">
-                <Target className="h-5 w-5 text-teal-400" />
+              <div className="p-2 bg-primary-500/20 rounded-lg">
+                <Target className="h-5 w-5 text-primary-400" />
               </div>
               <div>
                 <h3 className="font-medium text-white">Keep Growing!</h3>
@@ -809,7 +809,7 @@ const MeditationProfile: React.FC = () => {
             </div>
             <Button
               size="sm"
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
               onClick={() => navigate('/meditation')}
             >
               Start Session

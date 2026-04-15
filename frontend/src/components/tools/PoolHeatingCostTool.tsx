@@ -235,8 +235,8 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
       {/* Header */}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-cyan-900/20' : 'bg-gradient-to-r from-white to-cyan-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Waves className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Waves className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.poolHeatingCost.poolHeatingCostCalculator', 'Pool Heating Cost Calculator')}</h3>
@@ -260,7 +260,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                   onClick={() => setHeaterType(type)}
                   className={`p-3 rounded-lg border-2 text-left transition-all ${
                     heaterType === type
-                      ? `border-[#0D9488] ${isDark ? t('tools.poolHeatingCost.bg0d948820', 'bg-[#0D9488]/20') : 'bg-teal-50'}`
+                      ? `border-[#6096B4] ${isDark ? t('tools.poolHeatingCost.bg0d948820', 'bg-[#6096B4]/20') : 'bg-primary-50'}`
                       : isDark
                       ? 'border-gray-700 bg-gray-800 hover:border-gray-600'
                       : 'border-gray-200 bg-white hover:border-gray-300'
@@ -289,7 +289,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                   onClick={() => setPoolShape(shape)}
                   className={`flex-1 py-2 px-3 rounded-lg text-sm capitalize ${
                     poolShape === shape
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -309,7 +309,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                 value={poolLength}
                 onChange={(e) => setPoolLength(e.target.value)}
                 placeholder="30"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -319,7 +319,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                 value={poolWidth}
                 onChange={(e) => setPoolWidth(e.target.value)}
                 placeholder="15"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -329,7 +329,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                 value={poolDepthShallow}
                 onChange={(e) => setPoolDepthShallow(e.target.value)}
                 placeholder="3"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -339,7 +339,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                 value={poolDepthDeep}
                 onChange={(e) => setPoolDepthDeep(e.target.value)}
                 placeholder="8"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
           </div>
@@ -368,7 +368,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               value={currentTemp}
               onChange={(e) => setCurrentTemp(e.target.value)}
               placeholder="65"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -380,7 +380,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               value={desiredTemp}
               onChange={(e) => setDesiredTemp(e.target.value)}
               placeholder="82"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -393,7 +393,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               value={ambientTemp}
               onChange={(e) => setAmbientTemp(e.target.value)}
               placeholder="70"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -408,7 +408,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               placeholder="6"
               min="1"
               max="12"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
         </div>
@@ -424,7 +424,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                   onClick={() => setWindExposure(level)}
                   className={`flex-1 py-2 px-3 rounded-lg text-sm capitalize ${
                     windExposure === level
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -441,7 +441,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               onClick={() => setHasPoolCover(!hasPoolCover)}
               className={`w-full py-2 px-3 rounded-lg text-sm ${
                 hasPoolCover
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : isDark
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -465,7 +465,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               value={electricityRate}
               onChange={(e) => setElectricityRate(e.target.value)}
               placeholder="0.12"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -478,36 +478,36 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
               value={gasRate}
               onChange={(e) => setGasRate(e.target.value)}
               placeholder="1.20"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
         </div>
 
         {/* Cost Summary */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.poolHeatingCost.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.poolHeatingCost.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Zap className="w-4 h-4 text-[#0D9488]" />
+            <Zap className="w-4 h-4 text-[#6096B4]" />
             Cost Summary ({heater.name})
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.poolHeatingCost.initialHeatUp', 'Initial Heat-Up')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.initialHeatCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.initialHeatCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.hoursToHeat.toFixed(1)} hours</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.poolHeatingCost.dailyCost', 'Daily Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.dailyEnergyCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.dailyEnergyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>maintenance</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.poolHeatingCost.monthlyCost', 'Monthly Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.monthlyEnergyCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.monthlyEnergyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>30 days</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.poolHeatingCost.seasonalCost', 'Seasonal Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.seasonalCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.seasonalCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{monthsOfUse} months</div>
             </div>
           </div>
@@ -544,7 +544,7 @@ export const PoolHeatingCostTool: React.FC<PoolHeatingCostToolProps> = ({ uiConf
                   <tr
                     key={h.type}
                     className={`${isDark ? 'border-gray-700' : 'border-gray-200'} border-t ${
-                      h.type === heaterType ? (isDark ? t('tools.poolHeatingCost.bg0d948810', 'bg-[#0D9488]/10') : 'bg-teal-50') : ''
+                      h.type === heaterType ? (isDark ? t('tools.poolHeatingCost.bg0d948810', 'bg-[#6096B4]/10') : 'bg-primary-50') : ''
                     }`}
                   >
                     <td className={`py-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{h.name}</td>

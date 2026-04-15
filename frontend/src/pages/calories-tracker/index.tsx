@@ -61,7 +61,7 @@ const CaloriesTrackerLanding: React.FC = () => {
         <Header />
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mx-auto mb-4"></div>
             <p className="text-white/60">Loading...</p>
           </div>
         </div>
@@ -124,8 +124,8 @@ const CaloriesTrackerLanding: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-white/20">
-              <Icon path={mdiFoodApple} size={3} className="text-teal-400" />
+            <div className="p-4 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-2xl backdrop-blur-sm border border-white/20">
+              <Icon path={mdiFoodApple} size={3} className="text-primary-400" />
             </div>
           </div>
 
@@ -141,7 +141,7 @@ const CaloriesTrackerLanding: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={handleGetStarted}
-              className="shadow-lg shadow-teal-500/30"
+              className="shadow-lg shadow-primary-500/30"
             >
               Get Started
               <Icon path={mdiArrowRight} size={0.8} className="ml-2" />
@@ -162,7 +162,7 @@ const CaloriesTrackerLanding: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <GlassCard key={index} className="p-6 text-center">
-              <Icon path={stat.icon} size={1.5} className="text-teal-400 mx-auto mb-3" />
+              <Icon path={stat.icon} size={1.5} className="text-primary-400 mx-auto mb-3" />
               <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>
               <p className="text-sm text-white/60">{stat.label}</p>
             </GlassCard>
@@ -189,10 +189,10 @@ const CaloriesTrackerLanding: React.FC = () => {
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-lg">
-                      <Icon path={feature.icon} size={1.2} className="text-teal-400" />
+                    <div className="p-3 bg-gradient-to-r from-primary-500/20 to-cyan-500/20 rounded-lg">
+                      <Icon path={feature.icon} size={1.2} className="text-primary-400" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-primary-400 transition-colors">
                       {feature.title}
                     </h3>
                   </div>
@@ -211,8 +211,8 @@ const CaloriesTrackerLanding: React.FC = () => {
         <GlassCard className="p-8 text-center" glow gradient>
           <div className="space-y-6">
             <div className="flex justify-center">
-              <div className="p-4 bg-gradient-to-r from-teal-500/30 to-cyan-500/30 rounded-2xl">
-                <Icon path={mdiTrophy} size={2} className="text-teal-400" />
+              <div className="p-4 bg-gradient-to-r from-primary-500/30 to-cyan-500/30 rounded-2xl">
+                <Icon path={mdiTrophy} size={2} className="text-primary-400" />
               </div>
             </div>
 
@@ -230,7 +230,7 @@ const CaloriesTrackerLanding: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => navigate('/calories-tracker/onboarding')}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg shadow-teal-500/30"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg shadow-primary-500/30"
               >
                 <Icon path={mdiFire} size={0.8} className="mr-2" />
                 Start Your Journey

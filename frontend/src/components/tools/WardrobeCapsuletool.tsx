@@ -219,7 +219,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-teal-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-primary-500 flex items-center justify-center">
               <Shirt className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -231,9 +231,9 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-teal-500/10 rounded-xl border border-teal-500/20">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">Settings loaded from AI response</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">Settings loaded from AI response</span>
             </div>
           )}
 
@@ -241,7 +241,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
           <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className={`flex items-center gap-2 text-sm font-medium mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                <Palette className="w-4 h-4 text-teal-500" />
+                <Palette className="w-4 h-4 text-primary-500" />
                 Style Focus
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -256,7 +256,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
                     onClick={() => setStyle(s.value as typeof style)}
                     className={`py-2 px-3 rounded-lg text-sm ${
                       style === s.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDarkMode
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -284,7 +284,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
                     onClick={() => setSeason(s.value as typeof season)}
                     className={`flex items-center gap-1 py-2 px-3 rounded-lg text-sm ${
                       season === s.value
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDarkMode
                         ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -309,7 +309,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
               max="50"
               value={targetCount}
               onChange={(e) => setTargetCount(parseInt(e.target.value))}
-              className="w-full accent-teal-500"
+              className="w-full accent-primary-500"
             />
             <div className="flex justify-between text-xs mt-1">
               <span className={isDarkMode ? 'text-gray-500' : 'text-gray-400'}>15 (Ultra Minimal)</span>
@@ -322,7 +322,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
           <div className="flex gap-2 mb-6">
             <button
               onClick={buildStarterWardrobe}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
             >
               <Sparkles className="w-4 h-4" />
               Build Essential Wardrobe
@@ -351,7 +351,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
             <div className={`h-3 rounded-full overflow-hidden ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
               <div
                 className={`h-full transition-all ${
-                  totalItemCount > targetCount ? 'bg-orange-500' : totalItemCount === targetCount ? 'bg-green-500' : 'bg-teal-500'
+                  totalItemCount > targetCount ? 'bg-orange-500' : totalItemCount === targetCount ? 'bg-green-500' : 'bg-primary-500'
                 }`}
                 style={{ width: `${Math.min(100, (totalItemCount / targetCount) * 100)}%` }}
               />
@@ -360,25 +360,25 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
 
           {/* Outfit Combinations */}
           {outfitCombinations.baseOutfits > 0 && (
-            <div className={`p-4 rounded-xl mb-6 ${isDarkMode ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
-              <h3 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-teal-400' : 'text-teal-700'}`}>
+            <div className={`p-4 rounded-xl mb-6 ${isDarkMode ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
+              <h3 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-primary-400' : 'text-primary-700'}`}>
                 Outfit Potential
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
-                  <p className="text-2xl font-bold text-teal-500">{outfitCombinations.tops}</p>
+                  <p className="text-2xl font-bold text-primary-500">{outfitCombinations.tops}</p>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Tops</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-teal-500">{outfitCombinations.bottoms}</p>
+                  <p className="text-2xl font-bold text-primary-500">{outfitCombinations.bottoms}</p>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Bottoms</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-teal-500">{outfitCombinations.baseOutfits}</p>
+                  <p className="text-2xl font-bold text-primary-500">{outfitCombinations.baseOutfits}</p>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Base Outfits</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-teal-500">{outfitCombinations.withOuterwear}</p>
+                  <p className="text-2xl font-bold text-primary-500">{outfitCombinations.withOuterwear}</p>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>With Outerwear</p>
                 </div>
               </div>
@@ -405,9 +405,9 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
                         key={item.id}
                         className={`p-3 rounded-lg flex items-center justify-between ${
                           isSelected
-                            ? isDarkMode ? 'bg-teal-900/30 border-teal-700' : 'bg-teal-50 border-teal-200'
+                            ? isDarkMode ? 'bg-primary-900/30 border-primary-700' : 'bg-primary-50 border-primary-200'
                             : isDarkMode ? 'bg-gray-700' : 'bg-gray-50'
-                        } border ${isSelected ? 'border-teal-500' : isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}
+                        } border ${isSelected ? 'border-primary-500' : isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}
                       >
                         <div className="flex items-center gap-3">
                           <span className="text-xl">{item.icon}</span>
@@ -415,7 +415,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
                             <p className={`font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                               {item.name}
                               {item.essential && (
-                                <span className="ml-2 text-xs text-teal-500">Essential</span>
+                                <span className="ml-2 text-xs text-primary-500">Essential</span>
                               )}
                             </p>
                             <div className="flex items-center gap-2 text-xs">
@@ -446,7 +446,7 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
                           <button
                             onClick={() => addItem(item.id)}
                             className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                              isDarkMode ? 'bg-teal-600 hover:bg-teal-500' : 'bg-teal-500 hover:bg-teal-600'
+                              isDarkMode ? 'bg-primary-600 hover:bg-primary-500' : 'bg-primary-500 hover:bg-primary-600'
                             } text-white`}
                           >
                             <Plus className="w-4 h-4" />
@@ -497,8 +497,8 @@ const WardrobeCapsuletool: React.FC<WardrobeCapsuletoolProps> = ({ uiConfig }) =
           </div>
 
           {/* Info */}
-          <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-teal-50'} flex items-start gap-3`}>
-            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-teal-400' : 'text-teal-600'}`} />
+          <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-primary-50'} flex items-start gap-3`}>
+            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-primary-400' : 'text-primary-600'}`} />
             <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               <p className="font-medium mb-1">Capsule Wardrobe Tips:</p>
               <ul className="space-y-1 list-disc list-inside">

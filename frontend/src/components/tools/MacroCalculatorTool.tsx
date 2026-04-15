@@ -188,7 +188,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
       <div className="max-w-3xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Target className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -218,7 +218,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -236,7 +236,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -254,7 +254,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -269,7 +269,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                   onClick={() => setGender('male')}
                   className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                     gender === 'male'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -281,7 +281,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                   onClick={() => setGender('female')}
                   className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                     gender === 'female'
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -305,7 +305,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                   onClick={() => setActivityLevel(level)}
                   className={`p-3 rounded-lg font-medium transition-colors text-left ${
                     activityLevel === level
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -332,7 +332,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                   onClick={() => setGoal(g)}
                   className={`p-3 rounded-lg font-medium transition-colors text-left ${
                     goal === g
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -359,7 +359,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
                   onClick={() => setDietPreset(preset)}
                   className={`p-3 rounded-lg font-medium transition-colors text-left ${
                     dietPreset === preset
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -378,7 +378,7 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateMacros}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calculator className="w-5 h-5" />
               {t('tools.macroCalculator.calculateMacros', 'Calculate Macros')}
@@ -401,15 +401,15 @@ Fat: ${result.fat.grams}g (${result.fat.percentage}%)`;
               {/* Total Calories */}
               <div
                 className="p-6 rounded-lg text-center"
-                style={{ backgroundColor: '#0D948815', borderLeft: '4px solid #0D9488' }}
+                style={{ backgroundColor: '#6096B415', borderLeft: '4px solid #6096B4' }}
               >
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <Flame className="w-6 h-6 text-[#0D9488]" />
+                  <Flame className="w-6 h-6 text-[#6096B4]" />
                   <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                     {t('tools.macroCalculator.dailyCalories', 'Daily Calories')}
                   </span>
                 </div>
-                <div className="text-5xl font-bold text-[#0D9488] mb-1">
+                <div className="text-5xl font-bold text-[#6096B4] mb-1">
                   {result.calories.toLocaleString()}
                 </div>
                 <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>

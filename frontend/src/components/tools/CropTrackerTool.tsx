@@ -151,7 +151,7 @@ const stageColors: Record<GrowthStage, { bg: string; text: string }> = {
   growing: { bg: 'bg-green-500/20', text: 'text-green-500' },
   flowering: { bg: 'bg-pink-500/20', text: 'text-pink-500' },
   harvesting: { bg: 'bg-orange-500/20', text: 'text-orange-500' },
-  harvested: { bg: 'bg-teal-500/20', text: 'text-teal-500' },
+  harvested: { bg: 'bg-primary-500/20', text: 'text-primary-500' },
 };
 
 const stageOrder: GrowthStage[] = ['planning', 'planted', 'germinating', 'growing', 'flowering', 'harvesting', 'harvested'];
@@ -568,7 +568,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
 
   const inputClass = `w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'}`;
   const cardClass = `p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`;
-  const buttonClass = 'px-4 py-2 rounded-lg bg-teal-500 text-white hover:bg-teal-600';
+  const buttonClass = 'px-4 py-2 rounded-lg bg-primary-500 text-white hover:bg-primary-600';
   const secondaryButtonClass = `px-4 py-2 rounded-lg ${isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`;
 
   return (
@@ -587,7 +587,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
           </div>
           <div className="flex items-center gap-3">
             {crops.length === 0 && fields.length === 0 && (
-              <button onClick={loadSampleData} className="text-sm text-teal-500 hover:text-teal-600">
+              <button onClick={loadSampleData} className="text-sm text-primary-500 hover:text-primary-600">
                 {t('tools.cropTracker.loadSampleData', 'Load Sample Data')}
               </button>
             )}
@@ -658,7 +658,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm whitespace-nowrap ${
-                activeTab === tab.id ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
+                activeTab === tab.id ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
               }`}
             >
               {tab.icon}
@@ -703,7 +703,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
               <div className={`text-center py-8 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                 <MapPin className="w-12 h-12 mx-auto mb-2 opacity-50" />
                 <p>{t('tools.cropTracker.addAFieldFirstBefore', 'Add a field first before creating crops')}</p>
-                <button onClick={() => setActiveTab('fields')} className="mt-2 text-teal-500 hover:underline">
+                <button onClick={() => setActiveTab('fields')} className="mt-2 text-primary-500 hover:underline">
                   {t('tools.cropTracker.goToFields', 'Go to Fields')}
                 </button>
               </div>
@@ -712,7 +712,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
                 {!showCropForm && (
                   <button
                     onClick={() => setShowCropForm(true)}
-                    className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                    className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.cropTracker.addCrop', 'Add Crop')}
@@ -883,7 +883,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
             {!showFieldForm && (
               <button
                 onClick={() => setShowFieldForm(true)}
-                className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.cropTracker.addField2', 'Add Field')}
@@ -930,7 +930,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
                   <div key={field.id} className={cardClass}>
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
-                        <MapPin className="w-5 h-5 text-teal-500" />
+                        <MapPin className="w-5 h-5 text-primary-500" />
                         <div>
                           <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{field.name}</h4>
                           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -945,7 +945,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
                     <div className={`mt-3 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                       <p>Used: {usedAcres.toFixed(1)} / {field.size} acres ({((usedAcres / field.size) * 100).toFixed(0)}%)</p>
                       <div className="mt-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-teal-500" style={{ width: `${Math.min((usedAcres / field.size) * 100, 100)}%` }} />
+                        <div className="h-full bg-primary-500" style={{ width: `${Math.min((usedAcres / field.size) * 100, 100)}%` }} />
                       </div>
                       {cropsInField.length > 0 && (
                         <p className="mt-2">Crops: {cropsInField.map(c => c.name).join(', ')}</p>
@@ -979,7 +979,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
                 {!showInputForm && (
                   <button
                     onClick={() => setShowInputForm(true)}
-                    className="w-full py-3 rounded-lg border-2 border-dashed border-teal-500 text-teal-500 flex items-center justify-center gap-2 hover:bg-teal-500/10"
+                    className="w-full py-3 rounded-lg border-2 border-dashed border-primary-500 text-primary-500 flex items-center justify-center gap-2 hover:bg-primary-500/10"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.cropTracker.addInput3', 'Add Input')}
@@ -1054,7 +1054,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
                           {cropInputs.map((input) => (
                             <div key={input.id} className={`flex items-center justify-between p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
                               <div className="flex items-center gap-3">
-                                <Package className="w-4 h-4 text-teal-500" />
+                                <Package className="w-4 h-4 text-primary-500" />
                                 <div>
                                   <p className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{input.name}</p>
                                   <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -1140,7 +1140,7 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
                           const value = parseFloat(input?.value || '0');
                           if (value > 0) handleRecordHarvest(crop.id, value);
                         }}
-                        className="px-3 py-1 text-sm bg-teal-500 text-white rounded hover:bg-teal-600"
+                        className="px-3 py-1 text-sm bg-primary-500 text-white rounded hover:bg-primary-600"
                       >
                         {t('tools.cropTracker.recordHarvest', 'Record Harvest')}
                       </button>
@@ -1156,8 +1156,8 @@ export const CropTrackerTool: React.FC<CropTrackerToolProps> = ({
               <div key={crop.id} className={cardClass}>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-teal-500/20">
-                      <Check className="w-4 h-4 text-teal-500" />
+                    <div className="p-2 rounded-lg bg-primary-500/20">
+                      <Check className="w-4 h-4 text-primary-500" />
                     </div>
                     <div>
                       <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{crop.name}</h4>

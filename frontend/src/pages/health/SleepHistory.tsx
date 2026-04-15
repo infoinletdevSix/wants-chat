@@ -151,7 +151,7 @@ const SleepHistory: React.FC = () => {
             </Button>
             <div>
               <h1 className="text-2xl font-bold flex items-center gap-2">
-                <Calendar className="w-6 h-6 text-teal-400" />
+                <Calendar className="w-6 h-6 text-primary-400" />
                 Sleep History
               </h1>
               <p className="text-white/60">
@@ -161,7 +161,7 @@ const SleepHistory: React.FC = () => {
           </div>
           <Button
             onClick={() => navigate('/health/add-sleep-log')}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500"
           >
             <Plus className="w-4 h-4 mr-2" />
             Log Sleep
@@ -260,7 +260,7 @@ const SleepHistory: React.FC = () => {
               </p>
               <Button
                 onClick={() => navigate('/health/add-sleep-log')}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Log Your First Sleep

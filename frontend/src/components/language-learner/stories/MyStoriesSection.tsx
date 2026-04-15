@@ -38,8 +38,8 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
   if (myStories.length === 0) {
     return (
       <div className="text-center py-12">
-        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-teal-500/10 to-cyan-500/20 flex items-center justify-center">
-          <BookOpen className="h-12 w-12 text-teal-400" />
+        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center">
+          <BookOpen className="h-12 w-12 text-primary-400" />
         </div>
         <h3 className="text-xl font-semibold text-white mb-2">
           No stories yet
@@ -49,7 +49,7 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
         </p>
         <Button
           onClick={onCreateStory}
-          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
         >
           <Plus className="h-4 w-4 mr-2" />
           Create Your First Story
@@ -63,12 +63,12 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
       {myStories.map((story) => (
         <Card
           key={story.id}
-          className="p-6 hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/10 backdrop-blur-xl border border-white/20 hover:border-teal-500/50"
+          className="p-6 hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary-500/50"
           onClick={() => onStoryClick(story)}
         >
           <div className="flex items-start space-x-6">
             {/* Story Thumbnail */}
-            <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-teal-500/10 to-cyan-500/20 flex items-center justify-center text-3xl flex-shrink-0">
+            <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary-500/10 to-cyan-500/20 flex items-center justify-center text-3xl flex-shrink-0">
               {story.thumbnail}
             </div>
 
@@ -76,14 +76,14 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
             <div className="flex-1 min-w-0">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white hover:text-teal-400 transition-colors mb-1">
+                  <h3 className="text-xl font-bold text-white hover:text-primary-400 transition-colors mb-1">
                     {story.title}
                   </h3>
                   <p className="text-sm text-white/60 mb-2">
                     Created by you • {currentLanguage === 'spanish' ? 'Spanish' : 'English'} story
                   </p>
                 </div>
-                <Badge className="bg-teal-500/10 text-teal-400 border-teal-500/20">
+                <Badge className="bg-primary-500/10 text-primary-400 border-primary-500/20">
                   Your Story
                 </Badge>
               </div>
@@ -139,7 +139,7 @@ export const MyStoriesSection: React.FC<MyStoriesSectionProps> = ({
                   e.stopPropagation();
                   onStoryClick(story);
                 }}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-0"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-0"
               >
                 <BookOpen className="h-4 w-4 mr-2" />
                 Read Story

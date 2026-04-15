@@ -133,8 +133,8 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
       {/* Header */}
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-blue-900/20' : 'bg-gradient-to-r from-white to-blue-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Thermometer className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Thermometer className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.hVACCost.hvacRunningCostCalculator', 'HVAC Running Cost Calculator')}</h3>
@@ -159,14 +159,14 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
                   onClick={() => setSystemType(type)}
                   className={`p-3 rounded-lg border-2 text-left transition-all ${
                     systemType === type
-                      ? `border-[#0D9488] ${isDark ? t('tools.hVACCost.bg0d948820', 'bg-[#0D9488]/20') : 'bg-teal-50'}`
+                      ? `border-[#6096B4] ${isDark ? t('tools.hVACCost.bg0d948820', 'bg-[#6096B4]/20') : 'bg-primary-50'}`
                       : isDark
                       ? 'border-gray-700 bg-gray-800 hover:border-gray-600'
                       : 'border-gray-200 bg-white hover:border-gray-300'
                   }`}
                 >
                   <div className="flex items-center gap-2 mb-1">
-                    <Icon className={`w-4 h-4 ${systemType === type ? 'text-[#0D9488]' : isDark ? 'text-gray-400' : 'text-gray-500'}`} />
+                    <Icon className={`w-4 h-4 ${systemType === type ? 'text-[#6096B4]' : isDark ? 'text-gray-400' : 'text-gray-500'}`} />
                     <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{s.name}</span>
                   </div>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -190,7 +190,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
                 onClick={() => applySeason(s)}
                 className={`flex-1 py-2 px-3 rounded-lg text-sm ${
                   season === s
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -213,7 +213,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
               value={thermostatSetting}
               onChange={(e) => setThermostatSetting(e.target.value)}
               placeholder="72"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -225,7 +225,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
               value={outsideTemp}
               onChange={(e) => setOutsideTemp(e.target.value)}
               placeholder="95"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
         </div>
@@ -242,7 +242,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
               value={hoursPerDay}
               onChange={(e) => setHoursPerDay(e.target.value)}
               placeholder="8"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -254,7 +254,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
               value={daysPerMonth}
               onChange={(e) => setDaysPerMonth(e.target.value)}
               placeholder="30"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -268,7 +268,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
               value={electricityRate}
               onChange={(e) => setElectricityRate(e.target.value)}
               placeholder="0.12"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
           {systemType === 'furnace-gas' && (
@@ -282,7 +282,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
                 value={gasRate}
                 onChange={(e) => setGasRate(e.target.value)}
                 placeholder="1.20"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
           )}
@@ -295,7 +295,7 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
               value={customWatts}
               onChange={(e) => setCustomWatts(e.target.value)}
               placeholder={system.watts.toString()}
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
         </div>
@@ -314,25 +314,25 @@ export const HVACCostTool: React.FC<HVACCostToolProps> = ({ uiConfig }) => {
         </div>
 
         {/* Cost Summary */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.hVACCost.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.hVACCost.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Zap className="w-4 h-4 text-[#0D9488]" />
+            <Zap className="w-4 h-4 text-[#6096B4]" />
             {t('tools.hVACCost.costSummary', 'Cost Summary')}
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.hVACCost.dailyCost', 'Daily Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.dailyCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.dailyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.dailyKwh.toFixed(1)} kWh</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.hVACCost.monthlyCost', 'Monthly Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.totalMonthlyCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.totalMonthlyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{calculations.monthlyKwh.toFixed(0)} kWh</div>
             </div>
             <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
               <div className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.hVACCost.seasonalCost', 'Seasonal Cost')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">${calculations.totalYearlyCost.toFixed(2)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">${calculations.totalYearlyCost.toFixed(2)}</div>
               <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{season === 'spring-fall' ? '4' : '6'} months</div>
             </div>
             {systemType === 'furnace-gas' && (

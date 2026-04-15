@@ -129,8 +129,8 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-green-900/20' : 'bg-gradient-to-r from-white to-green-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <TrendingUp className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.followerGrowth.followerGrowthProjector', 'Follower Growth Projector')}</h3>
@@ -141,9 +141,9 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.followerGrowth.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.followerGrowth.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -163,7 +163,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
               <button
                 key={g.value}
                 onClick={() => setGrowthType(g.value as GrowthType)}
-                className={`p-3 rounded-lg text-center transition-colors ${growthType === g.value ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`p-3 rounded-lg text-center transition-colors ${growthType === g.value ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 <div className="font-medium text-sm">{g.label}</div>
                 <div className="text-xs opacity-75">{g.rate}</div>
@@ -184,7 +184,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
               value={currentFollowers}
               onChange={(e) => setCurrentFollowers(e.target.value)}
               placeholder="5000"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="space-y-2">
@@ -197,7 +197,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
               value={targetFollowers}
               onChange={(e) => setTargetFollowers(e.target.value)}
               placeholder="100000"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           {growthType === 'custom' && (
@@ -212,7 +212,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
                 value={monthlyGrowthRate}
                 onChange={(e) => setMonthlyGrowthRate(e.target.value)}
                 placeholder="10"
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           )}
@@ -226,7 +226,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
               value={timeframeMonths}
               onChange={(e) => setTimeframeMonths(e.target.value)}
               placeholder="12"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="space-y-2">
@@ -239,18 +239,18 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
               value={postsPerWeek}
               onChange={(e) => setPostsPerWeek(e.target.value)}
               placeholder="5"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
 
         {/* Main Results */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.followerGrowth.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+          <div className={`p-6 rounded-xl text-center ${isDark ? t('tools.followerGrowth.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               Projected in {timeframeMonths} months
             </div>
-            <div className="text-4xl font-bold text-[#0D9488] my-2">
+            <div className="text-4xl font-bold text-[#6096B4] my-2">
               {formatNumber(calculations.projectedFollowers)}
             </div>
             <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -286,7 +286,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.followerGrowth.growthRate', 'Growth Rate')}</div>
-            <div className="text-xl font-bold text-[#0D9488]">
+            <div className="text-xl font-bold text-[#6096B4]">
               {calculations.currentRate.toFixed(1)}%/mo
             </div>
           </div>
@@ -311,7 +311,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
               return (
                 <div
                   key={idx}
-                  className="flex-1 bg-[#0D9488] rounded-t transition-all hover:bg-[#0D9488]/80"
+                  className="flex-1 bg-[#6096B4] rounded-t transition-all hover:bg-[#6096B4]/80"
                   style={{ height: `${height}%` }}
                   title={`Month ${month.month}: ${formatNumber(month.followers)} (+${formatNumber(month.gained)})`}
                 />
@@ -334,7 +334,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {calculations.milestones.slice(0, 4).map((milestone, idx) => (
                 <div key={idx} className={`p-3 rounded-lg text-center ${isDark ? 'bg-gray-700' : 'bg-white'} border ${isDark ? 'border-gray-600' : 'border-gray-200'}`}>
-                  <div className="text-lg font-bold text-[#0D9488]">{formatNumber(milestone.milestone)}</div>
+                  <div className="text-lg font-bold text-[#6096B4]">{formatNumber(milestone.milestone)}</div>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
                     <Clock className="w-3 h-3 inline mr-1" />
                     {milestone.monthsToReach} months
@@ -362,7 +362,7 @@ export const FollowerGrowthTool: React.FC<FollowerGrowthToolProps> = ({ uiConfig
             </div>
             <div className="text-center">
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.followerGrowth.year3', 'Year 3')}</div>
-              <div className="text-xl font-bold text-[#0D9488]">{formatNumber(calculations.year3)}</div>
+              <div className="text-xl font-bold text-[#6096B4]">{formatNumber(calculations.year3)}</div>
             </div>
           </div>
         </div>

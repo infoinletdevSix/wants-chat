@@ -31,8 +31,8 @@ const ProgressCharts: React.FC<ProgressChartsProps> = ({
       {/* Weight Trend */}
       <Card className="p-6 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg">
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 bg-teal-500/20 rounded-lg">
-            <Icon path={mdiChartLine} size={1} className="text-teal-400" />
+          <div className="p-2 bg-primary-500/20 rounded-lg">
+            <Icon path={mdiChartLine} size={1} className="text-primary-400" />
           </div>
           <h3 className="text-lg font-semibold text-white">Weight Progress</h3>
         </div>

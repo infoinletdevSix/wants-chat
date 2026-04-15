@@ -69,11 +69,11 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
                     return (
                       <div
                         key={index}
-                        className="flex-1 bg-teal-500/30 hover:bg-teal-500/50 transition-all hover:scale-105 rounded-t cursor-pointer relative group"
+                        className="flex-1 bg-primary-500/30 hover:bg-primary-500/50 transition-all hover:scale-105 rounded-t cursor-pointer relative group"
                         style={{ height: `${Math.max(height, 5)}%`, minWidth: '10px' }}
                         title={`${entry.weight}kg on ${entry.date.toLocaleDateString()}`}
                       >
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-teal-800/90 border border-white/20 px-2 py-1 rounded text-xs font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary-800/90 border border-white/20 px-2 py-1 rounded text-xs font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
                           {entry.weight}kg
                         </div>
                       </div>
@@ -95,7 +95,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
             </div>
             <div>
               <p className="text-sm text-white/60">Current</p>
-              <p className="text-lg font-bold text-teal-400">{safeToFixed(currentWeight || 0)}kg</p>
+              <p className="text-lg font-bold text-primary-400">{safeToFixed(currentWeight || 0)}kg</p>
             </div>
             <div>
               <p className="text-sm text-white/60">Goal</p>
@@ -111,7 +111,7 @@ const WeightProgress: React.FC<WeightProgressProps> = ({
                 {safeToFixed(progress || 0, 0)}%
               </span>
             </div>
-            <Progress value={progress || 0} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-teal-500 [&>div]:to-cyan-500" />
+            <Progress value={progress || 0} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-cyan-500" />
           </div>
         </div>
       </Card>

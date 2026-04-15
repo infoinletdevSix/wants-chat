@@ -171,10 +171,10 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Home className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Home className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.greenhouseCalculator.greenhouseCalculator', 'Greenhouse Calculator')}</h3>
@@ -187,7 +187,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
         {/* Dimensions */}
         <div className="space-y-4">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Ruler className="w-4 h-4 text-teal-500" />
+            <Ruler className="w-4 h-4 text-primary-500" />
             {t('tools.greenhouseCalculator.dimensionsFeet', 'Dimensions (feet)')}
           </h4>
           <div className="grid grid-cols-3 gap-4">
@@ -235,7 +235,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
                 onClick={() => { setLength(size.l.toString()); setWidth(size.w.toString()); }}
                 className={`px-3 py-1 text-xs rounded ${
                   length === size.l.toString() && width === size.w.toString()
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -248,7 +248,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
         {/* Greenhouse Type */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Home className="w-4 h-4 text-teal-500" />
+            <Home className="w-4 h-4 text-primary-500" />
             {t('tools.greenhouseCalculator.greenhouseType', 'Greenhouse Type')}
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
@@ -258,7 +258,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
                 onClick={() => setGreenhouseType(type)}
                 className={`py-2 px-3 rounded-lg text-xs font-medium transition-colors ${
                   greenhouseType === type
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -272,7 +272,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
         {/* Covering Material */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Sun className="w-4 h-4 text-teal-500" />
+            <Sun className="w-4 h-4 text-primary-500" />
             {t('tools.greenhouseCalculator.coveringMaterial', 'Covering Material')}
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -282,7 +282,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
                 onClick={() => setCoveringMaterial(mat)}
                 className={`py-2 px-3 rounded-lg text-xs font-medium transition-colors ${
                   coveringMaterial === mat
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -290,12 +290,12 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
               </button>
             ))}
           </div>
-          <div className={`p-3 rounded-lg ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'} text-sm`}>
+          <div className={`p-3 rounded-lg ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'} text-sm`}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.rValue', 'R-Value:')}</span> <strong className="text-teal-500">{coveringInfo.rValue}</strong></div>
-              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.light', 'Light:')}</span> <strong className="text-teal-500">{coveringInfo.lightTransmission}%</strong></div>
-              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.life', 'Life:')}</span> <strong className="text-teal-500">{coveringInfo.lifespan} yrs</strong></div>
-              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.cost', 'Cost:')}</span> <strong className="text-teal-500">${coveringInfo.costPerSqFt}/sqft</strong></div>
+              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.rValue', 'R-Value:')}</span> <strong className="text-primary-500">{coveringInfo.rValue}</strong></div>
+              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.light', 'Light:')}</span> <strong className="text-primary-500">{coveringInfo.lightTransmission}%</strong></div>
+              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.life', 'Life:')}</span> <strong className="text-primary-500">{coveringInfo.lifespan} yrs</strong></div>
+              <div><span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.greenhouseCalculator.cost', 'Cost:')}</span> <strong className="text-primary-500">${coveringInfo.costPerSqFt}/sqft</strong></div>
             </div>
           </div>
         </div>
@@ -303,7 +303,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
         {/* Climate/Heating */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <ThermometerSun className="w-4 h-4 text-teal-500" />
+            <ThermometerSun className="w-4 h-4 text-primary-500" />
             {t('tools.greenhouseCalculator.climateHeating', 'Climate & Heating')}
           </h4>
           <div className="grid grid-cols-4 gap-2">
@@ -313,7 +313,7 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
                 onClick={() => setClimateZone(zone)}
                 className={`py-2 px-3 rounded-lg text-xs font-medium transition-colors ${
                   climateZone === zone
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -346,13 +346,13 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
         {/* Results */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Calculator className="w-4 h-4 text-teal-500" />
+            <Calculator className="w-4 h-4 text-primary-500" />
             {t('tools.greenhouseCalculator.greenhouseSpecifications', 'Greenhouse Specifications')}
           </h4>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-            <div className="text-center p-3 rounded-lg bg-teal-500/10">
-              <div className="text-2xl font-bold text-teal-500">{calculations.floorArea}</div>
+            <div className="text-center p-3 rounded-lg bg-primary-500/10">
+              <div className="text-2xl font-bold text-primary-500">{calculations.floorArea}</div>
               <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.greenhouseCalculator.sqFtFloor', 'sq ft floor')}</div>
             </div>
             <div className="text-center p-3 rounded-lg bg-blue-500/10">
@@ -419,9 +419,9 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <DollarSign className="w-4 h-4 text-teal-500" />
+            <DollarSign className="w-4 h-4 text-primary-500" />
             {t('tools.greenhouseCalculator.estimatedMaterialCosts', 'Estimated Material Costs')}
           </h4>
           <div className="space-y-2 text-sm">
@@ -437,9 +437,9 @@ export const GreenhouseCalculatorTool: React.FC<GreenhouseCalculatorToolProps> =
               <span>Foundation ({calculations.perimeter} linear ft)</span>
               <span>${calculations.foundationCost}</span>
             </div>
-            <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-teal-800' : 'border-teal-200'}`}>
+            <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-primary-800' : 'border-primary-200'}`}>
               <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.greenhouseCalculator.estimatedTotal', 'Estimated Total')}</span>
-              <span className="text-2xl font-bold text-teal-500">${calculations.totalCost}</span>
+              <span className="text-2xl font-bold text-primary-500">${calculations.totalCost}</span>
             </div>
           </div>
           <p className={`text-xs mt-2 ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>

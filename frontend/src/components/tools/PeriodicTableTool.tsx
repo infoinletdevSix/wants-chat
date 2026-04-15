@@ -72,7 +72,7 @@ export const PeriodicTableTool: React.FC<PeriodicTableToolProps> = ({ uiConfig }
     alkaline: { bg: 'bg-orange-500', text: 'text-orange-500' },
     transition: { bg: 'bg-yellow-500', text: 'text-yellow-500' },
     'post-transition': { bg: 'bg-green-500', text: 'text-green-500' },
-    metalloid: { bg: 'bg-teal-500', text: 'text-teal-500' },
+    metalloid: { bg: 'bg-primary-500', text: 'text-primary-500' },
     nonmetal: { bg: 'bg-blue-500', text: 'text-blue-500' },
     halogen: { bg: 'bg-indigo-500', text: 'text-indigo-500' },
     noble: { bg: 'bg-purple-500', text: 'text-purple-500' },
@@ -103,9 +103,9 @@ export const PeriodicTableTool: React.FC<PeriodicTableToolProps> = ({ uiConfig }
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.periodicTable.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.periodicTable.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 

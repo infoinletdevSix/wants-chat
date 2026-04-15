@@ -214,9 +214,9 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Box className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Box className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.storageCalculator.title')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.storageCalculator.description')}</p>
@@ -226,9 +226,9 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.storageCalculator.valuesLoaded')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.storageCalculator.valuesLoaded')}</span>
           </div>
         )}
 
@@ -244,7 +244,7 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
                 onClick={() => setStorageType(type)}
                 className={`py-2 px-2 rounded-lg text-xs text-center ${
                   storageType === type
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300'
                     : 'bg-gray-100 text-gray-700'
@@ -323,9 +323,9 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
         </div>
 
         {/* Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.storageCalculator.spaceNeeded')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {calculations.requiredCubicFeet} cu ft
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
@@ -336,7 +336,7 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
         {/* Recommended Unit Details */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <CheckCircle className="w-4 h-4 inline mr-2 text-teal-500" />
+            <CheckCircle className="w-4 h-4 inline mr-2 text-primary-500" />
             {t('tools.storageCalculator.recommended')}: {calculations.recommendedUnit.name} {t('tools.storageCalculator.storageUnit')}
           </h4>
           <div className="grid grid-cols-3 gap-4 text-center">
@@ -350,7 +350,7 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
             </div>
             <div>
               <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.storageCalculator.estCost')}</div>
-              <div className="font-bold text-teal-500">${calculations.estimatedMonthlyCost.toFixed(0)}/{t('tools.storageCalculator.mo')}</div>
+              <div className="font-bold text-primary-500">${calculations.estimatedMonthlyCost.toFixed(0)}/{t('tools.storageCalculator.mo')}</div>
             </div>
           </div>
           <p className={`text-xs mt-2 text-center ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -402,7 +402,7 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
               <div
                 className={`h-2 rounded-full transition-all duration-300 ${
                   calculations.utilizationPercent > 100 ? 'bg-red-500' :
-                  calculations.utilizationPercent > 80 ? 'bg-yellow-500' : 'bg-teal-500'
+                  calculations.utilizationPercent > 80 ? 'bg-yellow-500' : 'bg-primary-500'
                 }`}
                 style={{ width: `${Math.min(100, calculations.utilizationPercent)}%` }}
               />
@@ -426,7 +426,7 @@ export const StorageCalculatorTool: React.FC<StorageCalculatorToolProps> = ({ ui
                 key={index}
                 className={`flex items-center justify-between p-2 rounded-lg ${
                   unit.name === calculations.recommendedUnit.name
-                    ? 'ring-2 ring-teal-500 ' + (isDark ? 'bg-gray-700/50' : 'bg-white')
+                    ? 'ring-2 ring-primary-500 ' + (isDark ? 'bg-gray-700/50' : 'bg-white')
                     : isDark ? 'bg-gray-700/30' : 'bg-white/50'
                 }`}
               >

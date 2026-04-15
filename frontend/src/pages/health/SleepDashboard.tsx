@@ -156,7 +156,7 @@ const SleepDashboard: React.FC = () => {
             </Button>
             <Button
               onClick={() => navigate('/health/add-sleep-log')}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white"
+              className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white"
             >
               <Plus className="w-4 h-4 mr-2" />
               Log Sleep
@@ -391,7 +391,7 @@ const SleepDashboard: React.FC = () => {
                   </p>
                   <Button
                     onClick={() => navigate('/health/add-sleep-log')}
-                    className="bg-gradient-to-r from-teal-500 to-cyan-500"
+                    className="bg-gradient-to-r from-primary-500 to-cyan-500"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Log Your First Sleep
@@ -408,7 +408,7 @@ const SleepDashboard: React.FC = () => {
               <Button
                 variant={period === 'week' ? 'default' : 'outline'}
                 size="sm"
-                className={period === 'week' ? 'bg-teal-500' : 'border-white/20'}
+                className={period === 'week' ? 'bg-primary-500' : 'border-white/20'}
                 onClick={() => setPeriod('week')}
               >
                 Week
@@ -416,7 +416,7 @@ const SleepDashboard: React.FC = () => {
               <Button
                 variant={period === 'month' ? 'default' : 'outline'}
                 size="sm"
-                className={period === 'month' ? 'bg-teal-500' : 'border-white/20'}
+                className={period === 'month' ? 'bg-primary-500' : 'border-white/20'}
                 onClick={() => setPeriod('month')}
               >
                 Month

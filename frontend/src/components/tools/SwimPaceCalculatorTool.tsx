@@ -256,7 +256,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
         <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Waves className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -281,7 +281,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
                   onClick={() => setPoolLength(length)}
                   className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                     poolLength === length
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDarkMode
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -313,7 +313,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
                       isDarkMode
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <span className={`block text-xs text-center mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                     {t('tools.swimPaceCalculator.hours', 'Hours')}
@@ -332,7 +332,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
                       isDarkMode
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <span className={`block text-xs text-center mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                     {t('tools.swimPaceCalculator.minutes', 'Minutes')}
@@ -352,7 +352,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
                       isDarkMode
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <span className={`block text-xs text-center mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                     {t('tools.swimPaceCalculator.seconds', 'Seconds')}
@@ -376,7 +376,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <div className="flex gap-2 mt-2">
                 {[100, 200, 400, 800].map((d) => (
@@ -412,7 +412,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
                 isDarkMode
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -436,9 +436,9 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
               {/* Main Pace Display */}
               <div
                 className="p-6 rounded-lg text-center"
-                style={{ backgroundColor: '#0D948820', borderLeft: '4px solid #0D9488' }}
+                style={{ backgroundColor: '#6096B420', borderLeft: '4px solid #6096B4' }}
               >
-                <div className="text-4xl font-bold text-[#0D9488] mb-2">
+                <div className="text-4xl font-bold text-[#6096B4] mb-2">
                   {formatTime(pacePer100)}
                 </div>
                 <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -504,7 +504,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                 <CardHeader className="pb-3">
                   <CardTitle className={`text-lg flex items-center gap-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                    <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+                    <TrendingUp className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.swimPaceCalculator.predictedTimes2', 'Predicted Times')}
                   </CardTitle>
                   <CardDescription className={isDarkMode ? 'text-gray-400' : 'text-gray-600'}>
@@ -536,7 +536,7 @@ export const SwimPaceCalculatorTool: React.FC<SwimPaceCalculatorToolProps> = ({ 
               <Card className={isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'}>
                 <CardHeader className="pb-3">
                   <CardTitle className={`text-lg flex items-center gap-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                    <Activity className="w-5 h-5 text-[#0D9488]" />
+                    <Activity className="w-5 h-5 text-[#6096B4]" />
                     {t('tools.swimPaceCalculator.trainingZones2', 'Training Zones')}
                   </CardTitle>
                   <CardDescription className={isDarkMode ? 'text-gray-400' : 'text-gray-600'}>

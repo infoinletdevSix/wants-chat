@@ -21,10 +21,10 @@ const BloodSugarSection: React.FC<VitalFormFieldProps> = ({
   getStatusBadge
 }) => {
   return (
-    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-white">
-          <Bloodtype className="h-5 w-5 text-teal-400" />
+          <Bloodtype className="h-5 w-5 text-primary-400" />
           Blood Sugar
         </CardTitle>
         <CardDescription className="text-white/60">
@@ -56,7 +56,7 @@ const BloodSugarSection: React.FC<VitalFormFieldProps> = ({
               <SelectTrigger id="bloodSugarType" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                 {bloodSugarTypes.map(type => (
                   <SelectItem key={type.value} value={type.value} className="text-white hover:bg-white/10">
                     {type.label}
@@ -74,7 +74,7 @@ const BloodSugarSection: React.FC<VitalFormFieldProps> = ({
               <SelectTrigger id="bloodSugarUnit" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                 <SelectItem value="mg/dL" className="text-white hover:bg-white/10">mg/dL</SelectItem>
                 <SelectItem value="mmol/L" className="text-white hover:bg-white/10">mmol/L</SelectItem>
               </SelectContent>

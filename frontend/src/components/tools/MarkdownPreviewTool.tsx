@@ -153,9 +153,9 @@ export const MarkdownPreviewTool: React.FC<MarkdownPreviewToolProps> = ({ uiConf
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.markdownPreview.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.markdownPreview.codeLoadedFromAiResponse', 'Code loaded from AI response')}</span>
         </div>
       )}
 
@@ -176,7 +176,7 @@ export const MarkdownPreviewTool: React.FC<MarkdownPreviewToolProps> = ({ uiConf
               theme === 'dark'
                 ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                 : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488] resize-none`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4] resize-none`}
           />
         </div>
 
@@ -243,11 +243,11 @@ export const MarkdownPreviewTool: React.FC<MarkdownPreviewToolProps> = ({ uiConf
           font-style: italic;
         }
         .markdown-preview a {
-          color: #0D9488;
+          color: #6096B4;
           text-decoration: underline;
         }
         .markdown-preview a:hover {
-          color: #0F766E;
+          color: #4C7F98;
         }
         .markdown-preview code {
           background-color: ${theme === 'dark' ? '#374151' : '#e5e7eb'};
@@ -285,7 +285,7 @@ export const MarkdownPreviewTool: React.FC<MarkdownPreviewToolProps> = ({ uiConf
           margin-bottom: 0.25em;
         }
         .markdown-preview blockquote {
-          border-left: 4px solid #0D9488;
+          border-left: 4px solid #6096B4;
           padding-left: 1em;
           margin-left: 0;
           margin-bottom: 1em;

@@ -467,7 +467,7 @@ export default function LoadPlannerTool() {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <RefreshCw className="w-8 h-8 animate-spin text-teal-600" />
+        <RefreshCw className="w-8 h-8 animate-spin text-primary-600" />
       </div>
     );
   }
@@ -478,7 +478,7 @@ export default function LoadPlannerTool() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Truck className="w-7 h-7 text-teal-600" />
+            <Truck className="w-7 h-7 text-primary-600" />
             {t('tools.loadPlanner.loadPlanner', 'Load Planner')}
           </h1>
           <p className="text-gray-600 mt-1">{t('tools.loadPlanner.planAndOptimizeFreightLoads', 'Plan and optimize freight loads')}</p>
@@ -494,7 +494,7 @@ export default function LoadPlannerTool() {
           />
           <button
             onClick={() => setIsFormOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
           >
             <Plus className="w-5 h-5" />
             {t('tools.loadPlanner.newLoad', 'New Load')}
@@ -539,8 +539,8 @@ export default function LoadPlannerTool() {
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-100 rounded-lg">
-              <DollarSign className="w-5 h-5 text-teal-600" />
+            <div className="p-2 bg-primary-100 rounded-lg">
+              <DollarSign className="w-5 h-5 text-primary-600" />
             </div>
             <div>
               <p className="text-sm text-gray-500">{t('tools.loadPlanner.revenue', 'Revenue')}</p>
@@ -570,7 +570,7 @@ export default function LoadPlannerTool() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
                 activeTab === tab
-                  ? 'border-teal-600 text-teal-600'
+                  ? 'border-primary-600 text-primary-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -590,13 +590,13 @@ export default function LoadPlannerTool() {
               placeholder={t('tools.loadPlanner.searchLoads', 'Search loads...')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           >
             <option value="all">{t('tools.loadPlanner.allStatuses', 'All Statuses')}</option>
             {LOAD_STATUSES.map((status) => (
@@ -608,7 +608,7 @@ export default function LoadPlannerTool() {
           <select
             value={equipmentFilter}
             onChange={(e) => setEquipmentFilter(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           >
             <option value="all">{t('tools.loadPlanner.allEquipment', 'All Equipment')}</option>
             {EQUIPMENT_TYPES.map((eq) => (
@@ -821,7 +821,7 @@ export default function LoadPlannerTool() {
       {activeTab === 'reports' && (
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-teal-600" />
+            <BarChart3 className="w-5 h-5 text-primary-600" />
             {t('tools.loadPlanner.loadReports', 'Load Reports')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -864,7 +864,7 @@ export default function LoadPlannerTool() {
                     value={formData.loadNumber}
                     onChange={(e) => setFormData({ ...formData, loadNumber: e.target.value })}
                     placeholder={t('tools.loadPlanner.autoGenerated', 'Auto-generated')}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
                 <div>
@@ -872,7 +872,7 @@ export default function LoadPlannerTool() {
                   <select
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value as FreightLoad['status'] })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
                     {LOAD_STATUSES.map((status) => (
                       <option key={status.value} value={status.value}>{status.label}</option>
@@ -884,7 +884,7 @@ export default function LoadPlannerTool() {
                   <select
                     value={formData.priority}
                     onChange={(e) => setFormData({ ...formData, priority: e.target.value as FreightLoad['priority'] })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
                     {PRIORITIES.map((priority) => (
                       <option key={priority.value} value={priority.value}>{priority.label}</option>
@@ -896,7 +896,7 @@ export default function LoadPlannerTool() {
                   <select
                     value={formData.equipment}
                     onChange={(e) => handleEquipmentChange(e.target.value as FreightLoad['equipment'])}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
                     {EQUIPMENT_TYPES.map((eq) => (
                       <option key={eq.value} value={eq.value}>{eq.label}</option>
@@ -915,7 +915,7 @@ export default function LoadPlannerTool() {
                       type="text"
                       value={formData.customer}
                       onChange={(e) => setFormData({ ...formData, customer: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                   <div>
@@ -924,7 +924,7 @@ export default function LoadPlannerTool() {
                       type="text"
                       value={formData.customerContact}
                       onChange={(e) => setFormData({ ...formData, customerContact: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                   <div>
@@ -933,7 +933,7 @@ export default function LoadPlannerTool() {
                       type="tel"
                       value={formData.customerPhone}
                       onChange={(e) => setFormData({ ...formData, customerPhone: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                 </div>
@@ -949,7 +949,7 @@ export default function LoadPlannerTool() {
                       placeholder={t('tools.loadPlanner.address', 'Address')}
                       value={formData.origin}
                       onChange={(e) => setFormData({ ...formData, origin: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                     <div className="grid grid-cols-3 gap-2">
                       <input
@@ -957,21 +957,21 @@ export default function LoadPlannerTool() {
                         placeholder={t('tools.loadPlanner.city', 'City')}
                         value={formData.originCity}
                         onChange={(e) => setFormData({ ...formData, originCity: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="text"
                         placeholder={t('tools.loadPlanner.state', 'State')}
                         value={formData.originState}
                         onChange={(e) => setFormData({ ...formData, originState: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="text"
                         placeholder={t('tools.loadPlanner.zip', 'ZIP')}
                         value={formData.originZip}
                         onChange={(e) => setFormData({ ...formData, originZip: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -979,13 +979,13 @@ export default function LoadPlannerTool() {
                         type="date"
                         value={formData.pickupDate}
                         onChange={(e) => setFormData({ ...formData, pickupDate: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="time"
                         value={formData.pickupTime}
                         onChange={(e) => setFormData({ ...formData, pickupTime: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                   </div>
@@ -998,7 +998,7 @@ export default function LoadPlannerTool() {
                       placeholder={t('tools.loadPlanner.address2', 'Address')}
                       value={formData.destination}
                       onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                     <div className="grid grid-cols-3 gap-2">
                       <input
@@ -1006,21 +1006,21 @@ export default function LoadPlannerTool() {
                         placeholder={t('tools.loadPlanner.city2', 'City')}
                         value={formData.destinationCity}
                         onChange={(e) => setFormData({ ...formData, destinationCity: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="text"
                         placeholder={t('tools.loadPlanner.state2', 'State')}
                         value={formData.destinationState}
                         onChange={(e) => setFormData({ ...formData, destinationState: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="text"
                         placeholder={t('tools.loadPlanner.zip2', 'ZIP')}
                         value={formData.destinationZip}
                         onChange={(e) => setFormData({ ...formData, destinationZip: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -1028,13 +1028,13 @@ export default function LoadPlannerTool() {
                         type="date"
                         value={formData.deliveryDate}
                         onChange={(e) => setFormData({ ...formData, deliveryDate: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="time"
                         value={formData.deliveryTime}
                         onChange={(e) => setFormData({ ...formData, deliveryTime: e.target.value })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                   </div>
@@ -1050,7 +1050,7 @@ export default function LoadPlannerTool() {
                     step="0.01"
                     value={formData.rate}
                     onChange={(e) => setFormData({ ...formData, rate: parseFloat(e.target.value) || 0 })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
                 <div>
@@ -1058,7 +1058,7 @@ export default function LoadPlannerTool() {
                   <select
                     value={formData.rateType}
                     onChange={(e) => setFormData({ ...formData, rateType: e.target.value as FreightLoad['rateType'] })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   >
                     <option value="flat">{t('tools.loadPlanner.flatRate', 'Flat Rate')}</option>
                     <option value="per-mile">{t('tools.loadPlanner.perMile', 'Per Mile')}</option>
@@ -1071,7 +1071,7 @@ export default function LoadPlannerTool() {
                     type="number"
                     value={formData.distance}
                     onChange={(e) => setFormData({ ...formData, distance: parseInt(e.target.value) || 0 })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
                 <div>
@@ -1080,7 +1080,7 @@ export default function LoadPlannerTool() {
                     type="number"
                     value={formData.maxWeight}
                     onChange={(e) => setFormData({ ...formData, maxWeight: parseInt(e.target.value) || 0 })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
               </div>
@@ -1095,7 +1095,7 @@ export default function LoadPlannerTool() {
                       type="text"
                       value={formData.driverName}
                       onChange={(e) => setFormData({ ...formData, driverName: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                   <div>
@@ -1104,7 +1104,7 @@ export default function LoadPlannerTool() {
                       type="tel"
                       value={formData.driverPhone}
                       onChange={(e) => setFormData({ ...formData, driverPhone: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                   <div>
@@ -1113,7 +1113,7 @@ export default function LoadPlannerTool() {
                       type="text"
                       value={formData.truckNumber}
                       onChange={(e) => setFormData({ ...formData, truckNumber: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                   <div>
@@ -1122,7 +1122,7 @@ export default function LoadPlannerTool() {
                       type="text"
                       value={formData.trailerNumber}
                       onChange={(e) => setFormData({ ...formData, trailerNumber: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                 </div>
@@ -1164,7 +1164,7 @@ export default function LoadPlannerTool() {
                           placeholder={t('tools.loadPlanner.description', 'Description')}
                           value={newItem.description}
                           onChange={(e) => setNewItem({ ...newItem, description: e.target.value })}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                         />
                       </div>
                       <input
@@ -1172,14 +1172,14 @@ export default function LoadPlannerTool() {
                         placeholder={t('tools.loadPlanner.qty', 'Qty')}
                         value={newItem.quantity || ''}
                         onChange={(e) => setNewItem({ ...newItem, quantity: parseInt(e.target.value) || 0 })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="number"
                         placeholder={t('tools.loadPlanner.weightLbs', 'Weight (lbs)')}
                         value={newItem.weight || ''}
                         onChange={(e) => setNewItem({ ...newItem, weight: parseFloat(e.target.value) || 0 })}
-                        className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <input
                         type="text"
@@ -1188,12 +1188,12 @@ export default function LoadPlannerTool() {
                           const dims = e.target.value.split('x').map((d) => parseFloat(d.trim()) || 0);
                           setNewItem({ ...newItem, length: dims[0] || 0, width: dims[1] || 0, height: dims[2] || 0 });
                         }}
-                        className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                       />
                       <button
                         onClick={addItemToLoad}
                         disabled={!newItem.description}
-                        className="px-3 py-2 bg-teal-600 text-white rounded-lg text-sm hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="px-3 py-2 bg-primary-600 text-white rounded-lg text-sm hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {t('tools.loadPlanner.add', 'Add')}
                       </button>
@@ -1204,7 +1204,7 @@ export default function LoadPlannerTool() {
                           type="checkbox"
                           checked={newItem.stackable}
                           onChange={(e) => setNewItem({ ...newItem, stackable: e.target.checked })}
-                          className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                          className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                         />
                         {t('tools.loadPlanner.stackable2', 'Stackable')}
                       </label>
@@ -1213,7 +1213,7 @@ export default function LoadPlannerTool() {
                           type="checkbox"
                           checked={newItem.fragile}
                           onChange={(e) => setNewItem({ ...newItem, fragile: e.target.checked })}
-                          className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                          className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                         />
                         {t('tools.loadPlanner.fragile3', 'Fragile')}
                       </label>
@@ -1222,7 +1222,7 @@ export default function LoadPlannerTool() {
                           type="checkbox"
                           checked={newItem.hazmat}
                           onChange={(e) => setNewItem({ ...newItem, hazmat: e.target.checked })}
-                          className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                          className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                         />
                         {t('tools.loadPlanner.hazmat3', 'Hazmat')}
                       </label>
@@ -1239,7 +1239,7 @@ export default function LoadPlannerTool() {
                     rows={3}
                     value={formData.specialInstructions}
                     onChange={(e) => setFormData({ ...formData, specialInstructions: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
                 <div>
@@ -1248,7 +1248,7 @@ export default function LoadPlannerTool() {
                     rows={3}
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
               </div>
@@ -1263,7 +1263,7 @@ export default function LoadPlannerTool() {
               </button>
               <button
                 onClick={handleSubmit}
-                className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
               >
                 <Save className="w-4 h-4" />
                 {editingLoad ? t('tools.loadPlanner.updateLoad', 'Update Load') : t('tools.loadPlanner.createLoad', 'Create Load')}

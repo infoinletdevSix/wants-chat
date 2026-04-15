@@ -340,12 +340,12 @@ export const SolarPanelCalculatorTool: React.FC<SolarPanelCalculatorToolProps> =
         {/* Environmental Impact */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className="flex items-center gap-2 mb-2">
-            <Ruler className="w-4 h-4 text-teal-500" />
+            <Ruler className="w-4 h-4 text-primary-500" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.solarPanelCalculator.environmentalImpact', 'Environmental Impact')}</span>
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            Your system would offset approximately <span className="text-teal-500 font-bold">{calculations.co2OffsetTons} tons</span> of CO2 annually.
-            That's equivalent to planting about <span className="text-teal-500 font-bold">{Math.round(parseFloat(calculations.co2OffsetTons) * 16)} trees</span>!
+            Your system would offset approximately <span className="text-primary-500 font-bold">{calculations.co2OffsetTons} tons</span> of CO2 annually.
+            That's equivalent to planting about <span className="text-primary-500 font-bold">{Math.round(parseFloat(calculations.co2OffsetTons) * 16)} trees</span>!
           </div>
         </div>
 

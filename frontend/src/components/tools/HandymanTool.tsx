@@ -669,13 +669,13 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-1 ${
     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
   }`;
 
-  const buttonPrimary = `px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-lg transition-colors flex items-center gap-2`;
+  const buttonPrimary = `px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-lg transition-colors flex items-center gap-2`;
 
   const buttonSecondary = `px-4 py-2 ${
     theme === 'dark'
@@ -688,7 +688,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
     return (
       <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+          <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
         </div>
       </div>
     );
@@ -701,7 +701,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Wrench className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -769,7 +769,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors capitalize ${
                   activeTab === tab
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -981,7 +981,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
                           onClick={() => setJobForm((prev) => ({ ...prev, pricingType: 'hourly' }))}
                           className={`flex-1 py-2 px-3 rounded-lg font-medium transition-colors ${
                             jobForm.pricingType === 'hourly'
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                               ? 'bg-gray-600 text-gray-300'
                               : 'bg-gray-200 text-gray-700'
@@ -994,7 +994,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
                           onClick={() => setJobForm((prev) => ({ ...prev, pricingType: 'flat-rate' }))}
                           className={`flex-1 py-2 px-3 rounded-lg font-medium transition-colors ${
                             jobForm.pricingType === 'flat-rate'
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                               ? 'bg-gray-600 text-gray-300'
                               : 'bg-gray-200 text-gray-700'
@@ -1110,7 +1110,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
                           type="checkbox"
                           checked={task.completed}
                           onChange={(e) => updateTask(task.id, { completed: e.target.checked })}
-                          className="w-5 h-5 rounded text-[#0D9488]"
+                          className="w-5 h-5 rounded text-[#6096B4]"
                         />
                         <input
                           type="text"
@@ -1468,7 +1468,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
                               }`}
                             >
                               <div
-                                className="h-2 rounded-full bg-[#0D9488] transition-all"
+                                className="h-2 rounded-full bg-[#6096B4] transition-all"
                                 style={{
                                   width: `${
                                     (job.tasks.filter((t) => t.completed).length / job.tasks.length) * 100
@@ -1589,7 +1589,7 @@ export const HandymanTool: React.FC<HandymanToolProps> = ({
                             <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                               {customerJobs.length} job{customerJobs.length !== 1 ? 's' : ''}
                             </p>
-                            <p className={`font-semibold text-[#0D9488]`}>${totalRevenue.toFixed(2)}</p>
+                            <p className={`font-semibold text-[#6096B4]`}>${totalRevenue.toFixed(2)}</p>
                           </div>
                         </div>
                         {customer.notes && (
@@ -1808,7 +1808,7 @@ TOTAL: $${invoice.total.toFixed(2)}
             <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
               {t('tools.handyman.totalRevenue', 'Total Revenue')}
             </p>
-            <p className={`text-2xl font-bold text-[#0D9488]`}>
+            <p className={`text-2xl font-bold text-[#6096B4]`}>
               $
               {invoices
                 .reduce((sum, inv) => sum + inv.total, 0)

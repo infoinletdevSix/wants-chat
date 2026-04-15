@@ -231,11 +231,11 @@ Return ONLY valid JSON.`;
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <FileText className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aIEssayWriter.aiEssayWriter', 'AI Essay Writer')}</h3>
@@ -245,9 +245,9 @@ Return ONLY valid JSON.`;
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aIEssayWriter.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aIEssayWriter.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -264,7 +264,7 @@ Return ONLY valid JSON.`;
             onChange={(e) => setTopic(e.target.value)}
             placeholder={t('tools.aIEssayWriter.enterYourEssayTopicOr', 'Enter your essay topic or question...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -280,7 +280,7 @@ Return ONLY valid JSON.`;
                 const selected = essayTypes.find(t => t.value === e.target.value);
                 if (selected) setEssayType(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {essayTypes.map(type => (
                 <option key={type.value} value={type.value}>{type.label}</option>
@@ -298,7 +298,7 @@ Return ONLY valid JSON.`;
                 const selected = academicLevels.find(l => l.value === e.target.value);
                 if (selected) setAcademicLevel(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {academicLevels.map(level => (
                 <option key={level.value} value={level.value}>{level.label}</option>
@@ -318,7 +318,7 @@ Return ONLY valid JSON.`;
               const selected = paragraphCounts.find(p => p.value === Number(e.target.value));
               if (selected) setParagraphCount(selected);
             }}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
           >
             {paragraphCounts.map(count => (
               <option key={count.value} value={count.value}>{count.label}</option>
@@ -336,7 +336,7 @@ Return ONLY valid JSON.`;
             onChange={(e) => setAdditionalNotes(e.target.value)}
             placeholder={t('tools.aIEssayWriter.anySpecificRequirementsSourcesTo', 'Any specific requirements, sources to include, or points to emphasize...')}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -351,7 +351,7 @@ Return ONLY valid JSON.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !topic.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -394,7 +394,7 @@ Return ONLY valid JSON.`;
 
             <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
               {/* Title */}
-              <div className="p-4 bg-[#0D9488]/5 border-b border-gray-200 dark:border-gray-700">
+              <div className="p-4 bg-[#6096B4]/5 border-b border-gray-200 dark:border-gray-700">
                 <h5 className="font-semibold text-gray-900 dark:text-white text-lg">
                   {generatedOutline.title}
                 </h5>
@@ -402,13 +402,13 @@ Return ONLY valid JSON.`;
 
               {/* Thesis */}
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                <p className="text-sm font-medium text-[#0D9488] mb-1">{t('tools.aIEssayWriter.thesisStatement', 'Thesis Statement')}</p>
+                <p className="text-sm font-medium text-[#6096B4] mb-1">{t('tools.aIEssayWriter.thesisStatement', 'Thesis Statement')}</p>
                 <p className="text-gray-800 dark:text-gray-200">{generatedOutline.thesis}</p>
               </div>
 
               {/* Introduction */}
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                <p className="text-sm font-medium text-[#0D9488] mb-1">{t('tools.aIEssayWriter.introduction', 'Introduction')}</p>
+                <p className="text-sm font-medium text-[#6096B4] mb-1">{t('tools.aIEssayWriter.introduction', 'Introduction')}</p>
                 <p className="text-gray-800 dark:text-gray-200">{generatedOutline.introduction}</p>
               </div>
 
@@ -419,7 +419,7 @@ Return ONLY valid JSON.`;
                     onClick={() => toggleSection(idx)}
                     className="w-full p-4 flex items-center justify-between hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
-                    <span className="text-sm font-medium text-[#0D9488]">
+                    <span className="text-sm font-medium text-[#6096B4]">
                       Body Paragraph {idx + 1}: {para.topic.substring(0, 50)}...
                     </span>
                     {expandedSections[idx] ? (
@@ -446,7 +446,7 @@ Return ONLY valid JSON.`;
 
               {/* Conclusion */}
               <div className="p-4">
-                <p className="text-sm font-medium text-[#0D9488] mb-1">{t('tools.aIEssayWriter.conclusion', 'Conclusion')}</p>
+                <p className="text-sm font-medium text-[#6096B4] mb-1">{t('tools.aIEssayWriter.conclusion', 'Conclusion')}</p>
                 <p className="text-gray-800 dark:text-gray-200">{generatedOutline.conclusion}</p>
               </div>
             </div>

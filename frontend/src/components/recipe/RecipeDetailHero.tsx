@@ -140,7 +140,7 @@ export const RecipeDetailHero: React.FC<RecipeDetailHeroProps> = ({
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
         <Button
           onClick={onStartCooking}
-          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl h-12 flex-1"
+          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl h-12 flex-1"
         >
           <Play className="h-4 w-4 mr-2" />
           Start Cooking

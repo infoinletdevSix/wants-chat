@@ -201,10 +201,10 @@ Current Status:
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Bell className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Bell className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.reorderPointCalculator.reorderPointCalculator', 'Reorder Point Calculator')}</h3>
@@ -217,7 +217,7 @@ Current Status:
         {/* Demand Inputs */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <TrendingUp className="w-4 h-4 text-teal-500" />
+            <TrendingUp className="w-4 h-4 text-primary-500" />
             {t('tools.reorderPointCalculator.demandParameters', 'Demand Parameters')}
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -233,7 +233,7 @@ Current Status:
                   min="0"
                   className={`flex-1 px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
                 <select
                   value={demandUnit}
@@ -260,7 +260,7 @@ Current Status:
                 max="100"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -276,7 +276,7 @@ Current Status:
                 step="0.1"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
           </div>
@@ -295,7 +295,7 @@ Current Status:
               min="0"
               className={`w-full px-4 py-3 rounded-lg border ${
                 isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -310,7 +310,7 @@ Current Status:
               step="0.5"
               className={`w-full px-4 py-3 rounded-lg border ${
                 isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
             />
           </div>
         </div>
@@ -328,7 +328,7 @@ Current Status:
                 type="checkbox"
                 checked={autoCalculateSS}
                 onChange={(e) => setAutoCalculateSS(e.target.checked)}
-                className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+                className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
               />
             </label>
           </div>
@@ -344,7 +344,7 @@ Current Status:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
           )}
@@ -363,7 +363,7 @@ Current Status:
               min="0"
               className={`w-full px-4 py-3 rounded-lg border ${
                 isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
             />
           </div>
           <div className="space-y-2">
@@ -377,25 +377,25 @@ Current Status:
               min="0"
               className={`w-full px-4 py-3 rounded-lg border ${
                 isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+              } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
             />
           </div>
         </div>
 
         {/* Results */}
         {calculations && (
-          <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+          <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-teal-500" />
-                <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                <TrendingUp className="w-5 h-5 text-primary-500" />
+                <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   {t('tools.reorderPointCalculator.reorderPointAnalysis', 'Reorder Point Analysis')}
                 </h4>
               </div>
               <button
                 onClick={handleCopy}
                 className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                  copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                  copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -425,7 +425,7 @@ Current Status:
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                 <div className={`text-xs font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.reorderPointCalculator.reorderPoint', 'Reorder Point')}</div>
-                <div className="text-2xl font-bold text-teal-500">
+                <div className="text-2xl font-bold text-primary-500">
                   {calculations.reorderPoint.toLocaleString()}
                 </div>
                 <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>units</div>
@@ -472,7 +472,7 @@ Current Status:
                 <div className={`pt-2 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
                   <div className="flex justify-between items-center">
                     <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>= Reorder Point:</span>
-                    <span className="font-bold text-teal-500">
+                    <span className="font-bold text-primary-500">
                       {calculations.reorderPoint.toLocaleString()} units ({calculations.totalCoverage.toFixed(1)} days)
                     </span>
                   </div>

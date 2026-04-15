@@ -49,7 +49,7 @@ const ActiveFasting: React.FC<ActiveFastingProps> = ({
 
   const getStatus = () => {
     if (isComplete) return { text: 'Fasting Complete!', color: 'text-emerald-400' };
-    if (progress > 80) return { text: 'Almost there!', color: 'text-teal-400' };
+    if (progress > 80) return { text: 'Almost there!', color: 'text-primary-400' };
     if (progress > 50) return { text: 'Over halfway!', color: 'text-blue-400' };
     return { text: 'Keep going!', color: 'text-orange-400' };
   };
@@ -128,7 +128,7 @@ const ActiveFasting: React.FC<ActiveFastingProps> = ({
               </p>
             </div>
             <Button
-              className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+              className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               onClick={onEndFast}
             >
               End Fasting Session

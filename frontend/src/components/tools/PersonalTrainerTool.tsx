@@ -169,14 +169,14 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
   const upcomingSessions = sessions.filter(s => !s.completed).length;
   const monthlyRevenue = sessions.filter(s => s.completed).length * (clients[0]?.sessionPrice || 60);
 
-  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488]`;
+  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4]`;
   const cardClass = `p-4 rounded-lg ${isDark ? 'bg-[#1a1a1a]' : 'bg-gray-50'}`;
 
   // Loading state
   if (isLoadingClients || isLoadingSessions) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -184,7 +184,7 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Dumbbell className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.personalTrainer.personalTrainerTool', 'Personal Trainer Tool')}</h2>
@@ -193,7 +193,7 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className={`${cardClass} flex items-center gap-4`}>
-          <div className="p-3 bg-[#0D9488]/10 rounded-lg"><Users className="w-6 h-6 text-[#0D9488]" /></div>
+          <div className="p-3 bg-[#6096B4]/10 rounded-lg"><Users className="w-6 h-6 text-[#6096B4]" /></div>
           <div><p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.personalTrainer.totalClients', 'Total Clients')}</p>
             <p className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{totalClients}</p></div>
         </div>
@@ -212,7 +212,7 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
       <div className="flex gap-2 border-b border-gray-200 dark:border-gray-700">
         {(['clients', 'sessions'] as const).map(tab => (
           <button key={tab} onClick={() => { setActiveTab(tab); setShowForm(false); }}
-            className={`px-4 py-2 font-medium capitalize ${activeTab === tab ? 'text-[#0D9488] border-b-2 border-[#0D9488]' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+            className={`px-4 py-2 font-medium capitalize ${activeTab === tab ? 'text-[#6096B4] border-b-2 border-[#6096B4]' : isDark ? 'text-gray-400' : 'text-gray-500'}`}>
             {tab}
           </button>
         ))}
@@ -255,7 +255,7 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
               : await importSessionsJSON(file)}
             theme={isDark ? 'dark' : 'light'}
           />
-          <button onClick={() => setShowForm(!showForm)} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276]">
+          <button onClick={() => setShowForm(!showForm)} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276]">
             <Plus className="w-5 h-5" />Add {activeTab === 'clients' ? t('tools.personalTrainer.client', 'Client') : t('tools.personalTrainer.session', 'Session')}
           </button>
         </div>
@@ -273,7 +273,7 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
             <input type="number" placeholder={t('tools.personalTrainer.priceSession', 'Price/Session')} value={clientForm.sessionPrice} onChange={(e) => setClientForm({ ...clientForm, sessionPrice: parseFloat(e.target.value) })} className={inputClass} />
             <input type="date" value={clientForm.nextSession} onChange={(e) => setClientForm({ ...clientForm, nextSession: e.target.value })} className={inputClass} />
           </div>
-          <button onClick={addClient} disabled={!clientForm.name} className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.personalTrainer.saveClient', 'Save Client')}</button>
+          <button onClick={addClient} disabled={!clientForm.name} className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.personalTrainer.saveClient', 'Save Client')}</button>
         </div>
       )}
 
@@ -289,7 +289,7 @@ export const PersonalTrainerTool: React.FC<PersonalTrainerToolProps> = ({
             <input type="number" placeholder={t('tools.personalTrainer.durationMin', 'Duration (min)')} value={sessionForm.duration} onChange={(e) => setSessionForm({ ...sessionForm, duration: parseInt(e.target.value) })} className={inputClass} />
             <textarea placeholder={t('tools.personalTrainer.notes', 'Notes')} value={sessionForm.notes} onChange={(e) => setSessionForm({ ...sessionForm, notes: e.target.value })} className={`${inputClass} md:col-span-2`} rows={2} />
           </div>
-          <button onClick={addSession} disabled={!sessionForm.clientId || !sessionForm.date} className="mt-4 px-4 py-2 bg-[#0D9488] text-white rounded-lg disabled:opacity-50">{t('tools.personalTrainer.saveSession', 'Save Session')}</button>
+          <button onClick={addSession} disabled={!sessionForm.clientId || !sessionForm.date} className="mt-4 px-4 py-2 bg-[#6096B4] text-white rounded-lg disabled:opacity-50">{t('tools.personalTrainer.saveSession', 'Save Session')}</button>
         </div>
       )}
 

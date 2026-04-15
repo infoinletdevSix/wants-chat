@@ -224,7 +224,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-teal-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-primary-500 flex items-center justify-center">
               <Ruler className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -236,9 +236,9 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-teal-500/10 rounded-xl border border-teal-500/20">
-              <Sparkles className="w-4 h-4 text-teal-500" />
-              <span className="text-sm text-teal-500 font-medium">{t('tools.clothingSizeConverter.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-primary-500/10 rounded-xl border border-primary-500/20">
+              <Sparkles className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-500 font-medium">{t('tools.clothingSizeConverter.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
             </div>
           )}
 
@@ -261,7 +261,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                   }}
                   className={`flex-1 py-3 rounded-lg flex items-center justify-center gap-2 ${
                     gender === g.value
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDarkMode
                       ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -289,7 +289,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                   }}
                   className={`py-2 px-4 rounded-lg flex items-center gap-2 ${
                     category === c.value
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDarkMode
                       ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -321,7 +321,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               >
                 {regions.map((r) => (
                   <option key={r.value} value={r.value}>
@@ -341,7 +341,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                } focus:outline-none focus:ring-2 focus:ring-primary-500`}
               >
                 {availableSizes.map((size) => (
                   <option key={size} value={size}>{size}</option>
@@ -358,7 +358,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                 onClick={() => setSelectedSize(size)}
                 className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                   selectedSize === size
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDarkMode
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -371,9 +371,9 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
 
           {/* Conversion Results */}
           {currentConversion ? (
-            <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border mb-6`}>
+            <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border mb-6`}>
               <div className="flex items-center justify-between mb-4">
-                <h3 className={`font-semibold ${isDarkMode ? 'text-teal-400' : 'text-teal-700'}`}>
+                <h3 className={`font-semibold ${isDarkMode ? 'text-primary-400' : 'text-primary-700'}`}>
                   <ArrowRightLeft className="w-5 h-5 inline mr-2" />
                   {t('tools.clothingSizeConverter.sizeConversions', 'Size Conversions')}
                 </h3>
@@ -402,7 +402,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                       key={r.value}
                       className={`p-3 rounded-lg text-center ${
                         fromRegion === r.value
-                          ? isDarkMode ? 'bg-teal-500/30 ring-2 ring-teal-500' : 'bg-teal-100 ring-2 ring-teal-500'
+                          ? isDarkMode ? 'bg-primary-500/30 ring-2 ring-primary-500' : 'bg-primary-100 ring-2 ring-primary-500'
                           : isDarkMode ? 'bg-gray-700' : 'bg-white'
                       }`}
                     >
@@ -501,7 +501,7 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
                     <tr
                       key={index}
                       className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} ${
-                        row[fromRegion] === selectedSize ? (isDarkMode ? 'bg-teal-900/30' : 'bg-teal-50') : ''
+                        row[fromRegion] === selectedSize ? (isDarkMode ? 'bg-primary-900/30' : 'bg-primary-50') : ''
                       }`}
                     >
                       {regions.filter(r => sizeChart[0][r.value]).map((r) => (
@@ -517,8 +517,8 @@ const ClothingSizeConverterTool: React.FC<ClothingSizeConverterToolProps> = ({ u
           </div>
 
           {/* Info */}
-          <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-teal-50'} flex items-start gap-3`}>
-            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-teal-400' : 'text-teal-600'}`} />
+          <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-primary-50'} flex items-start gap-3`}>
+            <Info className={`w-5 h-5 mt-0.5 flex-shrink-0 ${isDarkMode ? 'text-primary-400' : 'text-primary-600'}`} />
             <div className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               <p className="font-medium mb-1">{t('tools.clothingSizeConverter.sizingNotes', 'Sizing Notes:')}</p>
               <ul className="space-y-1 list-disc list-inside">

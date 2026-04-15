@@ -859,7 +859,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClassName = `block text-sm font-medium mb-1 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`;
 
@@ -872,7 +872,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
         <div className={`${cardClassName} p-6 mb-6`}>
           <div className="flex items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Footprints className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -901,9 +901,9 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
 
           {/* Prefill Indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.shoeRepair.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.shoeRepair.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
             </div>
           )}
 
@@ -911,7 +911,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.shoeRepair.totalRevenue', 'Total Revenue')}</div>
-              <div className="text-2xl font-bold text-[#0D9488]">${stats.totalRevenue.toFixed(2)}</div>
+              <div className="text-2xl font-bold text-[#6096B4]">${stats.totalRevenue.toFixed(2)}</div>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.shoeRepair.pendingOrders', 'Pending Orders')}</div>
@@ -955,7 +955,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-3 font-medium text-sm transition-colors ${
                   activeTab === tab.id
-                    ? 'text-[#0D9488] border-b-2 border-[#0D9488]'
+                    ? 'text-[#6096B4] border-b-2 border-[#6096B4]'
                     : theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'
                 }`}
               >
@@ -997,7 +997,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                 </select>
                 <button
                   onClick={() => setShowRepairForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.shoeRepair.newOrder', 'New Order')}
@@ -1095,7 +1095,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                             key={repair.id}
                             className={`flex items-center gap-2 p-2 rounded-lg border cursor-pointer transition-colors ${
                               repairForm.repairTypes.includes(repair.id)
-                                ? 'border-[#0D9488] bg-[#0D9488]/10'
+                                ? 'border-[#6096B4] bg-[#6096B4]/10'
                                 : theme === 'dark' ? 'border-gray-600 hover:border-gray-500' : 'border-gray-200 hover:border-gray-300'
                             }`}
                           >
@@ -1118,7 +1118,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                         ))}
                       </div>
                       {repairForm.repairTypes.length > 0 && (
-                        <div className="mt-2 text-sm text-[#0D9488] font-medium">
+                        <div className="mt-2 text-sm text-[#6096B4] font-medium">
                           Estimated Total: ${calculateEstimatedCost(repairForm.repairTypes)}
                         </div>
                       )}
@@ -1138,7 +1138,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     <div className="flex gap-3 mt-6">
                       <button
                         onClick={handleSaveRepair}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                       >
                         <Save className="w-5 h-5" />
                         {editingRepair ? t('tools.shoeRepair.updateOrder', 'Update Order') : t('tools.shoeRepair.createOrder2', 'Create Order')}
@@ -1279,7 +1279,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                 </h2>
                 <button
                   onClick={() => setShowCustomerForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.shoeRepair.addCustomer', 'Add Customer')}
@@ -1345,7 +1345,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                             type="checkbox"
                             checked={customerForm.isRecurring}
                             onChange={(e) => setCustomerForm(prev => ({ ...prev, isRecurring: e.target.checked }))}
-                            className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                            className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                           />
                           {t('tools.shoeRepair.recurringRegularCustomer', 'Recurring/Regular Customer')}
                         </label>
@@ -1366,7 +1366,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     <div className="flex gap-3 mt-6">
                       <button
                         onClick={handleSaveCustomer}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                       >
                         <Save className="w-5 h-5" />
                         {editingCustomer ? t('tools.shoeRepair.update', 'Update') : t('tools.shoeRepair.save', 'Save')}
@@ -1401,7 +1401,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                               {customer.name}
                             </span>
                             {customer.isRecurring && (
-                              <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-[#0D9488]/20 text-[#0D9488]">
+                              <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-[#6096B4]/20 text-[#6096B4]">
                                 {t('tools.shoeRepair.regular', 'Regular')}
                               </span>
                             )}
@@ -1452,7 +1452,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                 </h2>
                 <button
                   onClick={() => setShowInventoryForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.shoeRepair.addItem', 'Add Item')}
@@ -1542,7 +1542,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     <div className="flex gap-3 mt-6">
                       <button
                         onClick={handleSaveInventory}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                       >
                         <Save className="w-5 h-5" />
                         {editingInventory ? t('tools.shoeRepair.update2', 'Update') : t('tools.shoeRepair.save2', 'Save')}
@@ -1654,7 +1654,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                 </h2>
                 <button
                   onClick={() => setShowKeyForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.shoeRepair.newKeyOrder', 'New Key Order')}
@@ -1721,7 +1721,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
 
                       <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                         <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.shoeRepair.total', 'Total')}</div>
-                        <div className="text-xl font-bold text-[#0D9488]">
+                        <div className="text-xl font-bold text-[#6096B4]">
                           ${(keyForm.quantity * keyForm.price).toFixed(2)}
                         </div>
                       </div>
@@ -1730,7 +1730,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     <div className="flex gap-3 mt-6">
                       <button
                         onClick={handleSaveKey}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                       >
                         <Save className="w-5 h-5" />
                         {t('tools.shoeRepair.createOrder', 'Create Order')}
@@ -1812,7 +1812,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                 </h2>
                 <button
                   onClick={() => setShowProductForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.shoeRepair.recordSale', 'Record Sale')}
@@ -1879,7 +1879,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
 
                       <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                         <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.shoeRepair.total2', 'Total')}</div>
-                        <div className="text-xl font-bold text-[#0D9488]">
+                        <div className="text-xl font-bold text-[#6096B4]">
                           ${(productForm.quantity * productForm.unitPrice).toFixed(2)}
                         </div>
                       </div>
@@ -1888,7 +1888,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     <div className="flex gap-3 mt-6">
                       <button
                         onClick={handleSaveProduct}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                       >
                         <Save className="w-5 h-5" />
                         {t('tools.shoeRepair.recordSale2', 'Record Sale')}
@@ -1980,7 +1980,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     <div className={`pt-3 border-t ${theme === 'dark' ? 'border-gray-600' : 'border-gray-300'}`}>
                       <div className="flex justify-between">
                         <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.shoeRepair.totalRevenue2', 'Total Revenue')}</span>
-                        <span className="font-bold text-[#0D9488] text-xl">${stats.totalRevenue.toFixed(2)}</span>
+                        <span className="font-bold text-[#6096B4] text-xl">${stats.totalRevenue.toFixed(2)}</span>
                       </div>
                     </div>
                   </div>
@@ -2050,7 +2050,7 @@ export const ShoeRepairTool: React.FC<ShoeRepairToolProps> = ({
                     </div>
                     <div className="flex justify-between">
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>{t('tools.shoeRepair.recurringCustomers2', 'Recurring Customers')}</span>
-                      <span className="font-medium text-[#0D9488]">{stats.recurringCustomers}</span>
+                      <span className="font-medium text-[#6096B4]">{stats.recurringCustomers}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>{t('tools.shoeRepair.avgOrderValue', 'Avg. Order Value')}</span>

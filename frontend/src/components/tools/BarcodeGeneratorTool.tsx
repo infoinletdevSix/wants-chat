@@ -380,7 +380,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
           <label className={`block text-sm font-medium ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
             Enter Value
             {isPrefilled && (
-              <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#0D9488]">
+              <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#6096B4]">
                 <Sparkles className="w-3 h-3" />
                 {t('tools.barcodeGenerator.prefilledFromAi', 'Prefilled from AI')}
               </span>
@@ -434,7 +434,7 @@ export const BarcodeGeneratorTool: React.FC<BarcodeGeneratorToolProps> = ({ uiCo
             <button
               onClick={handleSave}
               disabled={isSaving}
-              className="flex-1 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSaving ? (
                 <>

@@ -277,16 +277,16 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <BookOpen className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <BookOpen className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.aIBookSummary.aiBookSummaryGenerator', 'AI Book Summary Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.aIBookSummary.createComprehensiveBookSummariesAnd', 'Create comprehensive book summaries and notes')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{t('tools.aIBookSummary.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -306,14 +306,14 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
                 onClick={() => setSummaryStyle(style.value)}
                 className={`p-3 rounded-xl text-left transition-all ${
                   summaryStyle === style.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                 }`}
               >
                 <div className="font-medium text-sm">{style.label}</div>
-                <div className={`text-xs ${summaryStyle === style.value ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{style.desc}</div>
+                <div className={`text-xs ${summaryStyle === style.value ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>{style.desc}</div>
               </button>
             ))}
           </div>
@@ -328,7 +328,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
               value={formData.bookTitle}
               onChange={(e) => setFormData({ ...formData, bookTitle: e.target.value })}
               placeholder={t('tools.aIBookSummary.eGAtomicHabits', 'e.g., Atomic Habits')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
 
@@ -339,7 +339,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
               value={formData.author}
               onChange={(e) => setFormData({ ...formData, author: e.target.value })}
               placeholder={t('tools.aIBookSummary.eGJamesClear', 'e.g., James Clear')}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             />
           </div>
         </div>
@@ -351,7 +351,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
             <select
               value={formData.genre}
               onChange={(e) => setFormData({ ...formData, genre: e.target.value as BookGenre })}
-              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+              className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
             >
               {genres.map((g) => (
                 <option key={g.value} value={g.value}>{g.label}</option>
@@ -368,7 +368,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
                   onClick={() => setFormData({ ...formData, rating: r })}
                   className={`flex-1 py-2 rounded-xl font-medium transition-all ${
                     formData.rating === r
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-700 hover:bg-gray-600 text-gray-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -389,7 +389,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
             value={formData.mainTheme}
             onChange={(e) => setFormData({ ...formData, mainTheme: e.target.value })}
             placeholder={t('tools.aIBookSummary.eGBuildingBetterHabits', 'e.g., Building better habits through small changes')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
         </div>
 
@@ -404,21 +404,21 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
             value={formData.keyTakeaway1}
             onChange={(e) => setFormData({ ...formData, keyTakeaway1: e.target.value })}
             placeholder={t('tools.aIBookSummary.firstKeyLessonOrInsight', 'First key lesson or insight')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
           <input
             type="text"
             value={formData.keyTakeaway2}
             onChange={(e) => setFormData({ ...formData, keyTakeaway2: e.target.value })}
             placeholder={t('tools.aIBookSummary.secondKeyLessonOrInsight', 'Second key lesson or insight')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
           <input
             type="text"
             value={formData.keyTakeaway3}
             onChange={(e) => setFormData({ ...formData, keyTakeaway3: e.target.value })}
             placeholder={t('tools.aIBookSummary.thirdKeyLessonOrInsight', 'Third key lesson or insight')}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none`}
           />
         </div>
 
@@ -433,14 +433,14 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
             onChange={(e) => setFormData({ ...formData, favoriteQuote: e.target.value })}
             placeholder={t('tools.aIBookSummary.aMemorableQuoteFromThe', 'A memorable quote from the book...')}
             rows={2}
-            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none resize-none`}
+            className={`w-full px-4 py-2.5 rounded-xl border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none resize-none`}
           />
         </div>
 
         {/* Generate Button */}
         <button
           onClick={generateSummary}
-          className="w-full py-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-teal-500/20"
+          className="w-full py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-500/20"
         >
           <Sparkles className="w-5 h-5" />
           {t('tools.aIBookSummary.generateSummary', 'Generate Summary')}
@@ -450,7 +450,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
         {generatedSummary.length > 0 && (
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <span className={`text-sm font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+              <span className={`text-sm font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.aIBookSummary.generatedSummary', 'Generated Summary')}
               </span>
               <button
@@ -470,7 +470,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
 
             <div className={`rounded-xl border overflow-hidden ${isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-gray-50 border-gray-200'}`}>
               {/* Book Header */}
-              <div className={`p-4 border-b ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-teal-50 border-gray-200'}`}>
+              <div className={`p-4 border-b ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-primary-50 border-gray-200'}`}>
                 <h4 className={`text-lg font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   "{formData.bookTitle || 'Book Title'}"
                 </h4>
@@ -483,7 +483,7 @@ export const AIBookSummaryTool: React.FC<AIBookSummaryToolProps> = ({ uiConfig }
               <div className="p-4 space-y-6">
                 {generatedSummary.map((section, index) => (
                   <div key={index}>
-                    <h5 className={`font-semibold mb-2 flex items-center gap-2 ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+                    <h5 className={`font-semibold mb-2 flex items-center gap-2 ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
                       <List className="w-4 h-4" />
                       {section.title}
                     </h5>

@@ -111,7 +111,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Travel & Tourism',
       description: 'Explore the world with confidence',
       icon: Plane,
-      color: 'bg-teal-500/20 text-teal-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'business',
@@ -170,7 +170,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Know Some Phrases',
       description: 'I know a few words and phrases',
       details: 'Skip the very basics',
-      color: 'bg-teal-500/20 text-teal-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'intermediate',
@@ -194,7 +194,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
       title: 'Visual',
       description: 'Learn with images and colors',
       icon: Eye,
-      color: 'bg-teal-500/20 text-teal-400'
+      color: 'bg-primary-500/20 text-primary-400'
     },
     {
       id: 'audio',
@@ -229,7 +229,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy': return 'text-emerald-400 bg-emerald-500/20 border-emerald-500/30';
-      case 'Medium': return 'text-teal-400 bg-teal-500/20 border-teal-500/30';
+      case 'Medium': return 'text-primary-400 bg-primary-500/20 border-primary-500/30';
       case 'Hard': return 'text-orange-400 bg-orange-500/20 border-orange-500/30';
       case 'Very Hard': return 'text-red-400 bg-red-500/20 border-red-500/30';
       default: return 'text-white/60 bg-white/10 border-white/20';
@@ -312,7 +312,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center py-8">
-                <Loader2 className="h-8 w-8 animate-spin text-teal-400" />
+                <Loader2 className="h-8 w-8 animate-spin text-primary-400" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -361,14 +361,14 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={language.code}
                     className={`group relative p-5 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${
                       onboardingData.targetLanguage === language.code
-                        ? 'bg-gradient-to-br from-teal-500/30 to-cyan-500/30 border-teal-400 shadow-lg shadow-teal-500/20'
-                        : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-teal-400/50 hover:bg-white/15'
+                        ? 'bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
+                        : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-primary-400/50 hover:bg-white/15'
                     }`}
                     onClick={() => updateData({ targetLanguage: language.code })}
                   >
                     {onboardingData.targetLanguage === language.code && (
                       <div className="absolute top-3 right-3">
-                        <CheckCircle className="h-5 w-5 text-teal-400" />
+                        <CheckCircle className="h-5 w-5 text-primary-400" />
                       </div>
                     )}
                     <div className="flex flex-col items-center text-center space-y-3">
@@ -397,14 +397,14 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={language.code}
                     className={`group relative p-4 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${
                       onboardingData.targetLanguage === language.code
-                        ? 'bg-gradient-to-br from-teal-500/30 to-cyan-500/30 border-teal-400 shadow-lg shadow-teal-500/20'
-                        : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-teal-400/50 hover:bg-white/15'
+                        ? 'bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
+                        : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-primary-400/50 hover:bg-white/15'
                     }`}
                     onClick={() => updateData({ targetLanguage: language.code })}
                   >
                     {onboardingData.targetLanguage === language.code && (
                       <div className="absolute top-3 right-3">
-                        <CheckCircle className="h-5 w-5 text-teal-400" />
+                        <CheckCircle className="h-5 w-5 text-primary-400" />
                       </div>
                     )}
                     <div className="flex flex-col items-center text-center space-y-2">
@@ -438,7 +438,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center py-8">
-                <Loader2 className="h-8 w-8 animate-spin text-teal-400" />
+                <Loader2 className="h-8 w-8 animate-spin text-primary-400" />
               </div>
             </div>
           );
@@ -461,14 +461,14 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={language.code}
                   className={`group relative p-5 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 ${
                     onboardingData.nativeLanguage === language.code
-                      ? 'bg-gradient-to-br from-teal-500/30 to-cyan-500/30 border-teal-400 shadow-lg shadow-teal-500/20'
-                      : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-teal-400/50 hover:bg-white/15'
+                      ? 'bg-gradient-to-br from-primary-500/30 to-cyan-500/30 border-primary-400 shadow-lg shadow-primary-500/20'
+                      : 'bg-white/10 backdrop-blur-xl border-white/20 hover:border-primary-400/50 hover:bg-white/15'
                   }`}
                   onClick={() => updateData({ nativeLanguage: language.code })}
                 >
                   {onboardingData.nativeLanguage === language.code && (
                     <div className="absolute top-3 right-3">
-                      <CheckCircle className="h-5 w-5 text-teal-400" />
+                      <CheckCircle className="h-5 w-5 text-primary-400" />
                     </div>
                   )}
                   <div className="flex flex-col items-center text-center space-y-3">
@@ -501,8 +501,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={purpose.id}
                     className={`h-auto p-6 flex items-center justify-start rounded-xl border transition-all duration-200 ${
                       onboardingData.purpose === purpose.id
-                        ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400 text-white'
-                        : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-teal-400/50 hover:bg-white/15'
+                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-primary-400 text-white'
+                        : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-primary-400/50 hover:bg-white/15'
                     }`}
                     onClick={() => updateData({ purpose: purpose.id })}
                   >
@@ -538,17 +538,17 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={goal.minutes}
                   className={`h-auto p-6 flex items-center justify-start rounded-xl border transition-all duration-200 relative ${
                     onboardingData.dailyGoal === goal.minutes
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400 text-white'
-                      : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-teal-400/50 hover:bg-white/15'
-                  } ${goal.recommended ? 'ring-2 ring-teal-500 ring-opacity-50' : ''}`}
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-primary-400 text-white'
+                      : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-primary-400/50 hover:bg-white/15'
+                  } ${goal.recommended ? 'ring-2 ring-primary-500 ring-opacity-50' : ''}`}
                   onClick={() => updateData({ dailyGoal: goal.minutes })}
                 >
                   {goal.recommended && (
-                    <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-0">
+                    <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0">
                       Recommended
                     </Badge>
                   )}
-                  <div className="w-12 h-12 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary-500/20 text-primary-400 flex items-center justify-center mr-4">
                     <Clock className="h-6 w-6" />
                   </div>
                   <div className="text-left">
@@ -579,8 +579,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={level.id}
                   className={`h-auto p-6 flex items-center justify-start rounded-xl border transition-all duration-200 w-full ${
                     onboardingData.proficiencyLevel === level.id
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400 text-white'
-                      : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-teal-400/50 hover:bg-white/15'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 border-primary-400 text-white'
+                      : 'bg-white/10 backdrop-blur-xl border-white/20 text-white hover:border-primary-400/50 hover:bg-white/15'
                   }`}
                   onClick={() => updateData({ proficiencyLevel: level.id })}
                 >
@@ -601,8 +601,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30 w-fit mx-auto mb-6">
-                <Brain className="h-8 w-8 text-teal-400" />
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30 w-fit mx-auto mb-6">
+                <Brain className="h-8 w-8 text-primary-400" />
               </div>
               <h2 className="text-3xl font-bold text-white mb-3">
                 How do you learn best?
@@ -629,8 +629,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     key={style.id}
                     className={`cursor-pointer transition-all duration-300 hover:-translate-y-1 rounded-2xl border-2 p-6 ${
                       isSelected
-                        ? 'border-teal-500 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 shadow-lg shadow-teal-500/10'
-                        : 'border-white/20 hover:border-teal-500/50 bg-white/5 backdrop-blur-xl'
+                        ? 'border-primary-500 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 shadow-lg shadow-primary-500/10'
+                        : 'border-white/20 hover:border-primary-500/50 bg-white/5 backdrop-blur-xl'
                     }`}
                     onClick={() => toggleLearningStyle(style.id)}
                   >
@@ -648,7 +648,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                       </div>
                       {isSelected && (
                         <div className="pt-2">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center mx-auto">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center mx-auto">
                             <CheckCircle className="h-5 w-5 text-white" />
                           </div>
                         </div>
@@ -681,8 +681,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-2">
-                      <div className="p-2 rounded-xl bg-teal-500/20 border border-teal-500/30">
-                        <Clock className="h-5 w-5 text-teal-400" />
+                      <div className="p-2 rounded-xl bg-primary-500/20 border border-primary-500/30">
+                        <Clock className="h-5 w-5 text-primary-400" />
                       </div>
                       <h3 className="text-xl font-bold text-white">
                         Daily Reminders
@@ -698,8 +698,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
                     onClick={() => updateData({ notifications: !onboardingData.notifications })}
                     className={`ml-6 px-6 transition-all duration-300 ${
                       onboardingData.notifications
-                        ? 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg'
-                        : 'bg-white/10 border-2 border-white/20 hover:border-teal-500 text-white'
+                        ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg'
+                        : 'bg-white/10 border-2 border-white/20 hover:border-primary-500 text-white'
                     }`}
                   >
                     {onboardingData.notifications ? '✓ Enabled' : 'Enable'}
@@ -707,7 +707,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 </div>
 
                 {onboardingData.notifications && (
-                  <div className="mt-8 p-6 bg-teal-500/10 rounded-2xl border border-teal-500/30">
+                  <div className="mt-8 p-6 bg-primary-500/10 rounded-2xl border border-primary-500/30">
                     <div className="flex items-center justify-between">
                       <div>
                         <label className="block text-lg font-semibold text-white mb-2">
@@ -721,7 +721,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                         type="time"
                         value={onboardingData.reminderTime}
                         onChange={(e) => updateData({ reminderTime: e.target.value })}
-                        className="w-40 h-12 px-4 py-3 text-lg font-medium border-2 border-white/20 rounded-xl bg-white/10 text-white focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 transition-all duration-200"
+                        className="w-40 h-12 px-4 py-3 text-lg font-medium border-2 border-white/20 rounded-xl bg-white/10 text-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 transition-all duration-200"
                       />
                     </div>
                   </div>
@@ -741,7 +741,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
 
                   <div className="grid grid-cols-2 gap-4 mt-6 p-4 bg-white/10 rounded-xl">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-teal-400">{onboardingData.dailyGoal}min</div>
+                      <div className="text-2xl font-bold text-primary-400">{onboardingData.dailyGoal}min</div>
                       <div className="text-xs text-white/60">Daily Goal</div>
                     </div>
                     <div className="text-center">
@@ -784,8 +784,8 @@ const LanguageLearnerOnboarding: React.FC = () => {
           <div className="max-w-5xl mx-auto px-6 py-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="p-2 rounded-xl bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30">
-                  <BookOpen className="h-6 w-6 text-teal-400" />
+                <div className="p-2 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+                  <BookOpen className="h-6 w-6 text-primary-400" />
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-white">
@@ -797,7 +797,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold text-teal-400">{Math.round(((currentStep + 1) / totalSteps) * 100)}%</div>
+                <div className="text-2xl font-bold text-primary-400">{Math.round(((currentStep + 1) / totalSteps) * 100)}%</div>
                 <div className="text-xs text-white/60 font-medium">Complete</div>
               </div>
             </div>
@@ -809,11 +809,11 @@ const LanguageLearnerOnboarding: React.FC = () => {
           <div className="mb-8">
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-medium text-white/60">Progress</span>
-              <span className="text-sm font-medium text-teal-400">{currentStep + 1} / {totalSteps}</span>
+              <span className="text-sm font-medium text-primary-400">{currentStep + 1} / {totalSteps}</span>
             </div>
             <div className="h-3 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-500"
+                className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
                 style={{ width: `${((currentStep + 1) / totalSteps) * 100}%` }}
               />
             </div>
@@ -845,7 +845,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                   key={index}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentStep
-                      ? 'bg-teal-400 w-8'
+                      ? 'bg-primary-400 w-8'
                       : index < currentStep
                       ? 'bg-emerald-400'
                       : 'bg-white/30'
@@ -859,7 +859,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 onClick={handleComplete}
                 disabled={!canProceed() || createLessonMutation.loading}
                 size="lg"
-                className="h-12 px-8 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-70 disabled:transform-none"
+                className="h-12 px-8 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-70 disabled:transform-none"
               >
                 {createLessonMutation.loading ? (
                   <>
@@ -880,7 +880,7 @@ const LanguageLearnerOnboarding: React.FC = () => {
                 size="lg"
                 className={`h-12 px-8 font-semibold transition-all duration-300 ${
                   canProceed()
-                    ? 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105'
                     : 'bg-white/10 text-white/40 cursor-not-allowed'
                 }`}
               >

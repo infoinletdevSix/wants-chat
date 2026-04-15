@@ -145,9 +145,9 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><Droplets className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><Droplets className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.oilChange.oilChangeCalculator', 'Oil Change Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.oilChange.trackAndPlanYourOil', 'Track and plan your oil changes')}</p>
@@ -157,9 +157,9 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.oilChange.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.oilChange.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -169,7 +169,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
             ? isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200'
             : calculations.status === 'due-soon'
             ? isDark ? 'bg-yellow-900/20 border-yellow-800' : 'bg-yellow-50 border-yellow-200'
-            : isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'
+            : isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'
         }`}>
           <div className="flex items-center gap-3">
             {calculations.status === 'overdue' ? (
@@ -177,13 +177,13 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
             ) : calculations.status === 'due-soon' ? (
               <Bell className="w-6 h-6 text-yellow-500" />
             ) : (
-              <Clock className="w-6 h-6 text-teal-500" />
+              <Clock className="w-6 h-6 text-primary-500" />
             )}
             <div>
               <div className={`font-semibold ${
                 calculations.status === 'overdue' ? 'text-red-500'
                 : calculations.status === 'due-soon' ? 'text-yellow-500'
-                : 'text-teal-500'
+                : 'text-primary-500'
               }`}>
                 {calculations.status === 'overdue' ? 'Oil Change Overdue!'
                 : calculations.status === 'due-soon' ? t('tools.oilChange.oilChangeDueSoon', 'Oil Change Due Soon') : t('tools.oilChange.oilChangeStatusGood', 'Oil Change Status: Good')}
@@ -264,14 +264,14 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
                 onClick={() => setOilType(type.value as typeof oilType)}
                 className={`p-3 rounded-lg text-left transition-all ${
                   oilType === type.value
-                    ? 'bg-teal-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 <div className="font-medium text-sm">{type.label}</div>
-                <div className={`text-xs ${oilType === type.value ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                <div className={`text-xs ${oilType === type.value ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                   {type.description}
                 </div>
               </button>
@@ -289,7 +289,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
               onClick={() => setDrivingCondition('normal')}
               className={`flex-1 py-2 rounded-lg font-medium ${
                 drivingCondition === 'normal'
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
               }`}
             >
@@ -299,7 +299,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
               onClick={() => setDrivingCondition('severe')}
               className={`flex-1 py-2 rounded-lg font-medium ${
                 drivingCondition === 'severe'
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
               }`}
             >
@@ -328,7 +328,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
                 className={`h-full rounded-full transition-all ${
                   calculations.milePercentUsed > 100 ? 'bg-red-500'
                   : calculations.milePercentUsed > 80 ? 'bg-yellow-500'
-                  : 'bg-teal-500'
+                  : 'bg-primary-500'
                 }`}
                 style={{ width: `${Math.min(100, calculations.milePercentUsed)}%` }}
               />
@@ -348,7 +348,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
                 className={`h-full rounded-full transition-all ${
                   calculations.timePercentUsed > 100 ? 'bg-red-500'
                   : calculations.timePercentUsed > 80 ? 'bg-yellow-500'
-                  : 'bg-teal-500'
+                  : 'bg-primary-500'
                 }`}
                 style={{ width: `${Math.min(100, calculations.timePercentUsed)}%` }}
               />
@@ -360,7 +360,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.oilChange.nextChangeAt', 'Next Change At')}</div>
-            <div className="text-2xl font-bold text-teal-500">
+            <div className="text-2xl font-bold text-primary-500">
               {Math.round(calculations.nextChangeMileage).toLocaleString()}
             </div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>miles</div>
@@ -418,7 +418,7 @@ export const OilChangeTool: React.FC<OilChangeToolProps> = ({ uiConfig }) => {
           </div>
           <div className={`mt-3 pt-3 border-t ${isDark ? 'border-gray-700' : 'border-gray-200'} flex justify-between items-center`}>
             <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.oilChange.perOilChange', 'Per Oil Change')}</span>
-            <span className="text-xl font-bold text-teal-500">${calculations.oilChangeCost.toFixed(2)}</span>
+            <span className="text-xl font-bold text-primary-500">${calculations.oilChangeCost.toFixed(2)}</span>
           </div>
           <div className="flex justify-between items-center mt-1">
             <span className={isDark ? 'text-gray-500' : 'text-gray-400'}>{t('tools.oilChange.estimatedAnnualCost', 'Estimated Annual Cost')}</span>

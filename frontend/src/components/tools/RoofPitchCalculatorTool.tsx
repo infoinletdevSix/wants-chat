@@ -126,10 +126,10 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Home className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Home className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.roofPitchCalculator.roofPitchCalculator', 'Roof Pitch Calculator')}</h3>
@@ -151,7 +151,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
                 onClick={() => setMode(m)}
                 className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                   mode === m
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -177,7 +177,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
                 onChange={(e) => setRise(e.target.value)}
                 min="0"
                 step="0.5"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                 {t('tools.roofPitchCalculator.verticalHeightPer12Of', 'Vertical height per 12" of run')}
@@ -194,7 +194,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
                 onChange={(e) => setRun(e.target.value)}
                 min="1"
                 step="1"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
               <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                 {t('tools.roofPitchCalculator.horizontalDistanceUsually12', 'Horizontal distance (usually 12)')}
@@ -216,7 +216,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
               min="0"
               max="89"
               step="0.1"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
               {t('tools.roofPitchCalculator.angleFromHorizontal089', 'Angle from horizontal (0-89 degrees)')}
@@ -235,7 +235,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
               onChange={(e) => setPercentage(e.target.value)}
               min="0"
               step="1"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
               {t('tools.roofPitchCalculator.riseAsAPercentageOf', 'Rise as a percentage of run')}
@@ -247,7 +247,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roofPitchCalculator.pitch', 'Pitch')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{calculations.pitch}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{calculations.pitch}</div>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roofPitchCalculator.angle', 'Angle')}</div>
@@ -264,7 +264,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
         </div>
 
         {/* Roof Type Description */}
-        <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-800' : t('tools.roofPitchCalculator.bg0d948810', 'bg-[#0D9488]/10')}`}>
+        <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-800' : t('tools.roofPitchCalculator.bg0d948810', 'bg-[#6096B4]/10')}`}>
           <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{calculations.roofType}</div>
           <p className={`text-sm mt-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{calculations.description}</p>
         </div>
@@ -300,7 +300,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
                 }}
                 className={`p-2 rounded-lg text-left text-sm transition-colors ${
                   calculations.pitch === `${parseFloat(p.pitch.split(':')[0]).toFixed(2)}:12`
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -316,7 +316,7 @@ export const RoofPitchCalculatorTool: React.FC<RoofPitchCalculatorToolProps> = (
         </div>
 
         {/* Roofing Material Guide */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.roofPitchCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.roofPitchCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.roofPitchCalculator.roofingMaterialByPitch', 'Roofing Material by Pitch')}</h4>
           <div className={`text-sm space-y-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             <div><strong>0:12 to 2:12:</strong> {t('tools.roofPitchCalculator.builtUpRubberMembraneMetal', 'Built-up, rubber membrane, metal')}</div>

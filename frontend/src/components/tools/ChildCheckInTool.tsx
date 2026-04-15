@@ -876,7 +876,7 @@ export const ChildCheckInTool: React.FC<ChildCheckInToolProps> = ({ uiConfig }) 
   const textClass = isDark ? 'text-white' : 'text-gray-900';
   const mutedTextClass = isDark ? 'text-gray-400' : 'text-gray-500';
   const inputClass = `w-full px-3 py-2 border rounded-lg ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-200 text-gray-900'}`;
-  const buttonPrimary = 'flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors';
+  const buttonPrimary = 'flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors';
   const buttonSecondary = `flex items-center gap-2 px-4 py-2 border rounded-lg ${isDark ? 'border-gray-600 text-gray-300 hover:bg-gray-700' : 'border-gray-200 text-gray-700 hover:bg-gray-50'}`;
 
   // Tab Button component
@@ -885,7 +885,7 @@ export const ChildCheckInTool: React.FC<ChildCheckInToolProps> = ({ uiConfig }) 
       onClick={() => setActiveTab(tab)}
       className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
         activeTab === tab
-          ? 'bg-[#0D9488] text-white'
+          ? 'bg-[#6096B4] text-white'
           : isDark
           ? 'text-gray-400 hover:text-white hover:bg-gray-700'
           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -946,7 +946,7 @@ export const ChildCheckInTool: React.FC<ChildCheckInToolProps> = ({ uiConfig }) 
           <div className={`col-span-full ${cardClass} border rounded-xl p-8 text-center`}>
             <Baby className={`w-12 h-12 mx-auto mb-3 ${mutedTextClass} opacity-50`} />
             <p className={mutedTextClass}>No children found</p>
-            <button onClick={() => setShowChildForm(true)} className="mt-3 text-[#0D9488] hover:underline">
+            <button onClick={() => setShowChildForm(true)} className="mt-3 text-[#6096B4] hover:underline">
               Add your first child
             </button>
           </div>
@@ -954,11 +954,11 @@ export const ChildCheckInTool: React.FC<ChildCheckInToolProps> = ({ uiConfig }) 
           filteredChildren.map(child => (
             <div key={child.id} className={`${cardClass} border rounded-xl p-4 transition-shadow hover:shadow-lg`}>
               <div className="flex items-start gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#0D9488]/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#6096B4]/10 flex items-center justify-center flex-shrink-0">
                   {child.photoUrl ? (
                     <img src={child.photoUrl} alt="" className="w-12 h-12 rounded-full object-cover" />
                   ) : (
-                    <Baby className="w-6 h-6 text-[#0D9488]" />
+                    <Baby className="w-6 h-6 text-[#6096B4]" />
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -1188,8 +1188,8 @@ export const ChildCheckInTool: React.FC<ChildCheckInToolProps> = ({ uiConfig }) 
               .map((guardian, idx) => (
                 <div key={`${guardian.childId}-${guardian.id}`} className={`${cardClass} border rounded-xl p-4`}>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#0D9488]/10 flex items-center justify-center flex-shrink-0">
-                      <User className="w-5 h-5 text-[#0D9488]" />
+                    <div className="w-10 h-10 rounded-full bg-[#6096B4]/10 flex items-center justify-center flex-shrink-0">
+                      <User className="w-5 h-5 text-[#6096B4]" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
@@ -1681,8 +1681,8 @@ export const ChildCheckInTool: React.FC<ChildCheckInToolProps> = ({ uiConfig }) 
         <div className={`${cardClass} border rounded-xl p-4 mb-6`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-lg">
-                <Baby className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-3 bg-[#6096B4]/10 rounded-lg">
+                <Baby className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h1 className={`text-2xl font-bold ${textClass}`}>{t('tools.childCheckIn.childCheckIn', 'Child Check-In')}</h1>

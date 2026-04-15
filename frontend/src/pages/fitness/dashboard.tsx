@@ -187,7 +187,7 @@ const FitnessDashboard: React.FC = () => {
           </div>
           <div className="flex gap-4">
             <div className="text-center">
-              <div className="text-2xl font-bold text-teal-400">{workoutStats?.currentStreak || 0}</div>
+              <div className="text-2xl font-bold text-primary-400">{workoutStats?.currentStreak || 0}</div>
               <div className="text-xs text-white/60">Day Streak</div>
             </div>
             <div className="text-center">
@@ -203,12 +203,12 @@ const FitnessDashboard: React.FC = () => {
         {/* Today's Workout - Most Important */}
         <Card className="p-5 bg-white/10 backdrop-blur-xl border border-white/20 lg:col-span-1">
           <h3 className="text-lg font-semibold mb-4 text-white flex items-center gap-2">
-            <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
             Today's Focus
           </h3>
 {todayWorkoutsLoading ? (
             <div className="flex items-center justify-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-400"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400"></div>
               <span className="ml-3 text-sm text-white/60">Loading workouts...</span>
             </div>
           ) : todayWorkoutsError ? (
@@ -222,7 +222,7 @@ const FitnessDashboard: React.FC = () => {
           ) : todayWorkouts && todayWorkouts.workouts.length > 0 ? (
             <div className="space-y-4">
               {/* Overall Stats */}
-              <div className="grid grid-cols-3 gap-2 p-3 bg-teal-500/10 rounded-lg mb-4">
+              <div className="grid grid-cols-3 gap-2 p-3 bg-primary-500/10 rounded-lg mb-4">
                 <div className="text-center">
                   <p className="text-lg font-bold text-white">{todayWorkouts.total_plans}</p>
                   <p className="text-xs text-white/60">Workout Plans</p>
@@ -253,11 +253,11 @@ const FitnessDashboard: React.FC = () => {
                       <p className="text-sm text-white/60 mb-2">{workout.workout_description}</p>
                       <div className="flex items-center gap-4 text-sm">
                         <div className="flex items-center gap-1">
-                          <Clock className="h-3 w-3 text-teal-400" />
+                          <Clock className="h-3 w-3 text-primary-400" />
                           <span className="text-white/60">{workout.estimated_duration} min</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Target className="h-3 w-3 text-teal-400" />
+                          <Target className="h-3 w-3 text-primary-400" />
                           <span className="text-white/60">{workout.exercises.length} exercises</span>
                         </div>
                       </div>
@@ -270,11 +270,11 @@ const FitnessDashboard: React.FC = () => {
                         {workout.exercises.slice(0, 5).map((exercise, index) => (
                           <div key={exercise.exercise_id} className="flex items-center justify-between p-2 bg-white/5 rounded border border-white/10">
                             <div className="flex items-center gap-2 flex-1">
-                              <span className="text-xs font-medium text-teal-400 w-4 flex-shrink-0">{index + 1}.</span>
+                              <span className="text-xs font-medium text-primary-400 w-4 flex-shrink-0">{index + 1}.</span>
                               <span className="text-sm font-medium text-white">{exercise.name}</span>
                             </div>
                             <div className="flex items-center gap-2 flex-shrink-0">
-                              <Badge className="text-xs bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                              <Badge className="text-xs bg-primary-500/20 text-primary-400 border border-primary-500/30">
                                 {exercise.sets}×{exercise.reps}
                               </Badge>
                               {exercise.weight > 0 && (
@@ -296,7 +296,7 @@ const FitnessDashboard: React.FC = () => {
 
               {/* Action Button */}
               <Button
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-10"
+                className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-10"
                 onClick={() => navigate('/fitness/workout-session')}
               >
                 <Dumbbell className="h-4 w-4 mr-2" />
@@ -357,15 +357,15 @@ const FitnessDashboard: React.FC = () => {
       <Card className="p-4 bg-white/10 backdrop-blur-xl border border-white/20">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/20 rounded-lg">
-              <Target className="h-5 w-5 text-teal-400" />
+            <div className="p-2 bg-primary-500/20 rounded-lg">
+              <Target className="h-5 w-5 text-primary-400" />
             </div>
             <div>
               <h3 className="font-medium text-white">Keep Going!</h3>
             </div>
           </div>
           <div className="flex gap-2">
-            <Button size="sm" className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-8 text-xs" onClick={() => navigate('/fitness/progress')}>
+            <Button size="sm" className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-8 text-xs" onClick={() => navigate('/fitness/progress')}>
               View Progress
             </Button>
           </div>

@@ -68,8 +68,8 @@ type TimesheetView = 'daily' | 'weekly' | 'monthly';
 type RoundingOption = 'none' | '6min' | '15min';
 
 const PROJECT_COLORS = [
-  '#0D9488', '#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b',
-  '#10b981', '#ef4444', '#6366f1', '#14b8a6', '#f97316',
+  '#6096B4', '#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b',
+  '#10b981', '#ef4444', '#6366f1', '#75AAC1', '#f97316',
 ];
 
 // Column configurations for export
@@ -603,7 +603,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 rounded-lg bg-[#0D9488]">
+          <div className="p-3 rounded-lg bg-[#6096B4]">
             <Timer className="w-6 h-6 text-white" />
           </div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -644,9 +644,9 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.freelanceTimer.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.freelanceTimer.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
@@ -735,7 +735,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                 onClick={() => setIsBillable(!isBillable)}
                 disabled={!!activeEntryId}
                 className={`relative w-12 h-6 rounded-full transition-colors ${
-                  isBillable ? 'bg-[#0D9488]' : theme === 'dark' ? 'bg-gray-500' : 'bg-gray-300'
+                  isBillable ? 'bg-[#6096B4]' : theme === 'dark' ? 'bg-gray-500' : 'bg-gray-300'
                 }`}
               >
                 <span
@@ -772,7 +772,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                   disabled={!selectedProjectId}
                   className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-colors ${
                     selectedProjectId
-                      ? t('tools.freelanceTimer.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white') : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      ? t('tools.freelanceTimer.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white') : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }`}
                 >
                   <Play className="w-5 h-5" />
@@ -784,7 +784,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                     onClick={handlePauseTimer}
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-colors ${
                       isPaused
-                        ? t('tools.freelanceTimer.bg0d9488HoverBg0f766e2', 'bg-[#0D9488] hover:bg-[#0F766E] text-white') : 'bg-amber-500 hover:bg-amber-600 text-white'
+                        ? t('tools.freelanceTimer.bg0d9488HoverBg0f766e2', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white') : 'bg-amber-500 hover:bg-amber-600 text-white'
                     }`}
                   >
                     {isPaused ? (
@@ -903,7 +903,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                   <button
                     onClick={() => setManualBillable(!manualBillable)}
                     className={`relative w-12 h-6 rounded-full transition-colors ${
-                      manualBillable ? 'bg-[#0D9488]' : theme === 'dark' ? 'bg-gray-500' : 'bg-gray-300'
+                      manualBillable ? 'bg-[#6096B4]' : theme === 'dark' ? 'bg-gray-500' : 'bg-gray-300'
                     }`}
                   >
                     <span
@@ -933,7 +933,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                   disabled={!manualProjectId}
                   className={`w-full px-4 py-2 rounded-lg font-medium transition-colors ${
                     manualProjectId
-                      ? t('tools.freelanceTimer.bg0d9488HoverBg0f766e3', 'bg-[#0D9488] hover:bg-[#0F766E] text-white') : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      ? t('tools.freelanceTimer.bg0d9488HoverBg0f766e3', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white') : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }`}
                 >
                   {t('tools.freelanceTimer.addEntry', 'Add Entry')}
@@ -955,7 +955,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                   setEditingProject(null);
                   setShowProjectForm(!showProjectForm);
                 }}
-                className="p-2 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                className="p-2 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
               >
                 <Plus className="w-4 h-4" />
               </button>
@@ -1044,7 +1044,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                   <div className="flex gap-2">
                     <button
                       onClick={editingProject ? handleUpdateProject : handleAddProject}
-                      className="flex-1 px-4 py-2 rounded-lg font-medium bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+                      className="flex-1 px-4 py-2 rounded-lg font-medium bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
                     >
                       {editingProject ? t('tools.freelanceTimer.update', 'Update') : t('tools.freelanceTimer.add', 'Add')}
                     </button>
@@ -1160,7 +1160,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                 <Target className={`w-4 h-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
                 <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.freelanceTimer.billable3', 'Billable')}</span>
               </div>
-              <div className="text-2xl font-bold text-[#0D9488]">{totalStats.billableHours.toFixed(1)}</div>
+              <div className="text-2xl font-bold text-[#6096B4]">{totalStats.billableHours.toFixed(1)}</div>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-2 mb-2">
@@ -1199,7 +1199,7 @@ export const FreelanceTimerTool = ({ uiConfig }: FreelanceTimerToolProps) => {
                       onClick={() => setTimesheetView(view)}
                       className={`px-3 py-1 text-sm font-medium rounded-lg transition-colors ${
                         timesheetView === view
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'text-gray-300 hover:bg-gray-500'
                           : 'text-gray-600 hover:bg-gray-300'

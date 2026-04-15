@@ -47,7 +47,7 @@ const styleOptions = [
 ];
 
 const colorSchemes = [
-  { label: 'Teal & White', value: 'teal and white color scheme, #0D9488' },
+  { label: 'Teal & White', value: 'teal and white color scheme, #6096B4' },
   { label: 'Blue & Gold', value: 'blue and gold color scheme, elegant' },
   { label: 'Purple & Pink', value: 'purple and pink gradient, modern' },
   { label: 'Black & White', value: 'black and white, monochrome, sophisticated' },
@@ -308,11 +308,11 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.bannerGenerator.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.bannerGenerator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.bannerGenerator.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.bannerGenerator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <LayoutTemplate className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <LayoutTemplate className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.bannerGenerator.bannerGenerator', 'Banner Generator')}</h3>
@@ -338,8 +338,8 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
       <div className="p-6 space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="p-3 bg-[#0D9488]/10 border border-[#0D9488]/20 rounded-lg flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
+          <div className="p-3 bg-[#6096B4]/10 border border-[#6096B4]/20 rounded-lg flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {isEditFromGallery
                 ? t('tools.bannerGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.bannerGenerator.fieldsHaveBeenPrefilledFrom', 'Fields have been prefilled from AI suggestions')}
@@ -358,7 +358,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
               const type = bannerTypes.find((t) => t.label === e.target.value);
               if (type) setSelectedBannerType(type);
             }}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {bannerTypes.map((type) => (
               <option key={type.label} value={type.label}>
@@ -378,7 +378,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
             value={mainText}
             onChange={(e) => setMainText(e.target.value)}
             placeholder={t('tools.bannerGenerator.enterMainHeadlineEG', 'Enter main headline (e.g., Welcome to Our Platform)')}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -392,7 +392,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
             value={subtext}
             onChange={(e) => setSubtext(e.target.value)}
             placeholder={t('tools.bannerGenerator.enterSubtextEGYour', 'Enter subtext (e.g., Your success is our mission)')}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -407,7 +407,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
                 const style = styleOptions.find((s) => s.label === e.target.value);
                 if (style) setSelectedStyle(style);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {styleOptions.map((style) => (
                 <option key={style.label} value={style.label}>
@@ -426,7 +426,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
                 const scheme = colorSchemes.find((c) => c.label === e.target.value);
                 if (scheme) setColorScheme(scheme);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {colorSchemes.map((scheme) => (
                 <option key={scheme.label} value={scheme.label}>
@@ -448,7 +448,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
               value={customColors}
               onChange={(e) => setCustomColors(e.target.value)}
               placeholder={t('tools.bannerGenerator.eGNavyBlueAnd', 'e.g., navy blue and gold, #1E40AF, emerald green')}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
         )}
@@ -464,7 +464,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !mainText.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -524,7 +524,7 @@ const BannerGeneratorTool: React.FC<BannerGeneratorToolProps> = ({ uiConfig }) =
                     <button
                       onClick={() => handleSave(img.url, img.prompt, img.bannerType)}
                       disabled={isSaving}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                       title={t('tools.bannerGenerator.saveToGallery', 'Save to Gallery')}
                     >
                       <Save className="w-5 h-5" />

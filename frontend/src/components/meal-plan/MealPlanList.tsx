@@ -144,7 +144,7 @@ export const MealPlanList: React.FC<MealPlanListProps> = ({
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Button onClick={() => navigate('/meal-planner/create')} className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+          <Button onClick={() => navigate('/meal-planner/create')} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
             <Plus className="h-4 w-4 mr-2" />
             Create Meal Plan
           </Button>
@@ -159,7 +159,7 @@ export const MealPlanList: React.FC<MealPlanListProps> = ({
           placeholder="Search meal plans..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-teal-400/50"
+          className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-primary-400/50"
         />
       </div>
 
@@ -167,8 +167,8 @@ export const MealPlanList: React.FC<MealPlanListProps> = ({
       {loading ? (
         <div className="flex items-center justify-center py-12">
           <div className="text-center">
-            <div className="p-4 bg-teal-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-400"></div>
+            <div className="p-4 bg-primary-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-400"></div>
             </div>
             <p className="text-white/60">Loading meal plans...</p>
           </div>
@@ -194,7 +194,7 @@ export const MealPlanList: React.FC<MealPlanListProps> = ({
               }
             </p>
             {!searchTerm && (
-              <Button onClick={() => navigate('/meal-planner/create')} className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+              <Button onClick={() => navigate('/meal-planner/create')} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
                 <Plus className="h-4 w-4 mr-2" />
                 Create Your First Meal Plan
               </Button>
@@ -249,7 +249,7 @@ export const MealPlanList: React.FC<MealPlanListProps> = ({
                 <div className="flex gap-2 pt-2 border-t border-white/10">
                   <Button
                     size="sm"
-                    className="flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                     onClick={() => handleViewDetails(mealPlan)}
                   >
                     <Eye className="h-4 w-4 mr-1" />

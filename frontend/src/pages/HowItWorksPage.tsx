@@ -35,7 +35,7 @@ const HowItWorksPage: React.FC = () => {
       title: t('howItWorks.steps.step2.title'),
       description: t('howItWorks.steps.step2.description'),
       icon: SettingsIcon,
-      color: "from-teal-500 to-pink-500",
+      color: "from-primary-500 to-pink-500",
       features: [
         t('howItWorks.steps.step2.features.focusAreas'),
         t('howItWorks.steps.step2.features.personalGoals'),

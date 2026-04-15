@@ -104,7 +104,7 @@ const QuickActions: React.FC<QuickActionsProps> = ({
         {/* Quick Add Section */}
         <div className="space-y-3 pt-4 border-t border-white/10">
           <h4 className="font-medium text-white flex items-center gap-2">
-            <Target className="h-4 w-4 text-teal-400" />
+            <Target className="h-4 w-4 text-primary-400" />
             Quick Add
           </h4>
 
@@ -134,15 +134,15 @@ const QuickActions: React.FC<QuickActionsProps> = ({
           <h4 className="font-medium text-white text-sm">Pro Tips</h4>
           <div className="text-xs text-white/60 space-y-1">
             <div className="flex items-start gap-2">
-              <div className="w-1 h-1 bg-teal-400 rounded-full mt-1.5 flex-shrink-0" />
+              <div className="w-1 h-1 bg-primary-400 rounded-full mt-1.5 flex-shrink-0" />
               <p>Log meals right after eating for better accuracy</p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="w-1 h-1 bg-teal-400 rounded-full mt-1.5 flex-shrink-0" />
+              <div className="w-1 h-1 bg-primary-400 rounded-full mt-1.5 flex-shrink-0" />
               <p>Use the barcode scanner for packaged foods</p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="w-1 h-1 bg-teal-400 rounded-full mt-1.5 flex-shrink-0" />
+              <div className="w-1 h-1 bg-primary-400 rounded-full mt-1.5 flex-shrink-0" />
               <p>Weigh yourself at the same time daily</p>
             </div>
           </div>

@@ -42,7 +42,7 @@ const defaultEvents: TimelineEvent[] = [
 const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
   preparation: { bg: 'bg-purple-500/10', text: 'text-purple-500', border: 'border-purple-500' },
   ceremony: { bg: 'bg-pink-500/10', text: 'text-pink-500', border: 'border-pink-500' },
-  reception: { bg: 'bg-teal-500/10', text: 'text-teal-500', border: 'border-teal-500' },
+  reception: { bg: 'bg-primary-500/10', text: 'text-primary-500', border: 'border-primary-500' },
   photos: { bg: 'bg-blue-500/10', text: 'text-blue-500', border: 'border-blue-500' },
   other: { bg: 'bg-gray-500/10', text: 'text-gray-500', border: 'border-gray-500' },
 };
@@ -193,11 +193,11 @@ export const WeddingTimelineTool: React.FC<WeddingTimelineToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Clock className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Clock className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.weddingTimeline.weddingDayTimeline', 'Wedding Day Timeline')}</h3>
@@ -206,7 +206,7 @@ export const WeddingTimelineTool: React.FC<WeddingTimelineToolProps> = ({ uiConf
           </div>
           <button
             onClick={() => setShowAddForm(true)}
-            className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-teal-500 hover:bg-teal-600 text-white"
+            className="px-3 py-1.5 text-sm rounded-lg flex items-center gap-1 bg-primary-500 hover:bg-primary-600 text-white"
           >
             <Plus className="w-4 h-4" /> Add Event
           </button>
@@ -214,9 +214,9 @@ export const WeddingTimelineTool: React.FC<WeddingTimelineToolProps> = ({ uiConf
       </div>
 
       {isPrefilled && (
-        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
-          <Sparkles className="w-4 h-4 text-teal-500" />
-          <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-700'}`}>
+        <div className={`mx-6 mt-4 p-3 rounded-lg flex items-center gap-2 ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
+          <Sparkles className="w-4 h-4 text-primary-500" />
+          <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-700'}`}>
             {t('tools.weddingTimeline.preFilledBasedOnYour', 'Pre-filled based on your request')}
           </span>
         </div>
@@ -243,8 +243,8 @@ export const WeddingTimelineTool: React.FC<WeddingTimelineToolProps> = ({ uiConf
             <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stats.totalEvents}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingTimeline.totalEvents', 'Total Events')}</div>
           </div>
-          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-teal-900/20' : 'bg-teal-50'}`}>
-            <div className="text-xl font-bold text-teal-500">{formatTime(stats.startTime)}</div>
+          <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-primary-900/20' : 'bg-primary-50'}`}>
+            <div className="text-xl font-bold text-primary-500">{formatTime(stats.startTime)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.weddingTimeline.dayStarts', 'Day Starts')}</div>
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-pink-900/20' : 'bg-pink-50'}`}>
@@ -327,7 +327,7 @@ export const WeddingTimelineTool: React.FC<WeddingTimelineToolProps> = ({ uiConf
               className={`mt-4 w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'}`}
             />
             <div className="flex gap-2 mt-4">
-              <button onClick={handleAddEvent} className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium">
+              <button onClick={handleAddEvent} className="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium">
                 {t('tools.weddingTimeline.addEvent', 'Add Event')}
               </button>
               <button

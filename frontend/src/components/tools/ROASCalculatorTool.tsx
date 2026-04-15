@@ -95,7 +95,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
       ratingColor = 'text-green-500';
     } else if (effectiveROAS >= 4) {
       rating = 'Very Good';
-      ratingColor = 'text-teal-500';
+      ratingColor = 'text-primary-500';
     } else if (effectiveROAS >= 3) {
       rating = 'Good';
       ratingColor = 'text-blue-500';
@@ -160,8 +160,8 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-green-900/20' : 'bg-gradient-to-r from-white to-green-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <TrendingUp className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <TrendingUp className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.rOASCalculator.roasCalculator', 'ROAS Calculator')}</h3>
@@ -172,9 +172,9 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.rOASCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.rOASCalculator.valuesLoadedFromYourConversation', 'Values loaded from your conversation')}</span>
           </div>
         )}
 
@@ -186,21 +186,21 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => setCalculationMode('roas')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'roas' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'roas' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.rOASCalculator.roas', 'ROAS')}</div>
               <div className="text-xs opacity-75">{t('tools.rOASCalculator.fromRevenueSpend', 'From revenue & spend')}</div>
             </button>
             <button
               onClick={() => setCalculationMode('revenue')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'revenue' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'revenue' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.rOASCalculator.revenue', 'Revenue')}</div>
               <div className="text-xs opacity-75">{t('tools.rOASCalculator.fromSpendTargetRoas', 'From spend & target ROAS')}</div>
             </button>
             <button
               onClick={() => setCalculationMode('adspend')}
-              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'adspend' ? 'bg-[#0D9488] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+              className={`p-3 rounded-lg text-center transition-colors ${calculationMode === 'adspend' ? 'bg-[#6096B4] text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
             >
               <div className="font-medium">{t('tools.rOASCalculator.adSpend', 'Ad Spend')}</div>
               <div className="text-xs opacity-75">{t('tools.rOASCalculator.forRevenueGoal', 'For revenue goal')}</div>
@@ -222,7 +222,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
                   value={revenue}
                   onChange={(e) => setRevenue(e.target.value)}
                   placeholder="4000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -235,7 +235,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
                   value={adSpend}
                   onChange={(e) => setAdSpend(e.target.value)}
                   placeholder="1000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -253,7 +253,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
                   value={adSpend}
                   onChange={(e) => setAdSpend(e.target.value)}
                   placeholder="1000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -267,7 +267,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
                   value={targetROAS}
                   onChange={(e) => setTargetROAS(e.target.value)}
                   placeholder="4"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -285,7 +285,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
                   value={targetRevenue}
                   onChange={(e) => setTargetRevenue(e.target.value)}
                   placeholder="10000"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -299,7 +299,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
                   value={targetROAS}
                   onChange={(e) => setTargetROAS(e.target.value)}
                   placeholder="4"
-                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </>
@@ -318,7 +318,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
             value={profitMargin}
             onChange={(e) => setProfitMargin(e.target.value)}
             placeholder="40"
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#0D9488]`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:ring-2 focus:ring-[#6096B4]`}
           />
           <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
             Your break-even ROAS is {calculations.breakEvenROAS.toFixed(2)}x at this margin
@@ -326,11 +326,11 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${calculations.isProfitable ? (isDark ? t('tools.rOASCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
+        <div className={`p-6 rounded-xl text-center ${calculations.isProfitable ? (isDark ? t('tools.rOASCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             {calculationMode === 'roas' ? 'Your ROAS' : calculationMode === 'revenue' ? t('tools.rOASCalculator.expectedRevenue', 'Expected Revenue') : t('tools.rOASCalculator.requiredAdSpend', 'Required Ad Spend')}
           </div>
-          <div className={`text-5xl font-bold my-2 ${calculations.isProfitable ? t('tools.rOASCalculator.text0d9488', 'text-[#0D9488]') : 'text-red-500'}`}>
+          <div className={`text-5xl font-bold my-2 ${calculations.isProfitable ? t('tools.rOASCalculator.text0d9488', 'text-[#6096B4]') : 'text-red-500'}`}>
             {calculationMode === 'roas'
               ? calculations.calculatedROAS.toFixed(2) + 'x'
               : calculationMode === 'revenue'
@@ -369,7 +369,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.rOASCalculator.netProfit', 'Net Profit')}</div>
-            <div className={`text-xl font-bold ${calculations.netProfit >= 0 ? t('tools.rOASCalculator.text0d94882', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-xl font-bold ${calculations.netProfit >= 0 ? t('tools.rOASCalculator.text0d94882', 'text-[#6096B4]') : 'text-red-500'}`}>
               {formatCurrency(calculations.netProfit)}
             </div>
           </div>
@@ -385,7 +385,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
           </div>
           <div className={`p-4 rounded-lg text-center ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.rOASCalculator.netMargin', 'Net Margin')}</div>
-            <div className={`text-xl font-bold ${calculations.netProfitMargin >= 0 ? t('tools.rOASCalculator.text0d94883', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-xl font-bold ${calculations.netProfitMargin >= 0 ? t('tools.rOASCalculator.text0d94883', 'text-[#6096B4]') : 'text-red-500'}`}>
               {calculations.netProfitMargin.toFixed(1)}%
             </div>
           </div>
@@ -415,7 +415,7 @@ export const ROASCalculatorTool: React.FC<ROASCalculatorToolProps> = ({ uiConfig
               <tbody>
                 {calculations.roasScenarios.map((scenario, idx) => (
                   <tr key={idx} className={`border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-                    <td className={`py-2 font-medium ${scenario.roas === Math.round(calculations.calculatedROAS) ? 'text-[#0D9488]' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                    <td className={`py-2 font-medium ${scenario.roas === Math.round(calculations.calculatedROAS) ? 'text-[#6096B4]' : isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                       {scenario.roas}x {scenario.roas === Math.round(calculations.calculatedROAS) && '(current)'}
                     </td>
                     <td className={`py-2 text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>

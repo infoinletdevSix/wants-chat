@@ -653,9 +653,9 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.venueBooking.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.venueBooking.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -663,7 +663,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -735,7 +735,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -794,7 +794,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                 </select>
                 <button
                   onClick={() => setShowVenueForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.venueBooking.addVenue', 'Add Venue')}
@@ -875,7 +875,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                           setNewBooking(prev => ({ ...prev, venueId: venue.id }));
                           setShowBookingForm(true);
                         }}
-                        className="flex-1 px-3 py-1.5 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0D9488]/90"
+                        className="flex-1 px-3 py-1.5 bg-[#6096B4] text-white rounded text-sm hover:bg-[#6096B4]/90"
                       >
                         {t('tools.venueBooking.bookNow', 'Book Now')}
                       </button>
@@ -952,7 +952,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                 </select>
                 <button
                   onClick={() => setShowBookingForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.venueBooking.newBooking', 'New Booking')}
@@ -1042,7 +1042,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 shadow`}>
               <div className="flex items-center gap-3 mb-2">
-                <Building2 className="w-5 h-5 text-[#0D9488]" />
+                <Building2 className="w-5 h-5 text-[#6096B4]" />
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.venueBooking.activeVenues', 'Active Venues')}</span>
               </div>
               <p className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1298,7 +1298,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                             onClick={() => toggleAmenity(amenity.id, !!editingVenue)}
                             className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-colors ${
                               isSelected
-                                ? 'bg-[#0D9488] text-white'
+                                ? 'bg-[#6096B4] text-white'
                                 : isDark
                                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1345,7 +1345,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                   </button>
                   <button
                     onClick={editingVenue ? handleUpdateVenue : handleAddVenue}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingVenue ? t('tools.venueBooking.saveChanges', 'Save Changes') : t('tools.venueBooking.addVenue2', 'Add Venue')}
                   </button>
@@ -1573,7 +1573,7 @@ export const VenueBookingTool: React.FC<VenueBookingToolProps> = ({ uiConfig }) 
                   </button>
                   <button
                     onClick={editingBooking ? handleUpdateBooking : handleAddBooking}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {editingBooking ? t('tools.venueBooking.saveChanges2', 'Save Changes') : t('tools.venueBooking.createBooking', 'Create Booking')}
                   </button>

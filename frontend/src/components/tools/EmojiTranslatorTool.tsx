@@ -206,9 +206,9 @@ export const EmojiTranslatorTool = ({ uiConfig }: EmojiTranslatorToolProps) => {
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.emojiTranslator.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.emojiTranslator.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -228,7 +228,7 @@ export const EmojiTranslatorTool = ({ uiConfig }: EmojiTranslatorToolProps) => {
                 onClick={() => setMode(option.value as typeof mode)}
                 className={`px-4 py-2 rounded-lg border-2 transition-all ${
                   mode === option.value
-                    ? 'border-[#0D9488] bg-[#0D9488]/10'
+                    ? 'border-[#6096B4] bg-[#6096B4]/10'
                     : theme === 'dark'
                     ? 'border-gray-600 hover:border-gray-500'
                     : 'border-gray-200 hover:border-gray-300'
@@ -258,7 +258,7 @@ export const EmojiTranslatorTool = ({ uiConfig }: EmojiTranslatorToolProps) => {
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -268,7 +268,7 @@ export const EmojiTranslatorTool = ({ uiConfig }: EmojiTranslatorToolProps) => {
             <label className={`block text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               Translated Text
               {matchCount > 0 && (
-                <span className="ml-2 text-[#0D9488]">({matchCount} words matched)</span>
+                <span className="ml-2 text-[#6096B4]">({matchCount} words matched)</span>
               )}
             </label>
             {output && (

@@ -359,7 +359,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Droplets className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -383,7 +383,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                 onClick={() => setUnitSystem('metric')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                   unitSystem === 'metric'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -395,7 +395,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                 onClick={() => setUnitSystem('imperial')}
                 className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                   unitSystem === 'imperial'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -422,7 +422,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -438,7 +438,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="sedentary">{t('tools.hydrationCalculator.sedentaryLittleOrNoExercise', 'Sedentary (little or no exercise)')}</option>
                 <option value="light">{t('tools.hydrationCalculator.lightExercise13Days', 'Light (exercise 1-3 days/week)')}</option>
@@ -460,7 +460,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                     onClick={() => setClimate(c)}
                     className={`py-2 px-3 rounded-lg font-medium transition-colors capitalize ${
                       climate === c
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -495,7 +495,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -514,7 +514,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -533,7 +533,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -544,7 +544,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateHydration}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Droplets className="w-5 h-5" />
               {t('tools.hydrationCalculator.calculate', 'Calculate')}
@@ -601,7 +601,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                   </div>
                   <div className="text-center">
                     <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hydrationCalculator.consumed', 'Consumed')}</div>
-                    <div className="text-lg font-bold text-[#0D9488]">
+                    <div className="text-lg font-bold text-[#6096B4]">
                       {result.consumed} {unit}
                     </div>
                   </div>
@@ -657,7 +657,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                       theme === 'dark'
                         ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                   <button
                     onClick={() => {
@@ -667,7 +667,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                         setCustomAmount('');
                       }
                     }}
-                    className="bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -796,7 +796,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                         <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                           {t('tools.hydrationCalculator.totalDailyGoal', 'Total daily goal:')}
                         </span>
-                        <span className="font-bold text-[#0D9488]">
+                        <span className="font-bold text-[#6096B4]">
                           {result.adjustedIntake} {unit}
                         </span>
                       </div>
@@ -831,7 +831,7 @@ export function HydrationCalculatorTool({ uiConfig }: HydrationCalculatorToolPro
                 <ul className={`space-y-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                   {HYDRATION_TIPS.map((tip, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <span className="text-[#0D9488] mt-1">*</span>
+                      <span className="text-[#6096B4] mt-1">*</span>
                       {tip}
                     </li>
                   ))}

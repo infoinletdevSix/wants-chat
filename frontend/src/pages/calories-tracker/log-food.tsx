@@ -250,7 +250,7 @@ const LogFoodPage: React.FC = () => {
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
-              <Apple className="h-6 w-6 text-teal-400" />
+              <Apple className="h-6 w-6 text-primary-400" />
               <span className="text-xl font-semibold text-white">
                 {editEntry ? 'Edit Food Entry' : 'Log Food'}
               </span>
@@ -261,7 +261,7 @@ const LogFoodPage: React.FC = () => {
 
       <main className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/20 border border-teal-400/30">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/20 border border-primary-400/30">
           <h1 className="text-3xl font-bold text-white mb-2">
             {editEntry ? 'Edit Food Entry' : 'Log Your Food'}
           </h1>
@@ -278,10 +278,10 @@ const LogFoodPage: React.FC = () => {
         )}
 
         {/* Food Information */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Apple className="h-5 w-5 text-teal-400" />
+              <Apple className="h-5 w-5 text-primary-400" />
               Food Information
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -307,7 +307,7 @@ const LogFoodPage: React.FC = () => {
                   </div>
                 )}
               </div>
-              <Badge variant="secondary" className="ml-4 bg-teal-500/20 text-teal-400">
+              <Badge variant="secondary" className="ml-4 bg-primary-500/20 text-primary-400">
                 {food.category}
               </Badge>
             </div>
@@ -315,8 +315,8 @@ const LogFoodPage: React.FC = () => {
             <div className="grid grid-cols-4 gap-6 p-6 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-center">
                 <div className="flex justify-center mb-2">
-                  <div className="p-2 bg-teal-500/20 rounded-lg">
-                    <Flame className="h-5 w-5 text-teal-400" />
+                  <div className="p-2 bg-primary-500/20 rounded-lg">
+                    <Flame className="h-5 w-5 text-primary-400" />
                   </div>
                 </div>
                 <p className="text-xs text-white/60">Calories</p>
@@ -354,10 +354,10 @@ const LogFoodPage: React.FC = () => {
         </Card>
 
         {/* Serving Size */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Scale className="h-5 w-5 text-teal-400" />
+              <Scale className="h-5 w-5 text-primary-400" />
               Serving Size
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -406,7 +406,7 @@ const LogFoodPage: React.FC = () => {
                   <SelectTrigger id="unit" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                  <SelectContent className="bg-primary-800/90 border-primary-400/30">
                     {commonUnits.map((unit) => (
                       <SelectItem key={unit.id} value={unit.id} className="text-white hover:bg-white/10">
                         {unit.name}
@@ -427,8 +427,8 @@ const LogFoodPage: React.FC = () => {
                   onClick={() => setQuantity(amount)}
                   className={`h-8 px-3 rounded-lg transition-all ${
                     quantity === amount
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-transparent'
-                      : 'bg-white/10 border border-white/20 text-white hover:bg-teal-500/20 hover:border-teal-400'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-transparent'
+                      : 'bg-white/10 border border-white/20 text-white hover:bg-primary-500/20 hover:border-primary-400'
                   }`}
                 >
                   {amount}
@@ -439,12 +439,12 @@ const LogFoodPage: React.FC = () => {
         </Card>
 
         {/* Calculated Nutrition */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Calculator className="h-5 w-5 text-teal-400" />
+              <Calculator className="h-5 w-5 text-primary-400" />
               Nutrition Summary
-              <Badge variant="secondary" className="ml-2 bg-teal-500/20 text-teal-400">
+              <Badge variant="secondary" className="ml-2 bg-primary-500/20 text-primary-400">
                 {quantity} {selectedUnit}
               </Badge>
             </CardTitle>
@@ -455,9 +455,9 @@ const LogFoodPage: React.FC = () => {
           <CardContent>
             <div className="space-y-6">
               {/* Main macros */}
-              <div className="grid grid-cols-4 gap-4 p-6 bg-teal-500/10 rounded-xl border border-teal-400/30">
+              <div className="grid grid-cols-4 gap-4 p-6 bg-primary-500/10 rounded-xl border border-primary-400/30">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-teal-400">{nutrition.calories}</p>
+                  <p className="text-2xl font-bold text-primary-400">{nutrition.calories}</p>
                   <p className="text-xs text-white/60">Calories</p>
                 </div>
                 <div className="text-center">
@@ -502,10 +502,10 @@ const LogFoodPage: React.FC = () => {
         </Card>
 
         {/* Meal & Time Selection */}
-        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-teal-400">
+        <Card className="mb-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 border-l-4 border-primary-400">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <Clock className="h-5 w-5 text-teal-400" />
+              <Clock className="h-5 w-5 text-primary-400" />
               When did you eat this?
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -525,8 +525,8 @@ const LogFoodPage: React.FC = () => {
                     className={`
                       relative p-4 rounded-xl border-2 transition-all duration-200
                       ${meal === mealOption.id
-                        ? 'border-teal-400 bg-teal-500/20'
-                        : 'border-white/20 bg-white/5 hover:border-teal-400/50'
+                        ? 'border-primary-400 bg-primary-500/20'
+                        : 'border-white/20 bg-white/5 hover:border-primary-400/50'
                       }
                     `}
                   >
@@ -538,7 +538,7 @@ const LogFoodPage: React.FC = () => {
                     </div>
                     {meal === mealOption.id && (
                       <div className="absolute top-2 right-2">
-                        <CheckCircle className="h-5 w-5 text-teal-400" />
+                        <CheckCircle className="h-5 w-5 text-primary-400" />
                       </div>
                     )}
                   </button>
@@ -551,7 +551,7 @@ const LogFoodPage: React.FC = () => {
                 Time
               </Label>
               <div className="relative mt-1">
-                <Clock className="absolute left-4 top-3.5 h-5 w-5 text-teal-400" />
+                <Clock className="absolute left-4 top-3.5 h-5 w-5 text-primary-400" />
                 <Input
                   id="time"
                   type="time"
@@ -575,7 +575,7 @@ const LogFoodPage: React.FC = () => {
           <Button
             onClick={handleLogFood}
             disabled={isSubmitting}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 disabled:opacity-50"
           >
             {isSubmitting ? (
               <>
@@ -592,11 +592,11 @@ const LogFoodPage: React.FC = () => {
         </div>
 
         {/* Tips */}
-        <Card className="rounded-2xl border-2 border-teal-400/30 bg-teal-500/10">
+        <Card className="rounded-2xl border-2 border-primary-400/30 bg-primary-500/10">
           <CardContent className="p-6">
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-teal-500/20">
-                <InfoIcon className="h-6 w-6 text-teal-400" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary-500/20">
+                <InfoIcon className="h-6 w-6 text-primary-400" />
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-white mb-2">Logging Tips</h4>

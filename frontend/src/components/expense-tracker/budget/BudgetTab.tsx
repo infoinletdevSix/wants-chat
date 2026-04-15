@@ -306,7 +306,7 @@ export const BudgetTab: React.FC<BudgetTabProps> = ({ expenses, monthlyBudget })
             Export CSV
           </Button>
           <Dialog open={isAddBudgetOpen} onOpenChange={setIsAddBudgetOpen}>
-            <DialogTrigger className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/50 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 h-10 px-4 py-2">
+            <DialogTrigger className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400/50 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600 h-10 px-4 py-2">
               <Add className="h-4 w-4 mr-2" />
               Add Budget
             </DialogTrigger>
@@ -377,7 +377,7 @@ export const BudgetTab: React.FC<BudgetTabProps> = ({ expenses, monthlyBudget })
                   </Button>
                   <Button
                     onClick={handleAddBudget}
-                    className="flex-1 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                    className="flex-1 h-12 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                     disabled={isCreatingBudget || !newBudget.categoryId || !newBudget.amount}
                   >
                     {isCreatingBudget ? 'Creating...' : 'Add Budget'}

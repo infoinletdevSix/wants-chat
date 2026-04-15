@@ -290,11 +290,11 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white to-[#0D9488]/5 dark:from-gray-800 dark:to-[#0D9488]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
+      <div className="bg-gradient-to-r from-white to-[#6096B4]/5 dark:from-gray-800 dark:to-[#6096B4]/10 px-6 py-4 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <BookMarked className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <BookMarked className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('tools.aIStoryGenerator.aiStoryGenerator', 'AI Story Generator')}</h3>
@@ -304,9 +304,9 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
             </div>
           </div>
           {isPrefilled && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488]/10 rounded-full">
-              <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-              <span className="text-xs font-medium text-[#0D9488]">{t('tools.aIStoryGenerator.prefilled', 'Prefilled')}</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4]/10 rounded-full">
+              <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+              <span className="text-xs font-medium text-[#6096B4]">{t('tools.aIStoryGenerator.prefilled', 'Prefilled')}</span>
             </div>
           )}
         </div>
@@ -323,7 +323,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
             onChange={(e) => setTheme(e.target.value)}
             placeholder={t('tools.aIStoryGenerator.describeYourStoryIdeaTheme', 'Describe your story idea, theme, or the spark of inspiration (e.g., \'A detective who can read minds investigates a crime where the victim has no memories\')...')}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -339,7 +339,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                 const selected = genres.find(g => g.value === e.target.value);
                 if (selected) setGenre(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {genres.map(g => (
                 <option key={g.value} value={g.value}>{g.label}</option>
@@ -357,7 +357,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                 const selected = storyLengths.find(l => l.value === e.target.value);
                 if (selected) setStoryLength(selected);
               }}
-              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
+              className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700"
             >
               {storyLengths.map(l => (
                 <option key={l.value} value={l.value}>{l.label}</option>
@@ -378,7 +378,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                 onClick={() => setTone(t)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   tone.value === t.value
-                    ? t('tools.aIStoryGenerator.bg0d9488TextWhite', 'bg-[#0D9488] text-white') : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    ? t('tools.aIStoryGenerator.bg0d9488TextWhite', 'bg-[#6096B4] text-white') : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 {t.label}
@@ -397,7 +397,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
             value={keywords}
             onChange={(e) => setKeywords(e.target.value)}
             placeholder={t('tools.aIStoryGenerator.eGTimeTravelDragons', 'e.g., time travel, dragons, betrayal, redemption...')}
-            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
+            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-gray-900 dark:text-white dark:bg-gray-700 placeholder:text-gray-400"
           />
         </div>
 
@@ -412,7 +412,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !theme.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -456,7 +456,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                         {storyPrompt.title}
                       </h5>
                       <div className="flex items-center gap-2 mt-1">
-                        <span className="text-xs px-2 py-0.5 bg-[#0D9488]/10 text-[#0D9488] rounded-full">
+                        <span className="text-xs px-2 py-0.5 bg-[#6096B4]/10 text-[#6096B4] rounded-full">
                           {storyPrompt.genre}
                         </span>
                       </div>
@@ -469,7 +469,7 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                         }}
                         className={`p-2 rounded-lg transition-colors ${
                           savedPrompts.has(idx)
-                            ? t('tools.aIStoryGenerator.text0d9488Bg0d948810', 'text-[#0D9488] bg-[#0D9488]/10') : t('tools.aIStoryGenerator.textGray400HoverText', 'text-gray-400 hover:text-[#0D9488] hover:bg-[#0D9488]/10')
+                            ? t('tools.aIStoryGenerator.text0d9488Bg0d948810', 'text-[#6096B4] bg-[#6096B4]/10') : t('tools.aIStoryGenerator.textGray400HoverText', 'text-gray-400 hover:text-[#6096B4] hover:bg-[#6096B4]/10')
                         }`}
                       >
                         <Bookmark className={`w-4 h-4 ${savedPrompts.has(idx) ? 'fill-current' : ''}`} />
@@ -496,19 +496,19 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                     <div className="px-5 pb-5 space-y-4">
                       {/* Premise */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-1">{t('tools.aIStoryGenerator.premise', 'Premise')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-1">{t('tools.aIStoryGenerator.premise', 'Premise')}</h6>
                         <p className="text-gray-800 dark:text-gray-200">{storyPrompt.premise}</p>
                       </div>
 
                       {/* Setting */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-1">{t('tools.aIStoryGenerator.setting', 'Setting')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-1">{t('tools.aIStoryGenerator.setting', 'Setting')}</h6>
                         <p className="text-gray-700 dark:text-gray-300 text-sm">{storyPrompt.setting}</p>
                       </div>
 
                       {/* Main Character */}
                       <div className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700">
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStoryGenerator.mainCharacter', 'Main Character')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStoryGenerator.mainCharacter', 'Main Character')}</h6>
                         <p className="font-medium text-gray-900 dark:text-white">{storyPrompt.mainCharacter.name}</p>
                         <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{storyPrompt.mainCharacter.description}</p>
                         <p className="text-sm text-gray-500 dark:text-gray-500 mt-1 italic">
@@ -518,17 +518,17 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
 
                       {/* Conflict */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-1">{t('tools.aIStoryGenerator.centralConflict', 'Central Conflict')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-1">{t('tools.aIStoryGenerator.centralConflict', 'Central Conflict')}</h6>
                         <p className="text-gray-700 dark:text-gray-300 text-sm">{storyPrompt.conflict}</p>
                       </div>
 
                       {/* Plot Points */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStoryGenerator.plotPoints', 'Plot Points')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStoryGenerator.plotPoints', 'Plot Points')}</h6>
                         <ol className="space-y-1.5">
                           {storyPrompt.plotPoints.map((point, pIdx) => (
                             <li key={pIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                              <span className="flex items-center justify-center w-5 h-5 bg-[#0D9488]/10 text-[#0D9488] text-xs rounded-full flex-shrink-0">
+                              <span className="flex items-center justify-center w-5 h-5 bg-[#6096B4]/10 text-[#6096B4] text-xs rounded-full flex-shrink-0">
                                 {pIdx + 1}
                               </span>
                               {point}
@@ -539,11 +539,11 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
 
                       {/* Possible Endings */}
                       <div>
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStoryGenerator.possibleEndings', 'Possible Endings')}</h6>
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStoryGenerator.possibleEndings', 'Possible Endings')}</h6>
                         <ul className="space-y-1">
                           {storyPrompt.possibleEndings.map((ending, eIdx) => (
                             <li key={eIdx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                              <span className="text-[#0D9488]">-</span>
+                              <span className="text-[#6096B4]">-</span>
                               {ending}
                             </li>
                           ))}
@@ -551,12 +551,12 @@ Make it creative, engaging, and suitable for the ${tone.label} tone. Return ONLY
                       </div>
 
                       {/* Writing Prompts */}
-                      <div className="bg-[#0D9488]/5 p-3 rounded-lg">
-                        <h6 className="text-xs font-medium text-[#0D9488] uppercase mb-2">{t('tools.aIStoryGenerator.writingPromptsToGetStarted', 'Writing Prompts to Get Started')}</h6>
+                      <div className="bg-[#6096B4]/5 p-3 rounded-lg">
+                        <h6 className="text-xs font-medium text-[#6096B4] uppercase mb-2">{t('tools.aIStoryGenerator.writingPromptsToGetStarted', 'Writing Prompts to Get Started')}</h6>
                         <ul className="space-y-1.5">
                           {storyPrompt.writingPrompts.map((wp, wpIdx) => (
                             <li key={wpIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                              <Sparkles className="w-3.5 h-3.5 text-[#0D9488] mt-0.5 flex-shrink-0" />
+                              <Sparkles className="w-3.5 h-3.5 text-[#6096B4] mt-0.5 flex-shrink-0" />
                               {wp}
                             </li>
                           ))}

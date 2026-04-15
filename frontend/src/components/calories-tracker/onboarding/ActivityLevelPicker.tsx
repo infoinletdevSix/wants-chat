@@ -84,7 +84,7 @@ const ActivityLevelPicker: React.FC<ActivityLevelPickerProps> = ({
             className={`
               p-6 cursor-pointer transition-all duration-300 border-2
               ${selectedLevel === level.id
-                ? 'border-teal-400 bg-gradient-to-br from-teal-500/30 to-cyan-500/30 shadow-xl shadow-teal-500/30 scale-[1.02]'
+                ? 'border-primary-400 bg-gradient-to-br from-primary-500/30 to-cyan-500/30 shadow-xl shadow-primary-500/30 scale-[1.02]'
                 : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
               }
             `}
@@ -94,17 +94,17 @@ const ActivityLevelPicker: React.FC<ActivityLevelPickerProps> = ({
               <div className="text-center">
                 <div className={`inline-flex p-4 rounded-xl mb-3 ${
                   selectedLevel === level.id
-                    ? 'bg-teal-500/40'
+                    ? 'bg-primary-500/40'
                     : 'bg-white/10'
                 }`}>
                   <Icon
                     path={level.icon}
                     size={2}
-                    className={selectedLevel === level.id ? 'text-teal-300' : level.iconColor}
+                    className={selectedLevel === level.id ? 'text-primary-300' : level.iconColor}
                   />
                 </div>
 
-                <h3 className={`text-lg font-semibold mb-1 ${selectedLevel === level.id ? 'text-teal-300' : 'text-white'}`}>
+                <h3 className={`text-lg font-semibold mb-1 ${selectedLevel === level.id ? 'text-primary-300' : 'text-white'}`}>
                   {level.title}
                 </h3>
 
@@ -125,8 +125,8 @@ const ActivityLevelPicker: React.FC<ActivityLevelPickerProps> = ({
 
               {selectedLevel === level.id && (
                 <div className="flex items-center justify-center gap-2 pt-2">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-                  <span className="text-xs font-medium text-teal-400">Selected</span>
+                  <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+                  <span className="text-xs font-medium text-primary-400">Selected</span>
                 </div>
               )}
             </div>

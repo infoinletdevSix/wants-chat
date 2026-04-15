@@ -23,8 +23,8 @@ export const GlassCard: React.FC<GlassCardProps> = ({
     <motion.div
       className={cn(
         "bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 transition-all duration-300",
-        hover && "hover:bg-white/15 hover:border-white/30 hover:shadow-lg hover:shadow-teal-500/10 cursor-pointer",
-        glow && "shadow-lg shadow-teal-500/20",
+        hover && "hover:bg-white/15 hover:border-white/30 hover:shadow-lg hover:shadow-primary-500/10 cursor-pointer",
+        glow && "shadow-lg shadow-primary-500/20",
         gradient && "bg-gradient-to-br from-white/10 to-white/5",
         className
       )}
@@ -54,7 +54,7 @@ export const StatCard: React.FC<StatCardProps> = ({
   value,
   change,
   icon,
-  color = "from-teal-500 to-cyan-500",
+  color = "from-primary-500 to-cyan-500",
   subtitle
 }) => {
   const isPositive = change && change > 0;
@@ -145,7 +145,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({
   title,
   description,
   icon,
-  color = "from-teal-500 to-cyan-500",
+  color = "from-primary-500 to-cyan-500",
   children,
   onClick
 }) => {

@@ -273,14 +273,14 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
     cancelled: 'bg-red-500/10 text-red-500 border-red-500/20',
   };
 
-  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  const inputClass = `w-full p-3 rounded-lg border ${isDark ? 'bg-[#1a1a1a] border-[#333] text-white' : 'bg-white border-gray-300 text-gray-900'} focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
   const cardClass = `p-4 rounded-xl border ${isDark ? 'bg-[#1a1a1a] border-[#333]' : 'bg-white border-gray-200'} shadow-sm`;
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -289,7 +289,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Building2 className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.studioBooking.studioBooking', 'Studio Booking')}</h2>
@@ -298,9 +298,9 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
 
       {/* Prefill indicator */}
       {isPrefilled && (
-        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.studioBooking.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
+        <div className="flex items-center justify-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.studioBooking.prefilledFromAiResponse', 'Prefilled from AI response')}</span>
         </div>
       )}
 
@@ -308,8 +308,8 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <div className={cardClass}>
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Calendar className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Calendar className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.studioBooking.total', 'Total')}</p>
@@ -416,7 +416,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
           />
           <button
             onClick={() => { setShowForm(!showForm); setEditingId(null); setFormData(emptyForm); }}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors"
           >
             <Plus className="w-5 h-5" />
             {t('tools.studioBooking.newBooking', 'New Booking')}
@@ -549,7 +549,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
                   type="checkbox"
                   checked={formData.engineerRequired}
                   onChange={(e) => setFormData({ ...formData, engineerRequired: e.target.checked })}
-                  className="w-5 h-5 rounded text-[#0D9488]"
+                  className="w-5 h-5 rounded text-[#6096B4]"
                 />
                 <span className={isDark ? 'text-white' : 'text-gray-900'}>{t('tools.studioBooking.engineer35Hr', 'Engineer (+$35/hr)')}</span>
               </label>
@@ -558,7 +558,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
                   type="checkbox"
                   checked={formData.depositPaid}
                   onChange={(e) => setFormData({ ...formData, depositPaid: e.target.checked })}
-                  className="w-5 h-5 rounded text-[#0D9488]"
+                  className="w-5 h-5 rounded text-[#6096B4]"
                 />
                 <span className={isDark ? 'text-white' : 'text-gray-900'}>{t('tools.studioBooking.depositPaid', 'Deposit Paid')}</span>
               </label>
@@ -576,7 +576,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
                   onClick={() => handleEquipmentToggle(item)}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     formData.equipmentNeeded.includes(item)
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark ? 'bg-[#252525] text-gray-300 hover:bg-[#333]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -601,7 +601,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
             <button
               onClick={saveSession}
               disabled={!formData.clientName || !formData.date}
-              className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {editingId ? t('tools.studioBooking.updateSession', 'Update Session') : t('tools.studioBooking.saveSession', 'Save Session')}
             </button>
@@ -623,7 +623,7 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
             <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.studioBooking.noBookingsFound', 'No bookings found')}</p>
             <button
               onClick={() => setShowForm(true)}
-              className="mt-4 text-[#0D9488] hover:underline"
+              className="mt-4 text-[#6096B4] hover:underline"
             >
               {t('tools.studioBooking.createYourFirstBooking', 'Create your first booking')}
             </button>
@@ -664,14 +664,14 @@ export const StudioBookingTool: React.FC<StudioBookingToolProps> = ({ uiConfig }
                   )}
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold text-[#0D9488]">
+                  <span className="text-lg font-bold text-[#6096B4]">
                     ${getSessionTotal(session)}
                   </span>
                   <button
                     onClick={() => handleEdit(session)}
                     className={`p-2 rounded-lg ${isDark ? 'hover:bg-[#252525]' : 'hover:bg-gray-100'}`}
                   >
-                    <Edit2 className="w-4 h-4 text-[#0D9488]" />
+                    <Edit2 className="w-4 h-4 text-[#6096B4]" />
                   </button>
                   <button
                     onClick={() => deleteItem(session.id)}

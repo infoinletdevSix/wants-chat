@@ -138,7 +138,7 @@ export const DailyHoroscopeTool: React.FC<DailyHoroscopeToolProps> = ({ uiConfig
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <Star size={28} />
           </div>
           <div>
@@ -153,7 +153,7 @@ export const DailyHoroscopeTool: React.FC<DailyHoroscopeToolProps> = ({ uiConfig
 
         {/* Today's Date */}
         <div className={`flex items-center gap-2 mb-6 px-4 py-2 rounded-lg w-fit ${isDark ? 'bg-gray-800' : 'bg-white border border-gray-200'}`}>
-          <Calendar size={18} className={isDark ? 'text-teal-400' : 'text-teal-600'} />
+          <Calendar size={18} className={isDark ? 'text-primary-400' : 'text-primary-600'} />
           <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
           </span>
@@ -172,8 +172,8 @@ export const DailyHoroscopeTool: React.FC<DailyHoroscopeToolProps> = ({ uiConfig
                 className={`p-3 rounded-xl border transition-all ${
                   selectedSign?.name === sign.name
                     ? isDark
-                      ? 'bg-teal-900/50 border-teal-500 ring-2 ring-teal-500/50'
-                      : 'bg-teal-50 border-teal-500 ring-2 ring-teal-500/30'
+                      ? 'bg-primary-900/50 border-primary-500 ring-2 ring-primary-500/50'
+                      : 'bg-primary-50 border-primary-500 ring-2 ring-primary-500/30'
                     : isDark
                     ? 'bg-gray-700 border-gray-600 hover:bg-gray-600'
                     : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
@@ -222,35 +222,35 @@ export const DailyHoroscopeTool: React.FC<DailyHoroscopeToolProps> = ({ uiConfig
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                 <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dailyHoroscope.luckyNumber', 'Lucky Number')}</div>
-                  <div className={`text-xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <div className={`text-xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {generateHoroscope.luckyNumber}
                   </div>
                 </div>
                 <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dailyHoroscope.luckyColor', 'Lucky Color')}</div>
-                  <div className={`text-xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <div className={`text-xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {generateHoroscope.luckyColor}
                   </div>
                 </div>
                 <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dailyHoroscope.mood', 'Mood')}</div>
-                  <div className={`text-xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <div className={`text-xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {generateHoroscope.mood}
                   </div>
                 </div>
                 <div className={`p-3 rounded-lg ${isDark ? 'bg-gray-700/50' : 'bg-gray-50'}`}>
                   <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.dailyHoroscope.bestMatch', 'Best Match')}</div>
-                  <div className={`text-xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <div className={`text-xl font-bold ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                     {generateHoroscope.compatibility}
                   </div>
                 </div>
               </div>
 
               {/* General Prediction */}
-              <div className={`p-4 rounded-xl ${isDark ? 'bg-teal-900/20 border border-teal-800' : 'bg-teal-50 border border-teal-200'}`}>
+              <div className={`p-4 rounded-xl ${isDark ? 'bg-primary-900/20 border border-primary-800' : 'bg-primary-50 border border-primary-200'}`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Sparkles size={18} className={isDark ? 'text-teal-400' : 'text-teal-600'} />
-                  <span className={`font-semibold ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>{t('tools.dailyHoroscope.todaySOverview', 'Today\'s Overview')}</span>
+                  <Sparkles size={18} className={isDark ? 'text-primary-400' : 'text-primary-600'} />
+                  <span className={`font-semibold ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>{t('tools.dailyHoroscope.todaySOverview', 'Today\'s Overview')}</span>
                 </div>
                 <p className={`text-sm leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {generateHoroscope.general}

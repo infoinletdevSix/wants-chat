@@ -255,7 +255,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Wheat className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -282,7 +282,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="long-grain-white">{t('tools.riceWaterRatio.longGrainWhiteRice', 'Long Grain White Rice')}</option>
                 <option value="short-grain-sushi">{t('tools.riceWaterRatio.shortGrainSushiRice', 'Short Grain / Sushi Rice')}</option>
@@ -305,7 +305,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
                     onClick={() => setInputMode(mode)}
                     className={`py-2 px-4 rounded-lg font-medium transition-colors capitalize ${
                       inputMode === mode
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -334,7 +334,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             ) : (
@@ -352,7 +352,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
                 <p className={`text-xs mt-1 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                   1 serving = approximately 1/2 cup cooked rice
@@ -376,7 +376,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
                     onClick={() => setCookingMethod(method.value)}
                     className={`py-2 px-3 rounded-lg font-medium transition-colors text-sm ${
                       cookingMethod === method.value
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : theme === 'dark'
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -403,7 +403,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 {ALTITUDE_ADJUSTMENTS.map((alt, index) => (
                   <option key={index} value={index}>
@@ -418,7 +418,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculate}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <ChefHat className="w-5 h-5" />
               {t('tools.riceWaterRatio.calculate', 'Calculate')}
@@ -439,8 +439,8 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
           {result && (
             <div className="space-y-4">
               {/* Main Results */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : 'bg-teal-50'
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : 'bg-primary-50'
               }`}>
                 <h3 className={`font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {RICE_DATA[result.riceType].name} - {result.method === 'stovetop' ? 'Stovetop' : result.method === 'rice-cooker' ? t('tools.riceWaterRatio.riceCooker', 'Rice Cooker') : t('tools.riceWaterRatio.instantPot', 'Instant Pot')}
@@ -559,7 +559,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
           {/* Tips for Selected Rice Type */}
           <div className={`mt-4 p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
             <div className="flex items-center gap-2 mb-3">
-              <Info className="w-5 h-5 text-[#0D9488]" />
+              <Info className="w-5 h-5 text-[#6096B4]" />
               <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 Tips for {riceData.name}
               </h3>
@@ -567,7 +567,7 @@ export function RiceWaterRatioTool({ uiConfig }: RiceWaterRatioToolProps) {
             <ul className={`space-y-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
               {riceData.tips.map((tip, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <span className="text-[#0D9488] mt-1">-</span>
+                  <span className="text-[#6096B4] mt-1">-</span>
                   <span>{tip}</span>
                 </li>
               ))}

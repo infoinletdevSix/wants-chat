@@ -343,14 +343,14 @@ Date: _________________
       <div className="max-w-4xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
           {/* Header */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 p-6">
+          <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 rounded-lg">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">{t('tools.nDAgenerator.ndaGenerator', 'NDA Generator')}</h1>
-                <p className="text-teal-100 text-sm mt-1">{t('tools.nDAgenerator.createProfessionalNonDisclosureAgreements', 'Create professional non-disclosure agreements')}</p>
+                <p className="text-primary-100 text-sm mt-1">{t('tools.nDAgenerator.createProfessionalNonDisclosureAgreements', 'Create professional non-disclosure agreements')}</p>
               </div>
             </div>
           </div>
@@ -368,7 +368,7 @@ Date: _________________
                     onClick={() => setNdaData(prev => ({ ...prev, ndaType: type.value }))}
                     className={`p-4 rounded-lg border text-left transition-all ${
                       ndaData.ndaType === type.value
-                        ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/30'
+                        ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/30'
                         : isDark
                         ? 'border-gray-600 hover:border-gray-500 bg-gray-700'
                         : 'border-gray-200 hover:border-gray-300 bg-white'
@@ -376,7 +376,7 @@ Date: _________________
                   >
                     <div className={`font-medium ${
                       ndaData.ndaType === type.value
-                        ? 'text-teal-700 dark:text-teal-300'
+                        ? 'text-primary-700 dark:text-primary-300'
                         : isDark ? 'text-gray-200' : 'text-gray-900'
                     }`}>
                       {type.label}
@@ -399,7 +399,7 @@ Date: _________________
                 onChange={(e) => setNdaData(prev => ({ ...prev, scope: e.target.value as NDAScope }))}
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500`}
+                } focus:ring-2 focus:ring-primary-500`}
               >
                 {NDA_SCOPES.map((scope) => (
                   <option key={scope.value} value={scope.value}>{scope.label}</option>
@@ -425,7 +425,7 @@ Date: _________________
                     }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <input
                     type="text"
@@ -437,7 +437,7 @@ Date: _________________
                     }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <input
                     type="text"
@@ -449,7 +449,7 @@ Date: _________________
                     }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -470,7 +470,7 @@ Date: _________________
                     }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <input
                     type="text"
@@ -482,7 +482,7 @@ Date: _________________
                     }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <input
                     type="text"
@@ -494,7 +494,7 @@ Date: _________________
                     }))}
                     className={`w-full px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               </div>
@@ -512,7 +512,7 @@ Date: _________________
                   onChange={(e) => setNdaData(prev => ({ ...prev, effectiveDate: e.target.value }))}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 />
               </div>
               <div>
@@ -527,14 +527,14 @@ Date: _________________
                     onChange={(e) => setNdaData(prev => ({ ...prev, duration: e.target.value }))}
                     className={`flex-1 px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                   <select
                     value={ndaData.durationUnit}
                     onChange={(e) => setNdaData(prev => ({ ...prev, durationUnit: e.target.value as 'months' | 'years' }))}
                     className={`px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   >
                     <option value="months">{t('tools.nDAgenerator.months', 'Months')}</option>
                     <option value="years">{t('tools.nDAgenerator.years', 'Years')}</option>
@@ -550,7 +550,7 @@ Date: _________________
                   onChange={(e) => setNdaData(prev => ({ ...prev, governingLaw: e.target.value }))}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                 >
                   {US_STATES.map((state) => (
                     <option key={state} value={state}>{state}</option>
@@ -571,7 +571,7 @@ Date: _________________
                 rows={3}
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500`}
+                } focus:ring-2 focus:ring-primary-500`}
               />
             </div>
 
@@ -606,12 +606,12 @@ Date: _________________
                   placeholder={t('tools.nDAgenerator.addConfidentialInformationType', 'Add confidential information type...')}
                   className={`flex-1 px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500`}
+                  } focus:ring-2 focus:ring-primary-500`}
                   onKeyPress={(e) => e.key === 'Enter' && addConfidentialInfo()}
                 />
                 <button
                   onClick={addConfidentialInfo}
-                  className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"
+                  className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
                 >
                   {t('tools.nDAgenerator.add', 'Add')}
                 </button>
@@ -627,7 +627,7 @@ Date: _________________
                     type="checkbox"
                     checked={ndaData.returnRequirement}
                     onChange={(e) => setNdaData(prev => ({ ...prev, returnRequirement: e.target.checked }))}
-                    className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                    className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                   />
                   <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.nDAgenerator.returnOfMaterials', 'Return of Materials')}</span>
                 </label>
@@ -636,7 +636,7 @@ Date: _________________
                     type="checkbox"
                     checked={ndaData.injunctiveRelief}
                     onChange={(e) => setNdaData(prev => ({ ...prev, injunctiveRelief: e.target.checked }))}
-                    className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                    className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                   />
                   <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.nDAgenerator.injunctiveRelief', 'Injunctive Relief')}</span>
                 </label>
@@ -645,7 +645,7 @@ Date: _________________
                     type="checkbox"
                     checked={ndaData.nonSolicitation}
                     onChange={(e) => setNdaData(prev => ({ ...prev, nonSolicitation: e.target.checked }))}
-                    className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                    className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                   />
                   <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.nDAgenerator.nonSolicitation', 'Non-Solicitation')}</span>
                 </label>
@@ -654,7 +654,7 @@ Date: _________________
                     type="checkbox"
                     checked={ndaData.nonCompete}
                     onChange={(e) => setNdaData(prev => ({ ...prev, nonCompete: e.target.checked }))}
-                    className="w-5 h-5 text-teal-600 rounded focus:ring-teal-500"
+                    className="w-5 h-5 text-primary-600 rounded focus:ring-primary-500"
                   />
                   <span className={isDark ? 'text-gray-300' : 'text-gray-700'}>{t('tools.nDAgenerator.nonCompete', 'Non-Compete')}</span>
                 </label>
@@ -671,7 +671,7 @@ Date: _________________
                     onChange={(e) => setNdaData(prev => ({ ...prev, nonCompeteDuration: e.target.value }))}
                     className={`w-32 px-3 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-600 border-gray-500 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-teal-500`}
+                    } focus:ring-2 focus:ring-primary-500`}
                   />
                 </div>
               )}
@@ -681,7 +681,7 @@ Date: _________________
             <div className="flex gap-3">
               <button
                 onClick={generateNDA}
-                className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Shield className="w-5 h-5" />
                 {t('tools.nDAgenerator.generateNda', 'Generate NDA')}
@@ -717,7 +717,7 @@ Date: _________________
                     </button>
                     <button
                       onClick={downloadNDA}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-sm font-medium transition-colors"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
                     >
                       <Download className="w-4 h-4" />
                       {t('tools.nDAgenerator.download', 'Download')}

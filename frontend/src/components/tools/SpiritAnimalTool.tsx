@@ -282,7 +282,7 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <PawPrint size={28} />
           </div>
           <div>
@@ -304,13 +304,13 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                   Question {currentQuestion + 1} of {questions.length}
                 </span>
-                <span className={`text-sm ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                <span className={`text-sm ${isDark ? 'text-primary-400' : 'text-primary-600'}`}>
                   {Math.round(((currentQuestion + 1) / questions.length) * 100)}%
                 </span>
               </div>
               <div className={`h-2 rounded-full ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-teal-500 to-teal-600 transition-all duration-500"
+                  className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-600 transition-all duration-500"
                   style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                 />
               </div>
@@ -329,8 +329,8 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
                   onClick={() => handleAnswer(idx)}
                   className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between group ${
                     isDark
-                      ? 'bg-gray-700 border-gray-600 hover:bg-teal-900/30 hover:border-teal-600'
-                      : 'bg-gray-50 border-gray-200 hover:bg-teal-50 hover:border-teal-300'
+                      ? 'bg-gray-700 border-gray-600 hover:bg-primary-900/30 hover:border-primary-600'
+                      : 'bg-gray-50 border-gray-200 hover:bg-primary-50 hover:border-primary-300'
                   }`}
                 >
                   <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
@@ -339,7 +339,7 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
                   <ChevronRight
                     size={20}
                     className={`opacity-0 group-hover:opacity-100 transition-opacity ${
-                      isDark ? 'text-teal-400' : 'text-teal-600'
+                      isDark ? 'text-primary-400' : 'text-primary-600'
                     }`}
                   />
                 </button>
@@ -353,11 +353,11 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
           <div className={`p-12 rounded-xl border text-center ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
             <div className="text-7xl mb-6 animate-bounce">🌟</div>
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="text-teal-500 animate-pulse" size={24} />
+              <Sparkles className="text-primary-500 animate-pulse" size={24} />
               <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.spiritAnimal.discoveringYourSpiritAnimal', 'Discovering your spirit animal...')}
               </span>
-              <Sparkles className="text-teal-500 animate-pulse" size={24} />
+              <Sparkles className="text-primary-500 animate-pulse" size={24} />
             </div>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {t('tools.spiritAnimal.theSpiritsAreRevealingThemselves', 'The spirits are revealing themselves to you')}
@@ -388,7 +388,7 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
                   <span
                     key={idx}
                     className={`px-4 py-2 rounded-full text-sm font-medium ${
-                      isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-700'
+                      isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-700'
                     }`}
                   >
                     {trait}
@@ -428,8 +428,8 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
             </div>
 
             {/* Advice */}
-            <div className={`p-4 rounded-xl border ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'}`}>
-              <h3 className={`font-semibold mb-2 ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <div className={`p-4 rounded-xl border ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'}`}>
+              <h3 className={`font-semibold mb-2 ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.spiritAnimal.guidanceFromYourSpiritAnimal', 'Guidance from Your Spirit Animal')}
               </h3>
               <p className={`text-sm italic ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -454,8 +454,8 @@ export const SpiritAnimalTool: React.FC<SpiritAnimalToolProps> = ({
                 onClick={shareResult}
                 className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-colors ${
                   isDark
-                    ? 'bg-teal-900/50 text-teal-300 hover:bg-teal-900'
-                    : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+                    ? 'bg-primary-900/50 text-primary-300 hover:bg-primary-900'
+                    : 'bg-primary-100 text-primary-700 hover:bg-primary-200'
                 }`}
               >
                 <Share2 size={18} />

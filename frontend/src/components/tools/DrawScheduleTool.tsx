@@ -378,7 +378,7 @@ const DrawScheduleTool: React.FC = () => {
       {/* Project Information */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Building2 className="w-5 h-5 text-teal-600" />
+          <Building2 className="w-5 h-5 text-primary-600" />
           Project Information
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -390,7 +390,7 @@ const DrawScheduleTool: React.FC = () => {
               type="number"
               value={formData.drawNumber}
               onChange={(e) => setFormData({ ...formData, drawNumber: parseInt(e.target.value) || 1 })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               min="1"
             />
           </div>
@@ -402,7 +402,7 @@ const DrawScheduleTool: React.FC = () => {
               type="text"
               value={formData.projectName}
               onChange={(e) => setFormData({ ...formData, projectName: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Enter project name"
               required
             />
@@ -415,7 +415,7 @@ const DrawScheduleTool: React.FC = () => {
               type="number"
               value={formData.contractAmount}
               onChange={(e) => setFormData({ ...formData, contractAmount: parseFloat(e.target.value) || 0 })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="0.00"
               min="0"
               step="0.01"
@@ -429,7 +429,7 @@ const DrawScheduleTool: React.FC = () => {
               type="text"
               value={formData.projectAddress}
               onChange={(e) => setFormData({ ...formData, projectAddress: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Enter project address"
             />
           </div>
@@ -439,7 +439,7 @@ const DrawScheduleTool: React.FC = () => {
       {/* Parties */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <User className="w-5 h-5 text-teal-600" />
+          <User className="w-5 h-5 text-primary-600" />
           Parties
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -451,7 +451,7 @@ const DrawScheduleTool: React.FC = () => {
               type="text"
               value={formData.ownerName}
               onChange={(e) => setFormData({ ...formData, ownerName: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Property owner or client"
               required
             />
@@ -464,7 +464,7 @@ const DrawScheduleTool: React.FC = () => {
               type="text"
               value={formData.contractorName}
               onChange={(e) => setFormData({ ...formData, contractorName: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="General contractor"
             />
           </div>
@@ -474,7 +474,7 @@ const DrawScheduleTool: React.FC = () => {
       {/* Application Period */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Calendar className="w-5 h-5 text-teal-600" />
+          <Calendar className="w-5 h-5 text-primary-600" />
           Application Period
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -486,7 +486,7 @@ const DrawScheduleTool: React.FC = () => {
               type="date"
               value={formData.applicationDate}
               onChange={(e) => setFormData({ ...formData, applicationDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -497,7 +497,7 @@ const DrawScheduleTool: React.FC = () => {
               type="date"
               value={formData.periodFrom}
               onChange={(e) => setFormData({ ...formData, periodFrom: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -508,7 +508,7 @@ const DrawScheduleTool: React.FC = () => {
               type="date"
               value={formData.periodTo}
               onChange={(e) => setFormData({ ...formData, periodTo: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -518,7 +518,7 @@ const DrawScheduleTool: React.FC = () => {
             <select
               value={formData.status}
               onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               {statuses.map((status) => (
                 <option key={status.value} value={status.value}>
@@ -534,12 +534,12 @@ const DrawScheduleTool: React.FC = () => {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-            <Receipt className="w-5 h-5 text-teal-600" />
+            <Receipt className="w-5 h-5 text-primary-600" />
             Schedule of Values
           </h3>
           <button
             onClick={addLineItem}
-            className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white text-sm rounded-lg hover:bg-teal-700 transition-colors"
+            className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white text-sm rounded-lg hover:bg-primary-700 transition-colors"
           >
             <Plus className="w-4 h-4" />
             Add Item
@@ -641,7 +641,7 @@ const DrawScheduleTool: React.FC = () => {
       {/* Retainage & Summary */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <BarChart3 className="w-5 h-5 text-teal-600" />
+          <BarChart3 className="w-5 h-5 text-primary-600" />
           Summary
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -654,7 +654,7 @@ const DrawScheduleTool: React.FC = () => {
                 type="number"
                 value={formData.retainagePercent}
                 onChange={(e) => setFormData({ ...formData, retainagePercent: parseFloat(e.target.value) || 0 })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 placeholder="10"
                 min="0"
                 max="100"
@@ -669,7 +669,7 @@ const DrawScheduleTool: React.FC = () => {
                 type="number"
                 value={formData.changeOrdersToDate}
                 onChange={(e) => setFormData({ ...formData, changeOrdersToDate: parseFloat(e.target.value) || 0 })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 placeholder="0.00"
                 min="0"
                 step="0.01"
@@ -687,7 +687,7 @@ const DrawScheduleTool: React.FC = () => {
             </div>
             <div className="border-t border-gray-300 pt-2 flex justify-between">
               <span className="font-medium text-gray-900">Net Payment Due:</span>
-              <span className="font-bold text-teal-600 text-lg">{formatCurrency(totals.netPayment)}</span>
+              <span className="font-bold text-primary-600 text-lg">{formatCurrency(totals.netPayment)}</span>
             </div>
           </div>
         </div>
@@ -696,7 +696,7 @@ const DrawScheduleTool: React.FC = () => {
       {/* Payment Information */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <CreditCard className="w-5 h-5 text-teal-600" />
+          <CreditCard className="w-5 h-5 text-primary-600" />
           Payment Information
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -708,7 +708,7 @@ const DrawScheduleTool: React.FC = () => {
               type="text"
               value={formData.approvedBy}
               onChange={(e) => setFormData({ ...formData, approvedBy: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Approver name"
             />
           </div>
@@ -720,7 +720,7 @@ const DrawScheduleTool: React.FC = () => {
               type="date"
               value={formData.approvalDate}
               onChange={(e) => setFormData({ ...formData, approvalDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -731,7 +731,7 @@ const DrawScheduleTool: React.FC = () => {
               type="date"
               value={formData.paymentDate}
               onChange={(e) => setFormData({ ...formData, paymentDate: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <div>
@@ -741,7 +741,7 @@ const DrawScheduleTool: React.FC = () => {
             <select
               value={formData.paymentMethod}
               onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               <option value="">Select method</option>
               {paymentMethods.map((method) => (
@@ -759,7 +759,7 @@ const DrawScheduleTool: React.FC = () => {
               type="text"
               value={formData.checkNumber}
               onChange={(e) => setFormData({ ...formData, checkNumber: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Check # or reference"
             />
           </div>
@@ -772,7 +772,7 @@ const DrawScheduleTool: React.FC = () => {
         <textarea
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           rows={3}
           placeholder="Additional notes..."
         />
@@ -791,7 +791,7 @@ const DrawScheduleTool: React.FC = () => {
         </button>
         <button
           onClick={handleSubmit}
-          className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
+          className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center gap-2"
         >
           <CheckCircle2 className="w-4 h-4" />
           {editingDraw ? 'Update Draw' : 'Create Draw'}
@@ -811,13 +811,13 @@ const DrawScheduleTool: React.FC = () => {
             placeholder="Search draw requests..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
           />
         </div>
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+          className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
         >
           <option value="all">All Status</option>
           {statuses.map((status) => (
@@ -844,7 +844,7 @@ const DrawScheduleTool: React.FC = () => {
                 resetForm();
                 setActiveTab('create');
               }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
               <Plus className="w-4 h-4" />
               Create Draw Request
@@ -864,8 +864,8 @@ const DrawScheduleTool: React.FC = () => {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                      <span className="font-bold text-teal-600">#{draw.drawNumber}</span>
+                    <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <span className="font-bold text-primary-600">#{draw.drawNumber}</span>
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
@@ -920,7 +920,7 @@ const DrawScheduleTool: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500">Net Payment</p>
-                      <p className="text-sm font-medium text-teal-600">{formatCurrency(draw.netPayment)}</p>
+                      <p className="text-sm font-medium text-primary-600">{formatCurrency(draw.netPayment)}</p>
                     </div>
                     <div>
                       <p className="text-xs text-gray-500">Period</p>
@@ -1012,8 +1012,8 @@ const DrawScheduleTool: React.FC = () => {
       <div className="bg-white border-b border-gray-200 px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center">
-              <Wallet className="w-6 h-6 text-teal-600" />
+            <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
+              <Wallet className="w-6 h-6 text-primary-600" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">{t('tools.drawSchedule.drawScheduleManager', 'Draw Schedule Manager')}</h1>
@@ -1043,7 +1043,7 @@ const DrawScheduleTool: React.FC = () => {
                   resetForm();
                   setActiveTab('create');
                 }}
-                className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.drawSchedule.newDraw', 'New Draw')}
@@ -1092,7 +1092,7 @@ const DrawScheduleTool: React.FC = () => {
             <p className="text-lg font-bold text-gray-900">{formatCurrency(stats.totalRequested)}</p>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-            <div className="flex items-center gap-2 text-teal-500 mb-1">
+            <div className="flex items-center gap-2 text-primary-500 mb-1">
               <Wallet className="w-4 h-4" />
               <span className="text-xs">{t('tools.drawSchedule.totalPaid', 'Total Paid')}</span>
             </div>
@@ -1120,7 +1120,7 @@ const DrawScheduleTool: React.FC = () => {
             onClick={() => setActiveTab('list')}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === 'list'
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -1133,7 +1133,7 @@ const DrawScheduleTool: React.FC = () => {
             }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               activeTab === 'create'
-                ? 'bg-teal-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
             }`}
           >
@@ -1141,7 +1141,7 @@ const DrawScheduleTool: React.FC = () => {
           </button>
           {activeTab === 'edit' && (
             <button
-              className="px-4 py-2 rounded-lg font-medium bg-teal-600 text-white"
+              className="px-4 py-2 rounded-lg font-medium bg-primary-600 text-white"
             >
               {t('tools.drawSchedule.editDraw', 'Edit Draw')}
             </button>

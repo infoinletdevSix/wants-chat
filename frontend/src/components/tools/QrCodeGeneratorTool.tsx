@@ -218,7 +218,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
             <label className={`block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               Text or URL
               {isPrefilled && (
-                <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#0D9488]">
+                <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#6096B4]">
                   <Sparkles className="w-3 h-3" />
                   {t('tools.qrCodeGenerator.prefilledFromAi', 'Prefilled from AI')}
                 </span>
@@ -235,7 +235,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
 
@@ -250,7 +250,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
               max="500"
               value={size}
               onChange={(e) => setSize(Number(e.target.value))}
-              className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#0D9488]"
+              className="w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-[#6096B4]"
             />
           </div>
 
@@ -275,7 +275,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -299,7 +299,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -317,7 +317,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
           <div className="flex flex-wrap gap-3">
             <button
               onClick={generateQRCode}
-              className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
             >
               <QrIcon className="w-4 h-4" />
               {t('tools.qrCodeGenerator.generateQrCode', 'Generate QR Code')}
@@ -378,7 +378,7 @@ export const QrCodeGeneratorTool = ({ uiConfig }: QrCodeGeneratorToolProps) => {
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 flex items-center justify-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSaving ? (
                   <>

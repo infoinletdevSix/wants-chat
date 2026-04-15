@@ -216,9 +216,9 @@ export const WallpaperGeneratorTool: React.FC<WallpaperGeneratorToolProps> = ({ 
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{isEditFromGallery ? t('tools.wallpaperGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.wallpaperGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{isEditFromGallery ? t('tools.wallpaperGenerator.settingsRestoredFromYourSaved', 'Settings restored from your saved gallery') : t('tools.wallpaperGenerator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
 
@@ -333,7 +333,7 @@ export const WallpaperGeneratorTool: React.FC<WallpaperGeneratorToolProps> = ({ 
                 <button
                   onClick={handleSave}
                   disabled={isSaving}
-                  className="flex items-center gap-2 px-3 py-2 bg-[#0D9488] hover:bg-[#0D9488]/90 text-white rounded-lg text-sm disabled:opacity-50"
+                  className="flex items-center gap-2 px-3 py-2 bg-[#6096B4] hover:bg-[#6096B4]/90 text-white rounded-lg text-sm disabled:opacity-50"
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.wallpaperGenerator.save', 'Save')}

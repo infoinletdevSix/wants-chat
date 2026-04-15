@@ -206,9 +206,9 @@ const LearningPage: React.FC<LearningPageProps> = () => {
         'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-500/30 shadow-md';
     } else if (isUnitCurrent(unit)) {
       baseStyle +=
-        'bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border-teal-500/50 shadow-md ring-2 ring-teal-500/30';
+        'bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border-primary-500/50 shadow-md ring-2 ring-primary-500/30';
     } else if (isUnitUnlocked(unit)) {
-      baseStyle += 'border-white/20 hover:border-teal-400/50';
+      baseStyle += 'border-white/20 hover:border-primary-400/50';
     } else {
       baseStyle += 'border-white/10 opacity-60';
     }
@@ -229,8 +229,8 @@ const LearningPage: React.FC<LearningPageProps> = () => {
         {/* Page Header */}
         <div className="mb-8">
           <div className="flex items-center space-x-4 mb-4">
-            <div className="p-3 bg-teal-500/20 rounded-xl">
-              <GraduationCap className="h-8 w-8 text-teal-400" />
+            <div className="p-3 bg-primary-500/20 rounded-xl">
+              <GraduationCap className="h-8 w-8 text-primary-400" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-white">Browse Lessons</h1>
@@ -244,7 +244,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
         {/* Loading State */}
         {lessonsLoading && (
           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin h-8 w-8 border-2 border-teal-400 border-t-transparent rounded-full"></div>
+            <div className="animate-spin h-8 w-8 border-2 border-primary-400 border-t-transparent rounded-full"></div>
           </div>
         )}
 
@@ -278,8 +278,8 @@ const LearningPage: React.FC<LearningPageProps> = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
-                    <div className="p-2 rounded-lg bg-teal-500/20">
-                      <BookOpen className="h-6 w-6 text-teal-400" />
+                    <div className="p-2 rounded-lg bg-primary-500/20">
+                      <BookOpen className="h-6 w-6 text-primary-400" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-white">
@@ -356,8 +356,8 @@ const LearningPage: React.FC<LearningPageProps> = () => {
         <GlassCard className="mb-6" hover={false}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-3">
-              <div className="p-2 rounded-lg bg-teal-500/20">
-                <BookOpen className="h-5 w-5 text-teal-400" />
+              <div className="p-2 rounded-lg bg-primary-500/20">
+                <BookOpen className="h-5 w-5 text-primary-400" />
               </div>
               <span className="text-lg font-semibold text-white">Course Progress</span>
             </div>
@@ -367,7 +367,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
           </div>
           <div className="h-3 bg-white/10 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300"
+              className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
               style={{ width: `${(lessonStats as any).overallProgress}%` }}
             />
           </div>
@@ -456,7 +456,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
                             return completedExercises > 0 && completedExercises < totalExercises && (
                               <div className="h-1 mt-1 bg-white/10 rounded-full overflow-hidden">
                                 <div
-                                  className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full"
+                                  className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full"
                                   style={{ width: `${progressPercentage}%` }}
                                 />
                               </div>
@@ -499,7 +499,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
                   </div>
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-300"
+                      className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-300"
                       style={{ width: `${unitProgress?.progress_percentage || selectedUnit.user_progress.progress_percentage}%` }}
                     />
                   </div>
@@ -514,7 +514,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
                     </div>
                   </div>
                   <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
-                    <Target className="h-5 w-5 text-teal-400 mx-auto mb-1" />
+                    <Target className="h-5 w-5 text-primary-400 mx-auto mb-1" />
                     <div className="text-sm font-medium text-white">
                       {selectedUnit.estimated_duration_minutes} min
                     </div>
@@ -535,7 +535,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
                     </div>
                     {selectedUnit.user_progress.total_time_spent && (
                       <div className="flex items-center space-x-2 text-sm">
-                        <Target className="h-4 w-4 text-teal-400" />
+                        <Target className="h-4 w-4 text-primary-400" />
                         <span className="text-white/60">
                           Time spent: {Math.floor(selectedUnit.user_progress.total_time_spent / 60)} minutes
                         </span>
@@ -546,7 +546,7 @@ const LearningPage: React.FC<LearningPageProps> = () => {
 
                 {/* Action Button */}
                 <Button
-                  className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+                  className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
                   disabled={selectedUnit.is_locked}
                   size="lg"
                   onClick={() => {
@@ -568,13 +568,13 @@ const LearningPage: React.FC<LearningPageProps> = () => {
               </div>
             ) : loading ? (
               <div className="text-center py-8">
-                <div className="animate-spin h-8 w-8 border-2 border-teal-400 border-t-transparent rounded-full mx-auto mb-4"></div>
+                <div className="animate-spin h-8 w-8 border-2 border-primary-400 border-t-transparent rounded-full mx-auto mb-4"></div>
                 <p className="text-white/60 text-sm">Loading units...</p>
               </div>
             ) : error ? (
               <div className="text-center py-8">
                 <div className="text-red-400 mb-4">{error}</div>
-                <Button onClick={() => refetchUnits()} size="sm" className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">
+                <Button onClick={() => refetchUnits()} size="sm" className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600">
                   Try Again
                 </Button>
               </div>

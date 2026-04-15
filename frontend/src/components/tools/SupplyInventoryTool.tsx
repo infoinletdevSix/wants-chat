@@ -459,9 +459,9 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.supplyInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.supplyInventory.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -469,7 +469,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Package className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -526,7 +526,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -667,7 +667,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <select
@@ -712,7 +712,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={() => setShowSupplyForm(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Plus className="w-4 h-4" />
                     {t('tools.supplyInventory.addSupply', 'Add Supply')}
@@ -832,7 +832,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
               </CardTitle>
               <button
                 onClick={() => setShowTransactionForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.supplyInventory.logTransaction2', 'Log Transaction')}
@@ -913,7 +913,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
               </CardTitle>
               <button
                 onClick={() => setShowSupplierForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.supplyInventory.addSupplier', 'Add Supplier')}
@@ -1228,7 +1228,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addSupply}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.supplyInventory.addSupply2', 'Add Supply')}
                   </button>
@@ -1338,7 +1338,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addTransaction}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.supplyInventory.logTransaction3', 'Log Transaction')}
                   </button>
@@ -1424,7 +1424,7 @@ export const SupplyInventoryTool: React.FC<SupplyInventoryToolProps> = ({ uiConf
                   </button>
                   <button
                     onClick={addSupplier}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.supplyInventory.addSupplier3', 'Add Supplier')}
                   </button>

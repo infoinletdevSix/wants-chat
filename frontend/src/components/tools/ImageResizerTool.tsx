@@ -333,17 +333,17 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
       <div className="space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && image && (
-          <div className="flex items-center justify-between gap-2 px-4 py-3 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
+          <div className="flex items-center justify-between gap-2 px-4 py-3 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">
                 Pre-filled from chat: Image loaded
                 {uiConfig?.params?.width && uiConfig?.params?.height && (
                   <span className="ml-1">• Target size: {uiConfig.params.width}×{uiConfig.params.height}px</span>
                 )}
               </span>
             </div>
-            <span className="text-xs text-[#0D9488]/70">{t('tools.imageResizer.readyToResize', 'Ready to resize!')}</span>
+            <span className="text-xs text-[#6096B4]/70">{t('tools.imageResizer.readyToResize', 'Ready to resize!')}</span>
           </div>
         )}
 
@@ -355,7 +355,7 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
             onDragLeave={handleDragLeave}
             className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
               isDragging
-                ? t('tools.imageResizer.border0d9488Bg0d948810', 'border-[#0D9488] bg-[#0D9488]/10') : t('tools.imageResizer.borderGray600HoverBorder', 'border-gray-600 hover:border-[#0D9488]/50 bg-gray-800/50')
+                ? t('tools.imageResizer.border0d9488Bg0d948810', 'border-[#6096B4] bg-[#6096B4]/10') : t('tools.imageResizer.borderGray600HoverBorder', 'border-gray-600 hover:border-[#6096B4]/50 bg-gray-800/50')
             }`}
             onClick={() => fileInputRef.current?.click()}
           >
@@ -410,7 +410,7 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
                     type="number"
                     value={width}
                     onChange={(e) => handleWidthChange(Number(e.target.value))}
-                    className="w-full px-4 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent"
                   />
                 </div>
 
@@ -418,7 +418,7 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
                   onClick={() => setAspectRatioLocked(!aspectRatioLocked)}
                   className={`p-2 rounded-lg transition-colors ${
                     aspectRatioLocked
-                      ? t('tools.imageResizer.bg0d9488TextWhite', 'bg-[#0D9488] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                      ? t('tools.imageResizer.bg0d9488TextWhite', 'bg-[#6096B4] text-white') : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                   title={aspectRatioLocked ? t('tools.imageResizer.aspectRatioLocked', 'Aspect ratio locked') : t('tools.imageResizer.aspectRatioUnlocked', 'Aspect ratio unlocked')}
                 >
@@ -437,7 +437,7 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
                     type="number"
                     value={height}
                     onChange={(e) => handleHeightChange(Number(e.target.value))}
-                    className="w-full px-4 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent"
                   />
                 </div>
               </div>
@@ -468,7 +468,7 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
                 <button
                   onClick={resizeImage}
                   disabled={isResizing}
-                  className="flex-1 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isResizing ? (
                     <>
@@ -517,7 +517,7 @@ export const ImageResizerTool = ({ uiConfig }: ImageResizerToolProps) => {
                   <button
                     onClick={handleSave}
                     disabled={isSaving}
-                    className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSaving ? (
                       <>

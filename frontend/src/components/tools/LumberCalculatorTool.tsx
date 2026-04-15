@@ -174,9 +174,9 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg"><TreeDeciduous className="w-5 h-5 text-teal-500" /></div>
+          <div className="p-2 bg-primary-500/10 rounded-lg"><TreeDeciduous className="w-5 h-5 text-primary-500" /></div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.lumberCalculator.lumberCalculator', 'Lumber Calculator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.lumberCalculator.calculateBoardFeetLinearFeet', 'Calculate board feet, linear feet, and costs')}</p>
@@ -195,7 +195,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
               <button
                 key={size}
                 onClick={() => setLumberSize(size)}
-                className={`py-2 px-3 rounded-lg text-sm ${lumberSize === size ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${lumberSize === size ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {lumberSizes[size].name}
               </button>
@@ -206,7 +206,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
               <button
                 key={size}
                 onClick={() => setLumberSize(size)}
-                className={`py-2 px-3 rounded-lg text-sm ${lumberSize === size ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${lumberSize === size ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {lumberSizes[size].name}
               </button>
@@ -259,7 +259,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
               <button
                 key={type}
                 onClick={() => setWoodType(type)}
-                className={`py-2 px-3 rounded-lg text-sm ${woodType === type ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`py-2 px-3 rounded-lg text-sm ${woodType === type ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {woodTypes[type].name}
               </button>
@@ -280,7 +280,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
               <button
                 key={grade}
                 onClick={() => setLumberGrade(grade)}
-                className={`flex-1 py-2 rounded-lg text-sm capitalize ${lumberGrade === grade ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm capitalize ${lumberGrade === grade ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {grade}
               </button>
@@ -289,9 +289,9 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
         </div>
 
         {/* Board Dimensions */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Ruler className="w-4 h-4 text-teal-500" />
+            <Ruler className="w-4 h-4 text-primary-500" />
             {t('tools.lumberCalculator.boardDetails', 'Board Details')}
           </h4>
           <div className="grid grid-cols-2 gap-4">
@@ -302,7 +302,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
                   <button
                     key={len}
                     onClick={() => setBoardLength(len.toString())}
-                    className={`flex-1 py-2 rounded-lg text-sm ${parseInt(boardLength) === len ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}
+                    className={`flex-1 py-2 rounded-lg text-sm ${parseInt(boardLength) === len ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'}`}
                   >
                     {len}'
                   </button>
@@ -338,7 +338,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
               <button
                 key={w}
                 onClick={() => setWasteFactor(w.toString())}
-                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(wasteFactor) === w ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                className={`flex-1 py-2 rounded-lg text-sm ${parseInt(wasteFactor) === w ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
               >
                 {w}%
               </button>
@@ -350,10 +350,10 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
         <div className="grid grid-cols-2 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className="flex items-center gap-2 mb-2">
-              <Calculator className="w-4 h-4 text-teal-500" />
+              <Calculator className="w-4 h-4 text-primary-500" />
               <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.lumberCalculator.boardFeet', 'Board Feet')}</span>
             </div>
-            <div className="text-3xl font-bold text-teal-500">{calculations.totalBoardFeetWithWaste}</div>
+            <div className="text-3xl font-bold text-primary-500">{calculations.totalBoardFeetWithWaste}</div>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               {calculations.boardFeetPerPiece} BF per board
             </div>
@@ -391,7 +391,7 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
         {/* Custom Pricing */}
         <div className="space-y-3">
           <h4 className={`font-medium flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <DollarSign className="w-4 h-4 text-teal-500" />
+            <DollarSign className="w-4 h-4 text-primary-500" />
             {t('tools.lumberCalculator.customPricingOptional', 'Custom Pricing (optional)')}
           </h4>
           <div className="grid grid-cols-2 gap-4">
@@ -425,9 +425,9 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <DollarSign className="w-4 h-4 text-teal-500" />
+            <DollarSign className="w-4 h-4 text-primary-500" />
             {t('tools.lumberCalculator.costEstimate', 'Cost Estimate')}
           </h4>
           <div className="space-y-2">
@@ -443,9 +443,9 @@ export const LumberCalculatorTool: React.FC<LumberCalculatorToolProps> = ({ uiCo
               <span>Cost per board ({boardLength}')</span>
               <span>${calculations.costPerBoard}</span>
             </div>
-            <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-teal-800' : 'border-teal-200'}`}>
+            <div className={`flex justify-between pt-2 border-t ${isDark ? 'border-primary-800' : 'border-primary-200'}`}>
               <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.lumberCalculator.totalEstimatedCost', 'Total Estimated Cost')}</span>
-              <span className="text-xl font-bold text-teal-500">${calculations.costByBoardFoot}</span>
+              <span className="text-xl font-bold text-primary-500">${calculations.costByBoardFoot}</span>
             </div>
           </div>
         </div>

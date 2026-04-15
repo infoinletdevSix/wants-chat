@@ -51,7 +51,7 @@ const RecentReminders: React.FC<RecentRemindersProps> = ({
   const getPriorityColor = (priority: Reminder['priority']) => {
     switch (priority) {
       case 'high': return 'bg-red-500/20 text-red-400 border-red-500/30';
-      case 'medium': return 'bg-teal-500/20 text-teal-400 border-teal-500/30';
+      case 'medium': return 'bg-primary-500/20 text-primary-400 border-primary-500/30';
       case 'low': return 'bg-white/10 text-white/60 border-white/20';
       default: return 'bg-white/10 text-white/60 border-white/20';
     }
@@ -86,7 +86,7 @@ const RecentReminders: React.FC<RecentRemindersProps> = ({
           <Button 
             size="sm" 
             onClick={() => onAction?.(reminder.id, 'reschedule')}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white h-6 px-2 text-xs"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white h-6 px-2 text-xs"
           >
             Reschedule
           </Button>
@@ -109,7 +109,7 @@ const RecentReminders: React.FC<RecentRemindersProps> = ({
   if (loading) {
     return (
       <Card className="p-6 text-center bg-white/10 backdrop-blur-xl border border-white/20">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-teal-400 mb-4"></div>
+        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-400 mb-4"></div>
         <p className="text-sm text-white/60">Loading reminders...</p>
       </Card>
     );
@@ -128,7 +128,7 @@ const RecentReminders: React.FC<RecentRemindersProps> = ({
     <Card className="p-4 bg-white/10 backdrop-blur-xl border border-white/20">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <Icon path={mdiBell} size={0.8} className="text-teal-400" />
+          <Icon path={mdiBell} size={0.8} className="text-primary-400" />
           <h3 className="font-semibold text-white">Recent Reminders</h3>
         </div>
         <Badge className="text-xs bg-white/10 border border-white/20 text-white/80">

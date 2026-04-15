@@ -114,7 +114,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Circle className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -126,9 +126,9 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.circleCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.circleCalculator.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -144,7 +144,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                   onClick={() => setMode(m.key)}
                   className={`px-4 py-3 rounded-lg border transition-colors ${
                     mode === m.key
-                      ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                      ? 'bg-[#6096B4] text-white border-[#6096B4]'
                       : isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600'
                       : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -172,7 +172,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                 isDarkMode
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
               placeholder={t('tools.circleCalculator.enterValue', 'Enter value')}
             />
           </div>
@@ -187,7 +187,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                 {/* Radius */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'radius' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'radius' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -203,7 +203,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                       {copied === 'radius' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.radius)}
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                 {/* Diameter */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'diameter' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'diameter' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -227,7 +227,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                       {copied === 'diameter' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.diameter)}
                   </div>
                 </div>
@@ -235,7 +235,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                 {/* Circumference */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'circumference' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'circumference' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -251,7 +251,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                       {copied === 'circumference' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.circumference)}
                   </div>
                 </div>
@@ -259,7 +259,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                 {/* Area */}
                 <div
                   className={`p-4 rounded-lg border ${
-                    mode === 'area' ? 'ring-2 ring-[#0D9488]' : ''
+                    mode === 'area' ? 'ring-2 ring-[#6096B4]' : ''
                   } ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'}`}
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -275,7 +275,7 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                       {copied === 'area' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.area)}
                   </div>
                 </div>
@@ -298,13 +298,13 @@ const CircleCalculatorTool: React.FC<CircleCalculatorToolProps> = ({ uiConfig })
                       cy="100"
                       r="80"
                       fill={isDarkMode ? 'rgba(13, 148, 136, 0.2)' : 'rgba(13, 148, 136, 0.1)'}
-                      stroke="#0D9488"
+                      stroke="#6096B4"
                       strokeWidth="2"
                     />
                     {/* Radius line */}
-                    <line x1="100" y1="100" x2="180" y2="100" stroke="#0D9488" strokeWidth="2" strokeDasharray="5,5" />
+                    <line x1="100" y1="100" x2="180" y2="100" stroke="#6096B4" strokeWidth="2" strokeDasharray="5,5" />
                     {/* Center dot */}
-                    <circle cx="100" cy="100" r="4" fill="#0D9488" />
+                    <circle cx="100" cy="100" r="4" fill="#6096B4" />
                     {/* Radius label */}
                     <text x="140" y="95" fill={isDarkMode ? '#fff' : '#333'} fontSize="12" textAnchor="middle">
                       r = {formatNumber(results.radius).substring(0, 6)}

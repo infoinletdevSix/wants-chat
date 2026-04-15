@@ -131,10 +131,10 @@ export const CashFlowCalculatorTool: React.FC<CashFlowCalculatorToolProps> = ({ 
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Wallet className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Wallet className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.cashFlowCalculator.rentalCashFlowCalculator', 'Rental Cash Flow Calculator')}</h3>
@@ -145,9 +145,9 @@ export const CashFlowCalculatorTool: React.FC<CashFlowCalculatorToolProps> = ({ 
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.cashFlowCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.cashFlowCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -338,14 +338,14 @@ export const CashFlowCalculatorTool: React.FC<CashFlowCalculatorToolProps> = ({ 
         </div>
 
         {/* Cash Flow Summary */}
-        <div className={`p-6 rounded-xl ${calculations.isPositive ? (isDark ? t('tools.cashFlowCalculator.bg0d948820Border0d9488', 'bg-[#0D9488]/20 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
+        <div className={`p-6 rounded-xl ${calculations.isPositive ? (isDark ? t('tools.cashFlowCalculator.bg0d948820Border0d9488', 'bg-[#6096B4]/20 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200') : (isDark ? 'bg-red-900/20 border-red-800' : 'bg-red-50 border-red-200')} border`}>
           <div className="text-center mb-4">
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cashFlowCalculator.monthlyCashFlow', 'Monthly Cash Flow')}</div>
-            <div className={`text-5xl font-bold flex items-center justify-center gap-2 ${calculations.isPositive ? t('tools.cashFlowCalculator.text0d9488', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-5xl font-bold flex items-center justify-center gap-2 ${calculations.isPositive ? t('tools.cashFlowCalculator.text0d9488', 'text-[#6096B4]') : 'text-red-500'}`}>
               {calculations.isPositive ? <TrendingUp className="w-8 h-8" /> : <TrendingDown className="w-8 h-8" />}
               {formatCurrency(calculations.monthlyCashFlow)}
             </div>
-            <div className={`text-lg ${calculations.isPositive ? t('tools.cashFlowCalculator.text0d94882', 'text-[#0D9488]') : 'text-red-500'}`}>
+            <div className={`text-lg ${calculations.isPositive ? t('tools.cashFlowCalculator.text0d94882', 'text-[#6096B4]') : 'text-red-500'}`}>
               {formatCurrency(calculations.annualCashFlow)}/year
             </div>
           </div>
@@ -367,7 +367,7 @@ export const CashFlowCalculatorTool: React.FC<CashFlowCalculatorToolProps> = ({ 
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cashFlowCalculator.monthlyNoi', 'Monthly NOI')}</div>
-            <div className="text-xl font-bold text-[#0D9488]">{formatCurrency(calculations.monthlyNoi)}</div>
+            <div className="text-xl font-bold text-[#6096B4]">{formatCurrency(calculations.monthlyNoi)}</div>
           </div>
         </div>
 
@@ -383,7 +383,7 @@ export const CashFlowCalculatorTool: React.FC<CashFlowCalculatorToolProps> = ({ 
                 <div className="flex items-center gap-3">
                   <div className="w-24 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-[#0D9488] rounded-full"
+                      className="h-full bg-[#6096B4] rounded-full"
                       style={{ width: `${Math.min(expense.percentage, 100)}%` }}
                     />
                   </div>
@@ -399,7 +399,7 @@ export const CashFlowCalculatorTool: React.FC<CashFlowCalculatorToolProps> = ({ 
         {/* Operating Expense Ratio */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.cashFlowCalculator.operatingExpenseRatio', 'Operating Expense Ratio')}</div>
-          <div className={`text-2xl font-bold ${calculations.operatingExpenseRatio > 50 ? 'text-amber-500' : t('tools.cashFlowCalculator.text0d94883', 'text-[#0D9488]')}`}>
+          <div className={`text-2xl font-bold ${calculations.operatingExpenseRatio > 50 ? 'text-amber-500' : t('tools.cashFlowCalculator.text0d94883', 'text-[#6096B4]')}`}>
             {calculations.operatingExpenseRatio.toFixed(1)}%
           </div>
           <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>

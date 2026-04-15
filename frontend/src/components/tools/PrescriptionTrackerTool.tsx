@@ -484,7 +484,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -498,7 +498,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
           <CardHeader>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Pill className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -541,7 +541,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                 />
                 <button
                   onClick={() => setShowForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                 >
                   <Plus className="w-5 h-5" />
                   {t('tools.prescriptionTracker.addMedication', 'Add Medication')}
@@ -655,7 +655,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                 activeTab === tab
-                  ? 'bg-[#0D9488] text-white'
+                  ? 'bg-[#6096B4] text-white'
                   : theme === 'dark'
                   ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -687,7 +687,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                   theme === 'dark'
                     ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="flex gap-2">
@@ -695,7 +695,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                 onClick={() => setFilterActive('all')}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   filterActive === 'all'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -707,7 +707,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                 onClick={() => setFilterActive('active')}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   filterActive === 'active'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -719,7 +719,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                 onClick={() => setFilterActive('inactive')}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   filterActive === 'inactive'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1123,7 +1123,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.prescriptionTracker.allMedications', 'All Medications')}</option>
                     {medications.map(med => (
@@ -1274,7 +1274,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1290,7 +1290,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1307,7 +1307,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       {frequencyOptions.map(opt => (
                         <option key={opt} value={opt}>
@@ -1329,7 +1329,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1352,7 +1352,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1368,7 +1368,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1384,7 +1384,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1409,7 +1409,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1425,7 +1425,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1442,7 +1442,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1463,7 +1463,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1479,7 +1479,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -1492,7 +1492,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         type="checkbox"
                         checked={formData.isGeneric}
                         onChange={e => setFormData({ ...formData, isGeneric: e.target.checked })}
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.prescriptionTracker.thisIsAGenericMedication', 'This is a generic medication')}
@@ -1513,7 +1513,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1529,7 +1529,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1549,7 +1549,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1569,7 +1569,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                             reminderSchedule: { ...formData.reminderSchedule, enabled: e.target.checked },
                           })
                         }
-                        className="w-4 h-4 rounded accent-[#0D9488]"
+                        className="w-4 h-4 rounded accent-[#6096B4]"
                       />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         {t('tools.prescriptionTracker.enableReminders', 'Enable reminders')}
@@ -1597,7 +1597,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                         theme === 'dark'
                           ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                           : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <div>
@@ -1621,7 +1621,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                           }}
                           className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                             formData.reminderSchedule.daysOfWeek.includes(index)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : theme === 'dark'
                               ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1648,7 +1648,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
 
@@ -1658,7 +1658,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                     type="checkbox"
                     checked={formData.active}
                     onChange={e => setFormData({ ...formData, active: e.target.checked })}
-                    className="w-4 h-4 rounded accent-[#0D9488]"
+                    className="w-4 h-4 rounded accent-[#6096B4]"
                     id="active-status"
                   />
                   <label
@@ -1674,7 +1674,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
               <div className="sticky bottom-0 bg-inherit p-4 border-t border-gray-200 dark:border-gray-700 flex gap-3">
                 <button
                   onClick={handleSubmit}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 rounded-lg transition-colors"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 rounded-lg transition-colors"
                 >
                   {editingId ? t('tools.prescriptionTracker.updateMedication', 'Update Medication') : t('tools.prescriptionTracker.addMedication2', 'Add Medication')}
                 </button>
@@ -1744,7 +1744,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -1752,7 +1752,7 @@ export const PrescriptionTrackerTool = ({ uiConfig }: PrescriptionTrackerToolPro
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleLogAdherence}
-                  className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 rounded-lg transition-colors"
+                  className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 rounded-lg transition-colors"
                 >
                   {t('tools.prescriptionTracker.logDose2', 'Log Dose')}
                 </button>

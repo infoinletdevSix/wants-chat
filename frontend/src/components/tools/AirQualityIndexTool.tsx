@@ -226,7 +226,7 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
         {/* Header Card */}
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Wind className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -240,9 +240,9 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.airQualityIndex.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mt-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.airQualityIndex.valueLoadedFromAiResponse', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -264,7 +264,7 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -272,7 +272,7 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
             <div className="flex gap-3">
               <button
                 onClick={analyzeAqi}
-                className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Wind className="w-5 h-5" />
                 {t('tools.airQualityIndex.analyzeAqi', 'Analyze AQI')}
@@ -425,7 +425,7 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
         {/* AQI Scale Reference */}
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <h3 className={`font-semibold mb-4 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-            <Info className="w-5 h-5 text-[#0D9488]" />
+            <Info className="w-5 h-5 text-[#6096B4]" />
             {t('tools.airQualityIndex.aqiScaleReference', 'AQI Scale Reference')}
           </h3>
           <div className="space-y-3">
@@ -472,7 +472,7 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
             className={`w-full flex items-center justify-between ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}
           >
             <h3 className="font-semibold flex items-center gap-2">
-              <Wind className="w-5 h-5 text-[#0D9488]" />
+              <Wind className="w-5 h-5 text-[#6096B4]" />
               {t('tools.airQualityIndex.pollutantBreakdown', 'Pollutant Breakdown')}
             </h3>
             {showPollutants ? (
@@ -498,7 +498,7 @@ export function AirQualityIndexTool({ uiConfig }: AirQualityIndexToolProps) {
                     }`}
                   >
                     <div>
-                      <span className="font-semibold text-[#0D9488]">{pollutant.name}</span>
+                      <span className="font-semibold text-[#6096B4]">{pollutant.name}</span>
                       <span className={`ml-2 text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                         ({pollutant.fullName})
                       </span>

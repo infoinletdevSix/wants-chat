@@ -266,7 +266,7 @@ export const TimezoneMeetingTool: React.FC<TimezoneMeetingToolProps> = ({ uiConf
     return (
       <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin text-teal-500" />
+          <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
         </div>
       </div>
     );
@@ -275,11 +275,11 @@ export const TimezoneMeetingTool: React.FC<TimezoneMeetingToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Globe className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Globe className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.timezoneMeeting.timezoneMeetingPlanner', 'Timezone Meeting Planner')}</h3>
@@ -404,9 +404,9 @@ export const TimezoneMeetingTool: React.FC<TimezoneMeetingToolProps> = ({ uiConf
         </div>
 
         {/* Results */}
-        <div className={`p-4 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+        <div className={`p-4 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
           <div className="flex items-center justify-between mb-4">
-            <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+            <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
               {t('tools.timezoneMeeting.meetingTimes', 'Meeting Times')}
             </h4>
             <button

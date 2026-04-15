@@ -108,7 +108,7 @@ const SelectTrigger = React.forwardRef<HTMLButtonElement, SelectTriggerProps>(
         type="button"
         onClick={() => context.setOpen(!context.open)}
         className={cn(
-          "flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50",
           "bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white",
           className
         )}
@@ -281,7 +281,7 @@ const SelectItem = React.forwardRef<HTMLDivElement, SelectItemProps>(
         {...props}
       >
         {isSelected && (
-          <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center text-teal-500 dark:text-teal-400">
+          <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center text-primary-500 dark:text-primary-400">
             <Check className="h-4 w-4" />
           </span>
         )}

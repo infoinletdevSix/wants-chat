@@ -192,7 +192,7 @@ const EmergencyContacts: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Welcome Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             Emergency Contact Management
           </h1>
@@ -258,7 +258,7 @@ const EmergencyContacts: React.FC = () => {
                 Emergency Contacts ({!isLoading && !isError ? filteredContacts.length : '...'})
               </h2>
               <Button
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                 onClick={() => navigate('/health/add-emergency-contact')}
               >
                 <PersonAdd className="h-5 w-5 mr-2" />
@@ -292,7 +292,7 @@ const EmergencyContacts: React.FC = () => {
                 <p className="text-white/60 mb-6">
                   {error || 'Failed to load emergency contacts. Please try again.'}
                 </p>
-                <Button onClick={() => refetch()} className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+                <Button onClick={() => refetch()} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
                   Try Again
                 </Button>
               </GlassCard>
@@ -336,13 +336,13 @@ const EmergencyContacts: React.FC = () => {
 
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm">
-                        <PhoneIcon className="h-4 w-4 text-teal-400" />
+                        <PhoneIcon className="h-4 w-4 text-primary-400" />
                         <span className="text-white/80">{contact.phone}</span>
                       </div>
 
                       {contact.alternatePhone && (
                         <div className="flex items-center gap-2 text-sm">
-                          <PhoneIcon className="h-4 w-4 text-teal-400" />
+                          <PhoneIcon className="h-4 w-4 text-primary-400" />
                           <span className="text-white/80">{contact.alternatePhone}</span>
                           <Badge variant="outline" className="text-xs border-white/20 text-white/60">Alt</Badge>
                         </div>
@@ -350,21 +350,21 @@ const EmergencyContacts: React.FC = () => {
 
                       {contact.email && (
                         <div className="flex items-center gap-2 text-sm">
-                          <EmailIcon className="h-4 w-4 text-teal-400" />
+                          <EmailIcon className="h-4 w-4 text-primary-400" />
                           <span className="text-white/80 truncate">{contact.email}</span>
                         </div>
                       )}
 
                       {contact.address && (
                         <div className="flex items-center gap-2 text-sm">
-                          <LocationOn className="h-4 w-4 text-teal-400" />
+                          <LocationOn className="h-4 w-4 text-primary-400" />
                           <span className="text-white/80">{contact.address}</span>
                         </div>
                       )}
 
                       {contact.availability && (
                         <div className="flex items-center gap-2 text-sm">
-                          <Speed className="h-4 w-4 text-teal-400" />
+                          <Speed className="h-4 w-4 text-primary-400" />
                           <span className="text-white/80">{contact.availability}</span>
                         </div>
                       )}
@@ -380,7 +380,7 @@ const EmergencyContacts: React.FC = () => {
                       <Button
                         size="sm"
                         onClick={() => window.location.href = `tel:${contact.phone}`}
-                        className="rounded-lg flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                        className="rounded-lg flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                       >
                         <Phone className="h-4 w-4 mr-1" />
                         Call
@@ -421,7 +421,7 @@ const EmergencyContacts: React.FC = () => {
                 {!searchQuery && (
                   <Button
                     onClick={() => navigate('/health/add-emergency-contact')}
-                    className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                    className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                   >
                     <PersonAdd className="h-5 w-5 mr-2" />
                     Add Your First Contact
@@ -438,7 +438,7 @@ const EmergencyContacts: React.FC = () => {
                 Medical Facilities ({!facilitiesLoading && !facilitiesError ? filteredFacilities.length : '...'})
               </h2>
               <Button
-                className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                 onClick={() => navigate('/health/add-medical-facility')}
               >
                 <Plus className="h-5 w-5 mr-2" />
@@ -472,7 +472,7 @@ const EmergencyContacts: React.FC = () => {
                 <p className="text-white/60 mb-6">
                   {facilitiesErrorMessage || 'Failed to load medical facilities. Please try again.'}
                 </p>
-                <Button onClick={() => refetchFacilities()} className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
+                <Button onClick={() => refetchFacilities()} className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600">
                   Try Again
                 </Button>
               </GlassCard>
@@ -523,18 +523,18 @@ const EmergencyContacts: React.FC = () => {
 
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm">
-                        <PhoneIcon className="h-4 w-4 text-teal-400" />
+                        <PhoneIcon className="h-4 w-4 text-primary-400" />
                         <span className="text-white/80">{facility.phone}</span>
                       </div>
 
                       <div className="flex items-center gap-2 text-sm">
-                        <LocationOn className="h-4 w-4 text-teal-400" />
+                        <LocationOn className="h-4 w-4 text-primary-400" />
                         <span className="text-white/80">{facility.address}</span>
                       </div>
 
                       {facility.hours && (
                         <div className="flex items-center gap-2 text-sm">
-                          <Speed className="h-4 w-4 text-teal-400" />
+                          <Speed className="h-4 w-4 text-primary-400" />
                           <span className="text-white/80">{facility.hours}</span>
                         </div>
                       )}
@@ -560,7 +560,7 @@ const EmergencyContacts: React.FC = () => {
                       <Button
                         size="sm"
                         onClick={() => window.location.href = `tel:${facility.phone}`}
-                        className="rounded-lg flex-1 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                        className="rounded-lg flex-1 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                       >
                         <Phone className="h-4 w-4 mr-1" />
                         Call
@@ -610,7 +610,7 @@ const EmergencyContacts: React.FC = () => {
                 {!searchQuery && (
                   <Button
                     onClick={() => navigate('/health/add-medical-facility')}
-                    className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                    className="rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
                   >
                     <Plus className="h-5 w-5 mr-2" />
                     Add Your First Facility

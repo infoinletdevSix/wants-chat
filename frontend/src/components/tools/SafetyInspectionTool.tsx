@@ -398,8 +398,8 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-100 rounded-lg">
-            <ShieldCheck className="w-6 h-6 text-teal-600" />
+          <div className="p-2 bg-primary-100 rounded-lg">
+            <ShieldCheck className="w-6 h-6 text-primary-600" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{t('tools.safetyInspection.safetyInspection', 'Safety Inspection')}</h1>
@@ -473,7 +473,7 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
         <button
           onClick={() => setActiveTab('list')}
           className={`px-4 py-2 font-medium transition-colors ${
-            activeTab === 'list' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'list' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.safetyInspection.allInspections', 'All Inspections')}
@@ -481,7 +481,7 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
         <button
           onClick={() => setActiveTab('create')}
           className={`px-4 py-2 font-medium transition-colors ${
-            activeTab === 'create' ? 'text-teal-600 border-b-2 border-teal-600' : 'text-gray-500 hover:text-gray-700'
+            activeTab === 'create' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
           {t('tools.safetyInspection.newInspection', 'New Inspection')}
@@ -523,8 +523,8 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-teal-100 rounded-lg">
-                        <ShieldCheck className="w-5 h-5 text-teal-600" />
+                      <div className="p-2 bg-primary-100 rounded-lg">
+                        <ShieldCheck className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">{inspection.projectName}</h3>
@@ -590,7 +590,7 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
                           setEditingInspection(inspection);
                           setActiveTab('edit');
                         }}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 text-sm"
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 text-sm"
                       >
                         <Edit2 className="w-4 h-4" />
                         {t('tools.safetyInspection.edit', 'Edit')}
@@ -614,7 +614,7 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
                 <h3 className="text-lg font-medium text-gray-900">{t('tools.safetyInspection.noInspectionsFound', 'No inspections found')}</h3>
                 <button
                   onClick={() => setActiveTab('create')}
-                  className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                  className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
                 >
                   {t('tools.safetyInspection.createInspection', 'Create Inspection')}
                 </button>
@@ -831,7 +831,7 @@ export const SafetyInspectionTool: React.FC<SafetyInspectionToolProps> = ({
             </button>
             <button
               onClick={activeTab === 'edit' ? handleUpdate : handleSave}
-              className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
             >
               <Save className="w-4 h-4" />
               {activeTab === 'edit' ? t('tools.safetyInspection.update', 'Update') : t('tools.safetyInspection.save', 'Save')} Inspection

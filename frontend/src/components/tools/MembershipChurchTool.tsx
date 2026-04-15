@@ -552,9 +552,9 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.membershipChurch.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.membershipChurch.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -562,7 +562,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
         <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -614,7 +614,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -700,7 +700,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className={`pl-10 pr-4 py-2 rounded-lg border ${
                       isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   />
                 </div>
                 <select
@@ -708,7 +708,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                   onChange={(e) => setStatusFilter(e.target.value as StatusFilter)}
                   className={`px-4 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300'
-                  } focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.membershipChurch.allStatus', 'All Status')}</option>
                   <option value="active">{t('tools.membershipChurch.active', 'Active')}</option>
@@ -719,7 +719,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
               </div>
               <button
                 onClick={() => { resetMemberForm(); setEditingMember(null); setShowMemberModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.membershipChurch.addMember', 'Add Member')}
@@ -809,7 +809,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
               </h2>
               <button
                 onClick={() => { resetFamilyForm(); setEditingFamily(null); setShowFamilyModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.membershipChurch.addFamily', 'Add Family')}
@@ -877,7 +877,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
               </h2>
               <button
                 onClick={() => setShowAttendanceModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.membershipChurch.recordAttendance', 'Record Attendance')}
@@ -940,7 +940,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
               </h2>
               <button
                 onClick={() => { resetVisitorForm(); setEditingVisitor(null); setShowVisitorModal(true); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.membershipChurch.addVisitor', 'Add Visitor')}
@@ -1193,7 +1193,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handleSaveMember}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingMember ? t('tools.membershipChurch.saveChanges', 'Save Changes') : t('tools.membershipChurch.addMember2', 'Add Member')}
                 </button>
@@ -1270,7 +1270,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handleSaveFamily}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingFamily ? t('tools.membershipChurch.saveChanges2', 'Save Changes') : t('tools.membershipChurch.addFamily2', 'Add Family')}
                 </button>
@@ -1337,7 +1337,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                               });
                             }
                           }}
-                          className="rounded text-[#0D9488]"
+                          className="rounded text-[#6096B4]"
                         />
                         <span className={`${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                           {member.firstName} {member.lastName}
@@ -1359,7 +1359,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handleRecordAttendance}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {t('tools.membershipChurch.recordAttendance3', 'Record Attendance')}
                 </button>
@@ -1462,7 +1462,7 @@ export const MembershipChurchTool: React.FC<MembershipChurchToolProps> = ({ uiCo
                 </button>
                 <button
                   onClick={handleSaveVisitor}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B847A]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B847A]"
                 >
                   {editingVisitor ? t('tools.membershipChurch.saveChanges3', 'Save Changes') : t('tools.membershipChurch.addVisitor2', 'Add Visitor')}
                 </button>

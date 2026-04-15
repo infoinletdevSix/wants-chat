@@ -79,8 +79,8 @@ const RoomTemperature: React.FC = () => {
   const getTemperatureColor = (temp: number) => {
     if (temp < 0) return 'from-blue-600 to-cyan-600';
     if (temp < 10) return 'from-cyan-500 to-blue-500';
-    if (temp < 15) return 'from-teal-500 to-cyan-500';
-    if (temp < 20) return 'from-green-500 to-teal-500';
+    if (temp < 15) return 'from-primary-500 to-cyan-500';
+    if (temp < 20) return 'from-green-500 to-primary-500';
     if (temp < 25) return 'from-yellow-500 to-green-500';
     if (temp < 30) return 'from-orange-500 to-yellow-500';
     return 'from-red-500 to-orange-500';
@@ -99,7 +99,7 @@ const RoomTemperature: React.FC = () => {
   const temperaturePercentage = Math.min(Math.max(((temperature + 10) / 60) * 100, 0), 100);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900">
       <BackgroundEffects variant="subtle" />
       <Header />
 
@@ -114,14 +114,14 @@ const RoomTemperature: React.FC = () => {
             <Thermometer className="w-10 h-10 text-cyan-400" />
             Room Temperature
           </h1>
-          <p className="text-teal-200">Monitor ambient temperature in your environment</p>
+          <p className="text-primary-200">Monitor ambient temperature in your environment</p>
         </motion.div>
 
         {/* Main Temperature Display */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+          className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
         >
           <div className="flex flex-col items-center mb-8">
             {/* Thermometer Display */}
@@ -171,7 +171,7 @@ const RoomTemperature: React.FC = () => {
                 >
                   {temperature.toFixed(1)}°
                 </motion.div>
-                <div className="text-2xl text-teal-200">Celsius</div>
+                <div className="text-2xl text-primary-200">Celsius</div>
                 <motion.div
                   className={`mt-3 px-4 py-2 rounded-full bg-gradient-to-r ${getTemperatureColor(temperature)} text-white font-semibold`}
                   animate={{ scale: [1, 1.05, 1] }}
@@ -183,7 +183,7 @@ const RoomTemperature: React.FC = () => {
 
               {/* Thermometer Icon */}
               <motion.div
-                className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm rounded-full p-4 border border-teal-400/30"
+                className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm rounded-full p-4 border border-primary-400/30"
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
@@ -195,7 +195,7 @@ const RoomTemperature: React.FC = () => {
             <button
               onClick={fetchWeatherData}
               disabled={isLoading}
-              className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <span className="flex items-center gap-2">
@@ -212,24 +212,24 @@ const RoomTemperature: React.FC = () => {
           </div>
 
           {/* Temperature Scale Reference */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-primary-400/20">
             <h3 className="text-white font-semibold mb-4">Temperature Scale</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600"></div>
-                <span className="text-teal-200 text-sm">Below 0°C - Freezing</span>
+                <span className="text-primary-200 text-sm">Below 0°C - Freezing</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-3 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500"></div>
-                <span className="text-teal-200 text-sm">0°C - 15°C - Cold</span>
+                <div className="w-12 h-3 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500"></div>
+                <span className="text-primary-200 text-sm">0°C - 15°C - Cold</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-3 rounded-full bg-gradient-to-r from-green-500 to-yellow-500"></div>
-                <span className="text-teal-200 text-sm">15°C - 25°C - Comfortable</span>
+                <span className="text-primary-200 text-sm">15°C - 25°C - Comfortable</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500"></div>
-                <span className="text-teal-200 text-sm">Above 25°C - Warm/Hot</span>
+                <span className="text-primary-200 text-sm">Above 25°C - Warm/Hot</span>
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ const RoomTemperature: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 backdrop-blur-xl border border-teal-400/30 rounded-2xl p-8 shadow-2xl mb-6"
+            className="bg-gradient-to-br from-primary-900/50 to-cyan-900/50 backdrop-blur-xl border border-primary-400/30 rounded-2xl p-8 shadow-2xl mb-6"
           >
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
               <MapPin className="w-6 h-6 text-cyan-400" />
@@ -248,35 +248,35 @@ const RoomTemperature: React.FC = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center gap-3 mb-2">
                   <Thermometer className="w-5 h-5 text-orange-400" />
-                  <span className="text-teal-200 text-sm">Feels Like</span>
+                  <span className="text-primary-200 text-sm">Feels Like</span>
                 </div>
                 <div className="text-3xl font-bold text-white">{weatherData.feelsLike}°C</div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center gap-3 mb-2">
                   <Droplets className="w-5 h-5 text-blue-400" />
-                  <span className="text-teal-200 text-sm">Humidity</span>
+                  <span className="text-primary-200 text-sm">Humidity</span>
                 </div>
                 <div className="text-3xl font-bold text-white">{weatherData.humidity}%</div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center gap-3 mb-2">
                   <Wind className="w-5 h-5 text-cyan-400" />
-                  <span className="text-teal-200 text-sm">Wind Speed</span>
+                  <span className="text-primary-200 text-sm">Wind Speed</span>
                 </div>
                 <div className="text-3xl font-bold text-white">{weatherData.windSpeed}</div>
-                <div className="text-teal-400 text-xs mt-1">m/s</div>
+                <div className="text-primary-400 text-xs mt-1">m/s</div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-teal-400/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-primary-400/20">
                 <div className="flex items-center gap-3 mb-2">
-                  <MapPin className="w-5 h-5 text-teal-400" />
-                  <span className="text-teal-200 text-sm">Condition</span>
+                  <MapPin className="w-5 h-5 text-primary-400" />
+                  <span className="text-primary-200 text-sm">Condition</span>
                 </div>
                 <div className="text-2xl font-bold text-white">{weatherData.description}</div>
               </div>
@@ -306,7 +306,7 @@ const RoomTemperature: React.FC = () => {
             <Thermometer className="w-5 h-5 text-blue-400" />
             About Temperature Monitoring
           </h3>
-          <div className="space-y-3 text-teal-200 text-sm">
+          <div className="space-y-3 text-primary-200 text-sm">
             <p>
               This tool displays ambient temperature information. The readings shown are {useWeatherAPI ? 'from weather data based on your location.' : 'simulated for demonstration purposes.'}
             </p>
@@ -322,7 +322,7 @@ const RoomTemperature: React.FC = () => {
 
             <div className="bg-white/5 rounded-lg p-4 mt-4">
               <p className="font-semibold text-white mb-2">Note:</p>
-              <p className="text-teal-200 text-sm">
+              <p className="text-primary-200 text-sm">
                 Web browsers have limited access to device temperature sensors for privacy and security reasons.
                 For accurate room temperature monitoring, consider using dedicated IoT temperature sensors or smart home devices.
                 The weather API provides outdoor temperature based on your location.

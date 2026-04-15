@@ -122,7 +122,7 @@ export default function AgeCalculatorTool({ uiConfig }: AgeCalculatorToolProps) 
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Calendar className="w-6 h-6 text-white" />
             </div>
             <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -132,9 +132,9 @@ export default function AgeCalculatorTool({ uiConfig }: AgeCalculatorToolProps) 
 
           {/* Prefill indicator */}
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.ageCalculator.dateLoadedFromYourConversation', 'Date loaded from your conversation')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.ageCalculator.dateLoadedFromYourConversation', 'Date loaded from your conversation')}</span>
             </div>
           )}
 
@@ -160,7 +160,7 @@ export default function AgeCalculatorTool({ uiConfig }: AgeCalculatorToolProps) 
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
 
@@ -168,7 +168,7 @@ export default function AgeCalculatorTool({ uiConfig }: AgeCalculatorToolProps) 
           <div className="flex gap-3 mb-6">
             <button
               onClick={calculateAge}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <Calendar className="w-5 h-5" />
               {t('tools.ageCalculator.calculateAge', 'Calculate Age')}
@@ -189,11 +189,11 @@ export default function AgeCalculatorTool({ uiConfig }: AgeCalculatorToolProps) 
           {result && (
             <div className="space-y-4">
               {/* Main Age Display */}
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.ageCalculator.bg0d948815', 'bg-[#0D9488]15')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.ageCalculator.bg0d948815', 'bg-[#6096B4]15')
               }`}>
                 <div className="text-center mb-4">
-                  <div className="text-5xl font-bold text-[#0D9488] mb-2">
+                  <div className="text-5xl font-bold text-[#6096B4] mb-2">
                     {result.years}
                   </div>
                   <div className={`text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -203,13 +203,13 @@ export default function AgeCalculatorTool({ uiConfig }: AgeCalculatorToolProps) 
 
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                    <div className="text-2xl font-bold text-[#0D9488]">{result.months}</div>
+                    <div className="text-2xl font-bold text-[#6096B4]">{result.months}</div>
                     <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.ageCalculator.months', 'Months')}
                     </div>
                   </div>
                   <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                    <div className="text-2xl font-bold text-[#0D9488]">{result.days}</div>
+                    <div className="text-2xl font-bold text-[#6096B4]">{result.days}</div>
                     <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.ageCalculator.days', 'Days')}
                     </div>

@@ -451,9 +451,9 @@ export const ServiceRoutePestTool = ({
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.serviceRoutePest.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.serviceRoutePest.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -461,7 +461,7 @@ export const ServiceRoutePestTool = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Route className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -532,7 +532,7 @@ export const ServiceRoutePestTool = ({
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.serviceRoutePest.todaySStops', 'Today\'s Stops')}</div>
             </div>
             <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
-              <div className={`text-2xl font-bold text-[#0D9488]`}>
+              <div className={`text-2xl font-bold text-[#6096B4]`}>
                 {stats.completedStopsToday}
               </div>
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.serviceRoutePest.stopsDone', 'Stops Done')}</div>
@@ -551,7 +551,7 @@ export const ServiceRoutePestTool = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -578,7 +578,7 @@ export const ServiceRoutePestTool = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
               />
             </div>
             <select
@@ -588,7 +588,7 @@ export const ServiceRoutePestTool = ({
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             >
               <option value="all">{t('tools.serviceRoutePest.allStatus', 'All Status')}</option>
               <option value="planned">{t('tools.serviceRoutePest.planned', 'Planned')}</option>
@@ -598,7 +598,7 @@ export const ServiceRoutePestTool = ({
             </select>
             <button
               onClick={() => setShowAddRoute(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 transition-colors"
             >
               <Plus className="w-5 h-5" />
               {t('tools.serviceRoutePest.addRoute', 'Add Route')}
@@ -668,7 +668,7 @@ export const ServiceRoutePestTool = ({
                       <>
                         <button
                           onClick={() => handleCompleteStop(route.id)}
-                          className="flex items-center gap-2 px-3 py-1.5 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90 text-sm"
+                          className="flex items-center gap-2 px-3 py-1.5 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90 text-sm"
                         >
                           <CheckCircle className="w-4 h-4" />
                           {t('tools.serviceRoutePest.completeStop', 'Complete Stop')}
@@ -792,7 +792,7 @@ export const ServiceRoutePestTool = ({
               </p>
               <button
                 onClick={() => setShowAddRoute(true)}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.serviceRoutePest.addRoute2', 'Add Route')}
@@ -829,7 +829,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   />
                 </div>
                 <div>
@@ -843,7 +843,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   >
                     <option value="">{t('tools.serviceRoutePest.selectTechnician', 'Select Technician')}</option>
                     {technicians.filter(t => t.available).map((t) => (
@@ -862,7 +862,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   >
                     <option value="">{t('tools.serviceRoutePest.selectVehicle', 'Select Vehicle')}</option>
                     {vehicles.filter(v => v.available).map((v) => (
@@ -883,7 +883,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -898,7 +898,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -914,7 +914,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     placeholder={t('tools.serviceRoutePest.routeNotes', 'Route notes...')}
                   />
                 </div>
@@ -932,7 +932,7 @@ export const ServiceRoutePestTool = ({
                 </button>
                 <button
                   onClick={handleAddRoute}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.serviceRoutePest.addRoute3', 'Add Route')}
                 </button>
@@ -969,7 +969,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     placeholder={t('tools.serviceRoutePest.enterCustomerName', 'Enter customer name')}
                   />
                 </div>
@@ -985,7 +985,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     placeholder={t('tools.serviceRoutePest.streetAddress', 'Street address')}
                   />
                 </div>
@@ -1002,7 +1002,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1017,7 +1017,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1032,7 +1032,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1049,7 +1049,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1064,7 +1064,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1080,7 +1080,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     >
                       <option value="regular">{t('tools.serviceRoutePest.regular', 'Regular')}</option>
                       <option value="callback">{t('tools.serviceRoutePest.callback', 'Callback')}</option>
@@ -1100,7 +1100,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     >
                       <option value="low">{t('tools.serviceRoutePest.low', 'Low')}</option>
                       <option value="normal">{t('tools.serviceRoutePest.normal', 'Normal')}</option>
@@ -1122,7 +1122,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                   <div>
@@ -1137,7 +1137,7 @@ export const ServiceRoutePestTool = ({
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                      } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     />
                   </div>
                 </div>
@@ -1153,7 +1153,7 @@ export const ServiceRoutePestTool = ({
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                     placeholder={t('tools.serviceRoutePest.serviceNotes', 'Service notes...')}
                   />
                 </div>
@@ -1171,7 +1171,7 @@ export const ServiceRoutePestTool = ({
                 </button>
                 <button
                   onClick={handleAddStop}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   {t('tools.serviceRoutePest.addStop2', 'Add Stop')}
                 </button>

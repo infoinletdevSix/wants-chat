@@ -67,7 +67,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
   // Editable fields
   const [widgetName, setWidgetName] = useState('');
   const [theme, setTheme] = useState<'light' | 'dark' | 'auto'>('auto');
-  const [primaryColor, setPrimaryColor] = useState('#0D9488');
+  const [primaryColor, setPrimaryColor] = useState('#6096B4');
   const [borderRadius, setBorderRadius] = useState(8);
   const [showHeader, setShowHeader] = useState(true);
   const [showFooter, setShowFooter] = useState(true);
@@ -90,7 +90,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
         setConfig(cfg);
         setWidgetName(cfg.widget_name || `${toolName || toolId} Widget`);
         setTheme(cfg.theme || 'auto');
-        setPrimaryColor(cfg.primary_color || '#0D9488');
+        setPrimaryColor(cfg.primary_color || '#6096B4');
         setBorderRadius(cfg.border_radius ?? 8);
         setShowHeader(cfg.show_header ?? true);
         setShowFooter(cfg.show_footer ?? true);
@@ -191,7 +191,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
     return (
       <div className={`p-6 ${bgColor} rounded-lg`}>
         <div className="flex items-center justify-center py-12">
-          <RefreshCw className="w-6 h-6 animate-spin text-teal-500" />
+          <RefreshCw className="w-6 h-6 animate-spin text-primary-500" />
           <span className={`ml-3 ${mutedColor}`}>Loading widget settings...</span>
         </div>
       </div>
@@ -204,8 +204,8 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
       <div className={`px-6 py-4 border-b ${borderColor}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-teal-500/10 rounded-lg">
-              <Code className="w-5 h-5 text-teal-500" />
+            <div className="p-2 bg-primary-500/10 rounded-lg">
+              <Code className="w-5 h-5 text-primary-500" />
             </div>
             <div>
               <h2 className={`text-lg font-semibold ${textColor}`}>Widget Embed Settings</h2>
@@ -238,7 +238,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
             type="text"
             value={widgetName}
             onChange={e => setWidgetName(e.target.value)}
-            className={`w-full px-4 py-2.5 rounded-lg border ${borderColor} ${inputBg} ${textColor} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500`}
+            className={`w-full px-4 py-2.5 rounded-lg border ${borderColor} ${inputBg} ${textColor} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500`}
             placeholder="My Widget"
           />
         </div>
@@ -259,7 +259,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
                   onClick={() => setTheme(opt.value as any)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg border transition-all ${
                     theme === opt.value
-                      ? 'border-teal-500 bg-teal-500/10 text-teal-600 dark:text-teal-400'
+                      ? 'border-primary-500 bg-primary-500/10 text-primary-600 dark:text-primary-400'
                       : `${borderColor} ${mutedColor} hover:bg-gray-50 dark:hover:bg-gray-700`
                   }`}
                 >
@@ -284,7 +284,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
                 type="text"
                 value={primaryColor}
                 onChange={e => setPrimaryColor(e.target.value)}
-                className={`flex-1 px-4 py-2.5 rounded-lg border ${borderColor} ${inputBg} ${textColor} focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 font-mono text-sm`}
+                className={`flex-1 px-4 py-2.5 rounded-lg border ${borderColor} ${inputBg} ${textColor} focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 font-mono text-sm`}
               />
             </div>
           </div>
@@ -301,7 +301,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
             max="24"
             value={borderRadius}
             onChange={e => setBorderRadius(parseInt(e.target.value))}
-            className="w-full accent-teal-500"
+            className="w-full accent-primary-500"
           />
         </div>
 
@@ -312,7 +312,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
               type="checkbox"
               checked={showHeader}
               onChange={e => setShowHeader(e.target.checked)}
-              className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+              className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
             />
             <span className={`text-sm ${textColor}`}>Show Header</span>
           </label>
@@ -321,7 +321,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
               type="checkbox"
               checked={showFooter}
               onChange={e => setShowFooter(e.target.checked)}
-              className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+              className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
             />
             <span className={`text-sm ${textColor}`}>Show Footer</span>
           </label>
@@ -330,7 +330,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
               type="checkbox"
               checked={isActive}
               onChange={e => setIsActive(e.target.checked)}
-              className="w-4 h-4 rounded border-gray-300 text-teal-500 focus:ring-teal-500"
+              className="w-4 h-4 rounded border-gray-300 text-primary-500 focus:ring-primary-500"
             />
             <span className={`text-sm ${textColor}`}>Widget Active</span>
           </label>
@@ -369,7 +369,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
                   />
                   <button
                     onClick={addDomain}
-                    className="px-3 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
+                    className="px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -418,7 +418,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
           <button
             onClick={saveConfig}
             disabled={saving}
-            className="px-6 py-2.5 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:opacity-50 flex items-center gap-2"
+            className="px-6 py-2.5 bg-primary-500 text-white rounded-lg hover:bg-primary-600 disabled:opacity-50 flex items-center gap-2"
           >
             {saving ? (
               <RefreshCw className="w-4 h-4 animate-spin" />
@@ -446,7 +446,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
                 <button
                   onClick={() => copyToClipboard(config.embedCode!.script, 'script')}
                   className={`text-sm flex items-center gap-1 ${
-                    copied === 'script' ? 'text-green-500' : 'text-teal-500 hover:text-teal-600'
+                    copied === 'script' ? 'text-green-500' : 'text-primary-500 hover:text-primary-600'
                   }`}
                 >
                   {copied === 'script' ? (
@@ -476,7 +476,7 @@ export function WidgetEmbedSettings({ toolId, toolName, onClose }: WidgetEmbedSe
                 <button
                   onClick={() => copyToClipboard(config.embedCode!.iframe, 'iframe')}
                   className={`text-sm flex items-center gap-1 ${
-                    copied === 'iframe' ? 'text-green-500' : 'text-teal-500 hover:text-teal-600'
+                    copied === 'iframe' ? 'text-green-500' : 'text-primary-500 hover:text-primary-600'
                   }`}
                 >
                   {copied === 'iframe' ? (

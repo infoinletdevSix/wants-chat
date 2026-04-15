@@ -204,24 +204,24 @@ export const PigLatinTool = ({ uiConfig }: PigLatinToolProps) => {
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.pigLatin.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.pigLatin.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
         {/* Mode Toggle */}
         <div className="flex items-center justify-center gap-4">
-          <span className={`font-medium ${mode === 'toPigLatin' ? 'text-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+          <span className={`font-medium ${mode === 'toPigLatin' ? 'text-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
             {t('tools.pigLatin.english', 'English')}
           </span>
           <button
             onClick={handleSwap}
-            className="p-2 rounded-lg bg-[#0D9488] hover:bg-[#0F766E] text-white transition-colors"
+            className="p-2 rounded-lg bg-[#6096B4] hover:bg-[#4C7F98] text-white transition-colors"
           >
             <ArrowLeftRight className="w-5 h-5" />
           </button>
-          <span className={`font-medium ${mode === 'fromPigLatin' ? 'text-[#0D9488]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+          <span className={`font-medium ${mode === 'fromPigLatin' ? 'text-[#6096B4]' : theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
             {t('tools.pigLatin.pigLatin', 'Pig Latin')}
           </span>
         </div>
@@ -233,7 +233,7 @@ export const PigLatinTool = ({ uiConfig }: PigLatinToolProps) => {
               type="checkbox"
               checked={preserveCase}
               onChange={(e) => setPreserveCase(e.target.checked)}
-              className="w-4 h-4 rounded accent-[#0D9488] cursor-pointer"
+              className="w-4 h-4 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.pigLatin.preserveCapitalization', 'Preserve capitalization')}
@@ -254,7 +254,7 @@ export const PigLatinTool = ({ uiConfig }: PigLatinToolProps) => {
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 
@@ -343,22 +343,22 @@ export const PigLatinTool = ({ uiConfig }: PigLatinToolProps) => {
             <li>
               <strong>1. Words starting with consonants:</strong> Move the consonant(s) to the end and add "ay"
               <br />
-              <span className="text-[#0D9488]">{t('tools.pigLatin.exampleHelloBecomesEllohay', 'Example: "hello" becomes "ellohay"')}</span>
+              <span className="text-[#6096B4]">{t('tools.pigLatin.exampleHelloBecomesEllohay', 'Example: "hello" becomes "ellohay"')}</span>
             </li>
             <li>
               <strong>2. Words starting with vowels:</strong> Add "way" to the end
               <br />
-              <span className="text-[#0D9488]">{t('tools.pigLatin.exampleAppleBecomesAppleway', 'Example: "apple" becomes "appleway"')}</span>
+              <span className="text-[#6096B4]">{t('tools.pigLatin.exampleAppleBecomesAppleway', 'Example: "apple" becomes "appleway"')}</span>
             </li>
             <li>
               <strong>3. Consonant clusters:</strong> Move the entire cluster before adding "ay"
               <br />
-              <span className="text-[#0D9488]">{t('tools.pigLatin.exampleStringBecomesIngstray', 'Example: "string" becomes "ingstray"')}</span>
+              <span className="text-[#6096B4]">{t('tools.pigLatin.exampleStringBecomesIngstray', 'Example: "string" becomes "ingstray"')}</span>
             </li>
             <li>
               <strong>4. Special case "qu":</strong> Treat "qu" as a consonant cluster
               <br />
-              <span className="text-[#0D9488]">{t('tools.pigLatin.exampleQuestionBecomesEstionquay', 'Example: "question" becomes "estionquay"')}</span>
+              <span className="text-[#6096B4]">{t('tools.pigLatin.exampleQuestionBecomesEstionquay', 'Example: "question" becomes "estionquay"')}</span>
             </li>
           </ul>
         </div>

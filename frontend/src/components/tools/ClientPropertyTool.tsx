@@ -461,9 +461,9 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.clientProperty.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.clientProperty.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -471,7 +471,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -549,7 +549,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -597,8 +597,8 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
           <Card className={theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}>
             <CardContent className="py-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-[#0D9488]/20 rounded-lg">
-                  <Home className="w-5 h-5 text-[#0D9488]" />
+                <div className="p-2 bg-[#6096B4]/20 rounded-lg">
+                  <Home className="w-5 h-5 text-[#6096B4]" />
                 </div>
                 <div>
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.clientProperty.properties', 'Properties')}</p>
@@ -644,7 +644,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                   <select
@@ -664,7 +664,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                 </div>
                 <button
                   onClick={() => setShowClientForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientProperty.addClient', 'Add Client')}
@@ -764,7 +764,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                                     setNewProperty({ ...newProperty, clientId: client.id });
                                     setShowPropertyForm(true);
                                   }}
-                                  className="flex items-center gap-1 px-3 py-1 text-sm bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                                  className="flex items-center gap-1 px-3 py-1 text-sm bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                                 >
                                   <Plus className="w-3 h-3" />
                                   {t('tools.clientProperty.addProperty', 'Add Property')}
@@ -786,9 +786,9 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                                       <div className="flex items-start justify-between">
                                         <div className="flex items-center gap-2">
                                           {property.type === 'office' || property.type === 'retail' || property.type === 'warehouse' ? (
-                                            <Building className="w-4 h-4 text-[#0D9488]" />
+                                            <Building className="w-4 h-4 text-[#6096B4]" />
                                           ) : (
-                                            <Home className="w-4 h-4 text-[#0D9488]" />
+                                            <Home className="w-4 h-4 text-[#6096B4]" />
                                           )}
                                           <span className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                                             {property.name || property.address.split(',')[0]}
@@ -810,7 +810,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                                         {property.squareFeet > 0 && <span>{property.squareFeet} sqft</span>}
                                       </div>
                                       {property.basePrice > 0 && (
-                                        <p className={`mt-2 font-medium ${theme === 'dark' ? t('tools.clientProperty.text0d9488', 'text-[#0D9488]') : t('tools.clientProperty.text0d94882', 'text-[#0D9488]')}`}>
+                                        <p className={`mt-2 font-medium ${theme === 'dark' ? t('tools.clientProperty.text0d9488', 'text-[#6096B4]') : t('tools.clientProperty.text0d94882', 'text-[#6096B4]')}`}>
                                           {formatCurrency(property.basePrice)}/service
                                         </p>
                                       )}
@@ -847,12 +847,12 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <button
                   onClick={() => setShowPropertyForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientProperty.addProperty2', 'Add Property')}
@@ -889,9 +889,9 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                             <div className="flex items-center gap-2">
                               <div className={`p-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                                 {property.type === 'office' || property.type === 'retail' || property.type === 'warehouse' ? (
-                                  <Building className="w-5 h-5 text-[#0D9488]" />
+                                  <Building className="w-5 h-5 text-[#6096B4]" />
                                 ) : (
-                                  <Home className="w-5 h-5 text-[#0D9488]" />
+                                  <Home className="w-5 h-5 text-[#6096B4]" />
                                 )}
                               </div>
                               <div>
@@ -956,7 +956,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
 
                           <div className="flex items-center justify-between mt-4 pt-3 border-t dark:border-gray-700">
                             {property.basePrice > 0 ? (
-                              <span className={`font-semibold ${theme === 'dark' ? t('tools.clientProperty.text0d94883', 'text-[#0D9488]') : t('tools.clientProperty.text0d94884', 'text-[#0D9488]')}`}>
+                              <span className={`font-semibold ${theme === 'dark' ? t('tools.clientProperty.text0d94883', 'text-[#6096B4]') : t('tools.clientProperty.text0d94884', 'text-[#6096B4]')}`}>
                                 {formatCurrency(property.basePrice)}
                               </span>
                             ) : (
@@ -1099,7 +1099,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                   </button>
                   <button
                     onClick={addClient}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.clientProperty.addClient3', 'Add Client')}
                   </button>
@@ -1298,7 +1298,7 @@ export const ClientPropertyTool: React.FC<ClientPropertyToolProps> = ({ uiConfig
                   </button>
                   <button
                     onClick={addProperty}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     {t('tools.clientProperty.addProperty4', 'Add Property')}
                   </button>

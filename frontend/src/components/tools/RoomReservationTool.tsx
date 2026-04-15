@@ -309,7 +309,7 @@ export const RoomReservationTool: React.FC<RoomReservationToolProps> = ({
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`;
 
@@ -504,8 +504,8 @@ export const RoomReservationTool: React.FC<RoomReservationToolProps> = ({
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                <Bed className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                <Bed className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -603,7 +603,7 @@ export const RoomReservationTool: React.FC<RoomReservationToolProps> = ({
           />
           <button
             onClick={() => setShowForm(true)}
-            className="px-4 py-2.5 bg-[#0D9488] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"
+            className="px-4 py-2.5 bg-[#6096B4] text-white rounded-xl hover:bg-[#0B8276] flex items-center gap-2"
           >
             <Plus className="w-5 h-5" />
             {t('tools.roomReservation.newReservation', 'New Reservation')}
@@ -625,7 +625,7 @@ export const RoomReservationTool: React.FC<RoomReservationToolProps> = ({
             <button
               onClick={handleAddReservation}
               disabled={!newReservation.guestName || !newReservation.roomNumber}
-              className="mt-4 w-full py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"
+              className="mt-4 w-full py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl disabled:opacity-50 flex items-center justify-center gap-2"
             >
               <Plus className="w-5 h-5" />
               {t('tools.roomReservation.createReservation', 'Create Reservation')}
@@ -648,7 +648,7 @@ export const RoomReservationTool: React.FC<RoomReservationToolProps> = ({
             <div className="flex gap-3 mt-4">
               <button
                 onClick={handleUpdateReservation}
-                className="flex-1 py-3 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center justify-center gap-2"
+                className="flex-1 py-3 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center justify-center gap-2"
               >
                 <Save className="w-5 h-5" />
                 {t('tools.roomReservation.saveChanges', 'Save Changes')}
@@ -697,7 +697,7 @@ export const RoomReservationTool: React.FC<RoomReservationToolProps> = ({
                     </div>
                     <div className="flex items-center gap-2">
                       <DollarSign className={`w-4 h-4 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
-                      <span className="text-[#0D9488] font-medium">${res.totalAmount}</span>
+                      <span className="text-[#6096B4] font-medium">${res.totalAmount}</span>
                       <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
                         (${res.depositPaid} paid)
                       </span>

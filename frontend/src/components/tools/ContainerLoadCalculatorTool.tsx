@@ -147,10 +147,10 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Container className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Container className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.containerLoadCalculator.containerLoadCalculator', 'Container Load Calculator')}</h3>
@@ -161,9 +161,9 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.containerLoadCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.containerLoadCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -171,13 +171,13 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
         <div className="flex gap-2">
           <button
             onClick={() => setUnit('metric')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'metric' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.containerLoadCalculator.metricCmKg', 'Metric (cm/kg)')}
           </button>
           <button
             onClick={() => setUnit('imperial')}
-            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`flex-1 py-2 rounded-lg transition-colors ${unit === 'imperial' ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {t('tools.containerLoadCalculator.imperialInLbs', 'Imperial (in/lbs)')}
           </button>
@@ -193,10 +193,10 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
               <button
                 key={key}
                 onClick={() => setContainerType(key as ContainerType)}
-                className={`py-3 px-2 rounded-lg text-sm transition-colors ${containerType === key ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`py-3 px-2 rounded-lg text-sm transition-colors ${containerType === key ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 <div className="font-medium">{key}</div>
-                <div className={`text-xs ${containerType === key ? 'text-teal-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>
+                <div className={`text-xs ${containerType === key ? 'text-primary-100' : isDark ? 'text-gray-500' : 'text-gray-500'}`}>
                   {spec.cbm} CBM
                 </div>
               </button>
@@ -216,7 +216,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
                 type="number"
                 value={cartonLength}
                 onChange={(e) => setCartonLength(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.containerLoadCalculator.length', 'Length')}</span>
             </div>
@@ -225,7 +225,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
                 type="number"
                 value={cartonWidth}
                 onChange={(e) => setCartonWidth(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.containerLoadCalculator.width', 'Width')}</span>
             </div>
@@ -234,7 +234,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
                 type="number"
                 value={cartonHeight}
                 onChange={(e) => setCartonHeight(e.target.value)}
-                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
               />
               <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.containerLoadCalculator.height', 'Height')}</span>
             </div>
@@ -251,7 +251,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
             type="number"
             value={cartonWeight}
             onChange={(e) => setCartonWeight(e.target.value)}
-            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-teal-500`}
+            className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-primary-500`}
           />
         </div>
 
@@ -262,7 +262,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
               type="checkbox"
               checked={stackable}
               onChange={(e) => setStackable(e.target.checked)}
-              className="w-4 h-4 rounded text-teal-500"
+              className="w-4 h-4 rounded text-primary-500"
             />
             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{t('tools.containerLoadCalculator.stackable', 'Stackable')}</span>
           </label>
@@ -282,15 +282,15 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
         </div>
 
         {/* Main Result */}
-        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.containerLoadCalculator.maximumCartons', 'Maximum Cartons')}</div>
-          <div className="text-5xl font-bold text-teal-500 my-2">
+          <div className="text-5xl font-bold text-primary-500 my-2">
             {calculations.maxCartons.toLocaleString()}
           </div>
           <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
             in {calculations.container.name}
           </div>
-          <div className={`text-xs mt-2 flex items-center justify-center gap-1 ${calculations.limitingFactor === 'weight' ? 'text-amber-500' : 'text-teal-500'}`}>
+          <div className={`text-xs mt-2 flex items-center justify-center gap-1 ${calculations.limitingFactor === 'weight' ? 'text-amber-500' : 'text-primary-500'}`}>
             <AlertTriangle className="w-3 h-3" />
             Limited by {calculations.limitingFactor}
           </div>
@@ -365,7 +365,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
             </div>
             <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
               <div
-                className="h-full bg-teal-500 rounded-full"
+                className="h-full bg-primary-500 rounded-full"
                 style={{ width: `${Math.min(calculations.floorUtilization, 100)}%` }}
               />
             </div>
@@ -374,7 +374,7 @@ export const ContainerLoadCalculatorTool: React.FC<ContainerLoadCalculatorToolPr
 
         {/* Efficiency Tips */}
         <div className={`p-4 rounded-lg flex items-start gap-3 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
-          <Info className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
           <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             <p className="font-medium mb-1">{t('tools.containerLoadCalculator.optimizationTips', 'Optimization Tips')}</p>
             <ul className="space-y-1">

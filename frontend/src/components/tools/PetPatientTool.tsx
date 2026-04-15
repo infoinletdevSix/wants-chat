@@ -487,7 +487,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <PawPrint className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -577,7 +577,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -602,7 +602,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             {activeTab === 'pets' && (
@@ -613,7 +613,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               >
                 <option value="all">{t('tools.petPatient.allSpecies', 'All Species')}</option>
                 {SPECIES_OPTIONS.map(s => (
@@ -627,7 +627,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                 else if (activeTab === 'owners') setShowOwnerForm(true);
                 else if (activeTab === 'records') setShowRecordForm(true);
               }}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
             >
               <Plus className="w-4 h-4" />
               Add {activeTab === 'pets' ? 'Pet' : activeTab === 'owners' ? t('tools.petPatient.owner', 'Owner') : t('tools.petPatient.record', 'Record')}
@@ -787,7 +787,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                       <div className="flex gap-2 mt-4">
                         <button
                           onClick={() => { setSelectedPetId(pet.id); setShowRecordForm(true); }}
-                          className="flex items-center gap-1 px-3 py-1 bg-[#0D9488] text-white rounded text-sm hover:bg-[#0B8478]"
+                          className="flex items-center gap-1 px-3 py-1 bg-[#6096B4] text-white rounded text-sm hover:bg-[#0B8478]"
                         >
                           <Plus className="w-4 h-4" /> Add Record
                         </button>
@@ -981,7 +981,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                   </div>
                   <button
                     onClick={addOwner}
-                    className="w-full py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+                    className="w-full py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
                   >
                     {t('tools.petPatient.addOwner', 'Add Owner')}
                   </button>
@@ -1114,7 +1114,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                   />
                   <button
                     onClick={addPet}
-                    className="w-full py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+                    className="w-full py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
                   >
                     {t('tools.petPatient.addPet', 'Add Pet')}
                   </button>
@@ -1199,7 +1199,7 @@ export const PetPatientTool: React.FC<PetPatientToolProps> = ({
                   />
                   <button
                     onClick={addMedicalRecord}
-                    className="w-full py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
+                    className="w-full py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8478] transition-colors"
                   >
                     {t('tools.petPatient.addRecord', 'Add Record')}
                   </button>

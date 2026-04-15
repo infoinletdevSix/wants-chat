@@ -191,7 +191,7 @@ const ComparisonTable: React.FC = () => {
                       {competitor.key === 'wants' ? (
                         <div className="relative">
                           <div className="absolute -inset-2 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-xl blur-lg" />
-                          <div className="relative bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-xl px-2 py-2 md:px-4 md:py-3 border border-teal-500/30">
+                          <div className="relative bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-xl px-2 py-2 md:px-4 md:py-3 border border-primary-500/30">
                             <div className="flex items-center justify-center gap-1 md:gap-2 mb-1">
                               <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
                               <span className="text-white font-bold text-sm md:text-lg">{t(`landing.comparison.competitors.${competitor.nameKey}.name`)}</span>
@@ -245,7 +245,7 @@ const ComparisonTable: React.FC = () => {
                     >
                       <div className="flex items-center justify-center">
                         {competitor.key === 'wants' ? (
-                          <span className="text-sm md:text-lg font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
+                          <span className="text-sm md:text-lg font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
                             {t(`landing.comparison.competitors.${competitor.nameKey}.uniqueValue`)}
                           </span>
                         ) : (

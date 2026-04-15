@@ -142,10 +142,10 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
       <div className="max-w-2xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
           {/* Header */}
-          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <Heart className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <Heart className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -161,9 +161,9 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
           <div className="p-6 space-y-6">
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {t('tools.ovulationCalculator.dateLoadedFromYourConversation', 'Date loaded from your conversation')}
                 </span>
               </div>
@@ -183,7 +183,7 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
                     isDark
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
 
@@ -199,7 +199,7 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {Array.from({ length: 21 }, (_, i) => i + 20).map((days) => (
                       <option key={days} value={days}>
@@ -220,7 +220,7 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
                       isDark
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {Array.from({ length: 8 }, (_, i) => i + 2).map((days) => (
                       <option key={days} value={days}>
@@ -236,11 +236,11 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
             {result && (
               <>
                 {/* Ovulation Date */}
-                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-200'} border`}>
+                <div className={`p-6 rounded-xl text-center ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-200'} border`}>
                   <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {t('tools.ovulationCalculator.estimatedOvulationDate', 'Estimated Ovulation Date')}
                   </div>
-                  <div className="text-3xl font-bold text-[#0D9488] my-2">
+                  <div className="text-3xl font-bold text-[#6096B4] my-2">
                     {formatDateFull(result.ovulationDate)}
                   </div>
                   {getDaysUntil(result.ovulationDate) >= 0 && (
@@ -339,12 +339,12 @@ export const OvulationCalculatorTool: React.FC<OvulationCalculatorToolProps> = (
                 {/* Next Period */}
                 <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
                   <div className="flex items-center gap-2 mb-1">
-                    <Clock className="w-4 h-4 text-[#0D9488]" />
+                    <Clock className="w-4 h-4 text-[#6096B4]" />
                     <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.ovulationCalculator.nextPeriodExpected', 'Next Period Expected')}
                     </span>
                   </div>
-                  <div className={`text-lg font-bold text-[#0D9488]`}>
+                  <div className={`text-lg font-bold text-[#6096B4]`}>
                     {formatDateFull(result.nextPeriodDate)}
                   </div>
                   {getDaysUntil(result.nextPeriodDate) >= 0 && (

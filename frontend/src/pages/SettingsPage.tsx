@@ -105,7 +105,7 @@ const SettingsPage: React.FC = () => {
               : 'bg-white border-slate-200 shadow-sm'
           )}>
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] flex items-center justify-center text-white text-2xl font-bold">
                 {user?.name?.charAt(0) || 'U'}
               </div>
               <div className="flex-1">
@@ -146,7 +146,7 @@ const SettingsPage: React.FC = () => {
                 )}>
                   <section.icon className={cn(
                     "w-5 h-5",
-                    section.id === 'billing' ? 'text-[#0D9488]' : theme === 'dark' ? 'text-slate-300' : 'text-slate-600'
+                    section.id === 'billing' ? 'text-[#6096B4]' : theme === 'dark' ? 'text-slate-300' : 'text-slate-600'
                   )} />
                 </div>
                 <div className="flex-1">
@@ -158,7 +158,7 @@ const SettingsPage: React.FC = () => {
                       {section.title}
                     </h3>
                     {section.badge && (
-                      <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#0D9488]/20 text-[#0D9488]">
+                      <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#6096B4]/20 text-[#6096B4]">
                         {section.badge}
                       </span>
                     )}
@@ -252,7 +252,7 @@ const SettingsPage: React.FC = () => {
               onClick={toggleTheme}
               className={cn(
                 "relative w-12 h-6 rounded-full transition-colors duration-200",
-                theme === 'dark' ? 'bg-[#0D9488]' : 'bg-slate-300'
+                theme === 'dark' ? 'bg-[#6096B4]' : 'bg-slate-300'
               )}
             >
               <div className={cn(

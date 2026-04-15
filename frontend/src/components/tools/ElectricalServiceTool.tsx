@@ -785,13 +785,13 @@ Licensed & Insured Electrical Contractor
     isDark
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const selectClass = `w-full px-4 py-2 rounded-lg border ${
     isDark
       ? 'bg-gray-700 border-gray-600 text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-2 ${isDark ? 'text-gray-200' : 'text-gray-700'}`;
 
@@ -807,7 +807,7 @@ Licensed & Insured Electrical Contractor
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -817,8 +817,8 @@ Licensed & Insured Electrical Contractor
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Zap className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Zap className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -859,7 +859,7 @@ Licensed & Insured Electrical Contractor
           />
           <button
             onClick={createNewWorkOrder}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
           >
             <Plus className="w-4 h-4" />
             {t('tools.electricalService.newOrder', 'New Order')}
@@ -893,7 +893,7 @@ Licensed & Insured Electrical Contractor
                   key={order.id}
                   className={`p-3 rounded-lg cursor-pointer ${
                     currentOrder.id === order.id
-                      ? 'bg-[#0D9488]/20 border border-[#0D9488]'
+                      ? 'bg-[#6096B4]/20 border border-[#6096B4]'
                       : isDark ? 'bg-gray-700 hover:bg-gray-650' : 'bg-gray-50 hover:bg-gray-100'
                   }`}
                   onClick={() => loadWorkOrder(order)}
@@ -948,7 +948,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('customer')}
             >
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-[#0D9488]" />
+                <User className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.customerPropertyInformation', 'Customer & Property Information')}
                 </span>
@@ -1053,7 +1053,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('job')}
             >
               <div className="flex items-center gap-2">
-                <ClipboardList className="w-5 h-5 text-[#0D9488]" />
+                <ClipboardList className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.jobDetailsDispatch', 'Job Details & Dispatch')}
                 </span>
@@ -1185,7 +1185,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('materials')}
             >
               <div className="flex items-center gap-2">
-                <Package className="w-5 h-5 text-[#0D9488]" />
+                <Package className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.materialsParts', 'Materials & Parts')}
                 </span>
@@ -1262,7 +1262,7 @@ Licensed & Insured Electrical Contractor
 
                 <button
                   onClick={addMaterial}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.electricalService.addMaterialPart', 'Add Material/Part')}
@@ -1278,7 +1278,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('labor')}
             >
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-[#0D9488]" />
+                <Clock className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.laborHoursByElectrician', 'Labor Hours by Electrician')}
                 </span>
@@ -1378,7 +1378,7 @@ Licensed & Insured Electrical Contractor
 
                 <button
                   onClick={addLabor}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.electricalService.addElectricianLaborEntry', 'Add Electrician Labor Entry')}
@@ -1394,7 +1394,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('panels')}
             >
               <div className="flex items-center gap-2">
-                <Settings className="w-5 h-5 text-[#0D9488]" />
+                <Settings className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.panelDocumentation', 'Panel Documentation')}
                 </span>
@@ -1524,7 +1524,7 @@ Licensed & Insured Electrical Contractor
 
                 <button
                   onClick={addPanel}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.electricalService.addPanel', 'Add Panel')}
@@ -1540,7 +1540,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('circuits')}
             >
               <div className="flex items-center gap-2">
-                <CircuitBoard className="w-5 h-5 text-[#0D9488]" />
+                <CircuitBoard className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.circuitDocumentation', 'Circuit Documentation')}
                 </span>
@@ -1648,7 +1648,7 @@ Licensed & Insured Electrical Contractor
 
                 <button
                   onClick={addCircuit}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.electricalService.addCircuit', 'Add Circuit')}
@@ -1664,7 +1664,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('permits')}
             >
               <div className="flex items-center gap-2">
-                <FileCheck className="w-5 h-5 text-[#0D9488]" />
+                <FileCheck className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.permitTracking', 'Permit Tracking')}
                 </span>
@@ -1801,7 +1801,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('compliance')}
             >
               <div className="flex items-center gap-2">
-                <ClipboardList className="w-5 h-5 text-[#0D9488]" />
+                <ClipboardList className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.codeComplianceChecklist', 'Code Compliance Checklist')}
                 </span>
@@ -1880,7 +1880,7 @@ Licensed & Insured Electrical Contractor
 
                 <button
                   onClick={addComplianceItem}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.electricalService.addComplianceItem', 'Add Compliance Item')}
@@ -1896,7 +1896,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('safety')}
             >
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-[#0D9488]" />
+                <AlertCircle className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.safetyInspectionNotes', 'Safety Inspection Notes')}
                 </span>
@@ -1998,7 +1998,7 @@ Licensed & Insured Electrical Contractor
 
                 <button
                   onClick={addSafetyInspection}
-                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#0D9488] text-gray-500 dark:text-gray-400 hover:text-[#0D9488] rounded-lg transition-colors w-full justify-center"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-[#6096B4] text-gray-500 dark:text-gray-400 hover:text-[#6096B4] rounded-lg transition-colors w-full justify-center"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.electricalService.addSafetyInspection', 'Add Safety Inspection')}
@@ -2034,7 +2034,7 @@ Licensed & Insured Electrical Contractor
                     type="checkbox"
                     checked={currentOrder.isEmergency}
                     onChange={e => setCurrentOrder(prev => ({ ...prev, isEmergency: e.target.checked }))}
-                    className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
                     {t('tools.electricalService.thisIsAnEmergencyService', 'This is an emergency service call')}
@@ -2064,7 +2064,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('warranty')}
             >
               <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-[#0D9488]" />
+                <Shield className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.warrantyTracking', 'Warranty Tracking')}
                 </span>
@@ -2148,7 +2148,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('serviceAgreement')}
             >
               <div className="flex items-center gap-2">
-                <FileText className="w-5 h-5 text-[#0D9488]" />
+                <FileText className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.serviceAgreementMaintenancePlan', 'Service Agreement / Maintenance Plan')}
                 </span>
@@ -2171,7 +2171,7 @@ Licensed & Insured Electrical Contractor
                       ...prev,
                       serviceAgreement: { ...prev.serviceAgreement, enabled: e.target.checked }
                     }))}
-                    className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
                     {t('tools.electricalService.customerHasServiceAgreement', 'Customer has service agreement')}
@@ -2273,7 +2273,7 @@ Licensed & Insured Electrical Contractor
               onClick={() => toggleSection('recurring')}
             >
               <div className="flex items-center gap-2">
-                <RefreshCw className="w-5 h-5 text-[#0D9488]" />
+                <RefreshCw className="w-5 h-5 text-[#6096B4]" />
                 <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.electricalService.recurringServiceSchedule', 'Recurring Service Schedule')}
                 </span>
@@ -2296,7 +2296,7 @@ Licensed & Insured Electrical Contractor
                       ...prev,
                       recurringSchedule: { ...prev.recurringSchedule, enabled: e.target.checked }
                     }))}
-                    className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                    className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                   />
                   <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
                     {t('tools.electricalService.enableRecurringServiceSchedule', 'Enable recurring service schedule')}
@@ -2356,7 +2356,7 @@ Licensed & Insured Electrical Contractor
           {/* Estimate vs Actual Comparison */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <DollarSign className="w-5 h-5 text-[#0D9488]" />
+              <DollarSign className="w-5 h-5 text-[#6096B4]" />
               {t('tools.electricalService.estimateVsActualCosts', 'Estimate vs Actual Costs')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -2385,7 +2385,7 @@ Licensed & Insured Electrical Contractor
               </div>
               <div>
                 <label className={labelClass}>{t('tools.electricalService.actualTotal', 'Actual Total')}</label>
-                <div className={`px-4 py-2 rounded-lg font-bold ${isDark ? t('tools.electricalService.bg0d948820Text2dd4bf', 'bg-[#0D9488]/20 text-[#2DD4BF]') : t('tools.electricalService.bg0d948810Text0d9488', 'bg-[#0D9488]/10 text-[#0D9488]')}`}>
+                <div className={`px-4 py-2 rounded-lg font-bold ${isDark ? t('tools.electricalService.bg0d948820Text2dd4bf', 'bg-[#6096B4]/20 text-[#75AAC1]') : t('tools.electricalService.bg0d948810Text0d9488', 'bg-[#6096B4]/10 text-[#6096B4]')}`}>
                   ${grandTotal.toFixed(2)}
                 </div>
               </div>
@@ -2420,7 +2420,7 @@ Licensed & Insured Electrical Contractor
           {/* Payment Section */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <DollarSign className="w-5 h-5 text-[#0D9488]" />
+              <DollarSign className="w-5 h-5 text-[#6096B4]" />
               {t('tools.electricalService.paymentInformation', 'Payment Information')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -2460,7 +2460,7 @@ Licensed & Insured Electrical Contractor
                   type="checkbox"
                   checked={currentOrder.customerSignature}
                   onChange={e => setCurrentOrder(prev => ({ ...prev, customerSignature: e.target.checked }))}
-                  className="w-5 h-5 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                  className="w-5 h-5 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                 />
                 <span className={isDark ? 'text-gray-200' : 'text-gray-700'}>
                   {t('tools.electricalService.customerSignatureObtained', 'Customer signature obtained')}
@@ -2472,7 +2472,7 @@ Licensed & Insured Electrical Contractor
           {/* Notes Section */}
           <div className={cardClass}>
             <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+              <FileText className="w-5 h-5 text-[#6096B4]" />
               {t('tools.electricalService.additionalNotes', 'Additional Notes')}
             </h3>
             <textarea
@@ -2488,7 +2488,7 @@ Licensed & Insured Electrical Contractor
           <div className="flex flex-wrap gap-3">
             <button
               onClick={saveWorkOrder}
-              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#0D9488]/20"
+              className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium shadow-lg shadow-[#6096B4]/20"
             >
               <Save className="w-4 h-4" />
               {t('tools.electricalService.saveWorkOrder', 'Save Work Order')}

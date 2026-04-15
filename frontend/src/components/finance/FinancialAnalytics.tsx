@@ -51,7 +51,7 @@ const FinancialAnalytics: React.FC<FinancialAnalyticsProps> = ({
 
   const chartColors = [
     '#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6',
-    '#ec4899', '#14b8a6', '#f97316', '#84cc16', '#06b6d4'
+    '#ec4899', '#75AAC1', '#f97316', '#84cc16', '#06b6d4'
   ];
 
   const formatCurrency = (amount: number) => {

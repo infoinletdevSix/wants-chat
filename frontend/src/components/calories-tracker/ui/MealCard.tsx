@@ -102,7 +102,7 @@ const MealCard: React.FC<MealCardProps> = ({
               <Button
                 size="sm"
                 onClick={() => onAddFood(mealType)}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-primary-foreground h-8"
+                className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-primary-foreground h-8"
               >
                 <Icon path={mdiPlus} size={0.6} className="mr-1" />
                 Add

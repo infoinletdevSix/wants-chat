@@ -185,9 +185,9 @@ export const CsvJsonConverterTool: React.FC<CsvJsonConverterToolProps> = ({ uiCo
 
       <div className="space-y-4">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.csvJsonConverter.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.csvJsonConverter.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -196,7 +196,7 @@ export const CsvJsonConverterTool: React.FC<CsvJsonConverterToolProps> = ({ uiCo
           <div
             className={`px-6 py-2 rounded-lg font-semibold ${
               mode === 'csv-to-json'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-700 text-gray-300'
                 : 'bg-gray-200 text-gray-700'
@@ -217,7 +217,7 @@ export const CsvJsonConverterTool: React.FC<CsvJsonConverterToolProps> = ({ uiCo
           <div
             className={`px-6 py-2 rounded-lg font-semibold ${
               mode === 'json-to-csv'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-700 text-gray-300'
                 : 'bg-gray-200 text-gray-700'
@@ -240,7 +240,7 @@ export const CsvJsonConverterTool: React.FC<CsvJsonConverterToolProps> = ({ uiCo
               theme === 'dark'
                 ? 'bg-gray-700 text-white border-gray-600 placeholder-gray-400'
                 : 'bg-gray-50 text-gray-900 border-gray-300 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           />
         </div>
 

@@ -13,10 +13,10 @@ const AdditionalInfoSection: React.FC<VitalFormFieldProps> = ({
   getStatusBadge
 }) => {
   return (
-    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+    <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2 text-white">
-          <NoteAdd className="h-5 w-5 text-teal-400" />
+          <NoteAdd className="h-5 w-5 text-primary-400" />
           Additional Information
         </CardTitle>
         <CardDescription className="text-white/60">Optional details and notes about the measurements</CardDescription>
@@ -45,7 +45,7 @@ const AdditionalInfoSection: React.FC<VitalFormFieldProps> = ({
               <SelectTrigger id="recordedBy" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+              <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                 <SelectItem value="self" className="text-white hover:bg-white/10">Self</SelectItem>
                 <SelectItem value="family" className="text-white hover:bg-white/10">Family Member</SelectItem>
                 <SelectItem value="caregiver" className="text-white hover:bg-white/10">Caregiver</SelectItem>

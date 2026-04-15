@@ -433,9 +433,9 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'} py-8 px-4`}>
       <div className="max-w-7xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.fitnessClassSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.fitnessClassSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -443,7 +443,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -499,7 +499,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                   onClick={() => setActiveView(view.id as typeof activeView)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeView === view.id
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -512,7 +512,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
             </div>
             <button
               onClick={() => setShowClassForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] transition-colors"
             >
               <Plus className="w-4 h-4" />
               {t('tools.fitnessClassSchedule.addClass', 'Add Class')}
@@ -557,7 +557,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="all">{t('tools.fitnessClassSchedule.allCategories', 'All Categories')}</option>
             {CLASS_CATEGORIES.map(cat => (
@@ -571,7 +571,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white'
                 : 'bg-white border-gray-300 text-gray-900'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
           >
             <option value="all">{t('tools.fitnessClassSchedule.allInstructors', 'All Instructors')}</option>
             {instructors.map(inst => (
@@ -609,7 +609,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -626,7 +626,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {CLASS_CATEGORIES.map(cat => (
                       <option key={cat.category} value={cat.category}>{cat.label}</option>
@@ -647,7 +647,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="">{t('tools.fitnessClassSchedule.selectInstructor', 'Select instructor...')}</option>
                     {instructors.map(inst => (
@@ -669,7 +669,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {ROOMS.map(room => (
                       <option key={room} value={room}>{room}</option>
@@ -690,7 +690,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {TIME_SLOTS.map(time => (
                       <option key={time} value={time}>{formatTime(time)}</option>
@@ -711,7 +711,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value={30}>30 min</option>
                     <option value={45}>45 min</option>
@@ -736,7 +736,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -751,7 +751,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                 </button>
                 <button
                   onClick={editingClass ? updateClass : addClass}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                 >
                   <Save className="w-4 h-4 inline mr-2" />
                   {editingClass ? t('tools.fitnessClassSchedule.update', 'Update') : t('tools.fitnessClassSchedule.add', 'Add')} Class
@@ -778,7 +778,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                   </button>
                   <button
                     onClick={() => setSelectedDate(new Date())}
-                    className="px-3 py-1 text-sm bg-[#0D9488] text-white rounded-lg"
+                    className="px-3 py-1 text-sm bg-[#6096B4] text-white rounded-lg"
                   >
                     {t('tools.fitnessClassSchedule.today', 'Today')}
                   </button>
@@ -801,7 +801,7 @@ export const FitnessClassScheduleTool: React.FC<FitnessClassScheduleToolProps> =
                     <div key={index} className="min-h-[200px]">
                       <div className={`text-center p-2 rounded-t-lg ${
                         isToday
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
                       }`}>
                         <p className="text-xs font-medium">

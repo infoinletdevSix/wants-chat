@@ -122,7 +122,7 @@ export const AllRecipesList: React.FC = () => {
       </div>
 
       {/* Search and Filter Section */}
-      <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 border-l-4 border-l-teal-500 p-6">
+      <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 border-l-4 border-l-primary-500 p-6">
         <div className="space-y-4">
           {/* Search Input */}
           <div className="relative">
@@ -157,7 +157,7 @@ export const AllRecipesList: React.FC = () => {
                     <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="All cuisines" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="" className="text-white hover:bg-white/10 focus:bg-white/10">All Cuisines</SelectItem>
                       <SelectItem value="Italian" className="text-white hover:bg-white/10 focus:bg-white/10">Italian</SelectItem>
                       <SelectItem value="Chinese" className="text-white hover:bg-white/10 focus:bg-white/10">Chinese</SelectItem>
@@ -180,7 +180,7 @@ export const AllRecipesList: React.FC = () => {
                     <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="All levels" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="" className="text-white hover:bg-white/10 focus:bg-white/10">All Levels</SelectItem>
                       <SelectItem value="easy" className="text-white hover:bg-white/10 focus:bg-white/10">Easy</SelectItem>
                       <SelectItem value="medium" className="text-white hover:bg-white/10 focus:bg-white/10">Medium</SelectItem>
@@ -198,7 +198,7 @@ export const AllRecipesList: React.FC = () => {
                     <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="All meals" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="" className="text-white hover:bg-white/10 focus:bg-white/10">All Meals</SelectItem>
                       <SelectItem value="breakfast" className="text-white hover:bg-white/10 focus:bg-white/10">Breakfast</SelectItem>
                       <SelectItem value="lunch" className="text-white hover:bg-white/10 focus:bg-white/10">Lunch</SelectItem>
@@ -218,7 +218,7 @@ export const AllRecipesList: React.FC = () => {
                     <SelectTrigger className="h-10 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border-primary-400/30">
                       <SelectItem value="created_at" className="text-white hover:bg-white/10 focus:bg-white/10">Newest First</SelectItem>
                       <SelectItem value="title" className="text-white hover:bg-white/10 focus:bg-white/10">Title</SelectItem>
                       <SelectItem value="average_rating" className="text-white hover:bg-white/10 focus:bg-white/10">Rating</SelectItem>
@@ -239,7 +239,7 @@ export const AllRecipesList: React.FC = () => {
                       key={restriction}
                       className={`cursor-pointer transition-colors ${
                         dietaryRestrictions.includes(restriction)
-                          ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                           : 'bg-white/10 text-white/60 border border-white/20 hover:bg-white/20'
                       }`}
                       onClick={() => toggleDietaryRestriction(restriction)}
@@ -321,7 +321,7 @@ export const AllRecipesList: React.FC = () => {
                       onClick={() => setPage(pageNum)}
                       className={`rounded-xl min-w-[40px] ${
                         page === pageNum
-                          ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white'
                           : 'bg-transparent border border-white/20 text-white hover:bg-white/10'
                       }`}
                     >

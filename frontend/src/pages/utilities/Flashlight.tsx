@@ -41,7 +41,7 @@ const Flashlight: React.FC = () => {
   ];
 
   return (
-    <div className={`min-h-screen transition-all duration-300 ${isOn ? '' : 'bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900'}`}>
+    <div className={`min-h-screen transition-all duration-300 ${isOn ? '' : 'bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900'}`}>
       {!isOn && <BackgroundEffects variant="subtle" />}
       {!isOn && <Header />}
 
@@ -54,7 +54,7 @@ const Flashlight: React.FC = () => {
           <div className="max-w-2xl mx-auto">
             {!isOn && (
               <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                   Screen Flashlight
                 </h1>
                 <p className="text-gray-400">
@@ -144,22 +144,22 @@ const Flashlight: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                 >
-                  <Card className="bg-slate-800/50 border-teal-500/30 backdrop-blur-xl">
+                  <Card className="bg-slate-800/50 border-primary-500/30 backdrop-blur-xl">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-teal-400">
+                      <CardTitle className="flex items-center gap-2 text-primary-400">
                         <Lightbulb className="w-5 h-5" />
                         Flashlight Control
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
                       {/* Preview */}
-                      <div className="relative bg-gradient-to-br from-teal-900/30 to-cyan-900/30 rounded-2xl p-12 border border-teal-500/30">
+                      <div className="relative bg-gradient-to-br from-primary-900/30 to-cyan-900/30 rounded-2xl p-12 border border-primary-500/30">
                         <div className="text-center">
                           <motion.div
                             animate={{ opacity: [0.5, 1, 0.5] }}
                             transition={{ duration: 2, repeat: Infinity }}
                           >
-                            <Smartphone className="w-24 h-24 text-teal-400 mx-auto mb-4" />
+                            <Smartphone className="w-24 h-24 text-primary-400 mx-auto mb-4" />
                           </motion.div>
                           <p className="text-gray-300 text-lg">
                             Tap the button below to activate
@@ -175,7 +175,7 @@ const Flashlight: React.FC = () => {
                             <label className="text-white text-sm font-medium">
                               Brightness
                             </label>
-                            <span className="text-teal-400 text-sm">{brightness}%</span>
+                            <span className="text-primary-400 text-sm">{brightness}%</span>
                           </div>
                           <input
                             type="range"
@@ -199,8 +199,8 @@ const Flashlight: React.FC = () => {
                                 onClick={() => setColor(preset.value)}
                                 className={`p-4 rounded-lg border-2 transition-all ${
                                   color === preset.value
-                                    ? 'border-teal-400 scale-105'
-                                    : 'border-teal-500/30 hover:border-teal-400/50'
+                                    ? 'border-primary-400 scale-105'
+                                    : 'border-primary-500/30 hover:border-primary-400/50'
                                 }`}
                                 style={{ backgroundColor: preset.value }}
                               >
@@ -216,7 +216,7 @@ const Flashlight: React.FC = () => {
                       {/* Turn On Button */}
                       <Button
                         onClick={toggleFlashlight}
-                        className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold py-6 text-lg"
+                        className="w-full bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-semibold py-6 text-lg"
                       >
                         <Sun className="w-5 h-5 mr-2" />
                         Turn On Flashlight

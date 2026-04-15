@@ -174,10 +174,10 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Grid3X3 className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Grid3X3 className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.paverCalculator.paverCalculator', 'Paver Calculator')}</h3>
@@ -201,7 +201,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                   onClick={() => setShape(s)}
                   className={`flex items-center justify-center gap-2 py-3 px-3 rounded-lg text-sm font-medium capitalize transition-colors ${
                     shape === s
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -228,7 +228,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                 value={length}
                 onChange={(e) => setLength(e.target.value)}
                 min="0"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
             <div className="space-y-2">
@@ -240,7 +240,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                 value={width}
                 onChange={(e) => setWidth(e.target.value)}
                 min="0"
-                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           </div>
@@ -257,7 +257,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
               value={diameter}
               onChange={(e) => setDiameter(e.target.value)}
               min="0"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         )}
@@ -273,7 +273,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
               value={irregularSqFt}
               onChange={(e) => setIrregularSqFt(e.target.value)}
               min="0"
-              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-3 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         )}
@@ -291,7 +291,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                 onClick={() => setPaverSize(key as PaverSize)}
                 className={`py-2 px-2 rounded-lg text-xs font-medium transition-colors ${
                   paverSize === key
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -312,7 +312,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                   value={customLength}
                   onChange={(e) => setCustomLength(e.target.value)}
                   min="1"
-                  className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
               <div className="space-y-2">
@@ -324,7 +324,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                   value={customWidth}
                   onChange={(e) => setCustomWidth(e.target.value)}
                   min="1"
-                  className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  className={`w-full px-3 py-2 rounded-lg border text-sm ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 />
               </div>
             </div>
@@ -344,7 +344,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
                 onClick={() => setPattern(key as PatternType)}
                 className={`py-3 px-3 rounded-lg text-sm font-medium text-left transition-colors ${
                   pattern === key
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -374,7 +374,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
               onChange={(e) => setBaseDepth(e.target.value)}
               min="2"
               max="12"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>4-6" typical</p>
           </div>
@@ -389,7 +389,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
               min="0.5"
               max="2"
               step="0.25"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>1" typical</p>
           </div>
@@ -407,7 +407,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
               onChange={(e) => setExtraWaste(e.target.value)}
               min="0"
               max="25"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
           <div className="space-y-2">
@@ -420,7 +420,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
               onChange={(e) => setPaverCost(e.target.value)}
               min="0"
               step="0.10"
-              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              className={`w-full px-4 py-2 rounded-lg border ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
           </div>
         </div>
@@ -429,7 +429,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.paverCalculator.area', 'Area')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{calculations.areaSqFt}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{calculations.areaSqFt}</div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{t('tools.paverCalculator.sqFt', 'sq ft')}</div>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
@@ -469,9 +469,9 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
         </div>
 
         {/* Cost Estimate */}
-        <div className={`p-4 rounded-lg border-l-4 border-[#0D9488] ${isDark ? 'bg-gray-800' : t('tools.paverCalculator.bg0d948810', 'bg-[#0D9488]/10')}`}>
+        <div className={`p-4 rounded-lg border-l-4 border-[#6096B4] ${isDark ? 'bg-gray-800' : t('tools.paverCalculator.bg0d948810', 'bg-[#6096B4]/10')}`}>
           <div className="flex items-center gap-2 mb-3">
-            <DollarSign className="w-5 h-5 text-[#0D9488]" />
+            <DollarSign className="w-5 h-5 text-[#6096B4]" />
             <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.paverCalculator.materialCostEstimate', 'Material Cost Estimate')}</span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm mb-3">
@@ -496,7 +496,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
           </div>
           <div className="pt-3 border-t border-gray-600">
             <div className={isDark ? 'text-gray-400' : 'text-gray-600'}>{t('tools.paverCalculator.totalMaterials', 'Total Materials')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">
+            <div className="text-2xl font-bold text-[#6096B4]">
               ${calculations.totalMaterialCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
           </div>
@@ -506,7 +506,7 @@ export const PaverCalculatorTool: React.FC<PaverCalculatorToolProps> = ({ uiConf
         </div>
 
         {/* Summary */}
-        <div className={`p-4 rounded-lg ${isDark ? t('tools.paverCalculator.bg0d948810Border0d9488', 'bg-[#0D9488]/10 border-[#0D9488]/30') : 'bg-teal-50 border-teal-200'} border`}>
+        <div className={`p-4 rounded-lg ${isDark ? t('tools.paverCalculator.bg0d948810Border0d9488', 'bg-[#6096B4]/10 border-[#6096B4]/30') : 'bg-primary-50 border-primary-200'} border`}>
           <h4 className={`font-medium mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.paverCalculator.projectSummary', 'Project Summary')}</h4>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div className={isDark ? 'text-gray-300' : 'text-gray-700'}>

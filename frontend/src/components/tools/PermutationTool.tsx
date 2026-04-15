@@ -180,7 +180,7 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
           } rounded-lg shadow-lg p-8`}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Shuffle className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -192,9 +192,9 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.permutation.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.permutation.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
             </div>
           )}
 
@@ -210,7 +210,7 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
                   onClick={() => setCalculationType(type.key)}
                   className={`px-4 py-3 rounded-lg border transition-colors text-center ${
                     calculationType === type.key
-                      ? 'bg-[#0D9488] text-white border-[#0D9488]'
+                      ? 'bg-[#6096B4] text-white border-[#6096B4]'
                       : isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600'
                       : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
@@ -239,7 +239,7 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                 placeholder={t('tools.permutation.enterN', 'Enter n')}
               />
             </div>
@@ -257,7 +257,7 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
                     isDarkMode
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                   placeholder={t('tools.permutation.enterR', 'Enter r')}
                 />
               </div>
@@ -283,7 +283,7 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
                   </span>
                   <CopyButton value={results.result || results.factorial || ''} label="result" />
                 </div>
-                <div className="font-mono text-2xl text-[#0D9488] font-bold break-all">
+                <div className="font-mono text-2xl text-[#6096B4] font-bold break-all">
                   {formatLargeNumber(results.result || results.factorial || '')}
                 </div>
                 {(results.result || results.factorial || '').length > 20 && (
@@ -296,7 +296,7 @@ const PermutationTool: React.FC<PermutationToolProps> = ({ uiConfig }) => {
               {/* Formula Explanation */}
               <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Calculator className="w-4 h-4 text-[#0D9488]" />
+                  <Calculator className="w-4 h-4 text-[#6096B4]" />
                   <span className={`font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                     {t('tools.permutation.calculation', 'Calculation')}
                   </span>

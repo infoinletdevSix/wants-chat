@@ -185,14 +185,14 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
         </div>
       ) : expenses.length === 0 ? (
         <GlassCard hover={false} className="p-12 text-center">
-          <Receipt className="h-16 w-16 mx-auto mb-4 text-teal-400/50" />
+          <Receipt className="h-16 w-16 mx-auto mb-4 text-primary-400/50" />
           <h3 className="text-xl font-semibold mb-2 text-white">No Expenses Yet</h3>
           <p className="text-white/60 mb-6">
             Start tracking your expenses to manage your budget better
           </p>
           <Button
             onClick={onAddExpense}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
           >
             <Add className="h-4 w-4 mr-2" />
             Add Your First Expense
@@ -200,7 +200,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
         </GlassCard>
       ) : filteredAndSortedExpenses.length === 0 ? (
         <GlassCard hover={false} className="p-12 text-center">
-          <Search className="h-16 w-16 mx-auto mb-4 text-teal-400/50" />
+          <Search className="h-16 w-16 mx-auto mb-4 text-primary-400/50" />
           <h3 className="text-xl font-semibold mb-2 text-white">No Expenses Found</h3>
           <p className="text-white/60 mb-6">
             No expenses match your current search and filters
@@ -221,7 +221,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
           {filteredAndSortedExpenses.map((expense) => (
             <GlassCard key={expense.id}>
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center">
                   {expense.icon}
                 </div>
                 <div className="flex gap-2">
@@ -253,7 +253,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
                 <h3 className="font-semibold text-lg text-white">
                   {expense.title}
                 </h3>
-                <p className="text-2xl font-bold text-teal-400">
+                <p className="text-2xl font-bold text-primary-400">
                   ${expense.amount.toFixed(2)}
                 </p>
                 <p className="text-sm text-white/60">

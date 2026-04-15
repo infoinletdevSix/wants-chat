@@ -312,11 +312,11 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.posterGenerator.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.posterGenerator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.posterGenerator.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.posterGenerator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Image className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Image className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.posterGenerator.aiPosterGenerator', 'AI Poster Generator')}</h3>
@@ -347,7 +347,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
                 const type = posterTypes.find((t) => t.label === e.target.value);
                 if (type) setSelectedType(type);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {posterTypes.map((type) => (
                 <option key={type.label} value={type.label}>
@@ -367,7 +367,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
                 const size = sizePresets.find((s) => s.label === e.target.value);
                 if (size) setSelectedSize(size);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {sizePresets.map((size) => (
                 <option key={size.label} value={size.label}>
@@ -388,7 +388,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
             value={formData.headline}
             onChange={(e) => handleInputChange('headline', e.target.value)}
             placeholder={t('tools.posterGenerator.summerMusicFestival', 'SUMMER MUSIC FESTIVAL')}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all text-lg font-semibold`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all text-lg font-semibold`}
           />
         </div>
 
@@ -402,7 +402,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
             onChange={(e) => handleInputChange('description', e.target.value)}
             placeholder={t('tools.posterGenerator.joinUsForThreeDays', 'Join us for three days of incredible live music...')}
             rows={3}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -418,7 +418,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
               value={formData.date}
               onChange={(e) => handleInputChange('date', e.target.value)}
               placeholder={t('tools.posterGenerator.july15172024', 'July 15-17, 2024')}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
 
@@ -432,7 +432,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
               value={formData.location}
               onChange={(e) => handleInputChange('location', e.target.value)}
               placeholder={t('tools.posterGenerator.centralParkNyc', 'Central Park, NYC')}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             />
           </div>
         </div>
@@ -448,7 +448,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
               const style = posterStyles.find((s) => s.label === e.target.value);
               if (style) setSelectedStyle(style);
             }}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {posterStyles.map((style) => (
               <option key={style.label} value={style.label}>
@@ -469,7 +469,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !formData.headline}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -513,7 +513,7 @@ export const PosterGeneratorTool: React.FC<PosterGeneratorToolProps> = ({ uiConf
                     <button
                       onClick={() => handleSave(poster.url, poster.prompt)}
                       disabled={isSaving}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0D9488]/90 transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#6096B4]/90 transition-colors disabled:opacity-50"
                       title={t('tools.posterGenerator.saveToGallery', 'Save to Gallery')}
                     >
                       {saveSuccess ? <CheckCircle className="w-5 h-5" /> : <Save className="w-5 h-5" />}

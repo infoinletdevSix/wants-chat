@@ -313,11 +313,11 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
     <>
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-teal-900/20' : t('tools.sloganCreator.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : t('tools.sloganCreator.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Sparkles className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Sparkles className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.sloganCreator.aiSloganCreator', 'AI Slogan Creator')}</h3>
@@ -338,9 +338,9 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">
               {isEditFromGallery
                 ? t('tools.sloganCreator.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.sloganCreator.contentLoadedFromYourConversation', 'Content loaded from your conversation')}
             </span>
@@ -357,7 +357,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
             value={brandName}
             onChange={(e) => setBrandName(e.target.value)}
             placeholder={t('tools.sloganCreator.eGNikeAppleCoca', 'e.g., Nike, Apple, Coca-Cola')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -371,7 +371,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
             onChange={(e) => setBrandValues(e.target.value)}
             placeholder={t('tools.sloganCreator.describeYourBrandSCore', 'Describe your brand\'s core values, personality, mission, or what makes it unique...')}
             rows={3}
-            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -382,7 +382,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
             <select
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
-              className={`flex-1 px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`flex-1 px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {industries.map((ind) => (
                 <option key={ind} value={ind}>
@@ -396,7 +396,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
                 value={customIndustry}
                 onChange={(e) => setCustomIndustry(e.target.value)}
                 placeholder={t('tools.sloganCreator.specifyIndustry', 'Specify industry')}
-                className={`flex-1 px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`flex-1 px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             )}
           </div>
@@ -408,7 +408,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
           <select
             value={targetEmotion}
             onChange={(e) => setTargetEmotion(e.target.value)}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {emotions.map((emotion) => (
               <option key={emotion.value} value={emotion.value}>
@@ -429,7 +429,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
             max="12"
             value={numberOfResults}
             onChange={(e) => setNumberOfResults(Number(e.target.value))}
-            className="w-full accent-[#0D9488]"
+            className="w-full accent-[#6096B4]"
           />
           <div className="flex justify-between text-xs text-gray-500">
             <span>4</span>
@@ -448,7 +448,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !brandName.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -498,7 +498,7 @@ Format: Return ONLY the slogans, one per line, without numbering or formatting.`
                     </button>
                     <button
                       onClick={() => handleSave(slogan.text)}
-                      className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-teal-900/30 hover:bg-teal-900/50 text-teal-300' : 'bg-teal-50 hover:bg-teal-100 text-teal-700'} border ${theme === 'dark' ? 'border-teal-800' : 'border-teal-200'} rounded-lg transition-colors text-sm`}
+                      className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-primary-900/30 hover:bg-primary-900/50 text-primary-300' : 'bg-primary-50 hover:bg-primary-100 text-primary-700'} border ${theme === 'dark' ? 'border-primary-800' : 'border-primary-200'} rounded-lg transition-colors text-sm`}
                     >
                       <Save className="w-4 h-4" />
                       {t('tools.sloganCreator.save', 'Save')}

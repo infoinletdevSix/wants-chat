@@ -128,7 +128,7 @@ export const AuthenticatedHeader: React.FC = () => {
             >
               {selectedOrganization ? (
                 <>
-                  <Building2 className="w-4 h-4 text-[#0D9488]" />
+                  <Building2 className="w-4 h-4 text-[#6096B4]" />
                   <span className="text-sm font-medium">{selectedOrganization.name}</span>
                 </>
               ) : (
@@ -164,7 +164,7 @@ export const AuthenticatedHeader: React.FC = () => {
                     className={cn(
                       "w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-left",
                       !selectedOrganization
-                        ? (theme === 'dark' ? 'bg-[#0D9488]/20 text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]')
+                        ? (theme === 'dark' ? 'bg-[#6096B4]/20 text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]')
                         : (theme === 'dark' ? 'hover:bg-[#3a3a3a] text-slate-300' : 'hover:bg-slate-100 text-slate-700')
                     )}
                   >
@@ -173,7 +173,7 @@ export const AuthenticatedHeader: React.FC = () => {
                       <div className="text-sm font-medium">{t('authenticatedHeader.personal')}</div>
                     </div>
                     {!selectedOrganization && (
-                      <Check className="w-4 h-4 text-[#0D9488]" />
+                      <Check className="w-4 h-4 text-[#6096B4]" />
                     )}
                   </button>
 
@@ -197,7 +197,7 @@ export const AuthenticatedHeader: React.FC = () => {
                           className={cn(
                             "w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-left",
                             selectedOrganization?.id === org.id
-                              ? (theme === 'dark' ? 'bg-[#0D9488]/20 text-[#0D9488]' : 'bg-[#0D9488]/10 text-[#0D9488]')
+                              ? (theme === 'dark' ? 'bg-[#6096B4]/20 text-[#6096B4]' : 'bg-[#6096B4]/10 text-[#6096B4]')
                               : hoveredOrg?.id === org.id
                                 ? (theme === 'dark' ? 'bg-[#3a3a3a] text-slate-200' : 'bg-slate-100 text-slate-800')
                                 : (theme === 'dark' ? 'hover:bg-[#3a3a3a] text-slate-300' : 'hover:bg-slate-100 text-slate-700')
@@ -212,7 +212,7 @@ export const AuthenticatedHeader: React.FC = () => {
                             )}>{org.current_user_role || org.userRole || t('authenticatedHeader.member')}</div>
                           </div>
                           {selectedOrganization?.id === org.id && (
-                            <Check className="w-4 h-4 text-[#0D9488]" />
+                            <Check className="w-4 h-4 text-[#6096B4]" />
                           )}
                         </button>
                       ))}
@@ -299,8 +299,8 @@ export const AuthenticatedHeader: React.FC = () => {
             className={cn(
               "p-2 rounded-lg transition-colors",
               theme === 'dark'
-                ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#0D9488]'
-                : 'hover:bg-slate-100 text-slate-500 hover:text-[#0D9488]'
+                ? 'hover:bg-[#2a2a2a] text-slate-400 hover:text-[#6096B4]'
+                : 'hover:bg-slate-100 text-slate-500 hover:text-[#6096B4]'
             )}
             title={t('authenticatedHeader.contentLibrary')}
           >

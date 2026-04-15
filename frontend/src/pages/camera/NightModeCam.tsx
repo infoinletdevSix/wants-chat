@@ -106,7 +106,7 @@ const NightModeCam: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-2xl mb-4">
               <Moon className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl font-bold text-white mb-2">Night Mode Camera</h1>
@@ -114,7 +114,7 @@ const NightModeCam: React.FC = () => {
           </div>
 
           {/* Camera View */}
-          <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 overflow-hidden mb-6">
+          <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 overflow-hidden mb-6">
             <div className="aspect-video bg-black relative">
               {isActive ? (
                 <>
@@ -157,7 +157,7 @@ const NightModeCam: React.FC = () => {
                       <Sun className="w-4 h-4" />
                       Brightness
                     </label>
-                    <span className="text-sm text-teal-400">{brightness}%</span>
+                    <span className="text-sm text-primary-400">{brightness}%</span>
                   </div>
                   <input
                     type="range"
@@ -165,14 +165,14 @@ const NightModeCam: React.FC = () => {
                     max="200"
                     value={brightness}
                     onChange={(e) => setBrightness(Number(e.target.value))}
-                    className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                    className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary-500"
                   />
                 </div>
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <label className="text-sm font-medium text-gray-300">Contrast</label>
-                    <span className="text-sm text-teal-400">{contrast}%</span>
+                    <span className="text-sm text-primary-400">{contrast}%</span>
                   </div>
                   <input
                     type="range"
@@ -180,7 +180,7 @@ const NightModeCam: React.FC = () => {
                     max="200"
                     value={contrast}
                     onChange={(e) => setContrast(Number(e.target.value))}
-                    className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                    className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary-500"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ const NightModeCam: React.FC = () => {
                   className={`flex-1 min-w-[150px] px-6 py-3 rounded-xl font-medium transition-all ${
                     isActive
                       ? 'bg-red-500 hover:bg-red-600 text-white'
-                      : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white'
+                      : 'bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white'
                   }`}
                 >
                   {isActive ? 'Stop Camera' : 'Start Camera'}
@@ -222,7 +222,7 @@ const NightModeCam: React.FC = () => {
 
           {/* Captured Image Preview */}
           {capturedImage && (
-            <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-teal-500/30 p-6">
+            <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-primary-500/30 p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">Captured Photo</h3>
                 <button
@@ -239,7 +239,7 @@ const NightModeCam: React.FC = () => {
 
               <button
                 onClick={downloadPhoto}
-                className="w-full px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
+                className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white rounded-xl font-medium transition-all"
               >
                 <Download className="w-5 h-5 inline mr-2" />
                 Download Photo

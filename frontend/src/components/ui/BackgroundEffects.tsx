@@ -21,7 +21,7 @@ export const BackgroundEffects: React.FC<BackgroundEffectsProps> = ({ variant = 
       {/* Fixed background with animated gradient orbs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900" />
 
         {/* Animated gradient orbs */}
         <motion.div
@@ -117,7 +117,7 @@ export const BackgroundEffects: React.FC<BackgroundEffectsProps> = ({ variant = 
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-teal-400"
+            className="absolute w-1 h-1 rounded-full bg-primary-400"
             style={{
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`,

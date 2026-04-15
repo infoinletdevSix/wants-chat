@@ -325,8 +325,8 @@ export function HeatIndexTool({
               border: '1px solid rgba(13, 148, 136, 0.2)'
             }}
           >
-            <Sparkles size={16} color="#0D9488" />
-            <span style={{ fontSize: '14px', color: '#0D9488', fontWeight: 500 }}>
+            <Sparkles size={16} color="#6096B4" />
+            <span style={{ fontSize: '14px', color: '#6096B4', fontWeight: 500 }}>
               {t('tools.heatIndex.valueLoadedFromAiResponse', 'Value loaded from AI response')}
             </span>
           </div>

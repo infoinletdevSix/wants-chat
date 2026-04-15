@@ -244,11 +244,11 @@ Please organize and format these notes professionally.`;
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${theme === 'dark' ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-teal-900/20' : t('tools.meetingNotes.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${theme === 'dark' ? 'from-gray-800 to-primary-900/20' : t('tools.meetingNotes.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 flex-1">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <FileText className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <FileText className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.meetingNotes.aiMeetingNotesOrganizer', 'AI Meeting Notes Organizer')}</h3>
@@ -257,9 +257,9 @@ Please organize and format these notes professionally.`;
           </div>
           <div className="flex items-center gap-3">
             {isPrefilled && (
-              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#0D9488]/10 rounded-lg border border-[#0D9488]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#0D9488]" />
-                <span className="text-xs text-[#0D9488] font-medium">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-[#6096B4]/10 rounded-lg border border-[#6096B4]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#6096B4]" />
+                <span className="text-xs text-[#6096B4] font-medium">
                   {isEditFromGallery ? t('tools.meetingNotes.restoredFromGallery', 'Restored from Gallery') : t('tools.meetingNotes.prefilled', 'Prefilled')}
                 </span>
               </div>
@@ -303,7 +303,7 @@ Please organize and format these notes professionally.`;
             value={meetingTitle}
             onChange={(e) => setMeetingTitle(e.target.value)}
             placeholder={t('tools.meetingNotes.eGQ4PlanningSession', 'e.g., Q4 Planning Session')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -317,7 +317,7 @@ Please organize and format these notes professionally.`;
             value={attendees}
             onChange={(e) => setAttendees(e.target.value)}
             placeholder={t('tools.meetingNotes.eGJohnSarahMike', 'e.g., John, Sarah, Mike, Lisa')}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -331,7 +331,7 @@ Please organize and format these notes professionally.`;
             onChange={(e) => setRawNotes(e.target.value)}
             placeholder={t('tools.meetingNotes.pasteYourMeetingNotesTranscript', 'Paste your meeting notes, transcript, or bullet points here...')}
             rows={8}
-            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -341,7 +341,7 @@ Please organize and format these notes professionally.`;
           <select
             value={outputFormat}
             onChange={(e) => setOutputFormat(e.target.value)}
-            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${theme === 'dark' ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {outputFormats.map((f) => (
               <option key={f.value} value={f.value}>
@@ -357,7 +357,7 @@ Please organize and format these notes professionally.`;
             <button
               onClick={() => setIncludeActionItems(!includeActionItems)}
               className={`relative w-12 h-6 rounded-full transition-colors ${
-                includeActionItems ? 'bg-[#0D9488]' : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
+                includeActionItems ? 'bg-[#6096B4]' : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
               }`}
             >
               <span
@@ -375,7 +375,7 @@ Please organize and format these notes professionally.`;
             <button
               onClick={() => setIncludeDecisions(!includeDecisions)}
               className={`relative w-12 h-6 rounded-full transition-colors ${
-                includeDecisions ? 'bg-[#0D9488]' : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
+                includeDecisions ? 'bg-[#6096B4]' : theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
               }`}
             >
               <span
@@ -401,7 +401,7 @@ Please organize and format these notes professionally.`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !rawNotes.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -449,7 +449,7 @@ Please organize and format these notes professionally.`;
                 </button>
                 <button
                   onClick={handleSave}
-                  className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-teal-900/30 hover:bg-teal-900/50 text-teal-300' : 'bg-teal-50 hover:bg-teal-100 text-teal-700'} rounded-lg transition-colors text-sm`}
+                  className={`flex items-center gap-2 px-3 py-1.5 ${theme === 'dark' ? 'bg-primary-900/30 hover:bg-primary-900/50 text-primary-300' : 'bg-primary-50 hover:bg-primary-100 text-primary-700'} rounded-lg transition-colors text-sm`}
                 >
                   <Save className="w-4 h-4" />
                   {t('tools.meetingNotes.save', 'Save')}

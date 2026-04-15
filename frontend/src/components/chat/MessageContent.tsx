@@ -280,7 +280,7 @@ const ChartBlock: React.FC<{ config: ChartConfig }> = ({ config }) => {
   const xKey = config.xKey || config.nameKey || 'name';
 
   // Default colors if not specified
-  const defaultColors = ['#0D9488', '#F59E0B', '#EF4444', '#8B5CF6', '#10B981', '#EC4899'];
+  const defaultColors = ['#6096B4', '#F59E0B', '#EF4444', '#8B5CF6', '#10B981', '#EC4899'];
 
   const renderChart = () => {
     switch (config.type) {
@@ -430,7 +430,7 @@ const ChartBlock: React.FC<{ config: ChartConfig }> = ({ config }) => {
       {config.title && (
         <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
           <div className="flex items-center gap-2">
-            <BarChart2 className="w-5 h-5 text-[#0D9488]" />
+            <BarChart2 className="w-5 h-5 text-[#6096B4]" />
             <h3 className={cn(
               'font-semibold',
               isDark ? 'text-white' : 'text-gray-900'
@@ -541,7 +541,7 @@ const ImageWithDownload: React.FC<{ src?: string; alt?: string }> = ({ src, alt 
       <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg flex items-center justify-center gap-2">
         <button
           onClick={handleDownload}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0D9488] text-white text-sm font-medium rounded-lg hover:bg-[#0B7A70] transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 bg-[#6096B4] text-white text-sm font-medium rounded-lg hover:bg-[#4C7F98] transition-colors"
           title="Download image"
         >
           <Download className="w-4 h-4" />
@@ -737,7 +737,7 @@ export const MessageContent: React.FC<MessageContentProps> = ({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#0D9488] hover:underline"
+                className="text-[#6096B4] hover:underline"
               >
                 {children}
               </a>
@@ -816,8 +816,8 @@ export const MessageContent: React.FC<MessageContentProps> = ({
                       ? 'opacity-50 cursor-not-allowed'
                       : 'hover:scale-105 cursor-pointer',
                     isDark
-                      ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-                      : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+                      ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+                      : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
                   )}
                 >
                   {isLoading && <Loader2 className="w-3 h-3 animate-spin" />}

@@ -99,10 +99,10 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Scale className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Scale className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.unitPriceCalculator.title')}</h3>
@@ -113,9 +113,9 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/10 rounded-xl border border-teal-500/20">
-            <Sparkles className="w-4 h-4 text-teal-500" />
-            <span className="text-sm text-teal-500 font-medium">{t('tools.unitPriceCalculator.valuesLoaded')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-xl border border-primary-500/20">
+            <Sparkles className="w-4 h-4 text-primary-500" />
+            <span className="text-sm text-primary-500 font-medium">{t('tools.unitPriceCalculator.valuesLoaded')}</span>
           </div>
         )}
 
@@ -126,7 +126,7 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
               key={product.id}
               className={`p-4 rounded-lg border ${
                 bestValue && product.id === bestValue.id
-                  ? isDark ? 'bg-teal-900/20 border-teal-500' : 'bg-teal-50 border-teal-300'
+                  ? isDark ? 'bg-primary-900/20 border-primary-500' : 'bg-primary-50 border-primary-300'
                   : isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
               }`}
             >
@@ -140,7 +140,7 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
                     placeholder={`Product ${index + 1}`}
                   />
                   {bestValue && product.id === bestValue.id && (
-                    <span className="flex items-center gap-1 px-2 py-0.5 bg-teal-500 text-white text-xs rounded-full">
+                    <span className="flex items-center gap-1 px-2 py-0.5 bg-primary-500 text-white text-xs rounded-full">
                       <Trophy className="w-3 h-3" /> {t('tools.unitPriceCalculator.bestValue')}
                     </span>
                   )}
@@ -207,8 +207,8 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
           onClick={addProduct}
           className={`w-full py-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-2 transition-colors ${
             isDark
-              ? 'border-gray-700 hover:border-teal-500 text-gray-400 hover:text-teal-500'
-              : 'border-gray-300 hover:border-teal-500 text-gray-500 hover:text-teal-500'
+              ? 'border-gray-700 hover:border-primary-500 text-gray-400 hover:text-primary-500'
+              : 'border-gray-300 hover:border-primary-500 text-gray-500 hover:text-primary-500'
           }`}
         >
           <Plus className="w-4 h-4" />
@@ -217,15 +217,15 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
 
         {/* Results */}
         {calculations.length > 0 && (
-          <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+          <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="flex items-center justify-between mb-4">
-              <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+              <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                 {t('tools.unitPriceCalculator.unitPriceComparison')}
               </h4>
               <button
                 onClick={handleCopy}
                 className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                  copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                  copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -239,14 +239,14 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
                   key={calc.id}
                   className={`flex items-center justify-between p-3 rounded-lg ${
                     index === 0
-                      ? isDark ? 'bg-teal-800/30' : 'bg-teal-100'
+                      ? isDark ? 'bg-primary-800/30' : 'bg-primary-100'
                       : isDark ? 'bg-gray-800' : 'bg-white'
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <span className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold ${
                       index === 0
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-600'
                     }`}>
                       {index + 1}
@@ -259,7 +259,7 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className={`text-lg font-bold ${index === 0 ? 'text-teal-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
+                    <div className={`text-lg font-bold ${index === 0 ? 'text-primary-500' : isDark ? 'text-white' : 'text-gray-900'}`}>
                       ${calc.unitPrice.toFixed(4)}
                     </div>
                     <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -273,12 +273,12 @@ export const UnitPriceCalculatorTool: React.FC<UnitPriceCalculatorToolProps> = (
             {bestValue && calculations.length > 1 && (
               <div className={`mt-4 p-3 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
                 <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <strong className="text-teal-500">{bestValue.name}</strong> offers the best value at{' '}
-                  <strong className="text-teal-500">${bestValue.unitPrice.toFixed(4)}</strong> per {bestValue.unit}
+                  <strong className="text-primary-500">{bestValue.name}</strong> offers the best value at{' '}
+                  <strong className="text-primary-500">${bestValue.unitPrice.toFixed(4)}</strong> per {bestValue.unit}
                   {calculations.length > 1 && (
                     <>
                       , saving you{' '}
-                      <strong className="text-teal-500">
+                      <strong className="text-primary-500">
                         {(((calculations[calculations.length - 1].unitPrice - bestValue.unitPrice) / calculations[calculations.length - 1].unitPrice) * 100).toFixed(1)}%
                       </strong>
                       {' '}compared to the most expensive option.

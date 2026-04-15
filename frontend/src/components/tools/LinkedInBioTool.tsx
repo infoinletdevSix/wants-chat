@@ -281,16 +281,16 @@ Create a post that encourages engagement (likes, comments, shares).`;
   return (
     <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.linkedInBio.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.linkedInBio.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.linkedInBio.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.linkedInBio.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Linkedin className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Linkedin className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.linkedInBio.linkedinContentGenerator', 'LinkedIn Content Generator')}</h3>
             <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.linkedInBio.createEngagingBiosAndPosts', 'Create engaging bios and posts')}</p>
             {isPrefilled && (
-              <div className="flex items-center gap-1 mt-1 text-xs text-teal-600 dark:text-teal-400">
+              <div className="flex items-center gap-1 mt-1 text-xs text-primary-600 dark:text-primary-400">
                 <Sparkles className="w-3 h-3" />
                 <span>{isEditFromGallery ? t('tools.linkedInBio.contentRestoredFromYourSaved', 'Content restored from your saved gallery') : t('tools.linkedInBio.preFilledFromYourRequest', 'Pre-filled from your request')}</span>
               </div>
@@ -306,7 +306,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
             onClick={() => setMode('bio')}
             className={`flex-1 py-2 px-4 rounded-md transition-all flex items-center justify-center gap-2 ${
               mode === 'bio'
-                ? 'bg-[#0D9488] text-white shadow-sm'
+                ? 'bg-[#6096B4] text-white shadow-sm'
                 : `${isDark ? 'text-gray-300 hover:bg-gray-600' : 'text-gray-700 hover:bg-gray-200'}`
             }`}
           >
@@ -317,7 +317,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
             onClick={() => setMode('post')}
             className={`flex-1 py-2 px-4 rounded-md transition-all flex items-center justify-center gap-2 ${
               mode === 'post'
-                ? 'bg-[#0D9488] text-white shadow-sm'
+                ? 'bg-[#6096B4] text-white shadow-sm'
                 : `${isDark ? 'text-gray-300 hover:bg-gray-600' : 'text-gray-700 hover:bg-gray-200'}`
             }`}
           >
@@ -338,7 +338,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 value={currentRole}
                 onChange={(e) => setCurrentRole(e.target.value)}
                 placeholder={t('tools.linkedInBio.eGSeniorProductManager', 'e.g., Senior Product Manager at Tech Corp')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -351,7 +351,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 value={industry}
                 onChange={(e) => setIndustry(e.target.value)}
                 placeholder={t('tools.linkedInBio.eGTechnologyHealthcareFinance', 'e.g., Technology, Healthcare, Finance')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -364,7 +364,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 onChange={(e) => setAchievements(e.target.value)}
                 placeholder={t('tools.linkedInBio.listYourNotableAchievementsAwards', 'List your notable achievements, awards, or accomplishments...&#10;&#10;• Launched product used by 1M+ users&#10;• Increased revenue by 150%&#10;• Led team of 20 across 3 countries')}
                 rows={4}
-                className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+                className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
               />
             </div>
 
@@ -377,7 +377,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 value={personality}
                 onChange={(e) => setPersonality(e.target.value)}
                 placeholder={t('tools.linkedInBio.eGInnovativeDataDriven', 'e.g., Innovative, Data-driven, Collaborative')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
           </div>
@@ -395,7 +395,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
                 placeholder={t('tools.linkedInBio.eGTheFutureOf', 'e.g., The future of remote work in 2025')}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               />
             </div>
 
@@ -407,7 +407,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                   const type = postTypes.find((t) => t.label === e.target.value);
                   if (type) setPostType(type);
                 }}
-                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-200 text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+                className={`w-full px-4 py-2.5 border ${isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-200 text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
               >
                 {postTypes.map((type) => (
                   <option key={type.label} value={type.label}>
@@ -426,7 +426,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 onChange={(e) => setKeyPoints(e.target.value)}
                 placeholder={t('tools.linkedInBio.whatKeyPointsOrIdeas', 'What key points or ideas should be included in the post?&#10;&#10;• Main message or insight&#10;• Supporting examples&#10;• Call to action')}
                 rows={4}
-                className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+                className={`w-full px-4 py-3 border ${isDark ? 'bg-gray-700 border-gray-600 text-white placeholder:text-gray-400' : 'bg-white border-gray-200 text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
               />
             </div>
 
@@ -436,7 +436,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
                 id="includeHashtags"
                 checked={includeHashtags}
                 onChange={(e) => setIncludeHashtags(e.target.checked)}
-                className="w-4 h-4 text-[#0D9488] border-gray-300 rounded focus:ring-[#0D9488]/20"
+                className="w-4 h-4 text-[#6096B4] border-gray-300 rounded focus:ring-[#6096B4]/20"
               />
               <label
                 htmlFor="includeHashtags"
@@ -459,7 +459,7 @@ Create a post that encourages engagement (likes, comments, shares).`;
         <button
           onClick={handleGenerate}
           disabled={isGenerating || (mode === 'bio' && !currentRole) || (mode === 'post' && !topic)}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>

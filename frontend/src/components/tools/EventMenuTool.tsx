@@ -642,9 +642,9 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.eventMenu.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.eventMenu.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -652,7 +652,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <ChefHat className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -707,7 +707,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -727,7 +727,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
               <h2 className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.eventMenu.eventMenus', 'Event Menus')}</h2>
               <button
                 onClick={() => { resetBuilderForm(); setActiveTab('builder'); }}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.eventMenu.createMenu', 'Create Menu')}
@@ -756,7 +756,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="text-lg font-semibold text-[#0D9488]">{formatCurrency(menu.totalPricePerPerson)}/pp</p>
+                        <p className="text-lg font-semibold text-[#6096B4]">{formatCurrency(menu.totalPricePerPerson)}/pp</p>
                         <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                           {menu.profitMargin.toFixed(1)}% margin
                         </p>
@@ -820,7 +820,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
               </div>
               <button
                 onClick={() => setShowItemForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.eventMenu.addItem', 'Add Item')}
@@ -923,7 +923,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                               type="checkbox"
                               checked={itemForm.isActive}
                               onChange={(e) => setItemForm({ ...itemForm, isActive: e.target.checked })}
-                              className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                              className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                             />
                             <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.eventMenu.active', 'Active')}</span>
                           </label>
@@ -961,7 +961,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                             placeholder={t('tools.eventMenu.addIngredient', 'Add ingredient...')}
                             className={`flex-1 px-4 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'}`}
                           />
-                          <button onClick={addIngredient} className="px-4 py-2 bg-[#0D9488] text-white rounded-lg">
+                          <button onClick={addIngredient} className="px-4 py-2 bg-[#6096B4] text-white rounded-lg">
                             <Plus className="w-4 h-4" />
                           </button>
                         </div>
@@ -988,7 +988,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                             placeholder={t('tools.eventMenu.addAllergen', 'Add allergen...')}
                             className={`flex-1 px-4 py-2 rounded-lg border ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'}`}
                           />
-                          <button onClick={addAllergen} className="px-4 py-2 bg-[#0D9488] text-white rounded-lg">
+                          <button onClick={addAllergen} className="px-4 py-2 bg-[#6096B4] text-white rounded-lg">
                             <Plus className="w-4 h-4" />
                           </button>
                         </div>
@@ -1009,7 +1009,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                       <button onClick={resetItemForm} className={`px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}>
                         {t('tools.eventMenu.cancel', 'Cancel')}
                       </button>
-                      <button onClick={saveMenuItem} className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90">
+                      <button onClick={saveMenuItem} className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90">
                         <Save className="w-4 h-4" />
                         {editingItem ? t('tools.eventMenu.updateItem', 'Update Item') : t('tools.eventMenu.addItem2', 'Add Item')}
                       </button>
@@ -1030,7 +1030,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                         {MENU_CATEGORIES.find(c => c.category === item.category)?.label}
                       </p>
                     </div>
-                    <span className="text-[#0D9488] font-semibold">{formatCurrency(item.pricePerPerson)}</span>
+                    <span className="text-[#6096B4] font-semibold">{formatCurrency(item.pricePerPerson)}</span>
                   </div>
                   <p className={`text-sm mb-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{item.description}</p>
                   {item.dietaryTags.length > 0 && (
@@ -1070,7 +1070,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
               <div className="flex items-center gap-4">
                 <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eventMenu.pricePerson2', 'Price/Person')}</p>
-                  <p className="text-lg font-bold text-[#0D9488]">{formatCurrency(builderTotals.totalPrice)}</p>
+                  <p className="text-lg font-bold text-[#6096B4]">{formatCurrency(builderTotals.totalPrice)}</p>
                 </div>
                 <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                   <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.eventMenu.margin', 'Margin')}</p>
@@ -1128,7 +1128,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                         type="checkbox"
                         checked={builderMenu.isTemplate}
                         onChange={(e) => setBuilderMenu({ ...builderMenu, isTemplate: e.target.checked })}
-                        className="w-4 h-4 rounded border-gray-300 text-[#0D9488] focus:ring-[#0D9488]"
+                        className="w-4 h-4 rounded border-gray-300 text-[#6096B4] focus:ring-[#6096B4]"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.eventMenu.saveAsTemplate', 'Save as template')}</span>
                     </label>
@@ -1181,7 +1181,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                                 <div key={itemId} className={`flex items-center justify-between p-2 rounded ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'}`}>
                                   <span className={theme === 'dark' ? 'text-white' : 'text-gray-900'}>{item.name}</span>
                                   <div className="flex items-center gap-2">
-                                    <span className="text-[#0D9488]">{formatCurrency(item.pricePerPerson)}</span>
+                                    <span className="text-[#6096B4]">{formatCurrency(item.pricePerPerson)}</span>
                                     <button onClick={() => removeItemFromCourse(course.id, itemId)} className="text-red-500">
                                       <X className="w-4 h-4" />
                                     </button>
@@ -1226,7 +1226,7 @@ export const EventMenuTool: React.FC<EventMenuToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={saveEventMenu}
-                    className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0D9488]/90"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#6096B4]/90"
                   >
                     <Save className="w-4 h-4" />
                     {editingMenu ? t('tools.eventMenu.updateMenu', 'Update Menu') : t('tools.eventMenu.saveMenu', 'Save Menu')}

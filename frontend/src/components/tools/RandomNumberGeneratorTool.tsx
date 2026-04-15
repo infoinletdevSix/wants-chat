@@ -229,7 +229,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
             <label className={`block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               Minimum Value
               {isPrefilled && (
-                <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#0D9488]">
+                <span className="ml-2 inline-flex items-center gap-1 text-xs text-[#6096B4]">
                   <Sparkles className="w-3 h-3" />
                   {t('tools.randomNumberGenerator.prefilledFromAi', 'Prefilled from AI')}
                 </span>
@@ -246,7 +246,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
 
@@ -266,7 +266,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
 
@@ -288,7 +288,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
             />
           </div>
         </div>
@@ -305,7 +305,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
                 type="checkbox"
                 checked={allowDuplicates}
                 onChange={(e) => setAllowDuplicates(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                 {t('tools.randomNumberGenerator.allowDuplicateNumbers', 'Allow duplicate numbers')}
@@ -317,7 +317,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
                 type="checkbox"
                 checked={sortResults}
                 onChange={(e) => setSortResults(e.target.checked)}
-                className="w-5 h-5 rounded accent-[#0D9488] cursor-pointer"
+                className="w-5 h-5 rounded accent-[#6096B4] cursor-pointer"
               />
               <span className={theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}>
                 {t('tools.randomNumberGenerator.sortResultsAscending', 'Sort results (ascending)')}
@@ -338,7 +338,7 @@ export const RandomNumberGeneratorTool = ({ uiConfig }: RandomNumberGeneratorToo
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleGenerate}
-            className="flex items-center gap-2 px-6 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors font-medium"
+            className="flex items-center gap-2 px-6 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors font-medium"
           >
             <RefreshCw className="w-4 h-4" />
             {t('tools.randomNumberGenerator.generateNumbers', 'Generate Numbers')}

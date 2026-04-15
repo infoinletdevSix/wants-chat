@@ -602,7 +602,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
               theme === 'dark'
                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+            } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
           />
         </div>
         <select
@@ -612,7 +612,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
             theme === 'dark'
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-300 text-gray-900'
-          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
         >
           <option value="all">{t('tools.clientPortal.allStatus', 'All Status')}</option>
           <option value="active">{t('tools.clientPortal.active', 'Active')}</option>
@@ -630,7 +630,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
             theme === 'dark'
               ? 'bg-gray-700 border-gray-600 text-white'
               : 'bg-white border-gray-300 text-gray-900'
-          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488]`}
+          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4]`}
         >
           <option value="name-asc">{t('tools.clientPortal.nameAZ', 'Name A-Z')}</option>
           <option value="name-desc">{t('tools.clientPortal.nameZA', 'Name Z-A')}</option>
@@ -643,7 +643,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
         </select>
         <button
           onClick={() => setShowAddClient(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white rounded-lg transition-all font-medium"
+          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white rounded-lg transition-all font-medium"
         >
           <Plus className="w-4 h-4" />
           {t('tools.clientPortal.addClient', 'Add Client')}
@@ -901,7 +901,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 onClick={() => setActiveTab(key as TabType)}
                 className={`flex items-center gap-2 px-4 py-3 border-b-2 transition-colors whitespace-nowrap ${
                   activeTab === key
-                    ? 'border-[#0D9488] text-[#0D9488]'
+                    ? 'border-[#6096B4] text-[#6096B4]'
                     : `border-transparent ${theme === 'dark' ? 'text-gray-400 hover:text-gray-200' : 'text-gray-500 hover:text-gray-700'}`
                 }`}
               >
@@ -982,7 +982,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
               <div className="flex justify-end">
                 <button
                   onClick={() => { setModalFormData({}); setShowAddModal('project'); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientPortal.addProject', 'Add Project')}
@@ -1043,7 +1043,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
               <div className="flex justify-end">
                 <button
                   onClick={() => { setModalFormData({}); setShowAddModal('communication'); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientPortal.logCommunication', 'Log Communication')}
@@ -1117,7 +1117,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
               <div className="flex justify-end">
                 <button
                   onClick={() => { setModalFormData({}); setShowAddModal('contract'); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientPortal.addContract', 'Add Contract')}
@@ -1178,7 +1178,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
               <div className="flex justify-end">
                 <button
                   onClick={() => { setModalFormData({}); setShowAddModal('invoice'); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientPortal.addInvoice', 'Add Invoice')}
@@ -1256,7 +1256,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
               <div className="flex justify-end">
                 <button
                   onClick={() => { setModalFormData({}); setShowAddModal('task'); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.clientPortal.addTask', 'Add Task')}
@@ -1408,7 +1408,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                         ? 'bg-purple-500'
                         : event.type === 'contract'
                         ? 'bg-yellow-500'
-                        : 'bg-teal-500'
+                        : 'bg-primary-500'
                     }`}
                   />
                 </div>
@@ -1470,7 +1470,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             />
           </div>
           <div>
@@ -1485,7 +1485,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             />
           </div>
           <div>
@@ -1500,7 +1500,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             />
           </div>
           <div>
@@ -1515,7 +1515,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             />
           </div>
           <div>
@@ -1530,7 +1530,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             />
           </div>
           <div>
@@ -1544,7 +1544,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             >
               {industries.map((ind) => (
                 <option key={ind} value={ind}>
@@ -1566,7 +1566,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             >
               <option value="prospect">{t('tools.clientPortal.prospect2', 'Prospect')}</option>
               <option value="active">{t('tools.clientPortal.active2', 'Active')}</option>
@@ -1584,7 +1584,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
             >
               {leadSources.map((source) => (
                 <option key={source} value={source}>
@@ -1613,7 +1613,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'bg-white border-gray-300 text-gray-900'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 resize-none`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 resize-none`}
             />
           </div>
         </div>
@@ -1632,7 +1632,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
           <button
             onClick={handleAddClient}
             disabled={!newClient.name || !newClient.email}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg disabled:opacity-50"
           >
             <Save className="w-4 h-4" />
             {t('tools.clientPortal.addClient2', 'Add Client')}
@@ -1678,7 +1678,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               />
             </div>
             <div>
@@ -1693,7 +1693,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               />
             </div>
             <div>
@@ -1708,7 +1708,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               />
             </div>
             <div>
@@ -1723,7 +1723,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               />
             </div>
             <div>
@@ -1738,7 +1738,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               />
             </div>
             <div>
@@ -1752,7 +1752,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               >
                 {industries.map((ind) => (
                   <option key={ind} value={ind}>
@@ -1774,7 +1774,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               >
                 <option value="prospect">{t('tools.clientPortal.prospect3', 'Prospect')}</option>
                 <option value="active">{t('tools.clientPortal.active3', 'Active')}</option>
@@ -1792,7 +1792,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20`}
               >
                 {leadSources.map((source) => (
                   <option key={source} value={source}>
@@ -1823,7 +1823,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]/20 resize-none`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]/20 resize-none`}
               />
             </div>
           </div>
@@ -1841,7 +1841,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
             </button>
             <button
               onClick={handleUpdateClient}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
             >
               <Save className="w-4 h-4" />
               {t('tools.clientPortal.saveChanges', 'Save Changes')}
@@ -2363,7 +2363,7 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
             </button>
             <button
               onClick={handleSubmit}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white rounded-lg"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white rounded-lg"
             >
               <Plus className="w-4 h-4" />
               {t('tools.clientPortal.add', 'Add')}
@@ -2378,17 +2378,17 @@ export const ClientPortalTool = ({ uiConfig }: ClientPortalToolProps) => {
     <div className={`max-w-6xl mx-auto p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.clientPortal.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.clientPortal.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
         </div>
       )}
 
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Users className="w-6 h-6 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Users className="w-6 h-6 text-[#6096B4]" />
           </div>
           <div>
             <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>

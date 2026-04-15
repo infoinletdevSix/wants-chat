@@ -123,9 +123,9 @@ Type: ${result.type}`;
       <div className="space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.palindromeChecker.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.palindromeChecker.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
           </div>
         )}
 
@@ -136,7 +136,7 @@ Type: ${result.type}`;
               type="checkbox"
               checked={ignoreCase}
               onChange={(e) => setIgnoreCase(e.target.checked)}
-              className="w-4 h-4 rounded accent-[#0D9488] cursor-pointer"
+              className="w-4 h-4 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.palindromeChecker.ignoreCase', 'Ignore case')}
@@ -147,7 +147,7 @@ Type: ${result.type}`;
               type="checkbox"
               checked={ignoreSpaces}
               onChange={(e) => setIgnoreSpaces(e.target.checked)}
-              className="w-4 h-4 rounded accent-[#0D9488] cursor-pointer"
+              className="w-4 h-4 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.palindromeChecker.ignoreSpaces', 'Ignore spaces')}
@@ -158,7 +158,7 @@ Type: ${result.type}`;
               type="checkbox"
               checked={ignorePunctuation}
               onChange={(e) => setIgnorePunctuation(e.target.checked)}
-              className="w-4 h-4 rounded accent-[#0D9488] cursor-pointer"
+              className="w-4 h-4 rounded accent-[#6096B4] cursor-pointer"
             />
             <span className={`text-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
               {t('tools.palindromeChecker.ignorePunctuation', 'Ignore punctuation')}
@@ -182,12 +182,12 @@ Type: ${result.type}`;
                 theme === 'dark'
                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                   : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-              } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+              } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
             />
             <button
               onClick={checkPalindrome}
               disabled={!input.trim()}
-              className="px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors"
+              className="px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors"
             >
               {t('tools.palindromeChecker.check', 'Check')}
             </button>

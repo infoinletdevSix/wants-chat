@@ -117,7 +117,7 @@ export const SleepLogCard: React.FC<SleepLogCardProps> = ({
                   <span>{formatTime(new Date(sleepLog.wakeTime).toTimeString().substring(0, 5))}</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4 text-teal-400" />
+                  <Clock className="w-4 h-4 text-primary-400" />
                   <span>{formatSleepDuration(sleepLog.actualSleepMinutes || 0)}</span>
                 </div>
               </div>

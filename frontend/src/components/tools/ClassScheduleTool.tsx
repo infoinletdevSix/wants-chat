@@ -695,7 +695,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
     isDark
       ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-400'
       : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'
-  } rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`;
+  } rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`;
 
   const cardClass = `p-4 rounded-xl ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border`;
 
@@ -712,9 +712,9 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.classSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.classSchedule.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -722,8 +722,8 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
         <div className={cardClass}>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488]/10 rounded-xl">
-                <Calendar className="w-6 h-6 text-[#0D9488]" />
+              <div className="p-3 bg-[#6096B4]/10 rounded-xl">
+                <Calendar className="w-6 h-6 text-[#6096B4]" />
               </div>
               <div>
                 <h1 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -1072,7 +1072,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1138,7 +1138,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
             <div className="flex justify-end">
               <button
                 onClick={() => setShowSlotForm(!showSlotForm)}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.classSchedule.addClassToSchedule', 'Add Class to Schedule')}
@@ -1256,7 +1256,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                     id="recurring"
                     checked={newSlot.isRecurring}
                     onChange={(e) => setNewSlot({ ...newSlot, isRecurring: e.target.checked })}
-                    className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                    className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                   />
                   <label htmlFor="recurring" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t('tools.classSchedule.recurringWeekly', 'Recurring weekly')}
@@ -1266,7 +1266,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                   <button
                     onClick={handleAddSlot}
                     disabled={!newSlot.classId || !newSlot.startTime}
-                    className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.classSchedule.addToSchedule2', 'Add to Schedule')}
@@ -1436,7 +1436,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
             <div className="flex justify-end">
               <button
                 onClick={() => setShowClassForm(!showClassForm)}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.classSchedule.addClass', 'Add Class')}
@@ -1571,7 +1571,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                   <button
                     onClick={handleAddClass}
                     disabled={!newClass.name || !newClass.type}
-                    className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.classSchedule.addClass2', 'Add Class')}
@@ -1694,7 +1694,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
             <div className="flex justify-end">
               <button
                 onClick={() => setShowInstructorForm(!showInstructorForm)}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.classSchedule.addInstructor', 'Add Instructor')}
@@ -1761,7 +1761,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                           }}
                           className={`px-2 py-1 text-xs rounded-lg transition-colors ${
                             (newInstructor.specialties || []).includes(type)
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1789,7 +1789,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                   <button
                     onClick={handleAddInstructor}
                     disabled={!newInstructor.name || !newInstructor.email}
-                    className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.classSchedule.addInstructor2', 'Add Instructor')}
@@ -1898,7 +1898,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
             <div className="flex justify-end">
               <button
                 onClick={() => setShowEnrollmentForm(!showEnrollmentForm)}
-                className="px-4 py-2 bg-[#0D9488] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
+                className="px-4 py-2 bg-[#6096B4] text-white rounded-lg flex items-center gap-2 hover:bg-[#0B8276] transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 {t('tools.classSchedule.addEnrollment', 'Add Enrollment')}
@@ -1986,7 +1986,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                   <button
                     onClick={handleAddEnrollment}
                     disabled={!newEnrollment.scheduleSlotId || !newEnrollment.participantName}
-                    className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     <UserPlus className="w-5 h-5" />
                     {t('tools.classSchedule.enroll', 'Enroll')}
@@ -2218,7 +2218,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                   id="class-active"
                   checked={editingClass.isActive}
                   onChange={(e) => setEditingClass({ ...editingClass, isActive: e.target.checked })}
-                  className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                  className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                 />
                 <label htmlFor="class-active" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {t('tools.classSchedule.active', 'Active')}
@@ -2227,7 +2227,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
               <div className="flex gap-3 mt-4">
                 <button
                   onClick={handleUpdateClass}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center gap-2"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center gap-2"
                 >
                   <Save className="w-5 h-5" />
                   {t('tools.classSchedule.saveChanges', 'Save Changes')}
@@ -2311,7 +2311,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
                   id="instructor-active"
                   checked={editingInstructor.isActive}
                   onChange={(e) => setEditingInstructor({ ...editingInstructor, isActive: e.target.checked })}
-                  className="w-4 h-4 text-[#0D9488] rounded focus:ring-[#0D9488]"
+                  className="w-4 h-4 text-[#6096B4] rounded focus:ring-[#6096B4]"
                 />
                 <label htmlFor="instructor-active" className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {t('tools.classSchedule.active2', 'Active')}
@@ -2320,7 +2320,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
               <div className="flex gap-3 mt-4">
                 <button
                   onClick={handleUpdateInstructor}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center gap-2"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center gap-2"
                 >
                   <Save className="w-5 h-5" />
                   {t('tools.classSchedule.saveChanges2', 'Save Changes')}
@@ -2418,7 +2418,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
               <div className="flex gap-3 mt-4">
                 <button
                   onClick={handleUpdateSlot}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center gap-2"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center gap-2"
                 >
                   <Save className="w-5 h-5" />
                   {t('tools.classSchedule.saveChanges3', 'Save Changes')}
@@ -2513,7 +2513,7 @@ export const ClassScheduleTool: React.FC<ClassScheduleToolProps> = ({ uiConfig }
               <div className="flex gap-3 mt-4">
                 <button
                   onClick={handleUpdateEnrollment}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-white font-medium rounded-xl flex items-center gap-2"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] text-white font-medium rounded-xl flex items-center gap-2"
                 >
                   <Save className="w-5 h-5" />
                   {t('tools.classSchedule.saveChanges4', 'Save Changes')}

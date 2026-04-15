@@ -447,9 +447,9 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.examRecord.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.examRecord.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -457,7 +457,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Eye className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -570,7 +570,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -601,7 +601,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
                 </div>
@@ -612,7 +612,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.examRecord.allStatuses', 'All Statuses')}</option>
                   <option value="completed">{t('tools.examRecord.completed', 'Completed')}</option>
@@ -626,7 +626,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                     theme === 'dark'
                       ? 'bg-gray-700 border-gray-600 text-white'
                       : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                 >
                   <option value="all">{t('tools.examRecord.allExamTypes', 'All Exam Types')}</option>
                   {EXAM_TYPES.map((type) => (
@@ -637,7 +637,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                 </select>
                 <button
                   onClick={() => setShowExamForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   {t('tools.examRecord.newExam', 'New Exam')}
@@ -841,7 +841,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
               </h2>
               <button
                 onClick={() => setShowPatientForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.examRecord.addPatient', 'Add Patient')}
@@ -864,8 +864,8 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                          <User className="w-5 h-5 text-[#0D9488]" />
+                        <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                          <User className="w-5 h-5 text-[#6096B4]" />
                         </div>
                         <div>
                           <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -890,7 +890,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                             setSelectedPatientId(patient.id);
                             setShowExamForm(true);
                           }}
-                          className="p-2 text-[#0D9488] hover:bg-[#0D9488]/10 rounded-lg transition-colors"
+                          className="p-2 text-[#6096B4] hover:bg-[#6096B4]/10 rounded-lg transition-colors"
                         >
                           <FileText className="w-4 h-4" />
                         </button>
@@ -914,7 +914,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-6`}>
               <div className="flex items-center gap-3 mb-2">
-                <User className="w-5 h-5 text-[#0D9488]" />
+                <User className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.examRecord.totalPatients', 'Total Patients')}</h3>
               </div>
               <p className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -924,7 +924,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
 
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-6`}>
               <div className="flex items-center gap-3 mb-2">
-                <FileText className="w-5 h-5 text-[#0D9488]" />
+                <FileText className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.examRecord.totalExams', 'Total Exams')}</h3>
               </div>
               <p className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -934,7 +934,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
 
             <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-6`}>
               <div className="flex items-center gap-3 mb-2">
-                <Calendar className="w-5 h-5 text-[#0D9488]" />
+                <Calendar className="w-5 h-5 text-[#6096B4]" />
                 <h3 className={`font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{t('tools.examRecord.thisMonth', 'This Month')}</h3>
               </div>
               <p className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1021,7 +1021,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1036,7 +1036,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1053,7 +1053,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1070,7 +1070,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1085,7 +1085,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1103,7 +1103,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1118,7 +1118,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1137,7 +1137,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={addPatient}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.examRecord.addPatient2', 'Add Patient')}
                   </button>
@@ -1180,7 +1180,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     >
                       <option value="">{t('tools.examRecord.selectAPatient', 'Select a patient...')}</option>
                       {patients.map((p) => (
@@ -1204,7 +1204,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {EXAM_TYPES.map((type) => (
                           <option key={type.value} value={type.value}>
@@ -1225,7 +1225,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1242,7 +1242,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1270,7 +1270,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1291,7 +1291,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1312,7 +1312,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                       <div>
@@ -1333,7 +1333,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-300 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         />
                       </div>
                     </div>
@@ -1359,7 +1359,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                     <div>
@@ -1380,7 +1380,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1398,7 +1398,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white'
                           : 'bg-white border-gray-300 text-gray-900'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                     />
                   </div>
 
@@ -1415,7 +1415,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         <option value="completed">{t('tools.examRecord.completed2', 'Completed')}</option>
                         <option value="pending-review">{t('tools.examRecord.pendingReview3', 'Pending Review')}</option>
@@ -1434,7 +1434,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                           theme === 'dark'
                             ? 'bg-gray-700 border-gray-600 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       />
                     </div>
                   </div>
@@ -1456,7 +1456,7 @@ export const ExamRecordTool: React.FC<ExamRecordToolProps> = ({ uiConfig }) => {
                   </button>
                   <button
                     onClick={addExam}
-                    className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8278]"
+                    className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8278]"
                   >
                     {t('tools.examRecord.saveExamRecord', 'Save Exam Record')}
                   </button>

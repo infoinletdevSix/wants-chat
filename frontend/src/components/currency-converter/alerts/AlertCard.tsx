@@ -86,8 +86,8 @@ const AlertCard: React.FC<AlertCardProps> = ({
 
   return (
     <div
-      className={`bg-white/5 backdrop-blur-xl rounded-xl shadow-sm border border-white/10 p-5 mb-3 cursor-pointer transition-all hover:bg-white/10 hover:border-teal-400/30 hover:shadow-lg ${
-        isSelected ? 'ring-2 ring-teal-400/50 border-teal-400/40 bg-teal-500/10' : ''
+      className={`bg-white/5 backdrop-blur-xl rounded-xl shadow-sm border border-white/10 p-5 mb-3 cursor-pointer transition-all hover:bg-white/10 hover:border-primary-400/30 hover:shadow-lg ${
+        isSelected ? 'ring-2 ring-primary-400/50 border-primary-400/40 bg-primary-500/10' : ''
       }`}
       onClick={() => onSelect(alert)}
     >
@@ -96,7 +96,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
         <div className="flex-1">
           {/* Alert Name and Status */}
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-2 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-lg border border-teal-400/20">
+            <div className="p-2 bg-gradient-to-br from-primary-500/20 to-cyan-500/20 rounded-lg border border-primary-400/20">
               {getAlertTypeIcon()}
             </div>
             <div className="flex-1">
@@ -128,7 +128,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
               onToggleStatus(alert.id, checked);
             }}
             onClick={(e) => e.stopPropagation()}
-            className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-teal-500 data-[state=checked]:to-cyan-500 data-[state=unchecked]:bg-white/20 [&>span]:bg-white [&>span]:shadow-md"
+            className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-primary-500 data-[state=checked]:to-cyan-500 data-[state=unchecked]:bg-white/20 [&>span]:bg-white [&>span]:shadow-md"
           />
           <Button
             variant="ghost"
@@ -167,7 +167,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
                alertType === 'below' ? 'Alert when below' :
                'Alert on change'}
             </span>
-            <span className="text-sm font-semibold text-teal-300">
+            <span className="text-sm font-semibold text-primary-300">
               {alertType === 'change'
                 ? `${alert.threshold}%`
                 : alert.threshold.toFixed(4)}
@@ -181,7 +181,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
                 <div
                   className={`h-2 rounded-full transition-all ${
                     alertType === 'above'
-                      ? 'bg-gradient-to-r from-teal-400 to-emerald-400'
+                      ? 'bg-gradient-to-r from-primary-400 to-emerald-400'
                       : 'bg-gradient-to-r from-rose-400 to-orange-400'
                   }`}
                   style={{ width: `${getProgressPercentage()}%` }}
@@ -189,7 +189,7 @@ const AlertCard: React.FC<AlertCardProps> = ({
               </div>
               <div className="flex justify-between text-xs text-white/50">
                 <span>Current: <span className="text-white/80">{currentRate.toFixed(4)}</span></span>
-                <span className="text-teal-300/80">{Math.abs(((currentRate - alert.threshold) / alert.threshold) * 100).toFixed(1)}% away</span>
+                <span className="text-primary-300/80">{Math.abs(((currentRate - alert.threshold) / alert.threshold) * 100).toFixed(1)}% away</span>
               </div>
             </>
           )}
@@ -217,12 +217,12 @@ const AlertCard: React.FC<AlertCardProps> = ({
           <div className="flex items-center gap-2">
             {emailNotification && (
               <div className="p-1.5 bg-white/10 rounded border border-white/20" title="Email notifications enabled">
-                <Mail className="h-3.5 w-3.5 text-teal-400" />
+                <Mail className="h-3.5 w-3.5 text-primary-400" />
               </div>
             )}
             {pushNotification && (
               <div className="p-1.5 bg-white/10 rounded border border-white/20" title="Push notifications enabled">
-                <Smartphone className="h-3.5 w-3.5 text-teal-400" />
+                <Smartphone className="h-3.5 w-3.5 text-primary-400" />
               </div>
             )}
           </div>

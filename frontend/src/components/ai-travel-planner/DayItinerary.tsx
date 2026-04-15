@@ -34,10 +34,10 @@ const DayItinerary: React.FC<DayItineraryProps> = ({
 }) => {
   return (
     <Card className="rounded-2xl mb-4 sm:mb-6 bg-white/10 backdrop-blur-xl border border-white/20">
-      <CardHeader className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 p-3 sm:p-6 rounded-t-2xl">
+      <CardHeader className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10 p-3 sm:p-6 rounded-t-2xl">
         <CardTitle className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0">
           <span className="flex items-center gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm sm:text-base">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm sm:text-base">
               {day.day}
             </div>
             <div>
@@ -85,7 +85,7 @@ const DayItinerary: React.FC<DayItineraryProps> = ({
         {/* Meals */}
         <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
           <h4 className="font-semibold mb-3 flex items-center gap-2 text-sm sm:text-base text-white">
-            <Restaurant className="h-4 w-4 sm:h-5 sm:w-5 text-teal-400" />
+            <Restaurant className="h-4 w-4 sm:h-5 sm:w-5 text-primary-400" />
             Recommended Dining
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -95,7 +95,7 @@ const DayItinerary: React.FC<DayItineraryProps> = ({
                   <Badge variant="outline" className="text-xs capitalize bg-white/10 text-white/70 border-white/20">
                     {meal.type}
                   </Badge>
-                  <span className="text-xs sm:text-sm font-semibold text-teal-400">
+                  <span className="text-xs sm:text-sm font-semibold text-primary-400">
                     ${meal.estimatedCost}
                   </span>
                 </div>
@@ -110,9 +110,9 @@ const DayItinerary: React.FC<DayItineraryProps> = ({
 
         {/* Notes */}
         {day.notes && (
-          <div className="mt-3 sm:mt-4 p-3 bg-teal-500/10 border border-teal-500/20 rounded-xl">
-            <p className="text-xs sm:text-sm text-teal-300 leading-relaxed">
-              <strong className="text-teal-200">Note:</strong> {day.notes}
+          <div className="mt-3 sm:mt-4 p-3 bg-primary-500/10 border border-primary-500/20 rounded-xl">
+            <p className="text-xs sm:text-sm text-primary-300 leading-relaxed">
+              <strong className="text-primary-200">Note:</strong> {day.notes}
             </p>
           </div>
         )}

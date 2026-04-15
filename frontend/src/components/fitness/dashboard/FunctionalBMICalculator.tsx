@@ -251,7 +251,7 @@ const FunctionalBMICalculator: React.FC<BMICalculatorProps> = ({
           />
           <Button 
             onClick={() => onSave?.(weight, height, bmi)}
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+            className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
           >
             Save Goals
           </Button>

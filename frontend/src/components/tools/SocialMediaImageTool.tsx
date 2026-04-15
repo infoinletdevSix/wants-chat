@@ -239,11 +239,11 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
   return (
     <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-sm border ${isDark ? 'border-gray-700' : 'border-gray-200'} overflow-hidden`}>
       {/* Header */}
-      <div className={`bg-gradient-to-r ${isDark ? t('tools.socialMediaImage.fromGray800To0d9488', 'from-gray-800 to-[#0D9488]/20') : t('tools.socialMediaImage.fromWhiteTo0d94885', 'from-white to-[#0D9488]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`bg-gradient-to-r ${isDark ? t('tools.socialMediaImage.fromGray800To0d9488', 'from-gray-800 to-[#6096B4]/20') : t('tools.socialMediaImage.fromWhiteTo0d94885', 'from-white to-[#6096B4]/5')} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-              <Share2 className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+              <Share2 className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
               <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.socialMediaImage.socialMediaImageGenerator', 'Social Media Image Generator')}</h3>
@@ -265,9 +265,9 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
       <div className="p-6 space-y-6">
         {/* Prefill indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.socialMediaImage.descriptionLoadedFromYourInput', 'Description loaded from your input')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.socialMediaImage.descriptionLoadedFromYourInput', 'Description loaded from your input')}</span>
           </div>
         )}
 
@@ -282,7 +282,7 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
               const platform = platforms.find((p) => p.label === e.target.value);
               if (platform) setSelectedPlatform(platform);
             }}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           >
             {platforms.map((platform) => (
               <option key={platform.label} value={platform.label}>
@@ -302,7 +302,7 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
             onChange={(e) => setPrompt(e.target.value)}
             placeholder={t('tools.socialMediaImage.describeYourSocialMediaImage', 'Describe your social media image (e.g., Modern tech workspace with laptop and coffee)')}
             rows={3}
-            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all resize-none`}
+            className={`w-full px-4 py-3 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all resize-none`}
           />
         </div>
 
@@ -317,7 +317,7 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
                 const style = styleOptions.find((s) => s.label === e.target.value);
                 if (style) setSelectedStyle(style);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {styleOptions.map((style) => (
                 <option key={style.label} value={style.label}>
@@ -336,7 +336,7 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
                 const overlay = textOverlayOptions.find((o) => o.label === e.target.value);
                 if (overlay) setTextOverlay(overlay);
               }}
-              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+              className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white' : 'border-gray-200 bg-white text-gray-900'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
             >
               {textOverlayOptions.map((overlay) => (
                 <option key={overlay.label} value={overlay.label}>
@@ -356,8 +356,8 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
             type="text"
             value={brandColors}
             onChange={(e) => setBrandColors(e.target.value)}
-            placeholder={t('tools.socialMediaImage.eGTealAndWhite', 'e.g., teal and white, #0D9488, navy blue')}
-            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#0D9488]/20 focus:border-[#0D9488] outline-none transition-all`}
+            placeholder={t('tools.socialMediaImage.eGTealAndWhite', 'e.g., teal and white, #6096B4, navy blue')}
+            className={`w-full px-4 py-2.5 border ${isDark ? 'border-gray-600 bg-gray-700 text-white placeholder:text-gray-500' : 'border-gray-200 bg-white text-gray-900 placeholder:text-gray-400'} rounded-xl focus:ring-2 focus:ring-[#6096B4]/20 focus:border-[#6096B4] outline-none transition-all`}
           />
         </div>
 
@@ -372,7 +372,7 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
         <button
           onClick={handleGenerate}
           disabled={isGenerating || !prompt.trim()}
-          className="w-full py-3 px-6 bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#2DD4BF] hover:to-[#0D9488] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#0D9488]/20"
+          className="w-full py-3 px-6 bg-gradient-to-r from-[#6096B4] to-[#75AAC1] hover:from-[#75AAC1] hover:to-[#6096B4] text-white font-medium rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-[#6096B4]/20"
         >
           {isGenerating ? (
             <>
@@ -432,7 +432,7 @@ const SocialMediaImageTool: React.FC<SocialMediaImageToolProps> = ({ uiConfig })
                     <button
                       onClick={() => handleSave(img)}
                       disabled={savingImageId === img.id}
-                      className="p-3 bg-[#0D9488] rounded-full text-white hover:bg-[#0F766E] transition-colors disabled:opacity-50"
+                      className="p-3 bg-[#6096B4] rounded-full text-white hover:bg-[#4C7F98] transition-colors disabled:opacity-50"
                       title={t('tools.socialMediaImage.saveToLibrary', 'Save to Library')}
                     >
                       {savingImageId === img.id ? (

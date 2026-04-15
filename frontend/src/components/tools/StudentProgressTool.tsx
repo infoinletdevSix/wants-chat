@@ -764,7 +764,7 @@ ${student.sessionNotes.slice(-3).map(n =>
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -801,7 +801,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                   </CardTitle>
                   <button
                     onClick={() => setIsAddingStudent(true)}
-                    className="p-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                    className="p-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -820,7 +820,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         theme === 'dark'
                           ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                           : 'bg-gray-50 border-gray-200 text-gray-900 placeholder-gray-500'
-                      } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                      } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                     />
                   </div>
                   <select
@@ -830,7 +830,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-gray-50 border-gray-200 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     <option value="all">{t('tools.studentProgress.allProgressStatus', 'All Progress Status')}</option>
                     <option value="improving">{t('tools.studentProgress.improving', 'Improving')}</option>
@@ -854,7 +854,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                       />
                       <select
                         value={newStudentGrade}
@@ -863,7 +863,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white'
                             : 'bg-white border-gray-300 text-gray-900'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                       >
                         {gradeLevels.map(g => (
                           <option key={g} value={g}>Grade {g}</option>
@@ -878,7 +878,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                       />
                       <input
                         type="email"
@@ -889,7 +889,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                       />
                       <input
                         type="tel"
@@ -900,12 +900,12 @@ ${student.sessionNotes.slice(-3).map(n =>
                           theme === 'dark'
                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                       />
                       <div className="flex gap-2">
                         <button
                           onClick={handleAddStudent}
-                          className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium transition-colors"
+                          className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium transition-colors"
                         >
                           {t('tools.studentProgress.add', 'Add')}
                         </button>
@@ -943,7 +943,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         onClick={() => setSelectedStudentId(student.id)}
                         className={`p-3 rounded-lg cursor-pointer transition-all ${
                           selectedStudentId === student.id
-                            ? 'bg-[#0D9488] text-white'
+                            ? 'bg-[#6096B4] text-white'
                             : theme === 'dark'
                             ? 'bg-gray-700 hover:bg-gray-600 text-white'
                             : 'bg-gray-50 hover:bg-gray-100 text-gray-900'
@@ -1015,7 +1015,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                             theme === 'dark'
                               ? 'bg-gray-700 border-gray-600 text-white'
                               : 'bg-white border-gray-200 text-gray-900'
-                          } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                          } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                         >
                           <option value="improving">{t('tools.studentProgress.improving2', 'Improving')}</option>
                           <option value="maintaining">{t('tools.studentProgress.maintaining2', 'Maintaining')}</option>
@@ -1023,7 +1023,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         </select>
                         <button
                           onClick={() => downloadReport(selectedStudent)}
-                          className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium transition-colors"
+                          className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium transition-colors"
                         >
                           <Download className="w-4 h-4" />
                           {t('tools.studentProgress.downloadReport', 'Download Report')}
@@ -1098,7 +1098,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                       onClick={() => setActiveTab(tab.id as typeof activeTab)}
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeTab === tab.id
-                          ? 'bg-[#0D9488] text-white'
+                          ? 'bg-[#6096B4] text-white'
                           : theme === 'dark'
                           ? 'text-gray-400 hover:text-white hover:bg-gray-700'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -1128,7 +1128,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           </button>
                           <button
                             onClick={() => setShowAddSubject(true)}
-                            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                           >
                             <Plus className="w-4 h-4" /> Subject
                           </button>
@@ -1148,11 +1148,11 @@ ${student.sessionNotes.slice(-3).map(n =>
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                                 />
                                 <button
                                   onClick={handleAddSubject}
-                                  className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm"
+                                  className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm"
                                 >
                                   {t('tools.studentProgress.add2', 'Add')}
                                 </button>
@@ -1219,11 +1219,11 @@ ${student.sessionNotes.slice(-3).map(n =>
                                           theme === 'dark'
                                             ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                        } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                        } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                                       />
                                       <button
                                         onClick={() => handleAddSkill(subject.id)}
-                                        className="px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded text-sm"
+                                        className="px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded text-sm"
                                       >
                                         {t('tools.studentProgress.add3', 'Add')}
                                       </button>
@@ -1302,7 +1302,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           </button>
                           <button
                             onClick={() => setShowAddGoal(true)}
-                            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                           >
                             <Plus className="w-4 h-4" /> Goal
                           </button>
@@ -1316,7 +1316,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                           </div>
                           <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                             <div
-                              className="h-2 rounded-full bg-[#0D9488] transition-all"
+                              className="h-2 rounded-full bg-[#6096B4] transition-all"
                               style={{ width: `${calculateGoalCompletion(selectedStudent)}%` }}
                             />
                           </div>
@@ -1336,7 +1336,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                                 />
                                 <input
                                   type="date"
@@ -1346,12 +1346,12 @@ ${student.sessionNotes.slice(-3).map(n =>
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white'
                                       : 'bg-white border-gray-300 text-gray-900'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                                 />
                                 <div className="flex gap-2">
                                   <button
                                     onClick={handleAddGoal}
-                                    className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium"
+                                    className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium"
                                   >
                                     {t('tools.studentProgress.addGoal', 'Add Goal')}
                                   </button>
@@ -1543,7 +1543,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         </CardTitle>
                         <button
                           onClick={() => setShowAddAssessment(true)}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                         >
                           <Plus className="w-4 h-4" /> Assessment
                         </button>
@@ -1564,7 +1564,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1578,7 +1578,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1592,7 +1592,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1606,7 +1606,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div className="sm:col-span-2">
@@ -1620,14 +1620,14 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm resize-none`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm resize-none`}
                               />
                             </div>
                           </div>
                           <div className="flex gap-2 mt-4">
                             <button
                               onClick={handleAddAssessment}
-                              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium"
+                              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium"
                             >
                               {t('tools.studentProgress.addAssessment2', 'Add Assessment')}
                             </button>
@@ -1727,7 +1727,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         </CardTitle>
                         <button
                           onClick={() => setShowAddSession(true)}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                         >
                           <Plus className="w-4 h-4" /> Session
                         </button>
@@ -1748,7 +1748,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1762,7 +1762,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div className="sm:col-span-2">
@@ -1776,7 +1776,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div className="sm:col-span-2">
@@ -1790,7 +1790,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm resize-none`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm resize-none`}
                               />
                             </div>
                             <div className="sm:col-span-2">
@@ -1804,14 +1804,14 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                           </div>
                           <div className="flex gap-2 mt-4">
                             <button
                               onClick={handleAddSession}
-                              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium"
+                              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium"
                             >
                               {t('tools.studentProgress.addSession', 'Add Session')}
                             </button>
@@ -1851,7 +1851,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   {note.duration} min
                                 </span>
                               </div>
-                              <div className={`text-sm mb-2 ${theme === 'dark' ? t('tools.studentProgress.text0d9488', 'text-[#0D9488]') : t('tools.studentProgress.text0d94882', 'text-[#0D9488]')}`}>
+                              <div className={`text-sm mb-2 ${theme === 'dark' ? t('tools.studentProgress.text0d9488', 'text-[#6096B4]') : t('tools.studentProgress.text0d94882', 'text-[#6096B4]')}`}>
                                 Topics: {note.topics}
                               </div>
                               {note.notes && (
@@ -1886,7 +1886,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         </CardTitle>
                         <button
                           onClick={() => setShowAddHomework(true)}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                         >
                           <Plus className="w-4 h-4" /> Homework
                         </button>
@@ -1900,7 +1900,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         </div>
                         <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
                           <div
-                            className="h-2 rounded-full bg-[#0D9488] transition-all"
+                            className="h-2 rounded-full bg-[#6096B4] transition-all"
                             style={{ width: `${calculateHomeworkCompletion(selectedStudent)}%` }}
                           />
                         </div>
@@ -1921,7 +1921,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1934,7 +1934,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1948,7 +1948,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -1962,14 +1962,14 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                           </div>
                           <div className="flex gap-2 mt-4">
                             <button
                               onClick={handleAddHomework}
-                              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium"
+                              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium"
                             >
                               {t('tools.studentProgress.addHomework2', 'Add Homework')}
                             </button>
@@ -2025,7 +2025,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                       {hw.description}
                                     </p>
                                     {hw.subject && (
-                                      <span className={`text-xs ${theme === 'dark' ? t('tools.studentProgress.text0d94883', 'text-[#0D9488]') : t('tools.studentProgress.text0d94884', 'text-[#0D9488]')}`}>
+                                      <span className={`text-xs ${theme === 'dark' ? t('tools.studentProgress.text0d94883', 'text-[#6096B4]') : t('tools.studentProgress.text0d94884', 'text-[#6096B4]')}`}>
                                         {hw.subject}
                                       </span>
                                     )}
@@ -2062,7 +2062,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                         </CardTitle>
                         <button
                           onClick={() => setShowAddCommunication(true)}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg transition-colors"
+                          className="flex items-center gap-1 px-3 py-1.5 text-sm bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg transition-colors"
                         >
                           <Plus className="w-4 h-4" /> Communication
                         </button>
@@ -2083,7 +2083,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                             <div>
@@ -2095,7 +2095,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white'
                                     : 'bg-white border-gray-300 text-gray-900'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               >
                                 <option value="email">{t('tools.studentProgress.email', 'Email')}</option>
                                 <option value="phone">{t('tools.studentProgress.phoneCall', 'Phone Call')}</option>
@@ -2114,7 +2114,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm resize-none`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm resize-none`}
                               />
                             </div>
                             <div className="sm:col-span-2">
@@ -2128,14 +2128,14 @@ ${student.sessionNotes.slice(-3).map(n =>
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] text-sm`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] text-sm`}
                               />
                             </div>
                           </div>
                           <div className="flex gap-2 mt-4">
                             <button
                               onClick={handleAddCommunication}
-                              className="flex-1 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm font-medium"
+                              className="flex-1 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm font-medium"
                             >
                               {t('tools.studentProgress.logCommunication2', 'Log Communication')}
                             </button>
@@ -2214,7 +2214,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                       </div>
                       <button
                         onClick={() => downloadReport(selectedStudent)}
-                        className="w-full flex items-center justify-center gap-2 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                        className="w-full flex items-center justify-center gap-2 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
                       >
                         <Download className="w-5 h-5" />
                         {t('tools.studentProgress.downloadReportAsTextFile', 'Download Report as Text File')}
@@ -2235,7 +2235,7 @@ ${student.sessionNotes.slice(-3).map(n =>
                   </p>
                   <button
                     onClick={() => setIsAddingStudent(true)}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors"
                   >
                     <Plus className="w-5 h-5" />
                     {t('tools.studentProgress.addYourFirstStudent', 'Add Your First Student')}

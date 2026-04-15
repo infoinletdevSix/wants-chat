@@ -343,8 +343,8 @@ const CalibrationLogTool: React.FC = () => {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-lg ${isDark ? 'bg-teal-900/50' : 'bg-teal-100'}`}>
-            <Gauge className={`w-6 h-6 ${isDark ? 'text-teal-400' : 'text-teal-600'}`} />
+          <div className={`p-2 rounded-lg ${isDark ? 'bg-primary-900/50' : 'bg-primary-100'}`}>
+            <Gauge className={`w-6 h-6 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
           </div>
           <div>
             <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -376,7 +376,7 @@ const CalibrationLogTool: React.FC = () => {
               setFormData({});
               setShowModal(true);
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
           >
             <Plus className="w-4 h-4" />
             {t('tools.calibrationLog.newCalibration', 'New Calibration')}
@@ -396,7 +396,7 @@ const CalibrationLogTool: React.FC = () => {
                 {totalCalibrations}
               </p>
             </div>
-            <FileText className={`w-8 h-8 ${isDark ? 'text-teal-400' : 'text-teal-600'}`} />
+            <FileText className={`w-8 h-8 ${isDark ? 'text-primary-400' : 'text-primary-600'}`} />
           </div>
         </div>
 
@@ -919,7 +919,7 @@ const CalibrationLogTool: React.FC = () => {
               </button>
               <button
                 onClick={handleSave}
-                className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700"
+                className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
               >
                 {editingCalibration ? t('tools.calibrationLog.update', 'Update') : t('tools.calibrationLog.create', 'Create')} Record
               </button>

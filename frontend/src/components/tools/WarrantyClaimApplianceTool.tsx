@@ -421,7 +421,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
 
   const inputClass = `w-full px-3 py-2 rounded-lg border ${
     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-1 ${isDark ? 'text-gray-300' : 'text-gray-700'}`;
 
@@ -430,9 +430,9 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
       <div className="max-w-7xl mx-auto">
         {/* Prefill Indicator */}
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.warrantyClaimAppliance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.warrantyClaimAppliance.dataLoadedFromAiResponse', 'Data loaded from AI response')}</span>
           </div>
         )}
 
@@ -441,7 +441,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#0D9488] rounded-lg">
+                <div className="p-3 bg-[#6096B4] rounded-lg">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -517,7 +517,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
             onClick={() => setActiveTab('list')}
             className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
               activeTab === 'list'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -533,7 +533,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
             }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
               activeTab === 'create' || activeTab === 'edit'
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : isDark
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -807,7 +807,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
                     </select>
                     <button
                       onClick={() => handleEditClaim(currentClaim)}
-                      className="w-full px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] flex items-center justify-center gap-2"
+                      className="w-full px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] flex items-center justify-center gap-2"
                     >
                       <Edit3 className="w-4 h-4" />
                       {t('tools.warrantyClaimAppliance.editClaim', 'Edit Claim')}
@@ -990,7 +990,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
                     </select>
                     <button
                       onClick={handleAddNote}
-                      className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E]"
+                      className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98]"
                     >
                       {t('tools.warrantyClaimAppliance.add', 'Add')}
                     </button>
@@ -1035,7 +1035,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
                           onClick={() => setCurrentClaim({ ...currentClaim, claimType: type.value as WarrantyClaim['claimType'] })}
                           className={`p-2 rounded-lg text-sm transition-colors ${
                             currentClaim.claimType === type.value
-                              ? 'bg-[#0D9488] text-white'
+                              ? 'bg-[#6096B4] text-white'
                               : isDark
                               ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1132,7 +1132,7 @@ export const WarrantyClaimApplianceTool = ({ uiConfig }: WarrantyClaimApplianceT
                 <button
                   onClick={handleSubmitClaim}
                   disabled={!currentClaim.customerName || !currentClaim.applianceType || !currentClaim.warrantyProvider}
-                  className="w-full px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0F766E] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#4C7F98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   {t('tools.warrantyClaimAppliance.submitClaim', 'Submit Claim')}

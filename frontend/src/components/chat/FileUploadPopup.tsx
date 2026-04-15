@@ -225,7 +225,7 @@ export const FileUploadPopup: React.FC<FileUploadPopupProps> = ({
             className={cn(
               "border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all",
               isDragging
-                ? 'border-[#0D9488] bg-[#0D9488]/10'
+                ? 'border-[#6096B4] bg-[#6096B4]/10'
                 : isDark
                   ? 'border-gray-600 hover:border-gray-500 hover:bg-gray-800/50'
                   : 'border-gray-300 hover:border-gray-400 hover:bg-gray-50'
@@ -241,7 +241,7 @@ export const FileUploadPopup: React.FC<FileUploadPopupProps> = ({
             />
             <Upload className={cn(
               "w-12 h-12 mx-auto mb-4",
-              isDragging ? 'text-[#0D9488]' : isDark ? 'text-gray-500' : 'text-gray-400'
+              isDragging ? 'text-[#6096B4]' : isDark ? 'text-gray-500' : 'text-gray-400'
             )} />
             <p className={cn(
               "text-lg font-medium mb-2",
@@ -311,7 +311,7 @@ export const FileUploadPopup: React.FC<FileUploadPopupProps> = ({
                     {/* Status */}
                     <div className="flex items-center gap-2">
                       {fileInfo.uploading && (
-                        <Loader2 className="w-5 h-5 text-[#0D9488] animate-spin" />
+                        <Loader2 className="w-5 h-5 text-[#6096B4] animate-spin" />
                       )}
                       {fileInfo.uploaded && (
                         <span className="text-xs px-2 py-1 rounded-full bg-green-500/20 text-green-500">
@@ -372,8 +372,8 @@ export const FileUploadPopup: React.FC<FileUploadPopupProps> = ({
                     className={cn(
                       "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all hover:scale-105",
                       isDark
-                        ? 'bg-[#0D9488]/20 text-[#0D9488] hover:bg-[#0D9488]/30'
-                        : 'bg-[#0D9488]/10 text-[#0D9488] hover:bg-[#0D9488]/20'
+                        ? 'bg-[#6096B4]/20 text-[#6096B4] hover:bg-[#6096B4]/30'
+                        : 'bg-[#6096B4]/10 text-[#6096B4] hover:bg-[#6096B4]/20'
                     )}
                   >
                     {suggestion.tool.title}
@@ -411,7 +411,7 @@ export const FileUploadPopup: React.FC<FileUploadPopupProps> = ({
             {files.length > 0 && files.some(f => f.uploaded) && (
               <button
                 onClick={handleDone}
-                className="px-4 py-2 rounded-xl text-sm font-medium bg-[#0D9488] text-white hover:bg-[#0D9488]/90 transition-colors"
+                className="px-4 py-2 rounded-xl text-sm font-medium bg-[#6096B4] text-white hover:bg-[#6096B4]/90 transition-colors"
               >
                 Attach to Chat
               </button>

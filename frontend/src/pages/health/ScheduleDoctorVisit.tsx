@@ -389,7 +389,7 @@ const ScheduleDoctorVisit: React.FC = () => {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Header Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-teal-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-primary-500/10 border border-primary-500/20">
           <h1 className="text-3xl font-bold text-white mb-2">
             {isEditMode ? 'Edit Appointment' : 'Schedule New Appointment'}
           </h1>
@@ -447,10 +447,10 @@ const ScheduleDoctorVisit: React.FC = () => {
         {(!isEditMode || !appointmentLoading) && (
           <>
         {/* Doctor Information */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <User className="h-5 w-5 text-teal-400" />
+              <User className="h-5 w-5 text-primary-400" />
               Doctor Information
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -485,7 +485,7 @@ const ScheduleDoctorVisit: React.FC = () => {
                     <SelectTrigger id="specialty" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue placeholder="Select specialty" />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                       {specialties.map(specialty => (
                         <SelectItem key={specialty} value={specialty} className="text-white hover:bg-white/10">{specialty}</SelectItem>
                       ))}
@@ -554,7 +554,7 @@ const ScheduleDoctorVisit: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setCountryDropdownOpen(!countryDropdownOpen)}
-                        className="w-full h-12 px-4 text-left border border-white/20 rounded-xl bg-white/10 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="w-full h-12 px-4 text-left border border-white/20 rounded-xl bg-white/10 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       >
                         <div className="flex items-center gap-2">
                           <span className="text-lg">{selectedCountry?.flag}</span>
@@ -563,7 +563,7 @@ const ScheduleDoctorVisit: React.FC = () => {
                       </button>
 
                       {countryDropdownOpen && (
-                        <div className="absolute z-50 w-80 mt-1 bg-teal-800/90 border border-teal-400/30 rounded-xl shadow-lg max-h-60 overflow-hidden">
+                        <div className="absolute z-50 w-80 mt-1 bg-primary-800/90 border border-primary-400/30 rounded-xl shadow-lg max-h-60 overflow-hidden">
                           <div className="p-3 border-b border-white/10">
                             <Input
                               type="text"
@@ -615,10 +615,10 @@ const ScheduleDoctorVisit: React.FC = () => {
         </Card>
 
         {/* Appointment Details */}
-        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-teal-500">
+        <Card className="mb-8 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-primary-500">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-white">
-              <AppointmentIcon className="h-5 w-5 text-teal-400" />
+              <AppointmentIcon className="h-5 w-5 text-primary-400" />
               Appointment Details
             </CardTitle>
             <CardDescription className="text-white/60">
@@ -655,7 +655,7 @@ const ScheduleDoctorVisit: React.FC = () => {
                       <SelectTrigger id="visitTime" className={`mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white ${errors.visitTime ? 'border-red-500' : ''}`}>
                         <SelectValue placeholder="Select time" />
                       </SelectTrigger>
-                      <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                      <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                         {timeSlots.map(time => (
                           <SelectItem key={time} value={time} className="text-white hover:bg-white/10">{time}</SelectItem>
                         ))}
@@ -673,7 +673,7 @@ const ScheduleDoctorVisit: React.FC = () => {
                     <SelectTrigger id="visitType" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                       {visitTypes.map(type => (
                         <SelectItem key={type.value} value={type.value} className="text-white hover:bg-white/10">{type.label}</SelectItem>
                       ))}
@@ -689,7 +689,7 @@ const ScheduleDoctorVisit: React.FC = () => {
                     <SelectTrigger id="duration" className="mt-1 h-12 rounded-xl bg-white/10 border-white/20 text-white">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-teal-800/90 border border-teal-400/30">
+                    <SelectContent className="bg-primary-800/90 border border-primary-400/30">
                       <SelectItem value="15" className="text-white hover:bg-white/10">15 minutes</SelectItem>
                       <SelectItem value="30" className="text-white hover:bg-white/10">30 minutes</SelectItem>
                       <SelectItem value="45" className="text-white hover:bg-white/10">45 minutes</SelectItem>
@@ -808,7 +808,7 @@ const ScheduleDoctorVisit: React.FC = () => {
           <Button
             onClick={handleSubmit}
             disabled={createAppointmentMutation.loading || updateAppointmentMutation.loading}
-            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600"
+            className="h-12 px-8 rounded-xl text-white font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600"
           >
             {(createAppointmentMutation.loading || updateAppointmentMutation.loading) ? (
               <>
@@ -825,13 +825,13 @@ const ScheduleDoctorVisit: React.FC = () => {
         </div>
 
         {/* Important Note */}
-        <Card className="rounded-2xl border-2 border-teal-500/30 bg-teal-500/10">
+        <Card className="rounded-2xl border-2 border-primary-500/30 bg-primary-500/10">
           <CardContent className="p-6">
             <div className="flex gap-4">
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-teal-500/20"
+                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary-500/20"
               >
-                <InfoIcon className="h-6 w-6 text-teal-400" />
+                <InfoIcon className="h-6 w-6 text-primary-400" />
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-white mb-2">Appointment Reminders</h4>

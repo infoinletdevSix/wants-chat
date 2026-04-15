@@ -584,7 +584,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -599,9 +599,9 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
       )}
       <div className="max-w-5xl mx-auto">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20 print:hidden">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.vehicleInspection.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20 print:hidden">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.vehicleInspection.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -609,7 +609,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6 print:shadow-none print:mb-4`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg print:bg-gray-200">
+              <div className="p-3 bg-[#6096B4] rounded-lg print:bg-gray-200">
                 <ClipboardCheck className="w-6 h-6 text-white print:text-gray-700" />
               </div>
               <div>
@@ -647,7 +647,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
               <button
                 onClick={saveInspection}
                 disabled={isSaving}
-                className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg font-medium transition-colors flex items-center gap-2 disabled:opacity-50"
+                className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg font-medium transition-colors flex items-center gap-2 disabled:opacity-50"
               >
                 {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                 Save
@@ -693,7 +693,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                     key={insp.id}
                     className={`flex items-center justify-between p-3 rounded-lg ${
                       theme === 'dark' ? 'bg-gray-600' : 'bg-white'
-                    } ${currentInspectionId === insp.id ? 'ring-2 ring-[#0D9488]' : ''}`}
+                    } ${currentInspectionId === insp.id ? 'ring-2 ring-[#6096B4]' : ''}`}
                   >
                     <div className="flex-1 cursor-pointer" onClick={() => loadInspection(insp)}>
                       <div className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -730,7 +730,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -746,7 +746,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -762,7 +762,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -778,7 +778,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -795,7 +795,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -811,7 +811,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -826,7 +826,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
             <div>
@@ -842,7 +842,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] print:border-gray-300`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] print:border-gray-300`}
               />
             </div>
           </div>
@@ -1004,7 +1004,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                                   theme === 'dark'
                                     ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                               />
                             </div>
                             <div>
@@ -1025,7 +1025,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                                     theme === 'dark'
                                       ? 'bg-gray-600 border-gray-500 text-white placeholder-gray-400'
                                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                                  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                                  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                                 />
                               </div>
                             </div>
@@ -1103,7 +1103,7 @@ export const VehicleInspectionTool: React.FC<VehicleInspectionToolProps> = ({ ui
                 <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t('tools.vehicleInspection.totalEstimatedRepairCost', 'Total Estimated Repair Cost:')}
                 </span>
-                <span className="text-2xl font-bold text-[#0D9488]">
+                <span className="text-2xl font-bold text-[#6096B4]">
                   ${stats.totalEstimatedCost.toLocaleString()}
                 </span>
               </div>

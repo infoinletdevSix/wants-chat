@@ -282,10 +282,10 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
       <div className="max-w-2xl mx-auto">
         <div className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
           {/* Header */}
-          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+          <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-                <Shield className="w-5 h-5 text-[#0D9488]" />
+              <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+                <Shield className="w-5 h-5 text-[#6096B4]" />
               </div>
               <div>
                 <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -301,9 +301,9 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
           <div className="p-6 space-y-6">
             {/* Prefill indicator */}
             {isPrefilled && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-                <Sparkles className="w-4 h-4 text-[#0D9488]" />
-                <span className="text-sm text-[#0D9488] font-medium">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+                <Sparkles className="w-4 h-4 text-[#6096B4]" />
+                <span className="text-sm text-[#6096B4] font-medium">
                   {t('tools.vaccinationSchedule.dateLoadedFromYourConversation', 'Date loaded from your conversation')}
                 </span>
               </div>
@@ -323,7 +323,7 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
                   isDark
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
 
@@ -374,7 +374,7 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
                           </div>
                           <button
                             onClick={() => toggleCompleted(item.vaccine.id, item.dose)}
-                            className="px-3 py-1 text-sm rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] transition-colors"
+                            className="px-3 py-1 text-sm rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] transition-colors"
                           >
                             {t('tools.vaccinationSchedule.markDone', 'Mark Done')}
                           </button>
@@ -409,7 +409,7 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
                           </div>
                           <button
                             onClick={() => toggleCompleted(item.vaccine.id, item.dose)}
-                            className="px-3 py-1 text-sm rounded-lg bg-[#0D9488] text-white hover:bg-[#0F766E] transition-colors"
+                            className="px-3 py-1 text-sm rounded-lg bg-[#6096B4] text-white hover:bg-[#4C7F98] transition-colors"
                           >
                             {t('tools.vaccinationSchedule.markDone2', 'Mark Done')}
                           </button>
@@ -423,7 +423,7 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
                 {groupedByStatus.upcoming.length > 0 && (
                   <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
                     <div className="flex items-center gap-2 mb-3">
-                      <Calendar className="w-5 h-5 text-[#0D9488]" />
+                      <Calendar className="w-5 h-5 text-[#6096B4]" />
                       <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.vaccinationSchedule.upcomingVaccinations', 'Upcoming Vaccinations')}
                       </span>
@@ -466,7 +466,7 @@ export const VaccinationScheduleTool: React.FC<VaccinationScheduleToolProps> = (
                         className={`w-full flex items-center justify-between p-3 text-left`}
                       >
                         <div className="flex items-center gap-2">
-                          <Shield className="w-4 h-4 text-[#0D9488]" />
+                          <Shield className="w-4 h-4 text-[#6096B4]" />
                           <span className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                             {vaccine.name}
                           </span>

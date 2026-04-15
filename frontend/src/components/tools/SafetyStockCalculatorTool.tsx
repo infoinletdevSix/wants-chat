@@ -164,10 +164,10 @@ Cost Analysis:
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <Shield className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <Shield className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.safetyStockCalculator.safetyStockCalculator', 'Safety Stock Calculator')}</h3>
@@ -183,7 +183,7 @@ Cost Analysis:
             onClick={() => setMethod('basic')}
             className={`flex-1 px-4 py-2 text-sm rounded-lg transition-colors ${
               method === 'basic'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -195,7 +195,7 @@ Cost Analysis:
             onClick={() => setMethod('statistical')}
             className={`flex-1 px-4 py-2 text-sm rounded-lg transition-colors ${
               method === 'statistical'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -207,7 +207,7 @@ Cost Analysis:
             onClick={() => setMethod('service-level')}
             className={`flex-1 px-4 py-2 text-sm rounded-lg transition-colors ${
               method === 'service-level'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : isDark
                 ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                 : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -220,7 +220,7 @@ Cost Analysis:
         {/* Demand Inputs */}
         <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
           <h4 className={`font-medium mb-4 flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            <Package className="w-4 h-4 text-teal-500" />
+            <Package className="w-4 h-4 text-primary-500" />
             {t('tools.safetyStockCalculator.demandParameters', 'Demand Parameters')}
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -235,7 +235,7 @@ Cost Analysis:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             {method === 'basic' && (
@@ -250,7 +250,7 @@ Cost Analysis:
                   min="0"
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
             )}
@@ -266,7 +266,7 @@ Cost Analysis:
                   min="0"
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
             )}
@@ -281,7 +281,7 @@ Cost Analysis:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             {method === 'basic' && (
@@ -296,7 +296,7 @@ Cost Analysis:
                   min="0"
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
             )}
@@ -313,7 +313,7 @@ Cost Analysis:
                   step="0.1"
                   className={`w-full px-3 py-2 rounded-lg border ${
                     isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
             )}
@@ -333,7 +333,7 @@ Cost Analysis:
                   onClick={() => setServiceLevel(option.value)}
                   className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                     serviceLevel === option.value
-                      ? 'bg-teal-500 text-white'
+                      ? 'bg-primary-500 text-white'
                       : isDark
                       ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -365,7 +365,7 @@ Cost Analysis:
                 step="0.01"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -380,7 +380,7 @@ Cost Analysis:
                 max="100"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
             <div className="space-y-2">
@@ -394,7 +394,7 @@ Cost Analysis:
                 min="0"
                 className={`w-full px-3 py-2 rounded-lg border ${
                   isDark ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
               />
             </div>
           </div>
@@ -402,18 +402,18 @@ Cost Analysis:
 
         {/* Results */}
         {calculations && (
-          <div className={`p-6 rounded-xl ${isDark ? 'bg-teal-900/20 border-teal-800' : 'bg-teal-50 border-teal-100'} border`}>
+          <div className={`p-6 rounded-xl ${isDark ? 'bg-primary-900/20 border-primary-800' : 'bg-primary-50 border-primary-100'} border`}>
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-teal-500" />
-                <h4 className={`font-medium ${isDark ? 'text-teal-300' : 'text-teal-700'}`}>
+                <TrendingUp className="w-5 h-5 text-primary-500" />
+                <h4 className={`font-medium ${isDark ? 'text-primary-300' : 'text-primary-700'}`}>
                   {t('tools.safetyStockCalculator.safetyStockResults', 'Safety Stock Results')}
                 </h4>
               </div>
               <button
                 onClick={handleCopy}
                 className={`px-3 py-1.5 text-sm rounded-lg flex items-center gap-2 transition-colors ${
-                  copied ? 'bg-teal-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
+                  copied ? 'bg-primary-500 text-white' : isDark ? 'bg-gray-800 hover:bg-gray-700 text-gray-300' : 'bg-white hover:bg-gray-100 text-gray-700'
                 }`}
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -425,10 +425,10 @@ Cost Analysis:
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div className={`p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'} text-center`}>
                 <div className="flex justify-center mb-2">
-                  <Shield className="w-8 h-8 text-teal-500" />
+                  <Shield className="w-8 h-8 text-primary-500" />
                 </div>
                 <div className={`text-sm font-medium mb-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.safetyStockCalculator.safetyStock', 'Safety Stock')}</div>
-                <div className="text-3xl font-bold text-teal-500">
+                <div className="text-3xl font-bold text-primary-500">
                   {calculations.safetyStock.toLocaleString()}
                 </div>
                 <div className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>units</div>

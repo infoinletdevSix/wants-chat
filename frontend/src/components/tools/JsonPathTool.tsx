@@ -256,10 +256,10 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
       {/* Header */}
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-teal-500/10 rounded-lg">
-            <FileJson className="w-5 h-5 text-teal-500" />
+          <div className="p-2 bg-primary-500/10 rounded-lg">
+            <FileJson className="w-5 h-5 text-primary-500" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.jsonPath.jsonPathExplorer', 'JSON Path Explorer')}</h3>
@@ -270,9 +270,9 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.jsonPath.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.jsonPath.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
           </div>
         )}
         {/* JSON Input */}
@@ -299,11 +299,11 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
               isDark
                 ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-            } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+            } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
           />
           <button
             onClick={parseJson}
-            className="w-full py-2.5 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2"
+            className="w-full py-2.5 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2"
           >
             <Search className="w-4 h-4" />
             {t('tools.jsonPath.parseJson', 'Parse JSON')}
@@ -333,7 +333,7 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
                     isDark
                       ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent`}
                 />
               </div>
               <div className="flex flex-wrap gap-2">
@@ -343,7 +343,7 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
                     onClick={() => setJsonPath(item.path)}
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${
                       jsonPath === item.path
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-primary-500 text-white'
                         : isDark
                         ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                         : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -391,7 +391,7 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
                   )}
                 </div>
                 <pre className={`p-4 rounded-lg border max-h-80 overflow-auto font-mono text-sm ${
-                  isDark ? 'bg-gray-800/50 border-gray-700 text-teal-300' : 'bg-gray-50 border-gray-200 text-teal-700'
+                  isDark ? 'bg-gray-800/50 border-gray-700 text-primary-300' : 'bg-gray-50 border-gray-200 text-primary-700'
                 }`}>
                   {result === undefined ? (
                     <span className="text-gray-500">{t('tools.jsonPath.noMatchFound', 'No match found')}</span>
@@ -407,19 +407,19 @@ export const JsonPathTool: React.FC<JsonPathToolProps> = ({ uiConfig }) => {
               <h4 className={`font-medium mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.jsonPath.pathSyntax', 'Path Syntax')}</h4>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
                 <div>
-                  <code className="text-teal-500">$</code>
+                  <code className="text-primary-500">$</code>
                   <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>{t('tools.jsonPath.rootElement', 'Root element')}</p>
                 </div>
                 <div>
-                  <code className="text-teal-500">.key</code>
+                  <code className="text-primary-500">.key</code>
                   <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>{t('tools.jsonPath.childProperty', 'Child property')}</p>
                 </div>
                 <div>
-                  <code className="text-teal-500">[0]</code>
+                  <code className="text-primary-500">[0]</code>
                   <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>{t('tools.jsonPath.arrayIndex', 'Array index')}</p>
                 </div>
                 <div>
-                  <code className="text-teal-500">['key']</code>
+                  <code className="text-primary-500">['key']</code>
                   <p className={isDark ? 'text-gray-400' : 'text-gray-500'}>{t('tools.jsonPath.bracketNotation', 'Bracket notation')}</p>
                 </div>
               </div>

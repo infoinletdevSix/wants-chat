@@ -429,7 +429,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -441,7 +441,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
           {/* Header */}
           <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Target className="w-6 h-6 text-white" />
               </div>
               <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -512,7 +512,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
                       idx === 9 ? 'flex-[1.5]' : ''
                     } ${
                       currentFrame === idx && !isGameComplete
-                        ? 'bg-[#0D9488] text-white'
+                        ? 'bg-[#6096B4] text-white'
                         : isDark
                         ? 'bg-gray-700 text-gray-300 border-gray-600'
                         : 'bg-gray-100 text-gray-700 border-gray-300'
@@ -541,7 +541,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
                           key={rollIdx}
                           className={`flex-1 h-10 flex items-center justify-center text-lg font-bold border-r last:border-r-0 ${
                             isActive
-                              ? 'bg-[#0D9488]/20 ring-2 ring-[#0D9488]'
+                              ? 'bg-[#6096B4]/20 ring-2 ring-[#6096B4]'
                               : ''
                           } ${
                             display === 'X'
@@ -595,7 +595,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
                         ? isDark
                           ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                           : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
-                        : 'bg-[#0D9488] hover:bg-[#0F766E] text-white'
+                        : 'bg-[#6096B4] hover:bg-[#4C7F98] text-white'
                     }`}
                   >
                     {pins === 0 ? '-' : pins === 10 ? 'X' : pins}
@@ -614,7 +614,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
               <h2 className={`text-2xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {t('tools.bowlingScoreCalculator.gameComplete', 'Game Complete!')}
               </h2>
-              <p className={`text-4xl font-bold text-[#0D9488]`}>
+              <p className={`text-4xl font-bold text-[#6096B4]`}>
                 Final Score: {stats.totalScore}
               </p>
             </div>
@@ -629,7 +629,7 @@ export function BowlingScoreCalculatorTool({ uiConfig }: BowlingScoreCalculatorT
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className={`text-3xl font-bold text-[#0D9488]`}>
+                <div className={`text-3xl font-bold text-[#6096B4]`}>
                   {stats.totalScore}
                 </div>
               </CardContent>

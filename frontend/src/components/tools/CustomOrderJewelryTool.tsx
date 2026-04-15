@@ -482,7 +482,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -571,7 +571,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -627,7 +627,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                   {formatCurrency(stats.totalRevenue)}
                 </p>
               </div>
-              <DollarSign className="w-8 h-8 text-[#0D9488]" />
+              <DollarSign className="w-8 h-8 text-[#6096B4]" />
             </div>
           </div>
           <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow p-4`}>
@@ -658,7 +658,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className={`pl-10 pr-4 py-2 rounded-lg border ${
                       theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                    } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                    } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                   />
                 </div>
                 <select
@@ -666,7 +666,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                   onChange={(e) => setFilterStatus(e.target.value)}
                   className={`px-4 py-2 rounded-lg border ${
                     theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-gray-300 text-gray-900'
-                  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`}
+                  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`}
                 >
                   <option value="all">{t('tools.customOrderJewelry.allStatus', 'All Status')}</option>
                   {STATUS_OPTIONS.map((opt) => (
@@ -676,7 +676,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
               </div>
               <button
                 onClick={() => setShowOrderForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.customOrderJewelry.newOrder', 'New Order')}
@@ -884,7 +884,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
               <h2 className={`text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{t('tools.customOrderJewelry.customers', 'Customers')}</h2>
               <button
                 onClick={() => setShowCustomerForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.customOrderJewelry.addCustomer2', 'Add Customer')}
@@ -1107,7 +1107,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                     </label>
                     <button
                       onClick={() => setShowStoneModal(true)}
-                      className="text-sm text-[#0D9488] hover:text-[#0B7C73]"
+                      className="text-sm text-[#6096B4] hover:text-[#0B7C73]"
                     >
                       {t('tools.customOrderJewelry.addStone2', '+ Add Stone')}
                     </button>
@@ -1217,7 +1217,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                 </button>
                 <button
                   onClick={addOrder}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
                 >
                   {t('tools.customOrderJewelry.createOrder', 'Create Order')}
                 </button>
@@ -1341,7 +1341,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                 </button>
                 <button
                   onClick={addStone}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
                 >
                   {t('tools.customOrderJewelry.addStone3', 'Add Stone')}
                 </button>
@@ -1455,7 +1455,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                 </button>
                 <button
                   onClick={updateOrder}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
                 >
                   {t('tools.customOrderJewelry.saveChanges', 'Save Changes')}
                 </button>
@@ -1545,7 +1545,7 @@ export const CustomOrderJewelryTool: React.FC<CustomOrderJewelryToolProps> = ({ 
                 </button>
                 <button
                   onClick={addCustomer}
-                  className="px-4 py-2 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
+                  className="px-4 py-2 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B7C73] transition-colors"
                 >
                   {t('tools.customOrderJewelry.addCustomer3', 'Add Customer')}
                 </button>

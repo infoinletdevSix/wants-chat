@@ -70,7 +70,7 @@ const CongratulationsOverlay: React.FC<{
       <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-10 mx-4 max-w-lg w-full text-center shadow-2xl border border-white/20">
         {/* Trophy icon */}
         <div className="mb-8 flex justify-center">
-          <div className="w-24 h-24 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-xl animate-bounce relative">
+          <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-cyan-500 rounded-full flex items-center justify-center shadow-xl animate-bounce relative">
             <Trophy className="h-14 w-14 text-white" />
             <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
           </div>
@@ -87,9 +87,9 @@ const CongratulationsOverlay: React.FC<{
         </div>
 
         {/* XP earned */}
-        <div className="bg-gradient-to-r from-teal-500/20 via-cyan-500/20 to-teal-500/20 rounded-2xl p-6 mb-8 border border-teal-500/30 shadow-inner">
+        <div className="bg-gradient-to-r from-primary-500/20 via-cyan-500/20 to-primary-500/20 rounded-2xl p-6 mb-8 border border-primary-500/30 shadow-inner">
           <div className="flex items-center justify-center space-x-3 mb-3">
-            <Star className="h-7 w-7 text-teal-400 animate-spin" />
+            <Star className="h-7 w-7 text-primary-400 animate-spin" />
             <span className="text-3xl font-bold text-white tracking-tight">
               +{xpEarned} XP
             </span>
@@ -103,7 +103,7 @@ const CongratulationsOverlay: React.FC<{
           <p className="text-white/70 text-lg font-medium leading-relaxed">
             "Every step forward is progress."
           </p>
-          <p className="text-teal-400 font-semibold mt-2">
+          <p className="text-primary-400 font-semibold mt-2">
             ¡Sigue así!
           </p>
         </div>
@@ -111,7 +111,7 @@ const CongratulationsOverlay: React.FC<{
         {/* Continue button */}
         <Button
           onClick={onContinue}
-          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white border-none shadow-lg transform hover:scale-[1.02] transition-all duration-300 rounded-xl"
+          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white border-none shadow-lg transform hover:scale-[1.02] transition-all duration-300 rounded-xl"
         >
           Continue Learning
           <ArrowLeft className="h-5 w-5 ml-2 rotate-180" />
@@ -123,7 +123,7 @@ const CongratulationsOverlay: React.FC<{
         {Array.from({ length: 20 }).map((_, i) => (
           <Star
             key={i}
-            className="absolute h-4 w-4 text-teal-400 animate-bounce"
+            className="absolute h-4 w-4 text-primary-400 animate-bounce"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -883,7 +883,7 @@ const LessonPage: React.FC = () => {
       <div className="min-h-screen relative flex items-center justify-center">
         <BackgroundEffects variant="default" />
         <div className="text-center relative z-10">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-teal-400 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-400 mx-auto mb-4"></div>
           <p className="text-white/60">
             {exerciseId ? 'Loading exercise...' : unitId ? 'Loading exercises...' : 'Loading lesson...'}
           </p>
@@ -922,7 +922,7 @@ const LessonPage: React.FC = () => {
               } else {
                 navigate('/language-learner/learning');
               }
-            }} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+            }} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
               Back to Lessons
             </Button>
           </div>
@@ -949,7 +949,7 @@ const LessonPage: React.FC = () => {
                 } else {
                   navigate('/language-learner/learning');
                 }
-              }} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+              }} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
                 Back to Units
               </Button>
             </div>
@@ -972,7 +972,7 @@ const LessonPage: React.FC = () => {
             } else {
               navigate('/language-learner/learning');
             }
-          }} className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+          }} className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white">
             Choose a Lesson
           </Button>
         </GlassCard>
@@ -1033,7 +1033,7 @@ const LessonPage: React.FC = () => {
             <div className="flex-1 max-w-lg mx-6">
               <div className="h-3 bg-white/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -1067,7 +1067,7 @@ const LessonPage: React.FC = () => {
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-lg font-bold text-teal-400">
+                <div className="text-lg font-bold text-primary-400">
                   {specificExercise.points} XP
                 </div>
                 <div className="text-sm text-white/50">
@@ -1095,7 +1095,7 @@ const LessonPage: React.FC = () => {
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-lg font-bold text-teal-400">
+                <div className="text-lg font-bold text-primary-400">
                   {unitExercises.user_unit_progress.max_possible_points || 50} XP
                 </div>
                 <div className="text-sm text-white/50">Potential Reward</div>

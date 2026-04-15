@@ -53,7 +53,7 @@ const FastingTimer: React.FC<FastingTimerProps> = ({
   };
 
   return (
-    <Card className="p-8 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border border-teal-500/20">
+    <Card className="p-8 bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
       <div className="space-y-6">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-2">
@@ -68,7 +68,7 @@ const FastingTimer: React.FC<FastingTimerProps> = ({
 
         {/* Timer Display */}
         <div className="text-center">
-          <div className="text-6xl font-bold text-teal-400 mb-2">
+          <div className="text-6xl font-bold text-primary-400 mb-2">
             {formatTime(safeElapsedTime)}
           </div>
           <p className="text-sm text-white/60">
@@ -78,7 +78,7 @@ const FastingTimer: React.FC<FastingTimerProps> = ({
 
         {/* Progress */}
         <div className="space-y-2">
-          <Progress value={getProgress()} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-teal-500 [&>div]:to-cyan-500" />
+          <Progress value={getProgress()} className="h-3 bg-white/10 [&>div]:bg-gradient-to-r [&>div]:from-primary-500 [&>div]:to-cyan-500" />
           <div className="flex justify-between text-sm text-white/60">
             <span>0h</span>
             <span>{Math.round(getProgress())}%</span>

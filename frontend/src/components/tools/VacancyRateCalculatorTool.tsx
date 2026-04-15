@@ -148,7 +148,7 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
 
   const getVacancyRating = (rate: number) => {
     if (rate <= 3) return { label: 'Excellent', color: 'text-green-500', bgColor: 'bg-green-500' };
-    if (rate <= 5) return { label: 'Very Good', color: 'text-[#0D9488]', bgColor: 'bg-[#0D9488]' };
+    if (rate <= 5) return { label: 'Very Good', color: 'text-[#6096B4]', bgColor: 'bg-[#6096B4]' };
     if (rate <= 8) return { label: 'Good', color: 'text-blue-500', bgColor: 'bg-blue-500' };
     if (rate <= 10) return { label: 'Average', color: 'text-amber-500', bgColor: 'bg-amber-500' };
     return { label: 'High', color: 'text-red-500', bgColor: 'bg-red-500' };
@@ -166,10 +166,10 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
 
   return (
     <div className={`${isDark ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} rounded-xl shadow-sm border overflow-hidden`}>
-      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-teal-900/20' : 'bg-gradient-to-r from-white to-teal-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
+      <div className={`${isDark ? 'bg-gradient-to-r from-gray-800 to-primary-900/20' : 'bg-gradient-to-r from-white to-primary-50'} px-6 py-4 border-b ${isDark ? 'border-gray-700' : 'border-gray-100'}`}>
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#0D9488]/10 rounded-lg">
-            <Home className="w-5 h-5 text-[#0D9488]" />
+          <div className="p-2 bg-[#6096B4]/10 rounded-lg">
+            <Home className="w-5 h-5 text-[#6096B4]" />
           </div>
           <div>
             <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('tools.vacancyRateCalculator.vacancyRateCalculator', 'Vacancy Rate Calculator')}</h3>
@@ -180,9 +180,9 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
 
       <div className="p-6 space-y-6">
         {isPrefilled && (
-          <div className="flex items-center gap-2 px-4 py-2 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-            <Sparkles className="w-4 h-4 text-[#0D9488]" />
-            <span className="text-sm text-[#0D9488] font-medium">{t('tools.vacancyRateCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+            <Sparkles className="w-4 h-4 text-[#6096B4]" />
+            <span className="text-sm text-[#6096B4] font-medium">{t('tools.vacancyRateCalculator.valuesLoadedFromAiResponse', 'Values loaded from AI response')}</span>
           </div>
         )}
 
@@ -203,7 +203,7 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
                 onClick={() => setCalculationMode(mode.value as any)}
                 className={`flex-1 py-2 rounded-lg font-medium transition-colors ${
                   calculationMode === mode.value
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -372,7 +372,7 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
             </div>
             <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden flex">
               <div
-                className="h-full bg-[#0D9488]"
+                className="h-full bg-[#6096B4]"
                 style={{ width: `${calculations.occupancyRate}%` }}
               />
               <div
@@ -394,7 +394,7 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
           </div>
           <div className={`p-4 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-50'}`}>
             <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.vacancyRateCalculator.actualIncome', 'Actual Income')}</div>
-            <div className="text-2xl font-bold text-[#0D9488]">{formatCurrency(calculations.actualRent)}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{formatCurrency(calculations.actualRent)}</div>
             <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
               {calculationMode === 'historical' ? t('tools.vacancyRateCalculator.annual', 'Annual') : t('tools.vacancyRateCalculator.monthly', 'Monthly')}
             </div>
@@ -436,7 +436,7 @@ export const VacancyRateCalculatorTool: React.FC<VacancyRateCalculatorToolProps>
             ].map((item) => (
               <div key={item.type} className={`p-3 rounded-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
                 <div className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.type}</div>
-                <div className="text-[#0D9488] font-bold">{item.rate}</div>
+                <div className="text-[#6096B4] font-bold">{item.rate}</div>
               </div>
             ))}
           </div>

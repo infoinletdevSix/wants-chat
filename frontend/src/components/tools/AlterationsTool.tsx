@@ -136,7 +136,7 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
     isDark
       ? 'bg-[#1a1a1a] border-[#333] text-white'
       : 'bg-white border-gray-300 text-gray-900'
-  } focus:ring-2 focus:ring-[#0D9488] focus:border-transparent`;
+  } focus:ring-2 focus:ring-[#6096B4] focus:border-transparent`;
 
   const cardClass = `p-4 rounded-lg ${
     isDark ? 'bg-[#1a1a1a]' : 'bg-gray-50'
@@ -146,7 +146,7 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-[#0D9488]" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#6096B4]" />
       </div>
     );
   }
@@ -154,7 +154,7 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9488] to-[#0F766E] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#6096B4] to-[#4C7F98] mb-4">
           <Scissors className="w-8 h-8 text-white" />
         </div>
         <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -197,9 +197,9 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
 
       {/* Prefill Indicator */}
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.alterations.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-6 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.alterations.contentLoadedFromAiResponse', 'Content loaded from AI response')}</span>
         </div>
       )}
 
@@ -237,7 +237,7 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
           <button
             onClick={handleAddItem}
             disabled={!selectedType}
-            className="flex items-center justify-center gap-2 px-4 py-3 bg-[#0D9488] text-white rounded-lg hover:bg-[#0B8276] transition-colors disabled:opacity-50"
+            className="flex items-center justify-center gap-2 px-4 py-3 bg-[#6096B4] text-white rounded-lg hover:bg-[#0B8276] transition-colors disabled:opacity-50"
           >
             <Plus className="w-5 h-5" />
             {t('tools.alterations.addItem', 'Add Item')}
@@ -267,7 +267,7 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-bold text-[#0D9488]">${item.price.toFixed(2)}</span>
+                  <span className="font-bold text-[#6096B4]">${item.price.toFixed(2)}</span>
                   <button
                     onClick={() => removeItem(item.id)}
                     className="p-2 text-red-500 hover:bg-red-500/10 rounded-lg"
@@ -284,8 +284,8 @@ export const AlterationsTool: React.FC<AlterationsToolProps> = ({ uiConfig }) =>
       {items.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className={`${cardClass} flex items-center gap-4`}>
-            <div className="p-3 bg-[#0D9488]/10 rounded-lg">
-              <DollarSign className="w-6 h-6 text-[#0D9488]" />
+            <div className="p-3 bg-[#6096B4]/10 rounded-lg">
+              <DollarSign className="w-6 h-6 text-[#6096B4]" />
             </div>
             <div>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>

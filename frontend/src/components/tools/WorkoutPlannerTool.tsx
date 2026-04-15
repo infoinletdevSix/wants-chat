@@ -777,7 +777,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
           onClick={() => setActiveTab(tab.id)}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
             activeTab === tab.id
-              ? 'bg-[#0D9488] text-white'
+              ? 'bg-[#6096B4] text-white'
               : theme === 'dark'
               ? 'text-gray-300 hover:bg-gray-600'
               : 'text-gray-600 hover:bg-gray-200'
@@ -806,7 +806,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
             {weekDates[0].toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} - {weekDates[6].toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
           </h3>
           {weekOffset === 0 && (
-            <span className="text-xs text-[#0D9488]">{t('tools.workoutPlanner.thisWeek', 'This Week')}</span>
+            <span className="text-xs text-[#6096B4]">{t('tools.workoutPlanner.thisWeek', 'This Week')}</span>
           )}
         </div>
         <button
@@ -830,7 +830,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
               key={dateStr}
               className={`p-3 rounded-lg border-2 transition-all min-h-[120px] ${
                 isToday
-                  ? 'border-[#0D9488]'
+                  ? 'border-[#6096B4]'
                   : theme === 'dark'
                   ? 'border-gray-700'
                   : 'border-gray-200'
@@ -840,7 +840,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
                 <div className={`text-xs font-medium ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                   {DAYS_OF_WEEK[index]}
                 </div>
-                <div className={`text-lg font-bold ${isToday ? 'text-[#0D9488]' : theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                <div className={`text-lg font-bold ${isToday ? 'text-[#6096B4]' : theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {date.getDate()}
                 </div>
               </div>
@@ -897,17 +897,17 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
         </h4>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
-            <div className="text-2xl font-bold text-[#0D9488]">{weeklyWorkouts.length}</div>
+            <div className="text-2xl font-bold text-[#6096B4]">{weeklyWorkouts.length}</div>
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.workoutPlanner.workouts', 'Workouts')}</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#0D9488]">
+            <div className="text-2xl font-bold text-[#6096B4]">
               {weeklyWorkouts.reduce((acc, w) => acc + w.duration, 0)}
             </div>
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.workoutPlanner.minutes', 'Minutes')}</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#0D9488]">
+            <div className="text-2xl font-bold text-[#6096B4]">
               {weeklyWorkouts.reduce((acc, w) => acc + w.exercises.length, 0)}
             </div>
             <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.workoutPlanner.exercises', 'Exercises')}</div>
@@ -953,7 +953,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
           <button
             onClick={createWorkout}
             disabled={!newWorkoutName.trim()}
-            className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg flex items-center gap-2 disabled:opacity-50"
+            className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg flex items-center gap-2 disabled:opacity-50"
           >
             <Plus className="w-4 h-4" />
             {t('tools.workoutPlanner.create', 'Create')}
@@ -968,7 +968,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
             key={workout.id}
             className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
               editingWorkout?.id === workout.id
-                ? 'border-[#0D9488]'
+                ? 'border-[#6096B4]'
                 : theme === 'dark'
                 ? 'border-gray-700 hover:border-gray-600'
                 : 'border-gray-200 hover:border-gray-300'
@@ -1054,7 +1054,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
               ))}
               <button
                 onClick={() => setActiveTab('library')}
-                className="text-xs px-3 py-1.5 rounded-full bg-[#0D9488] hover:bg-[#0F766E] text-white"
+                className="text-xs px-3 py-1.5 rounded-full bg-[#6096B4] hover:bg-[#4C7F98] text-white"
               >
                 {t('tools.workoutPlanner.browseAll', 'Browse All')}
               </button>
@@ -1219,7 +1219,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
         </select>
         <button
           onClick={() => setShowAddCustomExercise(true)}
-          className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg flex items-center gap-2"
+          className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
           {t('tools.workoutPlanner.addCustom', 'Add Custom')}
@@ -1271,7 +1271,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
             <div className="flex gap-2">
               <button
                 onClick={addCustomExercise}
-                className="px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg"
+                className="px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg"
               >
                 {t('tools.workoutPlanner.addExercise', 'Add Exercise')}
               </button>
@@ -1304,7 +1304,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
                 <h5 className={`font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {exercise.name}
                   {exercise.isCustom && (
-                    <span className="ml-2 text-xs text-[#0D9488]">(Custom)</span>
+                    <span className="ml-2 text-xs text-[#6096B4]">(Custom)</span>
                   )}
                 </h5>
                 <span className={`text-xs px-2 py-0.5 rounded ${
@@ -1320,7 +1320,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
             {editingWorkout && (
               <button
                 onClick={() => addExerciseToWorkout(exercise)}
-                className="w-full mt-3 px-3 py-1.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-sm rounded-lg flex items-center justify-center gap-1"
+                className="w-full mt-3 px-3 py-1.5 bg-[#6096B4] hover:bg-[#4C7F98] text-white text-sm rounded-lg flex items-center justify-center gap-1"
               >
                 <Plus className="w-4 h-4" />
                 {t('tools.workoutPlanner.addToWorkout', 'Add to Workout')}
@@ -1376,7 +1376,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
               </p>
               <button
                 onClick={() => applyTemplate(template)}
-                className="w-full px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm"
+                className="w-full px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm"
               >
                 {t('tools.workoutPlanner.useTemplate', 'Use Template')}
               </button>
@@ -1423,7 +1423,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
                 </p>
                 <button
                   onClick={() => applyTemplate(template)}
-                  className="w-full px-4 py-2 bg-[#0D9488] hover:bg-[#0F766E] text-white rounded-lg text-sm"
+                  className="w-full px-4 py-2 bg-[#6096B4] hover:bg-[#4C7F98] text-white rounded-lg text-sm"
                 >
                   {t('tools.workoutPlanner.useTemplate2', 'Use Template')}
                 </button>
@@ -1442,11 +1442,11 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'} border ${theme === 'dark' ? 'border-gray-600' : 'border-gray-200'}`}>
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-[#0D9488]/20">
-              <Flame className="w-5 h-5 text-[#0D9488]" />
+            <div className="p-2 rounded-lg bg-[#6096B4]/20">
+              <Flame className="w-5 h-5 text-[#6096B4]" />
             </div>
             <div>
-              <div className="text-2xl font-bold text-[#0D9488]">{completedWorkouts.length}</div>
+              <div className="text-2xl font-bold text-[#6096B4]">{completedWorkouts.length}</div>
               <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>{t('tools.workoutPlanner.totalWorkouts', 'Total Workouts')}</div>
             </div>
           </div>
@@ -1507,7 +1507,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
                   {pr.exerciseName}
                 </div>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-lg font-bold text-[#0D9488]">{pr.weight} lbs</span>
+                  <span className="text-lg font-bold text-[#6096B4]">{pr.weight} lbs</span>
                   <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                     x {pr.reps} reps
                   </span>
@@ -1591,7 +1591,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
             }}
             className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
               timerMode === mode.id
-                ? 'bg-[#0D9488] text-white'
+                ? 'bg-[#6096B4] text-white'
                 : theme === 'dark'
                 ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1624,7 +1624,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
           onClick={() => setTimerRunning(!timerRunning)}
           className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium ${
             timerRunning
-              ? 'bg-yellow-500 hover:bg-yellow-600 text-white' : t('tools.workoutPlanner.bg0d9488HoverBg0f766e', 'bg-[#0D9488] hover:bg-[#0F766E] text-white')
+              ? 'bg-yellow-500 hover:bg-yellow-600 text-white' : t('tools.workoutPlanner.bg0d9488HoverBg0f766e', 'bg-[#6096B4] hover:bg-[#4C7F98] text-white')
           }`}
         >
           {timerRunning ? (
@@ -1681,7 +1681,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
                   }}
                   className={`px-4 py-2 rounded-lg font-medium ${
                     timerInitial === sec
-                      ? 'bg-[#0D9488] text-white'
+                      ? 'bg-[#6096B4] text-white'
                       : theme === 'dark'
                       ? 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -1750,7 +1750,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-[#0D9488] rounded-lg">
+          <div className="p-3 bg-[#6096B4] rounded-lg">
             <Dumbbell className="w-6 h-6 text-white" />
           </div>
           <h2 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -1775,9 +1775,9 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
       </div>
 
       {isPrefilled && (
-        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-          <Sparkles className="w-4 h-4 text-[#0D9488]" />
-          <span className="text-sm text-[#0D9488] font-medium">{t('tools.workoutPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
+        <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+          <Sparkles className="w-4 h-4 text-[#6096B4]" />
+          <span className="text-sm text-[#6096B4] font-medium">{t('tools.workoutPlanner.contentLoadedFromYourConversation', 'Content loaded from your conversation')}</span>
         </div>
       )}
 
@@ -1857,7 +1857,7 @@ export const WorkoutPlannerTool: React.FC<WorkoutPlannerToolProps> = ({ uiConfig
                       setSelectedDate(null);
                       setActiveTab('builder');
                     }}
-                    className="text-[#0D9488] hover:underline text-sm mt-2"
+                    className="text-[#6096B4] hover:underline text-sm mt-2"
                   >
                     {t('tools.workoutPlanner.createAWorkout', 'Create a workout')}
                   </button>

@@ -204,7 +204,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
       <div className="max-w-2xl mx-auto">
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#0D9488] rounded-lg">
+            <div className="p-3 bg-[#6096B4] rounded-lg">
               <Moon className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -224,7 +224,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                 onClick={() => setConversionDirection('toHijri')}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                   conversionDirection === 'toHijri'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -236,7 +236,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                 onClick={() => setConversionDirection('toGregorian')}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                   conversionDirection === 'toGregorian'
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -273,7 +273,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                   theme === 'dark'
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
               />
             </div>
           )}
@@ -296,7 +296,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
                 <div>
@@ -310,7 +310,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white'
                         : 'bg-white border-gray-300 text-gray-900'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   >
                     {HIJRI_MONTHS.map((month, idx) => (
                       <option key={idx} value={idx + 1}>
@@ -332,7 +332,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                       theme === 'dark'
                         ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                    } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`}
+                    } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`}
                   />
                 </div>
               </div>
@@ -344,7 +344,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
             <button
               onClick={convert}
               disabled={loading}
-              className="flex-1 bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+              className="flex-1 bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {loading ? (
                 <RefreshCw className="w-5 h-5 animate-spin" />
@@ -368,14 +368,14 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
           {/* Result Display */}
           {result && (
             <div className="space-y-4">
-              <div className={`p-6 rounded-lg border-l-4 border-[#0D9488] ${
-                theme === 'dark' ? 'bg-gray-700' : t('tools.hijriDateConverter.bg0d948810', 'bg-[#0D9488]/10')
+              <div className={`p-6 rounded-lg border-l-4 border-[#6096B4] ${
+                theme === 'dark' ? 'bg-gray-700' : t('tools.hijriDateConverter.bg0d948810', 'bg-[#6096B4]/10')
               }`}>
                 {isHijriResult(result) ? (
                   // Hijri Result
                   <>
                     <div className="text-center mb-4">
-                      <div className="text-3xl font-bold text-[#0D9488] mb-2" dir="rtl">
+                      <div className="text-3xl font-bold text-[#6096B4] mb-2" dir="rtl">
                         {result.day} {result.monthArabic} {result.year}
                       </div>
                       <div className={`text-xl ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -388,7 +388,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
 
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                        <div className="text-2xl font-bold text-[#0D9488]">{result.day}</div>
+                        <div className="text-2xl font-bold text-[#6096B4]">{result.day}</div>
                         <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hijriDateConverter.day', 'Day')}</div>
                       </div>
                       <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
@@ -398,7 +398,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                         <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hijriDateConverter.month', 'Month')}</div>
                       </div>
                       <div className={`p-3 rounded-lg ${theme === 'dark' ? 'bg-gray-600' : 'bg-white'}`}>
-                        <div className="text-2xl font-bold text-[#0D9488]">{result.year}</div>
+                        <div className="text-2xl font-bold text-[#6096B4]">{result.year}</div>
                         <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.hijriDateConverter.yearAh', 'Year AH')}</div>
                       </div>
                     </div>
@@ -412,7 +412,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                         <ul className="space-y-1">
                           {getIslamicEvents(result.month).map((event, idx) => (
                             <li key={idx} className={`flex items-center gap-2 text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-                              <Moon className="w-4 h-4 text-[#0D9488]" />
+                              <Moon className="w-4 h-4 text-[#6096B4]" />
                               {event}
                             </li>
                           ))}
@@ -426,7 +426,7 @@ export default function HijriDateConverterTool({ uiConfig }: HijriDateConverterT
                     <div className={`text-sm mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                       {t('tools.hijriDateConverter.gregorianDate2', 'Gregorian Date')}
                     </div>
-                    <div className="text-3xl font-bold text-[#0D9488] mb-2">
+                    <div className="text-3xl font-bold text-[#6096B4] mb-2">
                       {new Date(result.gregorian).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',

@@ -120,7 +120,7 @@ const LeaderboardPage: React.FC = () => {
                 variant={selectedPeriod === 'weekly' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedPeriod('weekly')}
-                className={selectedPeriod === 'weekly' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+                className={selectedPeriod === 'weekly' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
               >
                 Weekly
               </Button>
@@ -128,7 +128,7 @@ const LeaderboardPage: React.FC = () => {
                 variant={selectedPeriod === 'monthly' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedPeriod('monthly')}
-                className={selectedPeriod === 'monthly' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+                className={selectedPeriod === 'monthly' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
               >
                 Monthly
               </Button>
@@ -136,7 +136,7 @@ const LeaderboardPage: React.FC = () => {
                 variant={selectedPeriod === 'all-time' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedPeriod('all-time')}
-                className={selectedPeriod === 'all-time' ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+                className={selectedPeriod === 'all-time' ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white' : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
               >
                 All Time
               </Button>
@@ -145,7 +145,7 @@ const LeaderboardPage: React.FC = () => {
 
           {isLoading ? (
             <div className="flex items-center justify-center py-12">
-              <Loader2 className="h-12 w-12 animate-spin text-teal-400" />
+              <Loader2 className="h-12 w-12 animate-spin text-primary-400" />
             </div>
           ) : leaderboardData.length > 0 ? (
             <div className="space-y-3">
@@ -154,7 +154,7 @@ const LeaderboardPage: React.FC = () => {
                   key={entry.user_id || `leaderboard-${index}`}
                   hover={true}
                   glow={entry.user_id === user?.id}
-                  className={entry.user_id === user?.id ? 'ring-2 ring-teal-500' : ''}
+                  className={entry.user_id === user?.id ? 'ring-2 ring-primary-500' : ''}
                 >
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-4">
@@ -163,7 +163,7 @@ const LeaderboardPage: React.FC = () => {
                       </div>
 
                       <Avatar className="h-12 w-12">
-                        <AvatarFallback className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold">
+                        <AvatarFallback className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white font-semibold">
                           {entry.username.substring(0, 2).toUpperCase()}
                         </AvatarFallback>
                       </Avatar>
@@ -174,7 +174,7 @@ const LeaderboardPage: React.FC = () => {
                             {entry.username}
                           </h3>
                           {entry.user_id === user?.id && (
-                            <Badge variant="outline" className="text-xs bg-teal-500/20 text-teal-400 border-teal-500/30">You</Badge>
+                            <Badge variant="outline" className="text-xs bg-primary-500/20 text-primary-400 border-primary-500/30">You</Badge>
                           )}
                         </div>
                         <div className="flex items-center space-x-3 text-sm text-white/60">

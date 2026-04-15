@@ -929,7 +929,7 @@ export const RoofingContractorTool = ({
       case 'sunny': return <Sun className="w-5 h-5 text-yellow-500" />;
       case 'cloudy': return <Cloud className="w-5 h-5 text-gray-500" />;
       case 'rainy': return <CloudRain className="w-5 h-5 text-blue-500" />;
-      case 'windy': return <Wind className="w-5 h-5 text-teal-500" />;
+      case 'windy': return <Wind className="w-5 h-5 text-primary-500" />;
       case 'snow': return <Snowflake className="w-5 h-5 text-blue-300" />;
       default: return <Cloud className="w-5 h-5 text-gray-500" />;
     }
@@ -954,11 +954,11 @@ export const RoofingContractorTool = ({
     theme === 'dark'
       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
       : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-  } focus:outline-none focus:ring-2 focus:ring-[#0D9488]`;
+  } focus:outline-none focus:ring-2 focus:ring-[#6096B4]`;
 
   const labelClass = `block text-sm font-medium mb-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`;
 
-  const buttonPrimary = 'bg-[#0D9488] hover:bg-[#0F766E] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
+  const buttonPrimary = 'bg-[#6096B4] hover:bg-[#4C7F98] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2';
 
   const buttonSecondary = `px-4 py-2 rounded-lg font-medium transition-colors ${
     theme === 'dark'
@@ -975,7 +975,7 @@ export const RoofingContractorTool = ({
         <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-6 mb-6`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-[#0D9488] rounded-lg">
+              <div className="p-3 bg-[#6096B4] rounded-lg">
                 <Home className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -1015,7 +1015,7 @@ export const RoofingContractorTool = ({
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className={cardClass}>
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roofingContractor.activeJobs', 'Active Jobs')}</div>
-              <div className="text-2xl font-bold text-[#0D9488]">{stats.inProgressJobs}</div>
+              <div className="text-2xl font-bold text-[#6096B4]">{stats.inProgressJobs}</div>
             </div>
             <div className={cardClass}>
               <div className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>{t('tools.roofingContractor.pending', 'Pending')}</div>
@@ -1045,7 +1045,7 @@ export const RoofingContractorTool = ({
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-[#0D9488] text-white'
+                    ? 'bg-[#6096B4] text-white'
                     : theme === 'dark'
                     ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -1465,7 +1465,7 @@ export const RoofingContractorTool = ({
                         type="checkbox"
                         checked={damageForm.repairRequired}
                         onChange={e => setDamageForm({ ...damageForm, repairRequired: e.target.checked })}
-                        className="w-4 h-4 text-[#0D9488] rounded"
+                        className="w-4 h-4 text-[#6096B4] rounded"
                       />
                       <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.roofingContractor.repairRequired', 'Repair Required')}</span>
                     </label>
@@ -1533,7 +1533,7 @@ export const RoofingContractorTool = ({
                     <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.roofingContractor.totalEstimatedRepairCost', 'Total Estimated Repair Cost:')}
                     </span>
-                    <span className="text-2xl font-bold text-[#0D9488]">
+                    <span className="text-2xl font-bold text-[#6096B4]">
                       ${data.damages.reduce((sum, d) => sum + d.estimatedCost, 0).toLocaleString()}
                     </span>
                   </div>
@@ -1711,7 +1711,7 @@ export const RoofingContractorTool = ({
                     <span className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                       {t('tools.roofingContractor.totalMaterialCost', 'Total Material Cost:')}
                     </span>
-                    <span className="text-2xl font-bold text-[#0D9488]">
+                    <span className="text-2xl font-bold text-[#6096B4]">
                       ${data.materials.reduce((sum, m) => sum + m.totalPrice, 0).toLocaleString()}
                     </span>
                   </div>
@@ -1816,7 +1816,7 @@ export const RoofingContractorTool = ({
                           type="checkbox"
                           checked={jobForm.permitRequired}
                           onChange={e => setJobForm({ ...jobForm, permitRequired: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded"
+                          className="w-4 h-4 text-[#6096B4] rounded"
                         />
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.roofingContractor.permitRequired', 'Permit Required')}</span>
                       </label>
@@ -1827,7 +1827,7 @@ export const RoofingContractorTool = ({
                           type="checkbox"
                           checked={jobForm.insuranceClaim}
                           onChange={e => setJobForm({ ...jobForm, insuranceClaim: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded"
+                          className="w-4 h-4 text-[#6096B4] rounded"
                         />
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.roofingContractor.insuranceClaim', 'Insurance Claim')}</span>
                       </label>
@@ -2128,7 +2128,7 @@ export const RoofingContractorTool = ({
                       <span className={`text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                         {t('tools.roofingContractor.estimateTotal', 'Estimate Total:')}
                       </span>
-                      <span className="text-3xl font-bold text-[#0D9488]">
+                      <span className="text-3xl font-bold text-[#6096B4]">
                         ${calculateEstimateTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                       </span>
                     </div>
@@ -2175,7 +2175,7 @@ export const RoofingContractorTool = ({
                             }`}>
                               {estimate.status}
                             </span>
-                            <span className="text-xl font-bold text-[#0D9488]">
+                            <span className="text-xl font-bold text-[#6096B4]">
                               ${estimate.total.toLocaleString()}
                             </span>
                             <button
@@ -2387,7 +2387,7 @@ export const RoofingContractorTool = ({
                           type="checkbox"
                           checked={crewForm.available}
                           onChange={e => setCrewForm({ ...crewForm, available: e.target.checked })}
-                          className="w-4 h-4 text-[#0D9488] rounded"
+                          className="w-4 h-4 text-[#6096B4] rounded"
                         />
                         <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>{t('tools.roofingContractor.available', 'Available')}</span>
                       </label>

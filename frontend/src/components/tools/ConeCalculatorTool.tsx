@@ -117,7 +117,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
       <div className="max-w-4xl mx-auto">
         <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} rounded-lg shadow-lg p-8`}>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-[#0D9488] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-lg bg-[#6096B4] flex items-center justify-center">
               <Triangle className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -129,9 +129,9 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
           </div>
 
           {isPrefilled && (
-            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#0D9488]/10 rounded-xl border border-[#0D9488]/20">
-              <Sparkles className="w-4 h-4 text-[#0D9488]" />
-              <span className="text-sm text-[#0D9488] font-medium">{t('tools.coneCalculator.prefilled', 'Value loaded from AI response')}</span>
+            <div className="flex items-center gap-2 px-4 py-2 mb-4 bg-[#6096B4]/10 rounded-xl border border-[#6096B4]/20">
+              <Sparkles className="w-4 h-4 text-[#6096B4]" />
+              <span className="text-sm text-[#6096B4] font-medium">{t('tools.coneCalculator.prefilled', 'Value loaded from AI response')}</span>
             </div>
           )}
 
@@ -151,7 +151,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                 placeholder={t('tools.coneCalculator.enterRadius', 'Enter radius')}
               />
             </div>
@@ -169,7 +169,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                   isDarkMode
                     ? 'bg-gray-700 border-gray-600 text-white'
                     : 'bg-white border-gray-300 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-[#0D9488] font-mono text-lg`}
+                } focus:outline-none focus:ring-2 focus:ring-[#6096B4] font-mono text-lg`}
                 placeholder={t('tools.coneCalculator.enterHeight', 'Enter height')}
               />
             </div>
@@ -190,7 +190,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     </span>
                     <CopyButton value={formatNumber(results.volume)} label="volume" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.volume)} <span className="text-sm opacity-75">units³</span>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     </span>
                     <CopyButton value={formatNumber(results.totalSurfaceArea)} label="totalSA" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.totalSurfaceArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -216,7 +216,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     </span>
                     <CopyButton value={formatNumber(results.lateralSurfaceArea)} label="lateralSA" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.lateralSurfaceArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     </span>
                     <CopyButton value={formatNumber(results.baseArea)} label="baseArea" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.baseArea)} <span className="text-sm opacity-75">units²</span>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     </span>
                     <CopyButton value={formatNumber(results.slantHeight)} label="slantHeight" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.slantHeight)}
                   </div>
                 </div>
@@ -255,7 +255,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     </span>
                     <CopyButton value={formatNumber(results.diameter)} label="diameter" />
                   </div>
-                  <div className="font-mono text-xl text-[#0D9488] font-bold">
+                  <div className="font-mono text-xl text-[#6096B4] font-bold">
                     {formatNumber(results.diameter)}
                   </div>
                 </div>
@@ -275,7 +275,7 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                   <polygon
                     points="100,20 40,180 160,180"
                     fill={isDarkMode ? 'rgba(13, 148, 136, 0.3)' : 'rgba(13, 148, 136, 0.2)'}
-                    stroke="#0D9488"
+                    stroke="#6096B4"
                     strokeWidth="2"
                   />
                   {/* Base ellipse */}
@@ -285,21 +285,21 @@ const ConeCalculatorTool: React.FC<ConeCalculatorToolProps> = ({ uiConfig }) => 
                     rx="60"
                     ry="20"
                     fill={isDarkMode ? 'rgba(13, 148, 136, 0.3)' : 'rgba(13, 148, 136, 0.2)'}
-                    stroke="#0D9488"
+                    stroke="#6096B4"
                     strokeWidth="2"
                   />
                   {/* Height line */}
-                  <line x1="100" y1="20" x2="100" y2="180" stroke="#0D9488" strokeWidth="2" strokeDasharray="5,5" />
+                  <line x1="100" y1="20" x2="100" y2="180" stroke="#6096B4" strokeWidth="2" strokeDasharray="5,5" />
                   {/* Radius line */}
-                  <line x1="100" y1="180" x2="160" y2="180" stroke="#0D9488" strokeWidth="2" strokeDasharray="5,5" />
+                  <line x1="100" y1="180" x2="160" y2="180" stroke="#6096B4" strokeWidth="2" strokeDasharray="5,5" />
                   {/* Slant height line */}
-                  <line x1="100" y1="20" x2="160" y2="180" stroke="#14b8a6" strokeWidth="1" strokeDasharray="3,3" />
+                  <line x1="100" y1="20" x2="160" y2="180" stroke="#75AAC1" strokeWidth="1" strokeDasharray="3,3" />
                   {/* Apex point */}
-                  <circle cx="100" cy="20" r="4" fill="#0D9488" />
+                  <circle cx="100" cy="20" r="4" fill="#6096B4" />
                   {/* Labels */}
                   <text x="90" y="105" fill={isDarkMode ? '#fff' : '#333'} fontSize="11" textAnchor="end">h</text>
                   <text x="130" y="195" fill={isDarkMode ? '#fff' : '#333'} fontSize="11" textAnchor="middle">r</text>
-                  <text x="140" y="95" fill={isDarkMode ? '#14b8a6' : '#0D9488'} fontSize="10" textAnchor="middle">l</text>
+                  <text x="140" y="95" fill={isDarkMode ? '#75AAC1' : '#6096B4'} fontSize="10" textAnchor="middle">l</text>
                 </svg>
               </div>
             </div>

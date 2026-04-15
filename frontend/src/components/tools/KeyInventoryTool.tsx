@@ -101,7 +101,7 @@ const CATEGORIES: { type: KeyCategory; label: string; color: string }[] = [
   { type: 'automotive', label: 'Automotive', color: 'bg-green-100 text-green-700' },
   { type: 'high_security', label: 'High Security', color: 'bg-red-100 text-red-700' },
   { type: 'padlock', label: 'Padlock', color: 'bg-orange-100 text-orange-700' },
-  { type: 'specialty', label: 'Specialty', color: 'bg-teal-100 text-teal-700' },
+  { type: 'specialty', label: 'Specialty', color: 'bg-primary-100 text-primary-700' },
 ];
 
 const BRANDS: { type: KeyBrand; label: string }[] = [

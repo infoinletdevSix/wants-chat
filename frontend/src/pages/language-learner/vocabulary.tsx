@@ -457,8 +457,8 @@ const VocabularyPage: React.FC = () => {
     <div className="space-y-6">
       {/* Modern Header */}
       <div className="flex items-center space-x-4">
-        <div className="p-3 rounded-xl bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30">
-          <BookOpen className="h-6 w-6 text-teal-400" />
+        <div className="p-3 rounded-xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 border border-primary-500/30">
+          <BookOpen className="h-6 w-6 text-primary-400" />
         </div>
         <div>
           <h1 className="text-2xl font-bold text-white">
@@ -498,7 +498,7 @@ const VocabularyPage: React.FC = () => {
                     <ArrowLeft className="h-4 w-4 mr-2" />
                     Back to Vocabulary
                   </Button>
-                  <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-0 capitalize">
+                  <Badge className="bg-gradient-to-r from-primary-500 to-cyan-500 text-white border-0 capitalize">
                     Flashcards
                   </Badge>
                 </div>
@@ -592,7 +592,7 @@ const VocabularyPage: React.FC = () => {
                         placeholder="Search by word or translation..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="h-12 w-full rounded-xl border-2 border-white/20 bg-white/10 pl-12 pr-4 font-medium focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 transition-all duration-200 text-white placeholder:text-white/40"
+                        className="h-12 w-full rounded-xl border-2 border-white/20 bg-white/10 pl-12 pr-4 font-medium focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 transition-all duration-200 text-white placeholder:text-white/40"
                       />
                     </div>
                   </div>
@@ -603,7 +603,7 @@ const VocabularyPage: React.FC = () => {
                       <select
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
-                        className="h-12 w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 font-medium focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 transition-all duration-200 text-white"
+                        className="h-12 w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 font-medium focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 transition-all duration-200 text-white"
                       >
                         <option value="all">📚 All Categories</option>
                         {categories.map(category => (
@@ -617,7 +617,7 @@ const VocabularyPage: React.FC = () => {
                       <select
                         value={selectedDifficulty}
                         onChange={(e) => setSelectedDifficulty(e.target.value)}
-                        className="h-12 w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 font-medium focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 transition-all duration-200 text-white"
+                        className="h-12 w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 font-medium focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 transition-all duration-200 text-white"
                       >
                         <option value="all">🎯 All Levels</option>
                         <option value="easy">🟢 Easy</option>
@@ -748,7 +748,7 @@ const VocabularyPage: React.FC = () => {
                       ) : (
                         <Button
                           size="lg"
-                          className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200"
+                          className="bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200"
                           disabled={completeVocabularyMutation.isPending}
                           onClick={async (e) => {
                             e.stopPropagation();

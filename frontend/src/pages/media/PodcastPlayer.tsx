@@ -161,7 +161,7 @@ const PodcastPlayer: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-cyan-900">
       <BackgroundEffects />
       <Header />
 
@@ -244,7 +244,7 @@ const PodcastPlayer: React.FC = () => {
                     </button>
                     <button
                       onClick={togglePlay}
-                      className="p-4 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600 transition shadow-lg"
+                      className="p-4 rounded-full bg-gradient-to-r from-cyan-500 to-primary-500 text-white hover:from-cyan-600 hover:to-primary-600 transition shadow-lg"
                     >
                       {isPlaying ? <Pause size={32} /> : <Play size={32} />}
                     </button>
@@ -297,7 +297,7 @@ const PodcastPlayer: React.FC = () => {
                     onClick={() => playPodcast(podcast)}
                     className={`p-4 rounded-xl cursor-pointer transition ${
                       currentPodcast?.id === podcast.id
-                        ? 'bg-gradient-to-r from-cyan-500/30 to-teal-500/30 border border-cyan-400'
+                        ? 'bg-gradient-to-r from-cyan-500/30 to-primary-500/30 border border-cyan-400'
                         : 'bg-white/5 hover:bg-white/10 border border-transparent'
                     }`}
                   >

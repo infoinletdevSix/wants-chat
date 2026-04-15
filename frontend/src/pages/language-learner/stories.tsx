@@ -394,7 +394,7 @@ const StoriesPage: React.FC = () => {
             ) : isLoadingStories ? (
               // Loading State
               <div className="flex flex-col items-center justify-center py-12">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-400 mb-4"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-400 mb-4"></div>
                 <p className="text-white/60">Loading stories...</p>
               </div>
             ) : (
@@ -417,7 +417,7 @@ const StoriesPage: React.FC = () => {
           /* Story Reader */
           <div className="space-y-6">
             {/* Story Header */}
-            <GlassCard className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10" hover={false} glow>
+            <GlassCard className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10" hover={false} glow>
               <div className="flex items-start justify-between mb-4">
                 <Button
                   variant="ghost"
@@ -477,7 +477,7 @@ const StoriesPage: React.FC = () => {
                 <div className="mt-4">
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full transition-all duration-500"
                       style={{ width: `${selectedStory.completionRate}%` }}
                     />
                   </div>

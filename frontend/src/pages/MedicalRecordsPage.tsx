@@ -676,7 +676,7 @@ const MedicalRecordsPage: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Greeting Section */}
-        <div className="mb-8 p-8 rounded-3xl bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border border-teal-500/20">
+        <div className="mb-8 p-8 rounded-3xl bg-gradient-to-br from-primary-500/10 to-cyan-500/10 border border-primary-500/20">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl font-bold text-white mb-2">
@@ -700,13 +700,13 @@ const MedicalRecordsPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* Track Vitals Card */}
           <Card
-            className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-teal-400/50 hover:bg-white/10"
+            className="cursor-pointer hover:shadow-lg transition-all duration-200 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary-400/50 hover:bg-white/10"
             onClick={() => navigate('/health/add-vital-record')}
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-teal-500/20">
-                  <ActivityIcon className="h-7 w-7 text-teal-400" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl mb-4 bg-primary-500/20">
+                  <ActivityIcon className="h-7 w-7 text-primary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Track Vitals</h3>
                 <p className="text-white/60 text-sm">Record new measurements</p>
@@ -783,7 +783,7 @@ const MedicalRecordsPage: React.FC = () => {
                   onClick={() => handleTabChange(tab.id)}
                   className={`flex items-center justify-center gap-2 px-6 py-2 rounded-lg font-medium text-sm transition-all duration-200 flex-1 ${
                     isActive
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-sm'
+                      ? 'bg-gradient-to-r from-primary-500 to-cyan-500 text-white shadow-sm'
                       : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -806,7 +806,7 @@ const MedicalRecordsPage: React.FC = () => {
               </div>
               <Button
                 onClick={() => navigate('/health/add-vital-record')}
-                className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600"
+                className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary-500 to-cyan-500 text-white hover:from-primary-600 hover:to-cyan-600"
               >
                 <ActivityIcon className="h-4 w-4 mr-2" />
                 Add Vital Record
@@ -889,7 +889,7 @@ const MedicalRecordsPage: React.FC = () => {
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
                               <div className="flex items-center gap-2 mb-1">
-                                <UserIcon className="h-5 w-5 text-teal-400" />
+                                <UserIcon className="h-5 w-5 text-primary-400" />
                                 <span className="font-semibold text-white">
                                   {rec.doctor}
                                 </span>
@@ -936,13 +936,13 @@ const MedicalRecordsPage: React.FC = () => {
                 return (
                   <Card
                     key={index}
-                    className="rounded-xl hover:shadow-xl transition-all duration-300 bg-white/5 border border-white/10 hover:border-teal-400/30 overflow-hidden group relative"
+                    className="rounded-xl hover:shadow-xl transition-all duration-300 bg-white/5 border border-white/10 hover:border-primary-400/30 overflow-hidden group relative"
                   >
                     {/* Card Header with Gradient Background */}
-                    <div className="p-6 pb-4 bg-gradient-to-br from-teal-500/10 to-cyan-500/10">
+                    <div className="p-6 pb-4 bg-gradient-to-br from-primary-500/10 to-cyan-500/10">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-xl bg-teal-500/20">
-                          <IconComponent className="h-6 w-6 text-teal-400" />
+                        <div className="p-3 rounded-xl bg-primary-500/20">
+                          <IconComponent className="h-6 w-6 text-primary-400" />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-bold text-lg text-white">
@@ -954,8 +954,8 @@ const MedicalRecordsPage: React.FC = () => {
                         </div>
                       </div>
                       {category.normalRange && (
-                        <div className="mt-3 p-2 rounded-full inline-flex items-center bg-teal-500/20">
-                          <span className="text-xs font-medium px-2 text-teal-400">
+                        <div className="mt-3 p-2 rounded-full inline-flex items-center bg-primary-500/20">
+                          <span className="text-xs font-medium px-2 text-primary-400">
                             {category.normalRange}
                           </span>
                         </div>
@@ -991,7 +991,7 @@ const MedicalRecordsPage: React.FC = () => {
                                 <Button
                                   size="sm"
                                   onClick={() => editVitalRecord(category.records[0], category.title)}
-                                  className="h-7 w-7 p-0 rounded-full bg-transparent hover:bg-teal-500/20 text-teal-400"
+                                  className="h-7 w-7 p-0 rounded-full bg-transparent hover:bg-primary-500/20 text-primary-400"
                                 >
                                   <EditIcon className="h-3.5 w-3.5" />
                                 </Button>
@@ -1059,7 +1059,7 @@ const MedicalRecordsPage: React.FC = () => {
 
                       {/* View All Button */}
                       <Button
-                        className="w-full mt-3 rounded-xl border-2 border-teal-500/30 bg-transparent text-teal-400 hover:bg-teal-500/10 hover:border-teal-500"
+                        className="w-full mt-3 rounded-xl border-2 border-primary-500/30 bg-transparent text-primary-400 hover:bg-primary-500/10 hover:border-primary-500"
                         size="sm"
                         onClick={() => {
                           const routeMap: { [key: string]: string } = {
@@ -1117,7 +1117,7 @@ const MedicalRecordsPage: React.FC = () => {
                 {appointmentsData.data.map((appointment) => (
                   <Card 
                     key={appointment.id} 
-                    className="rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-white/10 bg-white/5 hover:border-teal-500/30 overflow-hidden group relative"
+                    className="rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-white/10 bg-white/5 hover:border-primary-500/30 overflow-hidden group relative"
                   >
                     {/* Status Badge - Top Right Corner */}
                     <div className="absolute top-4 right-4 z-10">
@@ -1252,10 +1252,10 @@ const MedicalRecordsPage: React.FC = () => {
                           size="sm"
                           onClick={() => navigate('/health/schedule-visit?edit=' + appointment.id)}
                           disabled={deleteAppointmentMutation.loading}
-                          className="flex-1 rounded-xl border-2 border-teal-500/30 bg-transparent text-teal-400 hover:border-teal-500 hover:bg-teal-500/10"
+                          className="flex-1 rounded-xl border-2 border-primary-500/30 bg-transparent text-primary-400 hover:border-primary-500 hover:bg-primary-500/10"
                         >
-                          <EditIcon className="h-4 w-4 mr-2 text-teal-400" />
-                          <span className="text-teal-400">Edit</span>
+                          <EditIcon className="h-4 w-4 mr-2 text-primary-400" />
+                          <span className="text-primary-400">Edit</span>
                         </Button>
                         <Button
                           size="sm"
@@ -1341,7 +1341,7 @@ const MedicalRecordsPage: React.FC = () => {
                 {testResultsData.data.map((test: any) => (
                   <Card 
                     key={test.id} 
-                    className="rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-white/10 bg-white/5 hover:border-teal-500/30 overflow-hidden group relative"
+                    className="rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-white/10 bg-white/5 hover:border-primary-500/30 overflow-hidden group relative"
                   >
                     {/* Status Badge - Top Right Corner */}
                     <div className="absolute top-4 right-4 z-10">
@@ -1495,10 +1495,10 @@ const MedicalRecordsPage: React.FC = () => {
                         <Button
                           size="sm"
                           onClick={() => editTestResult(test)}
-                          className="flex-1 rounded-xl border-2 border-teal-500/30 bg-transparent text-teal-400 hover:border-teal-500 hover:bg-teal-500/10"
+                          className="flex-1 rounded-xl border-2 border-primary-500/30 bg-transparent text-primary-400 hover:border-primary-500 hover:bg-primary-500/10"
                         >
-                          <EditIcon className="h-4 w-4 mr-2 text-teal-400" />
-                          <span className="text-teal-400">Edit</span>
+                          <EditIcon className="h-4 w-4 mr-2 text-primary-400" />
+                          <span className="text-primary-400">Edit</span>
                         </Button>
                         <Button
                           size="sm"
@@ -1577,7 +1577,7 @@ const MedicalRecordsPage: React.FC = () => {
                 {insuranceData.data.map((insurance) => (
                   <Card 
                     key={insurance.id} 
-                    className="rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-white/10 bg-white/5 hover:border-teal-500/30 overflow-hidden group relative"
+                    className="rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-white/10 bg-white/5 hover:border-primary-500/30 overflow-hidden group relative"
                   >
                     {/* Status Badge - Top Right Corner */}
                     <div className="absolute top-4 right-4 z-10">
@@ -1743,10 +1743,10 @@ const MedicalRecordsPage: React.FC = () => {
                         <Button
                           size="sm"
                           onClick={() => editInsurance(insurance)}
-                          className="flex-1 rounded-xl border-2 border-teal-500/30 bg-transparent text-teal-400 hover:border-teal-500 hover:bg-teal-500/10"
+                          className="flex-1 rounded-xl border-2 border-primary-500/30 bg-transparent text-primary-400 hover:border-primary-500 hover:bg-primary-500/10"
                         >
-                          <EditIcon className="h-4 w-4 mr-2 text-teal-400" />
-                          <span className="text-teal-400">Edit</span>
+                          <EditIcon className="h-4 w-4 mr-2 text-primary-400" />
+                          <span className="text-primary-400">Edit</span>
                         </Button>
                         <Button
                           size="sm"

@@ -122,7 +122,7 @@ export const FortuneCookieTool: React.FC<FortuneCookieToolProps> = ({ uiConfig }
     const colors = {
       wisdom: isDark ? 'text-purple-400 bg-purple-900/30 border-purple-700' : 'text-purple-600 bg-purple-50 border-purple-200',
       love: isDark ? 'text-pink-400 bg-pink-900/30 border-pink-700' : 'text-pink-600 bg-pink-50 border-pink-200',
-      career: isDark ? 'text-teal-400 bg-teal-900/30 border-teal-700' : 'text-teal-600 bg-teal-50 border-teal-200',
+      career: isDark ? 'text-primary-400 bg-primary-900/30 border-primary-700' : 'text-primary-600 bg-primary-50 border-primary-200',
       health: isDark ? 'text-green-400 bg-green-900/30 border-green-700' : 'text-green-600 bg-green-50 border-green-200',
       adventure: isDark ? 'text-orange-400 bg-orange-900/30 border-orange-700' : 'text-orange-600 bg-orange-50 border-orange-200',
     };
@@ -134,7 +134,7 @@ export const FortuneCookieTool: React.FC<FortuneCookieToolProps> = ({ uiConfig }
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className={`p-3 rounded-xl ${isDark ? 'bg-teal-900/50 text-teal-300' : 'bg-teal-100 text-teal-600'}`}>
+          <div className={`p-3 rounded-xl ${isDark ? 'bg-primary-900/50 text-primary-300' : 'bg-primary-100 text-primary-600'}`}>
             <Cookie size={28} />
           </div>
           <div>
@@ -157,7 +157,7 @@ export const FortuneCookieTool: React.FC<FortuneCookieToolProps> = ({ uiConfig }
               </p>
               <button
                 onClick={openCookie}
-                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto"
+                className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto"
               >
                 <Cookie size={24} />
                 {t('tools.fortuneCookie.openFortuneCookie', 'Open Fortune Cookie')}
@@ -170,7 +170,7 @@ export const FortuneCookieTool: React.FC<FortuneCookieToolProps> = ({ uiConfig }
                 {t('tools.fortuneCookie.crackingOpenYourCookie', 'Cracking open your cookie...')}
               </p>
               <div className="flex justify-center mt-4">
-                <Sparkles className="text-teal-500 animate-pulse" size={32} />
+                <Sparkles className="text-primary-500 animate-pulse" size={32} />
               </div>
             </div>
           ) : currentFortune ? (
@@ -199,7 +199,7 @@ export const FortuneCookieTool: React.FC<FortuneCookieToolProps> = ({ uiConfig }
                     <span
                       key={idx}
                       className={`w-10 h-10 flex items-center justify-center rounded-full font-bold ${
-                        isDark ? 'bg-teal-900/50 text-teal-300 border border-teal-700' : 'bg-teal-100 text-teal-700 border border-teal-200'
+                        isDark ? 'bg-primary-900/50 text-primary-300 border border-primary-700' : 'bg-primary-100 text-primary-700 border border-primary-200'
                       }`}
                     >
                       {num}
@@ -213,7 +213,7 @@ export const FortuneCookieTool: React.FC<FortuneCookieToolProps> = ({ uiConfig }
                 <button
                   onClick={openCookie}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-                    isDark ? 'bg-teal-900/50 text-teal-300 hover:bg-teal-900' : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+                    isDark ? 'bg-primary-900/50 text-primary-300 hover:bg-primary-900' : 'bg-primary-100 text-primary-700 hover:bg-primary-200'
                   }`}
                 >
                   <RefreshCw size={18} />

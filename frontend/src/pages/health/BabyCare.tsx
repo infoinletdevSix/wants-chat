@@ -215,7 +215,7 @@ const BabyCare: React.FC = () => {
                 <SelectTrigger className="w-full md:w-48 rounded-xl bg-white/10 border-white/20 text-white">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent className="bg-teal-800/90 border-teal-400/30">
+                <SelectContent className="bg-primary-800/90 border-primary-400/30">
                   {Array.from({ length: 21 }, (_, i) => i + 20).map(week => (
                     <SelectItem key={week} value={week.toString()}>
                       Week {week}
@@ -254,10 +254,10 @@ const BabyCare: React.FC = () => {
         {/* Tabs for different sections */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 h-auto p-1 bg-white/5 border border-white/10 rounded-xl">
-            <TabsTrigger value="growth" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Growth Tracking</TabsTrigger>
-            <TabsTrigger value="milestones" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Milestones</TabsTrigger>
-            <TabsTrigger value="health" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Health</TabsTrigger>
-            <TabsTrigger value="vaccinations" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Vaccinations</TabsTrigger>
+            <TabsTrigger value="growth" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Growth Tracking</TabsTrigger>
+            <TabsTrigger value="milestones" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Milestones</TabsTrigger>
+            <TabsTrigger value="health" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Health</TabsTrigger>
+            <TabsTrigger value="vaccinations" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white text-white/60">Vaccinations</TabsTrigger>
           </TabsList>
 
           <TabsContent value="growth" className="space-y-6">
@@ -341,7 +341,7 @@ const BabyCare: React.FC = () => {
                   </p>
                   <Button
                     onClick={() => setShowAddMeasurement(true)}
-                    className="rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                   >
                     Add First Measurement
                   </Button>
@@ -357,7 +357,7 @@ const BabyCare: React.FC = () => {
                 </h3>
                 <Dialog open={showAddMeasurement} onOpenChange={setShowAddMeasurement}>
                   <DialogTrigger
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                   >
                     Add Measurement
                   </DialogTrigger>
@@ -425,7 +425,7 @@ const BabyCare: React.FC = () => {
                       </Button>
                       <Button
                         onClick={handleAddMeasurement}
-                        className="rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white"
+                        className="rounded-lg bg-gradient-to-r from-primary-500 to-cyan-500 hover:from-primary-600 hover:to-cyan-600 text-white"
                         disabled={addMeasurementMutation.isLoading || !measurementForm.weight || !measurementForm.length}
                       >
                         {addMeasurementMutation.isLoading ? (
@@ -566,7 +566,7 @@ const BabyCare: React.FC = () => {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="rounded-lg bg-transparent border-teal-500/30 text-teal-400 hover:bg-teal-500/10"
+                          className="rounded-lg bg-transparent border-primary-500/30 text-primary-400 hover:bg-primary-500/10"
                           onClick={() => {
                             updateMilestone(milestone.id, true);
                           }}
